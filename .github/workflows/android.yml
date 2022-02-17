@@ -24,9 +24,9 @@ jobs:
       run: |
          touch local.properties
          echo MAPS_API_KEY=${{ secrets.MAPS_API_KEY }} >> local.properties
-         
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+      
     - name: Build with Gradle
       run: ./gradlew build
 
@@ -51,7 +51,9 @@ jobs:
       run: |
          touch local.properties
          echo MAPS_API_KEY=${{ secrets.MAPS_API_KEY }} >> local.properties
-         
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+      
     - name: Unit Test
       run: ./gradlew testDebugUnitTest # Execute unit tests
     - name: Android Test Report
@@ -77,9 +79,11 @@ jobs:
       run: |
          touch local.properties
          echo MAPS_API_KEY=${{ secrets.MAPS_API_KEY }} >> local.properties
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+      
     - name: JavaDoc with Gradle
       run: ./gradlew javadoc 
-
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
