@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 7.1.0" type="incidents">
+
+    <incident
+        id="FragmentTagUsage"
+        severity="warning"
+        message="Replace the &lt;fragment> tag with FragmentContainerView.">
+        <fix-replace
+            description="Replace with androidx.fragment.app.FragmentContainerView"
+            oldString="fragment"
+            replacement="androidx.fragment.app.FragmentContainerView"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_maps.xml"
+            line="2"
+            column="2"
+            startOffset="40"
+            endLine="2"
+            endColumn="10"
+            endOffset="48"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.gms:play-services-maps than 17.0.1 is available: 18.0.2">
+        <fix-replace
+            description="Change to 18.0.2"
+            family="Update versions"
+            oldString="17.0.1"
+            replacement="18.0.2"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="38"
+            column="20"
+            startOffset="947"
+            endLine="38"
+            endColumn="70"
+            endOffset="997"/>
+    </incident>
+
+</incidents>
