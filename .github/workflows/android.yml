@@ -21,7 +21,9 @@ jobs:
         distribution: 'temurin'
         cache: gradle
     - name: Create local.properties
-      run: touch local.properties
+      run: |
+         touch local.properties
+         echo MAPS_API_KEY=${{ secrets.MAPS_API_KEY }} >> local.properties
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
