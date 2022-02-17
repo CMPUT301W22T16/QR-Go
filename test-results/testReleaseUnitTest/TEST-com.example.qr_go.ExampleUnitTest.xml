@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.qr_go.ExampleUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-02-17T17:05:16" hostname="fv-az82-467" time="0.001">
+<testsuite name="com.example.qr_go.ExampleUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-02-17T17:18:54" hostname="fv-az72-291" time="0.002">
   <properties/>
-  <testcase name="addition_isCorrect" classname="com.example.qr_go.ExampleUnitTest" time="0.001"/>
+  <testcase name="addition_isCorrect" classname="com.example.qr_go.ExampleUnitTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
