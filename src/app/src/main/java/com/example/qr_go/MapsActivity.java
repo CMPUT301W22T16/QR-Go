@@ -3,6 +3,7 @@ package com.example.qr_go;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -53,6 +54,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 Log.d("FAILURE", "Data could not be added: " + e.toString());
             }
         });
+
+
+        // TODO Redirect to QR code scanner activity
+        Intent i = new Intent(this, QRCodeScanner.class);
+        startActivity(i);
     }
 
     /**
