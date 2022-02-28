@@ -33,11 +33,14 @@ public class QRCodeScannerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_code_scanner);
 
+        System.out.println("HERE: "+checkSelfPermission(Manifest.permission.CAMERA));
+        System.out.println("PERMISSION_GRANTED: "+PackageManager.PERMISSION_GRANTED);
+
         if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             // Check if app has camera permission
             // `java.lang.RuntimeException: Fail to connect to camera service` - need to allow camera permission in emulator settings
             requestPermissions(new String[]{Manifest.permission.CAMERA}, MY_CAMERA_REQUEST_CODE);
-            return;
+            onPause();
         }
 
         CodeScannerView scannerView = findViewById(R.id.scanner_view);
@@ -85,8 +88,8 @@ public class QRCodeScannerActivity extends AppCompatActivity {
                 Toast.makeText(this, "camera permission denied", Toast.LENGTH_LONG).show();
                 // exit and go back to previous activity
                 finish();
-                Intent i = new Intent(this, MapsActivity.class);
-                startActivity(i);
+//                Intent i = new Intent(this, MapsActivity.class);
+//                startActivity(i);
             }
         }
     }
