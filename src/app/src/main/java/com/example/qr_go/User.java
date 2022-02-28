@@ -1,5 +1,10 @@
 package com.example.qr_go;
 
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -30,7 +35,8 @@ public class User {
     /**
      * Constructor for user class
      */
-    public void User() {
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public void User() throws NoSuchAlgorithmException {
         // Generate a new random UUID for a new user's ID
         userid = UUID.randomUUID().toString();
         // Generate a new random UUID for a new user's password
@@ -38,8 +44,8 @@ public class User {
         username = "";
         email = "";
         scannedQRCodeIds = new ArrayList<Integer>();
-        loginQR = new LoginQRCode(); // Generate a new login QR code (unsure of args)
-        statusQR = new StatusQRCode(); // Generate a new status QR code (unsure of args)
+        loginQR = new LoginQRCode(this); // Generate a new login QR code (unsure of args)
+        statusQR = new StatusQRCode(this); // Generate a new status QR code (unsure of args)
     }
 
     /**
@@ -96,7 +102,7 @@ public class User {
         // ...
     }
 
-    public void showStatus(statusQRCode statusQR) {
+    public void showStatus(StatusQRCode statusQR) {
         // ...
     }
 }

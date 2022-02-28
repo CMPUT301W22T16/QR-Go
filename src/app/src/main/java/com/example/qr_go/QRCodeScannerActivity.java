@@ -32,64 +32,71 @@ public class QRCodeScannerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_code_scanner);
+        initializeCamera();
 
-        System.out.println("HERE: "+checkSelfPermission(Manifest.permission.CAMERA));
-        System.out.println("PERMISSION_GRANTED: "+PackageManager.PERMISSION_GRANTED);
+    }
 
+    /**
+     * Initialize camera
+     * Check that app has camera permissions
+     * If not, request for permissions
+     */
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    private void initializeCamera() {
+        // Check if app has camera permission
         if (checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-            // Check if app has camera permission
+            // No camera access - request permission
             // `java.lang.RuntimeException: Fail to connect to camera service` - need to allow camera permission in emulator settings
             requestPermissions(new String[]{Manifest.permission.CAMERA}, MY_CAMERA_REQUEST_CODE);
-            onPause();
+        } else {
+            // Have camera access
+            CodeScannerView scannerView = findViewById(R.id.scanner_view);
+            mCodeScanner = new CodeScanner(this, scannerView);
+
+            mCodeScanner.setDecodeCallback(new DecodeCallback() {
+                @Override
+                public void onDecoded(@NonNull final Result result) {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(QRCodeScannerActivity.this, result.getText(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+            });
+            scannerView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    mCodeScanner.startPreview();
+                }
+            });
         }
-
-        CodeScannerView scannerView = findViewById(R.id.scanner_view);
-        mCodeScanner = new CodeScanner(this, scannerView);
-
-
-        mCodeScanner.setDecodeCallback(new DecodeCallback() {
-            @Override
-            public void onDecoded(@NonNull final Result result) {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        Toast.makeText(QRCodeScannerActivity.this, result.getText(), Toast.LENGTH_SHORT).show();
-                    }
-                });
-            }
-        });
-        scannerView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mCodeScanner.startPreview();
-            }
-        });
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        mCodeScanner.startPreview();
+        if (mCodeScanner != null) mCodeScanner.startPreview();
     }
 
     @Override
     protected void onPause() {
-        mCodeScanner.releaseResources();
+        if (mCodeScanner != null) mCodeScanner.releaseResources();
         super.onPause();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == MY_CAMERA_REQUEST_CODE) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 Toast.makeText(this, "camera permission granted", Toast.LENGTH_LONG).show();
+                initializeCamera(); // re-initialize camera
             } else {
                 Toast.makeText(this, "camera permission denied", Toast.LENGTH_LONG).show();
                 // exit and go back to previous activity
                 finish();
-//                Intent i = new Intent(this, MapsActivity.class);
-//                startActivity(i);
             }
         }
     }

@@ -12,11 +12,20 @@ import java.util.regex.Pattern;
 
 /**
  * GameQRCode represents QR codes that players will scan to score points
+ * Each GameQRCode contains a list of users that scanned it
  */
 public class GameQRCode extends QRCode {
-    private Integer score = 0;
+    private Integer score;
     ArrayList<String> userIds;
 
+    /**
+     * When creating a new GameQRCode, initialize the list of userIds
+     * gets the hash from the qr content,
+     * and calculates the score from the hash
+     *
+     * @param qrCodeContents
+     * @throws NoSuchAlgorithmException
+     */
     @RequiresApi(api = Build.VERSION_CODES.O)
     public GameQRCode(String qrCodeContents) throws NoSuchAlgorithmException {
         super(qrCodeContents); // gets hash
@@ -24,6 +33,12 @@ public class GameQRCode extends QRCode {
         this.score = calculateScore(this.hash);
     }
 
+    /**
+     * Given a hash, the score of the hash is calculated
+     *
+     * @param hash hash to calculate the score from
+     * @return score of hash
+     */
     protected Integer calculateScore(String hash) {
         // Scoring algorithm
         // (1) Find repeats using regex pattern
@@ -55,11 +70,35 @@ public class GameQRCode extends QRCode {
         return (int) Math.round(scoreCount);
     }
 
+    /**
+     * Getter for score
+     *
+     * @return score of game qr code
+     */
     public Integer getScore() {
         return score;
     }
 
+    /**
+     * Getter for userIds
+     *
+     * @return list of userIds who scanned this qr code
+     */
     public ArrayList<String> getUserIds() {
         return userIds;
+    }
+
+    /**
+     * Add a new user who scanned this game qr code
+     */
+    public void addUser(User user) {
+        userIds.add(user.getUserid());
+    }
+
+    /**
+     * Add a new user who scanned this game qr code
+     */
+    public void addUser(String userId) {
+        userIds.add(userId);
     }
 }
