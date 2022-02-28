@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 7.1.0" type="incidents">
+
+    <incident
+        id="FragmentTagUsage"
+        severity="warning"
+        message="Replace the &lt;fragment> tag with FragmentContainerView.">
+        <fix-replace
+            description="Replace with androidx.fragment.app.FragmentContainerView"
+            oldString="fragment"
+            replacement="androidx.fragment.app.FragmentContainerView"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_maps.xml"
+            line="2"
+            column="2"
+            startOffset="40"
+            endLine="2"
+            endColumn="10"
+            endOffset="48"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.gms:play-services-maps than 17.0.1 is available: 18.0.2">
+        <fix-replace
+            description="Change to 18.0.2"
+            family="Update versions"
+            oldString="17.0.1"
+            replacement="18.0.2"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="39"
+            column="20"
+            startOffset="1012"
+            endLine="39"
+            endColumn="70"
+            endOffset="1062"/>
+    </incident>
+
+    <incident
+        id="MergeRootFrame"
+        severity="warning"
+        message="This `&lt;FrameLayout>` can be replaced with a `&lt;merge>` tag">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_code_scanner.xml"
+            line="2"
+            column="1"
+            startOffset="39"
+            endLine="24"
+            endColumn="15"
+            endOffset="931"/>
+    </incident>
+
+</incidents>
