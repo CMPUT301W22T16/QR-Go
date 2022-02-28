@@ -34,7 +34,7 @@ public class User {
      * Constructor for user class
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public void User() {
+    public void User() throws NoSuchAlgorithmException {
         // Generate a new random UUID for a new user's ID
         userid = UUID.randomUUID().toString();
         // Generate a new random UUID for a new user's password
@@ -43,13 +43,13 @@ public class User {
         email = "";
         scannedQRCodeIds = new ArrayList<Integer>();
         try {
-            loginQR = new LoginQRCode(userid + ":" + password);
+            loginQR = new LoginQRCode(this);
         } catch (NoSuchAlgorithmException e) {
             Log.e("Creating login QR",
                     "User's login QR code could not be made: " + e.getMessage());
         }
         try {
-            statusQR = new StatusQRCode(userid);
+            statusQR = new StatusQRCode(this);
         } catch (NoSuchAlgorithmException e) {
             Log.e("Creating status QR",
                     "User's login QR code could not be made: " + e.getMessage());

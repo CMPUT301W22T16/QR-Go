@@ -1,10 +1,16 @@
 package com.example.qr_go;
 
+import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
 import com.google.android.gms.common.util.Hex;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.WriterException;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.QRCodeWriter;
 
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
@@ -20,6 +26,11 @@ import java.util.Base64;
 public class QRCode {
     protected String hash;
 
+    /**
+     * QR code
+     * @param qrCodeContents text contents scanned from QR code
+     * @throws NoSuchAlgorithmException
+     */
     @RequiresApi(api = Build.VERSION_CODES.O)
     public QRCode(String qrCodeContents) throws NoSuchAlgorithmException {
         // https://stackoverflow.com/a/5531479
@@ -29,6 +40,12 @@ public class QRCode {
         // Convert bytes to string
         this.hash = bytesToHex(hashBytes);
     }
+
+    /**
+     * Converts bytes[] from SHA-256 hashing into string
+     * @param bytes from SHA-256 hashing
+     * @return hex string representation of bytes array
+     */
     private String bytesToHex(byte[] bytes) {
         // https://stackoverflow.com/a/32943539
         StringBuffer result = new StringBuffer();
@@ -36,12 +53,44 @@ public class QRCode {
         return result.toString();
     }
 
+    /**
+     * Getter for hash
+     * @return hash string
+     */
     public String getHash() {
         return hash;
     }
 
+    /**
+     * Get id of QR code
+     * @return id of QR code
+     */
     public String getId() {
         return hash;
     }
 
+    /**
+     * Converts plain text to a QR code
+     * https://stackoverflow.com/a/27010646
+     * @param text text to encode as QR code
+     * @param width width of QR code
+     * @param height height of QR code
+     * @return QR code Bitmap
+     */
+    protected static Bitmap encodeToQrCode(String text, int width, int height){
+        QRCodeWriter writer = new QRCodeWriter();
+        BitMatrix matrix = null;
+        try {
+            matrix = writer.encode(text, BarcodeFormat.QR_CODE, 100, 100);
+        } catch (WriterException ex) {
+            ex.printStackTrace();
+        }
+        Bitmap bmp = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565);
+        for (int x = 0; x < width; x++){
+            for (int y = 0; y < height; y++){
+                bmp.setPixel(x, y, matrix.get(x,y) ? Color.BLACK : Color.WHITE);
+            }
+        }
+        return bmp;
+    }
 }
