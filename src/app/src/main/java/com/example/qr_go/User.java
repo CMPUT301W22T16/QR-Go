@@ -1,16 +1,19 @@
 package com.example.qr_go;
 
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.UUID;
 
+import android.util.Log;
+
 /* TODO:
-    - Determine and implement functionality of login() and showStatus() functions
     - Are we supposed to be giving a user their username, or should that be provided by the user
       and be passed in as an argument to the constructor, or should we leave it empty and let the
       user set it after creating their account? Should we be checking for username uniqueness?
-    - Use proper login and status qr code constructors
-    - Do we want to make an addScannedQR() method, or would a user.getScannedQRCodeIds().add()
-      suffice?
  */
 
 
@@ -30,6 +33,7 @@ public class User {
     /**
      * Constructor for user class
      */
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public void User() {
         // Generate a new random UUID for a new user's ID
         userid = UUID.randomUUID().toString();
@@ -38,8 +42,18 @@ public class User {
         username = "";
         email = "";
         scannedQRCodeIds = new ArrayList<Integer>();
-        loginQR = new LoginQRCode(); // Generate a new login QR code (unsure of args)
-        statusQR = new StatusQRCode(); // Generate a new status QR code (unsure of args)
+        try {
+            loginQR = new LoginQRCode(userid + ":" + password);
+        } catch (NoSuchAlgorithmException e) {
+            Log.e("Creating login QR",
+                    "User's login QR code could not be made: " + e.getMessage());
+        }
+        try {
+            statusQR = new StatusQRCode(userid);
+        } catch (NoSuchAlgorithmException e) {
+            Log.e("Creating status QR",
+                    "User's login QR code could not be made: " + e.getMessage());
+        }
     }
 
     /**
@@ -91,12 +105,13 @@ public class User {
         this.email = email;
     }
 
+    // TODO Determine functionality for these methods
     // Not too sure if what these methods are supposed to do.
     public void login(LoginQRCode loginQR) {
         // ...
     }
 
-    public void showStatus(statusQRCode statusQR) {
+    public void showStatus(StatusQRCode statusQR) {
         // ...
     }
 }
