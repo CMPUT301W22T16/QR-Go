@@ -7,6 +7,9 @@ import androidx.annotation.RequiresApi;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
+/**
+ * GameQRCode represents QR codes that players will scan to score points
+ */
 public class GameQRCode extends QRCode {
     private Integer score;
     ArrayList<String> userIds;

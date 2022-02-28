@@ -12,6 +12,11 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 
+/**
+ * QRCode is the super class from which GameQRCode and LoginQRCode subclasses extend from
+ * This class will take the string contents of a QR code and convert it into a SHA256 hash
+ * This hash is stored into the protected variable `hash`
+ */
 public class QRCode {
     protected String hash;
 

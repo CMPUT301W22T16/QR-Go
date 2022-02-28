@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QRGo">
         <activity
-            android:name=".QRCodeScanner"
+            android:name=".QRCodeScannerActivity"
             android:exported="false" />
 
         <meta-data
