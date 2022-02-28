@@ -34,7 +34,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QRGo" >
         <activity
-            android:name="com.example.qr_go.QRCodeScanner"
+            android:name="com.example.qr_go.QRCodeScannerActivity"
             android:exported="false" />
 
         <meta-data

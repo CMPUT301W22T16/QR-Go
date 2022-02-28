@@ -131,12 +131,12 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] /home/runner/.gradle/caches
 		ADDED from /home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:8:9-35
 	android:theme
 		ADDED from /home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:13:9-42
-activity#com.example.qr_go.QRCodeScanner
+activity#com.example.qr_go.QRCodeScannerActivity
 ADDED from /home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:14:9-16:40
 	android:exported
 		ADDED from /home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:16:13-37
 	android:name
-		ADDED from /home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:15:13-42
+		ADDED from /home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:15:13-50
 activity#com.example.qr_go.MapsActivity
 ADDED from /home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:22:9-31:20
 	android:label

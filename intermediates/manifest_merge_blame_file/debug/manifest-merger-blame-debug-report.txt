@@ -57,8 +57,8 @@
 35-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:13:9-42
 36        <activity
 36-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:14:9-16:40
-37            android:name="com.example.qr_go.QRCodeScanner"
-37-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:15:13-42
+37            android:name="com.example.qr_go.QRCodeScannerActivity"
+37-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:15:13-50
 38            android:exported="false" />
 38-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:16:13-37
 39
