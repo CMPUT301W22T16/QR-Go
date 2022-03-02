@@ -34,7 +34,7 @@ public class User {
      * Constructor for user class
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public void User() throws NoSuchAlgorithmException {
+    public User() throws NoSuchAlgorithmException {
         // Generate a new random UUID for a new user's ID
         userid = UUID.randomUUID().toString();
         // Generate a new random UUID for a new user's password
