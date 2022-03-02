@@ -42,18 +42,8 @@ public class User {
         username = "";
         email = "";
         scannedQRCodeIds = new ArrayList<Integer>();
-        try {
-            loginQR = new LoginQRCode(this);
-        } catch (NoSuchAlgorithmException e) {
-            Log.e("Creating login QR",
-                    "User's login QR code could not be made: " + e.getMessage());
-        }
-        try {
-            statusQR = new StatusQRCode(this);
-        } catch (NoSuchAlgorithmException e) {
-            Log.e("Creating status QR",
-                    "User's login QR code could not be made: " + e.getMessage());
-        }
+        loginQR = new LoginQRCode(this);
+        statusQR = new StatusQRCode(this);
     }
 
     /**
