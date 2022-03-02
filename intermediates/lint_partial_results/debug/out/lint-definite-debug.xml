@@ -20,6 +20,25 @@
     </incident>
 
     <incident
+        id="IgnoreWithoutReason"
+        severity="warning"
+        message="Test is ignored without giving any explanation">
+        <fix-replace
+            description="Give reason"
+            oldString="_lint_insert_end_"
+            selectPattern="TODO"
+            replacement="(&quot;TODO&quot;)"/>
+        <location
+            file="${:app*debug*testSourceProvider*0*javaDir*0}/com/example/qr_go/LoginQRCodeTest.java"
+            line="15"
+            column="5"
+            startOffset="342"
+            endLine="15"
+            endColumn="12"
+            endOffset="349"/>
+    </incident>
+
+    <incident
         id="GradleDependency"
         severity="warning"
         message="A newer version of com.google.android.gms:play-services-maps than 17.0.1 is available: 18.0.2">
