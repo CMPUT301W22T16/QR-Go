@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/home/runner/work/QR-Go/QR-Go/src/app"
+    name=":app"
+    type="APP"
+    maven="QR-Go:app:"
+    gradle="7.1.0"
+    buildFolder="build"
+    bootClassPath="/usr/local/lib/android/sdk/platforms/android-32/android.jar:/usr/local/lib/android/sdk/build-tools/30.0.3/core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-32"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>
