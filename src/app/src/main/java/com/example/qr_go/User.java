@@ -89,6 +89,20 @@ public class User {
     }
 
     /**
+     * @return User's login QR code
+     */
+    public LoginQRCode getLoginQR() {
+        return loginQR;
+    }
+
+    /**
+     * @return User's status QR code
+     */
+    public StatusQRCode getStatusQR() {
+        return statusQR;
+    }
+
+    /**
      * @param email user's new email
      */
     public void setEmail(String email) {
