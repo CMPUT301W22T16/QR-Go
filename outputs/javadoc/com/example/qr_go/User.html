@@ -26,8 +26,8 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":6,"i8":10,"i9":10};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -128,8 +128,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><code><a href="Owner.html" title="class in com.example.qr_go">Owner</a></code>, <code><a href="Player.html" title="class in com.example.qr_go">Player</a></code></dd>
+</dl>
 <hr>
-<pre>public class <span class="typeNameLabel">User</span>
+<pre>public abstract class <span class="typeNameLabel">User</span>
 extends java.lang.Object</pre>
 <div class="block">Represents a user. Contains all user contact info and identifying data</div>
 </li>
@@ -169,7 +173,7 @@ extends java.lang.Object</pre>
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colSecond" scope="col">Method</th>
@@ -211,11 +215,18 @@ extends java.lang.Object</pre>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
+<td class="colFirst"><code>abstract java.lang.Boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isOwner()">isOwner</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Function that tells if a user is an owner and should have enhanced privileges</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setEmail(java.lang.String)">setEmail</a></span>&#8203;(java.lang.String&nbsp;email)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setUsername(java.lang.String)">setUsername</a></span>&#8203;(java.lang.String&nbsp;username)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -256,7 +267,7 @@ public&nbsp;User()
 <div class="block">Constructor for user class</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code>java.security.NoSuchAlgorithmException</code></dd>
+<dd><code>java.security.NoSuchAlgorithmException</code> - if user QR codes are not instantiated properly</dd>
 </dl>
 </li>
 </ul>
@@ -270,6 +281,20 @@ public&nbsp;User()
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a id="isOwner()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isOwner</h4>
+<pre class="methodSignature">public abstract&nbsp;java.lang.Boolean&nbsp;isOwner()</pre>
+<div class="block">Function that tells if a user is an owner and should have enhanced privileges</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Returns true if user is an owner, false otherwise</dd>
+</dl>
+</li>
+</ul>
 <a id="getScannedQRCodeIds()">
 <!--   -->
 </a>
@@ -332,6 +357,8 @@ public&nbsp;User()
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>username</code> - user's new username</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if username was successfully changed, false otherwise</dd>
 </dl>
 </li>
 </ul>
