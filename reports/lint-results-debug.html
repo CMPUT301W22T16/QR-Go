@@ -174,10 +174,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 6 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 2 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Thu Mar 03 03:07:58 UTC 2022      </nav>
+Check performed at Thu Mar 03 03:12:07 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -186,8 +186,6 @@ Check performed at Thu Mar 03 03:07:58 UTC 2022      </nav>
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
       <a class="mdl-navigation__link" href="#FragmentTagUsage"><i class="material-icons warning-icon">warning</i>Use FragmentContainerView instead of the &lt;fragment> tag (1)</a>
       <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (1)</a>
-      <a class="mdl-navigation__link" href="#MergeRootFrame"><i class="material-icons warning-icon">warning</i>FrameLayout can be replaced with <code>&lt;merge></code> tag (1)</a>
-      <a class="mdl-navigation__link" href="#IgnoreWithoutReason"><i class="material-icons warning-icon">warning</i>@Ignore without Reason (3)</a>
     </nav>
   </div>
   <main class="mdl-layout__content">
@@ -208,16 +206,6 @@ Check performed at Thu Mar 03 03:07:58 UTC 2022      </nav>
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#GradleDependency">GradleDependency</a>: Obsolete Gradle Dependency</td></tr>
-<tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Performance">Performance</a>
-</td></tr>
-<tr>
-<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#MergeRootFrame">MergeRootFrame</a>: FrameLayout can be replaced with <code>&lt;merge></code> tag</td></tr>
-<tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Testing">Testing</a>
-</td></tr>
-<tr>
-<td class="countColumn">3</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#IgnoreWithoutReason">IgnoreWithoutReason</a>: @Ignore without Reason</td></tr>
 <tr><td></td><td class="categoryColumn"><a href="#MissingIssues">Disabled Checks (35)</a>
 </td></tr></table>
 <br/>              </div>
@@ -284,14 +272,14 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../build.gradle">../../build.gradle</a>:39</span>: <span class="message">A newer version of com.google.android.gms:play-services-maps than 17.0.1 is available: 18.0.2</span><br /><pre class="errorlines">
-<span class="lineno"> 36 </span>    implementation <span class="string">'com.github.yuriy-budiyev:code-scanner:2.1.1'</span>
-<span class="lineno"> 37 </span>    implementation <span class="string">'androidx.appcompat:appcompat:1.4.1'</span>
-<span class="lineno"> 38 </span>    implementation <span class="string">'com.google.android.material:material:1.5.0'</span>
-<span class="caretline"><span class="lineno"> 39 </span>    implementation <span class="warning"><span class="string">'com.google.android.gms:play-services-maps:17.0.1'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 40 </span>    implementation <span class="string">'androidx.constraintlayout:constraintlayout:2.1.3'</span>
-<span class="lineno"> 41 </span>    implementation <span class="string">'com.google.firebase:firebase-firestore:24.0.1'</span>
-<span class="lineno"> 42 </span>    testImplementation <span class="string">'junit:junit:4.13.2'</span></pre>
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:38</span>: <span class="message">A newer version of com.google.android.gms:play-services-maps than 17.0.1 is available: 18.0.2</span><br /><pre class="errorlines">
+<span class="lineno"> 35 </span>dependencies {
+<span class="lineno"> 36 </span>    implementation <span class="string">'androidx.appcompat:appcompat:1.4.1'</span>
+<span class="lineno"> 37 </span>    implementation <span class="string">'com.google.android.material:material:1.5.0'</span>
+<span class="caretline"><span class="lineno"> 38 </span>    implementation <span class="warning"><span class="string">'com.google.android.gms:play-services-maps:17.0.1'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 39 </span>    implementation <span class="string">'androidx.constraintlayout:constraintlayout:2.1.3'</span>
+<span class="lineno"> 40 </span>    implementation <span class="string">'com.google.firebase:firebase-firestore:24.0.1'</span>
+<span class="lineno"> 41 </span>    testImplementation <span class="string">'junit:junit:4.13.2'</span></pre>
 
 </div>
 <div class="metadata"><div class="explanation" id="explanationGradleDependency" style="display: none;">
@@ -318,119 +306,6 @@ To suppress this error, use the issue id "GradleDependency" as explained in the 
               <div class="mdl-card__actions mdl-card--border">
 <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationGradleDependencyLink" onclick="reveal('explanationGradleDependency');">
 Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="GradleDependencyCardLink" onclick="hideid('GradleDependencyCard');">
-Dismiss</button>            </div>
-            </div>
-          </section>
-<a name="Performance"></a>
-<a name="MergeRootFrame"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="MergeRootFrameCard" style="display: block;">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">FrameLayout can be replaced with &lt;merge> tag</h2>
-  </div>
-              <div class="mdl-card__supporting-text">
-<div class="issue">
-<div class="warningslist">
-<span class="location"><a href="../../src/main/res/layout/activity_code_scanner.xml">../../src/main/res/layout/activity_code_scanner.xml</a>:2</span>: <span class="message">This <code>&lt;FrameLayout></code> can be replaced with a <code>&lt;merge></code> tag</span><br /><pre class="errorlines">
-<span class="lineno">  1 </span><span class="prologue">&lt;?xml version="1.0" encoding="utf-8"?></span>
-<span class="caretline"><span class="lineno">  2 </span><span class="warning"><span class="tag">&lt;FrameLayout</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
-</span><span class="lineno">  3 </span><span class="attribute">    </span><span class="prefix">xmlns:</span><span class="attribute">android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span>
-<span class="lineno">  4 </span>    <span class="prefix">xmlns:</span><span class="attribute">app</span>=<span class="value">"http://schemas.android.com/apk/res-auto"</span>
-<span class="lineno">  5 </span>    <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span></pre>
-
-</div>
-<div class="metadata"><div class="explanation" id="explanationMergeRootFrame" style="display: none;">
-If a <code>&lt;FrameLayout></code> is the root of a layout and does not provide background or padding etc, it can often be replaced with a <code>&lt;merge></code> tag which is slightly more efficient. Note that this depends on context, so make sure you understand how the <code>&lt;merge></code> tag works before proceeding.<br/><div class="moreinfo">More info: <a href="https://android-developers.googleblog.com/2009/03/android-layout-tricks-3-optimize-by.html">https://android-developers.googleblog.com/2009/03/android-layout-tricks-3-optimize-by.html</a>
-</div>To suppress this error, use the issue id "MergeRootFrame" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="chips">
-<span class="mdl-chip">
-    <span class="mdl-chip__text">MergeRootFrame</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Performance</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Warning</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 4/10</span>
-</span>
-</div>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationMergeRootFrameLink" onclick="reveal('explanationMergeRootFrame');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="MergeRootFrameCardLink" onclick="hideid('MergeRootFrameCard');">
-Dismiss</button>            </div>
-            </div>
-          </section>
-<a name="Testing"></a>
-<a name="IgnoreWithoutReason"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="IgnoreWithoutReasonCard" style="display: block;">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">@Ignore without Reason</h2>
-  </div>
-              <div class="mdl-card__supporting-text">
-<div class="issue">
-<div class="warningslist">
-<span class="location"><a href="../../src/test/java/com/example/qr_go/LoginQRCodeTest.java">../../src/test/java/com/example/qr_go/LoginQRCodeTest.java</a>:15</span>: <span class="message">Test is ignored without giving any explanation</span><br /><pre class="errorlines">
-<span class="lineno"> 12 </span>
-<span class="lineno"> 13 </span><span class="keyword">public</span> <span class="keyword">class</span> LoginQRCodeTest {
-<span class="lineno"> 14 </span>
-<span class="caretline"><span class="lineno"> 15 </span>    <span class="warning"><span class="annotation">@Ignore</span></span> <span class="comment">// need to mock firestore</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 16 </span>    <span class="annotation">@Test</span>
-<span class="lineno"> 17 </span>    <span class="keyword">public</span> <span class="keyword">void</span> testIsLoginValid() <span class="keyword">throws</span> NoSuchAlgorithmException {
-</pre>
-
-<span class="location"><a href="../../src/test/java/com/example/qr_go/UserTest.java">../../src/test/java/com/example/qr_go/UserTest.java</a>:20</span>: <span class="message">Test is ignored without giving any explanation</span><br /><pre class="errorlines">
-<span class="lineno"> 17 </span>        testUser = <span class="keyword">new</span> User();
-<span class="lineno"> 18 </span>    }
-<span class="lineno"> 19 </span>
-<span class="caretline"><span class="lineno"> 20 </span>    <span class="warning"><span class="annotation">@Ignore</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 21 </span>    <span class="annotation">@Test</span>
-<span class="lineno"> 22 </span>    <span class="keyword">public</span> <span class="keyword">void</span> userLoginQRTest() <span class="keyword">throws</span> NoSuchAlgorithmException {
-<span class="lineno"> 23 </span>        String loginString = testUser.getUserid()+<span class="string">"\n"</span>+testUser.getPassword();
-</pre>
-
-<span class="location"><a href="../../src/test/java/com/example/qr_go/UserTest.java">../../src/test/java/com/example/qr_go/UserTest.java</a>:31</span>: <span class="message">Test is ignored without giving any explanation</span><br /><pre class="errorlines">
-<span class="lineno"> 28 </span>        assertEquals(newLoginQR.getHash(), genLoginQR.getHash());
-<span class="lineno"> 29 </span>    }
-<span class="lineno"> 30 </span>
-<span class="caretline"><span class="lineno"> 31 </span>    <span class="warning"><span class="annotation">@Ignore</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 32 </span>    <span class="annotation">@Test</span>
-<span class="lineno"> 33 </span>    <span class="keyword">public</span> <span class="keyword">void</span> userStatusQRTest() <span class="keyword">throws</span> NoSuchAlgorithmException {
-<span class="lineno"> 34 </span>        String statusString = testUser.getUserid();
-</pre>
-
-</div>
-<div class="metadata"><div class="explanation" id="explanationIgnoreWithoutReason" style="display: none;">
-Ignoring a test without a reason makes it difficult to figure out the problem later.<br/>
-Please define an explicit reason why it is ignored, and when it can be resolved.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
-To suppress this error, use the issue id "IgnoreWithoutReason" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="chips">
-<span class="mdl-chip">
-    <span class="mdl-chip__text">IgnoreWithoutReason</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Testing</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Warning</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 2/10</span>
-</span>
-</div>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationIgnoreWithoutReasonLink" onclick="reveal('explanationIgnoreWithoutReason');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="IgnoreWithoutReasonCardLink" onclick="hideid('IgnoreWithoutReasonCard');">
 Dismiss</button>            </div>
             </div>
           </section>

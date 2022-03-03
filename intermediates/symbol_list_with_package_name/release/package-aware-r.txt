@@ -122,8 +122,6 @@ attr arrowShaftLength
 attr attributeName
 attr autoCompleteMode
 attr autoCompleteTextViewStyle
-attr autoFocusButtonColor
-attr autoFocusButtonVisible
 attr autoSizeMaxTextSize
 attr autoSizeMinTextSize
 attr autoSizePresetSizes
@@ -486,8 +484,6 @@ attr fastScrollHorizontalTrackDrawable
 attr fastScrollVerticalThumbDrawable
 attr fastScrollVerticalTrackDrawable
 attr firstBaselineToTopHeight
-attr flashButtonColor
-attr flashButtonVisible
 attr floatingActionButtonLargePrimaryStyle
 attr floatingActionButtonLargeSecondaryStyle
 attr floatingActionButtonLargeStyle
@@ -531,14 +527,7 @@ attr fontVariationSettings
 attr fontWeight
 attr forceApplySystemWindowInsetTop
 attr foregroundInsidePadding
-attr frameAspectRatioHeight
-attr frameAspectRatioWidth
-attr frameColor
-attr frameCornersRadius
-attr frameCornersSize
 attr framePosition
-attr frameSize
-attr frameThickness
 attr gapBetweenBars
 attr gestureInsetBottomIgnored
 attr goIcon
@@ -734,7 +723,6 @@ attr logo
 attr logoDescription
 attr mapType
 attr marginHorizontal
-attr maskColor
 attr materialAlertDialogBodyTextStyle
 attr materialAlertDialogButtonSpacerVisibility
 attr materialAlertDialogTheme
@@ -2525,10 +2513,6 @@ drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_clock_black_24dp
-drawable ic_code_scanner_auto_focus_off
-drawable ic_code_scanner_auto_focus_on
-drawable ic_code_scanner_flash_off
-drawable ic_code_scanner_flash_on
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -2939,7 +2923,6 @@ id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
-id scanner_view
 id screen
 id scroll
 id scrollIndicatorDown
@@ -3157,7 +3140,6 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_code_scanner
 layout activity_maps
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -3306,16 +3288,10 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
-string default_web_client_id
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
-string gcm_defaultSenderId
-string google_api_key
-string google_app_id
-string google_crash_reporting_api_key
-string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
@@ -3405,7 +3381,6 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
-string project_id
 string search_menu_title
 string status_bar_notification_info_overflow
 string title_activity_maps
@@ -4462,7 +4437,6 @@ styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVer
 styleable CircularProgressIndicator indicatorDirectionCircular indicatorInset indicatorSize
 styleable ClockFaceView clockFaceBackgroundColor clockNumberTextColor
 styleable ClockHandView clockHandColor materialCircleRadius selectorSize
-styleable CodeScannerView autoFocusButtonColor autoFocusButtonVisible flashButtonColor flashButtonVisible frameAspectRatioHeight frameAspectRatioWidth frameColor frameCornersRadius frameCornersSize frameSize frameThickness maskColor
 styleable CollapsingToolbarLayout collapsedTitleGravity collapsedTitleTextAppearance collapsedTitleTextColor contentScrim expandedTitleGravity expandedTitleMargin expandedTitleMarginBottom expandedTitleMarginEnd expandedTitleMarginStart expandedTitleMarginTop expandedTitleTextAppearance expandedTitleTextColor extraMultilineHeightEnabled forceApplySystemWindowInsetTop maxLines scrimAnimationDuration scrimVisibleHeightTrigger statusBarScrim title titleCollapseMode titleEnabled titlePositionInterpolator toolbarId
 styleable CollapsingToolbarLayout_Layout layout_collapseMode layout_collapseParallaxMultiplier
 styleable ColorStateListItem android_color android_alpha android_lStar alpha lStar
