@@ -14,7 +14,7 @@ public class UserTest {
 
     @Before
     public void setup() throws NoSuchAlgorithmException {
-        testUser = new User();
+        testUser = new Player();
     }
 
     @Ignore

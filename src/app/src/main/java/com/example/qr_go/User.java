@@ -8,18 +8,10 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.UUID;
 
-import android.util.Log;
-
-/* TODO:
-    - Abstract User class and make Owner and Player class
-    - Write a username generator
- */
-
-
 /**
  * Represents a user. Contains all user contact info and identifying data
  */
-public class User {
+public abstract class User {
     // Note: UML says that this is an Integer, but I made it a string since we're using UUID
     private String userid; // Unique ID to identify users.
     private String password; // Password for verifying a user
@@ -31,6 +23,7 @@ public class User {
 
     /**
      * Constructor for user class
+     * @throws NoSuchAlgorithmException if user QR codes are not instantiated properly
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
     public User() throws NoSuchAlgorithmException {
@@ -40,10 +33,16 @@ public class User {
         password = UUID.randomUUID().toString();
         username = "";
         email = "";
-        scannedQRCodeIds = new ArrayList<Integer>();
+        scannedQRCodeIds = new ArrayList<>();
         loginQR = new LoginQRCode(this);
         statusQR = new StatusQRCode(this);
     }
+
+    /**
+     * Function that tells if a user is an owner and should have enhanced privileges
+     * @return Returns true if user is an owner, false otherwise
+     */
+    public abstract Boolean isOwner();
 
     /**
      * @return ArrayList of IDs of a user's scanned QR codes
@@ -74,7 +73,9 @@ public class User {
     }
 
     /**
+     *
      * @param username user's new username
+     * @return true if username was successfully changed, false otherwise
      */
     public boolean setUsername(String username) {
         if (!UsernameGenerator.isValidUsername(username)) {
