@@ -11,9 +11,8 @@ import java.util.UUID;
 import android.util.Log;
 
 /* TODO:
-    - Are we supposed to be giving a user their username, or should that be provided by the user
-      and be passed in as an argument to the constructor, or should we leave it empty and let the
-      user set it after creating their account? Should we be checking for username uniqueness?
+    - Abstract User class and make Owner and Player class
+    - Write a username generator
  */
 
 
@@ -109,13 +108,4 @@ public class User {
         this.email = email;
     }
 
-    // TODO Determine functionality for these methods
-    // Not too sure if what these methods are supposed to do.
-    public void login(LoginQRCode loginQR) {
-        // ...
-    }
-
-    public void showStatus(StatusQRCode statusQR) {
-        // ...
-    }
 }
