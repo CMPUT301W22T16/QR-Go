@@ -5,15 +5,23 @@ import static org.junit.Assert.*;
 import java.security.NoSuchAlgorithmException;
 import java.util.UUID;
 
+/**
+ * Test the photo and it's sub classes
+ * @author DarFang
+ */
+
+/*
+need to add byte image testing
+ */
 public class PhotoUnitTest {
     @Test
-    public void checkQRPHotoID() throws NoSuchAlgorithmException{
+    public void checkQRPhotoID() throws NoSuchAlgorithmException{
         QRPhoto photo = new QRPhoto(null, "123","456");
         assertEquals("123", photo.getQRID());
         assertEquals("456", photo.getPhotographerID());
     }
     @Test
-    public void checkQRPHotoIDRandom() throws NoSuchAlgorithmException{
+    public void checkQRPhotoIDRandom() throws NoSuchAlgorithmException{
         String userID, QRID;
         for (int i = 0; i <10; i++) {
             userID = UUID.randomUUID().toString() + i;
@@ -24,7 +32,7 @@ public class PhotoUnitTest {
         }
     }
     @Test
-    public void checkProfilPicture(){
+    public void checkProfilePicture(){
         ProfilePicture profileIcon = new ProfilePicture(null, "123");
         assertEquals("123", profileIcon.getUserID());
     }
