@@ -76,8 +76,12 @@ public class User {
     /**
      * @param username user's new username
      */
-    public void setUsername(String username) {
+    public boolean setUsername(String username) {
+        if (!UsernameGenerator.isValidUsername(username)) {
+            return false;
+        }
         this.username = username;
+        return true;
     }
 
     /**
