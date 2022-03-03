@@ -1627,10 +1627,16 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="default_web_client_id" translatable="false">104457896224-07uvbchun54q7dt3rgq2kl6jgltfcvhr.apps.googleusercontent.com</string>
     <string name="error_icon_content_description">Error</string>
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
+    <string name="gcm_defaultSenderId" translatable="false">104457896224</string>
+    <string name="google_api_key" translatable="false">AIzaSyDwcHkVQX1xBL-QcPyFa-oolYcHDdwfkaQ</string>
+    <string name="google_app_id" translatable="false">1:104457896224:android:a5dcde158e965d2a9e5745</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDwcHkVQX1xBL-QcPyFa-oolYcHDdwfkaQ</string>
+    <string name="google_storage_bucket" translatable="false">qr-go-341603.appspot.com</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
     <string description="Content description for an icon that appears in the title area of a dialog" name="icon_content_description">Dialog Icon</string>
     <string name="item_view_role_description">Tab</string>
@@ -1720,6 +1726,7 @@
     <string name="path_password_eye_mask_strike_through" translatable="false">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_eye_mask_visible" translatable="false">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
+    <string name="project_id" translatable="false">qr-go-341603</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title_activity_maps">MapsActivity</string>
@@ -9177,20 +9184,6 @@
 
     <attr format="dimension" name="selectorSize"/>
   </declare-styleable>
-    <declare-styleable name="CodeScannerView">
-        <attr format="color" name="maskColor"/>
-        <attr format="color" name="frameColor"/>
-        <attr format="color" name="autoFocusButtonColor"/>
-        <attr format="color" name="flashButtonColor"/>
-        <attr format="boolean" name="autoFocusButtonVisible"/>
-        <attr format="boolean" name="flashButtonVisible"/>
-        <attr format="dimension" name="frameThickness"/>
-        <attr format="dimension" name="frameCornersSize"/>
-        <attr format="dimension" name="frameCornersRadius"/>
-        <attr format="float" name="frameAspectRatioWidth"/>
-        <attr format="float" name="frameAspectRatioHeight"/>
-        <attr format="float" name="frameSize"/>
-    </declare-styleable>
     <declare-styleable name="CollapsingToolbarLayout">
     <!--  Specifies extra space on the start, top, end and bottom
           sides of the the expanded title text. Margin values should be positive. -->

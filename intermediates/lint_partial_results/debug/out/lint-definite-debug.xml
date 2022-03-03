@@ -30,26 +30,12 @@
             replacement="18.0.2"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="39"
+            line="38"
             column="20"
-            startOffset="1012"
-            endLine="39"
+            startOffset="947"
+            endLine="38"
             endColumn="70"
-            endOffset="1062"/>
-    </incident>
-
-    <incident
-        id="MergeRootFrame"
-        severity="warning"
-        message="This `&lt;FrameLayout>` can be replaced with a `&lt;merge>` tag">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_code_scanner.xml"
-            line="2"
-            column="1"
-            startOffset="39"
-            endLine="24"
-            endColumn="15"
-            endOffset="931"/>
+            endOffset="997"/>
     </incident>
 
 </incidents>
