@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.example.qr_go","l":"MapsActivity"},{"p":"com.example.qr_go","l":"Photo"}]
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.example.qr_go","l":"MapsActivity"},{"p":"com.example.qr_go","l":"Photo"},{"p":"com.example.qr_go","l":"ProfilePicture"},{"p":"com.example.qr_go","l":"QRPhoto"}]

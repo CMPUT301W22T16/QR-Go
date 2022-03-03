@@ -7,7 +7,7 @@
 7    <uses-sdk
 8        android:minSdkVersion="21"
 8-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml
-9        android:targetSdkVersion="32" />
+9        android:targetSdkVersion="31" />
 9-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml
 10
 11    <!-- Include required permissions for Google Maps API to run. -->

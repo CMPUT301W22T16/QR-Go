@@ -2,7 +2,7 @@
     name="debug"
     package="com.example.qr_go"
     minSdkVersion="21"
-    targetSdkVersion="32"
+    targetSdkVersion="31"
     debuggable="true"
     mergedManifest="build/intermediates/merged_manifest/debug/AndroidManifest.xml"
     manifestMergeReport="build/outputs/logs/manifest-merger-debug-report.txt"
