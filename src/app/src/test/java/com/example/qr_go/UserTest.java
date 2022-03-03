@@ -13,7 +13,7 @@ public class UserTest {
     private User testUser;
 
     @Before
-    public void setup() {
+    public void setup() throws NoSuchAlgorithmException {
         testUser = new User();
     }
 
