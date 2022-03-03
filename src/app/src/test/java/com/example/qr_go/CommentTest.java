@@ -26,13 +26,13 @@ public class CommentTest {
 //    }
 
     @Test
-    void testGetMessage() {
+    public void testGetMessage() {
         Comment comment = mockComment();
         assertEquals(MOCK_MSG, comment.getMessage());
     }
 
     @Test
-    void testSetMessage() {
+    public void testSetMessage() {
         Comment comment = mockComment();
 
         assertEquals(MOCK_MSG, comment.getMessage());
