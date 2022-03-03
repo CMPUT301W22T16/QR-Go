@@ -51,10 +51,10 @@
             file="${:app*debug*testSourceProvider*0*javaDir*0}/com/example/qr_go/UserTest.java"
             line="20"
             column="5"
-            startOffset="329"
+            startOffset="361"
             endLine="20"
             endColumn="12"
-            endOffset="336"/>
+            endOffset="368"/>
     </incident>
 
     <incident
@@ -70,10 +70,10 @@
             file="${:app*debug*testSourceProvider*0*javaDir*0}/com/example/qr_go/UserTest.java"
             line="31"
             column="5"
-            startOffset="743"
+            startOffset="775"
             endLine="31"
             endColumn="12"
-            endOffset="750"/>
+            endOffset="782"/>
     </incident>
 
     <incident
