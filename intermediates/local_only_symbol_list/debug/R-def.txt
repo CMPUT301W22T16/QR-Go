@@ -10,6 +10,8 @@ color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 id map
+id scanner_view
+layout activity_code_scanner
 layout activity_maps
 mipmap ic_launcher
 mipmap ic_launcher_round

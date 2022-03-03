@@ -90,13 +90,141 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </nav>
 </header>
 <main role="main">
-<div class="contentContainer"><a href="#I:C">C</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:O">O</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes</a>&nbsp;<a href="allpackages-index.html">All&nbsp;Packages</a><a id="I:C">
+<div class="contentContainer"><a href="#I:A">A</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:Q">Q</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:U">U</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes</a>&nbsp;<a href="allpackages-index.html">All&nbsp;Packages</a><a id="I:A">
+<!--   -->
+</a>
+<h2 class="title">A</h2>
+<dl>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/GameQRCode.html#addUser(com.example.qr_go.User)">addUser(User)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/GameQRCode.html" title="class in com.example.qr_go">GameQRCode</a></dt>
+<dd>
+<div class="block">Add a new user who scanned this game qr code</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/GameQRCode.html#addUser(java.lang.String)">addUser(String)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/GameQRCode.html" title="class in com.example.qr_go">GameQRCode</a></dt>
+<dd>
+<div class="block">Add a new user who scanned this game qr code</div>
+</dd>
+</dl>
+<a id="I:C">
 <!--   -->
 </a>
 <h2 class="title">C</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/GameQRCode.html#calculateScore(java.lang.String)">calculateScore(String)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/GameQRCode.html" title="class in com.example.qr_go">GameQRCode</a></dt>
+<dd>
+<div class="block">Given a hash, the score of the hash is calculated</div>
+</dd>
 <dt><a href="com/example/qr_go/package-summary.html">com.example.qr_go</a> - package com.example.qr_go</dt>
 <dd>&nbsp;</dd>
+<dt><a href="com/example/qr_go/Comment.html" title="class in com.example.qr_go"><span class="typeNameLink">Comment</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
+<dd>
+<div class="block">This is a class that represents a comment made by a user to a QRCode</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/Comment.html#%3Cinit%3E(java.util.UUID,java.lang.String)">Comment(UUID, String)</a></span> - Constructor for class com.example.qr_go.<a href="com/example/qr_go/Comment.html" title="class in com.example.qr_go">Comment</a></dt>
+<dd>&nbsp;</dd>
+</dl>
+<a id="I:E">
+<!--   -->
+</a>
+<h2 class="title">E</h2>
+<dl>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/QRCode.html#encodeToQrCode(java.lang.String,int,int)">encodeToQrCode(String, int, int)</a></span> - Static method in class com.example.qr_go.<a href="com/example/qr_go/QRCode.html" title="class in com.example.qr_go">QRCode</a></dt>
+<dd>
+<div class="block">Converts plain text to a QR code
+ https://stackoverflow.com/a/27010646</div>
+</dd>
+</dl>
+<a id="I:G">
+<!--   -->
+</a>
+<h2 class="title">G</h2>
+<dl>
+<dt><a href="com/example/qr_go/GameQRCode.html" title="class in com.example.qr_go"><span class="typeNameLink">GameQRCode</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
+<dd>
+<div class="block">GameQRCode represents QR codes that players will scan to score points
+ Each GameQRCode contains a list of users that scanned it</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/GameQRCode.html#%3Cinit%3E(java.lang.String)">GameQRCode(String)</a></span> - Constructor for class com.example.qr_go.<a href="com/example/qr_go/GameQRCode.html" title="class in com.example.qr_go">GameQRCode</a></dt>
+<dd>
+<div class="block">When creating a new GameQRCode, initialize the list of userIds
+ gets the hash from the qr content,
+ and calculates the score from the hash</div>
+</dd>
+<dt><a href="com/example/qr_go/GeneratesNewQR.html" title="interface in com.example.qr_go"><span class="typeNameLink">GeneratesNewQR</span></a> - Interface in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/User.html#getEmail()">getEmail()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/User.html" title="class in com.example.qr_go">User</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/QRCode.html#getHash()">getHash()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/QRCode.html" title="class in com.example.qr_go">QRCode</a></dt>
+<dd>
+<div class="block">Getter for hash</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/QRCode.html#getId()">getId()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/QRCode.html" title="class in com.example.qr_go">QRCode</a></dt>
+<dd>
+<div class="block">Get id of QR code</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/Comment.html#getMessage()">getMessage()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/Comment.html" title="class in com.example.qr_go">Comment</a></dt>
+<dd>
+<div class="block">Getter for message</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/User.html#getPassword()">getPassword()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/User.html" title="class in com.example.qr_go">User</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/GeneratesNewQR.html#getQRCode()">getQRCode()</a></span> - Method in interface com.example.qr_go.<a href="com/example/qr_go/GeneratesNewQR.html" title="interface in com.example.qr_go">GeneratesNewQR</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/LoginQRCode.html#getQRCode()">getQRCode()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/LoginQRCode.html" title="class in com.example.qr_go">LoginQRCode</a></dt>
+<dd>
+<div class="block">Converts the user's id and password to a QR code</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/StatusQRCode.html#getQRCode()">getQRCode()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/StatusQRCode.html" title="class in com.example.qr_go">StatusQRCode</a></dt>
+<dd>
+<div class="block">Converts the user's id and password to a QR code</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/User.html#getScannedQRCodeIds()">getScannedQRCodeIds()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/User.html" title="class in com.example.qr_go">User</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/GameQRCode.html#getScore()">getScore()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/GameQRCode.html" title="class in com.example.qr_go">GameQRCode</a></dt>
+<dd>
+<div class="block">Getter for score</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/User.html#getUserid()">getUserid()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/User.html" title="class in com.example.qr_go">User</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/GameQRCode.html#getUserIds()">getUserIds()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/GameQRCode.html" title="class in com.example.qr_go">GameQRCode</a></dt>
+<dd>
+<div class="block">Getter for userIds</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/User.html#getUsername()">getUsername()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/User.html" title="class in com.example.qr_go">User</a></dt>
+<dd>&nbsp;</dd>
+</dl>
+<a id="I:H">
+<!--   -->
+</a>
+<h2 class="title">H</h2>
+<dl>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/QRCode.html#hash">hash</a></span> - Variable in class com.example.qr_go.<a href="com/example/qr_go/QRCode.html" title="class in com.example.qr_go">QRCode</a></dt>
+<dd>&nbsp;</dd>
+</dl>
+<a id="I:I">
+<!--   -->
+</a>
+<h2 class="title">I</h2>
+<dl>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/LoginQRCode.html#isLoginValid()">isLoginValid()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/LoginQRCode.html" title="class in com.example.qr_go">LoginQRCode</a></dt>
+<dd>
+<div class="block">Validates if login QR code and password is valid</div>
+</dd>
+</dl>
+<a id="I:L">
+<!--   -->
+</a>
+<h2 class="title">L</h2>
+<dl>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/User.html#login(com.example.qr_go.LoginQRCode)">login(LoginQRCode)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/User.html" title="class in com.example.qr_go">User</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="com/example/qr_go/LoginQRCode.html" title="class in com.example.qr_go"><span class="typeNameLink">LoginQRCode</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
+<dd>
+<div class="block">LoginQRCode is the QR code that users can use to login to their account on another device</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/LoginQRCode.html#%3Cinit%3E(com.example.qr_go.User)">LoginQRCode(User)</a></span> - Constructor for class com.example.qr_go.<a href="com/example/qr_go/LoginQRCode.html" title="class in com.example.qr_go">LoginQRCode</a></dt>
+<dd>
+<div class="block">On create, convert qr content to hash</div>
+</dd>
 </dl>
 <a id="I:M">
 <!--   -->
@@ -104,7 +232,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <h2 class="title">M</h2>
 <dl>
 <dt><a href="com/example/qr_go/MapsActivity.html" title="class in com.example.qr_go"><span class="typeNameLink">MapsActivity</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">MainActivity</div>
+</dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/MapsActivity.html#%3Cinit%3E()">MapsActivity()</a></span> - Constructor for class com.example.qr_go.<a href="com/example/qr_go/MapsActivity.html" title="class in com.example.qr_go">MapsActivity</a></dt>
 <dd>&nbsp;</dd>
 </dl>
@@ -115,12 +245,83 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dl>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/MapsActivity.html#onCreate(android.os.Bundle)">onCreate(Bundle)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/MapsActivity.html" title="class in com.example.qr_go">MapsActivity</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/QRCodeScannerActivity.html#onCreate(android.os.Bundle)">onCreate(Bundle)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/QRCodeScannerActivity.html" title="class in com.example.qr_go">QRCodeScannerActivity</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/MapsActivity.html#onMapReady(com.google.android.gms.maps.GoogleMap)">onMapReady(GoogleMap)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/MapsActivity.html" title="class in com.example.qr_go">MapsActivity</a></dt>
 <dd>
 <div class="block">Manipulates the map once available.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/QRCodeScannerActivity.html#onPause()">onPause()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/QRCodeScannerActivity.html" title="class in com.example.qr_go">QRCodeScannerActivity</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/QRCodeScannerActivity.html#onRequestPermissionsResult(int,java.lang.String%5B%5D,int%5B%5D)">onRequestPermissionsResult(int, String[], int[])</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/QRCodeScannerActivity.html" title="class in com.example.qr_go">QRCodeScannerActivity</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/QRCodeScannerActivity.html#onResume()">onResume()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/QRCodeScannerActivity.html" title="class in com.example.qr_go">QRCodeScannerActivity</a></dt>
+<dd>&nbsp;</dd>
 </dl>
-<a href="#I:C">C</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:O">O</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes</a>&nbsp;<a href="allpackages-index.html">All&nbsp;Packages</a></div>
+<a id="I:Q">
+<!--   -->
+</a>
+<h2 class="title">Q</h2>
+<dl>
+<dt><a href="com/example/qr_go/QRCode.html" title="class in com.example.qr_go"><span class="typeNameLink">QRCode</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
+<dd>
+<div class="block">QRCode is the super class from which GameQRCode and LoginQRCode subclasses extend from
+ This class will take the string contents of a QR code and convert it into a SHA256 hash
+ This hash is stored into the protected variable `hash`</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/QRCode.html#%3Cinit%3E(java.lang.String)">QRCode(String)</a></span> - Constructor for class com.example.qr_go.<a href="com/example/qr_go/QRCode.html" title="class in com.example.qr_go">QRCode</a></dt>
+<dd>
+<div class="block">QR code</div>
+</dd>
+<dt><a href="com/example/qr_go/QRCodeScannerActivity.html" title="class in com.example.qr_go"><span class="typeNameLink">QRCodeScannerActivity</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
+<dd>
+<div class="block">QRCodeScanner is the activity that scans QR codes
+ Library: https://github.com/yuriy-budiyev/code-scanner</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/QRCodeScannerActivity.html#%3Cinit%3E()">QRCodeScannerActivity()</a></span> - Constructor for class com.example.qr_go.<a href="com/example/qr_go/QRCodeScannerActivity.html" title="class in com.example.qr_go">QRCodeScannerActivity</a></dt>
+<dd>&nbsp;</dd>
+</dl>
+<a id="I:S">
+<!--   -->
+</a>
+<h2 class="title">S</h2>
+<dl>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/User.html#setEmail(java.lang.String)">setEmail(String)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/User.html" title="class in com.example.qr_go">User</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/Comment.html#setMessage(java.lang.String)">setMessage(String)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/Comment.html" title="class in com.example.qr_go">Comment</a></dt>
+<dd>
+<div class="block">Setter for message.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/User.html#setUsername(java.lang.String)">setUsername(String)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/User.html" title="class in com.example.qr_go">User</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/User.html#showStatus(com.example.qr_go.StatusQRCode)">showStatus(StatusQRCode)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/User.html" title="class in com.example.qr_go">User</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="com/example/qr_go/StatusQRCode.html" title="class in com.example.qr_go"><span class="typeNameLink">StatusQRCode</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
+<dd>
+<div class="block">StatusQRCode allows other plays to scan in order to view the status page of a player</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/StatusQRCode.html#%3Cinit%3E(com.example.qr_go.User)">StatusQRCode(User)</a></span> - Constructor for class com.example.qr_go.<a href="com/example/qr_go/StatusQRCode.html" title="class in com.example.qr_go">StatusQRCode</a></dt>
+<dd>
+<div class="block">Status QR Code</div>
+</dd>
+</dl>
+<a id="I:U">
+<!--   -->
+</a>
+<h2 class="title">U</h2>
+<dl>
+<dt><a href="com/example/qr_go/User.html" title="class in com.example.qr_go"><span class="typeNameLink">User</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
+<dd>
+<div class="block">Represents a user.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/User.html#%3Cinit%3E()">User()</a></span> - Constructor for class com.example.qr_go.<a href="com/example/qr_go/User.html" title="class in com.example.qr_go">User</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/User.html#User()">User()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/User.html" title="class in com.example.qr_go">User</a></dt>
+<dd>
+<div class="block">Constructor for user class</div>
+</dd>
+</dl>
+<a href="#I:A">A</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:Q">Q</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:U">U</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes</a>&nbsp;<a href="allpackages-index.html">All&nbsp;Packages</a></div>
 </main>
 <footer role="contentinfo">
 <nav role="navigation">

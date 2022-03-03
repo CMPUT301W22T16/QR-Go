@@ -97,6 +97,21 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <table class="typeSummary">
+<caption><span>Interface Summary</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Interface</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="GeneratesNewQR.html" title="interface in com.example.qr_go">GeneratesNewQR</a></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList">
+<table class="typeSummary">
 <caption><span>Class Summary</span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colFirst" scope="col">Class</th>
@@ -104,8 +119,56 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tbody>
 <tr class="altColor">
+<th class="colFirst" scope="row"><a href="Comment.html" title="class in com.example.qr_go">Comment</a></th>
+<td class="colLast">
+<div class="block">This is a class that represents a comment made by a user to a QRCode</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="GameQRCode.html" title="class in com.example.qr_go">GameQRCode</a></th>
+<td class="colLast">
+<div class="block">GameQRCode represents QR codes that players will scan to score points
+ Each GameQRCode contains a list of users that scanned it</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="LoginQRCode.html" title="class in com.example.qr_go">LoginQRCode</a></th>
+<td class="colLast">
+<div class="block">LoginQRCode is the QR code that users can use to login to their account on another device</div>
+</td>
+</tr>
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="MapsActivity.html" title="class in com.example.qr_go">MapsActivity</a></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">MainActivity</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="QRCode.html" title="class in com.example.qr_go">QRCode</a></th>
+<td class="colLast">
+<div class="block">QRCode is the super class from which GameQRCode and LoginQRCode subclasses extend from
+ This class will take the string contents of a QR code and convert it into a SHA256 hash
+ This hash is stored into the protected variable `hash`</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="QRCodeScannerActivity.html" title="class in com.example.qr_go">QRCodeScannerActivity</a></th>
+<td class="colLast">
+<div class="block">QRCodeScanner is the activity that scans QR codes
+ Library: https://github.com/yuriy-budiyev/code-scanner</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="StatusQRCode.html" title="class in com.example.qr_go">StatusQRCode</a></th>
+<td class="colLast">
+<div class="block">StatusQRCode allows other plays to scan in order to view the status page of a player</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colFirst" scope="row"><a href="User.html" title="class in com.example.qr_go">User</a></th>
+<td class="colLast">
+<div class="block">Represents a user.</div>
+</td>
 </tr>
 </tbody>
 </table>
