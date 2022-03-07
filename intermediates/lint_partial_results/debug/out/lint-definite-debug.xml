@@ -20,6 +20,63 @@
     </incident>
 
     <incident
+        id="IgnoreWithoutReason"
+        severity="warning"
+        message="Test is ignored without giving any explanation">
+        <fix-replace
+            description="Give reason"
+            oldString="_lint_insert_end_"
+            selectPattern="TODO"
+            replacement="(&quot;TODO&quot;)"/>
+        <location
+            file="${:app*debug*testSourceProvider*0*javaDir*0}/com/example/qr_go/LoginQRCodeTest.java"
+            line="15"
+            column="5"
+            startOffset="342"
+            endLine="15"
+            endColumn="12"
+            endOffset="349"/>
+    </incident>
+
+    <incident
+        id="IgnoreWithoutReason"
+        severity="warning"
+        message="Test is ignored without giving any explanation">
+        <fix-replace
+            description="Give reason"
+            oldString="_lint_insert_end_"
+            selectPattern="TODO"
+            replacement="(&quot;TODO&quot;)"/>
+        <location
+            file="${:app*debug*testSourceProvider*0*javaDir*0}/com/example/qr_go/UserTest.java"
+            line="20"
+            column="5"
+            startOffset="363"
+            endLine="20"
+            endColumn="12"
+            endOffset="370"/>
+    </incident>
+
+    <incident
+        id="IgnoreWithoutReason"
+        severity="warning"
+        message="Test is ignored without giving any explanation">
+        <fix-replace
+            description="Give reason"
+            oldString="_lint_insert_end_"
+            selectPattern="TODO"
+            replacement="(&quot;TODO&quot;)"/>
+        <location
+            file="${:app*debug*testSourceProvider*0*javaDir*0}/com/example/qr_go/UserTest.java"
+            line="31"
+            column="5"
+            startOffset="777"
+            endLine="31"
+            endColumn="12"
+            endOffset="784"/>
+    </incident>
+
+    <incident
         id="GradleDependency"
         severity="warning"
         message="A newer version of com.google.android.gms:play-services-maps than 17.0.1 is available: 18.0.2">
@@ -30,12 +87,26 @@
             replacement="18.0.2"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="38"
+            line="39"
             column="20"
-            startOffset="947"
-            endLine="38"
+            startOffset="1012"
+            endLine="39"
             endColumn="70"
-            endOffset="997"/>
+            endOffset="1062"/>
+    </incident>
+
+    <incident
+        id="MergeRootFrame"
+        severity="warning"
+        message="This `&lt;FrameLayout>` can be replaced with a `&lt;merge>` tag">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_code_scanner.xml"
+            line="2"
+            column="1"
+            startOffset="39"
+            endLine="24"
+            endColumn="15"
+            endOffset="931"/>
     </incident>
 
 </incidents>
