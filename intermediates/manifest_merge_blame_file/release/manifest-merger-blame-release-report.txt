@@ -160,6 +160,19 @@
 92                android:value="androidx.startup" />
 92-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/runner/.gradle/caches/transforms-3/50198bcd9124397ae18b28f214621175/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
 93        </provider>
-94    </application>
-95
-96</manifest>
+94
+95        <uses-library
+95-->[androidx.window:window:1.0.0] /home/runner/.gradle/caches/transforms-3/46ff6747cf344798896fc9ef99607d87/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+96            android:name="androidx.window.extensions"
+96-->[androidx.window:window:1.0.0] /home/runner/.gradle/caches/transforms-3/46ff6747cf344798896fc9ef99607d87/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+97            android:required="false" />
+97-->[androidx.window:window:1.0.0] /home/runner/.gradle/caches/transforms-3/46ff6747cf344798896fc9ef99607d87/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+98        <uses-library
+98-->[androidx.window:window:1.0.0] /home/runner/.gradle/caches/transforms-3/46ff6747cf344798896fc9ef99607d87/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+99            android:name="androidx.window.sidecar"
+99-->[androidx.window:window:1.0.0] /home/runner/.gradle/caches/transforms-3/46ff6747cf344798896fc9ef99607d87/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+100            android:required="false" />
+100-->[androidx.window:window:1.0.0] /home/runner/.gradle/caches/transforms-3/46ff6747cf344798896fc9ef99607d87/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+101    </application>
+102
+103</manifest>

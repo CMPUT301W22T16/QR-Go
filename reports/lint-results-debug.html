@@ -174,10 +174,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 6 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 19 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Mon Mar 07 04:05:45 UTC 2022      </nav>
+Check performed at Mon Mar 07 04:18:37 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -185,8 +185,11 @@ Check performed at Mon Mar 07 04:05:45 UTC 2022      </nav>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
       <a class="mdl-navigation__link" href="#FragmentTagUsage"><i class="material-icons warning-icon">warning</i>Use FragmentContainerView instead of the &lt;fragment> tag (1)</a>
-      <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (1)</a>
+      <a class="mdl-navigation__link" href="#NonConstantResourceId"><i class="material-icons warning-icon">warning</i>Checks use of resource IDs in places requiring constants (4)</a>
+      <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (5)</a>
       <a class="mdl-navigation__link" href="#MergeRootFrame"><i class="material-icons warning-icon">warning</i>FrameLayout can be replaced with <code>&lt;merge></code> tag (1)</a>
+      <a class="mdl-navigation__link" href="#RedundantNamespace"><i class="material-icons warning-icon">warning</i>Redundant namespace (1)</a>
+      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (4)</a>
       <a class="mdl-navigation__link" href="#IgnoreWithoutReason"><i class="material-icons warning-icon">warning</i>@Ignore without Reason (3)</a>
     </nav>
   </div>
@@ -206,13 +209,24 @@ Check performed at Mon Mar 07 04:05:45 UTC 2022      </nav>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#FragmentTagUsage">FragmentTagUsage</a>: Use FragmentContainerView instead of the &lt;fragment> tag</td></tr>
 <tr>
-<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">4</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#NonConstantResourceId">NonConstantResourceId</a>: Checks use of resource IDs in places requiring constants</td></tr>
+<tr>
+<td class="countColumn">5</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#GradleDependency">GradleDependency</a>: Obsolete Gradle Dependency</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Performance">Performance</a>
 </td></tr>
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#MergeRootFrame">MergeRootFrame</a>: FrameLayout can be replaced with <code>&lt;merge></code> tag</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#RedundantNamespace">RedundantNamespace</a>: Redundant namespace</td></tr>
+<tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Internationalization">Internationalization</a>
+</td></tr>
+<tr>
+<td class="countColumn">4</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#HardcodedText">HardcodedText</a>: Hardcoded text</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Testing">Testing</a>
 </td></tr>
 <tr>
@@ -236,12 +250,14 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/res/layout/activity_maps.xml">../../src/main/res/layout/activity_maps.xml</a>:2</span>: <span class="message">Replace the &lt;fragment> tag with FragmentContainerView.</span><br /><pre class="errorlines">
-<span class="lineno"> 1 </span><span class="prologue">&lt;?xml version="1.0" encoding="utf-8"?></span>
-<span class="caretline"><span class="lineno"> 2 </span><span class="tag">&lt;</span><span class="warning"><span class="tag">fragment</span></span><span class="attribute"> </span><span class="prefix">xmlns:</span><span class="attribute">android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 3 </span>    <span class="prefix">xmlns:</span><span class="attribute">map</span>=<span class="value">"http://schemas.android.com/apk/res-auto"</span>
-<span class="lineno"> 4 </span>    <span class="prefix">xmlns:</span><span class="attribute">tools</span>=<span class="value">"http://schemas.android.com/tools"</span>
-<span class="lineno"> 5 </span>    <span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/map"</span></pre>
+<span class="location"><a href="../../src/main/res/layout/activity_maps.xml">../../src/main/res/layout/activity_maps.xml</a>:23</span>: <span class="message">Replace the &lt;fragment> tag with FragmentContainerView.</span><br /><pre class="errorlines">
+<span class="lineno"> 20 </span>        <span class="prefix">app:</span><span class="attribute">labelVisibilityMode</span>=<span class="value">"labeled"</span>
+<span class="lineno"> 21 </span>        />
+<span class="lineno"> 22 </span>
+<span class="caretline"><span class="lineno"> 23 </span>    <span class="tag">&lt;</span><span class="warning"><span class="tag">fragment</span></span><span class="attribute"> </span><span class="prefix">xmlns:</span><span class="attribute">android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 24 </span>        <span class="prefix">xmlns:</span><span class="attribute">map</span>=<span class="value">"http://schemas.android.com/apk/res-auto"</span>
+<span class="lineno"> 25 </span>        <span class="prefix">xmlns:</span><span class="attribute">tools</span>=<span class="value">"http://schemas.android.com/tools"</span>
+<span class="lineno"> 26 </span>        <span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/map"</span></pre>
 
 </div>
 <div class="metadata"><div class="explanation" id="explanationFragmentTagUsage" style="display: none;">
@@ -251,8 +267,8 @@ FragmentContainerView replaces the &lt;fragment> tag as the preferred           
 </div>
 </div>
 <div class="vendor">
-Vendor: Android Open Source Project (fragment-1.3.6)<br/>
-Identifier: fragment-1.3.6<br/>
+Vendor: Android Open Source Project (fragment-1.4.0)<br/>
+Identifier: fragment-1.4.0<br/>
 Feedback: <a href="https://issuetracker.google.com/issues/new?component=192731">https://issuetracker.google.com/issues/new?component=192731</a><br/>
 </div>
 <div class="chips">
@@ -275,6 +291,83 @@ Feedback: <a href="https://issuetracker.google.com/issues/new?component=192731">
 Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="FragmentTagUsageCardLink" onclick="hideid('FragmentTagUsageCard');">
 Dismiss</button>            </div>
             </div>
+          </section><a name="NonConstantResourceId"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="NonConstantResourceIdCard" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Checks use of resource IDs in places requiring constants</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:71</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
+<span class="lineno">  68 </span>            <span class="keyword">public</span> <span class="keyword">boolean</span> onNavigationItemSelected(<span class="annotation">@NonNull</span> MenuItem item) {
+<span class="lineno">  69 </span>                <span class="keyword">int</span> id = item.getItemId();
+<span class="lineno">  70 </span>                <span class="keyword">switch</span> (id) {
+<span class="caretline"><span class="lineno">  71 </span>                    <span class="keyword">case</span> <span class="warning">R.id.nav_search</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  72 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
+<span class="lineno">  73 </span>                        <span class="keyword">break</span>;
+<span class="lineno">  74 </span>                    <span class="keyword">case</span> R.id.nav_my_codes:
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:74</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
+<span class="lineno">  71 </span>                    <span class="keyword">case</span> R.id.nav_search:
+<span class="lineno">  72 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
+<span class="lineno">  73 </span>                        <span class="keyword">break</span>;
+<span class="caretline"><span class="lineno">  74 </span>                    <span class="keyword">case</span> <span class="warning">R.id.nav_my_codes</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  75 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
+<span class="lineno">  76 </span>                        <span class="keyword">break</span>;
+<span class="lineno">  77 </span>                    <span class="keyword">case</span> R.id.nav_scan_code:
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:77</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
+<span class="lineno">  74 </span>                    <span class="keyword">case</span> R.id.nav_my_codes:
+<span class="lineno">  75 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
+<span class="lineno">  76 </span>                        <span class="keyword">break</span>;
+<span class="caretline"><span class="lineno">  77 </span>                    <span class="keyword">case</span> <span class="warning">R.id.nav_scan_code</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  78 </span>                        startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, QRCodeScannerActivity.<span class="keyword">class</span>));
+<span class="lineno">  79 </span>                        <span class="keyword">break</span>;
+<span class="lineno">  80 </span>                    <span class="keyword">case</span> R.id.nav_my_account:
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:80</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
+<span class="lineno">  77 </span>                    <span class="keyword">case</span> R.id.nav_scan_code:
+<span class="lineno">  78 </span>                        startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, QRCodeScannerActivity.<span class="keyword">class</span>));
+<span class="lineno">  79 </span>                        <span class="keyword">break</span>;
+<span class="caretline"><span class="lineno">  80 </span>                    <span class="keyword">case</span> <span class="warning">R.id.nav_my_account</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  81 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
+<span class="lineno">  82 </span>                        <span class="keyword">break</span>;
+<span class="lineno">  83 </span>                }
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationNonConstantResourceId" style="display: none;">
+Avoid the usage of resource IDs where constant expressions are required.<br/>
+<br/>
+A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation.<br/>To suppress this error, use the issue id "NonConstantResourceId" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/></div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">NonConstantResourceId</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Correctness</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 5/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationNonConstantResourceIdLink" onclick="reveal('explanationNonConstantResourceId');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="NonConstantResourceIdCardLink" onclick="hideid('NonConstantResourceIdCard');">
+Dismiss</button>            </div>
+            </div>
           </section><a name="GradleDependency"></a>
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="GradleDependencyCard" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
@@ -291,7 +384,43 @@ Dismiss</button>            </div>
 <span class="caretline"><span class="lineno"> 39 </span>    implementation <span class="warning"><span class="string">'com.google.android.gms:play-services-maps:17.0.1'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno"> 40 </span>    implementation <span class="string">'androidx.constraintlayout:constraintlayout:2.1.3'</span>
 <span class="lineno"> 41 </span>    implementation <span class="string">'com.google.firebase:firebase-firestore:24.0.1'</span>
-<span class="lineno"> 42 </span>    testImplementation <span class="string">'junit:junit:4.13.2'</span></pre>
+<span class="lineno"> 42 </span>    implementation <span class="string">'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'</span></pre>
+
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:42</span>: <span class="message">A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.4.0 is available: 2.4.1</span><br /><pre class="errorlines">
+<span class="lineno"> 39 </span>    implementation <span class="string">'com.google.android.gms:play-services-maps:17.0.1'</span>
+<span class="lineno"> 40 </span>    implementation <span class="string">'androidx.constraintlayout:constraintlayout:2.1.3'</span>
+<span class="lineno"> 41 </span>    implementation <span class="string">'com.google.firebase:firebase-firestore:24.0.1'</span>
+<span class="caretline"><span class="lineno"> 42 </span>    implementation <span class="warning"><span class="string">'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 43 </span>    implementation <span class="string">'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'</span>
+<span class="lineno"> 44 </span>    implementation <span class="string">'androidx.navigation:navigation-fragment:2.4.0'</span>
+<span class="lineno"> 45 </span>    implementation <span class="string">'androidx.navigation:navigation-ui:2.4.0'</span></pre>
+
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:43</span>: <span class="message">A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.4.0 is available: 2.4.1</span><br /><pre class="errorlines">
+<span class="lineno"> 40 </span>    implementation <span class="string">'androidx.constraintlayout:constraintlayout:2.1.3'</span>
+<span class="lineno"> 41 </span>    implementation <span class="string">'com.google.firebase:firebase-firestore:24.0.1'</span>
+<span class="lineno"> 42 </span>    implementation <span class="string">'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'</span>
+<span class="caretline"><span class="lineno"> 43 </span>    implementation <span class="warning"><span class="string">'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 44 </span>    implementation <span class="string">'androidx.navigation:navigation-fragment:2.4.0'</span>
+<span class="lineno"> 45 </span>    implementation <span class="string">'androidx.navigation:navigation-ui:2.4.0'</span>
+<span class="lineno"> 46 </span>    testImplementation <span class="string">'junit:junit:4.13.2'</span></pre>
+
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:44</span>: <span class="message">A newer version of androidx.navigation:navigation-fragment than 2.4.0 is available: 2.4.1</span><br /><pre class="errorlines">
+<span class="lineno"> 41 </span>    implementation <span class="string">'com.google.firebase:firebase-firestore:24.0.1'</span>
+<span class="lineno"> 42 </span>    implementation <span class="string">'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'</span>
+<span class="lineno"> 43 </span>    implementation <span class="string">'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'</span>
+<span class="caretline"><span class="lineno"> 44 </span>    implementation <span class="warning"><span class="string">'androidx.navigation:navigation-fragment:2.4.0'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 45 </span>    implementation <span class="string">'androidx.navigation:navigation-ui:2.4.0'</span>
+<span class="lineno"> 46 </span>    testImplementation <span class="string">'junit:junit:4.13.2'</span>
+<span class="lineno"> 47 </span>    androidTestImplementation <span class="string">'androidx.test.ext:junit:1.1.3'</span></pre>
+
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:45</span>: <span class="message">A newer version of androidx.navigation:navigation-ui than 2.4.0 is available: 2.4.1</span><br /><pre class="errorlines">
+<span class="lineno"> 42 </span>    implementation <span class="string">'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'</span>
+<span class="lineno"> 43 </span>    implementation <span class="string">'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'</span>
+<span class="lineno"> 44 </span>    implementation <span class="string">'androidx.navigation:navigation-fragment:2.4.0'</span>
+<span class="caretline"><span class="lineno"> 45 </span>    implementation <span class="warning"><span class="string">'androidx.navigation:navigation-ui:2.4.0'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 46 </span>    testImplementation <span class="string">'junit:junit:4.13.2'</span>
+<span class="lineno"> 47 </span>    androidTestImplementation <span class="string">'androidx.test.ext:junit:1.1.3'</span>
+<span class="lineno"> 48 </span>    androidTestImplementation <span class="string">'androidx.test.espresso:espresso-core:3.4.0'</span></pre>
 
 </div>
 <div class="metadata"><div class="explanation" id="explanationGradleDependency" style="display: none;">
@@ -363,6 +492,129 @@ If a <code>&lt;FrameLayout></code> is the root of a layout and does not provide 
               <div class="mdl-card__actions mdl-card--border">
 <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationMergeRootFrameLink" onclick="reveal('explanationMergeRootFrame');">
 Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="MergeRootFrameCardLink" onclick="hideid('MergeRootFrameCard');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="RedundantNamespace"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="RedundantNamespaceCard" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Redundant namespace</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res/layout/activity_maps.xml">../../src/main/res/layout/activity_maps.xml</a>:23</span>: <span class="message">This namespace declaration is redundant</span><br /><pre class="errorlines">
+<span class="lineno"> 20 </span>        <span class="prefix">app:</span><span class="attribute">labelVisibilityMode</span>=<span class="value">"labeled"</span>
+<span class="lineno"> 21 </span>        />
+<span class="lineno"> 22 </span>
+<span class="caretline"><span class="lineno"> 23 </span>    <span class="tag">&lt;fragment</span><span class="attribute"> </span><span class="warning"><span class="prefix">xmlns:</span><span class="attribute">android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 24 </span>        <span class="prefix">xmlns:</span><span class="attribute">map</span>=<span class="value">"http://schemas.android.com/apk/res-auto"</span>
+<span class="lineno"> 25 </span>        <span class="prefix">xmlns:</span><span class="attribute">tools</span>=<span class="value">"http://schemas.android.com/tools"</span>
+<span class="lineno"> 26 </span>        <span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/map"</span></pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationRedundantNamespace" style="display: none;">
+In Android XML documents, only specify the namespace on the root/document element. Namespace declarations elsewhere in the document are typically accidental leftovers from copy/pasting XML from other files or documentation.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "RedundantNamespace" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/></div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">RedundantNamespace</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Performance</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 1/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationRedundantNamespaceLink" onclick="reveal('explanationRedundantNamespace');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="RedundantNamespaceCardLink" onclick="hideid('RedundantNamespaceCard');">
+Dismiss</button>            </div>
+            </div>
+          </section>
+<a name="Internationalization"></a>
+<a name="HardcodedText"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="HardcodedTextCard" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Hardcoded text</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res/menu/bottom_nav_menu.xml">../../src/main/res/menu/bottom_nav_menu.xml</a>:7</span>: <span class="message">Hardcoded string "Search", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno">  4 </span>    <span class="tag">&lt;item</span><span class="attribute">
+</span><span class="lineno">  5 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/nav_search"</span>
+<span class="lineno">  6 </span>        <span class="prefix">android:</span><span class="attribute">icon</span>=<span class="value">"@drawable/round_search_24"</span>
+<span class="caretline"><span class="lineno">  7 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">title</span>=<span class="value">"Search"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  8 </span>
+<span class="lineno">  9 </span>    <span class="tag">&lt;item</span><span class="attribute">
+</span><span class="lineno"> 10 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/nav_my_codes"</span></pre>
+
+<span class="location"><a href="../../src/main/res/menu/bottom_nav_menu.xml">../../src/main/res/menu/bottom_nav_menu.xml</a>:12</span>: <span class="message">Hardcoded string "My Codes", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno">  9 </span>    <span class="tag">&lt;item</span><span class="attribute">
+</span><span class="lineno"> 10 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/nav_my_codes"</span>
+<span class="lineno"> 11 </span>        <span class="prefix">android:</span><span class="attribute">icon</span>=<span class="value">"@drawable/baseline_dashboard_24"</span>
+<span class="caretline"><span class="lineno"> 12 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">title</span>=<span class="value">"My Codes"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 13 </span>
+<span class="lineno"> 14 </span>    <span class="tag">&lt;item</span><span class="attribute">
+</span><span class="lineno"> 15 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/nav_scan_code"</span></pre>
+
+<span class="location"><a href="../../src/main/res/menu/bottom_nav_menu.xml">../../src/main/res/menu/bottom_nav_menu.xml</a>:17</span>: <span class="message">Hardcoded string "Scan Code", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 14 </span>    <span class="tag">&lt;item</span><span class="attribute">
+</span><span class="lineno"> 15 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/nav_scan_code"</span>
+<span class="lineno"> 16 </span>        <span class="prefix">android:</span><span class="attribute">icon</span>=<span class="value">"@drawable/round_qr_code_scanner_24"</span>
+<span class="caretline"><span class="lineno"> 17 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">title</span>=<span class="value">"Scan Code"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 18 </span>
+<span class="lineno"> 19 </span>    <span class="tag">&lt;item</span><span class="attribute">
+</span><span class="lineno"> 20 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/nav_my_account"</span></pre>
+
+<span class="location"><a href="../../src/main/res/menu/bottom_nav_menu.xml">../../src/main/res/menu/bottom_nav_menu.xml</a>:22</span>: <span class="message">Hardcoded string "My Account", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 19 </span>    <span class="tag">&lt;item</span><span class="attribute">
+</span><span class="lineno"> 20 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/nav_my_account"</span>
+<span class="lineno"> 21 </span>        <span class="prefix">android:</span><span class="attribute">icon</span>=<span class="value">"@drawable/round_account_circle_24"</span>
+<span class="caretline"><span class="lineno"> 22 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">title</span>=<span class="value">"My Account"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 23 </span>
+<span class="lineno"> 24 </span><span class="tag">&lt;/menu></span></pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationHardcodedText" style="display: none;">
+Hardcoding text attributes directly in layout files is bad for several reasons:<br/>
+<br/>
+* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)<br/>
+<br/>
+* The application cannot be translated to other languages by just adding new translations for existing string resources.<br/>
+<br/>
+There are quickfixes to automatically extract this hardcoded string into a resource lookup.<br/>To suppress this error, use the issue id "HardcodedText" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/></div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">HardcodedText</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Internationalization</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 5/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationHardcodedTextLink" onclick="reveal('explanationHardcodedText');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="HardcodedTextCardLink" onclick="hideid('HardcodedTextCard');">
 Dismiss</button>            </div>
             </div>
           </section>
