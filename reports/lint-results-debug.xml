@@ -31,74 +31,8 @@
         errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/build.gradle"
-            line="39"
+            line="38"
             column="20"/>
-    </issue>
-
-    <issue
-        id="MergeRootFrame"
-        severity="Warning"
-        message="This `&lt;FrameLayout>` can be replaced with a `&lt;merge>` tag"
-        category="Performance"
-        priority="4"
-        summary="FrameLayout can be replaced with `&lt;merge>` tag"
-        explanation="If a `&lt;FrameLayout>` is the root of a layout and does not provide background or padding etc, it can often be replaced with a `&lt;merge>` tag which is slightly more efficient. Note that this depends on context, so make sure you understand how the `&lt;merge>` tag works before proceeding."
-        url="https://android-developers.googleblog.com/2009/03/android-layout-tricks-3-optimize-by.html"
-        urls="https://android-developers.googleblog.com/2009/03/android-layout-tricks-3-optimize-by.html"
-        errorLine1="&lt;FrameLayout"
-        errorLine2="^">
-        <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_code_scanner.xml"
-            line="2"
-            column="1"/>
-    </issue>
-
-    <issue
-        id="IgnoreWithoutReason"
-        severity="Warning"
-        message="Test is ignored without giving any explanation"
-        category="Testing"
-        priority="2"
-        summary="@Ignore without Reason"
-        explanation="Ignoring a test without a reason makes it difficult to figure out the problem later.&#xA;Please define an explicit reason why it is ignored, and when it can be resolved."
-        errorLine1="    @Ignore // need to mock firestore"
-        errorLine2="    ~~~~~~~">
-        <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/test/java/com/example/qr_go/LoginQRCodeTest.java"
-            line="15"
-            column="5"/>
-    </issue>
-
-    <issue
-        id="IgnoreWithoutReason"
-        severity="Warning"
-        message="Test is ignored without giving any explanation"
-        category="Testing"
-        priority="2"
-        summary="@Ignore without Reason"
-        explanation="Ignoring a test without a reason makes it difficult to figure out the problem later.&#xA;Please define an explicit reason why it is ignored, and when it can be resolved."
-        errorLine1="    @Ignore"
-        errorLine2="    ~~~~~~~">
-        <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/test/java/com/example/qr_go/UserTest.java"
-            line="20"
-            column="5"/>
-    </issue>
-
-    <issue
-        id="IgnoreWithoutReason"
-        severity="Warning"
-        message="Test is ignored without giving any explanation"
-        category="Testing"
-        priority="2"
-        summary="@Ignore without Reason"
-        explanation="Ignoring a test without a reason makes it difficult to figure out the problem later.&#xA;Please define an explicit reason why it is ignored, and when it can be resolved."
-        errorLine1="    @Ignore"
-        errorLine2="    ~~~~~~~">
-        <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/test/java/com/example/qr_go/UserTest.java"
-            line="31"
-            column="5"/>
     </issue>
 
 </issues>
