@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.qr_go.GameQRCodeTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-03-07T04:03:28" hostname="fv-az131-368" time="0.007">
+<testsuite name="com.example.qr_go.GameQRCodeTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-03-07T04:05:41" hostname="fv-az39-950" time="0.01">
   <properties/>
-  <testcase name="checkScoringAlgorithm" classname="com.example.qr_go.GameQRCodeTest" time="0.005"/>
-  <testcase name="checkScore" classname="com.example.qr_go.GameQRCodeTest" time="0.0"/>
+  <testcase name="checkScoringAlgorithm" classname="com.example.qr_go.GameQRCodeTest" time="0.009"/>
+  <testcase name="checkScore" classname="com.example.qr_go.GameQRCodeTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
