@@ -3,6 +3,7 @@ package com.example.qr_go;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -19,7 +20,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 
-
+/**
+ * MainActivity
+ */
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
@@ -53,6 +56,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 Log.d("FAILURE", "Data could not be added: " + e.toString());
             }
         });
+
+        
     }
 
     /**
