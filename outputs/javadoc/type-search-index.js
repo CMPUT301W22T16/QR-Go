@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.example.qr_go","l":"MapsActivity"}]
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.example.qr_go","l":"Comment"},{"p":"com.example.qr_go","l":"GameQRCode"},{"p":"com.example.qr_go","l":"GeneratesNewQR"},{"p":"com.example.qr_go","l":"LoginQRCode"},{"p":"com.example.qr_go","l":"MapsActivity"},{"p":"com.example.qr_go","l":"QRCode"},{"p":"com.example.qr_go","l":"QRCodeScannerActivity"},{"p":"com.example.qr_go","l":"StatusQRCode"},{"p":"com.example.qr_go","l":"User"}]
