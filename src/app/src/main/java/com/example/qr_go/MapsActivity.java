@@ -57,10 +57,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
-
-        // TODO Redirect to QR code scanner activity
-        Intent i = new Intent(this, QRCodeScannerActivity.class);
-        startActivity(i);
+        
     }
 
     /**
