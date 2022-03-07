@@ -22,6 +22,7 @@ import java.util.Map;
  * LoginQRCode is the QR code that users can use to login to their account on another device
  */
 public class LoginQRCode extends QRCode implements  GeneratesNewQR {
+    static String QR_IDENTIFIER = "login-qr-code-"; // should be pre-pended to all LoginQRCodes
     User user;
     /**
      * On create, convert qr content to hash
@@ -44,7 +45,10 @@ public class LoginQRCode extends QRCode implements  GeneratesNewQR {
            correct, i.e., isLoginValid is called, this constructor could also not exist and
            isLoginValid could be a static method */
         super(qrCodeContents);
+        // Split by `\n` and get new user
+        String[] usernamePassword = qrCodeContents.split("\n");
     }
+
 
     /**
      * Validates if login QR code and password is valid
@@ -90,4 +94,5 @@ public class LoginQRCode extends QRCode implements  GeneratesNewQR {
     public Bitmap getQRCode(){
         return encodeToQrCode(user.getUserid()+"\n"+user.getPassword(), 100, 100);
     }
+
 }

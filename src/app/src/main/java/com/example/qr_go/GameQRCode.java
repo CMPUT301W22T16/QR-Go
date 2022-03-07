@@ -33,6 +33,7 @@ public class GameQRCode extends QRCode {
         this.score = calculateScore(this.hash);
     }
 
+
     /**
      * Given a hash, the score of the hash is calculated
      *

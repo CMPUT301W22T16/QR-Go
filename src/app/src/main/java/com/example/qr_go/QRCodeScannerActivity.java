@@ -18,6 +18,8 @@ import com.budiyev.android.codescanner.DecodeCallback;
 import com.google.common.collect.Maps;
 import com.google.zxing.Result;
 
+import java.security.NoSuchAlgorithmException;
+
 
 /**
  * QRCodeScanner is the activity that scans QR codes
@@ -57,9 +59,25 @@ public class QRCodeScannerActivity extends AppCompatActivity {
                 @Override
                 public void onDecoded(@NonNull final Result result) {
                     runOnUiThread(new Runnable() {
+                        @RequiresApi(api = Build.VERSION_CODES.O)
                         @Override
                         public void run() {
-                            Toast.makeText(QRCodeScannerActivity.this, result.getText(), Toast.LENGTH_SHORT).show();
+                            String text = result.getText();
+                            try {
+                                // Create a new QR code object depending on type of QR code
+                                if (text.startsWith(LoginQRCode.QR_IDENTIFIER)) {
+                                    LoginQRCode loginQRCode = new LoginQRCode(text);
+                                    Toast.makeText(QRCodeScannerActivity.this, "DEBUG LOGIN QR", Toast.LENGTH_SHORT).show();
+                                } else if (text.startsWith(StatusQRCode.QR_IDENTIFIER)) {
+                                    StatusQRCode statusQRCode = new StatusQRCode(text);
+                                    Toast.makeText(QRCodeScannerActivity.this, "DEBUG STATUS QR", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    GameQRCode gameQRCode = new GameQRCode(text);
+                                    Toast.makeText(QRCodeScannerActivity.this, "DEBUG GAME QR", Toast.LENGTH_SHORT).show();
+                                }
+                            } catch (NoSuchAlgorithmException e) {
+                                e.printStackTrace();
+                            }
                         }
                     });
                 }

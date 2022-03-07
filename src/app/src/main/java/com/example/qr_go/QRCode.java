@@ -93,4 +93,5 @@ public class QRCode {
         }
         return bmp;
     }
+
 }
