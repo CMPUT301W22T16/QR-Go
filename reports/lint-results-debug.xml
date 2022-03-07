@@ -53,4 +53,52 @@
             column="1"/>
     </issue>
 
+    <issue
+        id="IgnoreWithoutReason"
+        severity="Warning"
+        message="Test is ignored without giving any explanation"
+        category="Testing"
+        priority="2"
+        summary="@Ignore without Reason"
+        explanation="Ignoring a test without a reason makes it difficult to figure out the problem later.&#xA;Please define an explicit reason why it is ignored, and when it can be resolved."
+        errorLine1="    @Ignore // need to mock firestore"
+        errorLine2="    ~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/test/java/com/example/qr_go/LoginQRCodeTest.java"
+            line="15"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="IgnoreWithoutReason"
+        severity="Warning"
+        message="Test is ignored without giving any explanation"
+        category="Testing"
+        priority="2"
+        summary="@Ignore without Reason"
+        explanation="Ignoring a test without a reason makes it difficult to figure out the problem later.&#xA;Please define an explicit reason why it is ignored, and when it can be resolved."
+        errorLine1="    @Ignore"
+        errorLine2="    ~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/test/java/com/example/qr_go/UserTest.java"
+            line="20"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="IgnoreWithoutReason"
+        severity="Warning"
+        message="Test is ignored without giving any explanation"
+        category="Testing"
+        priority="2"
+        summary="@Ignore without Reason"
+        explanation="Ignoring a test without a reason makes it difficult to figure out the problem later.&#xA;Please define an explicit reason why it is ignored, and when it can be resolved."
+        errorLine1="    @Ignore"
+        errorLine2="    ~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/test/java/com/example/qr_go/UserTest.java"
+            line="31"
+            column="5"/>
+    </issue>
+
 </issues>

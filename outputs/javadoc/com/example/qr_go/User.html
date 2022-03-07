@@ -26,8 +26,8 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":6,"i8":10,"i9":10};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -128,8 +128,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><code><a href="Owner.html" title="class in com.example.qr_go">Owner</a></code>, <code><a href="Player.html" title="class in com.example.qr_go">Player</a></code></dd>
+</dl>
 <hr>
-<pre>public class <span class="typeNameLabel">User</span>
+<pre>public abstract class <span class="typeNameLabel">User</span>
 extends java.lang.Object</pre>
 <div class="block">Represents a user. Contains all user contact info and identifying data</div>
 </li>
@@ -153,7 +157,9 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">User</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Constructor for user class</div>
+</td>
 </tr>
 </table>
 </li>
@@ -167,7 +173,7 @@ extends java.lang.Object</pre>
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colSecond" scope="col">Method</th>
@@ -179,51 +185,51 @@ extends java.lang.Object</pre>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="LoginQRCode.html" title="class in com.example.qr_go">LoginQRCode</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLoginQR()">getLoginQR</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPassword()">getPassword</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.util.ArrayList&lt;java.lang.Integer&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getScannedQRCodeIds()">getScannedQRCodeIds</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="StatusQRCode.html" title="class in com.example.qr_go">StatusQRCode</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getStatusQR()">getStatusQR</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUserid()">getUserid</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUsername()">getUsername</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#login(com.example.qr_go.LoginQRCode)">login</a></span>&#8203;(<a href="LoginQRCode.html" title="class in com.example.qr_go">LoginQRCode</a>&nbsp;loginQR)</code></th>
-<td class="colLast">&nbsp;</td>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>abstract java.lang.Boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isOwner()">isOwner</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Function that tells if a user is an owner and should have enhanced privileges</div>
+</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setEmail(java.lang.String)">setEmail</a></span>&#8203;(java.lang.String&nbsp;email)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
-<td class="colFirst"><code>void</code></td>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setUsername(java.lang.String)">setUsername</a></span>&#8203;(java.lang.String&nbsp;username)</code></th>
 <td class="colLast">&nbsp;</td>
-</tr>
-<tr id="i8" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#showStatus(com.example.qr_go.StatusQRCode)">showStatus</a></span>&#8203;(<a href="StatusQRCode.html" title="class in com.example.qr_go">StatusQRCode</a>&nbsp;statusQR)</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr id="i9" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#User()">User</a></span>()</code></th>
-<td class="colLast">
-<div class="block">Constructor for user class</div>
-</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -255,7 +261,14 @@ extends java.lang.Object</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>User</h4>
-<pre>public&nbsp;User()</pre>
+<pre>@RequiresApi(api=26)
+public&nbsp;User()
+     throws java.security.NoSuchAlgorithmException</pre>
+<div class="block">Constructor for user class</div>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.security.NoSuchAlgorithmException</code> - if user QR codes are not instantiated properly</dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -268,19 +281,17 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="User()">
+<a id="isOwner()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>User</h4>
-<pre class="methodSignature">@RequiresApi(api=26)
-public&nbsp;void&nbsp;User()
-          throws java.security.NoSuchAlgorithmException</pre>
-<div class="block">Constructor for user class</div>
+<h4>isOwner</h4>
+<pre class="methodSignature">public abstract&nbsp;java.lang.Boolean&nbsp;isOwner()</pre>
+<div class="block">Function that tells if a user is an owner and should have enhanced privileges</div>
 <dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code>java.security.NoSuchAlgorithmException</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Returns true if user is an owner, false otherwise</dd>
 </dl>
 </li>
 </ul>
@@ -342,10 +353,12 @@ public&nbsp;void&nbsp;User()
 <ul class="blockList">
 <li class="blockList">
 <h4>setUsername</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setUsername&#8203;(java.lang.String&nbsp;username)</pre>
+<pre class="methodSignature">public&nbsp;boolean&nbsp;setUsername&#8203;(java.lang.String&nbsp;username)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>username</code> - user's new username</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if username was successfully changed, false otherwise</dd>
 </dl>
 </li>
 </ul>
@@ -362,10 +375,36 @@ public&nbsp;void&nbsp;User()
 </dl>
 </li>
 </ul>
-<a id="setEmail(java.lang.String)">
+<a id="getLoginQR()">
 <!--   -->
 </a>
 <ul class="blockList">
+<li class="blockList">
+<h4>getLoginQR</h4>
+<pre class="methodSignature">public&nbsp;<a href="LoginQRCode.html" title="class in com.example.qr_go">LoginQRCode</a>&nbsp;getLoginQR()</pre>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>User's login QR code</dd>
+</dl>
+</li>
+</ul>
+<a id="getStatusQR()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getStatusQR</h4>
+<pre class="methodSignature">public&nbsp;<a href="StatusQRCode.html" title="class in com.example.qr_go">StatusQRCode</a>&nbsp;getStatusQR()</pre>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>User's status QR code</dd>
+</dl>
+</li>
+</ul>
+<a id="setEmail(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockListLast">
 <li class="blockList">
 <h4>setEmail</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setEmail&#8203;(java.lang.String&nbsp;email)</pre>
@@ -373,24 +412,6 @@ public&nbsp;void&nbsp;User()
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>email</code> - user's new email</dd>
 </dl>
-</li>
-</ul>
-<a id="login(com.example.qr_go.LoginQRCode)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>login</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;login&#8203;(<a href="LoginQRCode.html" title="class in com.example.qr_go">LoginQRCode</a>&nbsp;loginQR)</pre>
-</li>
-</ul>
-<a id="showStatus(com.example.qr_go.StatusQRCode)">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>showStatus</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;showStatus&#8203;(<a href="StatusQRCode.html" title="class in com.example.qr_go">StatusQRCode</a>&nbsp;statusQR)</pre>
 </li>
 </ul>
 </li>

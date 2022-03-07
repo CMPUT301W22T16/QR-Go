@@ -39,4 +39,20 @@
 
    https://android-developers.googleblog.com/2009/03/android-layout-tricks-3-optimize-by.html
 
-0 errors, 3 warnings
+/home/runner/work/QR-Go/QR-Go/src/app/src/test/java/com/example/qr_go/LoginQRCodeTest.java:15: Warning: Test is ignored without giving any explanation [IgnoreWithoutReason]
+    @Ignore // need to mock firestore
+    ~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/test/java/com/example/qr_go/UserTest.java:20: Warning: Test is ignored without giving any explanation [IgnoreWithoutReason]
+    @Ignore
+    ~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/test/java/com/example/qr_go/UserTest.java:31: Warning: Test is ignored without giving any explanation [IgnoreWithoutReason]
+    @Ignore
+    ~~~~~~~
+
+   Explanation for issues of type "IgnoreWithoutReason":
+   Ignoring a test without a reason makes it difficult to figure out the
+   problem later.
+   Please define an explicit reason why it is ignored, and when it can be
+   resolved.
+
+0 errors, 6 warnings

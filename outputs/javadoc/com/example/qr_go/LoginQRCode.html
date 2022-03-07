@@ -184,6 +184,12 @@ implements <a href="GeneratesNewQR.html" title="interface in com.example.qr_go">
 <div class="block">On create, convert qr content to hash</div>
 </td>
 </tr>
+<tr class="rowColor">
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String)">LoginQRCode</a></span>&#8203;(java.lang.String&nbsp;qrCodeContents)</code></th>
+<td class="colLast">
+<div class="block">QR code</div>
+</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -211,7 +217,7 @@ implements <a href="GeneratesNewQR.html" title="interface in com.example.qr_go">
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isLoginValid()">isLoginValid</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isLoginValid(java.lang.String)">isLoginValid</a></span>&#8203;(java.lang.String&nbsp;qrCodeContent)</code></th>
 <td class="colLast">
 <div class="block">Validates if login QR code and password is valid</div>
 </td>
@@ -250,7 +256,7 @@ implements <a href="GeneratesNewQR.html" title="interface in com.example.qr_go">
 <a id="&lt;init&gt;(com.example.qr_go.User)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>LoginQRCode</h4>
 <pre>@RequiresApi(api=26)
@@ -260,6 +266,24 @@ public&nbsp;LoginQRCode&#8203;(<a href="User.html" title="class in com.example.q
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>user</code> - string content of qr code</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.security.NoSuchAlgorithmException</code></dd>
+</dl>
+</li>
+</ul>
+<a id="&lt;init&gt;(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>LoginQRCode</h4>
+<pre>@RequiresApi(api=26)
+public&nbsp;LoginQRCode&#8203;(java.lang.String&nbsp;qrCodeContents)
+            throws java.security.NoSuchAlgorithmException</pre>
+<div class="block">QR code</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>qrCodeContents</code> - text contents scanned from QR code</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.security.NoSuchAlgorithmException</code></dd>
 </dl>
@@ -275,13 +299,13 @@ public&nbsp;LoginQRCode&#8203;(<a href="User.html" title="class in com.example.q
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="isLoginValid()">
+<a id="isLoginValid(java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>isLoginValid</h4>
-<pre class="methodSignature">public&nbsp;boolean&nbsp;isLoginValid()</pre>
+<pre class="methodSignature">public&nbsp;boolean&nbsp;isLoginValid&#8203;(java.lang.String&nbsp;qrCodeContent)</pre>
 <div class="block">Validates if login QR code and password is valid</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
