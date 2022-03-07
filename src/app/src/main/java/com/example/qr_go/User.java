@@ -16,9 +16,10 @@ public abstract class User {
     private String userid; // Unique ID to identify users.
     private String password; // Password for verifying a user
     private String username;
+    private Integer totalScore;
     private LoginQRCode loginQR;
     private StatusQRCode statusQR;
-    private ArrayList<Integer> scannedQRCodeIds;
+    private ArrayList<String> scannedQRCodeIds;
     private String email;
 
     /**
@@ -31,7 +32,8 @@ public abstract class User {
         userid = UUID.randomUUID().toString();
         // Generate a new random UUID for a new user's password
         password = UUID.randomUUID().toString();
-        username = "";
+        username = UsernameGenerator.generateUsername();
+        totalScore = 0;
         email = "";
         scannedQRCodeIds = new ArrayList<>();
         loginQR = new LoginQRCode(this);
@@ -45,9 +47,28 @@ public abstract class User {
     public abstract Boolean isOwner();
 
     /**
+     * Adds a QR code to the user's list of scanned QR codes and its score to the user's total
+     * @param qr GameQRCode object which is to be added to the player's list of scanned QRs
+     */
+    public void addQRCode(GameQRCode qr) {
+        scannedQRCodeIds.add(qr.getId());
+        totalScore += qr.getScore();
+    }
+
+    /**
+     * Deletes a QR code to the user's list of scanned QR codes and subtracts its score from the
+     * user's total
+     * @param qr GameQRCode object which is to be removed from the player's list of scanned QRs
+     */
+    public void deleteQRCode(GameQRCode qr) {
+        scannedQRCodeIds.remove(qr.getId());
+        totalScore -= qr.getScore();
+    }
+
+    /**
      * @return ArrayList of IDs of a user's scanned QR codes
      */
-    public ArrayList<Integer> getScannedQRCodeIds() {
+    public ArrayList<String> getScannedQRCodeIds() {
         return scannedQRCodeIds;
     }
 
@@ -63,6 +84,13 @@ public abstract class User {
      */
     public String getPassword() {
         return password;
+    }
+
+    /**
+     * @return user's total score
+     */
+    public Integer getTotalScore() {
+        return totalScore;
     }
 
     /**

@@ -17,9 +17,10 @@ import java.util.Random;
 public class UsernameGenerator {
     // TODO add more adjectives and nouns
     // Possible adjectives and nouns which are used for random username generation
-    private static String[] adjectives = {"Funky", "Stinky", "Sluggish", "Adorable", ""};
-    private static String[] nouns = {"Worm", "Koala", "Scooter", "Skateboard", "Teacher", "Sailor",
-                                    "Pirate", "Photographer", ""};
+    private static String[] adjectives = {"Funky", "Stinky", "Sluggish", "Adorable", "Fuzzy",
+                                            "Jolly"};
+    private static String[] nouns = {"Worm", "Koala", "Scooter", "Skateboard", "Teacher", "Coder",
+                                    "Pirate", "Photographer", };
     // Number of numbers to append to the end of a username to further make it unique. Can be made
     // larger for more uniqueness
     private static int numNumbers = 4;
