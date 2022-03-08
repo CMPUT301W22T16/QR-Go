@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<incidents format="6" by="lint 7.2.0-alpha01" type="partial_results">
-    <map id="UnusedResources">
-        <entry
-            name="model"
-            string="attr[colorPrimaryVariant(R)],color[purple_200(U),black(U),teal_200(U),white(U),teal_700(U),purple_700(U),purple_500(U)],drawable[ic_launcher_foreground(U),ic_launcher_background(U),ic_launcher_foreground_1(R)],id[map(U)],layout[activity_maps(U)],mipmap[ic_launcher_round(U),ic_launcher(U)],string[title_activity_maps(U),app_name(U)],style[Theme_QRGo(U),Theme_MaterialComponents_DayNight_DarkActionBar(R)];8^a,d^9^8,e^9^8,11^12^7^6^4^3^5^2^0^1;;;"/>
-    </map>
-
-</incidents>
