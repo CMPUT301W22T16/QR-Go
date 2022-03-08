@@ -457,14 +457,6 @@
     <attr format="boolean" name="singleSelection"/>
     <attr format="float" name="sizePercent"/>
     <attr format="reference" name="sliderStyle"/>
-    <attr format="enum" name="splitLayoutDirection">
-        <enum name="locale" value="0"/>
-        <enum name="ltr" value="1"/>
-        <enum name="rtl" value="2"/>
-    </attr>
-    <attr format="dimension" name="splitMinSmallestWidth"/>
-    <attr format="dimension" name="splitMinWidth"/>
-    <attr format="float" name="splitRatio"/>
     <attr format="color" name="strokeColor"/>
     <attr format="dimension" name="strokeWidth"/>
     <attr format="reference" name="tabSecondaryStyle"/>
@@ -1399,7 +1391,6 @@
     <dimen name="notification_subtext_size">13sp</dimen>
     <dimen name="notification_top_pad">10dp</dimen>
     <dimen name="notification_top_pad_large_text">5dp</dimen>
-    <dimen name="sliding_pane_detail_pane_width">300dp</dimen>
     <dimen name="test_dimen">2dp</dimen>
     <dimen name="test_mtrl_calendar_day_cornerSize">52dp</dimen>
     <dimen name="test_navigation_bar_active_item_max_width">168dp</dimen>
@@ -1462,7 +1453,6 @@
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
-    <item name="androidx_window_activity_scope" type="id"/>
     <item name="fragment_container_view_tag" type="id"/>
     <item name="ghost_view" type="id"/>
     <item name="ghost_view_holder" type="id"/>
@@ -1479,8 +1469,6 @@
     <item name="mtrl_internal_children_alpha_tag" type="id"/>
     <item name="mtrl_motion_snapshot_view" type="id"/>
     <item name="mtrl_view_tag_bottom_padding" type="id"/>
-    <item name="nav_controller_view_tag" type="id"/>
-    <item name="nav_host_fragment_container" type="id"/>
     <item name="navigation_bar_item_active_indicator_view" type="id"/>
     <item name="navigation_bar_item_icon_container" type="id"/>
     <item name="navigation_bar_item_icon_view" type="id"/>
@@ -1494,8 +1482,6 @@
     <item name="save_non_transition_alpha" type="id"/>
     <item name="save_overlay_view" type="id"/>
     <item name="selection_type" type="id"/>
-    <item name="sliding_pane_detail_container" type="id"/>
-    <item name="sliding_pane_layout" type="id"/>
     <item name="snackbar_action" type="id"/>
     <item name="snackbar_text" type="id"/>
     <item name="special_effects_controller_view_tag" type="id"/>
@@ -1540,7 +1526,6 @@
     <integer name="app_bar_elevation_anim_duration">150</integer>
     <integer name="bottom_sheet_slide_duration">150</integer>
     <integer name="cancel_button_image_alpha">127</integer>
-    <integer name="config_navAnimTime">150</integer>
     <integer name="config_tooltipAnimTime">150</integer>
     <integer name="design_snackbar_text_max_lines">2</integer>
     <integer name="design_tab_indicator_anim_duration_ms">300</integer>
@@ -1736,8 +1721,6 @@
     <string description="a11y string to indicate this button changes the input mode to a text field [CHAR_LIMIT=NONE]" name="mtrl_picker_toggle_to_text_input_mode">Switch to text input mode</string>
     <string description="a11y string to indicate this button switches the user to choosing a year [CHAR_LIMIT=NONE]" name="mtrl_picker_toggle_to_year_selection">Tap to switch to selecting a year</string>
     <string description="Button text to indicate that the widget will save the user&apos;s selection [CHAR_LIMIT=16]" name="mtrl_timepicker_confirm">OK</string>
-    <string name="nav_app_bar_navigate_up_description">Navigate up</string>
-    <string name="nav_app_bar_open_drawer_description">Open navigation drawer</string>
     <string name="password_toggle_content_description">Show password</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
     <string name="path_password_eye_mask_strike_through" translatable="false">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
@@ -8036,25 +8019,6 @@
          -->
         <attr format="reference" name="expandActivityOverflowButtonDrawable"/>
     </declare-styleable>
-    <declare-styleable name="ActivityFilter">
-        <!-- Component name of the primary activity in the split. Must be non-empty. Can contain a
-         single wildcard at the end. -->
-        <attr format="string" name="activityName"/>
-        <!-- Action used for activity launch. May be empty. Must not contain wildcards.
-         -->
-        <attr format="string" name="activityAction"/>
-    </declare-styleable>
-    <declare-styleable name="ActivityNavigator">
-        <attr name="android:name"/>
-        <attr format="string" name="action"/>
-        <attr format="string" name="data"/>
-        <attr format="string" name="dataPattern"/>
-        <attr format="string" name="targetPackage"/>
-    </declare-styleable>
-    <declare-styleable name="ActivityRule">
-        <!-- Whether the activity should always be expanded on launch. -->
-        <attr format="boolean" name="alwaysExpand"/>
-    </declare-styleable>
     <declare-styleable name="AlertDialog">
         <attr name="android:layout"/>
         <attr format="reference" name="buttonPanelSideLayout"/>
@@ -9220,20 +9184,6 @@
 
     <attr format="dimension" name="selectorSize"/>
   </declare-styleable>
-    <declare-styleable name="CodeScannerView">
-        <attr format="color" name="maskColor"/>
-        <attr format="color" name="frameColor"/>
-        <attr format="color" name="autoFocusButtonColor"/>
-        <attr format="color" name="flashButtonColor"/>
-        <attr format="boolean" name="autoFocusButtonVisible"/>
-        <attr format="boolean" name="flashButtonVisible"/>
-        <attr format="dimension" name="frameThickness"/>
-        <attr format="dimension" name="frameCornersSize"/>
-        <attr format="dimension" name="frameCornersRadius"/>
-        <attr format="float" name="frameAspectRatioWidth"/>
-        <attr format="float" name="frameAspectRatioHeight"/>
-        <attr format="float" name="frameSize"/>
-    </declare-styleable>
     <declare-styleable name="CollapsingToolbarLayout">
     <!--  Specifies extra space on the start, top, end and bottom
           sides of the the expanded title text. Margin values should be positive. -->
@@ -10162,9 +10112,6 @@
         <attr format="boolean" name="customBoolean"/>
         <attr format="reference" name="customReference"/>
     </declare-styleable>
-    <declare-styleable name="DialogFragmentNavigator">
-        <attr name="android:name"/>
-    </declare-styleable>
     <declare-styleable name="DrawerArrowToggle">
         <!-- The drawing color for the bars -->
         <attr format="color" name="color"/>
@@ -10361,9 +10308,6 @@
     <declare-styleable name="FragmentContainerView">
         <attr name="android:name"/>
         <attr name="android:tag"/>
-    </declare-styleable>
-    <declare-styleable name="FragmentNavigator">
-        <attr name="android:name"/>
     </declare-styleable>
     <declare-styleable name="GradientColor">
         <!-- Start color of the gradient. -->
@@ -10803,6 +10747,10 @@
 <attr format="float" name="latLngBoundsNorthEastLatitude"/>
 
 <attr format="float" name="latLngBoundsNorthEastLongitude"/>
+
+<attr format="color" name="backgroundColor"/>
+
+<attr format="string" name="mapId"/>
 </declare-styleable>
     <declare-styleable name="MaterialAlertDialog">
     <attr format="dimension" name="backgroundInsetStart"/>
@@ -11300,43 +11248,6 @@
         <attr format="color" name="telltales_tailColor"/>
         <attr format="float" name="telltales_tailScale"/>
     </declare-styleable>
-    <declare-styleable name="NavAction">
-        <attr name="android:id"/>
-        <attr format="reference" name="destination"/>
-        <attr format="boolean" name="launchSingleTop"/>
-        <attr format="boolean" name="restoreState"/>
-        <attr format="reference" name="popUpTo"/>
-        <attr format="boolean" name="popUpToInclusive"/>
-        <attr format="boolean" name="popUpToSaveState"/>
-        <attr format="reference" name="enterAnim"/>
-        <attr format="reference" name="exitAnim"/>
-        <attr format="reference" name="popEnterAnim"/>
-        <attr format="reference" name="popExitAnim"/>
-    </declare-styleable>
-    <declare-styleable name="NavArgument">
-        <attr name="android:name"/>
-        <attr name="android:defaultValue"/>
-        <attr format="boolean" name="nullable"/>
-        <attr format="string" name="argType"/>
-    </declare-styleable>
-    <declare-styleable name="NavDeepLink">
-        <attr format="string" name="uri"/>
-        <attr format="string" name="action"/>
-        <attr format="string" name="mimeType"/>
-        <attr name="android:autoVerify"/>
-    </declare-styleable>
-    <declare-styleable name="NavGraphNavigator">
-        <attr format="reference" name="startDestination"/>
-    </declare-styleable>
-    <declare-styleable name="NavHost">
-        <attr format="reference" name="navGraph"/>
-    </declare-styleable>
-    <declare-styleable name="NavHostFragment">
-        <attr format="boolean" name="defaultNavHost"/>
-    </declare-styleable>
-    <declare-styleable name="NavInclude">
-        <attr format="reference" name="graph"/>
-    </declare-styleable>
     <declare-styleable name="NavigationBarActiveIndicator">
     <!--The color to be used for the navigation item's active indicator. -->
     <attr name="android:color"/>
@@ -11503,11 +11414,6 @@
          of the screen) when the navigation view is placed inside a drawer layout.-->
     <attr format="dimension" name="drawerLayoutCornerSize"/>
   </declare-styleable>
-    <declare-styleable name="Navigator">
-        <attr name="android:id"/>
-        <attr format="string" name="route"/>
-        <attr name="android:label"/>
-    </declare-styleable>
     <declare-styleable name="OnClick">
         <attr name="targetId"/>
         <attr name="clickAction">
@@ -11850,42 +11756,6 @@
         <attr name="android:dropDownWidth"/>
         <!-- Reference to an array resource that will populate the Spinner. -->
         <attr name="android:entries"/>
-    </declare-styleable>
-    <declare-styleable name="SplitPairFilter">
-        <!-- Component name of the primary activity in the split. Must be non-empty. Can contain a
-         wildcard at the end or instead of package name and/or class name. -->
-        <attr format="string" name="primaryActivityName"/>
-        <!-- Component name of the secondary activity in the split. Must be non-empty. Can contain a
-         wildcard at the end or instead of package name and/or class name. -->
-        <attr format="string" name="secondaryActivityName"/>
-        <!-- Action used for secondary activity launch. May be empty. Must not contain wildcards.
-         -->
-        <attr format="string" name="secondaryActivityAction"/>
-    </declare-styleable>
-    <declare-styleable name="SplitPairRule">
-        <!-- When all activities are finished in the secondary container, the activity in the
-         primary container that created the split should also be finished. Defaults to "false". -->
-        <attr format="boolean" name="finishPrimaryWithSecondary"/>
-        <!-- When all activities are finished in the primary container, the activities in the
-         secondary container in the split should also be finished. Defaults to "true". -->
-        <attr format="boolean" name="finishSecondaryWithPrimary"/>
-        <!-- If there is an existing split with the same primary container, indicates whether the
-        existing secondary container on top and all activities in it should be destroyed when a new
-        split is created using this rule. Otherwise the new secondary will appear on top. Defaults
-         to "false". -->
-        <attr format="boolean" name="clearTop"/>
-        <attr name="splitRatio"/>
-        <attr name="splitMinWidth"/>
-        <attr name="splitMinSmallestWidth"/>
-        <attr name="splitLayoutDirection"/>
-    </declare-styleable>
-    <declare-styleable name="SplitPlaceholderRule">
-        <!-- Component name of the placeholder activity in the split. Must be non-empty. -->
-        <attr format="string" name="placeholderActivityName"/>
-        <attr name="splitRatio"/>
-        <attr name="splitMinWidth"/>
-        <attr name="splitMinSmallestWidth"/>
-        <attr name="splitLayoutDirection"/>
     </declare-styleable>
     <declare-styleable name="State">
         <attr name="android:id"/>

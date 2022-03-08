@@ -2,10 +2,10 @@
     name="debug"
     package="com.example.qr_go"
     minSdkVersion="21"
-    targetSdkVersion="31"
+    targetSdkVersion="32"
     debuggable="true"
     mergedManifest="build/intermediates/merged_manifest/debug/AndroidManifest.xml"
-    proguardFiles="build/intermediates/default_proguard_files/global/proguard-android.txt-7.1.0"
+    proguardFiles="build/intermediates/default_proguard_files/global/proguard-android.txt-7.2.0-alpha01"
     partialResultsDir="build/intermediates/lint_partial_results/debug/out">
   <buildFeatures
       viewBinding="true"
