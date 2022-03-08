@@ -23,6 +23,7 @@ id nav_search
 id scanner_view
 layout activity_code_scanner
 layout activity_maps
+layout activity_search
 menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round

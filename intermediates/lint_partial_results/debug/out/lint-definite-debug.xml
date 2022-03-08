@@ -39,6 +39,34 @@
     <incident
         id="HardcodedText"
         severity="warning"
+        message="Hardcoded string &quot;QR Codes&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            line="17"
+            column="13"
+            startOffset="758"
+            endLine="17"
+            endColumn="36"
+            endOffset="781"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Players&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            line="22"
+            column="13"
+            startOffset="949"
+            endLine="22"
+            endColumn="35"
+            endOffset="971"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
         message="Hardcoded string &quot;Search&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/menu/bottom_nav_menu.xml"
