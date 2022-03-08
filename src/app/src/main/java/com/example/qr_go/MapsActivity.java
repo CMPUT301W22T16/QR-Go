@@ -69,7 +69,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 int id = item.getItemId();
                 switch (id) {
                     case R.id.nav_search:
-//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));
+                        startActivity(new Intent(MapsActivity.this, SearchActivity.class));
                         break;
                     case R.id.nav_my_codes:
 //                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));

@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QRGo" >
         <activity
+            android:name=".SearchActivity"
+            android:exported="false">
+        </activity>
+        <activity
             android:name=".QRCodeScannerActivity"
             android:exported="false" />
 
