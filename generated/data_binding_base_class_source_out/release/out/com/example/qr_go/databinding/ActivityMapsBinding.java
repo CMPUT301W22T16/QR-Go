@@ -6,22 +6,35 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.qr_go.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivityMapsBinding implements ViewBinding {
   @NonNull
-  private final View rootView;
+  private final ConstraintLayout rootView;
 
-  private ActivityMapsBinding(@NonNull View rootView) {
+  @NonNull
+  public final BottomNavigationView bottomNavView;
+
+  @NonNull
+  public final ConstraintLayout container;
+
+  private ActivityMapsBinding(@NonNull ConstraintLayout rootView,
+      @NonNull BottomNavigationView bottomNavView, @NonNull ConstraintLayout container) {
     this.rootView = rootView;
+    this.bottomNavView = bottomNavView;
+    this.container = container;
   }
 
   @Override
   @NonNull
-  public View getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -42,10 +55,21 @@ public final class ActivityMapsBinding implements ViewBinding {
 
   @NonNull
   public static ActivityMapsBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.bottom_nav_view;
+      BottomNavigationView bottomNavView = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNavView == null) {
+        break missingId;
+      }
 
-    return new ActivityMapsBinding(rootView);
+      ConstraintLayout container = (ConstraintLayout) rootView;
+
+      return new ActivityMapsBinding((ConstraintLayout) rootView, bottomNavView, container);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }
