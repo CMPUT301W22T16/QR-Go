@@ -1,8 +1,10 @@
 package com.example.qr_go;
 
+import android.os.Build;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -13,11 +15,12 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.security.NoSuchAlgorithmException;
 
 public class QRGoDBUtil {
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public void AddQRtoDatabase(String qrID, String UserID)throws NoSuchAlgorithmException {
         FirebaseFirestore db = MapsActivity.db;
-        code = new GameQRCode();
-        UserID1 = UserID;
-        String hash = new GameQRCode(qrID).getHash();
+
+        QRCode temp = new QRCode(qrID);
+        String hash = temp.getHash();
         DocumentReference docRef = db.collection("GameQRCodes").document(hash);
         docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
 
@@ -31,7 +34,6 @@ public class QRGoDBUtil {
                  *
                  *
                  * **/
-                code.addUser(UserID1);
                 db.collection("GameQRCodes").document(code.getHash()).set(code).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
