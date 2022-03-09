@@ -2571,6 +2571,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_baseline_chevron_left_24
 drawable ic_clock_black_24dp
 drawable ic_code_scanner_auto_focus_off
 drawable ic_code_scanner_auto_focus_on
@@ -2724,6 +2725,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id back_button
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -2984,6 +2986,7 @@ id position
 id postLayout
 id progress_circular
 id progress_horizontal
+id qrTextView
 id radio
 id ratio
 id rectangles
@@ -3014,8 +3017,10 @@ id search_close_btn
 id search_edit_frame
 id search_go_btn
 id search_mag_icon
+id search_pager
 id search_plate
 id search_src_text
+id search_tab_layout
 id search_voice_btn
 id select_dialog_listview
 id selected
@@ -3036,6 +3041,7 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
+id sort_spinner
 id south
 id spacer
 id special_effects_controller_view_tag
@@ -3116,6 +3122,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id userTextView
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3223,6 +3230,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_code_scanner
 layout activity_maps
+layout activity_search
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3239,6 +3247,8 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_qr_search
+layout fragment_user_search
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

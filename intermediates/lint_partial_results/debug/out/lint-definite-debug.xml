@@ -37,6 +37,135 @@
     </incident>
 
     <incident
+        id="RedundantNamespace"
+        severity="warning"
+        message="This namespace declaration is redundant">
+        <fix-attribute
+            description="Delete namespace"
+            attribute="xmlns:android"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            line="79"
+            column="9"
+            startOffset="3231"
+            endLine="79"
+            endColumn="67"
+            endOffset="3289"/>
+    </incident>
+
+    <incident
+        id="ObsoleteLayoutParam"
+        severity="warning"
+        message="Invalid layout param in a `RelativeLayout`: `layout_weight`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            line="26"
+            column="13"
+            startOffset="1068"
+            endLine="26"
+            endColumn="38"
+            endOffset="1093"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Back&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            line="22"
+            column="13"
+            startOffset="872"
+            endLine="22"
+            endColumn="32"
+            endOffset="891"/>
+    </incident>
+
+    <incident
+        id="ObsoleteLayoutParam"
+        severity="warning"
+        message="Invalid layout param in a `RelativeLayout`: `layout_weight`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            line="34"
+            column="13"
+            startOffset="1337"
+            endLine="34"
+            endColumn="38"
+            endOffset="1362"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            line="41"
+            column="6"
+            startOffset="1534"
+            endLine="41"
+            endColumn="14"
+            endOffset="1542"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Temp Search Bar&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            line="45"
+            column="9"
+            startOffset="1681"
+            endLine="45"
+            endColumn="39"
+            endOffset="1711"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;QR Codes&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            line="70"
+            column="17"
+            startOffset="2831"
+            endLine="70"
+            endColumn="40"
+            endOffset="2854"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Players&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            line="74"
+            column="17"
+            startOffset="3037"
+            endLine="74"
+            endColumn="39"
+            endOffset="3059"/>
+    </incident>
+
+    <incident
         id="HardcodedText"
         severity="warning"
         message="Hardcoded string &quot;Search&quot;, should use `@string` resource">
@@ -93,20 +222,6 @@
     </incident>
 
     <incident
-        id="StaticFieldLeak"
-        severity="warning"
-        message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="32"
-            column="12"
-            startOffset="1080"
-            endLine="32"
-            endColumn="18"
-            endOffset="1086"/>
-    </incident>
-
-    <incident
         id="NonConstantResourceId"
         severity="warning"
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
@@ -114,10 +229,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
             line="71"
             column="26"
-            startOffset="2890"
+            startOffset="2876"
             endLine="71"
             endColumn="41"
-            endOffset="2905"/>
+            endOffset="2891"/>
     </incident>
 
     <incident
@@ -128,10 +243,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
             line="74"
             column="26"
-            startOffset="3055"
+            startOffset="3041"
             endLine="74"
             endColumn="43"
-            endOffset="3072"/>
+            endOffset="3058"/>
     </incident>
 
     <incident
@@ -142,10 +257,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
             line="77"
             column="26"
-            startOffset="3222"
+            startOffset="3208"
             endLine="77"
             endColumn="44"
-            endOffset="3240"/>
+            endOffset="3226"/>
     </incident>
 
     <incident
@@ -156,10 +271,38 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
             line="80"
             column="26"
-            startOffset="3397"
+            startOffset="3383"
             endLine="80"
             endColumn="45"
-            endOffset="3416"/>
+            endOffset="3402"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserSearchFragment.java"
+            line="24"
+            column="67"
+            startOffset="793"
+            endLine="24"
+            endColumn="80"
+            endOffset="806"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRSearchFragment.java"
+            line="23"
+            column="65"
+            startOffset="786"
+            endLine="23"
+            endColumn="76"
+            endOffset="797"/>
     </incident>
 
     <incident
