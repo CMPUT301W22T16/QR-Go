@@ -72,8 +72,10 @@ public class QRCodeScannerActivity extends AppCompatActivity {
                                     StatusQRCode statusQRCode = new StatusQRCode(text);
                                     Toast.makeText(QRCodeScannerActivity.this, "DEBUG STATUS QR", Toast.LENGTH_SHORT).show();
                                 } else {
-                                    GameQRCode gameQRCode = new GameQRCode(text);
-                                    Toast.makeText(QRCodeScannerActivity.this, "DEBUG GAME QR", Toast.LENGTH_SHORT).show();
+                                    // New Game QR code > go to NewGameQRActivity
+                                    Intent intent = new Intent(QRCodeScannerActivity.this, NewGameQRActivity.class);
+                                    intent.putExtra("QR", text);
+                                    startActivity(intent);
                                 }
                             } catch (NoSuchAlgorithmException e) {
                                 e.printStackTrace();
