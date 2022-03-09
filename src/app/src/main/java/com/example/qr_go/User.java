@@ -32,7 +32,8 @@ public abstract class User {
         userid = UUID.randomUUID().toString();
         // Generate a new random UUID for a new user's password
         password = UUID.randomUUID().toString();
-        username = UsernameGenerator.generateUsername();
+        //username = UsernameGenerator.generateUsername();
+        username = "Darius";
         totalScore = 0;
         email = "";
         scannedQRCodeIds = new ArrayList<>();
@@ -140,5 +141,6 @@ public abstract class User {
     public void setEmail(String email) {
         this.email = email;
     }
+
 
 }
