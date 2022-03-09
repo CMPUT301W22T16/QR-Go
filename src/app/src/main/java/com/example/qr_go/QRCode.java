@@ -40,6 +40,7 @@ public class QRCode {
         // Convert bytes to string
         this.hash = bytesToHex(hashBytes);
     }
+    public QRCode(){ }
 
     /**
      * Converts bytes[] from SHA-256 hashing into string
