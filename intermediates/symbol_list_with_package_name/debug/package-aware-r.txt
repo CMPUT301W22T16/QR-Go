@@ -2880,7 +2880,6 @@ id linear
 id listMode
 id list_item
 id locale
-id location_checkbox
 id ltr
 id map
 id masked
@@ -2997,14 +2996,11 @@ id rounded
 id row_index_key
 id rtl
 id satellite
-id save_game_qr
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
 id scanner_view
-id score
-id score_text
 id screen
 id scroll
 id scrollIndicatorDown
@@ -3227,7 +3223,6 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_code_scanner
 layout activity_maps
-layout activity_new_game_qractivity
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

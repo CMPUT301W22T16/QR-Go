@@ -174,10 +174,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 25 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 21 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Wed Mar 09 23:07:47 UTC 2022      </nav>
+Check performed at Wed Mar 09 23:37:35 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -189,7 +189,7 @@ Check performed at Wed Mar 09 23:07:47 UTC 2022      </nav>
       <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (7)</a>
       <a class="mdl-navigation__link" href="#MergeRootFrame"><i class="material-icons warning-icon">warning</i>FrameLayout can be replaced with <code>&lt;merge></code> tag (1)</a>
       <a class="mdl-navigation__link" href="#RedundantNamespace"><i class="material-icons warning-icon">warning</i>Redundant namespace (1)</a>
-      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (8)</a>
+      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (4)</a>
       <a class="mdl-navigation__link" href="#IgnoreWithoutReason"><i class="material-icons warning-icon">warning</i>@Ignore without Reason (3)</a>
     </nav>
   </div>
@@ -225,7 +225,7 @@ Check performed at Wed Mar 09 23:07:47 UTC 2022      </nav>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Internationalization">Internationalization</a>
 </td></tr>
 <tr>
-<td class="countColumn">8</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">4</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#HardcodedText">HardcodedText</a>: Hardcoded text</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Testing">Testing</a>
 </td></tr>
@@ -569,43 +569,6 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/res/layout/activity_new_game_qractivity.xml">../../src/main/res/layout/activity_new_game_qractivity.xml</a>:14</span>: <span class="message">Hardcoded string "123", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 11 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 12 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 13 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"8dp"</span>
-<span class="caretline"><span class="lineno"> 14 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"123"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 15 </span>        <span class="prefix">android:</span><span class="attribute">textAlignment</span>=<span class="value">"center"</span>
-<span class="lineno"> 16 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"34sp"</span>
-<span class="lineno"> 17 </span>        <span class="prefix">android:</span><span class="attribute">textStyle</span>=<span class="value">"bold"</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/activity_new_game_qractivity.xml">../../src/main/res/layout/activity_new_game_qractivity.xml</a>:28</span>: <span class="message">Hardcoded string "Score", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 25 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 26 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 27 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"56dp"</span>
-<span class="caretline"><span class="lineno"> 28 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Score"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 29 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"16sp"</span>
-<span class="lineno"> 30 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span>
-<span class="lineno"> 31 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintHorizontal_bias</span>=<span class="value">"0.504"</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/activity_new_game_qractivity.xml">../../src/main/res/layout/activity_new_game_qractivity.xml</a>:40</span>: <span class="message">Hardcoded string "Save", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 37 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 38 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 39 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"30dp"</span>
-<span class="caretline"><span class="lineno"> 40 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Save"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 41 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintBottom_toBottomOf</span>=<span class="value">"parent"</span>
-<span class="lineno"> 42 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span>
-<span class="lineno"> 43 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span> />
-</pre>
-
-<span class="location"><a href="../../src/main/res/layout/activity_new_game_qractivity.xml">../../src/main/res/layout/activity_new_game_qractivity.xml</a>:51</span>: <span class="message">Hardcoded string "Save location", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 48 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 49 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"112dp"</span>
-<span class="lineno"> 50 </span>        <span class="prefix">android:</span><span class="attribute">checked</span>=<span class="value">"true"</span>
-<span class="caretline"><span class="lineno"> 51 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Save location"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 52 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"16sp"</span>
-<span class="lineno"> 53 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintBottom_toTopOf</span>=<span class="value">"@+id/save_game_qr"</span>
-<span class="lineno"> 54 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span></pre>
-
 <span class="location"><a href="../../src/main/res/menu/bottom_nav_menu.xml">../../src/main/res/menu/bottom_nav_menu.xml</a>:7</span>: <span class="message">Hardcoded string "Search", should use <code>@string</code> resource</span><br /><pre class="errorlines">
 <span class="lineno">  4 </span>    <span class="tag">&lt;item</span><span class="attribute">
 </span><span class="lineno">  5 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/nav_search"</span>
