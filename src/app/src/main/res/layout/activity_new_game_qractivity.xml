@@ -47,6 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="112dp"
+        android:checked="true"
         android:text="Save location"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/save_game_qr"
