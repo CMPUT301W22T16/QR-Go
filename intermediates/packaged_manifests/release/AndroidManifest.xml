@@ -33,8 +33,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QRGo" >
         <activity
+            android:name="com.example.qr_go.NewGameQRActivity"
+            android:exported="false"
+            android:parentActivityName="com.example.qr_go.QRCodeScannerActivity" />
+        <activity
             android:name="com.example.qr_go.QRCodeScannerActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName="com.example.qr_go.MapsActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

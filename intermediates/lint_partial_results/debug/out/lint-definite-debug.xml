@@ -39,6 +39,62 @@
     <incident
         id="HardcodedText"
         severity="warning"
+        message="Hardcoded string &quot;123&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="14"
+            column="9"
+            startOffset="560"
+            endLine="14"
+            endColumn="27"
+            endOffset="578"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Score&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="28"
+            column="9"
+            startOffset="1094"
+            endLine="28"
+            endColumn="29"
+            endOffset="1114"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Save&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="40"
+            column="9"
+            startOffset="1549"
+            endLine="40"
+            endColumn="28"
+            endOffset="1568"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Save location&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="50"
+            column="9"
+            startOffset="1932"
+            endLine="50"
+            endColumn="37"
+            endOffset="1960"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
         message="Hardcoded string &quot;Search&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/menu/bottom_nav_menu.xml"

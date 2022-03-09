@@ -87,6 +87,18 @@
    accidental leftovers from copy/pasting XML from other files or
    documentation.
 
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml:14: Warning: Hardcoded string "123", should use @string resource [HardcodedText]
+        android:text="123"
+        ~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml:28: Warning: Hardcoded string "Score", should use @string resource [HardcodedText]
+        android:text="Score"
+        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml:40: Warning: Hardcoded string "Save", should use @string resource [HardcodedText]
+        android:text="Save"
+        ~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml:50: Warning: Hardcoded string "Save location", should use @string resource [HardcodedText]
+        android:text="Save location"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/menu/bottom_nav_menu.xml:7: Warning: Hardcoded string "Search", should use @string resource [HardcodedText]
         android:title="Search" />
         ~~~~~~~~~~~~~~~~~~~~~~
@@ -130,4 +142,4 @@
    Please define an explicit reason why it is ignored, and when it can be
    resolved.
 
-0 errors, 21 warnings
+0 errors, 25 warnings
