@@ -33,6 +33,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QRGo" >
         <activity
+            android:name="com.example.qr_go.SearchActivity"
+            android:exported="false" >
+        </activity>
+        <activity
             android:name="com.example.qr_go.QRCodeScannerActivity"
             android:exported="false" />
 
@@ -91,6 +95,13 @@
                 android:name="androidx.lifecycle.ProcessLifecycleInitializer"
                 android:value="androidx.startup" />
         </provider>
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
     </application>
 
 </manifest>
