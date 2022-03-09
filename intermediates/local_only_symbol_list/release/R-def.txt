@@ -20,16 +20,9 @@ id nav_my_account
 id nav_my_codes
 id nav_scan_code
 id nav_search
-id qrTextView
 id scanner_view
-id searchPager
-id searchTabLayout
-id userTextView
 layout activity_code_scanner
 layout activity_maps
-layout activity_search
-layout fragment_qr_search
-layout fragment_user_search
 menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round

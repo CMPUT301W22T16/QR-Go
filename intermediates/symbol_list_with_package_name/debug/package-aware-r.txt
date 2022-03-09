@@ -2984,7 +2984,6 @@ id position
 id postLayout
 id progress_circular
 id progress_horizontal
-id qrTextView
 id radio
 id ratio
 id rectangles
@@ -3008,8 +3007,6 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
-id searchPager
-id searchTabLayout
 id search_badge
 id search_bar
 id search_button
@@ -3119,7 +3116,6 @@ id uniform
 id unlabeled
 id up
 id useLogo
-id userTextView
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3227,7 +3223,6 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_code_scanner
 layout activity_maps
-layout activity_search
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3244,8 +3239,6 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout fragment_qr_search
-layout fragment_user_search
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
