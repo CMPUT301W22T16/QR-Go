@@ -33,10 +33,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QRGo" >
         <activity
-            android:name="com.example.qr_go.SearchActivity"
-            android:exported="false" >
-        </activity>
-        <activity
             android:name="com.example.qr_go.QRCodeScannerActivity"
             android:exported="false" />
 

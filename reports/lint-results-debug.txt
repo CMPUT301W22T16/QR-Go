@@ -59,20 +59,6 @@
    However, you may simply not be aware that a more recent version is
    available, and that is what this lint check helps find.
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:21: Warning: Invalid layout param in a RelativeLayout: layout_weight [ObsoleteLayoutParam]
-            android:layout_weight="0"
-            ~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:33: Warning: Invalid layout param in a RelativeLayout: layout_weight [ObsoleteLayoutParam]
-            android:layout_weight="1"
-            ~~~~~~~~~~~~~~~~~~~~~~~~~
-
-   Explanation for issues of type "ObsoleteLayoutParam":
-   The given layout_param is not defined for the given layout, meaning it has
-   no effect. This usually happens when you change the parent layout or move
-   view code around without updating the layout params. This will cause
-   useless attribute processing at runtime, and is misleading for others
-   reading the layout so the parameter should be removed.
-
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_code_scanner.xml:2: Warning: This <FrameLayout> can be replaced with a <merge> tag [MergeRootFrame]
 <FrameLayout
 ^
@@ -88,9 +74,6 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_maps.xml:23: Warning: This namespace declaration is redundant [RedundantNamespace]
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:78: Warning: This namespace declaration is redundant [RedundantNamespace]
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
    Explanation for issues of type "RedundantNamespace":
    In Android XML documents, only specify the namespace on the root/document
@@ -98,62 +81,6 @@
    accidental leftovers from copy/pasting XML from other files or
    documentation.
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:40: Warning: Missing autofillHints attribute [Autofill]
-    <EditText
-     ~~~~~~~~
-
-   Explanation for issues of type "Autofill":
-   Specify an autofillHints attribute when targeting SDK version 26 or higher
-   or explicitly specify that the view is not important for autofill. Your app
-   can help an autofill service classify the data correctly by providing the
-   meaning of each view that could be autofillable, such as views representing
-   usernames, passwords, credit card fields, email addresses, etc.
-
-   The hints can have any value, but it is recommended to use predefined
-   values like 'username' for a username or 'creditCardNumber' for a credit
-   card number. For a list of all predefined autofill hint constants, see the
-   AUTOFILL_HINT_ constants in the View reference at
-   https://developer.android.com/reference/android/view/View.html.
-
-   You can mark a view unimportant for autofill by specifying an
-   importantForAutofill attribute on that view or a parent view. See
-   https://developer.android.com/reference/android/view/View.html#setImportant
-   ForAutofill(int).
-
-   https://developer.android.com/guide/topics/text/autofill.html
-
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRSearchFragment.java:23: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
-        ((TextView) view.findViewById(R.id.qrTextView)).setText("qr search");
-                                                                ~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/UserSearchFragment.java:24: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
-        ((TextView) view.findViewById(R.id.userTextView)).setText("user search");
-                                                                  ~~~~~~~~~~~~~
-
-   Explanation for issues of type "SetTextI18n":
-   When calling TextView#setText
-   * Never call Number#toString() to format numbers; it will not handle
-   fraction separators and locale-specific digits properly. Consider using
-   String#format with proper format specifications (%d or %f) instead.
-   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
-   text can not be properly translated to other languages. Consider using
-   Android resource strings instead.
-   * Do not build messages by concatenating text chunks. Such messages can not
-   be properly translated.
-
-   https://developer.android.com/guide/topics/resources/localization.html
-
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:23: Warning: Hardcoded string "Back", should use @string resource [HardcodedText]
-            android:text="Back"
-            ~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:44: Warning: Hardcoded string "Temp Search Bar", should use @string resource [HardcodedText]
-        android:hint="Temp Search Bar"
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:69: Warning: Hardcoded string "QR Codes", should use @string resource [HardcodedText]
-                android:text="QR Codes" />
-                ~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:73: Warning: Hardcoded string "Players", should use @string resource [HardcodedText]
-                android:text="Players" />
-                ~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/menu/bottom_nav_menu.xml:7: Warning: Hardcoded string "Search", should use @string resource [HardcodedText]
         android:title="Search" />
         ~~~~~~~~~~~~~~~~~~~~~~
@@ -181,47 +108,6 @@
    There are quickfixes to automatically extract this hardcoded string into a
    resource lookup.
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:22: Warning: When you define paddingLeft you should probably also define paddingRight for right-to-left symmetry [RtlSymmetry]
-            android:paddingLeft="0dp"
-            ~~~~~~~~~~~~~~~~~~~
-
-   Explanation for issues of type "RtlSymmetry":
-   If you specify padding or margin on the left side of a layout, you should
-   probably also specify padding on the right side (and vice versa) for
-   right-to-left layout symmetry.
-
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:20: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
-            android:layout_alignParentLeft="true"
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:22: Warning: Consider replacing android:paddingLeft with android:paddingStart="0dp" to better support right-to-left layouts [RtlHardcoded]
-            android:paddingLeft="0dp"
-            ~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:34: Warning: Consider replacing android:layout_alignParentRight with android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
-            android:layout_alignParentRight="true"
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/spinner_item.xml:10: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
-    android:gravity="right"
-                     ~~~~~
-
-   Explanation for issues of type "RtlHardcoded":
-   Using Gravity#LEFT and Gravity#RIGHT can lead to problems when a layout is
-   rendered in locales where text flows from right to left. Use Gravity#START
-   and Gravity#END instead. Similarly, in XML gravity and layout_gravity
-   attributes, use start rather than left.
-
-   For XML attributes such as paddingLeft and layout_marginLeft, use
-   paddingStart and layout_marginStart. NOTE: If your minSdkVersion is less
-   than 17, you should add both the older left/right attributes as well as the
-   new start/end attributes. On older platforms, where RTL is not supported
-   and the start/end attributes are unknown and therefore ignored, you need
-   the older left/right attributes. There is a separate lint check which
-   catches that type of error.
-
-   (Note: For Gravity#LEFT and Gravity#START, you can use these constants even
-   when targeting older platforms, because the start bitmask is a superset of
-   the left bitmask. Therefore, you can use gravity="start" rather than
-   gravity="left|start".)
-
 /home/runner/work/QR-Go/QR-Go/src/app/src/test/java/com/example/qr_go/LoginQRCodeTest.java:15: Warning: Test is ignored without giving any explanation [IgnoreWithoutReason]
     @Ignore // need to mock firestore
     ~~~~~~~
@@ -238,4 +124,4 @@
    Please define an explicit reason why it is ignored, and when it can be
    resolved.
 
-0 errors, 34 warnings
+0 errors, 19 warnings
