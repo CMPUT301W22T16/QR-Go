@@ -31,7 +31,7 @@
         errorLine2="                         ~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
-            line="75"
+            line="71"
             column="26"/>
     </issue>
 
@@ -47,7 +47,7 @@
         errorLine2="                         ~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
-            line="78"
+            line="74"
             column="26"/>
     </issue>
 
@@ -63,7 +63,7 @@
         errorLine2="                         ~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
-            line="81"
+            line="77"
             column="26"/>
     </issue>
 
@@ -79,7 +79,7 @@
         errorLine2="                         ~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
-            line="84"
+            line="80"
             column="26"/>
     </issue>
 
@@ -164,19 +164,35 @@
     </issue>
 
     <issue
-        id="StaticFieldLeak"
+        id="ObsoleteLayoutParam"
         severity="Warning"
-        message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak"
+        message="Invalid layout param in a `RelativeLayout`: `layout_weight`"
         category="Performance"
         priority="6"
-        summary="Static Field Leaks"
-        explanation="A static field will leak contexts.&#xA;&#xA;Non-static inner classes have an implicit reference to their outer class. If that outer class is for example a `Fragment` or `Activity`, then this reference means that the long-running handler/loader/task will hold a reference to the activity which prevents it from getting garbage collected.&#xA;&#xA;Similarly, direct field references to activities and fragments from these longer running instances can cause leaks.&#xA;&#xA;ViewModel classes should never point to Views or non-application Contexts."
-        errorLine1="    public static FirebaseFirestore db;"
-        errorLine2="           ~~~~~~">
+        summary="Obsolete layout params"
+        explanation="The given layout_param is not defined for the given layout, meaning it has no effect. This usually happens when you change the parent layout or move view code around without updating the layout params. This will cause useless attribute processing at runtime, and is misleading for others reading the layout so the parameter should be removed."
+        errorLine1="            android:layout_weight=&quot;0&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
-            line="35"
-            column="12"/>
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
+            line="21"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        severity="Warning"
+        message="Invalid layout param in a `RelativeLayout`: `layout_weight`"
+        category="Performance"
+        priority="6"
+        summary="Obsolete layout params"
+        explanation="The given layout_param is not defined for the given layout, meaning it has no effect. This usually happens when you change the parent layout or move view code around without updating the layout params. This will cause useless attribute processing at runtime, and is misleading for others reading the layout so the parameter should be removed."
+        errorLine1="            android:layout_weight=&quot;1&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
+            line="33"
+            column="13"/>
     </issue>
 
     <issue
@@ -211,6 +227,140 @@
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_maps.xml"
             line="23"
             column="15"/>
+    </issue>
+
+    <issue
+        id="RedundantNamespace"
+        severity="Warning"
+        message="This namespace declaration is redundant"
+        category="Performance"
+        priority="1"
+        summary="Redundant namespace"
+        explanation="In Android XML documents, only specify the namespace on the root/document element. Namespace declarations elsewhere in the document are typically accidental leftovers from copy/pasting XML from other files or documentation."
+        errorLine1="        xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
+            line="78"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        severity="Warning"
+        message="Missing `autofillHints` attribute"
+        category="Usability"
+        priority="3"
+        summary="Use Autofill"
+        explanation="Specify an `autofillHints` attribute when targeting SDK version 26 or higher or explicitly specify that the view is not important for autofill. Your app can help an autofill service classify the data correctly by providing the meaning of each view that could be autofillable, such as views representing usernames, passwords, credit card fields, email addresses, etc.&#xA;&#xA;The hints can have any value, but it is recommended to use predefined values like &apos;username&apos; for a username or &apos;creditCardNumber&apos; for a credit card number. For a list of all predefined autofill hint constants, see the `AUTOFILL_HINT_` constants in the `View` reference at https://developer.android.com/reference/android/view/View.html.&#xA;&#xA;You can mark a view unimportant for autofill by specifying an `importantForAutofill` attribute on that view or a parent view. See https://developer.android.com/reference/android/view/View.html#setImportantForAutofill(int)."
+        url="https://developer.android.com/guide/topics/text/autofill.html"
+        urls="https://developer.android.com/guide/topics/text/autofill.html"
+        errorLine1="    &lt;EditText"
+        errorLine2="     ~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
+            line="40"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        severity="Warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        category="Internationalization"
+        priority="6"
+        summary="TextView Internationalization"
+        explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
+        url="https://developer.android.com/guide/topics/resources/localization.html"
+        urls="https://developer.android.com/guide/topics/resources/localization.html"
+        errorLine1="        ((TextView) view.findViewById(R.id.qrTextView)).setText(&quot;qr search&quot;);"
+        errorLine2="                                                                ~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRSearchFragment.java"
+            line="23"
+            column="65"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        severity="Warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        category="Internationalization"
+        priority="6"
+        summary="TextView Internationalization"
+        explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
+        url="https://developer.android.com/guide/topics/resources/localization.html"
+        urls="https://developer.android.com/guide/topics/resources/localization.html"
+        errorLine1="        ((TextView) view.findViewById(R.id.userTextView)).setText(&quot;user search&quot;);"
+        errorLine2="                                                                  ~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/UserSearchFragment.java"
+            line="24"
+            column="67"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Back&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;Back&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
+            line="23"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Temp Search Bar&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:hint=&quot;Temp Search Bar&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
+            line="44"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;QR Codes&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                android:text=&quot;QR Codes&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
+            line="69"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Players&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                android:text=&quot;Players&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
+            line="73"
+            column="17"/>
     </issue>
 
     <issue
@@ -275,6 +425,86 @@
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/menu/bottom_nav_menu.xml"
             line="22"
             column="9"/>
+    </issue>
+
+    <issue
+        id="RtlSymmetry"
+        severity="Warning"
+        message="When you define `paddingLeft` you should probably also define `paddingRight` for right-to-left symmetry"
+        category="Internationalization:Bidirectional Text"
+        priority="6"
+        summary="Padding and margin symmetry"
+        explanation="If you specify padding or margin on the left side of a layout, you should probably also specify padding on the right side (and vice versa) for right-to-left layout symmetry."
+        errorLine1="            android:paddingLeft=&quot;0dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
+            line="22"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        severity="Warning"
+        message="Consider replacing `android:layout_alignParentLeft` with `android:layout_alignParentStart=&quot;true&quot;` to better support right-to-left layouts"
+        category="Internationalization:Bidirectional Text"
+        priority="5"
+        summary="Using left/right instead of start/end attributes"
+        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. **NOTE**: If your `minSdkVersion` is less than 17, you should add **both** the older left/right attributes **as well as** the new start/end attributes. On older platforms, where RTL is not supported and the start/end attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
+        errorLine1="            android:layout_alignParentLeft=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
+            line="20"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        severity="Warning"
+        message="Consider replacing `android:paddingLeft` with `android:paddingStart=&quot;0dp&quot;` to better support right-to-left layouts"
+        category="Internationalization:Bidirectional Text"
+        priority="5"
+        summary="Using left/right instead of start/end attributes"
+        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. **NOTE**: If your `minSdkVersion` is less than 17, you should add **both** the older left/right attributes **as well as** the new start/end attributes. On older platforms, where RTL is not supported and the start/end attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
+        errorLine1="            android:paddingLeft=&quot;0dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
+            line="22"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        severity="Warning"
+        message="Consider replacing `android:layout_alignParentRight` with `android:layout_alignParentEnd=&quot;true&quot;` to better support right-to-left layouts"
+        category="Internationalization:Bidirectional Text"
+        priority="5"
+        summary="Using left/right instead of start/end attributes"
+        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. **NOTE**: If your `minSdkVersion` is less than 17, you should add **both** the older left/right attributes **as well as** the new start/end attributes. On older platforms, where RTL is not supported and the start/end attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
+        errorLine1="            android:layout_alignParentRight=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
+            line="34"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        severity="Warning"
+        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales"
+        category="Internationalization:Bidirectional Text"
+        priority="5"
+        summary="Using left/right instead of start/end attributes"
+        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. **NOTE**: If your `minSdkVersion` is less than 17, you should add **both** the older left/right attributes **as well as** the new start/end attributes. On older platforms, where RTL is not supported and the start/end attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
+        errorLine1="    android:gravity=&quot;right&quot;"
+        errorLine2="                     ~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/spinner_item.xml"
+            line="10"
+            column="22"/>
     </issue>
 
     <issue
