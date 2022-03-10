@@ -24,7 +24,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
+/**
+ * This activity is shown after user scans a QR code
+ * It will ask the user for:
+ *      1. Photo of object
+ *      2. Location
+ * Then user will click on save to create the new QR code
+ */
 public class NewGameQRActivity extends AppCompatActivity {
     private GameQRCode gameQRCode;
     private final int LOCATION_REQUEST_CODE = 101;
@@ -45,8 +51,8 @@ public class NewGameQRActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String qrString = intent.getStringExtra("QR");
 
+        // Create new GameQRCode instance
         gameQRCode = new GameQRCode(qrString);
-
 
         // (2) Set score text
         TextView scoreView = findViewById(R.id.score);
@@ -64,15 +70,25 @@ public class NewGameQRActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 
+    /**
+     * If unable to get user's location or permission is denied, then disable location
+     * This will un-check and disable the checkbox
+     */
     private void disableLocation() {
         locationCheckbox.setChecked(false); // un-check
         locationCheckbox.setEnabled(false); // disabled
     }
 
+    /**
+     * Once user has accepted/denied permission access
+     * If permission granted, set the location of the QR code
+     * If permission denied, disable the location
+     * @param requestCode
+     * @param permissions
+     * @param grantResults
+     */
     @RequiresApi(api = Build.VERSION_CODES.P)
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -87,13 +103,18 @@ public class NewGameQRActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Assuming that location permissions is granted
+     * The current location of the user is received
+     * The location is then set in the game qr code
+     * https://stackoverflow.com/a/36501202
+     */
     @SuppressLint("MissingPermission")
     @RequiresApi(api = Build.VERSION_CODES.P)
     private void setQRLocation() {
         try {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
                     ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-                // https://stackoverflow.com/a/36501202
                 // Acquire a reference to the system Location Manager
                 LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
                 // Define a listener that responds to location updates
@@ -117,7 +138,6 @@ public class NewGameQRActivity extends AppCompatActivity {
     /**
      * Launch Take Photo activity to take a photo of the QR object
      * https://developer.android.com/training/camera/photobasics#java
-     *
      * @param view
      */
     public void launchTakePhoto(View view) {
@@ -132,7 +152,6 @@ public class NewGameQRActivity extends AppCompatActivity {
     /**
      * Used by launchTakePhoto to get the photo taken by the user's camera
      * When photo is taken, display it on the image view, and save it
-     *
      * @param requestCode
      * @param resultCode
      * @param data
