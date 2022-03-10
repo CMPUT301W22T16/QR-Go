@@ -37,52 +37,59 @@
     </incident>
 
     <incident
-        id="ContentDescription"
+        id="HardcodedText"
         severity="warning"
-        message="Missing `contentDescription` attribute on image">
-        <fix-attribute
-            description="Set contentDescription"
-            namespace="http://schemas.android.com/apk/res/android"
-            attribute="contentDescription"
-            value="TODO"
-            dot="4"
-            mark="0"/>
+        message="Hardcoded string &quot;123&quot;, should use `@string` resource">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="8"
-            column="6"
-            startOffset="344"
-            endLine="8"
-            endColumn="15"
-            endOffset="353"/>
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="14"
+            column="9"
+            startOffset="560"
+            endLine="14"
+            endColumn="27"
+            endOffset="578"/>
     </incident>
 
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;QR NAME&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Score&quot;, should use `@string` resource">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="30"
-            column="13"
-            startOffset="1240"
-            endLine="30"
-            endColumn="35"
-            endOffset="1262"/>
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="28"
+            column="9"
+            startOffset="1094"
+            endLine="28"
+            endColumn="29"
+            endOffset="1114"/>
     </incident>
 
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;QR LOCATION&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Save&quot;, should use `@string` resource">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="38"
-            column="13"
-            startOffset="1547"
-            endLine="38"
-            endColumn="39"
-            endOffset="1573"/>
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="40"
+            column="9"
+            startOffset="1549"
+            endLine="40"
+            endColumn="28"
+            endOffset="1568"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Save location&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="51"
+            column="9"
+            startOffset="1963"
+            endLine="51"
+            endColumn="37"
+            endOffset="1991"/>
     </incident>
 
     <incident
@@ -208,12 +215,12 @@
             replacement="(&quot;TODO&quot;)"/>
         <location
             file="${:app*debug*testSourceProvider*0*javaDir*0}/com/example/qr_go/LoginQRCodeTest.java"
-            line="15"
+            line="14"
             column="5"
-            startOffset="342"
-            endLine="15"
+            startOffset="295"
+            endLine="14"
             endColumn="12"
-            endOffset="349"/>
+            endOffset="302"/>
     </incident>
 
     <incident
@@ -227,12 +234,12 @@
             replacement="(&quot;TODO&quot;)"/>
         <location
             file="${:app*debug*testSourceProvider*0*javaDir*0}/com/example/qr_go/UserTest.java"
-            line="20"
+            line="19"
             column="5"
-            startOffset="363"
-            endLine="20"
+            startOffset="285"
+            endLine="19"
             endColumn="12"
-            endOffset="370"/>
+            endOffset="292"/>
     </incident>
 
     <incident
@@ -246,12 +253,12 @@
             replacement="(&quot;TODO&quot;)"/>
         <location
             file="${:app*debug*testSourceProvider*0*javaDir*0}/com/example/qr_go/UserTest.java"
-            line="31"
+            line="30"
             column="5"
-            startOffset="777"
-            endLine="31"
+            startOffset="668"
+            endLine="30"
             endColumn="12"
-            endOffset="784"/>
+            endOffset="675"/>
     </incident>
 
     <incident
@@ -347,6 +354,44 @@
             endLine="45"
             endColumn="61"
             endOffset="1466"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test:runner than 1.2.0 is available: 1.4.0">
+        <fix-replace
+            description="Change to 1.4.0"
+            family="Update versions"
+            oldString="1.2.0"
+            replacement="1.4.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="50"
+            column="31"
+            startOffset="1758"
+            endLine="50"
+            endColumn="59"
+            endOffset="1786"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test:rules than 1.2.0 is available: 1.4.0">
+        <fix-replace
+            description="Change to 1.4.0"
+            family="Update versions"
+            oldString="1.2.0"
+            replacement="1.4.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="51"
+            column="31"
+            startOffset="1817"
+            endLine="51"
+            endColumn="58"
+            endOffset="1844"/>
     </incident>
 
     <incident

@@ -8,11 +8,11 @@
         android:minSdkVersion="21"
         android:targetSdkVersion="31" />
 
-    <uses-permission android:name="android.permission.CAMERA" />
-
-    <!-- Include required permissions for Google Maps API to run. -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-feature
         android:glEsVersion="0x00020000"
@@ -33,8 +33,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QRGo" >
         <activity
+            android:name="com.example.qr_go.NewGameQRActivity"
+            android:exported="false"
+            android:parentActivityName="com.example.qr_go.QRCodeScannerActivity" />
+        <activity
             android:name="com.example.qr_go.QRCodeScannerActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName="com.example.qr_go.MapsActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
