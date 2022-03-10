@@ -1,11 +1,10 @@
 package com.example.qr_go;
 
+import android.location.Location;
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
-import androidx.annotation.VisibleForTesting;
 
-import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -16,7 +15,8 @@ import java.util.regex.Pattern;
  */
 public class GameQRCode extends QRCode {
     private Integer score;
-    ArrayList<String> userIds;
+    private ArrayList<String> userIds;
+        private Location location;
 
     /**
      * When creating a new GameQRCode, initialize the list of userIds
@@ -24,14 +24,14 @@ public class GameQRCode extends QRCode {
      * and calculates the score from the hash
      *
      * @param qrCodeContents
-     * @throws NoSuchAlgorithmException
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public GameQRCode(String qrCodeContents) throws NoSuchAlgorithmException {
+    public GameQRCode(String qrCodeContents) {
         super(qrCodeContents); // gets hash
         this.userIds = new ArrayList<>();
         this.score = calculateScore(this.hash);
     }
+
 
     /**
      * Given a hash, the score of the hash is calculated
@@ -100,5 +100,21 @@ public class GameQRCode extends QRCode {
      */
     public void addUser(String userId) {
         userIds.add(userId);
+    }
+
+    /**
+     * Get last known location of QR code
+     * @return Location object
+     */
+    public Location getLocation() {
+        return location;
+    }
+
+    /**
+     * Set a new location of recently added QR code
+     * @param location new location to set to
+     */
+    public void setLocation(Location location) {
+        this.location = location;
     }
 }
