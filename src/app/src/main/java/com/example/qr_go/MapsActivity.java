@@ -90,12 +90,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });
 
 
-        try {
-            QRGoDBUtil DBUti = new QRGoDBUtil();
-            DBUti.test1();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
+
+        QRGoDBUtil DBUti = new QRGoDBUtil();
+        DBUti.test1();
+
 
     }
 

@@ -28,16 +28,11 @@ public class QRGoDBUtil {
     ArrayList<GameQRCode>  QRCodeList = new ArrayList<GameQRCode>();
     GameQRCode temp, qrcode;
     String qrID, UserID;
-    Player player;
     FirebaseFirestore db = MapsActivity.db;
 
-    {
-        try {
-            player = new Player();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-    }
+
+    Player player = new Player();
+
 
 
 
@@ -47,7 +42,7 @@ public class QRGoDBUtil {
      */
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    void GrabQRFromDatabase(String qrIDInput, String UserIDInput)throws NoSuchAlgorithmException {
+    void GrabQRFromDatabase(String qrIDInput, String UserIDInput) {
         qrcode = new GameQRCode();
         UserID = UserIDInput;
         qrID = qrIDInput;
@@ -102,25 +97,20 @@ public class QRGoDBUtil {
 
             }
         }
-        try {
-            UpdateUser();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
+
+        UpdateUser();
+
 
     }
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    void UpdateUser() throws NoSuchAlgorithmException{
+
+    void UpdateUser() {
         player.addQRCode(qrcode);
         db.collection("Players").document(player.getUserid()).set(player);
     }
 
-    /** this does not work help
-     *
-     * @throws NoSuchAlgorithmException
-     */
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    void test1()throws NoSuchAlgorithmException{
+
+
+    void test1(){
 
         GrabQRFromDatabase("BFG5DGW54\n", "test");
 
