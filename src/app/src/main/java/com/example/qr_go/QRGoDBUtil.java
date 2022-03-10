@@ -15,6 +15,7 @@ import com.google.firebase.firestore.WriteBatch;
 
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 @RequiresApi(api = Build.VERSION_CODES.O)
 /**
@@ -29,7 +30,6 @@ public class QRGoDBUtil {
     String qrID, UserID;
     Player player;
     FirebaseFirestore db = MapsActivity.db;
-    WriteBatch batch = db.batch();
 
     {
         try {
@@ -63,6 +63,7 @@ public class QRGoDBUtil {
                     GameQRCode qrcode = documentSnapshot.toObject(GameQRCode.class);
                     QRCodeList.add(qrcode);
                     AddQRtoDatabase();
+
                 }catch (Exception e){
                     /** sometimes the db picks up that it exists while in fact it does not... strange
                      */
@@ -90,22 +91,31 @@ public class QRGoDBUtil {
     void AddQRtoDatabase(){
         if (QRCodeList.isEmpty()){
             qrcode = temp;
+            qrcode.addUser(UserID);
+            db.collection("GameQRCodes").document(qrcode.getHash()).set(qrcode);
         }
         else{
             qrcode = QRCodeList.get(0);
-        }
-        if (!qrcode.getUserIds().contains(UserID)) {
-            qrcode.addUser(UserID);
-            db.collection("GameQRCodes").document(qrcode.getHash()).set(qrcode);
+            if (!qrcode.getUserIds().contains(UserID)) {
+                qrcode.addUser(UserID);
+                db.collection("GameQRCodes").document(qrcode.getHash()).update("userIds", qrcode.getUserIds());
 
+
+            }
         }
+        try {
+            UpdateUser();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+
 
     }
     @RequiresApi(api = Build.VERSION_CODES.O)
     void UpdateUser() throws NoSuchAlgorithmException{
 
         player.addQRCode(qrcode);
-        batch.set(db.collection("Players").document(player.getUsername()), player);
+        db.collection("Players").document(player.getUserid()).set(player);
 
 
     }
@@ -116,6 +126,6 @@ public class QRGoDBUtil {
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
     void test1()throws NoSuchAlgorithmException{
-        GrabQRFromDatabase("BFG5DGW54\n", "Darius2");
+        GrabQRFromDatabase("BFG5DGW54\n", "test");
     }
 }

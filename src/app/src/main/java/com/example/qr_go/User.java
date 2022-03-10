@@ -17,8 +17,8 @@ public abstract class User {
     private String password; // Password for verifying a user
     private String username;
     private Integer totalScore;
-    private LoginQRCode loginQR;
-    private StatusQRCode statusQR;
+    //private LoginQRCode loginQR;
+    //private StatusQRCode statusQR;
     private ArrayList<String> scannedQRCodeIds;
     private String email;
 
@@ -37,8 +37,8 @@ public abstract class User {
         totalScore = 0;
         email = "";
         scannedQRCodeIds = new ArrayList<>();
-        loginQR = new LoginQRCode(this);
-        statusQR = new StatusQRCode(this);
+       //loginQR = new LoginQRCode(this);
+        //statusQR = new StatusQRCode(this);
     }
 
     /**
@@ -124,16 +124,16 @@ public abstract class User {
     /**
      * @return User's login QR code
      */
-    public LoginQRCode getLoginQR() {
-        return loginQR;
-    }
+//    public LoginQRCode getLoginQR() {
+//        return loginQR;
+//    }
 
     /**
      * @return User's status QR code
      */
-    public StatusQRCode getStatusQR() {
-        return statusQR;
-    }
+//    public StatusQRCode getStatusQR() {
+//        return statusQR;
+//    }
 
     /**
      * @param email user's new email
