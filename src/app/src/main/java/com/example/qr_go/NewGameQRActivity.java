@@ -82,15 +82,24 @@ public class NewGameQRActivity extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("MissingPermission")
     @RequiresApi(api = Build.VERSION_CODES.P)
     private void setQRLocation() {
         try {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
                     ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                // https://stackoverflow.com/a/36501202
+                // Acquire a reference to the system Location Manager
                 LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-                @SuppressLint("MissingPermission") Location gpsLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-                @SuppressLint("MissingPermission") Location networkLocation = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-                gameQRCode.setLocation(gpsLocation!=null?   gpsLocation : networkLocation); // set the location
+                // Define a listener that responds to location updates
+                LocationListener locationListener = new LocationListener() {
+                    public void onLocationChanged(Location location) {
+                        gameQRCode.setLocation(location); // set the location
+                        System.out.println("location:" + location);
+                    }
+                };
+                // Register the listener with the Location Manager to receive location updates
+                locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
             }
 
         } catch (NoSuchMethodError e) {
