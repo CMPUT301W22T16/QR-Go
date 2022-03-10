@@ -5,7 +5,6 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
-import java.security.NoSuchAlgorithmException;
 
 /**
  * StatusQRCode allows other plays to scan in order to view the status page of a player
@@ -17,10 +16,9 @@ public class StatusQRCode extends QRCode implements  GeneratesNewQR {
     /**
      * Status QR Code
      * @param user user to track status of
-     * @throws NoSuchAlgorithmException
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public StatusQRCode(User user) throws NoSuchAlgorithmException {
+    public StatusQRCode(User user)  {
         super(user.getUserid());
         this.user = user;
     }
@@ -28,10 +26,9 @@ public class StatusQRCode extends QRCode implements  GeneratesNewQR {
     /**
      * QR code
      * @param qrCodeContents text contents scanned from QR code
-     * @throws NoSuchAlgorithmException
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public StatusQRCode(String qrCodeContents) throws NoSuchAlgorithmException {
+    public StatusQRCode(String qrCodeContents)  {
         super(qrCodeContents);
     }
 

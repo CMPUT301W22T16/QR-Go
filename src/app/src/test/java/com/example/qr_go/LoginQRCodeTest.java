@@ -8,13 +8,12 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import java.security.NoSuchAlgorithmException;
 
 public class LoginQRCodeTest {
 
     @Ignore // need to mock firestore
     @Test
-    public void testIsLoginValid() throws NoSuchAlgorithmException {
+    public void testIsLoginValid()  {
 
         String id = "testid";
         String password = "testpassword";
