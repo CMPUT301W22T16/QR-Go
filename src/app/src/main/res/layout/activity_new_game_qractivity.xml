@@ -13,7 +13,7 @@
         android:layout_marginTop="8dp"
         android:text="123"
         android:textAlignment="center"
-        android:textSize="34sp"
+        android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
         android:text="Score"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,4 +54,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/take_qr_photo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="@color/teal_700"
+        android:foregroundTint="@color/black"
+        android:onClick="launchTakePhoto"
+        android:text="Take photo of object"
+
+        app:icon="@android:drawable/ic_menu_gallery"
+        app:layout_constraintBottom_toTopOf="@+id/location_checkbox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/take_qr_photo_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/take_qr_photo_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score"
+        app:srcCompat="@drawable/round_qr_code_scanner_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>

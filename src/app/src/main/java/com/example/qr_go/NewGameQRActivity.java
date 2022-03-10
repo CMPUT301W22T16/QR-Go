@@ -3,20 +3,24 @@ package com.example.qr_go;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.view.View;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +29,7 @@ public class NewGameQRActivity extends AppCompatActivity {
     private GameQRCode gameQRCode;
     private final int LOCATION_REQUEST_CODE = 101;
     private CheckBox locationCheckbox;
+    private static final int REQUEST_IMAGE_CAPTURE = 1;
 
     @SuppressLint("NewApi")
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -107,7 +112,38 @@ public class NewGameQRActivity extends AppCompatActivity {
             // disable location
             disableLocation();
         }
+    }
 
+    /**
+     * Launch Take Photo activity to take a photo of the QR object
+     * https://developer.android.com/training/camera/photobasics#java
+     * @param view
+     */
+    public void launchTakePhoto(View view){
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        try {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+        } catch (ActivityNotFoundException e) {
+            Toast.makeText(this, "failed to launch camera activity", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    /**
+     * Used by launchTakePhoto to get the photo taken by the user's camera
+     * When photo is taken, display it on the image view, and save it
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            ImageView imageView = findViewById(R.id.take_qr_photo_imageview);
+            imageView.setImageBitmap(imageBitmap);
+        }
     }
 
 }
