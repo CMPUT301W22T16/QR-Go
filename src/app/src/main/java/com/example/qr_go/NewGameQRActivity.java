@@ -95,7 +95,6 @@ public class NewGameQRActivity extends AppCompatActivity {
                 LocationListener locationListener = new LocationListener() {
                     public void onLocationChanged(Location location) {
                         gameQRCode.setLocation(location); // set the location
-                        System.out.println("location:" + location);
                     }
                 };
                 // Register the listener with the Location Manager to receive location updates
