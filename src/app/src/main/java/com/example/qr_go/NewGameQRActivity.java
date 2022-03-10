@@ -117,9 +117,10 @@ public class NewGameQRActivity extends AppCompatActivity {
     /**
      * Launch Take Photo activity to take a photo of the QR object
      * https://developer.android.com/training/camera/photobasics#java
+     *
      * @param view
      */
-    public void launchTakePhoto(View view){
+    public void launchTakePhoto(View view) {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         try {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
@@ -131,6 +132,7 @@ public class NewGameQRActivity extends AppCompatActivity {
     /**
      * Used by launchTakePhoto to get the photo taken by the user's camera
      * When photo is taken, display it on the image view, and save it
+     *
      * @param requestCode
      * @param resultCode
      * @param data
@@ -144,6 +146,28 @@ public class NewGameQRActivity extends AppCompatActivity {
             ImageView imageView = findViewById(R.id.take_qr_photo_imageview);
             imageView.setImageBitmap(imageBitmap);
         }
+    }
+
+    /**
+     * "Save" button is clicked
+     * Save QR code to database and then redirect to another activity
+     * @param view
+     */
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public void saveNewQRCode(View view) {
+        // If user has unchecked the location, then set location as null
+        if (!locationCheckbox.isChecked()){
+            gameQRCode.setLocation(null);
+        }
+
+        // Save QR code to database
+        QRGoDBUtil db = new QRGoDBUtil();
+        // TODO: replace DUMMY-USER-ID with my user id
+        db.GrabQRFromDatabase(gameQRCode.getId(), "DUMMY-USER-ID");
+
+        // TODO: redirect to the new QR code activity?
+        // Go to view QR code activity
+        startActivity(new Intent(this, MapsActivity.class));
     }
 
 }

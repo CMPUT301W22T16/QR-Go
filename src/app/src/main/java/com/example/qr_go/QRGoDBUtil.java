@@ -98,7 +98,7 @@ public class QRGoDBUtil {
             }
         }
 
-        UpdateUser();
+//        UpdateUser();
 
 
     }
