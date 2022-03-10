@@ -1,12 +1,18 @@
 package com.example.qr_go;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class PlayerInfoActivity extends AppCompatActivity {
     private User selectedUser;
     private GameQRCode myQRCodes;
 
-    public void onCreate() {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_player_info);
+
 
     }
 
