@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.qr_go.UserTest" tests="2" skipped="2" failures="0" errors="0" timestamp="2022-03-10T19:10:45" hostname="fv-az82-497" time="0.005">
+  <properties/>
+  <testcase name="userLoginQRTest" classname="com.example.qr_go.UserTest" time="0.004">
+    <skipped/>
+  </testcase>
+  <testcase name="userStatusQRTest" classname="com.example.qr_go.UserTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
