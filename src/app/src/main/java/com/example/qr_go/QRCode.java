@@ -28,22 +28,28 @@ public class QRCode {
 
     /**
      * QR code
+     *
      * @param qrCodeContents text contents scanned from QR code
-     * @throws NoSuchAlgorithmException
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public QRCode(String qrCodeContents) throws NoSuchAlgorithmException {
+    public QRCode(String qrCodeContents) {
         // https://stackoverflow.com/a/5531479
         // Convert qr code string content to SHA256 hash
-        MessageDigest digest = MessageDigest.getInstance("SHA-256");
-        byte[] hashBytes = digest.digest(qrCodeContents.getBytes(StandardCharsets.UTF_8));
-        // Convert bytes to string
-        this.hash = bytesToHex(hashBytes);
+        try {
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+            byte[] hashBytes = digest.digest(qrCodeContents.getBytes(StandardCharsets.UTF_8));
+            // Convert bytes to string
+            this.hash = bytesToHex(hashBytes);
+        } catch (NoSuchAlgorithmException e) {
+            this.hash = null;
+        }
+
     }
     public QRCode(){ }
 
     /**
      * Converts bytes[] from SHA-256 hashing into string
+     *
      * @param bytes from SHA-256 hashing
      * @return hex string representation of bytes array
      */
@@ -56,6 +62,7 @@ public class QRCode {
 
     /**
      * Getter for hash
+     *
      * @return hash string
      */
     public String getHash() {
@@ -64,6 +71,7 @@ public class QRCode {
 
     /**
      * Get id of QR code
+     *
      * @return id of QR code
      */
     public String getId() {
@@ -73,12 +81,13 @@ public class QRCode {
     /**
      * Converts plain text to a QR code
      * https://stackoverflow.com/a/27010646
-     * @param text text to encode as QR code
-     * @param width width of QR code
+     *
+     * @param text   text to encode as QR code
+     * @param width  width of QR code
      * @param height height of QR code
      * @return QR code Bitmap
      */
-    protected static Bitmap encodeToQrCode(String text, int width, int height){
+    protected static Bitmap encodeToQrCode(String text, int width, int height) {
         QRCodeWriter writer = new QRCodeWriter();
         BitMatrix matrix = null;
         try {
@@ -87,11 +96,12 @@ public class QRCode {
             ex.printStackTrace();
         }
         Bitmap bmp = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565);
-        for (int x = 0; x < width; x++){
-            for (int y = 0; y < height; y++){
-                bmp.setPixel(x, y, matrix.get(x,y) ? Color.BLACK : Color.WHITE);
+        for (int x = 0; x < width; x++) {
+            for (int y = 0; y < height; y++) {
+                bmp.setPixel(x, y, matrix.get(x, y) ? Color.BLACK : Color.WHITE);
             }
         }
         return bmp;
     }
+
 }

@@ -4,7 +4,6 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
-import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -24,10 +23,9 @@ public abstract class User {
 
     /**
      * Constructor for user class
-     * @throws NoSuchAlgorithmException if user QR codes are not instantiated properly
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public User() throws NoSuchAlgorithmException {
+    public User() {
         // Generate a new random UUID for a new user's ID
         userid = UUID.randomUUID().toString();
         // Generate a new random UUID for a new user's password
