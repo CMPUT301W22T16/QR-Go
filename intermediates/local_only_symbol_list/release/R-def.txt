@@ -25,6 +25,8 @@ id save_game_qr
 id scanner_view
 id score
 id score_text
+id take_qr_photo_button
+id take_qr_photo_imageview
 layout activity_code_scanner
 layout activity_maps
 layout activity_new_game_qractivity

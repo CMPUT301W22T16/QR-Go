@@ -21,11 +21,11 @@
 13-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:7:22-62
 14
 15    <uses-feature
-15-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:8:5-10:35
+15-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:8:5-10:34
 16        android:name="android.hardware.camera"
 16-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:9:9-47
-17        android:required="false" />
-17-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:10:9-33
+17        android:required="true" />
+17-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:10:9-32
 18
 19    <!-- Include required permissions for Google Maps API to run. -->
 20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />

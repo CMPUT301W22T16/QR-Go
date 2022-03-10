@@ -18,4 +18,21 @@
         </map>
     </incident>
 
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="65"
+            column="9"
+            startOffset="2543"
+            endLine="65"
+            endColumn="42"
+            endOffset="2576"/>
+        <map>
+            <condition minLT="23"/>
+        </map>
+    </incident>
+
 </incidents>

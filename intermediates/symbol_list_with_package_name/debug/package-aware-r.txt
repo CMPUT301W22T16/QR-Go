@@ -3078,6 +3078,8 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
+id take_qr_photo_button
+id take_qr_photo_imageview
 id terrain
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint

@@ -95,6 +95,41 @@
     <incident
         id="HardcodedText"
         severity="warning"
+        message="Hardcoded string &quot;Take photo of object&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="66"
+            column="9"
+            startOffset="2585"
+            endLine="66"
+            endColumn="44"
+            endOffset="2620"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="74"
+            column="6"
+            startOffset="2910"
+            endLine="74"
+            endColumn="15"
+            endOffset="2919"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
         message="Hardcoded string &quot;Search&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/menu/bottom_nav_menu.xml"
