@@ -7,19 +7,18 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 
-import java.security.NoSuchAlgorithmException;
 
 public class UserTest {
     private User testUser;
 
     @Before
-    public void setup() throws NoSuchAlgorithmException {
+    public void setup()  {
         testUser = new Player();
     }
 
     @Ignore
     @Test
-    public void userLoginQRTest() throws NoSuchAlgorithmException {
+    public void userLoginQRTest()  {
         String loginString = testUser.getUserid()+"\n"+testUser.getPassword();
 
         // Compare hashed login data and user's login QR data
@@ -30,7 +29,7 @@ public class UserTest {
 
     @Ignore
     @Test
-    public void userStatusQRTest() throws NoSuchAlgorithmException {
+    public void userStatusQRTest()  {
         String statusString = testUser.getUserid();
 
         // Compare hashed status data and user's status QR data

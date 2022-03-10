@@ -20,9 +20,6 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.lang.reflect.Method;
-import java.security.NoSuchAlgorithmException;
-import java.util.function.Consumer;
 
 public class NewGameQRActivity extends AppCompatActivity {
     private GameQRCode gameQRCode;
@@ -43,11 +40,8 @@ public class NewGameQRActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String qrString = intent.getStringExtra("QR");
 
-        try {
-            gameQRCode = new GameQRCode(qrString);
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
+        gameQRCode = new GameQRCode(qrString);
+
 
         // (2) Set score text
         TextView scoreView = findViewById(R.id.score);

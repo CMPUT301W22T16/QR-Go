@@ -4,9 +4,7 @@ import android.location.Location;
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
-import androidx.annotation.VisibleForTesting;
 
-import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -26,10 +24,9 @@ public class GameQRCode extends QRCode {
      * and calculates the score from the hash
      *
      * @param qrCodeContents
-     * @throws NoSuchAlgorithmException
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public GameQRCode(String qrCodeContents) throws NoSuchAlgorithmException {
+    public GameQRCode(String qrCodeContents) {
         super(qrCodeContents); // gets hash
         this.userIds = new ArrayList<>();
         this.score = calculateScore(this.hash);
