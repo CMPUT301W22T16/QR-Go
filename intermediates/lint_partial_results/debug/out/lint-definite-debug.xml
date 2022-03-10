@@ -70,12 +70,12 @@
         message="Hardcoded string &quot;Save&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="40"
+            line="41"
             column="9"
-            startOffset="1549"
-            endLine="40"
+            startOffset="1589"
+            endLine="41"
             endColumn="28"
-            endOffset="1568"/>
+            endOffset="1608"/>
     </incident>
 
     <incident
@@ -84,12 +84,12 @@
         message="Hardcoded string &quot;Save location&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="51"
+            line="52"
             column="9"
-            startOffset="1963"
-            endLine="51"
+            startOffset="2003"
+            endLine="52"
             endColumn="37"
-            endOffset="1991"/>
+            endOffset="2031"/>
     </incident>
 
     <incident
@@ -98,12 +98,12 @@
         message="Hardcoded string &quot;Take photo of object&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="66"
+            line="67"
             column="9"
-            startOffset="2585"
-            endLine="66"
+            startOffset="2625"
+            endLine="67"
             endColumn="44"
-            endOffset="2620"/>
+            endOffset="2660"/>
     </incident>
 
     <incident
@@ -119,12 +119,12 @@
             mark="0"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="74"
+            line="75"
             column="6"
-            startOffset="2910"
-            endLine="74"
+            startOffset="2950"
+            endLine="75"
             endColumn="15"
-            endOffset="2919"/>
+            endOffset="2959"/>
     </incident>
 
     <incident
@@ -184,17 +184,31 @@
     </incident>
 
     <incident
+        id="StaticFieldLeak"
+        severity="warning"
+        message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
+            line="35"
+            column="12"
+            startOffset="1192"
+            endLine="35"
+            endColumn="18"
+            endOffset="1198"/>
+    </incident>
+
+    <incident
         id="NonConstantResourceId"
         severity="warning"
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="71"
+            line="75"
             column="26"
-            startOffset="2876"
-            endLine="71"
+            startOffset="3048"
+            endLine="75"
             endColumn="41"
-            endOffset="2891"/>
+            endOffset="3063"/>
     </incident>
 
     <incident
@@ -203,12 +217,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="74"
+            line="78"
             column="26"
-            startOffset="3041"
-            endLine="74"
+            startOffset="3213"
+            endLine="78"
             endColumn="43"
-            endOffset="3058"/>
+            endOffset="3230"/>
     </incident>
 
     <incident
@@ -217,12 +231,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="77"
+            line="81"
             column="26"
-            startOffset="3208"
-            endLine="77"
+            startOffset="3380"
+            endLine="81"
             endColumn="44"
-            endOffset="3226"/>
+            endOffset="3398"/>
     </incident>
 
     <incident
@@ -231,12 +245,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="80"
+            line="84"
             column="26"
-            startOffset="3383"
-            endLine="80"
+            startOffset="3555"
+            endLine="84"
             endColumn="45"
-            endOffset="3402"/>
+            endOffset="3574"/>
     </incident>
 
     <incident
@@ -313,6 +327,25 @@
             endLine="39"
             endColumn="70"
             endOffset="1062"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.firebase:firebase-firestore than 24.0.1 is available: 24.0.2">
+        <fix-replace
+            description="Change to 24.0.2"
+            family="Update versions"
+            oldString="24.0.1"
+            replacement="24.0.2"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="41"
+            column="20"
+            startOffset="1152"
+            endLine="41"
+            endColumn="67"
+            endOffset="1199"/>
     </incident>
 
     <incident
@@ -402,12 +435,12 @@
             replacement="1.4.0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="50"
+            line="51"
             column="31"
-            startOffset="1758"
-            endLine="50"
+            startOffset="1823"
+            endLine="51"
             endColumn="59"
-            endOffset="1786"/>
+            endOffset="1851"/>
     </incident>
 
     <incident
@@ -421,12 +454,12 @@
             replacement="1.4.0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="51"
+            line="52"
             column="31"
-            startOffset="1817"
-            endLine="51"
+            startOffset="1882"
+            endLine="52"
             endColumn="58"
-            endOffset="1844"/>
+            endOffset="1909"/>
     </incident>
 
     <incident

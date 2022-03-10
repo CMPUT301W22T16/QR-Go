@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -294,6 +294,14 @@ extends androidx.appcompat.app.AppCompatActivity</pre>
                           int[]&nbsp;grantResults)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#saveNewQRCode(android.view.View)">saveNewQRCode</a></span>&#8203;(android.view.View&nbsp;view)</code></th>
+<td class="colLast">
+<div class="block">"Save" button is clicked
+ Save QR code to database and then redirect to another activity</div>
+</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.androidx.appcompat.app.AppCompatActivity">
@@ -452,7 +460,7 @@ public&nbsp;void&nbsp;onRequestPermissionsResult&#8203;(int&nbsp;requestCode,
 <a id="onActivityResult(int,int,android.content.Intent)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>onActivityResult</h4>
 <pre class="methodSignature">protected&nbsp;void&nbsp;onActivityResult&#8203;(int&nbsp;requestCode,
@@ -467,6 +475,22 @@ public&nbsp;void&nbsp;onRequestPermissionsResult&#8203;(int&nbsp;requestCode,
 <dd><code>requestCode</code> - </dd>
 <dd><code>resultCode</code> - </dd>
 <dd><code>data</code> - </dd>
+</dl>
+</li>
+</ul>
+<a id="saveNewQRCode(android.view.View)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>saveNewQRCode</h4>
+<pre class="methodSignature">@RequiresApi(api=26)
+public&nbsp;void&nbsp;saveNewQRCode&#8203;(android.view.View&nbsp;view)</pre>
+<div class="block">"Save" button is clicked
+ Save QR code to database and then redirect to another activity</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>view</code> - </dd>
 </dl>
 </li>
 </ul>

@@ -24,12 +24,29 @@
         message="Use databinding or explicit wiring of click listener in code">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="65"
+            line="40"
             column="9"
-            startOffset="2543"
-            endLine="65"
+            startOffset="1549"
+            endLine="40"
+            endColumn="40"
+            endOffset="1580"/>
+        <map>
+            <condition minLT="23"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="66"
+            column="9"
+            startOffset="2583"
+            endLine="66"
             endColumn="42"
-            endOffset="2576"/>
+            endOffset="2616"/>
         <map>
             <condition minLT="23"/>
         </map>
