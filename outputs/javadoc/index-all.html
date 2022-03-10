@@ -308,7 +308,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <h2 class="title">N</h2>
 <dl>
 <dt><a href="com/example/qr_go/NewGameQRActivity.html" title="class in com.example.qr_go"><span class="typeNameLink">NewGameQRActivity</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">This activity is shown after user scans a QR code
+ It will ask the user for:
+      1.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/NewGameQRActivity.html#%3Cinit%3E()">NewGameQRActivity()</a></span> - Constructor for class com.example.qr_go.<a href="com/example/qr_go/NewGameQRActivity.html" title="class in com.example.qr_go">NewGameQRActivity</a></dt>
 <dd>&nbsp;</dd>
 </dl>
@@ -333,13 +337,25 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Manipulates the map once available.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/QRCodeScannerActivity.html#onPause()">onPause()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/QRCodeScannerActivity.html" title="class in com.example.qr_go">QRCodeScannerActivity</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">If pausing, then release the resources of the code scanner</div>
+</dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/NewGameQRActivity.html#onRequestPermissionsResult(int,java.lang.String%5B%5D,int%5B%5D)">onRequestPermissionsResult(int, String[], int[])</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/NewGameQRActivity.html" title="class in com.example.qr_go">NewGameQRActivity</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Once user has accepted/denied permission access
+ If permission granted, set the location of the QR code
+ If permission denied, disable the location</div>
+</dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/QRCodeScannerActivity.html#onRequestPermissionsResult(int,java.lang.String%5B%5D,int%5B%5D)">onRequestPermissionsResult(int, String[], int[])</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/QRCodeScannerActivity.html" title="class in com.example.qr_go">QRCodeScannerActivity</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Called after user has accepted/denied permissions
+ If camera permission is granted, then start the code scanner and camera
+ If permission is denied, exit the activity, and show an error toast</div>
+</dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/QRCodeScannerActivity.html#onResume()">onResume()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/QRCodeScannerActivity.html" title="class in com.example.qr_go">QRCodeScannerActivity</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">After resuming, start the codeScanner if it is defined</div>
+</dd>
 <dt><a href="com/example/qr_go/Owner.html" title="class in com.example.qr_go"><span class="typeNameLink">Owner</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
 <dd>
 <div class="block">Class that represents an owner user with enhanced privileges</div>

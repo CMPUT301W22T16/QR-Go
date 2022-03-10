@@ -175,6 +175,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">NewGameQRActivity</span>
 extends androidx.appcompat.app.AppCompatActivity</pre>
+<div class="block">This activity is shown after user scans a QR code
+ It will ask the user for:
+      1. Photo of object
+      2. Location
+ Then user will click on save to create the new QR code</div>
 </li>
 </ul>
 </div>
@@ -292,7 +297,11 @@ extends androidx.appcompat.app.AppCompatActivity</pre>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onRequestPermissionsResult(int,java.lang.String%5B%5D,int%5B%5D)">onRequestPermissionsResult</a></span>&#8203;(int&nbsp;requestCode,
                           java.lang.String[]&nbsp;permissions,
                           int[]&nbsp;grantResults)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Once user has accepted/denied permission access
+ If permission granted, set the location of the QR code
+ If permission denied, disable the location</div>
+</td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -434,11 +443,18 @@ public&nbsp;void&nbsp;onRequestPermissionsResult&#8203;(int&nbsp;requestCode,
                                        java.lang.String[]&nbsp;permissions,
                                        @NonNull
                                        int[]&nbsp;grantResults)</pre>
+<div class="block">Once user has accepted/denied permission access
+ If permission granted, set the location of the QR code
+ If permission denied, disable the location</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>onRequestPermissionsResult</code>&nbsp;in interface&nbsp;<code>androidx.core.app.ActivityCompat.OnRequestPermissionsResultCallback</code></dd>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code>onRequestPermissionsResult</code>&nbsp;in class&nbsp;<code>androidx.fragment.app.FragmentActivity</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>requestCode</code> - </dd>
+<dd><code>permissions</code> - </dd>
+<dd><code>grantResults</code> - </dd>
 </dl>
 </li>
 </ul>
