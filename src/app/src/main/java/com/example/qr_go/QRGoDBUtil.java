@@ -15,7 +15,7 @@ import com.google.firebase.firestore.WriteBatch;
 
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
-import java.util.HashMap;
+
 
 @RequiresApi(api = Build.VERSION_CODES.O)
 /**
@@ -63,7 +63,6 @@ public class QRGoDBUtil {
                     GameQRCode qrcode = documentSnapshot.toObject(GameQRCode.class);
                     QRCodeList.add(qrcode);
                     AddQRtoDatabase();
-
                 }catch (Exception e){
                     /** sometimes the db picks up that it exists while in fact it does not... strange
                      */
@@ -109,15 +108,11 @@ public class QRGoDBUtil {
             e.printStackTrace();
         }
 
-
     }
     @RequiresApi(api = Build.VERSION_CODES.O)
     void UpdateUser() throws NoSuchAlgorithmException{
-
         player.addQRCode(qrcode);
         db.collection("Players").document(player.getUserid()).set(player);
-
-
     }
 
     /** this does not work help
@@ -126,6 +121,8 @@ public class QRGoDBUtil {
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
     void test1()throws NoSuchAlgorithmException{
+
         GrabQRFromDatabase("BFG5DGW54\n", "test");
+
     }
 }
