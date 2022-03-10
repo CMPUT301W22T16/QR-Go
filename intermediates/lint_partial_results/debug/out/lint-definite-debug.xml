@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 7.1.0" type="incidents">
+
+    <incident
+        id="RedundantNamespace"
+        severity="warning"
+        message="This namespace declaration is redundant">
+        <fix-attribute
+            description="Delete namespace"
+            attribute="xmlns:android"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_maps.xml"
+            line="23"
+            column="15"
+            startOffset="969"
+            endLine="23"
+            endColumn="73"
+            endOffset="1027"/>
+    </incident>
+
+    <incident
+        id="FragmentTagUsage"
+        severity="warning"
+        message="Replace the &lt;fragment> tag with FragmentContainerView.">
+        <fix-replace
+            description="Replace with androidx.fragment.app.FragmentContainerView"
+            oldString="fragment"
+            replacement="androidx.fragment.app.FragmentContainerView"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_maps.xml"
+            line="23"
+            column="6"
+            startOffset="960"
+            endLine="23"
+            endColumn="14"
+            endOffset="968"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;123&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="14"
+            column="9"
+            startOffset="560"
+            endLine="14"
+            endColumn="27"
+            endOffset="578"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Score&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="28"
+            column="9"
+            startOffset="1094"
+            endLine="28"
+            endColumn="29"
+            endOffset="1114"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Save&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="40"
+            column="9"
+            startOffset="1549"
+            endLine="40"
+            endColumn="28"
+            endOffset="1568"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Save location&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="51"
+            column="9"
+            startOffset="1963"
+            endLine="51"
+            endColumn="37"
+            endOffset="1991"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Search&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/menu/bottom_nav_menu.xml"
+            line="7"
+            column="9"
+            startOffset="210"
+            endLine="7"
+            endColumn="31"
+            endOffset="232"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;My Codes&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/menu/bottom_nav_menu.xml"
+            line="12"
+            column="9"
+            startOffset="349"
+            endLine="12"
+            endColumn="33"
+            endOffset="373"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Scan Code&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/menu/bottom_nav_menu.xml"
+            line="17"
+            column="9"
+            startOffset="494"
+            endLine="17"
+            endColumn="34"
+            endOffset="519"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;My Account&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/menu/bottom_nav_menu.xml"
+            line="22"
+            column="9"
+            startOffset="640"
+            endLine="22"
+            endColumn="35"
+            endOffset="666"/>
+    </incident>
+
+    <incident
+        id="StaticFieldLeak"
+        severity="warning"
+        message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
+            line="35"
+            column="12"
+            startOffset="1192"
+            endLine="35"
+            endColumn="18"
+            endOffset="1198"/>
+    </incident>
+
+    <incident
+        id="NonConstantResourceId"
+        severity="warning"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
+            line="75"
+            column="26"
+            startOffset="3048"
+            endLine="75"
+            endColumn="41"
+            endOffset="3063"/>
+    </incident>
+
+    <incident
+        id="NonConstantResourceId"
+        severity="warning"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
+            line="78"
+            column="26"
+            startOffset="3213"
+            endLine="78"
+            endColumn="43"
+            endOffset="3230"/>
+    </incident>
+
+    <incident
+        id="NonConstantResourceId"
+        severity="warning"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
+            line="81"
+            column="26"
+            startOffset="3380"
+            endLine="81"
+            endColumn="44"
+            endOffset="3398"/>
+    </incident>
+
+    <incident
+        id="NonConstantResourceId"
+        severity="warning"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
+            line="84"
+            column="26"
+            startOffset="3555"
+            endLine="84"
+            endColumn="45"
+            endOffset="3574"/>
+    </incident>
+
+    <incident
+        id="IgnoreWithoutReason"
+        severity="warning"
+        message="Test is ignored without giving any explanation">
+        <fix-replace
+            description="Give reason"
+            oldString="_lint_insert_end_"
+            selectPattern="TODO"
+            replacement="(&quot;TODO&quot;)"/>
+        <location
+            file="${:app*debug*testSourceProvider*0*javaDir*0}/com/example/qr_go/LoginQRCodeTest.java"
+            line="14"
+            column="5"
+            startOffset="295"
+            endLine="14"
+            endColumn="12"
+            endOffset="302"/>
+    </incident>
+
+    <incident
+        id="IgnoreWithoutReason"
+        severity="warning"
+        message="Test is ignored without giving any explanation">
+        <fix-replace
+            description="Give reason"
+            oldString="_lint_insert_end_"
+            selectPattern="TODO"
+            replacement="(&quot;TODO&quot;)"/>
+        <location
+            file="${:app*debug*testSourceProvider*0*javaDir*0}/com/example/qr_go/UserTest.java"
+            line="19"
+            column="5"
+            startOffset="285"
+            endLine="19"
+            endColumn="12"
+            endOffset="292"/>
+    </incident>
+
+    <incident
+        id="IgnoreWithoutReason"
+        severity="warning"
+        message="Test is ignored without giving any explanation">
+        <fix-replace
+            description="Give reason"
+            oldString="_lint_insert_end_"
+            selectPattern="TODO"
+            replacement="(&quot;TODO&quot;)"/>
+        <location
+            file="${:app*debug*testSourceProvider*0*javaDir*0}/com/example/qr_go/UserTest.java"
+            line="30"
+            column="5"
+            startOffset="668"
+            endLine="30"
+            endColumn="12"
+            endOffset="675"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.gms:play-services-maps than 17.0.1 is available: 18.0.2">
+        <fix-replace
+            description="Change to 18.0.2"
+            family="Update versions"
+            oldString="17.0.1"
+            replacement="18.0.2"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="39"
+            column="20"
+            startOffset="1012"
+            endLine="39"
+            endColumn="70"
+            endOffset="1062"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.4.0 is available: 2.4.1">
+        <fix-replace
+            description="Change to 2.4.1"
+            family="Update versions"
+            oldString="2.4.0"
+            replacement="2.4.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="42"
+            column="20"
+            startOffset="1219"
+            endLine="42"
+            endColumn="69"
+            endOffset="1268"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.4.0 is available: 2.4.1">
+        <fix-replace
+            description="Change to 2.4.1"
+            family="Update versions"
+            oldString="2.4.0"
+            replacement="2.4.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="43"
+            column="20"
+            startOffset="1288"
+            endLine="43"
+            endColumn="70"
+            endOffset="1338"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.navigation:navigation-fragment than 2.4.0 is available: 2.4.1">
+        <fix-replace
+            description="Change to 2.4.1"
+            family="Update versions"
+            oldString="2.4.0"
+            replacement="2.4.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="44"
+            column="20"
+            startOffset="1358"
+            endLine="44"
+            endColumn="67"
+            endOffset="1405"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.navigation:navigation-ui than 2.4.0 is available: 2.4.1">
+        <fix-replace
+            description="Change to 2.4.1"
+            family="Update versions"
+            oldString="2.4.0"
+            replacement="2.4.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="45"
+            column="20"
+            startOffset="1425"
+            endLine="45"
+            endColumn="61"
+            endOffset="1466"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test:runner than 1.2.0 is available: 1.4.0">
+        <fix-replace
+            description="Change to 1.4.0"
+            family="Update versions"
+            oldString="1.2.0"
+            replacement="1.4.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="51"
+            column="31"
+            startOffset="1823"
+            endLine="51"
+            endColumn="59"
+            endOffset="1851"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test:rules than 1.2.0 is available: 1.4.0">
+        <fix-replace
+            description="Change to 1.4.0"
+            family="Update versions"
+            oldString="1.2.0"
+            replacement="1.4.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="52"
+            column="31"
+            startOffset="1882"
+            endLine="52"
+            endColumn="58"
+            endOffset="1909"/>
+    </incident>
+
+    <incident
+        id="MergeRootFrame"
+        severity="warning"
+        message="This `&lt;FrameLayout>` can be replaced with a `&lt;merge>` tag">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_code_scanner.xml"
+            line="2"
+            column="1"
+            startOffset="39"
+            endLine="24"
+            endColumn="15"
+            endOffset="931"/>
+    </incident>
+
+</incidents>
