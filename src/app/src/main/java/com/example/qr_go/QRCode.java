@@ -45,6 +45,7 @@ public class QRCode {
         }
 
     }
+    public QRCode(){ }
 
     /**
      * Converts bytes[] from SHA-256 hashing into string

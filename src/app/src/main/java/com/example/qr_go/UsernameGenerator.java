@@ -56,7 +56,7 @@ public class UsernameGenerator {
     public static Boolean isValidUsername(String username) {
         // TODO test with Firestore database
         // check database to see if username already exists
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        FirebaseFirestore db = MapsActivity.db;
         CollectionReference colRef = db.collection("Users");
         final Boolean[] valid = new Boolean[1];
 
