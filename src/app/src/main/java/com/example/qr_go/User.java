@@ -44,13 +44,13 @@ public abstract class User {
      * Constructor for user class to generate mock data
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public User(String uuid, String password, String username, Integer totalScore, String email) {
+    public User(String uuid, String password, String username, String email) {
         // Generate a new random UUID for a new user's ID
         userid = uuid;
         // Generate a new random UUID for a new user's password
         this.password = password;
         this.username = username;
-        this.totalScore = totalScore;
+        this.totalScore = 0;
         this.email = email;
         scannedQRCodeIds = new ArrayList<>();
         loginQR = new LoginQRCode(this);
