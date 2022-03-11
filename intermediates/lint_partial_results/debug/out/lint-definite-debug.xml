@@ -238,44 +238,6 @@
     </incident>
 
     <incident
-        id="IgnoreWithoutReason"
-        severity="warning"
-        message="Test is ignored without giving any explanation">
-        <fix-replace
-            description="Give reason"
-            oldString="_lint_insert_end_"
-            selectPattern="TODO"
-            replacement="(&quot;TODO&quot;)"/>
-        <location
-            file="${:app*debug*testSourceProvider*0*javaDir*0}/com/example/qr_go/UserTest.java"
-            line="19"
-            column="5"
-            startOffset="285"
-            endLine="19"
-            endColumn="12"
-            endOffset="292"/>
-    </incident>
-
-    <incident
-        id="IgnoreWithoutReason"
-        severity="warning"
-        message="Test is ignored without giving any explanation">
-        <fix-replace
-            description="Give reason"
-            oldString="_lint_insert_end_"
-            selectPattern="TODO"
-            replacement="(&quot;TODO&quot;)"/>
-        <location
-            file="${:app*debug*testSourceProvider*0*javaDir*0}/com/example/qr_go/UserTest.java"
-            line="30"
-            column="5"
-            startOffset="668"
-            endLine="30"
-            endColumn="12"
-            endOffset="675"/>
-    </incident>
-
-    <incident
         id="GradleDependency"
         severity="warning"
         message="A newer version of com.google.android.gms:play-services-maps than 17.0.1 is available: 18.0.2">

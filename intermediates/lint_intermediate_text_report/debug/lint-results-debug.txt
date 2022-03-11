@@ -168,12 +168,6 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/test/java/com/example/qr_go/LoginQRCodeTest.java:14: Warning: Test is ignored without giving any explanation [IgnoreWithoutReason]
     @Ignore // need to mock firestore
     ~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/test/java/com/example/qr_go/UserTest.java:19: Warning: Test is ignored without giving any explanation [IgnoreWithoutReason]
-    @Ignore
-    ~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/test/java/com/example/qr_go/UserTest.java:30: Warning: Test is ignored without giving any explanation [IgnoreWithoutReason]
-    @Ignore
-    ~~~~~~~
 
    Explanation for issues of type "IgnoreWithoutReason":
    Ignoring a test without a reason makes it difficult to figure out the
@@ -181,4 +175,4 @@
    Please define an explicit reason why it is ignored, and when it can be
    resolved.
 
-1 errors, 27 warnings
+1 errors, 25 warnings
