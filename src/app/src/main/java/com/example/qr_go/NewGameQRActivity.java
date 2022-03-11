@@ -181,10 +181,9 @@ public class NewGameQRActivity extends AppCompatActivity {
 
         // Save QR code to database
         QRGoDBUtil db = new QRGoDBUtil();
-        // TODO: replace DUMMY-USER-ID with my user id
-        db.GrabQRFromDatabase(gameQRCode.getId(), "DUMMY-USER-ID");
+        String currentUserId = MapsActivity.getUserId();
+        db.updateScannedQRtoDB(gameQRCode, new Player(currentUserId, null, null, null, null), null, null);
 
-        // TODO: redirect to the new QR code activity?
         // Go to view QR code activity
         startActivity(new Intent(this, MapsActivity.class));
     }

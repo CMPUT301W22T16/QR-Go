@@ -15,8 +15,8 @@ public abstract class User {
     private String password; // Password for verifying a user
     private String username;
     private Integer totalScore;
-    //private LoginQRCode loginQR;
-    //private StatusQRCode statusQR;
+    private LoginQRCode loginQR;
+    private StatusQRCode statusQR;
     private ArrayList<String> scannedQRCodeIds;
     private String email;
 
