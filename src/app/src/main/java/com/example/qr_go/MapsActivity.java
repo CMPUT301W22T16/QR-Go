@@ -33,8 +33,8 @@ import java.util.HashMap;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    private String currentUUID;
-    public static FirebaseFirestore db;
+    private static String currentUUID;
+    FirebaseFirestore db;
     CollectionReference collectionReference;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -127,5 +127,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng sydney = new LatLng(-34, 151);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+    }
+
+    /**
+     * Get user id of currently logged in user
+     */
+    public static String getUserId(){
+        return currentUUID;
     }
 }
