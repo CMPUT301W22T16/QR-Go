@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.qr_go.CommentTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-03-11T00:08:49" hostname="fv-az47-976" time="0.012">
+<testsuite name="com.example.qr_go.CommentTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-03-11T01:28:29" hostname="fv-az127-653" time="0.003">
   <properties/>
-  <testcase name="testSetMessage" classname="com.example.qr_go.CommentTest" time="0.003"/>
+  <testcase name="testSetMessage" classname="com.example.qr_go.CommentTest" time="0.002"/>
   <testcase name="testGetMessage" classname="com.example.qr_go.CommentTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

@@ -897,6 +897,23 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="com.jayway.android.robotium:robotium-solo:5.6.2@jar"
+      jars="/home/runner/.gradle/caches/modules-2/files-2.1/com.jayway.android.robotium/robotium-solo/5.6.2/b95bf4839752ba50a83d9a190521a752b373a11/robotium-solo-5.6.2.jar"
+      resolved="com.jayway.android.robotium:robotium-solo:5.6.2"/>
+  <library
+      name="androidx.test:rules:1.2.0@aar"
+      jars="/home/runner/.gradle/caches/transforms-3/6629718b578f7b4b37c51a60d75b39e2/transformed/rules-1.2.0/jars/classes.jar"
+      resolved="androidx.test:rules:1.2.0"
+      folder="/home/runner/.gradle/caches/transforms-3/6629718b578f7b4b37c51a60d75b39e2/transformed/rules-1.2.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="androidx.test:runner:1.4.0@aar"
       jars="/home/runner/.gradle/caches/transforms-3/187dd36a142f8aee2ac9cbeabba79108/transformed/runner-1.4.0/jars/classes.jar"
       resolved="androidx.test:runner:1.4.0"

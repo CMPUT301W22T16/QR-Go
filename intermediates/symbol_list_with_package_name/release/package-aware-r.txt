@@ -2571,7 +2571,6 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
-drawable ic_baseline_chevron_left_24
 drawable ic_clock_black_24dp
 drawable ic_code_scanner_auto_focus_off
 drawable ic_code_scanner_auto_focus_on
@@ -2725,7 +2724,6 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
-id back_button
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -2882,6 +2880,7 @@ id linear
 id listMode
 id list_item
 id locale
+id location_checkbox
 id ltr
 id map
 id masked
@@ -2986,7 +2985,6 @@ id position
 id postLayout
 id progress_circular
 id progress_horizontal
-id qrTextView
 id radio
 id ratio
 id rectangles
@@ -2999,11 +2997,14 @@ id rounded
 id row_index_key
 id rtl
 id satellite
+id save_game_qr
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
 id scanner_view
+id score
+id score_text
 id screen
 id scroll
 id scrollIndicatorDown
@@ -3017,10 +3018,8 @@ id search_close_btn
 id search_edit_frame
 id search_go_btn
 id search_mag_icon
-id search_pager
 id search_plate
 id search_src_text
-id search_tab_layout
 id search_voice_btn
 id select_dialog_listview
 id selected
@@ -3041,7 +3040,6 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
-id sort_spinner
 id south
 id spacer
 id special_effects_controller_view_tag
@@ -3122,7 +3120,6 @@ id uniform
 id unlabeled
 id up
 id useLogo
-id userTextView
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3230,7 +3227,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_code_scanner
 layout activity_maps
-layout activity_search
+layout activity_new_game_qractivity
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3247,8 +3244,6 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout fragment_qr_search
-layout fragment_user_search
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3304,7 +3299,6 @@ layout notification_template_part_time
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
-layout spinner_item
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_chip_zero_corner_radius
@@ -3382,10 +3376,16 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string default_web_client_id
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string gcm_defaultSenderId
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
@@ -3477,6 +3477,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string project_id
 string search_menu_title
 string status_bar_notification_info_overflow
 string title_activity_maps

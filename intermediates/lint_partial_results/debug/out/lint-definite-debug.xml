@@ -37,132 +37,59 @@
     </incident>
 
     <incident
-        id="RedundantNamespace"
+        id="HardcodedText"
         severity="warning"
-        message="This namespace declaration is redundant">
-        <fix-attribute
-            description="Delete namespace"
-            attribute="xmlns:android"/>
+        message="Hardcoded string &quot;123&quot;, should use `@string` resource">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="78"
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="14"
             column="9"
-            startOffset="3219"
-            endLine="78"
-            endColumn="67"
-            endOffset="3277"/>
-    </incident>
-
-    <incident
-        id="ObsoleteLayoutParam"
-        severity="warning"
-        message="Invalid layout param in a `RelativeLayout`: `layout_weight`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="21"
-            column="13"
-            startOffset="863"
-            endLine="21"
-            endColumn="38"
-            endOffset="888"/>
+            startOffset="560"
+            endLine="14"
+            endColumn="27"
+            endOffset="578"/>
     </incident>
 
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;Back&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Score&quot;, should use `@string` resource">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="23"
-            column="13"
-            startOffset="941"
-            endLine="23"
-            endColumn="32"
-            endOffset="960"/>
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="28"
+            column="9"
+            startOffset="1094"
+            endLine="28"
+            endColumn="29"
+            endOffset="1114"/>
     </incident>
 
     <incident
-        id="ObsoleteLayoutParam"
+        id="HardcodedText"
         severity="warning"
-        message="Invalid layout param in a `RelativeLayout`: `layout_weight`">
+        message="Hardcoded string &quot;Save&quot;, should use `@string` resource">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="33"
-            column="13"
-            startOffset="1324"
-            endLine="33"
-            endColumn="38"
-            endOffset="1349"/>
-    </incident>
-
-    <incident
-        id="Autofill"
-        severity="warning"
-        message="Missing `autofillHints` attribute">
-        <fix-alternatives>
-            <fix-attribute
-                description="Set autofillHints"
-                namespace="http://schemas.android.com/apk/res/android"
-                attribute="autofillHints"
-                value=""
-                dot="0"
-                mark="0"/>
-            <fix-attribute
-                description="Set importantForAutofill=&quot;no&quot;"
-                namespace="http://schemas.android.com/apk/res/android"
-                attribute="importantForAutofill"
-                value="no"/>
-        </fix-alternatives>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
             line="40"
-            column="6"
-            startOffset="1522"
-            endLine="40"
-            endColumn="14"
-            endOffset="1530"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Temp Search Bar&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="44"
             column="9"
-            startOffset="1669"
-            endLine="44"
-            endColumn="39"
-            endOffset="1699"/>
+            startOffset="1549"
+            endLine="40"
+            endColumn="28"
+            endOffset="1568"/>
     </incident>
 
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;QR Codes&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Save location&quot;, should use `@string` resource">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="69"
-            column="17"
-            startOffset="2819"
-            endLine="69"
-            endColumn="40"
-            endOffset="2842"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Players&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="73"
-            column="17"
-            startOffset="3025"
-            endLine="73"
-            endColumn="39"
-            endOffset="3047"/>
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="51"
+            column="9"
+            startOffset="1963"
+            endLine="51"
+            endColumn="37"
+            endOffset="1991"/>
     </incident>
 
     <incident
@@ -222,17 +149,31 @@
     </incident>
 
     <incident
-        id="NonConstantResourceId"
+        id="CommitPrefEdits"
         severity="warning"
-        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
+        message="`SharedPreferences.edit()` without a corresponding `commit()` or `apply()` call">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
             line="71"
-            column="26"
-            startOffset="2876"
+            column="43"
+            startOffset="2773"
             endLine="71"
+            endColumn="60"
+            endOffset="2790"/>
+    </incident>
+
+    <incident
+        id="NonConstantResourceId"
+        severity="warning"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
+            line="83"
+            column="26"
+            startOffset="3409"
+            endLine="83"
             endColumn="41"
-            endOffset="2891"/>
+            endOffset="3424"/>
     </incident>
 
     <incident
@@ -241,12 +182,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="74"
+            line="86"
             column="26"
-            startOffset="3041"
-            endLine="74"
+            startOffset="3574"
+            endLine="86"
             endColumn="43"
-            endOffset="3058"/>
+            endOffset="3591"/>
     </incident>
 
     <incident
@@ -255,12 +196,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="77"
+            line="89"
             column="26"
-            startOffset="3208"
-            endLine="77"
+            startOffset="3741"
+            endLine="89"
             endColumn="44"
-            endOffset="3226"/>
+            endOffset="3759"/>
     </incident>
 
     <incident
@@ -269,68 +210,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="80"
+            line="92"
             column="26"
-            startOffset="3383"
-            endLine="80"
+            startOffset="3916"
+            endLine="92"
             endColumn="45"
-            endOffset="3402"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserSearchFragment.java"
-            line="34"
-            column="30"
-            startOffset="1146"
-            endLine="34"
-            endColumn="67"
-            endOffset="1183"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="String literal in `setText` can not be translated. Use Android resources instead.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserSearchFragment.java"
-            line="34"
-            column="30"
-            startOffset="1146"
-            endLine="34"
-            endColumn="57"
-            endOffset="1173"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRSearchFragment.java"
-            line="33"
-            column="30"
-            startOffset="1051"
-            endLine="33"
-            endColumn="63"
-            endOffset="1084"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="String literal in `setText` can not be translated. Use Android resources instead.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRSearchFragment.java"
-            line="33"
-            column="30"
-            startOffset="1051"
-            endLine="33"
-            endColumn="53"
-            endOffset="1074"/>
+            endOffset="3935"/>
     </incident>
 
     <incident
@@ -344,12 +229,12 @@
             replacement="(&quot;TODO&quot;)"/>
         <location
             file="${:app*debug*testSourceProvider*0*javaDir*0}/com/example/qr_go/LoginQRCodeTest.java"
-            line="15"
+            line="14"
             column="5"
-            startOffset="342"
-            endLine="15"
+            startOffset="295"
+            endLine="14"
             endColumn="12"
-            endOffset="349"/>
+            endOffset="302"/>
     </incident>
 
     <incident
@@ -363,12 +248,12 @@
             replacement="(&quot;TODO&quot;)"/>
         <location
             file="${:app*debug*testSourceProvider*0*javaDir*0}/com/example/qr_go/UserTest.java"
-            line="20"
+            line="19"
             column="5"
-            startOffset="363"
-            endLine="20"
+            startOffset="285"
+            endLine="19"
             endColumn="12"
-            endOffset="370"/>
+            endOffset="292"/>
     </incident>
 
     <incident
@@ -382,12 +267,12 @@
             replacement="(&quot;TODO&quot;)"/>
         <location
             file="${:app*debug*testSourceProvider*0*javaDir*0}/com/example/qr_go/UserTest.java"
-            line="31"
+            line="30"
             column="5"
-            startOffset="777"
-            endLine="31"
+            startOffset="668"
+            endLine="30"
             endColumn="12"
-            endOffset="784"/>
+            endOffset="675"/>
     </incident>
 
     <incident
@@ -502,6 +387,44 @@
             endLine="45"
             endColumn="61"
             endOffset="1466"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test:runner than 1.2.0 is available: 1.4.0">
+        <fix-replace
+            description="Change to 1.4.0"
+            family="Update versions"
+            oldString="1.2.0"
+            replacement="1.4.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="50"
+            column="31"
+            startOffset="1758"
+            endLine="50"
+            endColumn="59"
+            endOffset="1786"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test:rules than 1.2.0 is available: 1.4.0">
+        <fix-replace
+            description="Change to 1.4.0"
+            family="Update versions"
+            oldString="1.2.0"
+            replacement="1.4.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="51"
+            column="31"
+            startOffset="1817"
+            endLine="51"
+            endColumn="58"
+            endOffset="1844"/>
     </incident>
 
     <incident
