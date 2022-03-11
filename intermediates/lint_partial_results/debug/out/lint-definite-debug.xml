@@ -70,12 +70,12 @@
         message="Hardcoded string &quot;Save&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="41"
+            line="40"
             column="9"
-            startOffset="1589"
-            endLine="41"
+            startOffset="1549"
+            endLine="40"
             endColumn="28"
-            endOffset="1608"/>
+            endOffset="1568"/>
     </incident>
 
     <incident
@@ -84,96 +84,12 @@
         message="Hardcoded string &quot;Save location&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="52"
+            line="51"
             column="9"
-            startOffset="2003"
-            endLine="52"
+            startOffset="1963"
+            endLine="51"
             endColumn="37"
-            endOffset="2031"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Take photo of object&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="67"
-            column="9"
-            startOffset="2625"
-            endLine="67"
-            endColumn="44"
-            endOffset="2660"/>
-    </incident>
-
-    <incident
-        id="ContentDescription"
-        severity="warning"
-        message="Missing `contentDescription` attribute on image">
-        <fix-attribute
-            description="Set contentDescription"
-            namespace="http://schemas.android.com/apk/res/android"
-            attribute="contentDescription"
-            value="TODO"
-            dot="4"
-            mark="0"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="75"
-            column="6"
-            startOffset="2950"
-            endLine="75"
-            endColumn="15"
-            endOffset="2959"/>
-    </incident>
-
-    <incident
-        id="ContentDescription"
-        severity="warning"
-        message="Missing `contentDescription` attribute on image">
-        <fix-attribute
-            description="Set contentDescription"
-            namespace="http://schemas.android.com/apk/res/android"
-            attribute="contentDescription"
-            value="TODO"
-            dot="4"
-            mark="0"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="8"
-            column="6"
-            startOffset="344"
-            endLine="8"
-            endColumn="15"
-            endOffset="353"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;QR NAME&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="30"
-            column="13"
-            startOffset="1240"
-            endLine="30"
-            endColumn="35"
-            endOffset="1262"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;QR LOCATION&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="38"
-            column="13"
-            startOffset="1547"
-            endLine="38"
-            endColumn="39"
-            endOffset="1573"/>
+            endOffset="1991"/>
     </incident>
 
     <incident
@@ -238,40 +154,26 @@
         message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="37"
+            line="35"
             column="12"
-            startOffset="1273"
-            endLine="37"
+            startOffset="1192"
+            endLine="35"
             endColumn="18"
-            endOffset="1279"/>
+            endOffset="1198"/>
     </incident>
 
     <incident
-        id="CommitPrefEdits"
+        id="NonConstantResourceId"
         severity="warning"
-        message="`SharedPreferences.edit()` without a corresponding `commit()` or `apply()` call">
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
             line="75"
-            column="43"
-            startOffset="2960"
+            column="26"
+            startOffset="3048"
             endLine="75"
-            endColumn="60"
-            endOffset="2977"/>
-    </incident>
-
-    <incident
-        id="NonConstantResourceId"
-        severity="warning"
-        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="89"
-            column="26"
-            startOffset="3728"
-            endLine="89"
             endColumn="41"
-            endOffset="3743"/>
+            endOffset="3063"/>
     </incident>
 
     <incident
@@ -280,12 +182,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="92"
+            line="78"
             column="26"
-            startOffset="3893"
-            endLine="92"
+            startOffset="3213"
+            endLine="78"
             endColumn="43"
-            endOffset="3910"/>
+            endOffset="3230"/>
     </incident>
 
     <incident
@@ -294,12 +196,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="95"
+            line="81"
             column="26"
-            startOffset="4060"
-            endLine="95"
+            startOffset="3380"
+            endLine="81"
             endColumn="44"
-            endOffset="4078"/>
+            endOffset="3398"/>
     </incident>
 
     <incident
@@ -308,12 +210,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="98"
+            line="84"
             column="26"
-            startOffset="4235"
-            endLine="98"
+            startOffset="3555"
+            endLine="84"
             endColumn="45"
-            endOffset="4254"/>
+            endOffset="3574"/>
     </incident>
 
     <incident
@@ -333,6 +235,44 @@
             endLine="14"
             endColumn="12"
             endOffset="302"/>
+    </incident>
+
+    <incident
+        id="IgnoreWithoutReason"
+        severity="warning"
+        message="Test is ignored without giving any explanation">
+        <fix-replace
+            description="Give reason"
+            oldString="_lint_insert_end_"
+            selectPattern="TODO"
+            replacement="(&quot;TODO&quot;)"/>
+        <location
+            file="${:app*debug*testSourceProvider*0*javaDir*0}/com/example/qr_go/UserTest.java"
+            line="19"
+            column="5"
+            startOffset="285"
+            endLine="19"
+            endColumn="12"
+            endOffset="292"/>
+    </incident>
+
+    <incident
+        id="IgnoreWithoutReason"
+        severity="warning"
+        message="Test is ignored without giving any explanation">
+        <fix-replace
+            description="Give reason"
+            oldString="_lint_insert_end_"
+            selectPattern="TODO"
+            replacement="(&quot;TODO&quot;)"/>
+        <location
+            file="${:app*debug*testSourceProvider*0*javaDir*0}/com/example/qr_go/UserTest.java"
+            line="30"
+            column="5"
+            startOffset="668"
+            endLine="30"
+            endColumn="12"
+            endOffset="675"/>
     </incident>
 
     <incident
