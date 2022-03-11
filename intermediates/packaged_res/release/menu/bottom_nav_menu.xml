@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_search"
+        android:icon="@drawable/round_search_24"
+        android:title="Search" />
+
+    <item
+        android:id="@+id/nav_my_codes"
+        android:icon="@drawable/baseline_dashboard_24"
+        android:title="My Codes" />
+
+    <item
+        android:id="@+id/nav_scan_code"
+        android:icon="@drawable/round_qr_code_scanner_24"
+        android:title="Scan Code" />
+
+    <item
+        android:id="@+id/nav_my_account"
+        android:icon="@drawable/round_account_circle_24"
+        android:title="My Account" />
+
+</menu>
