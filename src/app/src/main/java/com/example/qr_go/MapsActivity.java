@@ -70,6 +70,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             currentUUID = newUser.getUserid();
             SharedPreferences.Editor ed = loggedUser.edit();
             ed.putString(User.USER_ID, currentUUID);
+            // TODO save user to the firestore database
         }
 
         // Set onClick for BottomNavigation nav items

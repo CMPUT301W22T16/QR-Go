@@ -118,16 +118,10 @@ public abstract class User {
     }
 
     /**
-     *
      * @param username user's new username
-     * @return true if username was successfully changed, false otherwise
      */
-    public boolean setUsername(String username) {
-        if (!UsernameGenerator.isValidUsername(username)) {
-            return false;
-        }
+    public void setUsername(String username) {
         this.username = username;
-        return true;
     }
 
     /**
