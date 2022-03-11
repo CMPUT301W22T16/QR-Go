@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 7.1.0">
+
+    <issue
+        id="CommitPrefEdits"
+        severity="Warning"
+        message="`SharedPreferences.edit()` without a corresponding `commit()` or `apply()` call"
+        category="Correctness"
+        priority="6"
+        summary="Missing `commit()` on `SharedPreference` editor"
+        explanation="After calling `edit()` on a `SharedPreference`, you must call `commit()` or `apply()` on the editor to save the results."
+        errorLine1="            SharedPreferences.Editor ed = loggedUser.edit();"
+        errorLine2="                                          ~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
+            line="71"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        severity="Error"
+        message="Call requires API level 26 (current min is 21): `Player`"
+        category="Correctness"
+        priority="6"
+        summary="Calling new methods on older versions"
+        explanation="This check scans through all the Android API calls in the application and warns about any calls that are not available on **all** versions targeted by this application (according to its minimum SDK attribute in the manifest).&#xA;&#xA;If you really want to use this API and don&apos;t need to support older devices just set the `minSdkVersion` in your `build.gradle` or `AndroidManifest.xml` files.&#xA;&#xA;If your code is **deliberately** accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the `@TargetApi` annotation specifying the local minimum SDK to apply, such as `@TargetApi(11)`, such that this check considers 11 rather than your manifest file&apos;s minimum SDK as the required API level.&#xA;&#xA;If you are deliberately setting `android:` attributes in style definitions, make sure you place this in a `values-v`*NN* folder in order to avoid running into runtime conflicts on certain devices where manufacturers have added custom attributes whose ids conflict with the new ones on later platforms.&#xA;&#xA;Similarly, you can use tools:targetApi=&quot;11&quot; in an XML file to indicate that the element will only be inflated in an adequate context."
+        errorLine1="            User newUser = new Player();"
+        errorLine2="                           ~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
+            line="69"
+            column="28"/>
+    </issue>
+
+    <issue
+        id="FragmentTagUsage"
+        severity="Warning"
+        message="Replace the &lt;fragment> tag with FragmentContainerView."
+        category="Correctness"
+        priority="5"
+        summary="Use FragmentContainerView instead of the &lt;fragment> tag"
+        explanation="FragmentContainerView replaces the &lt;fragment> tag as the preferred                 way of adding fragments via XML. Unlike the &lt;fragment> tag, FragmentContainerView                 uses a normal `FragmentTransaction` under the hood to add the initial fragment,                 allowing further FragmentTransaction operations on the FragmentContainerView                 and providing a consistent timing for lifecycle events."
+        url="https://developer.android.com/reference/androidx/fragment/app/FragmentContainerView.html"
+        urls="https://developer.android.com/reference/androidx/fragment/app/FragmentContainerView.html"
+        errorLine1="    &lt;fragment xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="     ~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_maps.xml"
+            line="23"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="NonConstantResourceId"
+        severity="Warning"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements"
+        category="Correctness"
+        priority="5"
+        summary="Checks use of resource IDs in places requiring constants"
+        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
+        errorLine1="                    case R.id.nav_search:"
+        errorLine2="                         ~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
+            line="84"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="NonConstantResourceId"
+        severity="Warning"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements"
+        category="Correctness"
+        priority="5"
+        summary="Checks use of resource IDs in places requiring constants"
+        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
+        errorLine1="                    case R.id.nav_my_codes:"
+        errorLine2="                         ~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
+            line="87"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="NonConstantResourceId"
+        severity="Warning"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements"
+        category="Correctness"
+        priority="5"
+        summary="Checks use of resource IDs in places requiring constants"
+        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
+        errorLine1="                    case R.id.nav_scan_code:"
+        errorLine2="                         ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
+            line="90"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="NonConstantResourceId"
+        severity="Warning"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements"
+        category="Correctness"
+        priority="5"
+        summary="Checks use of resource IDs in places requiring constants"
+        explanation="Avoid the usage of resource IDs where constant expressions are required.&#xA;&#xA;A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation."
+        errorLine1="                    case R.id.nav_my_account:"
+        errorLine2="                         ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
+            line="93"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.google.android.gms:play-services-maps than 17.0.1 is available: 18.0.2"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &apos;com.google.android.gms:play-services-maps:17.0.1&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/build.gradle"
+            line="39"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.google.firebase:firebase-firestore than 24.0.1 is available: 24.0.2"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &apos;com.google.firebase:firebase-firestore:24.0.1&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/build.gradle"
+            line="41"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.4.0 is available: 2.4.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &apos;androidx.lifecycle:lifecycle-livedata-ktx:2.4.0&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/build.gradle"
+            line="42"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.4.0 is available: 2.4.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &apos;androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/build.gradle"
+            line="43"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.navigation:navigation-fragment than 2.4.0 is available: 2.4.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &apos;androidx.navigation:navigation-fragment:2.4.0&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/build.gradle"
+            line="44"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.navigation:navigation-ui than 2.4.0 is available: 2.4.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &apos;androidx.navigation:navigation-ui:2.4.0&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/build.gradle"
+            line="45"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.test:runner than 1.2.0 is available: 1.4.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    androidTestImplementation &apos;androidx.test:runner:1.2.0&apos;"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/build.gradle"
+            line="50"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.test:rules than 1.2.0 is available: 1.4.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    androidTestImplementation &apos;androidx.test:rules:1.2.0&apos;"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/build.gradle"
+            line="51"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="MergeRootFrame"
+        severity="Warning"
+        message="This `&lt;FrameLayout>` can be replaced with a `&lt;merge>` tag"
+        category="Performance"
+        priority="4"
+        summary="FrameLayout can be replaced with `&lt;merge>` tag"
+        explanation="If a `&lt;FrameLayout>` is the root of a layout and does not provide background or padding etc, it can often be replaced with a `&lt;merge>` tag which is slightly more efficient. Note that this depends on context, so make sure you understand how the `&lt;merge>` tag works before proceeding."
+        url="https://android-developers.googleblog.com/2009/03/android-layout-tricks-3-optimize-by.html"
+        urls="https://android-developers.googleblog.com/2009/03/android-layout-tricks-3-optimize-by.html"
+        errorLine1="&lt;FrameLayout"
+        errorLine2="^">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_code_scanner.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="RedundantNamespace"
+        severity="Warning"
+        message="This namespace declaration is redundant"
+        category="Performance"
+        priority="1"
+        summary="Redundant namespace"
+        explanation="In Android XML documents, only specify the namespace on the root/document element. Namespace declarations elsewhere in the document are typically accidental leftovers from copy/pasting XML from other files or documentation."
+        errorLine1="    &lt;fragment xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_maps.xml"
+            line="23"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;123&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;123&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml"
+            line="14"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Score&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;Score&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml"
+            line="28"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Save&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;Save&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml"
+            line="40"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Save location&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;Save location&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml"
+            line="51"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Search&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:title=&quot;Search&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/menu/bottom_nav_menu.xml"
+            line="7"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;My Codes&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:title=&quot;My Codes&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/menu/bottom_nav_menu.xml"
+            line="12"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Scan Code&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:title=&quot;Scan Code&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/menu/bottom_nav_menu.xml"
+            line="17"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;My Account&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:title=&quot;My Account&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/menu/bottom_nav_menu.xml"
+            line="22"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="IgnoreWithoutReason"
+        severity="Warning"
+        message="Test is ignored without giving any explanation"
+        category="Testing"
+        priority="2"
+        summary="@Ignore without Reason"
+        explanation="Ignoring a test without a reason makes it difficult to figure out the problem later.&#xA;Please define an explicit reason why it is ignored, and when it can be resolved."
+        errorLine1="    @Ignore // need to mock firestore"
+        errorLine2="    ~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/test/java/com/example/qr_go/LoginQRCodeTest.java"
+            line="14"
+            column="5"/>
+    </issue>
+
+</issues>
