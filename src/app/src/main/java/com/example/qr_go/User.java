@@ -21,6 +21,7 @@ public abstract class User {
     private String email;
 
     public static final String CURRENT_USER = "LOGIN";
+    public static final String USER_ID = "uuid";
 
     /**
      * Constructor for user class

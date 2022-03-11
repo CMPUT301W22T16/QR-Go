@@ -30,7 +30,6 @@ import java.util.HashMap;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    private SharedPreferences loggedUser;
     private String currentUUID;
     FirebaseFirestore db;
     CollectionReference collectionReference;
@@ -40,9 +39,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_maps);
-
-        loggedUser = this.getSharedPreferences(User.CURRENT_USER, MODE_PRIVATE);
-        currentUUID = loggedUser.getString("uuid", null);
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -65,6 +61,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 Log.d("FAILURE", "Data could not be added: " + e.toString());
             }
         });
+
+        // Log in the user or create a new user
+        SharedPreferences loggedUser = this.getSharedPreferences(User.CURRENT_USER, MODE_PRIVATE);
+        currentUUID = loggedUser.getString(User.USER_ID, null);
+        if (currentUUID == null) {
+            User newUser = new Player();
+            currentUUID = newUser.getUserid();
+            SharedPreferences.Editor ed = loggedUser.edit();
+            ed.putString(User.USER_ID, currentUUID);
+        }
 
         // Set onClick for BottomNavigation nav items
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav_view);
