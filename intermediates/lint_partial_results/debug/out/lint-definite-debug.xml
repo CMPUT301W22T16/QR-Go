@@ -70,12 +70,12 @@
         message="Hardcoded string &quot;Save&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="40"
+            line="41"
             column="9"
-            startOffset="1549"
-            endLine="40"
+            startOffset="1589"
+            endLine="41"
             endColumn="28"
-            endOffset="1568"/>
+            endOffset="1608"/>
     </incident>
 
     <incident
@@ -84,12 +84,96 @@
         message="Hardcoded string &quot;Save location&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="51"
+            line="52"
             column="9"
-            startOffset="1963"
-            endLine="51"
+            startOffset="2003"
+            endLine="52"
             endColumn="37"
-            endOffset="1991"/>
+            endOffset="2031"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Take photo of object&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="67"
+            column="9"
+            startOffset="2625"
+            endLine="67"
+            endColumn="44"
+            endOffset="2660"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="75"
+            column="6"
+            startOffset="2950"
+            endLine="75"
+            endColumn="15"
+            endOffset="2959"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="8"
+            column="6"
+            startOffset="344"
+            endLine="8"
+            endColumn="15"
+            endOffset="353"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;QR NAME&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="30"
+            column="13"
+            startOffset="1240"
+            endLine="30"
+            endColumn="35"
+            endOffset="1262"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;QR LOCATION&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="38"
+            column="13"
+            startOffset="1547"
+            endLine="38"
+            endColumn="39"
+            endOffset="1573"/>
     </incident>
 
     <incident
@@ -149,17 +233,31 @@
     </incident>
 
     <incident
+        id="StaticFieldLeak"
+        severity="warning"
+        message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
+            line="37"
+            column="12"
+            startOffset="1273"
+            endLine="37"
+            endColumn="18"
+            endOffset="1279"/>
+    </incident>
+
+    <incident
         id="CommitPrefEdits"
         severity="warning"
         message="`SharedPreferences.edit()` without a corresponding `commit()` or `apply()` call">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="74"
+            line="75"
             column="43"
-            startOffset="2891"
-            endLine="74"
+            startOffset="2960"
+            endLine="75"
             endColumn="60"
-            endOffset="2908"/>
+            endOffset="2977"/>
     </incident>
 
     <incident
@@ -168,12 +266,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="87"
+            line="89"
             column="26"
-            startOffset="3583"
-            endLine="87"
+            startOffset="3728"
+            endLine="89"
             endColumn="41"
-            endOffset="3598"/>
+            endOffset="3743"/>
     </incident>
 
     <incident
@@ -182,12 +280,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="90"
+            line="92"
             column="26"
-            startOffset="3748"
-            endLine="90"
+            startOffset="3893"
+            endLine="92"
             endColumn="43"
-            endOffset="3765"/>
+            endOffset="3910"/>
     </incident>
 
     <incident
@@ -196,12 +294,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="93"
+            line="95"
             column="26"
-            startOffset="3915"
-            endLine="93"
+            startOffset="4060"
+            endLine="95"
             endColumn="44"
-            endOffset="3933"/>
+            endOffset="4078"/>
     </incident>
 
     <incident
@@ -210,12 +308,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="96"
+            line="98"
             column="26"
-            startOffset="4090"
-            endLine="96"
+            startOffset="4235"
+            endLine="98"
             endColumn="45"
-            endOffset="4109"/>
+            endOffset="4254"/>
     </incident>
 
     <incident
@@ -362,12 +460,12 @@
             replacement="1.4.0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="50"
+            line="51"
             column="31"
-            startOffset="1758"
-            endLine="50"
+            startOffset="1823"
+            endLine="51"
             endColumn="59"
-            endOffset="1786"/>
+            endOffset="1851"/>
     </incident>
 
     <incident
@@ -381,12 +479,12 @@
             replacement="1.4.0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="51"
+            line="52"
             column="31"
-            startOffset="1817"
-            endLine="51"
+            startOffset="1882"
+            endLine="52"
             endColumn="58"
-            endOffset="1844"/>
+            endOffset="1909"/>
     </incident>
 
     <incident
