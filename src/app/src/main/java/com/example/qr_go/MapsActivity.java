@@ -74,6 +74,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             currentUUID = newUser.getUserid();
             SharedPreferences.Editor ed = loggedUser.edit();
             ed.putString(User.USER_ID, currentUUID);
+            ed.apply(); // apply changes
             // Save user to the firestore database
             db.collection("Players").document(newUser.getUserid()).set(newUser);
         }

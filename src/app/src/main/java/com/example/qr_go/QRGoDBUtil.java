@@ -1,7 +1,9 @@
 package com.example.qr_go;
 
+import android.content.Context;
 import android.os.Build;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -13,6 +15,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.WriteBatch;
 
+import java.nio.file.FileAlreadyExistsException;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
@@ -31,11 +34,19 @@ public class QRGoDBUtil {
      *
      * @Author Darius Fang
      */
+    private Context context;
+    public QRGoDBUtil(Context context){
+        this.context = context; // Set context to do activity actions
+    }
+    public QRGoDBUtil(){
+        super();
+    }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     void updateScannedQRtoDB(GameQRCode gameqrcode, Player  player, QRPhoto qrphoto, GeoLocation geolocation) {
 
         DocumentReference docRef = db.collection("GameQRCodes").document(gameqrcode.getHash());
+
         QRCodeList.clear();
         docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
@@ -82,18 +93,17 @@ public class QRGoDBUtil {
             db.collection("GameQRCodes").document(gameqrcode.getHash()).set(gameqrcode);
         }
         else{
-            GameQRCode newGameQRCode = QRCodeList.get(0);
+            gameqrcode = QRCodeList.get(0);
             // Add GameQR to DB
-            if (!newGameQRCode.getUserIds().contains(UserID)) {
-                newGameQRCode.addUser(UserID);
-                db.collection("GameQRCodes").document(newGameQRCode.getHash()).update("userIds", newGameQRCode.getUserIds());
-
+            if (!gameqrcode.getUserIds().contains(UserID)) {
+                gameqrcode.addUser(UserID);
+                db.collection("GameQRCodes").document(gameqrcode.getHash()).update("userIds", gameqrcode.getUserIds());
+            }else{
+                Toast.makeText(context.getApplicationContext(), "You already scanned this :/", Toast.LENGTH_LONG).show();
             }
         }
 
-
         // Update Player to DB
-
 
         if (!player.getScannedQRCodeIds().contains(gameqrcode.getId())){
             player.addQRCode(gameqrcode);
@@ -107,7 +117,6 @@ public class QRGoDBUtil {
         if (geolocation != null){
             db.collection("Geolocations").document(qrphoto.getQRID()).set(qrphoto);
         }
-
     }
 
 

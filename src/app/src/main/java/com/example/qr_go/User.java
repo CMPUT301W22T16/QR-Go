@@ -32,8 +32,7 @@ public abstract class User {
         userid = UUID.randomUUID().toString();
         // Generate a new random UUID for a new user's password
         password = UUID.randomUUID().toString();
-        //username = UsernameGenerator.generateUsername();
-        username = "Darius";
+        username = UsernameGenerator.generateUsername();
         totalScore = 0;
         email = "";
         scannedQRCodeIds = new ArrayList<>();
