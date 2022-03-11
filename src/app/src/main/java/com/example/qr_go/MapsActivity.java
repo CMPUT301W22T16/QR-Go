@@ -34,7 +34,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
     private String currentUUID;
-    FirebaseFirestore db;
+    public static FirebaseFirestore db;
     CollectionReference collectionReference;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
