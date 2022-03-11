@@ -19,6 +19,7 @@ import com.google.common.collect.Maps;
 import com.google.zxing.Result;
 
 
+
 /**
  * QRCodeScanner is the activity that scans QR codes
  * Library: https://github.com/yuriy-budiyev/code-scanner
@@ -57,9 +58,24 @@ public class QRCodeScannerActivity extends AppCompatActivity {
                 @Override
                 public void onDecoded(@NonNull final Result result) {
                     runOnUiThread(new Runnable() {
+                        @RequiresApi(api = Build.VERSION_CODES.O)
                         @Override
                         public void run() {
-                            Toast.makeText(QRCodeScannerActivity.this, result.getText(), Toast.LENGTH_SHORT).show();
+                            String text = result.getText();
+                            // Create a new QR code object depending on type of QR code
+                            if (text.startsWith(LoginQRCode.QR_IDENTIFIER)) {
+                                LoginQRCode loginQRCode = new LoginQRCode(text);
+                                Toast.makeText(QRCodeScannerActivity.this, "DEBUG LOGIN QR", Toast.LENGTH_SHORT).show();
+                            } else if (text.startsWith(StatusQRCode.QR_IDENTIFIER)) {
+                                StatusQRCode statusQRCode = new StatusQRCode(text);
+                                Toast.makeText(QRCodeScannerActivity.this, "DEBUG STATUS QR", Toast.LENGTH_SHORT).show();
+                            } else {
+                                // New Game QR code > go to NewGameQRActivity
+                                Intent intent = new Intent(QRCodeScannerActivity.this, NewGameQRActivity.class);
+                                intent.putExtra("QR", text);
+                                startActivity(intent);
+                            }
+
                         }
                     });
                 }

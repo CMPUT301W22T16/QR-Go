@@ -14,7 +14,6 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,29 +21,31 @@ import java.util.Map;
  * LoginQRCode is the QR code that users can use to login to their account on another device
  */
 public class LoginQRCode extends QRCode implements  GeneratesNewQR {
+    static String QR_IDENTIFIER = "login-qr-code-"; // should be pre-pended to all LoginQRCodes
     User user;
     /**
      * On create, convert qr content to hash
      * @param user string content of qr code
-     * @throws NoSuchAlgorithmException
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public LoginQRCode(User user) throws NoSuchAlgorithmException {
+    public LoginQRCode(User user)  {
         super(user.getUserid()+"\n"+user.getPassword());
         this.user = user;
     }
     /**
      * QR code
      * @param qrCodeContents text contents scanned from QR code
-     * @throws NoSuchAlgorithmException
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public LoginQRCode(String qrCodeContents) throws NoSuchAlgorithmException {
+    public LoginQRCode(String qrCodeContents)  {
         /* Constructor expected to be called when creating LoginQRCode for verifying if loginQR is
            correct, i.e., isLoginValid is called, this constructor could also not exist and
            isLoginValid could be a static method */
         super(qrCodeContents);
+        // Split by `\n` and get new user
+        String[] usernamePassword = qrCodeContents.split("\n");
     }
+
 
     /**
      * Validates if login QR code and password is valid
@@ -90,4 +91,5 @@ public class LoginQRCode extends QRCode implements  GeneratesNewQR {
     public Bitmap getQRCode(){
         return encodeToQrCode(user.getUserid()+"\n"+user.getPassword(), 100, 100);
     }
+
 }

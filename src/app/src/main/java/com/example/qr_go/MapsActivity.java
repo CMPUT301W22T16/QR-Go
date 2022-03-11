@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -16,6 +17,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -63,7 +66,32 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
-        
+        // Set onClick for BottomNavigation nav items
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav_view);
+        bottomNavigationView.getMenu().getItem(0).setCheckable(false); // don't select first item by default
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+                switch (id) {
+                    case R.id.nav_search:
+//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));
+                        break;
+                    case R.id.nav_my_codes:
+//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));
+                        break;
+                    case R.id.nav_scan_code:
+                        startActivity(new Intent(MapsActivity.this, QRCodeScannerActivity.class));
+                        break;
+                    case R.id.nav_my_account:
+//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));
+                        break;
+                }
+                return true;
+            }
+        });
+
+
     }
 
     /**

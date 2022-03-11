@@ -2,7 +2,6 @@ package com.example.qr_go;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-import java.security.NoSuchAlgorithmException;
 import java.util.UUID;
 
 /**
@@ -15,13 +14,13 @@ need to add byte image testing
  */
 public class PhotoUnitTest {
     @Test
-    public void checkQRPhotoID() throws NoSuchAlgorithmException{
+    public void checkQRPhotoID() {
         QRPhoto photo = new QRPhoto(null, "123","456");
         assertEquals("123", photo.getQRID());
         assertEquals("456", photo.getPhotographerID());
     }
     @Test
-    public void checkQRPhotoIDRandom() throws NoSuchAlgorithmException{
+    public void checkQRPhotoIDRandom() {
         String userID, QRID;
         for (int i = 0; i <10; i++) {
             userID = UUID.randomUUID().toString() + i;
@@ -37,7 +36,7 @@ public class PhotoUnitTest {
         assertEquals("123", profileIcon.getUserID());
     }
     @Test
-    public void checkProfilePictureRandom() throws NoSuchAlgorithmException{
+    public void checkProfilePictureRandom() {
         String userID;
         for (int i = 0; i <10; i++) {
             userID = UUID.randomUUID().toString() + i;
