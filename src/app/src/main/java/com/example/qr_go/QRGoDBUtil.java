@@ -30,6 +30,7 @@ public class QRGoDBUtil {
     /** Gets QR  from database then it executes add QR to database
      *
      * @Author Darius Fang
+     *
      */
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -69,7 +70,6 @@ public class QRGoDBUtil {
      */
     /**
      *
-
      * @param gameqrcode
      * @param player
      * @param qrphoto
@@ -94,8 +94,8 @@ public class QRGoDBUtil {
         }
         if (!player.getScannedQRCodeIds().contains(gameqrcode.getId())){
             player.addQRCode(gameqrcode);
-            db.collection("Players").document(player.getUserid()).set(player);
         }
+        db.collection("Players").document(player.getUserid()).set(player);
         // Update Photo to DB
         if (qrphoto != null){
             db.collection("QRPhotos").document(qrphoto.getQRID()).set(qrphoto);
