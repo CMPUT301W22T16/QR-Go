@@ -1,11 +1,22 @@
 package com.example.qr_go;
 
 import android.os.Build;
+import android.util.Pair;
 
 import androidx.annotation.RequiresApi;
 
 import java.util.ArrayList;
 import java.util.UUID;
+
+/** TODO:
+ *   - Remove the totalScore variable
+ *   - Remove the highestUniqueScore variable
+ *   - Convert the list of scanned qr codes to a LinkedHashMap
+ *   - In the addQRCode() method, check if the qr has been scanned before
+ *   - Make a new getTotalScore() method that iterates over the hashmap and returns total
+ *   - In the getHighestUniqueScore method, sort the hashmap by score and output the highest one
+ */
+
 
 /**
  * Represents a user. Contains all user contact info and identifying data
@@ -15,6 +26,7 @@ public abstract class User {
     private String password; // Password for verifying a user
     private String username;
     private Integer totalScore;
+    private Pair<String, Integer> highestUniqueScore;
     private LoginQRCode loginQR;
     private StatusQRCode statusQR;
     private ArrayList<String> scannedQRCodeIds;
@@ -34,6 +46,7 @@ public abstract class User {
         password = UUID.randomUUID().toString();
         username = UsernameGenerator.generateUsername();
         totalScore = 0;
+        highestUniqueScore = new Pair<>("", 0);
         email = "";
         scannedQRCodeIds = new ArrayList<>();
         loginQR = new LoginQRCode(this);
@@ -68,8 +81,13 @@ public abstract class User {
      * @param qr GameQRCode object which is to be added to the player's list of scanned QRs
      */
     public void addQRCode(GameQRCode qr) {
-        scannedQRCodeIds.add(qr.getId());
-        totalScore += qr.getScore();
+        String qrID = qr.getId();
+        Integer qrScore = qr.getScore();
+        scannedQRCodeIds.add(qrID);
+        totalScore += qrScore;
+        if (qrScore > highestUniqueScore.second) {
+            highestUniqueScore = new Pair<>(qrID, qrScore);
+        }
     }
 
     /**
