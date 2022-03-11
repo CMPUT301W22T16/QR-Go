@@ -29,16 +29,11 @@ public class QRGoDBUtil {
     FirebaseFirestore db = MapsActivity.db;
     /** Gets QR  from database then it executes add QR to database
      *
-     *
-     *
-     *
-     *
-     * //////////////////////////////////////ADD geo location
      * @Author Darius Fang
      */
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    void updateScannedQRtoDB(GameQRCode gameqrcode, Player  player, QRPhoto qrphoto, QRPhoto geolocation) {
+    void updateScannedQRtoDB(GameQRCode gameqrcode, Player  player, QRPhoto qrphoto, GeoLocation geolocation) {
 
         DocumentReference docRef = db.collection("GameQRCodes").document(gameqrcode.getHash());
         QRCodeList.clear();
@@ -74,18 +69,13 @@ public class QRGoDBUtil {
      */
     /**
      *
-     *
-     *
-     *
-     *
-     *
-     * //////////////////////////////////////ADD geo location
+
      * @param gameqrcode
      * @param player
      * @param qrphoto
      * @param geolocation
      */
-    void updateScannedQRtoDBContinue(GameQRCode gameqrcode, Player player, QRPhoto qrphoto, QRPhoto geolocation){
+    void updateScannedQRtoDBContinue(GameQRCode gameqrcode, Player player, QRPhoto qrphoto, GeoLocation geolocation){
         String UserID = player.getUserid();
         if (QRCodeList.isEmpty()){
             gameqrcode.addUser(UserID);
