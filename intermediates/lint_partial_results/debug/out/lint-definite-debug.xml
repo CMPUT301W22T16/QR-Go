@@ -70,12 +70,12 @@
         message="Hardcoded string &quot;Save&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="41"
+            line="40"
             column="9"
-            startOffset="1589"
-            endLine="41"
+            startOffset="1549"
+            endLine="40"
             endColumn="28"
-            endOffset="1608"/>
+            endOffset="1568"/>
     </incident>
 
     <incident
@@ -84,96 +84,12 @@
         message="Hardcoded string &quot;Save location&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="52"
+            line="51"
             column="9"
-            startOffset="2003"
-            endLine="52"
+            startOffset="1963"
+            endLine="51"
             endColumn="37"
-            endOffset="2031"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Take photo of object&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="67"
-            column="9"
-            startOffset="2625"
-            endLine="67"
-            endColumn="44"
-            endOffset="2660"/>
-    </incident>
-
-    <incident
-        id="ContentDescription"
-        severity="warning"
-        message="Missing `contentDescription` attribute on image">
-        <fix-attribute
-            description="Set contentDescription"
-            namespace="http://schemas.android.com/apk/res/android"
-            attribute="contentDescription"
-            value="TODO"
-            dot="4"
-            mark="0"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="75"
-            column="6"
-            startOffset="2950"
-            endLine="75"
-            endColumn="15"
-            endOffset="2959"/>
-    </incident>
-
-    <incident
-        id="ContentDescription"
-        severity="warning"
-        message="Missing `contentDescription` attribute on image">
-        <fix-attribute
-            description="Set contentDescription"
-            namespace="http://schemas.android.com/apk/res/android"
-            attribute="contentDescription"
-            value="TODO"
-            dot="4"
-            mark="0"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="8"
-            column="6"
-            startOffset="344"
-            endLine="8"
-            endColumn="15"
-            endOffset="353"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;QR NAME&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="30"
-            column="13"
-            startOffset="1240"
-            endLine="30"
-            endColumn="35"
-            endOffset="1262"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;QR LOCATION&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="38"
-            column="13"
-            startOffset="1547"
-            endLine="38"
-            endColumn="39"
-            endOffset="1573"/>
+            endOffset="1991"/>
     </incident>
 
     <incident
@@ -233,17 +149,31 @@
     </incident>
 
     <incident
-        id="StaticFieldLeak"
+        id="CommitPrefEdits"
         severity="warning"
-        message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak">
+        message="`SharedPreferences.edit()` without a corresponding `commit()` or `apply()` call">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="37"
-            column="12"
-            startOffset="1273"
-            endLine="37"
-            endColumn="18"
-            endOffset="1279"/>
+            line="74"
+            column="43"
+            startOffset="2891"
+            endLine="74"
+            endColumn="60"
+            endOffset="2908"/>
+    </incident>
+
+    <incident
+        id="NonConstantResourceId"
+        severity="warning"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
+            line="87"
+            column="26"
+            startOffset="3583"
+            endLine="87"
+            endColumn="41"
+            endOffset="3598"/>
     </incident>
 
     <incident
@@ -254,10 +184,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
             line="90"
             column="26"
-            startOffset="3769"
+            startOffset="3748"
             endLine="90"
-            endColumn="41"
-            endOffset="3784"/>
+            endColumn="43"
+            endOffset="3765"/>
     </incident>
 
     <incident
@@ -268,10 +198,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
             line="93"
             column="26"
-            startOffset="3934"
+            startOffset="3915"
             endLine="93"
-            endColumn="43"
-            endOffset="3951"/>
+            endColumn="44"
+            endOffset="3933"/>
     </incident>
 
     <incident
@@ -282,24 +212,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
             line="96"
             column="26"
-            startOffset="4101"
+            startOffset="4090"
             endLine="96"
-            endColumn="44"
-            endOffset="4119"/>
-    </incident>
-
-    <incident
-        id="NonConstantResourceId"
-        severity="warning"
-        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="99"
-            column="26"
-            startOffset="4276"
-            endLine="99"
             endColumn="45"
-            endOffset="4295"/>
+            endOffset="4109"/>
     </incident>
 
     <incident
@@ -446,12 +362,12 @@
             replacement="1.4.0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="51"
+            line="50"
             column="31"
-            startOffset="1823"
-            endLine="51"
+            startOffset="1758"
+            endLine="50"
             endColumn="59"
-            endOffset="1851"/>
+            endOffset="1786"/>
     </incident>
 
     <incident
@@ -465,12 +381,12 @@
             replacement="1.4.0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="52"
+            line="51"
             column="31"
-            startOffset="1882"
-            endLine="52"
+            startOffset="1817"
+            endLine="51"
             endColumn="58"
-            endOffset="1909"/>
+            endOffset="1844"/>
     </incident>
 
     <incident

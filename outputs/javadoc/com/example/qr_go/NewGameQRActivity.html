@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
+var data = {"i0":10,"i1":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -175,11 +175,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">NewGameQRActivity</span>
 extends androidx.appcompat.app.AppCompatActivity</pre>
-<div class="block">This activity is shown after user scans a QR code
- It will ask the user for:
-      1. Photo of object
-      2. Location
- Then user will click on save to create the new QR code</div>
 </li>
 </ul>
 </div>
@@ -270,46 +265,16 @@ extends androidx.appcompat.app.AppCompatActivity</pre>
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#launchTakePhoto(android.view.View)">launchTakePhoto</a></span>&#8203;(android.view.View&nbsp;view)</code></th>
-<td class="colLast">
-<div class="block">Launch Take Photo activity to take a photo of the QR object
- https://developer.android.com/training/camera/photobasics#java</div>
-</td>
-</tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onActivityResult(int,int,android.content.Intent)">onActivityResult</a></span>&#8203;(int&nbsp;requestCode,
-                int&nbsp;resultCode,
-                android.content.Intent&nbsp;data)</code></th>
-<td class="colLast">
-<div class="block">Used by launchTakePhoto to get the photo taken by the user's camera
- When photo is taken, display it on the image view, and save it</div>
-</td>
-</tr>
-<tr id="i2" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onCreate(android.os.Bundle)">onCreate</a></span>&#8203;(android.os.Bundle&nbsp;savedInstanceState)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onRequestPermissionsResult(int,java.lang.String%5B%5D,int%5B%5D)">onRequestPermissionsResult</a></span>&#8203;(int&nbsp;requestCode,
                           java.lang.String[]&nbsp;permissions,
                           int[]&nbsp;grantResults)</code></th>
-<td class="colLast">
-<div class="block">Once user has accepted/denied permission access
- If permission granted, set the location of the QR code
- If permission denied, disable the location</div>
-</td>
-</tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#saveNewQRCode(android.view.View)">saveNewQRCode</a></span>&#8203;(android.view.View&nbsp;view)</code></th>
-<td class="colLast">
-<div class="block">"Save" button is clicked
- Save QR code to database and then redirect to another activity</div>
-</td>
+<td class="colLast">&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -324,7 +289,7 @@ extends androidx.appcompat.app.AppCompatActivity</pre>
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;androidx.fragment.app.FragmentActivity</h3>
-<code>dump, getSupportFragmentManager, getSupportLoaderManager, onAttachFragment, onCreatePanelMenu, onCreateView, onCreateView, onLowMemory, onMultiWindowModeChanged, onNewIntent, onPause, onPictureInPictureModeChanged, onPrepareOptionsPanel, onPreparePanel, onResume, onResumeFragments, onStateNotSaved, setEnterSharedElementCallback, setExitSharedElementCallback, startActivityFromFragment, startActivityFromFragment, startIntentSenderFromFragment, supportFinishAfterTransition, supportPostponeEnterTransition, supportStartPostponedEnterTransition, validateRequestPermissionsRequestCode</code></li>
+<code>dump, getSupportFragmentManager, getSupportLoaderManager, onActivityResult, onAttachFragment, onCreatePanelMenu, onCreateView, onCreateView, onLowMemory, onMultiWindowModeChanged, onNewIntent, onPause, onPictureInPictureModeChanged, onPrepareOptionsPanel, onPreparePanel, onResume, onResumeFragments, onStateNotSaved, setEnterSharedElementCallback, setExitSharedElementCallback, startActivityFromFragment, startActivityFromFragment, startIntentSenderFromFragment, supportFinishAfterTransition, supportPostponeEnterTransition, supportStartPostponedEnterTransition, validateRequestPermissionsRequestCode</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.androidx.activity.ComponentActivity">
@@ -434,7 +399,7 @@ protected&nbsp;void&nbsp;onCreate&#8203;(android.os.Bundle&nbsp;savedInstanceSta
 <a id="onRequestPermissionsResult(int,java.lang.String[],int[])">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>onRequestPermissionsResult</h4>
 <pre class="methodSignature">@RequiresApi(api=28)
@@ -443,70 +408,11 @@ public&nbsp;void&nbsp;onRequestPermissionsResult&#8203;(int&nbsp;requestCode,
                                        java.lang.String[]&nbsp;permissions,
                                        @NonNull
                                        int[]&nbsp;grantResults)</pre>
-<div class="block">Once user has accepted/denied permission access
- If permission granted, set the location of the QR code
- If permission denied, disable the location</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>onRequestPermissionsResult</code>&nbsp;in interface&nbsp;<code>androidx.core.app.ActivityCompat.OnRequestPermissionsResultCallback</code></dd>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code>onRequestPermissionsResult</code>&nbsp;in class&nbsp;<code>androidx.fragment.app.FragmentActivity</code></dd>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>requestCode</code> - </dd>
-<dd><code>permissions</code> - </dd>
-<dd><code>grantResults</code> - </dd>
-</dl>
-</li>
-</ul>
-<a id="launchTakePhoto(android.view.View)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>launchTakePhoto</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;launchTakePhoto&#8203;(android.view.View&nbsp;view)</pre>
-<div class="block">Launch Take Photo activity to take a photo of the QR object
- https://developer.android.com/training/camera/photobasics#java</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>view</code> - </dd>
-</dl>
-</li>
-</ul>
-<a id="onActivityResult(int,int,android.content.Intent)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>onActivityResult</h4>
-<pre class="methodSignature">protected&nbsp;void&nbsp;onActivityResult&#8203;(int&nbsp;requestCode,
-                                int&nbsp;resultCode,
-                                android.content.Intent&nbsp;data)</pre>
-<div class="block">Used by launchTakePhoto to get the photo taken by the user's camera
- When photo is taken, display it on the image view, and save it</div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code>onActivityResult</code>&nbsp;in class&nbsp;<code>androidx.fragment.app.FragmentActivity</code></dd>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>requestCode</code> - </dd>
-<dd><code>resultCode</code> - </dd>
-<dd><code>data</code> - </dd>
-</dl>
-</li>
-</ul>
-<a id="saveNewQRCode(android.view.View)">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>saveNewQRCode</h4>
-<pre class="methodSignature">@RequiresApi(api=26)
-public&nbsp;void&nbsp;saveNewQRCode&#8203;(android.view.View&nbsp;view)</pre>
-<div class="block">"Save" button is clicked
- Save QR code to database and then redirect to another activity</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>view</code> - </dd>
 </dl>
 </li>
 </ul>
