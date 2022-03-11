@@ -5,6 +5,7 @@ import androidx.annotation.RequiresApi;
 import androidx.fragment.app.FragmentActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -32,7 +33,8 @@ import java.util.HashMap;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    public static FirebaseFirestore db;
+    private String currentUUID;
+    FirebaseFirestore db;
     CollectionReference collectionReference;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -63,6 +65,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 Log.d("FAILURE", "Data could not be added: " + e.toString());
             }
         });
+
+        // Log in the user or create a new user
+        SharedPreferences loggedUser = this.getSharedPreferences(User.CURRENT_USER, MODE_PRIVATE);
+        currentUUID = loggedUser.getString(User.USER_ID, null);
+        if (currentUUID == null) {
+            User newUser = new Player();
+            currentUUID = newUser.getUserid();
+            SharedPreferences.Editor ed = loggedUser.edit();
+            ed.putString(User.USER_ID, currentUUID);
+            // TODO save user to the firestore database
+        }
 
         // Set onClick for BottomNavigation nav items
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav_view);

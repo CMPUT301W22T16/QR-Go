@@ -21,6 +21,14 @@ public class Owner extends User {
     }
 
     /**
+     * Constructor for owner class for mock data
+     */
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public Owner(String uuid, String password, String username, Integer totalScore, String email) {
+        super(uuid, password, username, totalScore, email);
+    }
+
+    /**
      * @return Returns true as owners are owners
      */
     public Boolean isOwner() {
