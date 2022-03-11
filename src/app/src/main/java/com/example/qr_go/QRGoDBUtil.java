@@ -26,29 +26,16 @@ public class QRGoDBUtil {
      *
      */
     ArrayList<GameQRCode>  QRCodeList = new ArrayList<GameQRCode>();
-    GameQRCode temp, qrcode;
-    String qrID, UserID;
     FirebaseFirestore db = MapsActivity.db;
-
-
-    Player player = new Player();
-
-
-
-
     /** Gets QR  from database then it executes add QR to database
      *
      * @Author Darius Fang
      */
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    void GrabQRFromDatabase(String qrIDInput, String UserIDInput) {
-        qrcode = new GameQRCode();
-        UserID = UserIDInput;
-        qrID = qrIDInput;
-        temp = new GameQRCode(qrID);
-        String hash = temp.getHash();
-        DocumentReference docRef = db.collection("GameQRCodes").document(hash);
+    void updateScannedQRtoDB(GameQRCode gameqrcode, Player  player, QRPhoto qrphoto, GeoLocation geolocation) {
+
+        DocumentReference docRef = db.collection("GameQRCodes").document(gameqrcode.getHash());
         QRCodeList.clear();
         docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
@@ -57,62 +44,78 @@ public class QRGoDBUtil {
                 try {
                     GameQRCode qrcode = documentSnapshot.toObject(GameQRCode.class);
                     QRCodeList.add(qrcode);
-                    AddQRtoDatabase();
+                    updateScannedQRtoDBContinue(null, player, qrphoto, geolocation);
                 }catch (Exception e){
                     /** sometimes the db picks up that it exists while in fact it does not... strange
                      */
                     QRCodeList.clear();
-                    AddQRtoDatabase();
+                    updateScannedQRtoDBContinue(gameqrcode, player, qrphoto, geolocation);
                 }
             }
-
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                AddQRtoDatabase();
+                updateScannedQRtoDBContinue(gameqrcode, player, qrphoto, geolocation);
             }
         });;
 
 
     }
-
     /** ADDs QR to database
      * IF the QR exists, it will update the QR, otherwise it will add it
      * it also adds the userid
      *
      * @Author Darius Fang
      */
-    void AddQRtoDatabase(){
+    /**
+     *
+
+     * @param gameqrcode
+     * @param player
+     * @param qrphoto
+     * @param geolocation
+     */
+    void updateScannedQRtoDBContinue(GameQRCode gameqrcode, Player player, QRPhoto qrphoto, GeoLocation geolocation){
+        String UserID = player.getUserid();
         if (QRCodeList.isEmpty()){
-            qrcode = temp;
-            qrcode.addUser(UserID);
-            db.collection("GameQRCodes").document(qrcode.getHash()).set(qrcode);
+            gameqrcode.addUser(UserID);
+            db.collection("GameQRCodes").document(gameqrcode.getHash()).set(gameqrcode);
         }
         else{
-            qrcode = QRCodeList.get(0);
-            if (!qrcode.getUserIds().contains(UserID)) {
-                qrcode.addUser(UserID);
-                db.collection("GameQRCodes").document(qrcode.getHash()).update("userIds", qrcode.getUserIds());
-
+            GameQRCode newGameQRCode = QRCodeList.get(0);
+            // Add GameQR to DB
+            if (!newGameQRCode.getUserIds().contains(UserID)) {
+                newGameQRCode.addUser(UserID);
+                db.collection("GameQRCodes").document(newGameQRCode.getHash()).update("userIds", newGameQRCode.getUserIds());
 
             }
         }
 
-//        UpdateUser();
 
+        // Update Player to DB
+
+
+        if (!player.getScannedQRCodeIds().contains(gameqrcode.getId())){
+            player.addQRCode(gameqrcode);
+            db.collection("Players").document(player.getUserid()).set(player);
+        }
+        // Update Photo to DB
+        if (qrphoto != null){
+            db.collection("QRPhotos").document(qrphoto.getQRID()).set(qrphoto);
+        }
+        //  Update GeoLocation to DB
+        if (geolocation != null){
+            db.collection("Geolocations").document(qrphoto.getQRID()).set(qrphoto);
+        }
 
     }
-
-    void UpdateUser() {
-        player.addQRCode(qrcode);
-        db.collection("Players").document(player.getUserid()).set(player);
-    }
-
 
 
     void test1(){
-
-        GrabQRFromDatabase("BFG5DGW54\n", "test");
+        GameQRCode qrcode = new GameQRCode("BFG5DGW54\n");
+        Player player = new Player();
+        db.collection("Players").document(player.getUserid()).set(player);
+        updateScannedQRtoDB(qrcode,player, null, null);
 
     }
 }
