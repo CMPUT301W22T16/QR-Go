@@ -10,7 +10,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class QRSearchFragment extends Fragment {
+/**
+ * Fragment that displays the results of qr searches
+ */
+public class QRSearchFragment extends SortableFragment {
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -20,6 +24,12 @@ public class QRSearchFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        ((TextView) view.findViewById(R.id.qrTextView)).setText("qr search");
+        TextView testTextView = (TextView) view.findViewById(R.id.qrTextView);
+    }
+
+    @Override
+    public void updateSort(Integer sortPos) {
+        TextView testTextView = (TextView) getView().findViewById(R.id.qrTextView);
+        testTextView.setText("qr search, sort using" + sortPos);
     }
 }

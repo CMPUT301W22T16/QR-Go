@@ -1,6 +1,7 @@
 package com.example.qr_go;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class UserSearchFragment extends Fragment {
+/**
+ * Fragment that displays the results of user searches
+ */
+public class UserSearchFragment extends SortableFragment {
 
     @Nullable
     @Override
@@ -21,6 +25,12 @@ public class UserSearchFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        ((TextView) view.findViewById(R.id.userTextView)).setText("user search");
+        TextView testTextView = (TextView) view.findViewById(R.id.userTextView);
+    }
+    @Override
+    public void updateSort(Integer sortPos) {
+        TextView testTextView = (TextView) getView().findViewById(R.id.userTextView);
+        Log.d("updating sort for user", sortPos.toString());
+        testTextView.setText("user search, sort using: " + sortPos);
     }
 }

@@ -2,10 +2,10 @@ package com.example.qr_go;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -15,21 +15,26 @@ import com.google.android.material.tabs.TabLayoutMediator;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-
+/**
+ * Represents the search activity
+ */
 public class SearchActivity extends FragmentActivity {
-    // The user that is searching on the app
-    String[] qrSortOptions = {"Score", "Proximity"};
-    String[] playerSortOptions = {"Total Score", "# QR Codes", "Unique Score"};
+    // String arrays holding the sorting options
+    private static final String[] qrSortOptions = {"Score", "Proximity"};
+    private static final String[] playerSortOptions = {"Total Score", "# QR Codes", "Unique Score"};
+    // Current fragment being displayed
+    private Integer currentFragment = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
-        SearchFragmentStateAdapter searchPagerAdapter = new SearchFragmentStateAdapter(this);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.search_tab_layout);
         ViewPager2 viewPager = (ViewPager2) findViewById(R.id.search_pager);
         Spinner sortOptionSpinner = (Spinner) findViewById(R.id.sort_spinner);
+        SearchFragmentStateAdapter searchPagerAdapter =
+                new SearchFragmentStateAdapter(this);
 
         // Initialize sort options
         ArrayList<String> qrSortOptionsDataList = new ArrayList<>();
@@ -41,11 +46,29 @@ public class SearchActivity extends FragmentActivity {
         ArrayAdapter<String> playerSortOptionAdapter = new ArrayAdapter<>(this,
                 R.layout.spinner_item, playerSortOptionsDataList);
 
+        // Initialize adapter for the ViewPager
         viewPager.setAdapter(searchPagerAdapter);
-
+        // Set the layout mediator
         new TabLayoutMediator(tabLayout, viewPager,
                 (tab, position) -> tab.setText(position == 0 ? "QR Codes" : "Players")).attach();
 
+        // Set the listener for the spinner so that the fragments update their data based on the
+        // selected sort option
+        sortOptionSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                searchPagerAdapter.updateSort(currentFragment, position);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                return;
+            }
+
+        });
+
+        // Set an on page callback such that the sort spinner updated depending on which fragment
+        // is being shown
         viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -67,6 +90,7 @@ public class SearchActivity extends FragmentActivity {
                     default:
                         break;
                 }
+                currentFragment = position;
             }
 
             @Override
