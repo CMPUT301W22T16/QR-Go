@@ -274,27 +274,19 @@ extends androidx.appcompat.app.AppCompatActivity</pre>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onPause()">onPause</a></span>()</code></th>
-<td class="colLast">
-<div class="block">If pausing, then release the resources of the code scanner</div>
-</td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onRequestPermissionsResult(int,java.lang.String%5B%5D,int%5B%5D)">onRequestPermissionsResult</a></span>&#8203;(int&nbsp;requestCode,
                           java.lang.String[]&nbsp;permissions,
                           int[]&nbsp;grantResults)</code></th>
-<td class="colLast">
-<div class="block">Called after user has accepted/denied permissions
- If camera permission is granted, then start the code scanner and camera
- If permission is denied, exit the activity, and show an error toast</div>
-</td>
+<td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onResume()">onResume</a></span>()</code></th>
-<td class="colLast">
-<div class="block">After resuming, start the codeScanner if it is defined</div>
-</td>
+<td class="colLast">&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -423,7 +415,6 @@ protected&nbsp;void&nbsp;onCreate&#8203;(android.os.Bundle&nbsp;savedInstanceSta
 <li class="blockList">
 <h4>onResume</h4>
 <pre class="methodSignature">protected&nbsp;void&nbsp;onResume()</pre>
-<div class="block">After resuming, start the codeScanner if it is defined</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code>onResume</code>&nbsp;in class&nbsp;<code>androidx.fragment.app.FragmentActivity</code></dd>
@@ -437,7 +428,6 @@ protected&nbsp;void&nbsp;onCreate&#8203;(android.os.Bundle&nbsp;savedInstanceSta
 <li class="blockList">
 <h4>onPause</h4>
 <pre class="methodSignature">protected&nbsp;void&nbsp;onPause()</pre>
-<div class="block">If pausing, then release the resources of the code scanner</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code>onPause</code>&nbsp;in class&nbsp;<code>androidx.fragment.app.FragmentActivity</code></dd>
@@ -456,18 +446,11 @@ public&nbsp;void&nbsp;onRequestPermissionsResult&#8203;(int&nbsp;requestCode,
                                        java.lang.String[]&nbsp;permissions,
                                        @NonNull
                                        int[]&nbsp;grantResults)</pre>
-<div class="block">Called after user has accepted/denied permissions
- If camera permission is granted, then start the code scanner and camera
- If permission is denied, exit the activity, and show an error toast</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>onRequestPermissionsResult</code>&nbsp;in interface&nbsp;<code>androidx.core.app.ActivityCompat.OnRequestPermissionsResultCallback</code></dd>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code>onRequestPermissionsResult</code>&nbsp;in class&nbsp;<code>androidx.fragment.app.FragmentActivity</code></dd>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>requestCode</code> - </dd>
-<dd><code>permissions</code> - </dd>
-<dd><code>grantResults</code> - </dd>
 </dl>
 </li>
 </ul>

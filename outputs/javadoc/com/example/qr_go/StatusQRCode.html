@@ -184,12 +184,6 @@ implements <a href="GeneratesNewQR.html" title="interface in com.example.qr_go">
 <div class="block">Status QR Code</div>
 </td>
 </tr>
-<tr class="rowColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String)">StatusQRCode</a></span>&#8203;(java.lang.String&nbsp;qrCodeContents)</code></th>
-<td class="colLast">
-<div class="block">QR code</div>
-</td>
-</tr>
 </table>
 </li>
 </ul>
@@ -249,30 +243,18 @@ implements <a href="GeneratesNewQR.html" title="interface in com.example.qr_go">
 <a id="&lt;init&gt;(com.example.qr_go.User)">
 <!--   -->
 </a>
-<ul class="blockList">
-<li class="blockList">
-<h4>StatusQRCode</h4>
-<pre>@RequiresApi(api=26)
-public&nbsp;StatusQRCode&#8203;(<a href="User.html" title="class in com.example.qr_go">User</a>&nbsp;user)</pre>
-<div class="block">Status QR Code</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>user</code> - user to track status of</dd>
-</dl>
-</li>
-</ul>
-<a id="&lt;init&gt;(java.lang.String)">
-<!--   -->
-</a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>StatusQRCode</h4>
 <pre>@RequiresApi(api=26)
-public&nbsp;StatusQRCode&#8203;(java.lang.String&nbsp;qrCodeContents)</pre>
-<div class="block">QR code</div>
+public&nbsp;StatusQRCode&#8203;(<a href="User.html" title="class in com.example.qr_go">User</a>&nbsp;user)
+             throws java.security.NoSuchAlgorithmException</pre>
+<div class="block">Status QR Code</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>qrCodeContents</code> - text contents scanned from QR code</dd>
+<dd><code>user</code> - user to track status of</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.security.NoSuchAlgorithmException</code></dd>
 </dl>
 </li>
 </ul>
