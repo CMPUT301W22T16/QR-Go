@@ -27,8 +27,8 @@ import android.widget.Toast;
 /**
  * This activity is shown after user scans a QR code
  * It will ask the user for:
- *      1. Photo of object
- *      2. Location
+ * 1. Photo of object
+ * 2. Location
  * Then user will click on save to create the new QR code
  */
 public class NewGameQRActivity extends AppCompatActivity {
@@ -52,7 +52,7 @@ public class NewGameQRActivity extends AppCompatActivity {
         String qrString = intent.getStringExtra("QR");
 
         // Create new GameQRCode instance
-        gameQRCode = new GameQRCode(qrString);
+        gameQRCode = new GameQRCode(qrString == null ? "" : qrString);
 
         // (2) Set score text
         TextView scoreView = findViewById(R.id.score);
@@ -85,6 +85,7 @@ public class NewGameQRActivity extends AppCompatActivity {
      * Once user has accepted/denied permission access
      * If permission granted, set the location of the QR code
      * If permission denied, disable the location
+     *
      * @param requestCode
      * @param permissions
      * @param grantResults
@@ -138,6 +139,7 @@ public class NewGameQRActivity extends AppCompatActivity {
     /**
      * Launch Take Photo activity to take a photo of the QR object
      * https://developer.android.com/training/camera/photobasics#java
+     *
      * @param view
      */
     public void launchTakePhoto(View view) {
@@ -152,6 +154,7 @@ public class NewGameQRActivity extends AppCompatActivity {
     /**
      * Used by launchTakePhoto to get the photo taken by the user's camera
      * When photo is taken, display it on the image view, and save it
+     *
      * @param requestCode
      * @param resultCode
      * @param data
@@ -170,12 +173,13 @@ public class NewGameQRActivity extends AppCompatActivity {
     /**
      * "Save" button is clicked
      * Save QR code to database and then redirect to another activity
+     *
      * @param view
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void saveNewQRCode(View view) {
         // If user has unchecked the location, then set location as null
-        if (!locationCheckbox.isChecked()){
+        if (!locationCheckbox.isChecked()) {
             gameQRCode.setLocation(null);
         }
 
