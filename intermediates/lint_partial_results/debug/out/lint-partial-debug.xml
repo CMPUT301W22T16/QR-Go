@@ -3,15 +3,7 @@
     <map id="UnusedResources">
         <entry
             name="model"
-            string="attr[colorControlNormal(R),actionBarSize(R),colorPrimaryVariant(R)],color[purple_200(U),black(U),teal_200(U),white(U),teal_700(U),purple_700(U),purple_500(U)],drawable[round_search_24(U),round_account_circle_24(U),sample_prof_pic(D),baseline_dashboard_24(U),ic_launcher_foreground(U),round_qr_code_scanner_24(U),ic_launcher_background(U),ic_launcher_foreground_1(R)],id[container(D),userTotalScore(U),nav_my_account(U),nav_scan_code(U),numOfQRCodes(U),userNameText(U),scanner_view(U),location_checkbox(U),score(U),score_text(U),bottom_nav_view(U),nav_search(U),QRData(D),userHighScore(U),save_game_qr(U),highestScoreData(D),totalScoreData(D),map(U),nav_my_codes(U)],layout[activity_code_scanner(U),activity_new_game_qractivity(U),activity_maps(U),activity_player_info(U)],menu[bottom_nav_menu(U)],mipmap[ic_launcher_round(U),ic_launcher(U)],string[title_activity_maps(U),app_name(U)],style[Theme_QRGo(U),Theme_MaterialComponents_DayNight_DarkActionBar(R)];a^0,b^0,d^0,e^11,f^0,26^1b^20,27^1^29,29^a^d^f^b,2a^10^e,2b^10^e,2e^2f^9^8^6^5^7^4^2^3;;;"/>
-        <location id="R.drawable.sample_prof_pic"
-            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/sample_prof_pic.xml"
-            line="2"
-            column="1"
-            startOffset="39"
-            endLine="4"
-            endColumn="12"
-            endOffset="121"/>
+            string="attr[colorControlNormal(R),actionBarSize(R),colorPrimaryVariant(R)],color[purple_200(U),black(U),teal_200(U),white(U),teal_700(U),purple_700(U),purple_500(U)],drawable[round_search_24(U),round_account_circle_24(U),baseline_dashboard_24(U),ic_launcher_foreground(U),round_qr_code_scanner_24(U),ic_launcher_background(U),ic_launcher_foreground_1(R)],id[container(D),nav_my_account(U),nav_scan_code(U),scanner_view(U),location_checkbox(U),score(U),score_text(U),bottom_nav_view(U),nav_search(U),save_game_qr(U),map(U),nav_my_codes(U)],layout[activity_code_scanner(U),activity_new_game_qractivity(U),activity_maps(U)],menu[bottom_nav_menu(U)],mipmap[ic_launcher_round(U),ic_launcher(U)],string[title_activity_maps(U),app_name(U)],style[Theme_QRGo(U),Theme_MaterialComponents_DayNight_DarkActionBar(R)];a^0,b^0,c^0,d^10,e^0,1e^17^1a,1f^1^20,20^a^c^e^b,21^f^d,22^f^d,25^26^9^8^6^5^7^4^2^3;;;"/>
     </map>
 
 </incidents>
