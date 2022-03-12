@@ -2985,6 +2985,9 @@ id position
 id postLayout
 id progress_circular
 id progress_horizontal
+id qrIcon
+id qrLocation
+id qrName
 id radio
 id ratio
 id rectangles
@@ -3228,6 +3231,7 @@ layout abc_tooltip
 layout activity_code_scanner
 layout activity_maps
 layout activity_new_game_qractivity
+layout activity_qr_info
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
