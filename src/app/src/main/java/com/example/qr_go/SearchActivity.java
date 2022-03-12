@@ -109,10 +109,14 @@ public class SearchActivity extends FragmentActivity {
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                 userDisplays.clear();
                 for(DocumentSnapshot snapshot : queryDocumentSnapshots) {
+                    // TODO: Update how to get total score, highest unique score, and number of qr codes scanned with updated User class
+                    ArrayList<String> qrCodes = (ArrayList<String>) snapshot.get("scannedQRCodeIds");
                     UserListDisplayContainer userToDisplay =
                             new UserListDisplayContainer(
                                     snapshot.get("userid", String.class),
-                                    snapshot.get("username", String.class)
+                                    snapshot.get("username", String.class),
+                                    snapshot.get("totalScore", Integer.class),
+                                    qrCodes.size()
                             );
                     userDisplays.add(userToDisplay);
                 }
@@ -122,10 +126,13 @@ public class SearchActivity extends FragmentActivity {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                 for(DocumentSnapshot snapshot : queryDocumentSnapshots) {
+                    ArrayList<String> qrCodes = (ArrayList<String>) snapshot.get("scannedQRCodeIds");
                     UserListDisplayContainer userToDisplay =
                             new UserListDisplayContainer(
                                     snapshot.get("userid", String.class),
-                                    snapshot.get("username", String.class)
+                                    snapshot.get("username", String.class),
+                                    snapshot.get("totalScore", Integer.class),
+                                    qrCodes.size()
                             );
                     userDisplays.add(userToDisplay);
                 }

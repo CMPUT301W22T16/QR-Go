@@ -39,7 +39,7 @@ public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> {
         TextView scoreView = view.findViewById(R.id.qr_score_view);
 
         idView.setText(qrToDisplay.getId().substring(0, 8));
-        scoreView.setText(qrToDisplay.getScore().toString());
+        scoreView.setText("Score: " + qrToDisplay.getScore().toString());
         
         return view;
     }
