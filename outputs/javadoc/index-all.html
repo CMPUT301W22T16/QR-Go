@@ -97,7 +97,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dl>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/User.html#addQRCode(com.example.qr_go.GameQRCode)">addQRCode(GameQRCode)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/User.html" title="class in com.example.qr_go">User</a></dt>
 <dd>
-<div class="block">Adds a QR code to the user's list of scanned QR codes and its score to the user's total</div>
+<div class="block">Adds a QR code to the user's list of scanned QR codes if the user has not already scanned
+ it</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/GameQRCode.html#addUser(com.example.qr_go.User)">addUser(User)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/GameQRCode.html" title="class in com.example.qr_go">GameQRCode</a></dt>
 <dd>
@@ -124,10 +125,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">This is a class that represents a comment made by a user to a QRCode</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/Comment.html#%3Cinit%3E(java.util.UUID,java.lang.String)">Comment(UUID, String)</a></span> - Constructor for class com.example.qr_go.<a href="com/example/qr_go/Comment.html" title="class in com.example.qr_go">Comment</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/QRListScoreComparator.html#compare(com.example.qr_go.QRListDisplayContainer,com.example.qr_go.QRListDisplayContainer)">compare(QRListDisplayContainer, QRListDisplayContainer)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/QRListScoreComparator.html" title="class in com.example.qr_go">QRListScoreComparator</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/SearchFragmentStateAdapter.html#createFragment(int)">createFragment(int)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/SearchFragmentStateAdapter.html" title="class in com.example.qr_go">SearchFragmentStateAdapter</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/User.html#CURRENT_USER">CURRENT_USER</a></span> - Static variable in class com.example.qr_go.<a href="com/example/qr_go/User.html" title="class in com.example.qr_go">User</a></dt>
 <dd>&nbsp;</dd>
@@ -182,14 +179,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Getter for hash</div>
 </dd>
+<dt><span class="memberNameLink"><a href="com/example/qr_go/User.html#getHighestUniqueScore()">getHighestUniqueScore()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/User.html" title="class in com.example.qr_go">User</a></dt>
+<dd>
+<div class="block">Returns the highest unique score that the user has</div>
+</dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/QRCode.html#getId()">getId()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/QRCode.html" title="class in com.example.qr_go">QRCode</a></dt>
 <dd>
 <div class="block">Get id of QR code</div>
 </dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/QRListDisplayContainer.html#getId()">getId()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/QRListDisplayContainer.html" title="class in com.example.qr_go">QRListDisplayContainer</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/SearchFragmentStateAdapter.html#getItemCount()">getItemCount()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/SearchFragmentStateAdapter.html" title="class in com.example.qr_go">SearchFragmentStateAdapter</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/GameQRCode.html#getLocation()">getLocation()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/GameQRCode.html" title="class in com.example.qr_go">GameQRCode</a></dt>
 <dd>
 <div class="block">Get last known location of QR code</div>
@@ -216,8 +213,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Converts the user's id and password to a QR code</div>
 </dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/SearchActivity.html#getQrDisplays()">getQrDisplays()</a></span> - Static method in class com.example.qr_go.<a href="com/example/qr_go/SearchActivity.html" title="class in com.example.qr_go">SearchActivity</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/QRPhoto.html#getQRID()">getQRID()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/QRPhoto.html" title="class in com.example.qr_go">QRPhoto</a></dt>
 <dd>
 <div class="block">Get value QRID</div>
@@ -228,17 +223,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Getter for score</div>
 </dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/QRListDisplayContainer.html#getScore()">getScore()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/QRListDisplayContainer.html" title="class in com.example.qr_go">QRListDisplayContainer</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/User.html#getStatusQR()">getStatusQR()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/User.html" title="class in com.example.qr_go">User</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/User.html#getTotalScore()">getTotalScore()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/User.html" title="class in com.example.qr_go">User</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/SearchActivity.html#getUserDisplays()">getUserDisplays()</a></span> - Static method in class com.example.qr_go.<a href="com/example/qr_go/SearchActivity.html" title="class in com.example.qr_go">SearchActivity</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the sum of all the user's scores</div>
+</dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/User.html#getUserid()">getUserid()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/User.html" title="class in com.example.qr_go">User</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/UserListDisplayContainer.html#getUserid()">getUserid()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/UserListDisplayContainer.html" title="class in com.example.qr_go">UserListDisplayContainer</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/MapsActivity.html#getUserId()">getUserId()</a></span> - Static method in class com.example.qr_go.<a href="com/example/qr_go/MapsActivity.html" title="class in com.example.qr_go">MapsActivity</a></dt>
 <dd>
@@ -253,10 +244,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Getter for userIds</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/User.html#getUsername()">getUsername()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/User.html" title="class in com.example.qr_go">User</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/UserListDisplayContainer.html#getUsername()">getUsername()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/UserListDisplayContainer.html" title="class in com.example.qr_go">UserListDisplayContainer</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/QRArrayAdapter.html#getView(int,android.view.View,android.view.ViewGroup)">getView(int, View, ViewGroup)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/QRArrayAdapter.html" title="class in com.example.qr_go">QRArrayAdapter</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <a id="I:H">
@@ -340,12 +327,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/QRCodeScannerActivity.html#onCreate(android.os.Bundle)">onCreate(Bundle)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/QRCodeScannerActivity.html" title="class in com.example.qr_go">QRCodeScannerActivity</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/SearchActivity.html#onCreate(android.os.Bundle)">onCreate(Bundle)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/SearchActivity.html" title="class in com.example.qr_go">SearchActivity</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/QRSearchFragment.html#onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)">onCreateView(LayoutInflater, ViewGroup, Bundle)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/QRSearchFragment.html" title="class in com.example.qr_go">QRSearchFragment</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/UserSearchFragment.html#onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)">onCreateView(LayoutInflater, ViewGroup, Bundle)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/UserSearchFragment.html" title="class in com.example.qr_go">UserSearchFragment</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/MapsActivity.html#onMapReady(com.google.android.gms.maps.GoogleMap)">onMapReady(GoogleMap)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/MapsActivity.html" title="class in com.example.qr_go">MapsActivity</a></dt>
 <dd>
 <div class="block">Manipulates the map once available.</div>
@@ -357,10 +338,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="com/example/qr_go/QRCodeScannerActivity.html#onRequestPermissionsResult(int,java.lang.String%5B%5D,int%5B%5D)">onRequestPermissionsResult(int, String[], int[])</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/QRCodeScannerActivity.html" title="class in com.example.qr_go">QRCodeScannerActivity</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/QRCodeScannerActivity.html#onResume()">onResume()</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/QRCodeScannerActivity.html" title="class in com.example.qr_go">QRCodeScannerActivity</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/QRSearchFragment.html#onViewCreated(android.view.View,android.os.Bundle)">onViewCreated(View, Bundle)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/QRSearchFragment.html" title="class in com.example.qr_go">QRSearchFragment</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/UserSearchFragment.html#onViewCreated(android.view.View,android.os.Bundle)">onViewCreated(View, Bundle)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/UserSearchFragment.html" title="class in com.example.qr_go">UserSearchFragment</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="com/example/qr_go/Owner.html" title="class in com.example.qr_go"><span class="typeNameLink">Owner</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
 <dd>
@@ -402,12 +379,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a>
 <h2 class="title">Q</h2>
 <dl>
-<dt><a href="com/example/qr_go/QRArrayAdapter.html" title="class in com.example.qr_go"><span class="typeNameLink">QRArrayAdapter</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
-<dd>
-<div class="block">Custom ArrayAdapter for displaying qr codes in a list</div>
-</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/QRArrayAdapter.html#%3Cinit%3E(android.content.Context,java.util.ArrayList)">QRArrayAdapter(Context, ArrayList&lt;QRListDisplayContainer&gt;)</a></span> - Constructor for class com.example.qr_go.<a href="com/example/qr_go/QRArrayAdapter.html" title="class in com.example.qr_go">QRArrayAdapter</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="com/example/qr_go/QRCode.html" title="class in com.example.qr_go"><span class="typeNameLink">QRCode</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
 <dd>
 <div class="block">QRCode is the super class from which GameQRCode and LoginQRCode subclasses extend from
@@ -425,23 +396,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/QRCodeScannerActivity.html#%3Cinit%3E()">QRCodeScannerActivity()</a></span> - Constructor for class com.example.qr_go.<a href="com/example/qr_go/QRCodeScannerActivity.html" title="class in com.example.qr_go">QRCodeScannerActivity</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com/example/qr_go/QRListDisplayContainer.html" title="class in com.example.qr_go"><span class="typeNameLink">QRListDisplayContainer</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
-<dd>
-<div class="block">Class for holding only relevant information from a GameQRCode to display in a list</div>
-</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/QRListDisplayContainer.html#%3Cinit%3E(java.lang.Integer,java.lang.String)">QRListDisplayContainer(Integer, String)</a></span> - Constructor for class com.example.qr_go.<a href="com/example/qr_go/QRListDisplayContainer.html" title="class in com.example.qr_go">QRListDisplayContainer</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/example/qr_go/QRListScoreComparator.html" title="class in com.example.qr_go"><span class="typeNameLink">QRListScoreComparator</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/QRListScoreComparator.html#%3Cinit%3E()">QRListScoreComparator()</a></span> - Constructor for class com.example.qr_go.<a href="com/example/qr_go/QRListScoreComparator.html" title="class in com.example.qr_go">QRListScoreComparator</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="com/example/qr_go/QRPhoto.html" title="class in com.example.qr_go"><span class="typeNameLink">QRPhoto</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/example/qr_go/QRSearchFragment.html" title="class in com.example.qr_go"><span class="typeNameLink">QRSearchFragment</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
-<dd>
-<div class="block">Fragment that displays the results of qr searches</div>
-</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/QRSearchFragment.html#%3Cinit%3E()">QRSearchFragment()</a></span> - Constructor for class com.example.qr_go.<a href="com/example/qr_go/QRSearchFragment.html" title="class in com.example.qr_go">QRSearchFragment</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <a id="I:S">
@@ -449,20 +404,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a>
 <h2 class="title">S</h2>
 <dl>
-<dt><a href="com/example/qr_go/SearchActivity.html" title="class in com.example.qr_go"><span class="typeNameLink">SearchActivity</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
-<dd>
-<div class="block">Represents the search activity</div>
-</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/SearchActivity.html#%3Cinit%3E()">SearchActivity()</a></span> - Constructor for class com.example.qr_go.<a href="com/example/qr_go/SearchActivity.html" title="class in com.example.qr_go">SearchActivity</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/example/qr_go/SearchFragmentStateAdapter.html" title="class in com.example.qr_go"><span class="typeNameLink">SearchFragmentStateAdapter</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
-<dd>
-<div class="block">Fragment state adapter for the search activity</div>
-</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/SearchFragmentStateAdapter.html#%3Cinit%3E(androidx.fragment.app.FragmentActivity)">SearchFragmentStateAdapter(FragmentActivity)</a></span> - Constructor for class com.example.qr_go.<a href="com/example/qr_go/SearchFragmentStateAdapter.html" title="class in com.example.qr_go">SearchFragmentStateAdapter</a></dt>
-<dd>
-<div class="block">Constructor</div>
-</dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/User.html#setEmail(java.lang.String)">setEmail(String)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/User.html" title="class in com.example.qr_go">User</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/GameQRCode.html#setLocation(android.location.Location)">setLocation(Location)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/GameQRCode.html" title="class in com.example.qr_go">GameQRCode</a></dt>
@@ -493,14 +434,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a>
 <h2 class="title">U</h2>
 <dl>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/QRSearchFragment.html#updateSort(java.lang.Integer)">updateSort(Integer)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/QRSearchFragment.html" title="class in com.example.qr_go">QRSearchFragment</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/UserSearchFragment.html#updateSort(java.lang.Integer)">updateSort(Integer)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/UserSearchFragment.html" title="class in com.example.qr_go">UserSearchFragment</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/SearchFragmentStateAdapter.html#updateSort(java.lang.Integer,java.lang.Integer)">updateSort(Integer, Integer)</a></span> - Method in class com.example.qr_go.<a href="com/example/qr_go/SearchFragmentStateAdapter.html" title="class in com.example.qr_go">SearchFragmentStateAdapter</a></dt>
-<dd>
-<div class="block">Updates the sort of a given fragment based on the selected position of the sort spinner</div>
-</dd>
 <dt><a href="com/example/qr_go/User.html" title="class in com.example.qr_go"><span class="typeNameLink">User</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
 <dd>
 <div class="block">Represents a user.</div>
@@ -515,27 +448,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/User.html#USER_ID">USER_ID</a></span> - Static variable in class com.example.qr_go.<a href="com/example/qr_go/User.html" title="class in com.example.qr_go">User</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="com/example/qr_go/UserArrayAdapter.html" title="class in com.example.qr_go"><span class="typeNameLink">UserArrayAdapter</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/UserArrayAdapter.html#%3Cinit%3E()">UserArrayAdapter()</a></span> - Constructor for class com.example.qr_go.<a href="com/example/qr_go/UserArrayAdapter.html" title="class in com.example.qr_go">UserArrayAdapter</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/example/qr_go/UserListDisplayContainer.html" title="class in com.example.qr_go"><span class="typeNameLink">UserListDisplayContainer</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
-<dd>
-<div class="block">Class for holding only relevant information from a User to display in a list</div>
-</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/UserListDisplayContainer.html#%3Cinit%3E(java.lang.String,java.lang.String)">UserListDisplayContainer(String, String)</a></span> - Constructor for class com.example.qr_go.<a href="com/example/qr_go/UserListDisplayContainer.html" title="class in com.example.qr_go">UserListDisplayContainer</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="com/example/qr_go/UsernameGenerator.html" title="class in com.example.qr_go"><span class="typeNameLink">UsernameGenerator</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
 <dd>
 <div class="block">Class for generating usernames</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/example/qr_go/UsernameGenerator.html#%3Cinit%3E()">UsernameGenerator()</a></span> - Constructor for class com.example.qr_go.<a href="com/example/qr_go/UsernameGenerator.html" title="class in com.example.qr_go">UsernameGenerator</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="com/example/qr_go/UserSearchFragment.html" title="class in com.example.qr_go"><span class="typeNameLink">UserSearchFragment</span></a> - Class in <a href="com/example/qr_go/package-summary.html">com.example.qr_go</a></dt>
-<dd>
-<div class="block">Fragment that displays the results of user searches</div>
-</dd>
-<dt><span class="memberNameLink"><a href="com/example/qr_go/UserSearchFragment.html#%3Cinit%3E()">UserSearchFragment()</a></span> - Constructor for class com.example.qr_go.<a href="com/example/qr_go/UserSearchFragment.html" title="class in com.example.qr_go">UserSearchFragment</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <a href="#I:A">A</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:Q">Q</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:U">U</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes</a>&nbsp;<a href="allpackages-index.html">All&nbsp;Packages</a></div>
