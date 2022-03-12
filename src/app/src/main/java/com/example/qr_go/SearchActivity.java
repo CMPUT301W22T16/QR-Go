@@ -71,22 +71,6 @@ public class SearchActivity extends FragmentActivity {
         new TabLayoutMediator(tabLayout, viewPager,
                 (tab, position) -> tab.setText(position == 0 ? "QR Codes" : "Players")).attach();
 
-        // Set the listener for the spinner so that the fragments update their data based on the
-        // selected sort option
-        sortOptionSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                searchPagerAdapter.updateSort(currentFragment, position);
-                sortPosition = position;
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parentView) {
-                return;
-            }
-
-        });
-
         // Set an on page callback such that the sort spinner updated depending on which fragment
         // is being shown
         viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
@@ -155,11 +139,29 @@ public class SearchActivity extends FragmentActivity {
                     QRListDisplayContainer qrToDisplay =
                             new QRListDisplayContainer(
                                     snapshot.get("score", Integer.class),
-                                    snapshot.get("hash", String.class)
+                                    snapshot.get("id", String.class)
                             );
                     qrDisplays.add(qrToDisplay);
                     // Update the fragments after getting documents is done
                     searchPagerAdapter.updateSort(currentFragment, sortPosition);
+
+                    // Set the listener for the spinner so that the fragments update their data based on the
+                    // selected sort option
+                    // Done in the listener so that the fragment isn't updated when no data has
+                    // been received yet
+                    sortOptionSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                            searchPagerAdapter.updateSort(currentFragment, position);
+                            sortPosition = position;
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parentView) {
+                            return;
+                        }
+
+                    });
                 }
             }
         });

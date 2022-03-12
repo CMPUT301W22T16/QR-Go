@@ -1,9 +1,12 @@
 package com.example.qr_go;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,6 +19,11 @@ import java.util.ArrayList;
  * Fragment that displays the results of qr searches
  */
 public class QRSearchFragment extends SortableFragment {
+    private ListView qrListView;
+    private ArrayAdapter<QRListDisplayContainer> qrAdapter;
+    private ArrayList<QRListDisplayContainer> qrDisplays;
+    private View view;
+
 
     @Nullable
     @Override
@@ -27,12 +35,20 @@ public class QRSearchFragment extends SortableFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         TextView testTextView = (TextView) view.findViewById(R.id.qrTextView);
+        qrListView = (ListView) view.findViewById(R.id.qr_list);
+        this.view = view;
     }
 
     @Override
     public void updateSort(Integer sortPos) {
-        ArrayList<QRListDisplayContainer> qrDisplays = SearchActivity.getQrDisplays();
-        TextView testTextView = (TextView) getView().findViewById(R.id.qrTextView);
-        testTextView.setText("qr search, sort using" + sortPos + " \nfound " + qrDisplays.size() + "qrs");
+        qrDisplays = SearchActivity.getQrDisplays();
+        if (sortPos == 0) {
+            qrDisplays.sort(new QRListScoreComparator());
+        } else {
+            // Nothing so far
+        }
+        qrAdapter = new QRArrayAdapter(view.getContext(), qrDisplays);
+        qrAdapter.notifyDataSetChanged();
+        qrListView.setAdapter(qrAdapter);
     }
 }

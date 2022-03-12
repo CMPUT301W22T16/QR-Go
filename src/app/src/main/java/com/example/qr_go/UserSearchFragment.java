@@ -29,6 +29,7 @@ public class UserSearchFragment extends SortableFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         TextView testTextView = (TextView) view.findViewById(R.id.userTextView);
     }
+
     @Override
     public void updateSort(Integer sortPos) {
         ArrayList<UserListDisplayContainer> userDisplays = SearchActivity.getUserDisplays();
