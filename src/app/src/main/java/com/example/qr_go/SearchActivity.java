@@ -1,9 +1,11 @@
 package com.example.qr_go;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
@@ -52,8 +54,18 @@ public class SearchActivity extends FragmentActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.search_tab_layout);
         ViewPager2 viewPager = (ViewPager2) findViewById(R.id.search_pager);
         Spinner sortOptionSpinner = (Spinner) findViewById(R.id.sort_spinner);
+        Button backButton = (Button) findViewById(R.id.back_button);
         SearchFragmentStateAdapter searchPagerAdapter =
                 new SearchFragmentStateAdapter(this);
+
+        // Back button listener
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
+                startActivity(intent);
+            }
+        });
 
         // Initialize sort options
         ArrayList<String> qrSortOptionsDataList = new ArrayList<>();
