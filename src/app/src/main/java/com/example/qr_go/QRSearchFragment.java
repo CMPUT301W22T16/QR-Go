@@ -2,6 +2,8 @@ package com.example.qr_go;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,7 +44,7 @@ public class QRSearchFragment extends SortableFragment {
         qrListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Start new activity
+                // TODO: Start new activity
                 /*
                 Intent intent = new Intent(view.getContext(), OpenSessionActivity.class);
                 intent.putExtra("SELECTED_QR", qrDisplays.get(position).getId());
@@ -52,17 +54,43 @@ public class QRSearchFragment extends SortableFragment {
         });
     }
 
+    @Override
+    public void retrieveData() {
+        qrDisplays = SearchActivity.getQrDisplays();
+        setSearchFiltering();
+    }
+
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void updateSort(Integer sortPos) {
-        qrDisplays = SearchActivity.getQrDisplays();
         if (sortPos == 0) {
             qrDisplays.sort(new QRListScoreComparator());
         } else {
-            // Nothing so far
+            // TODO: Sort via proximity
+            qrDisplays.sort(new QRListScoreComparator());
         }
-        qrAdapter = new QRArrayAdapter(view.getContext(), qrDisplays);
-        qrAdapter.notifyDataSetChanged();
+        qrAdapter = new QRArrayAdapter(view.getContext(), qrDisplays, sortPos);
         qrListView.setAdapter(qrAdapter);
+        qrAdapter.notifyDataSetChanged();
+    }
+
+    // TODO: Implement searching? how tho
+    public void setSearchFiltering() {
+        SearchActivity.getSearchBar().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 }

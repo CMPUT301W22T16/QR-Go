@@ -1,11 +1,16 @@
 package com.example.qr_go;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
@@ -34,9 +39,15 @@ public class SearchActivity extends FragmentActivity {
     private static final String[] playerSortOptions = {"Total Score", "# QR Codes", "Unique Score"};
     // Current fragment being displayed
     private Integer currentFragment = 0;
+    // Current position that sort spinner is selected as
     private Integer sortPosition = 0;
+
+    // Data to display in fragments
     private static ArrayList<UserListDisplayContainer> userDisplays;
     private static ArrayList<QRListDisplayContainer> qrDisplays;
+
+    // The search bar
+    private static EditText searchBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +68,25 @@ public class SearchActivity extends FragmentActivity {
         Button backButton = (Button) findViewById(R.id.back_button);
         SearchFragmentStateAdapter searchPagerAdapter =
                 new SearchFragmentStateAdapter(this);
+        searchBar = (EditText) findViewById(R.id.search_bar);
+
+        // Set the listener for the spinner so that the fragments update their data based on
+        // the selected sort option
+        sortOptionSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                clearSearchBar();
+                searchPagerAdapter.retrieveData(currentFragment);
+                searchPagerAdapter.updateSort(currentFragment, position);
+                sortPosition = position;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                return;
+            }
+
+        });
 
         // Back button listener
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +113,7 @@ public class SearchActivity extends FragmentActivity {
         new TabLayoutMediator(tabLayout, viewPager,
                 (tab, position) -> tab.setText(position == 0 ? "QR Codes" : "Players")).attach();
 
+
         // Set an on page callback such that the sort spinner updated depending on which fragment
         // is being shown
         viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
@@ -94,18 +125,22 @@ public class SearchActivity extends FragmentActivity {
             @Override
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
+                clearSearchBar();
                 switch(position) {
                     case 0:
                         // When page is QR code search
                         sortOptionSpinner.setAdapter(qrSortOptionAdapter);
+                        searchBar.setHint("Search QR Location");
                         break;
                     case 1:
                         // When page is Players search
                         sortOptionSpinner.setAdapter(playerSortOptionAdapter);
+                        searchBar.setHint("Search Username");
                         break;
                     default:
                         break;
                 }
+                searchPagerAdapter.setSearch(position);
                 currentFragment = position;
             }
 
@@ -161,37 +196,43 @@ public class SearchActivity extends FragmentActivity {
                                     snapshot.get("id", String.class)
                             );
                     qrDisplays.add(qrToDisplay);
-                    // Update the fragments after getting documents is done
-                    searchPagerAdapter.updateSort(currentFragment, sortPosition);
-
-                    // Set the listener for the spinner so that the fragments update their data based on the
-                    // selected sort option
-                    // Done in the listener so that the fragment isn't updated when no data has
-                    // been received yet
-                    sortOptionSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                        @Override
-                        public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                            searchPagerAdapter.updateSort(currentFragment, position);
-                            sortPosition = position;
-                        }
-
-                        @Override
-                        public void onNothingSelected(AdapterView<?> parentView) {
-                            return;
-                        }
-
-                    });
                 }
+                // Update the fragments after getting documents is done
+                searchPagerAdapter.updateSort(currentFragment, sortPosition);
+
             }
         });
 
     }
 
+    /**
+     * @return User data to display on fragments
+     */
     public static ArrayList<UserListDisplayContainer> getUserDisplays() {
         return userDisplays;
     }
 
+    /**
+     * @return QR data to display on fragments
+     */
     public static ArrayList<QRListDisplayContainer> getQrDisplays() {
         return qrDisplays;
+    }
+
+    /**
+     * Returns the search bar for use in the fragments
+     * @return The search bar EditText
+     */
+    public static EditText getSearchBar() {
+        return searchBar;
+    }
+
+    /**
+     * Utility function for clearing search bar and minimizing keyboard
+     */
+    private void clearSearchBar() {
+        searchBar.getText().clear();
+        InputMethodManager mgr = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        mgr.hideSoftInputFromWindow(searchBar.getWindowToken(), 0);
     }
 }

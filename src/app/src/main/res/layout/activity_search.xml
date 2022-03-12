@@ -41,7 +41,7 @@
         android:id="@+id/search_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Temp Search Bar"
+        android:hint="Search Bar"
         android:inputType="textPersonName" />
 
     <com.google.android.material.card.MaterialCardView

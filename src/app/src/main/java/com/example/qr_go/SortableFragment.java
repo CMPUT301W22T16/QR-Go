@@ -9,7 +9,17 @@ import androidx.fragment.app.Fragment;
 abstract class SortableFragment extends Fragment {
 
     /**
-     * Abstract method for updating the views of a sortable fragment
+     * Method for getting the search bar to filter this fragment
+     */
+    public abstract void setSearchFiltering();
+
+    /**
+     * Method for retrieving fresh data from the search activity
+     */
+    public abstract void retrieveData();
+
+    /**
+     * Method for re-sorting and updatingviews of a sortable fragment
      * @param sortPos Position in spinner of the sorting option
      */
     public abstract void updateSort(Integer sortPos);
