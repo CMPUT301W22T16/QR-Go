@@ -11,7 +11,6 @@ import java.util.UUID;
  * Represents a user. Contains all user contact info and identifying data
  */
 public abstract class User {
-    // Note: UML says that this is an Integer, but I made it a string since we're using UUID
     private String userid; // Unique ID to identify users.
     private String password; // Password for verifying a user
     private String username;
@@ -20,6 +19,9 @@ public abstract class User {
     private StatusQRCode statusQR;
     private ArrayList<String> scannedQRCodeIds;
     private String email;
+
+    public static final String CURRENT_USER = "LOGIN";
+    public static final String USER_ID = "uuid";
 
     /**
      * Constructor for user class
@@ -33,6 +35,23 @@ public abstract class User {
         username = UsernameGenerator.generateUsername();
         totalScore = 0;
         email = "";
+        scannedQRCodeIds = new ArrayList<>();
+        loginQR = new LoginQRCode(this);
+        statusQR = new StatusQRCode(this);
+    }
+
+    /**
+     * Constructor for user class to generate mock data
+     */
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public User(String uuid, String password, String username, String email) {
+        // Generate a new random UUID for a new user's ID
+        userid = uuid;
+        // Generate a new random UUID for a new user's password
+        this.password = password;
+        this.username = username;
+        this.totalScore = 0;
+        this.email = email;
         scannedQRCodeIds = new ArrayList<>();
         loginQR = new LoginQRCode(this);
         statusQR = new StatusQRCode(this);
@@ -99,16 +118,10 @@ public abstract class User {
     }
 
     /**
-     *
      * @param username user's new username
-     * @return true if username was successfully changed, false otherwise
      */
-    public boolean setUsername(String username) {
-        if (!UsernameGenerator.isValidUsername(username)) {
-            return false;
-        }
+    public void setUsername(String username) {
         this.username = username;
-        return true;
     }
 
     /**
