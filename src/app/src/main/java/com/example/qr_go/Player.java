@@ -4,7 +4,6 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
-import java.security.NoSuchAlgorithmException;
 
 // TODO determine any player-specific functionality
 
@@ -15,11 +14,18 @@ public class Player extends User {
 
     /**
      * Constructor for player class
-     * @throws NoSuchAlgorithmException if user QR codes are not instantiated properly
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public Player() throws NoSuchAlgorithmException  {
+    public Player()   {
         super();
+    }
+
+    /**
+     * Constructor for player class for mock data
+     */
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public Player(String uuid, String password, String username, String email) {
+        super(uuid, password, username, email);
     }
 
     /**
