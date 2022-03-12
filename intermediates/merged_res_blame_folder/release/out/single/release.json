@@ -72,6 +72,10 @@
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_qr_list_content.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml"
+    },
+    {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_activity_maps.xml.flat",
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_maps.xml"
     },

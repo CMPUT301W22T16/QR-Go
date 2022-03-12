@@ -23,7 +23,9 @@ id nav_my_codes
 id nav_scan_code
 id nav_search
 id qrTextView
+id qr_id_view
 id qr_list
+id qr_score_view
 id scanner_view
 id search_bar
 id search_pager
@@ -36,6 +38,7 @@ layout activity_maps
 layout activity_search
 layout fragment_qr_search
 layout fragment_user_search
+layout qr_list_content
 layout spinner_item
 menu bottom_nav_menu
 mipmap ic_launcher

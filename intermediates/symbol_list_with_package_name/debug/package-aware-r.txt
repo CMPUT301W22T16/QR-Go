@@ -2987,7 +2987,9 @@ id postLayout
 id progress_circular
 id progress_horizontal
 id qrTextView
+id qr_id_view
 id qr_list
+id qr_score_view
 id radio
 id ratio
 id rectangles
@@ -3303,6 +3305,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout qr_list_content
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

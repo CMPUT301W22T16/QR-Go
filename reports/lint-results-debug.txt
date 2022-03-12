@@ -1,3 +1,31 @@
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRSearchFragment.java:46: Error: Call requires API level 24 (current min is 21): java.util.ArrayList#sort [NewApi]
+            qrDisplays.sort(new QRListScoreComparator());
+                       ~~~~
+
+   Explanation for issues of type "NewApi":
+   This check scans through all the Android API calls in the application and
+   warns about any calls that are not available on all versions targeted by
+   this application (according to its minimum SDK attribute in the manifest).
+
+   If you really want to use this API and don't need to support older devices
+   just set the minSdkVersion in your build.gradle or AndroidManifest.xml
+   files.
+
+   If your code is deliberately accessing newer APIs, and you have ensured
+   (e.g. with conditional execution) that this code will only ever be called
+   on a supported platform, then you can annotate your class or method with
+   the @TargetApi annotation specifying the local minimum SDK to apply, such
+   as @TargetApi(11), such that this check considers 11 rather than your
+   manifest file's minimum SDK as the required API level.
+
+   If you are deliberately setting android: attributes in style definitions,
+   make sure you place this in a values-vNN folder in order to avoid running
+   into runtime conflicts on certain devices where manufacturers have added
+   custom attributes whose ids conflict with the new ones on later platforms.
+
+   Similarly, you can use tools:targetApi="11" in an XML file to indicate that
+   the element will only be inflated in an adequate context.
+
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_maps.xml:23: Warning: Replace the <fragment> tag with FragmentContainerView. [FragmentTagUsage from fragment-1.4.0]
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
      ~~~~~~~~
@@ -88,6 +116,16 @@
 
    https://android-developers.googleblog.com/2009/03/android-layout-tricks-3-optimize-by.html
 
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:18: Warning: Use a layout_width of 0dp instead of wrap_content for better performance [InefficientWeight]
+        android:layout_width="wrap_content"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "InefficientWeight":
+   When only a single widget in a LinearLayout defines a weight, it is more
+   efficient to assign a width/height of 0dp to it since it will absorb all
+   the remaining space anyway. With a declared width/height of 0dp it does not
+   have to measure its own size first.
+
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_maps.xml:23: Warning: This namespace declaration is redundant [RedundantNamespace]
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -125,22 +163,16 @@
 
    https://developer.android.com/guide/topics/text/autofill.html
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRSearchFragment.java:36: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
-        testTextView.setText("qr search, sort using" + sortPos + " \nfound " + qrDisplays.size() + "qrs");
-                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRSearchFragment.java:36: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
-        testTextView.setText("qr search, sort using" + sortPos + " \nfound " + qrDisplays.size() + "qrs");
-                             ~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRSearchFragment.java:36: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
-        testTextView.setText("qr search, sort using" + sortPos + " \nfound " + qrDisplays.size() + "qrs");
-                                                                                                   ~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/UserSearchFragment.java:36: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRArrayAdapter.java:42: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+        scoreView.setText(qrToDisplay.getScore().toString());
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/UserSearchFragment.java:37: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
         testTextView.setText("user search, sort using: " + sortPos + " \nfound " + userDisplays.size() + "users");
                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/UserSearchFragment.java:36: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/UserSearchFragment.java:37: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
         testTextView.setText("user search, sort using: " + sortPos + " \nfound " + userDisplays.size() + "users");
                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/UserSearchFragment.java:36: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/UserSearchFragment.java:37: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
         testTextView.setText("user search, sort using: " + sortPos + " \nfound " + userDisplays.size() + "users");
                                                                                                          ~~~~~~~
 
@@ -181,6 +213,12 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/menu/bottom_nav_menu.xml:22: Warning: Hardcoded string "My Account", should use @string resource [HardcodedText]
         android:title="My Account" />
         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:12: Warning: Hardcoded string "12345", should use @string resource [HardcodedText]
+        android:text="12345"
+        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:20: Warning: Hardcoded string "12345", should use @string resource [HardcodedText]
+        android:text="12345"
+        ~~~~~~~~~~~~~~~~~~~~
 
    Explanation for issues of type "HardcodedText":
    Hardcoding text attributes directly in layout files is bad for several
@@ -214,6 +252,9 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:34: Warning: Consider replacing android:layout_alignParentRight with android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
             android:layout_alignParentRight="true"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:23: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+        android:gravity="center|right"
+                         ~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/spinner_item.xml:10: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
     android:gravity="right"
                      ~~~~~
@@ -253,4 +294,4 @@
    Please define an explicit reason why it is ignored, and when it can be
    resolved.
 
-0 errors, 39 warnings
+1 errors, 41 warnings

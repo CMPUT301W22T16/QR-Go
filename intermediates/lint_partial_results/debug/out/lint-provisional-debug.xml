@@ -167,6 +167,25 @@
         severity="warning"
         message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales">
         <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
+            line="23"
+            column="26"
+            startOffset="763"
+            endLine="23"
+            endColumn="38"
+            endOffset="775"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales">
+        <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/spinner_item.xml"
             line="10"
             column="22"
@@ -178,6 +197,38 @@
             <entry
                 name="applies"
                 int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="NewApi"
+        severity="error"
+        message="">
+        <fix-data requiresApi="24"/>
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRSearchFragment.java"
+            line="46"
+            column="24"
+            startOffset="1430"
+            endLine="46"
+            endColumn="28"
+            endOffset="1434"/>
+        <map>
+            <entry
+                name="owner"
+                string="java.util.ArrayList"/>
+            <entry
+                name="minSdk"
+                int="21"/>
+            <entry
+                name="requiresApi"
+                int="24"/>
+            <entry
+                name="name"
+                string="sort"/>
+            <entry
+                name="message"
+                string="Call requires API level 24 (current min is %1$s): `java.util.ArrayList#sort`"/>
         </map>
     </incident>
 

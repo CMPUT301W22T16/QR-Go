@@ -174,27 +174,29 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 39 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 1 error and 41 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Sat Mar 12 00:40:17 UTC 2022      </nav>
+Check performed at Sat Mar 12 02:09:28 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Issue Types</span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
+      <a class="mdl-navigation__link" href="#NewApi"><i class="material-icons error-icon">error</i>Calling new methods on older versions (1)</a>
       <a class="mdl-navigation__link" href="#FragmentTagUsage"><i class="material-icons warning-icon">warning</i>Use FragmentContainerView instead of the &lt;fragment> tag (1)</a>
       <a class="mdl-navigation__link" href="#NonConstantResourceId"><i class="material-icons warning-icon">warning</i>Checks use of resource IDs in places requiring constants (4)</a>
       <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (6)</a>
       <a class="mdl-navigation__link" href="#ObsoleteLayoutParam"><i class="material-icons warning-icon">warning</i>Obsolete layout params (2)</a>
       <a class="mdl-navigation__link" href="#MergeRootFrame"><i class="material-icons warning-icon">warning</i>FrameLayout can be replaced with <code>&lt;merge></code> tag (1)</a>
+      <a class="mdl-navigation__link" href="#InefficientWeight"><i class="material-icons warning-icon">warning</i>Inefficient layout weight (1)</a>
       <a class="mdl-navigation__link" href="#RedundantNamespace"><i class="material-icons warning-icon">warning</i>Redundant namespace (2)</a>
       <a class="mdl-navigation__link" href="#Autofill"><i class="material-icons warning-icon">warning</i>Use Autofill (1)</a>
-      <a class="mdl-navigation__link" href="#SetTextI18n"><i class="material-icons warning-icon">warning</i>TextView Internationalization (6)</a>
-      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (8)</a>
+      <a class="mdl-navigation__link" href="#SetTextI18n"><i class="material-icons warning-icon">warning</i>TextView Internationalization (4)</a>
+      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (10)</a>
       <a class="mdl-navigation__link" href="#RtlSymmetry"><i class="material-icons warning-icon">warning</i>Padding and margin symmetry (1)</a>
-      <a class="mdl-navigation__link" href="#RtlHardcoded"><i class="material-icons warning-icon">warning</i>Using left/right instead of start/end attributes (4)</a>
+      <a class="mdl-navigation__link" href="#RtlHardcoded"><i class="material-icons warning-icon">warning</i>Using left/right instead of start/end attributes (5)</a>
       <a class="mdl-navigation__link" href="#IgnoreWithoutReason"><i class="material-icons warning-icon">warning</i>@Ignore without Reason (3)</a>
     </nav>
   </div>
@@ -210,6 +212,9 @@ Check performed at Sat Mar 12 00:40:17 UTC 2022      </nav>
 <table class="overview">
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
 </td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons error-icon">error</i>
+<a href="#NewApi">NewApi</a>: Calling new methods on older versions</td></tr>
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#FragmentTagUsage">FragmentTagUsage</a>: Use FragmentContainerView instead of the &lt;fragment> tag</td></tr>
@@ -228,6 +233,9 @@ Check performed at Sat Mar 12 00:40:17 UTC 2022      </nav>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#MergeRootFrame">MergeRootFrame</a>: FrameLayout can be replaced with <code>&lt;merge></code> tag</td></tr>
 <tr>
+<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#InefficientWeight">InefficientWeight</a>: Inefficient layout weight</td></tr>
+<tr>
 <td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#RedundantNamespace">RedundantNamespace</a>: Redundant namespace</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Usability">Usability</a>
@@ -238,10 +246,10 @@ Check performed at Sat Mar 12 00:40:17 UTC 2022      </nav>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Internationalization">Internationalization</a>
 </td></tr>
 <tr>
-<td class="countColumn">6</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">4</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#SetTextI18n">SetTextI18n</a>: TextView Internationalization</td></tr>
 <tr>
-<td class="countColumn">8</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">10</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#HardcodedText">HardcodedText</a>: Hardcoded text</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Internationalization:Bidirectional Text">Internationalization:Bidirectional Text</a>
 </td></tr>
@@ -249,7 +257,7 @@ Check performed at Sat Mar 12 00:40:17 UTC 2022      </nav>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#RtlSymmetry">RtlSymmetry</a>: Padding and margin symmetry</td></tr>
 <tr>
-<td class="countColumn">4</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">5</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#RtlHardcoded">RtlHardcoded</a>: Using left/right instead of start/end attributes</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Testing">Testing</a>
 </td></tr>
@@ -265,7 +273,61 @@ Dismiss</button>            </div>
             </div>
           </section>
 <a name="Correctness"></a>
-<a name="FragmentTagUsage"></a>
+<a name="NewApi"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="NewApiCard" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Calling new methods on older versions</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/example/qr_go/QRSearchFragment.java">../../src/main/java/com/example/qr_go/QRSearchFragment.java</a>:46</span>: <span class="message">Call requires API level 24 (current min is 21): <code>java.util.ArrayList#sort</code></span><br /><pre class="errorlines">
+<span class="lineno"> 43 </span>    <span class="keyword">public</span> <span class="keyword">void</span> updateSort(Integer sortPos) {
+<span class="lineno"> 44 </span>        qrDisplays = SearchActivity.getQrDisplays();
+<span class="lineno"> 45 </span>        <span class="keyword">if</span> (sortPos == <span class="number">0</span>) {
+<span class="caretline"><span class="lineno"> 46 </span>            qrDisplays.<span class="error">sort</span>(<span class="keyword">new</span> QRListScoreComparator());&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 47 </span>        } <span class="keyword">else</span> {
+<span class="lineno"> 48 </span>            <span class="comment">// Nothing so far</span>
+<span class="lineno"> 49 </span>        }
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationNewApi" style="display: none;">
+This check scans through all the Android API calls in the application and warns about any calls that are not available on <b>all</b> versions targeted by this application (according to its minimum SDK attribute in the manifest).<br/>
+<br/>
+If you really want to use this API and don't need to support older devices just set the <code>minSdkVersion</code> in your <code>build.gradle</code> or <code>AndroidManifest.xml</code> files.<br/>
+<br/>
+If your code is <b>deliberately</b> accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the <code>@TargetApi</code> annotation specifying the local minimum SDK to apply, such as <code>@TargetApi(11)</code>, such that this check considers 11 rather than your manifest file's minimum SDK as the required API level.<br/>
+<br/>
+If you are deliberately setting <code>android:</code> attributes in style definitions, make sure you place this in a <code>values-v</code><i>NN</i> folder in order to avoid running into runtime conflicts on certain devices where manufacturers have added custom attributes whose ids conflict with the new ones on later platforms.<br/>
+<br/>
+Similarly, you can use tools:targetApi="11" in an XML file to indicate that the element will only be inflated in an adequate context.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "NewApi" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/></div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">NewApi</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Correctness</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Error</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 6/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationNewApiLink" onclick="reveal('explanationNewApi');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="NewApiCardLink" onclick="hideid('NewApiCard');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="FragmentTagUsage"></a>
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="FragmentTagUsageCard" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
   <div class="mdl-card__title">
@@ -583,6 +645,52 @@ If a <code>&lt;FrameLayout></code> is the root of a layout and does not provide 
 Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="MergeRootFrameCardLink" onclick="hideid('MergeRootFrameCard');">
 Dismiss</button>            </div>
             </div>
+          </section><a name="InefficientWeight"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="InefficientWeightCard" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Inefficient layout weight</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:18</span>: <span class="message">Use a <code>layout_width</code> of <code>0dp</code> instead of <code>wrap_content</code> for better performance</span><br /><pre class="errorlines">
+<span class="lineno"> 15 </span>
+<span class="lineno"> 16 </span>    <span class="tag">&lt;TextView</span><span class="attribute">
+</span><span class="lineno"> 17 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/qr_score_view"</span>
+<span class="caretline"><span class="lineno"> 18 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 19 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 20 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"12345"</span>
+<span class="lineno"> 21 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"25sp"</span>
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationInefficientWeight" style="display: none;">
+When only a single widget in a <code>LinearLayout</code> defines a weight, it is more efficient to assign a width/height of <code>0dp</code> to it since it will absorb all the remaining space anyway. With a declared width/height of <code>0dp</code> it does not have to measure its own size first.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "InefficientWeight" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/></div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">InefficientWeight</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Performance</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 3/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationInefficientWeightLink" onclick="reveal('explanationInefficientWeight');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="InefficientWeightCardLink" onclick="hideid('InefficientWeightCard');">
+Dismiss</button>            </div>
+            </div>
           </section><a name="RedundantNamespace"></a>
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="RedundantNamespaceCard" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
@@ -702,58 +810,41 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/example/qr_go/QRSearchFragment.java">../../src/main/java/com/example/qr_go/QRSearchFragment.java</a>:36</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno"> 33 </span>    <span class="keyword">public</span> <span class="keyword">void</span> updateSort(Integer sortPos) {
-<span class="lineno"> 34 </span>        ArrayList&lt;QRListDisplayContainer> qrDisplays = SearchActivity.getQrDisplays();
-<span class="lineno"> 35 </span>        TextView testTextView = (TextView) getView().findViewById(R.id.qrTextView);
-<span class="caretline"><span class="lineno"> 36 </span>        testTextView.setText(<span class="warning"><span class="string">"qr search, sort using"</span> + sortPos + <span class="string">" \nfound "</span> + qrDisplays.size() + <span class="string">"qrs"</span></span>);</span>
-<span class="lineno"> 37 </span>    }
-<span class="lineno"> 38 </span>}
+<span class="location"><a href="../../src/main/java/com/example/qr_go/QRArrayAdapter.java">../../src/main/java/com/example/qr_go/QRArrayAdapter.java</a>:42</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
+<span class="lineno"> 39 </span>        TextView scoreView = view.findViewById(R.id.qr_score_view);
+<span class="lineno"> 40 </span>
+<span class="lineno"> 41 </span>        idView.setText(qrToDisplay.getId().substring(<span class="number">0</span>, <span class="number">8</span>));
+<span class="caretline"><span class="lineno"> 42 </span>        scoreView.setText(<span class="warning">qrToDisplay.getScore().toString()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 43 </span>        
+<span class="lineno"> 44 </span>        <span class="keyword">return</span> view;
+<span class="lineno"> 45 </span>    }
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/QRSearchFragment.java">../../src/main/java/com/example/qr_go/QRSearchFragment.java</a>:36</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
-<span class="lineno"> 33 </span>    <span class="keyword">public</span> <span class="keyword">void</span> updateSort(Integer sortPos) {
-<span class="lineno"> 34 </span>        ArrayList&lt;QRListDisplayContainer> qrDisplays = SearchActivity.getQrDisplays();
-<span class="lineno"> 35 </span>        TextView testTextView = (TextView) getView().findViewById(R.id.qrTextView);
-<span class="caretline"><span class="lineno"> 36 </span>        testTextView.setText(<span class="warning"><span class="string">"qr search, sort using"</span></span> + sortPos + <span class="string">" \nfound "</span> + qrDisplays.size() + <span class="string">"qrs"</span>);</span>
-<span class="lineno"> 37 </span>    }
-<span class="lineno"> 38 </span>}
+<span class="location"><a href="../../src/main/java/com/example/qr_go/UserSearchFragment.java">../../src/main/java/com/example/qr_go/UserSearchFragment.java</a>:37</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno"> 34 </span>    <span class="keyword">public</span> <span class="keyword">void</span> updateSort(Integer sortPos) {
+<span class="lineno"> 35 </span>        ArrayList&lt;UserListDisplayContainer> userDisplays = SearchActivity.getUserDisplays();
+<span class="lineno"> 36 </span>        TextView testTextView = (TextView) getView().findViewById(R.id.userTextView);
+<span class="caretline"><span class="lineno"> 37 </span>        testTextView.setText(<span class="warning"><span class="string">"user search, sort using: "</span> + sortPos + <span class="string">" \nfound "</span> + userDisplays.size() + <span class="string">"users"</span></span>);</span>
+<span class="lineno"> 38 </span>    }
+<span class="lineno"> 39 </span>}
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/QRSearchFragment.java">../../src/main/java/com/example/qr_go/QRSearchFragment.java</a>:36</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
-<span class="lineno"> 33 </span>    <span class="keyword">public</span> <span class="keyword">void</span> updateSort(Integer sortPos) {
-<span class="lineno"> 34 </span>        ArrayList&lt;QRListDisplayContainer> qrDisplays = SearchActivity.getQrDisplays();
-<span class="lineno"> 35 </span>        TextView testTextView = (TextView) getView().findViewById(R.id.qrTextView);
-<span class="caretline"><span class="lineno"> 36 </span>        testTextView.setText(<span class="string">"qr search, sort using"</span> + sortPos + <span class="string">" \nfound "</span> + qrDisplays.size() + <span class="warning"><span class="string">"qrs"</span></span>);</span>
-<span class="lineno"> 37 </span>    }
-<span class="lineno"> 38 </span>}
+<span class="location"><a href="../../src/main/java/com/example/qr_go/UserSearchFragment.java">../../src/main/java/com/example/qr_go/UserSearchFragment.java</a>:37</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
+<span class="lineno"> 34 </span>    <span class="keyword">public</span> <span class="keyword">void</span> updateSort(Integer sortPos) {
+<span class="lineno"> 35 </span>        ArrayList&lt;UserListDisplayContainer> userDisplays = SearchActivity.getUserDisplays();
+<span class="lineno"> 36 </span>        TextView testTextView = (TextView) getView().findViewById(R.id.userTextView);
+<span class="caretline"><span class="lineno"> 37 </span>        testTextView.setText(<span class="warning"><span class="string">"user search, sort using: "</span></span> + sortPos + <span class="string">" \nfound "</span> + userDisplays.size() + <span class="string">"users"</span>);</span>
+<span class="lineno"> 38 </span>    }
+<span class="lineno"> 39 </span>}
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/UserSearchFragment.java">../../src/main/java/com/example/qr_go/UserSearchFragment.java</a>:36</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno"> 33 </span>    <span class="keyword">public</span> <span class="keyword">void</span> updateSort(Integer sortPos) {
-<span class="lineno"> 34 </span>        ArrayList&lt;UserListDisplayContainer> userDisplays = SearchActivity.getUserDisplays();
-<span class="lineno"> 35 </span>        TextView testTextView = (TextView) getView().findViewById(R.id.userTextView);
-<span class="caretline"><span class="lineno"> 36 </span>        testTextView.setText(<span class="warning"><span class="string">"user search, sort using: "</span> + sortPos + <span class="string">" \nfound "</span> + userDisplays.size() + <span class="string">"users"</span></span>);</span>
-<span class="lineno"> 37 </span>    }
-<span class="lineno"> 38 </span>}
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/UserSearchFragment.java">../../src/main/java/com/example/qr_go/UserSearchFragment.java</a>:36</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
-<span class="lineno"> 33 </span>    <span class="keyword">public</span> <span class="keyword">void</span> updateSort(Integer sortPos) {
-<span class="lineno"> 34 </span>        ArrayList&lt;UserListDisplayContainer> userDisplays = SearchActivity.getUserDisplays();
-<span class="lineno"> 35 </span>        TextView testTextView = (TextView) getView().findViewById(R.id.userTextView);
-<span class="caretline"><span class="lineno"> 36 </span>        testTextView.setText(<span class="warning"><span class="string">"user search, sort using: "</span></span> + sortPos + <span class="string">" \nfound "</span> + userDisplays.size() + <span class="string">"users"</span>);</span>
-<span class="lineno"> 37 </span>    }
-<span class="lineno"> 38 </span>}
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/UserSearchFragment.java">../../src/main/java/com/example/qr_go/UserSearchFragment.java</a>:36</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
-<span class="lineno"> 33 </span>    <span class="keyword">public</span> <span class="keyword">void</span> updateSort(Integer sortPos) {
-<span class="lineno"> 34 </span>        ArrayList&lt;UserListDisplayContainer> userDisplays = SearchActivity.getUserDisplays();
-<span class="lineno"> 35 </span>        TextView testTextView = (TextView) getView().findViewById(R.id.userTextView);
-<span class="caretline"><span class="lineno"> 36 </span>        testTextView.setText(<span class="string">"user search, sort using: "</span> + sortPos + <span class="string">" \nfound "</span> + userDisplays.size() + <span class="warning"><span class="string">"users"</span></span>);</span>
-<span class="lineno"> 37 </span>    }
-<span class="lineno"> 38 </span>}
+<span class="location"><a href="../../src/main/java/com/example/qr_go/UserSearchFragment.java">../../src/main/java/com/example/qr_go/UserSearchFragment.java</a>:37</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
+<span class="lineno"> 34 </span>    <span class="keyword">public</span> <span class="keyword">void</span> updateSort(Integer sortPos) {
+<span class="lineno"> 35 </span>        ArrayList&lt;UserListDisplayContainer> userDisplays = SearchActivity.getUserDisplays();
+<span class="lineno"> 36 </span>        TextView testTextView = (TextView) getView().findViewById(R.id.userTextView);
+<span class="caretline"><span class="lineno"> 37 </span>        testTextView.setText(<span class="string">"user search, sort using: "</span> + sortPos + <span class="string">" \nfound "</span> + userDisplays.size() + <span class="warning"><span class="string">"users"</span></span>);</span>
+<span class="lineno"> 38 </span>    }
+<span class="lineno"> 39 </span>}
 </pre>
 
 </div>
@@ -844,6 +935,8 @@ Dismiss</button>            </div>
 <span class="lineno">  9 </span>    <span class="tag">&lt;item</span><span class="attribute">
 </span><span class="lineno"> 10 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/nav_my_codes"</span></pre>
 
+<button class="mdl-button mdl-js-button mdl-button--primary" id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 5 More Occurrences...</button>
+<div id="HardcodedTextDiv" style="display: none">
 <span class="location"><a href="../../src/main/res/menu/bottom_nav_menu.xml">../../src/main/res/menu/bottom_nav_menu.xml</a>:12</span>: <span class="message">Hardcoded string "My Codes", should use <code>@string</code> resource</span><br /><pre class="errorlines">
 <span class="lineno">  9 </span>    <span class="tag">&lt;item</span><span class="attribute">
 </span><span class="lineno"> 10 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/nav_my_codes"</span>
@@ -870,6 +963,27 @@ Dismiss</button>            </div>
 <span class="lineno"> 23 </span>
 <span class="lineno"> 24 </span><span class="tag">&lt;/menu></span></pre>
 
+<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:12</span>: <span class="message">Hardcoded string "12345", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno">  9 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/qr_id_view"</span>
+<span class="lineno"> 10 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 11 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 12 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"12345"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 13 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"25sp"</span>
+<span class="lineno"> 14 </span>        />
+<span class="lineno"> 15 </span>
+</pre>
+
+<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:20</span>: <span class="message">Hardcoded string "12345", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 17 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/qr_score_view"</span>
+<span class="lineno"> 18 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 19 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 20 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"12345"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 21 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"25sp"</span>
+<span class="lineno"> 22 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
+<span class="lineno"> 23 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"center|right"</span>
+</pre>
+
+</div>
 </div>
 <div class="metadata"><div class="explanation" id="explanationHardcodedText" style="display: none;">
 Hardcoding text attributes directly in layout files is bad for several reasons:<br/>
@@ -990,6 +1104,15 @@ Dismiss</button>            </div>
 <span class="lineno"> 36 </span>            <span class="prefix">android:</span><span class="attribute">background</span>=<span class="value">"@null"</span>/>
 <span class="lineno"> 37 </span>
 </pre>
+
+<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:23</span>: <span class="message">Use "<code>end</code>" instead of "<code>right</code>" to ensure correct behavior in right-to-left locales</span><br /><pre class="errorlines">
+<span class="lineno"> 20 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"12345"</span>
+<span class="lineno"> 21 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"25sp"</span>
+<span class="lineno"> 22 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
+<span class="caretline"><span class="lineno"> 23 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"</span><span class="warning"><span class="value">center|right</span></span><span class="value">"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 24 </span>        />
+<span class="lineno"> 25 </span>
+<span class="lineno"> 26 </span><span class="tag">&lt;/LinearLayout></span></pre>
 
 <span class="location"><a href="../../src/main/res/layout/spinner_item.xml">../../src/main/res/layout/spinner_item.xml</a>:10</span>: <span class="message">Use "<code>end</code>" instead of "<code>right</code>" to ensure correct behavior in right-to-left locales</span><br /><pre class="errorlines">
 <span class="lineno">  7 </span>    <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"?colorPrimary"</span>

@@ -16,6 +16,10 @@
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_code_scanner.xml"
     },
     {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/qr_list_content.xml",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml"
+    },
+    {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/spinner_item.xml",
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/spinner_item.xml"
     },

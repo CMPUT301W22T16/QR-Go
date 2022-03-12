@@ -166,6 +166,48 @@
     </incident>
 
     <incident
+        id="InefficientWeight"
+        severity="warning"
+        message="Use a `layout_width` of `0dp` instead of `wrap_content` for better performance">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
+            line="18"
+            column="9"
+            startOffset="557"
+            endLine="18"
+            endColumn="44"
+            endOffset="592"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
+            line="12"
+            column="9"
+            startOffset="424"
+            endLine="12"
+            endColumn="29"
+            endOffset="444"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
+            line="20"
+            column="9"
+            startOffset="648"
+            endLine="20"
+            endColumn="29"
+            endOffset="668"/>
+    </incident>
+
+    <incident
         id="HardcodedText"
         severity="warning"
         message="Hardcoded string &quot;Search&quot;, should use `@string` resource">
@@ -280,15 +322,29 @@
     <incident
         id="SetTextI18n"
         severity="warning"
+        message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRArrayAdapter.java"
+            line="42"
+            column="27"
+            startOffset="1350"
+            endLine="42"
+            endColumn="60"
+            endOffset="1383"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserSearchFragment.java"
-            line="36"
+            line="37"
             column="30"
-            startOffset="1207"
-            endLine="36"
+            startOffset="1208"
+            endLine="37"
             endColumn="113"
-            endOffset="1290"/>
+            endOffset="1291"/>
     </incident>
 
     <incident
@@ -297,12 +353,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserSearchFragment.java"
-            line="36"
+            line="37"
             column="30"
-            startOffset="1207"
-            endLine="36"
+            startOffset="1208"
+            endLine="37"
             endColumn="57"
-            endOffset="1234"/>
+            endOffset="1235"/>
     </incident>
 
     <incident
@@ -311,54 +367,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserSearchFragment.java"
-            line="36"
+            line="37"
             column="106"
-            startOffset="1283"
-            endLine="36"
+            startOffset="1284"
+            endLine="37"
             endColumn="113"
-            endOffset="1290"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRSearchFragment.java"
-            line="36"
-            column="30"
-            startOffset="1167"
-            endLine="36"
-            endColumn="105"
-            endOffset="1242"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="String literal in `setText` can not be translated. Use Android resources instead.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRSearchFragment.java"
-            line="36"
-            column="30"
-            startOffset="1167"
-            endLine="36"
-            endColumn="53"
-            endOffset="1190"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="String literal in `setText` can not be translated. Use Android resources instead.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRSearchFragment.java"
-            line="36"
-            column="100"
-            startOffset="1237"
-            endLine="36"
-            endColumn="105"
-            endOffset="1242"/>
+            endOffset="1291"/>
     </incident>
 
     <incident
