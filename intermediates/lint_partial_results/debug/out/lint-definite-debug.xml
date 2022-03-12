@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 7.1.0" type="incidents">
+
+    <incident
+        id="RedundantNamespace"
+        severity="warning"
+        message="This namespace declaration is redundant">
+        <fix-attribute
+            description="Delete namespace"
+            attribute="xmlns:android"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_maps.xml"
+            line="23"
+            column="15"
+            startOffset="969"
+            endLine="23"
+            endColumn="73"
+            endOffset="1027"/>
+    </incident>
+
+    <incident
+        id="FragmentTagUsage"
+        severity="warning"
+        message="Replace the &lt;fragment> tag with FragmentContainerView.">
+        <fix-replace
+            description="Replace with androidx.fragment.app.FragmentContainerView"
+            oldString="fragment"
+            replacement="androidx.fragment.app.FragmentContainerView"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_maps.xml"
+            line="23"
+            column="6"
+            startOffset="960"
+            endLine="23"
+            endColumn="14"
+            endOffset="968"/>
+    </incident>
+
+    <incident
+        id="RedundantNamespace"
+        severity="warning"
+        message="This namespace declaration is redundant">
+        <fix-attribute
+            description="Delete namespace"
+            attribute="xmlns:android"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            line="78"
+            column="9"
+            startOffset="3219"
+            endLine="78"
+            endColumn="67"
+            endOffset="3277"/>
+    </incident>
+
+    <incident
+        id="ObsoleteLayoutParam"
+        severity="warning"
+        message="Invalid layout param in a `RelativeLayout`: `layout_weight`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            line="21"
+            column="13"
+            startOffset="863"
+            endLine="21"
+            endColumn="38"
+            endOffset="888"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Back&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            line="23"
+            column="13"
+            startOffset="941"
+            endLine="23"
+            endColumn="32"
+            endOffset="960"/>
+    </incident>
+
+    <incident
+        id="ObsoleteLayoutParam"
+        severity="warning"
+        message="Invalid layout param in a `RelativeLayout`: `layout_weight`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            line="33"
+            column="13"
+            startOffset="1324"
+            endLine="33"
+            endColumn="38"
+            endOffset="1349"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            line="40"
+            column="6"
+            startOffset="1522"
+            endLine="40"
+            endColumn="14"
+            endOffset="1530"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Temp Search Bar&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            line="44"
+            column="9"
+            startOffset="1669"
+            endLine="44"
+            endColumn="39"
+            endOffset="1699"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;QR Codes&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            line="69"
+            column="17"
+            startOffset="2819"
+            endLine="69"
+            endColumn="40"
+            endOffset="2842"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Players&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            line="73"
+            column="17"
+            startOffset="3025"
+            endLine="73"
+            endColumn="39"
+            endOffset="3047"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Search&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/menu/bottom_nav_menu.xml"
+            line="7"
+            column="9"
+            startOffset="210"
+            endLine="7"
+            endColumn="31"
+            endOffset="232"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;My Codes&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/menu/bottom_nav_menu.xml"
+            line="12"
+            column="9"
+            startOffset="349"
+            endLine="12"
+            endColumn="33"
+            endOffset="373"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Scan Code&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/menu/bottom_nav_menu.xml"
+            line="17"
+            column="9"
+            startOffset="494"
+            endLine="17"
+            endColumn="34"
+            endOffset="519"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;My Account&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/menu/bottom_nav_menu.xml"
+            line="22"
+            column="9"
+            startOffset="640"
+            endLine="22"
+            endColumn="35"
+            endOffset="666"/>
+    </incident>
+
+    <incident
+        id="NonConstantResourceId"
+        severity="warning"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
+            line="71"
+            column="26"
+            startOffset="2876"
+            endLine="71"
+            endColumn="41"
+            endOffset="2891"/>
+    </incident>
+
+    <incident
+        id="NonConstantResourceId"
+        severity="warning"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
+            line="74"
+            column="26"
+            startOffset="3041"
+            endLine="74"
+            endColumn="43"
+            endOffset="3058"/>
+    </incident>
+
+    <incident
+        id="NonConstantResourceId"
+        severity="warning"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
+            line="77"
+            column="26"
+            startOffset="3208"
+            endLine="77"
+            endColumn="44"
+            endOffset="3226"/>
+    </incident>
+
+    <incident
+        id="NonConstantResourceId"
+        severity="warning"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
+            line="80"
+            column="26"
+            startOffset="3383"
+            endLine="80"
+            endColumn="45"
+            endOffset="3402"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserSearchFragment.java"
+            line="36"
+            column="30"
+            startOffset="1207"
+            endLine="36"
+            endColumn="113"
+            endOffset="1290"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserSearchFragment.java"
+            line="36"
+            column="30"
+            startOffset="1207"
+            endLine="36"
+            endColumn="57"
+            endOffset="1234"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserSearchFragment.java"
+            line="36"
+            column="106"
+            startOffset="1283"
+            endLine="36"
+            endColumn="113"
+            endOffset="1290"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRSearchFragment.java"
+            line="36"
+            column="30"
+            startOffset="1167"
+            endLine="36"
+            endColumn="105"
+            endOffset="1242"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRSearchFragment.java"
+            line="36"
+            column="30"
+            startOffset="1167"
+            endLine="36"
+            endColumn="53"
+            endOffset="1190"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRSearchFragment.java"
+            line="36"
+            column="100"
+            startOffset="1237"
+            endLine="36"
+            endColumn="105"
+            endOffset="1242"/>
+    </incident>
+
+    <incident
+        id="IgnoreWithoutReason"
+        severity="warning"
+        message="Test is ignored without giving any explanation">
+        <fix-replace
+            description="Give reason"
+            oldString="_lint_insert_end_"
+            selectPattern="TODO"
+            replacement="(&quot;TODO&quot;)"/>
+        <location
+            file="${:app*debug*testSourceProvider*0*javaDir*0}/com/example/qr_go/LoginQRCodeTest.java"
+            line="15"
+            column="5"
+            startOffset="342"
+            endLine="15"
+            endColumn="12"
+            endOffset="349"/>
+    </incident>
+
+    <incident
+        id="IgnoreWithoutReason"
+        severity="warning"
+        message="Test is ignored without giving any explanation">
+        <fix-replace
+            description="Give reason"
+            oldString="_lint_insert_end_"
+            selectPattern="TODO"
+            replacement="(&quot;TODO&quot;)"/>
+        <location
+            file="${:app*debug*testSourceProvider*0*javaDir*0}/com/example/qr_go/UserTest.java"
+            line="20"
+            column="5"
+            startOffset="363"
+            endLine="20"
+            endColumn="12"
+            endOffset="370"/>
+    </incident>
+
+    <incident
+        id="IgnoreWithoutReason"
+        severity="warning"
+        message="Test is ignored without giving any explanation">
+        <fix-replace
+            description="Give reason"
+            oldString="_lint_insert_end_"
+            selectPattern="TODO"
+            replacement="(&quot;TODO&quot;)"/>
+        <location
+            file="${:app*debug*testSourceProvider*0*javaDir*0}/com/example/qr_go/UserTest.java"
+            line="31"
+            column="5"
+            startOffset="777"
+            endLine="31"
+            endColumn="12"
+            endOffset="784"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.gms:play-services-maps than 17.0.1 is available: 18.0.2">
+        <fix-replace
+            description="Change to 18.0.2"
+            family="Update versions"
+            oldString="17.0.1"
+            replacement="18.0.2"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="39"
+            column="20"
+            startOffset="1012"
+            endLine="39"
+            endColumn="70"
+            endOffset="1062"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.firebase:firebase-firestore than 24.0.1 is available: 24.0.2">
+        <fix-replace
+            description="Change to 24.0.2"
+            family="Update versions"
+            oldString="24.0.1"
+            replacement="24.0.2"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="41"
+            column="20"
+            startOffset="1152"
+            endLine="41"
+            endColumn="67"
+            endOffset="1199"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.4.0 is available: 2.4.1">
+        <fix-replace
+            description="Change to 2.4.1"
+            family="Update versions"
+            oldString="2.4.0"
+            replacement="2.4.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="42"
+            column="20"
+            startOffset="1219"
+            endLine="42"
+            endColumn="69"
+            endOffset="1268"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.4.0 is available: 2.4.1">
+        <fix-replace
+            description="Change to 2.4.1"
+            family="Update versions"
+            oldString="2.4.0"
+            replacement="2.4.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="43"
+            column="20"
+            startOffset="1288"
+            endLine="43"
+            endColumn="70"
+            endOffset="1338"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.navigation:navigation-fragment than 2.4.0 is available: 2.4.1">
+        <fix-replace
+            description="Change to 2.4.1"
+            family="Update versions"
+            oldString="2.4.0"
+            replacement="2.4.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="44"
+            column="20"
+            startOffset="1358"
+            endLine="44"
+            endColumn="67"
+            endOffset="1405"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.navigation:navigation-ui than 2.4.0 is available: 2.4.1">
+        <fix-replace
+            description="Change to 2.4.1"
+            family="Update versions"
+            oldString="2.4.0"
+            replacement="2.4.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="45"
+            column="20"
+            startOffset="1425"
+            endLine="45"
+            endColumn="61"
+            endOffset="1466"/>
+    </incident>
+
+    <incident
+        id="MergeRootFrame"
+        severity="warning"
+        message="This `&lt;FrameLayout>` can be replaced with a `&lt;merge>` tag">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_code_scanner.xml"
+            line="2"
+            column="1"
+            startOffset="39"
+            endLine="24"
+            endColumn="15"
+            endOffset="931"/>
+    </incident>
+
+</incidents>
