@@ -64,22 +64,22 @@
    non-constant IDs in order to improve the performance of incremental
    compilation.
 
-/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:39: Warning: A newer version of com.google.android.gms:play-services-maps than 17.0.1 is available: 18.0.2 [GradleDependency]
+/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:43: Warning: A newer version of com.google.android.gms:play-services-maps than 17.0.1 is available: 18.0.2 [GradleDependency]
     implementation 'com.google.android.gms:play-services-maps:17.0.1'
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:41: Warning: A newer version of com.google.firebase:firebase-firestore than 24.0.1 is available: 24.0.2 [GradleDependency]
+/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:45: Warning: A newer version of com.google.firebase:firebase-firestore than 24.0.1 is available: 24.0.2 [GradleDependency]
     implementation 'com.google.firebase:firebase-firestore:24.0.1'
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:42: Warning: A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.4.0 is available: 2.4.1 [GradleDependency]
+/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:46: Warning: A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.4.0 is available: 2.4.1 [GradleDependency]
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:43: Warning: A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.4.0 is available: 2.4.1 [GradleDependency]
+/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:47: Warning: A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.4.0 is available: 2.4.1 [GradleDependency]
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:44: Warning: A newer version of androidx.navigation:navigation-fragment than 2.4.0 is available: 2.4.1 [GradleDependency]
+/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:48: Warning: A newer version of androidx.navigation:navigation-fragment than 2.4.0 is available: 2.4.1 [GradleDependency]
     implementation 'androidx.navigation:navigation-fragment:2.4.0'
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:45: Warning: A newer version of androidx.navigation:navigation-ui than 2.4.0 is available: 2.4.1 [GradleDependency]
+/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:49: Warning: A newer version of androidx.navigation:navigation-ui than 2.4.0 is available: 2.4.1 [GradleDependency]
     implementation 'androidx.navigation:navigation-ui:2.4.0'
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
