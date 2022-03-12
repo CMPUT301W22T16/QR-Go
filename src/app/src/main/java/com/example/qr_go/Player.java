@@ -11,13 +11,14 @@ import androidx.annotation.RequiresApi;
  * Class that represents a regular player user
  */
 public class Player extends User {
-
     /**
      * Constructor for player class
      */
+    private boolean isInvisable;
     @RequiresApi(api = Build.VERSION_CODES.O)
     public Player()   {
         super();
+        boolean isInvisable = false;
     }
 
     /**
@@ -34,5 +35,8 @@ public class Player extends User {
     public Boolean isOwner() {
         return false;
     }
+    public Boolean isDeleted(){ return isInvisable;}
+    public void deletePlayer(){isInvisable = true;}
+
 
 }

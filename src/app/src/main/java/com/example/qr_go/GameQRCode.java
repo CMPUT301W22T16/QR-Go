@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
 public class GameQRCode extends QRCode {
     private Integer score;
     private ArrayList<String> userIds;
-        private Location location;
+    private Location location;
 
     /**
      * When creating a new GameQRCode, initialize the list of userIds

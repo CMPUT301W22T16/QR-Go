@@ -54,8 +54,8 @@ public abstract class User {
         this.totalScore = 0;
         this.email = email;
         scannedQRCodeIds = new ArrayList<>();
-        loginQR = new LoginQRCode(this);
-        statusQR = new StatusQRCode(this);
+        // = new LoginQRCode(this);
+        //statusQR = new StatusQRCode(this);
     }
 
     /**
