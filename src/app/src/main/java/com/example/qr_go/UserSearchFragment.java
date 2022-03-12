@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import java.util.ArrayList;
+
 /**
  * Fragment that displays the results of user searches
  */
@@ -29,8 +31,8 @@ public class UserSearchFragment extends SortableFragment {
     }
     @Override
     public void updateSort(Integer sortPos) {
+        ArrayList<UserListDisplayContainer> userDisplays = SearchActivity.getUserDisplays();
         TextView testTextView = (TextView) getView().findViewById(R.id.userTextView);
-        Log.d("updating sort for user", sortPos.toString());
-        testTextView.setText("user search, sort using: " + sortPos);
+        testTextView.setText("user search, sort using: " + sortPos + " \nfound " + userDisplays.size() + "users");
     }
 }

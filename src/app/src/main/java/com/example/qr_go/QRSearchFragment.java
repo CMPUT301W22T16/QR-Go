@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import java.util.ArrayList;
+
 /**
  * Fragment that displays the results of qr searches
  */
@@ -29,7 +31,8 @@ public class QRSearchFragment extends SortableFragment {
 
     @Override
     public void updateSort(Integer sortPos) {
+        ArrayList<QRListDisplayContainer> qrDisplays = SearchActivity.getQrDisplays();
         TextView testTextView = (TextView) getView().findViewById(R.id.qrTextView);
-        testTextView.setText("qr search, sort using" + sortPos);
+        testTextView.setText("qr search, sort using" + sortPos + " \nfound " + qrDisplays.size() + "qrs");
     }
 }

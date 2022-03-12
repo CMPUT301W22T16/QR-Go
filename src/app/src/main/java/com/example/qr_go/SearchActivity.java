@@ -6,11 +6,19 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,9 +32,20 @@ public class SearchActivity extends FragmentActivity {
     private static final String[] playerSortOptions = {"Total Score", "# QR Codes", "Unique Score"};
     // Current fragment being displayed
     private Integer currentFragment = 0;
+    private Integer sortPosition = 0;
+    private static ArrayList<UserListDisplayContainer> userDisplays;
+    private static ArrayList<QRListDisplayContainer> qrDisplays;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        CollectionReference playersColRef = db.collection("Players");
+        CollectionReference ownersColRef = db.collection("Owners");
+        CollectionReference qrColRef = db.collection("GameQRCodes");
+
+        userDisplays = new ArrayList<>();
+        qrDisplays = new ArrayList<>();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
@@ -58,6 +77,7 @@ public class SearchActivity extends FragmentActivity {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 searchPagerAdapter.updateSort(currentFragment, position);
+                sortPosition = position;
             }
 
             @Override
@@ -99,8 +119,58 @@ public class SearchActivity extends FragmentActivity {
             }
         });
 
+        // Get users and QRs from the database
+        playersColRef.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                userDisplays.clear();
+                for(DocumentSnapshot snapshot : queryDocumentSnapshots) {
+                    UserListDisplayContainer userToDisplay =
+                            new UserListDisplayContainer(
+                                    snapshot.get("userid", String.class),
+                                    snapshot.get("username", String.class)
+                            );
+                    userDisplays.add(userToDisplay);
+                }
+            }
+        });
+        ownersColRef.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                for(DocumentSnapshot snapshot : queryDocumentSnapshots) {
+                    UserListDisplayContainer userToDisplay =
+                            new UserListDisplayContainer(
+                                    snapshot.get("userid", String.class),
+                                    snapshot.get("username", String.class)
+                            );
+                    userDisplays.add(userToDisplay);
+                }
+            }
+        });
+        qrColRef.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                qrDisplays.clear();
+                for(DocumentSnapshot snapshot : queryDocumentSnapshots) {
+                    QRListDisplayContainer qrToDisplay =
+                            new QRListDisplayContainer(
+                                    snapshot.get("score", Integer.class),
+                                    snapshot.get("hash", String.class)
+                            );
+                    qrDisplays.add(qrToDisplay);
+                    // Update the fragments after getting documents is done
+                    searchPagerAdapter.updateSort(currentFragment, sortPosition);
+                }
+            }
+        });
 
+    }
 
+    public static ArrayList<UserListDisplayContainer> getUserDisplays() {
+        return userDisplays;
+    }
 
+    public static ArrayList<QRListDisplayContainer> getQrDisplays() {
+        return qrDisplays;
     }
 }
