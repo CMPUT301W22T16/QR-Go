@@ -6,10 +6,12 @@ package com.example.qr_go;
 public class QRListDisplayContainer {
     private Integer score;
     private String id;
+    private Float distance;
 
-    public QRListDisplayContainer(Integer score, String id) {
+    public QRListDisplayContainer(Integer score, String id, Float distance) {
         this.score = score;
         this.id = id;
+        this.distance = distance;
     }
 
     public Integer getScore() {
@@ -18,5 +20,9 @@ public class QRListDisplayContainer {
 
     public String getId() {
         return id;
+    }
+
+    public Float getDistance() {
+        return distance;
     }
 }

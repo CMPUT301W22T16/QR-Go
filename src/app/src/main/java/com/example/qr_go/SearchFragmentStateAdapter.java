@@ -28,6 +28,7 @@ public class SearchFragmentStateAdapter extends FragmentStateAdapter {
         if (fragments.size()-1 < fragmentPos) {
             return;
         }
+        retrieveData(fragmentPos);
         fragments.get(fragmentPos).updateSort(newSortPos);
     }
 

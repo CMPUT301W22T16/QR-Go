@@ -18,6 +18,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -56,7 +57,7 @@ public class QRSearchFragment extends SortableFragment {
 
     @Override
     public void retrieveData() {
-        qrDisplays = SearchActivity.getQrDisplays();
+        qrDisplays = new ArrayList<>(SearchActivity.getQrDisplays());
         setSearchFiltering();
     }
 
@@ -66,8 +67,9 @@ public class QRSearchFragment extends SortableFragment {
         if (sortPos == 0) {
             qrDisplays.sort(new QRListScoreComparator());
         } else {
-            // TODO: Sort via proximity
-            qrDisplays.sort(new QRListScoreComparator());
+            // Remove from the list to display if distance is null
+            qrDisplays.removeIf(q -> (q.getDistance() == null));
+            qrDisplays.sort(new QRListDistanceComparator());
         }
         qrAdapter = new QRArrayAdapter(view.getContext(), qrDisplays, sortPos);
         qrListView.setAdapter(qrAdapter);

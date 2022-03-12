@@ -51,7 +51,9 @@ public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> impleme
                 break;
             default:
                 // TODO: Get proximity
-                scoreView.setText(qrToDisplay.getScore().toString() + "m away");
+                Integer distance =  Math.round(qrToDisplay.getDistance());
+                String distanceString = distance>10000 ? ">10000" : distance.toString();
+                scoreView.setText(distanceString + "m away");
                 break;
         }
 
