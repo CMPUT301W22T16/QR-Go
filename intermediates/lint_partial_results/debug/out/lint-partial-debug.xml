@@ -3,15 +3,7 @@
     <map id="UnusedResources">
         <entry
             name="model"
-            string="attr[colorControlNormal(R),actionBarSize(R),colorPrimaryVariant(R)],color[purple_200(U),black(U),teal_200(U),white(U),teal_700(U),purple_700(U),purple_500(U)],drawable[round_search_24(U),round_account_circle_24(U),baseline_dashboard_24(U),ic_launcher_foreground(U),round_qr_code_scanner_24(U),ic_launcher_background(U),ic_launcher_foreground_1(R)],id[container(D),nav_my_account(U),qrIcon(D),nav_scan_code(U),scanner_view(U),location_checkbox(U),score(U),score_text(U),bottom_nav_view(U),qrName(D),nav_search(U),qrLocation(D),save_game_qr(U),map(U),nav_my_codes(U)],layout[activity_code_scanner(U),activity_qr_info(D),activity_new_game_qractivity(U),activity_maps(U)],menu[bottom_nav_menu(U)],mipmap[ic_launcher_round(U),ic_launcher(U)],string[title_activity_maps(U),app_name(U)],style[Theme_QRGo(U),Theme_MaterialComponents_DayNight_DarkActionBar(R)],sample[avatars(E)];a^0,b^0,c^0,d^10,e^0,21^2b^13^1a,22^18^1d,23^1^24,24^a^c^e^b,25^f^d,26^f^d,29^2a^9^8^6^5^7^4^2^3;;;"/>
-        <location id="R.layout.activity_qr_info"
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="2"
-            column="1"
-            startOffset="39"
-            endLine="45"
-            endColumn="53"
-            endOffset="1809"/>
+            string="attr[colorPrimary(R),colorControlNormal(R),actionBarSize(R),colorOnPrimary(R),colorPrimaryVariant(R)],color[purple_200(U),black(U),teal_200(U),white(U),teal_700(U),purple_700(U),purple_500(U)],drawable[ic_baseline_chevron_left_24(U),round_search_24(U),round_account_circle_24(U),baseline_dashboard_24(U),ic_launcher_foreground(U),round_qr_code_scanner_24(U),ic_launcher_background(U),ic_launcher_foreground_1(R)],id[container(D),search_tab_layout(U),username_view(U),nav_my_account(U),nav_scan_code(U),qr_score_view(U),search_pager(U),qr_list(U),user_list(U),scanner_view(U),location_checkbox(U),back_button(U),score(U),score_text(U),bottom_nav_view(U),qr_id_view(U),nav_search(U),search_bar(U),save_game_qr(U),sort_spinner(U),user_score_view(U),map(U),nav_my_codes(U)],layout[activity_code_scanner(U),user_list_content(U),activity_search(U),spinner_item(U),qr_list_content(U),fragment_qr_search(U),activity_new_game_qractivity(U),fragment_user_search(U),activity_maps(U)],menu[bottom_nav_menu(U)],mipmap[ic_launcher_round(U),ic_launcher(U)],string[title_activity_maps(U),app_name(U)],style[Theme_QRGo(U),Widget_MaterialComponents_Button_TextButton_Icon(R),Theme_MaterialComponents_DayNight_DarkActionBar(R)];c^1,d^1,e^1,f^1,10^13,11^1,2d^0^c^3a^3,2e^0,31^21^26,33^2^34,34^d^f^11^e,35^12^10,36^12^10,39^3b^b^a^8^7^9^6^4^5;;;"/>
     </map>
 
 </incidents>
