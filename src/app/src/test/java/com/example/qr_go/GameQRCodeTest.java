@@ -4,17 +4,16 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import java.security.NoSuchAlgorithmException;
 
 public class GameQRCodeTest {
     @Test
-    public void checkScore() throws NoSuchAlgorithmException {
+    public void checkScore() {
         GameQRCode code = new GameQRCode("BFG5DGW54\n");
         assertEquals(111, (int) code.getScore());
     }
 
     @Test
-    public void checkScoringAlgorithm() throws NoSuchAlgorithmException {
+    public void checkScoringAlgorithm() {
         GameQRCode code = new GameQRCode("");
         assertEquals(20, (int) code.calculateScore("00"));
         assertEquals(400, (int) code.calculateScore("000"));
