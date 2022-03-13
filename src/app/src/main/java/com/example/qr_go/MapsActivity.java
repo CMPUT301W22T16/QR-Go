@@ -35,6 +35,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     private static String currentUUID;
     public static FirebaseFirestore db;
+
     CollectionReference collectionReference;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -74,7 +75,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             currentUUID = newUser.getUserid();
             SharedPreferences.Editor ed = loggedUser.edit();
             ed.putString(User.USER_ID, currentUUID);
-            // TODO save user to the firestore database
+            ed.apply(); // apply changes
+            // Save user to the firestore database
+            db.collection("Players").document(newUser.getUserid()).set(newUser);
         }
 
         // Set onClick for BottomNavigation nav items
@@ -101,12 +104,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 return true;
             }
         });
-
-
-
-        QRGoDBUtil DBUti = new QRGoDBUtil();
-        DBUti.test3();
-
 
     }
 

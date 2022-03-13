@@ -3,7 +3,6 @@ package com.example.qr_go;
 import android.content.Context;
 import android.os.Build;
 import android.util.Log;
-import android.util.Pair;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -14,11 +13,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.HashMap;
-
 
 @RequiresApi(api = Build.VERSION_CODES.O)
 /**
@@ -41,6 +36,7 @@ public class QRGoDBUtil {
      *
      * @Author Darius Fang
      */
+
     @RequiresApi(api = Build.VERSION_CODES.O)
     void updateScannedQRtoDB(@NonNull GameQRCode gameqrcode, Player  player, QRPhoto qrphoto) {
 
@@ -108,7 +104,6 @@ public class QRGoDBUtil {
             }
         }
     }
-
     /**
      * starts by getting the comment from the db, if it cannot find one it will make one, method continues to addCommenttoDBContinue
      * @param comments
@@ -174,7 +169,6 @@ public class QRGoDBUtil {
                 }
             }
         });
-
     }
 
     /**this is to test the db will be thrown out**/

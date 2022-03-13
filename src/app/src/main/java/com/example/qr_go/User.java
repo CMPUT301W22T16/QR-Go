@@ -19,6 +19,7 @@ public abstract class User {
     private LoginQRCode loginQR;
     private StatusQRCode statusQR;
     private HashMap<String, Integer> scannedQRCodeIds;
+    private Integer totalScore;
     private String email;
 
     public static final String CURRENT_USER = "LOGIN";
@@ -34,6 +35,7 @@ public abstract class User {
         // Generate a new random UUID for a new user's password
         password = UUID.randomUUID().toString();
         username = UsernameGenerator.generateUsername();
+        totalScore = 0;
         email = "";
         scannedQRCodeIds = new HashMap<>();
         //loginQR = new LoginQRCode(this);
