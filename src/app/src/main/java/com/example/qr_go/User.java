@@ -5,7 +5,7 @@ import android.util.Pair;
 
 import androidx.annotation.RequiresApi;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.UUID;
 
@@ -18,7 +18,7 @@ public abstract class User {
     private String username;
     private LoginQRCode loginQR;
     private StatusQRCode statusQR;
-    private LinkedHashMap<String, Integer> scannedQRCodeIds;
+    private HashMap<String, Integer> scannedQRCodeIds;
     private String email;
 
     public static final String CURRENT_USER = "LOGIN";
@@ -35,7 +35,7 @@ public abstract class User {
         password = UUID.randomUUID().toString();
         username = UsernameGenerator.generateUsername();
         email = "";
-        scannedQRCodeIds = new LinkedHashMap<>();
+        scannedQRCodeIds = new HashMap<>();
         loginQR = new LoginQRCode(this);
         statusQR = new StatusQRCode(this);
     }
@@ -51,7 +51,7 @@ public abstract class User {
         this.password = password;
         this.username = username;
         this.email = email;
-        scannedQRCodeIds = new LinkedHashMap<>();
+        scannedQRCodeIds = new HashMap<>();
         loginQR = new LoginQRCode(this);
         statusQR = new StatusQRCode(this);
     }
@@ -96,7 +96,7 @@ public abstract class User {
     /**
      * @return ArrayList of IDs of a user's scanned QR codes
      */
-    public LinkedHashMap<String, Integer> getScannedQRCodeIds() {
+    public HashMap<String, Integer> getScannedQRCodeIds() {
         return scannedQRCodeIds;
     }
 
