@@ -23,13 +23,13 @@
         severity="warning"
         message="Use databinding or explicit wiring of click listener in code">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="40"
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="68"
             column="9"
-            startOffset="1549"
-            endLine="40"
+            startOffset="2670"
+            endLine="68"
             endColumn="40"
-            endOffset="1580"/>
+            endOffset="2701"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -40,13 +40,13 @@
         severity="warning"
         message="Use databinding or explicit wiring of click listener in code">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="66"
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="93"
             column="9"
-            startOffset="2583"
-            endLine="66"
-            endColumn="42"
-            endOffset="2616"/>
+            startOffset="3662"
+            endLine="93"
+            endColumn="37"
+            endOffset="3690"/>
         <map>
             <condition minLT="23"/>
         </map>

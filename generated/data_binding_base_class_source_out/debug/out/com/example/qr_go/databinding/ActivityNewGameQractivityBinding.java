@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -34,23 +33,14 @@ public final class ActivityNewGameQractivityBinding implements ViewBinding {
   @NonNull
   public final TextView scoreText;
 
-  @NonNull
-  public final Button takeQrPhotoButton;
-
-  @NonNull
-  public final ImageView takeQrPhotoImageview;
-
   private ActivityNewGameQractivityBinding(@NonNull ConstraintLayout rootView,
       @NonNull CheckBox locationCheckbox, @NonNull Button saveGameQr, @NonNull TextView score,
-      @NonNull TextView scoreText, @NonNull Button takeQrPhotoButton,
-      @NonNull ImageView takeQrPhotoImageview) {
+      @NonNull TextView scoreText) {
     this.rootView = rootView;
     this.locationCheckbox = locationCheckbox;
     this.saveGameQr = saveGameQr;
     this.score = score;
     this.scoreText = scoreText;
-    this.takeQrPhotoButton = takeQrPhotoButton;
-    this.takeQrPhotoImageview = takeQrPhotoImageview;
   }
 
   @Override
@@ -104,20 +94,8 @@ public final class ActivityNewGameQractivityBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.take_qr_photo_button;
-      Button takeQrPhotoButton = ViewBindings.findChildViewById(rootView, id);
-      if (takeQrPhotoButton == null) {
-        break missingId;
-      }
-
-      id = R.id.take_qr_photo_imageview;
-      ImageView takeQrPhotoImageview = ViewBindings.findChildViewById(rootView, id);
-      if (takeQrPhotoImageview == null) {
-        break missingId;
-      }
-
       return new ActivityNewGameQractivityBinding((ConstraintLayout) rootView, locationCheckbox,
-          saveGameQr, score, scoreText, takeQrPhotoButton, takeQrPhotoImageview);
+          saveGameQr, score, scoreText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
