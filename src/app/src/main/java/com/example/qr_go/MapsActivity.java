@@ -17,14 +17,20 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * MainActivity
@@ -35,10 +41,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private static String currentUUID;
     FirebaseFirestore db;
     CollectionReference collectionReference;
+    ArrayList<ArrayList<String>> latLonList;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_maps);
@@ -102,6 +110,30 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });
 
 
+
+        db.collection("GameQRCodes")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    // code from https://stackoverflow.com/questions/65465335/get-specific-field-from-firestore-with-whereequalto
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        
+                        if(task.isSuccessful()) {
+                            ArrayList<String> tempList;
+                            for(QueryDocumentSnapshot document : task.getResult()) {
+                                tempList.add((String)document.get("latitude"));
+                                tempList.add((String)document.get("longitude"));
+                                latLonList.add(tempList);
+                            }
+                        }
+                    }
+
+
+                });
+
+
+
+
     }
 
     /**
@@ -116,7 +148,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
+        for(int i = 0; i< latLonList.size(); i++){
+            LatLng newLoc = new LatLng(Integer.parseInt(latLonList.get(i).get(0)), Integer.parseInt(latLonList.get(i).get(1)));
+            mMap.addMarker(new MarkerOptions().position(newLoc).title("NewMarker"));
+        }
         // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng(-34, 151);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));

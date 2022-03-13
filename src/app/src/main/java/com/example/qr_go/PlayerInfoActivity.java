@@ -50,7 +50,6 @@ public class PlayerInfoActivity extends AppCompatActivity {
         TextView highestScoreText = findViewById(R.id.userHighScore);
 
 
-        final Boolean[] valid = new Boolean[1];
         userDBInst = FirebaseFirestore.getInstance();
 
         userDBInst.collection("Players")
