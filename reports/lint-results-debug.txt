@@ -1,4 +1,4 @@
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:74: Warning: SharedPreferences.edit() without a corresponding commit() or apply() call [CommitPrefEdits]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:75: Warning: SharedPreferences.edit() without a corresponding commit() or apply() call [CommitPrefEdits]
             SharedPreferences.Editor ed = loggedUser.edit();
                                           ~~~~~~~~~~~~~~~~~
 
@@ -24,16 +24,16 @@
    Identifier: fragment-1.4.0
    Feedback: https://issuetracker.google.com/issues/new?component=192731
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:87: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:88: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
                     case R.id.nav_search:
                          ~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:90: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:91: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
                     case R.id.nav_my_codes:
                          ~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:93: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:94: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
                     case R.id.nav_scan_code:
                          ~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:96: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:97: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
                     case R.id.nav_my_account:
                          ~~~~~~~~~~~~~~~~~~~
 
@@ -62,10 +62,10 @@
 /home/runner/work/QR-Go/QR-Go/src/app/build.gradle:45: Warning: A newer version of androidx.navigation:navigation-ui than 2.4.0 is available: 2.4.1 [GradleDependency]
     implementation 'androidx.navigation:navigation-ui:2.4.0'
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:50: Warning: A newer version of androidx.test:runner than 1.2.0 is available: 1.4.0 [GradleDependency]
+/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:51: Warning: A newer version of androidx.test:runner than 1.2.0 is available: 1.4.0 [GradleDependency]
     androidTestImplementation 'androidx.test:runner:1.2.0'
                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:51: Warning: A newer version of androidx.test:rules than 1.2.0 is available: 1.4.0 [GradleDependency]
+/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:52: Warning: A newer version of androidx.test:rules than 1.2.0 is available: 1.4.0 [GradleDependency]
     androidTestImplementation 'androidx.test:rules:1.2.0'
                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -75,6 +75,24 @@
    are cases where you deliberately want to stick with an older version.
    However, you may simply not be aware that a more recent version is
    available, and that is what this lint check helps find.
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:37: Warning: Do not place Android context classes in static fields (static reference to FirebaseFirestore which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
+    public static FirebaseFirestore db;
+           ~~~~~~
+
+   Explanation for issues of type "StaticFieldLeak":
+   A static field will leak contexts.
+
+   Non-static inner classes have an implicit reference to their outer class.
+   If that outer class is for example a Fragment or Activity, then this
+   reference means that the long-running handler/loader/task will hold a
+   reference to the activity which prevents it from getting garbage
+   collected.
+
+   Similarly, direct field references to activities and fragments from these
+   longer running instances can cause leaks.
+
+   ViewModel classes should never point to Views or non-application Contexts.
 
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_code_scanner.xml:2: Warning: This <FrameLayout> can be replaced with a <merge> tag [MergeRootFrame]
 <FrameLayout
@@ -147,4 +165,4 @@
    Please define an explicit reason why it is ignored, and when it can be
    resolved.
 
-0 errors, 25 warnings
+0 errors, 26 warnings

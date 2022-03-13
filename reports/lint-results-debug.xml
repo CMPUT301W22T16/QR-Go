@@ -13,7 +13,7 @@
         errorLine2="                                          ~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
-            line="74"
+            line="75"
             column="43"/>
     </issue>
 
@@ -47,7 +47,7 @@
         errorLine2="                         ~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
-            line="87"
+            line="88"
             column="26"/>
     </issue>
 
@@ -63,7 +63,7 @@
         errorLine2="                         ~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
-            line="90"
+            line="91"
             column="26"/>
     </issue>
 
@@ -79,7 +79,7 @@
         errorLine2="                         ~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
-            line="93"
+            line="94"
             column="26"/>
     </issue>
 
@@ -95,7 +95,7 @@
         errorLine2="                         ~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
-            line="96"
+            line="97"
             column="26"/>
     </issue>
 
@@ -207,7 +207,7 @@
         errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/build.gradle"
-            line="50"
+            line="51"
             column="31"/>
     </issue>
 
@@ -223,8 +223,24 @@
         errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/build.gradle"
-            line="51"
+            line="52"
             column="31"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        severity="Warning"
+        message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak"
+        category="Performance"
+        priority="6"
+        summary="Static Field Leaks"
+        explanation="A static field will leak contexts.&#xA;&#xA;Non-static inner classes have an implicit reference to their outer class. If that outer class is for example a `Fragment` or `Activity`, then this reference means that the long-running handler/loader/task will hold a reference to the activity which prevents it from getting garbage collected.&#xA;&#xA;Similarly, direct field references to activities and fragments from these longer running instances can cause leaks.&#xA;&#xA;ViewModel classes should never point to Views or non-application Contexts."
+        errorLine1="    public static FirebaseFirestore db;"
+        errorLine2="           ~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
+            line="37"
+            column="12"/>
     </issue>
 
     <issue
