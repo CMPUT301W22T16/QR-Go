@@ -2,6 +2,22 @@
 <issues format="6" by="lint 7.1.0">
 
     <issue
+        id="CommitPrefEdits"
+        severity="Warning"
+        message="`SharedPreferences.edit()` without a corresponding `commit()` or `apply()` call"
+        category="Correctness"
+        priority="6"
+        summary="Missing `commit()` on `SharedPreference` editor"
+        explanation="After calling `edit()` on a `SharedPreference`, you must call `commit()` or `apply()` on the editor to save the results."
+        errorLine1="            SharedPreferences.Editor ed = loggedUser.edit();"
+        errorLine2="                                          ~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
+            line="74"
+            column="43"/>
+    </issue>
+
+    <issue
         id="FragmentTagUsage"
         severity="Warning"
         message="Replace the &lt;fragment> tag with FragmentContainerView."
@@ -31,7 +47,7 @@
         errorLine2="                         ~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
-            line="90"
+            line="87"
             column="26"/>
     </issue>
 
@@ -47,7 +63,7 @@
         errorLine2="                         ~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
-            line="93"
+            line="90"
             column="26"/>
     </issue>
 
@@ -63,7 +79,7 @@
         errorLine2="                         ~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
-            line="96"
+            line="93"
             column="26"/>
     </issue>
 
@@ -79,7 +95,7 @@
         errorLine2="                         ~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
-            line="99"
+            line="96"
             column="26"/>
     </issue>
 
@@ -191,7 +207,7 @@
         errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/build.gradle"
-            line="51"
+            line="50"
             column="31"/>
     </issue>
 
@@ -207,39 +223,79 @@
         errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/build.gradle"
-            line="52"
+            line="51"
             column="31"/>
     </issue>
 
     <issue
-        id="UsingOnClickInXml"
+        id="SpUsage"
         severity="Warning"
-        message="Use databinding or explicit wiring of click listener in code"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes"
         category="Correctness"
-        priority="1"
-        summary="Using `android:onClick` on older version of the platform is broken"
-        explanation="Old versions of the platform do not properly support resolving `android:onClick`"
-        errorLine1="        android:onClick=&quot;saveNewQRCode&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        priority="3"
+        summary="Using `dp` instead of `sp` for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.&#xA;&#xA;There **are** cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="https://developer.android.com/training/multiscreen/screendensities.html"
+        urls="https://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1="            android:textSize=&quot;32dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml"
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
+            line="31"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        severity="Warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes"
+        category="Correctness"
+        priority="3"
+        summary="Using `dp` instead of `sp` for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.&#xA;&#xA;There **are** cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="https://developer.android.com/training/multiscreen/screendensities.html"
+        urls="https://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1="            android:textSize=&quot;32dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
             line="40"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        severity="Warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes"
+        category="Correctness"
+        priority="3"
+        summary="Using `dp` instead of `sp` for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.&#xA;&#xA;There **are** cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="https://developer.android.com/training/multiscreen/screendensities.html"
+        urls="https://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1="        android:textSize=&quot;32dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
+            line="55"
             column="9"/>
     </issue>
 
     <issue
-        id="UsingOnClickInXml"
+        id="SpUsage"
         severity="Warning"
-        message="Use databinding or explicit wiring of click listener in code"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes"
         category="Correctness"
-        priority="1"
-        summary="Using `android:onClick` on older version of the platform is broken"
-        explanation="Old versions of the platform do not properly support resolving `android:onClick`"
-        errorLine1="        android:onClick=&quot;launchTakePhoto&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        priority="3"
+        summary="Using `dp` instead of `sp` for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.&#xA;&#xA;There **are** cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="https://developer.android.com/training/multiscreen/screendensities.html"
+        urls="https://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1="        android:textSize=&quot;24dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml"
-            line="66"
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml"
+            line="25"
             column="9"/>
     </issue>
 
@@ -255,7 +311,7 @@
         errorLine2="           ~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
-            line="37"
+            line="36"
             column="12"/>
     </issue>
 
@@ -273,22 +329,6 @@
         errorLine2="^">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_code_scanner.xml"
-            line="2"
-            column="1"/>
-    </issue>
-
-    <issue
-        id="UnusedResources"
-        severity="Warning"
-        message="The resource `R.layout.activity_qr_info` appears to be unused"
-        category="Performance"
-        priority="3"
-        summary="Unused resources"
-        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true."
-        errorLine1="&lt;androidx.constraintlayout.widget.ConstraintLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
-        errorLine2="^">
-        <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
             line="2"
             column="1"/>
     </issue>
@@ -322,8 +362,8 @@
         errorLine1="    &lt;ImageView"
         errorLine2="     ~~~~~~~~~">
         <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml"
-            line="75"
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
+            line="8"
             column="6"/>
     </issue>
 
@@ -340,9 +380,25 @@
         errorLine1="    &lt;ImageView"
         errorLine2="     ~~~~~~~~~">
         <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
-            line="8"
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml"
+            line="9"
             column="6"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;QR Code #1&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;QR Code #1&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
+            line="15"
+            column="9"/>
     </issue>
 
     <issue
@@ -389,7 +445,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml"
-            line="41"
+            line="40"
             column="9"/>
     </issue>
 
@@ -405,23 +461,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml"
-            line="52"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
-        message="Hardcoded string &quot;Take photo of object&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="        android:text=&quot;Take photo of object&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml"
-            line="67"
+            line="51"
             column="9"/>
     </issue>
 
@@ -437,7 +477,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
-            line="30"
+            line="32"
             column="13"/>
     </issue>
 
@@ -453,8 +493,40 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
-            line="38"
+            line="41"
             column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Score: 123456&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;Score: 123456&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
+            line="54"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;See other players >&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;See other players >&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
+            line="67"
+            column="9"/>
     </issue>
 
     <issue
@@ -518,6 +590,38 @@
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/menu/bottom_nav_menu.xml"
             line="22"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;User Name&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;User Name&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml"
+            line="26"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml"
+            line="38"
             column="9"/>
     </issue>
 

@@ -2736,6 +2736,8 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id bt_temp_qr
+id buttonOtherPlayers
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2762,6 +2764,8 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
+id commenterName
+id commenterPhoto
 id compress
 id confirm_button
 id constraint
@@ -2988,6 +2992,7 @@ id progress_horizontal
 id qrIcon
 id qrLocation
 id qrName
+id qrScore
 id radio
 id ratio
 id rectangles
@@ -3081,8 +3086,6 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
-id take_qr_photo_button
-id take_qr_photo_imageview
 id terrain
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
@@ -3232,6 +3235,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_code_scanner
 layout activity_maps
+layout activity_my_qr_codes
 layout activity_new_game_qractivity
 layout activity_qr_info
 layout custom_dialog
@@ -3250,6 +3254,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout list_comments_content
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
