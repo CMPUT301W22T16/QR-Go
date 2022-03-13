@@ -174,10 +174,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 30 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 35 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Sun Mar 13 00:25:08 UTC 2022      </nav>
+Check performed at Sun Mar 13 00:55:53 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -188,11 +188,12 @@ Check performed at Sun Mar 13 00:25:08 UTC 2022      </nav>
       <a class="mdl-navigation__link" href="#FragmentTagUsage"><i class="material-icons warning-icon">warning</i>Use FragmentContainerView instead of the &lt;fragment> tag (1)</a>
       <a class="mdl-navigation__link" href="#NonConstantResourceId"><i class="material-icons warning-icon">warning</i>Checks use of resource IDs in places requiring constants (4)</a>
       <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (8)</a>
+      <a class="mdl-navigation__link" href="#SpUsage"><i class="material-icons warning-icon">warning</i>Using <code>dp</code> instead of <code>sp</code> for text sizes (3)</a>
       <a class="mdl-navigation__link" href="#StaticFieldLeak"><i class="material-icons warning-icon">warning</i>Static Field Leaks (1)</a>
       <a class="mdl-navigation__link" href="#MergeRootFrame"><i class="material-icons warning-icon">warning</i>FrameLayout can be replaced with <code>&lt;merge></code> tag (1)</a>
       <a class="mdl-navigation__link" href="#RedundantNamespace"><i class="material-icons warning-icon">warning</i>Redundant namespace (1)</a>
       <a class="mdl-navigation__link" href="#ContentDescription"><i class="material-icons warning-icon">warning</i>Image without <code>contentDescription</code> (1)</a>
-      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (11)</a>
+      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (13)</a>
       <a class="mdl-navigation__link" href="#IgnoreWithoutReason"><i class="material-icons warning-icon">warning</i>@Ignore without Reason (1)</a>
     </nav>
   </div>
@@ -220,6 +221,9 @@ Check performed at Sun Mar 13 00:25:08 UTC 2022      </nav>
 <tr>
 <td class="countColumn">8</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#GradleDependency">GradleDependency</a>: Obsolete Gradle Dependency</td></tr>
+<tr>
+<td class="countColumn">3</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#SpUsage">SpUsage</a>: Using <code>dp</code> instead of <code>sp</code> for text sizes</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Performance">Performance</a>
 </td></tr>
 <tr>
@@ -239,7 +243,7 @@ Check performed at Sun Mar 13 00:25:08 UTC 2022      </nav>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Internationalization">Internationalization</a>
 </td></tr>
 <tr>
-<td class="countColumn">11</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">13</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#HardcodedText">HardcodedText</a>: Hardcoded text</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Testing">Testing</a>
 </td></tr>
@@ -537,6 +541,75 @@ To suppress this error, use the issue id "GradleDependency" as explained in the 
 Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="GradleDependencyCardLink" onclick="hideid('GradleDependencyCard');">
 Dismiss</button>            </div>
             </div>
+          </section><a name="SpUsage"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="SpUsageCard" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Using dp instead of sp for text sizes</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res/layout/activity_qr_info.xml">../../src/main/res/layout/activity_qr_info.xml</a>:31</span>: <span class="message">Should use "<code>sp</code>" instead of "<code>dp</code>" for text sizes</span><br /><pre class="errorlines">
+<span class="lineno"> 28 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/qrName"</span>
+<span class="lineno"> 29 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 30 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 31 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"32dp"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 32 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"QR NAME"</span>
+<span class="lineno"> 33 </span>            <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span>
+<span class="lineno"> 34 </span>            <span class="prefix">app:</span><span class="attribute">layout_constraintTop_toTopOf</span>=<span class="value">"parent"</span> />
+</pre>
+
+<span class="location"><a href="../../src/main/res/layout/activity_qr_info.xml">../../src/main/res/layout/activity_qr_info.xml</a>:40</span>: <span class="message">Should use "<code>sp</code>" instead of "<code>dp</code>" for text sizes</span><br /><pre class="errorlines">
+<span class="lineno"> 37 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/qrLocation"</span>
+<span class="lineno"> 38 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 39 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 40 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"32dp"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 41 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"QR LOCATION"</span>
+<span class="lineno"> 42 </span>            <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span>
+<span class="lineno"> 43 </span>            <span class="prefix">app:</span><span class="attribute">layout_constraintTop_toBottomOf</span>=<span class="value">"@+id/qrName"</span> />
+</pre>
+
+<span class="location"><a href="../../src/main/res/layout/activity_qr_info.xml">../../src/main/res/layout/activity_qr_info.xml</a>:55</span>: <span class="message">Should use "<code>sp</code>" instead of "<code>dp</code>" for text sizes</span><br /><pre class="errorlines">
+<span class="lineno"> 52 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"16dp"</span>
+<span class="lineno"> 53 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginEnd</span>=<span class="value">"16dp"</span>
+<span class="lineno"> 54 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Score: 123456"</span>
+<span class="caretline"><span class="lineno"> 55 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"32dp"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 56 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span>
+<span class="lineno"> 57 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span>
+<span class="lineno"> 58 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintTop_toBottomOf</span>=<span class="value">"@+id/qrIcon"</span> />
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationSpUsage" style="display: none;">
+When setting text sizes, you should normally use <code>sp</code>, or "scale-independent pixels". This is like the <code>dp</code> unit, but it is also scaled by the user's font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user's preference.<br/>
+<br/>
+There <b>are</b> cases where you might need to use <code>dp</code>; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user's font size settings are not respected, so consider adjusting the layout itself to be more flexible.<br/><div class="moreinfo">More info: <a href="https://developer.android.com/training/multiscreen/screendensities.html">https://developer.android.com/training/multiscreen/screendensities.html</a>
+</div>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "SpUsage" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/></div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">SpUsage</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Correctness</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 3/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationSpUsageLink" onclick="reveal('explanationSpUsage');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="SpUsageCardLink" onclick="hideid('SpUsageCard');">
+Dismiss</button>            </div>
+            </div>
           </section>
 <a name="Performance"></a>
 <a name="StaticFieldLeak"></a>
@@ -695,8 +768,8 @@ Dismiss</button>            </div>
 <span class="lineno">  7 </span>
 <span class="caretline"><span class="lineno">  8 </span>    <span class="tag">&lt;</span><span class="warning"><span class="tag">ImageView</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
 </span><span class="lineno">  9 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/qrIcon"</span>
-<span class="lineno"> 10 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 11 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span></pre>
+<span class="lineno"> 10 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"160dp"</span>
+<span class="lineno"> 11 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"160dp"</span></pre>
 
 </div>
 <div class="metadata"><div class="explanation" id="explanationContentDescription" style="display: none;">
@@ -787,24 +860,43 @@ Dismiss</button>            </div>
 <span class="lineno"> 53 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintBottom_toTopOf</span>=<span class="value">"@+id/save_game_qr"</span>
 <span class="lineno"> 54 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span></pre>
 
-<button class="mdl-button mdl-js-button mdl-button--primary" id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 6 More Occurrences...</button>
+<button class="mdl-button mdl-js-button mdl-button--primary" id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 8 More Occurrences...</button>
 <div id="HardcodedTextDiv" style="display: none">
-<span class="location"><a href="../../src/main/res/layout/activity_qr_info.xml">../../src/main/res/layout/activity_qr_info.xml</a>:30</span>: <span class="message">Hardcoded string "QR NAME", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 27 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/qrName"</span>
-<span class="lineno"> 28 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 29 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 30 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"QR NAME"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 31 </span>            <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span>
-<span class="lineno"> 32 </span>            <span class="prefix">app:</span><span class="attribute">layout_constraintTop_toTopOf</span>=<span class="value">"parent"</span> />
+<span class="location"><a href="../../src/main/res/layout/activity_qr_info.xml">../../src/main/res/layout/activity_qr_info.xml</a>:32</span>: <span class="message">Hardcoded string "QR NAME", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 29 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 30 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 31 </span>            <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"32dp"</span>
+<span class="caretline"><span class="lineno"> 32 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"QR NAME"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 33 </span>            <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span>
+<span class="lineno"> 34 </span>            <span class="prefix">app:</span><span class="attribute">layout_constraintTop_toTopOf</span>=<span class="value">"parent"</span> />
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_qr_info.xml">../../src/main/res/layout/activity_qr_info.xml</a>:38</span>: <span class="message">Hardcoded string "QR LOCATION", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 35 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/qrLocation"</span>
-<span class="lineno"> 36 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 37 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 38 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"QR LOCATION"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 39 </span>            <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span>
-<span class="lineno"> 40 </span>            <span class="prefix">app:</span><span class="attribute">layout_constraintTop_toBottomOf</span>=<span class="value">"@+id/qrName"</span> />
+<span class="location"><a href="../../src/main/res/layout/activity_qr_info.xml">../../src/main/res/layout/activity_qr_info.xml</a>:41</span>: <span class="message">Hardcoded string "QR LOCATION", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 38 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 39 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 40 </span>            <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"32dp"</span>
+<span class="caretline"><span class="lineno"> 41 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"QR LOCATION"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 42 </span>            <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span>
+<span class="lineno"> 43 </span>            <span class="prefix">app:</span><span class="attribute">layout_constraintTop_toBottomOf</span>=<span class="value">"@+id/qrName"</span> />
+</pre>
+
+<span class="location"><a href="../../src/main/res/layout/activity_qr_info.xml">../../src/main/res/layout/activity_qr_info.xml</a>:54</span>: <span class="message">Hardcoded string "Score: 123456", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 51 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginStart</span>=<span class="value">"16dp"</span>
+<span class="lineno"> 52 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"16dp"</span>
+<span class="lineno"> 53 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginEnd</span>=<span class="value">"16dp"</span>
+<span class="caretline"><span class="lineno"> 54 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Score: 123456"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 55 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"32dp"</span>
+<span class="lineno"> 56 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span>
+<span class="lineno"> 57 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span></pre>
+
+<span class="location"><a href="../../src/main/res/layout/activity_qr_info.xml">../../src/main/res/layout/activity_qr_info.xml</a>:67</span>: <span class="message">Hardcoded string "See other players >", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 64 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginStart</span>=<span class="value">"16dp"</span>
+<span class="lineno"> 65 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"16dp"</span>
+<span class="lineno"> 66 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginEnd</span>=<span class="value">"16dp"</span>
+<span class="caretline"><span class="lineno"> 67 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"See other players >"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 68 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span>
+<span class="lineno"> 69 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span>
+<span class="lineno"> 70 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintTop_toBottomOf</span>=<span class="value">"@+id/qrScore"</span> />
 </pre>
 
 <span class="location"><a href="../../src/main/res/menu/bottom_nav_menu.xml">../../src/main/res/menu/bottom_nav_menu.xml</a>:7</span>: <span class="message">Hardcoded string "Search", should use <code>@string</code> resource</span><br /><pre class="errorlines">

@@ -228,6 +228,60 @@
     </issue>
 
     <issue
+        id="SpUsage"
+        severity="Warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes"
+        category="Correctness"
+        priority="3"
+        summary="Using `dp` instead of `sp` for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.&#xA;&#xA;There **are** cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="https://developer.android.com/training/multiscreen/screendensities.html"
+        urls="https://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1="            android:textSize=&quot;32dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
+            line="31"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        severity="Warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes"
+        category="Correctness"
+        priority="3"
+        summary="Using `dp` instead of `sp` for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.&#xA;&#xA;There **are** cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="https://developer.android.com/training/multiscreen/screendensities.html"
+        urls="https://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1="            android:textSize=&quot;32dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
+            line="40"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        severity="Warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes"
+        category="Correctness"
+        priority="3"
+        summary="Using `dp` instead of `sp` for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.&#xA;&#xA;There **are** cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="https://developer.android.com/training/multiscreen/screendensities.html"
+        urls="https://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1="        android:textSize=&quot;32dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
+            line="55"
+            column="9"/>
+    </issue>
+
+    <issue
         id="StaticFieldLeak"
         severity="Warning"
         message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak"
@@ -387,7 +441,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
-            line="30"
+            line="32"
             column="13"/>
     </issue>
 
@@ -403,8 +457,40 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
-            line="38"
+            line="41"
             column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Score: 123456&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;Score: 123456&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
+            line="54"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;See other players >&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;See other players >&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
+            line="67"
+            column="9"/>
     </issue>
 
     <issue

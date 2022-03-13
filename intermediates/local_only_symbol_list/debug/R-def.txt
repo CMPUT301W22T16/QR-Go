@@ -15,6 +15,7 @@ drawable round_qr_code_scanner_24
 drawable round_search_24
 id bottom_nav_view
 id bt_temp_qr
+id buttonOtherPlayers
 id container
 id location_checkbox
 id map
@@ -25,6 +26,7 @@ id nav_search
 id qrIcon
 id qrLocation
 id qrName
+id qrScore
 id save_game_qr
 id scanner_view
 id score

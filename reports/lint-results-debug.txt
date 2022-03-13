@@ -76,6 +76,31 @@
    However, you may simply not be aware that a more recent version is
    available, and that is what this lint check helps find.
 
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:31: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+            android:textSize="32dp"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:40: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+            android:textSize="32dp"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:55: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="32dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SpUsage":
+   When setting text sizes, you should normally use sp, or "scale-independent
+   pixels". This is like the dp unit, but it is also scaled by the user's font
+   size preference. It is recommend you use this unit when specifying font
+   sizes, so they will be adjusted for both the screen density and the user's
+   preference.
+
+   There are cases where you might need to use dp; typically this happens when
+   the text is in a container with a specific dp-size. This will prevent the
+   text from spilling outside the container. Note however that this means that
+   the user's font size settings are not respected, so consider adjusting the
+   layout itself to be more flexible.
+
+   https://developer.android.com/training/multiscreen/screendensities.html
+
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:36: Warning: Do not place Android context classes in static fields (static reference to FirebaseFirestore which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
     public static FirebaseFirestore db;
            ~~~~~~
@@ -152,12 +177,18 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml:51: Warning: Hardcoded string "Save location", should use @string resource [HardcodedText]
         android:text="Save location"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:30: Warning: Hardcoded string "QR NAME", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:32: Warning: Hardcoded string "QR NAME", should use @string resource [HardcodedText]
             android:text="QR NAME"
             ~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:38: Warning: Hardcoded string "QR LOCATION", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:41: Warning: Hardcoded string "QR LOCATION", should use @string resource [HardcodedText]
             android:text="QR LOCATION"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:54: Warning: Hardcoded string "Score: 123456", should use @string resource [HardcodedText]
+        android:text="Score: 123456"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:67: Warning: Hardcoded string "See other players >", should use @string resource [HardcodedText]
+        android:text="See other players >"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/menu/bottom_nav_menu.xml:7: Warning: Hardcoded string "Search", should use @string resource [HardcodedText]
         android:title="Search" />
         ~~~~~~~~~~~~~~~~~~~~~~
@@ -195,4 +226,4 @@
    Please define an explicit reason why it is ignored, and when it can be
    resolved.
 
-0 errors, 30 warnings
+0 errors, 35 warnings

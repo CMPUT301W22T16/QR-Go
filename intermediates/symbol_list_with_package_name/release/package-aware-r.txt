@@ -2737,6 +2737,7 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id bt_temp_qr
+id buttonOtherPlayers
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2989,6 +2990,7 @@ id progress_horizontal
 id qrIcon
 id qrLocation
 id qrName
+id qrScore
 id radio
 id ratio
 id rectangles

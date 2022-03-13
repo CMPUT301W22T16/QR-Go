@@ -133,12 +133,30 @@
         message="Hardcoded string &quot;QR NAME&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="30"
+            line="32"
             column="13"
-            startOffset="1240"
-            endLine="30"
+            startOffset="1305"
+            endLine="32"
             endColumn="35"
-            endOffset="1262"/>
+            endOffset="1327"/>
+    </incident>
+
+    <incident
+        id="SpUsage"
+        severity="warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes">
+        <fix-replace
+            description="Replace with sp"
+            oldPattern=".*(di?p)"
+            replacement="sp"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="31"
+            column="13"
+            startOffset="1269"
+            endLine="31"
+            endColumn="36"
+            endOffset="1292"/>
     </incident>
 
     <incident
@@ -147,12 +165,76 @@
         message="Hardcoded string &quot;QR LOCATION&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="38"
+            line="41"
             column="13"
-            startOffset="1547"
-            endLine="38"
+            startOffset="1648"
+            endLine="41"
             endColumn="39"
-            endOffset="1573"/>
+            endOffset="1674"/>
+    </incident>
+
+    <incident
+        id="SpUsage"
+        severity="warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes">
+        <fix-replace
+            description="Replace with sp"
+            oldPattern=".*(di?p)"
+            replacement="sp"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="40"
+            column="13"
+            startOffset="1612"
+            endLine="40"
+            endColumn="36"
+            endOffset="1635"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Score: 123456&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="54"
+            column="9"
+            startOffset="2124"
+            endLine="54"
+            endColumn="37"
+            endOffset="2152"/>
+    </incident>
+
+    <incident
+        id="SpUsage"
+        severity="warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes">
+        <fix-replace
+            description="Replace with sp"
+            oldPattern=".*(di?p)"
+            replacement="sp"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="55"
+            column="9"
+            startOffset="2161"
+            endLine="55"
+            endColumn="32"
+            endOffset="2184"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;See other players >&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="67"
+            column="9"
+            startOffset="2627"
+            endLine="67"
+            endColumn="43"
+            endOffset="2661"/>
     </incident>
 
     <incident
