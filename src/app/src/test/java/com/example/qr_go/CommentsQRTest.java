@@ -59,10 +59,14 @@ public class CommentsQRTest {
 
 
         ArrayList<Comment> commentArrayList = comments.getCommentObjects();
-        if (commentArrayList.get(0).getUsername() == MOCK_USER)
+        if (commentArrayList.get(0).getUsername() == MOCK_USER){
             assertEquals("this is new message", commentArrayList.get(0).getMessage());
-        else
+            assertEquals("New Message", commentArrayList.get(1).getMessage());
+        }
+        else{
             assertEquals("New Message", commentArrayList.get(0).getMessage());
+            assertEquals("this is new message", commentArrayList.get(1).getMessage());
+        }
     }
 
 }
