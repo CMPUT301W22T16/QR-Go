@@ -24,6 +24,7 @@ import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 
 /**
@@ -33,7 +34,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
     private static String currentUUID;
-    FirebaseFirestore db;
+    public static FirebaseFirestore db;
     CollectionReference collectionReference;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -100,6 +101,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 return true;
             }
         });
+
+
+
+        QRGoDBUtil DBUti = new QRGoDBUtil();
+        DBUti.test1();
 
 
     }
