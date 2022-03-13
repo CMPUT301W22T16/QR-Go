@@ -119,7 +119,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         
                         if(task.isSuccessful()) {
-                            ArrayList<String> tempList;
+                            ArrayList<String> tempList = new ArrayList<String>();
                             for(QueryDocumentSnapshot document : task.getResult()) {
                                 tempList.add((String)document.get("latitude"));
                                 tempList.add((String)document.get("longitude"));
