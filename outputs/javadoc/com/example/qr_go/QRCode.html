@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":9,"i2":10,"i3":10,"i4":10};
+var data = {"i0":9,"i1":10,"i2":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -181,10 +181,6 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">QRCode</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String)">QRCode</a></span>&#8203;(java.lang.String&nbsp;qrCodeContents)</code></th>
 <td class="colLast">
 <div class="block">QR code</div>
@@ -209,11 +205,6 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deleteQR()">deleteQR</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr id="i1" class="rowColor">
 <td class="colFirst"><code>protected static android.graphics.Bitmap</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#encodeToQrCode(java.lang.String,int,int)">encodeToQrCode</a></span>&#8203;(java.lang.String&nbsp;text,
               int&nbsp;width,
@@ -223,24 +214,19 @@ extends java.lang.Object</pre>
  https://stackoverflow.com/a/27010646</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHash()">getHash</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Getter for hash</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getId()">getId</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Get id of QR code</div>
 </td>
-</tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code>java.lang.Boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isDeleted()">isDeleted</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -288,7 +274,7 @@ extends java.lang.Object</pre>
 <a id="&lt;init&gt;(java.lang.String)">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>QRCode</h4>
 <pre>@RequiresApi(api=26)
@@ -298,15 +284,6 @@ public&nbsp;QRCode&#8203;(java.lang.String&nbsp;qrCodeContents)</pre>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>qrCodeContents</code> - text contents scanned from QR code</dd>
 </dl>
-</li>
-</ul>
-<a id="&lt;init&gt;()">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>QRCode</h4>
-<pre>public&nbsp;QRCode()</pre>
 </li>
 </ul>
 </li>
@@ -350,7 +327,7 @@ public&nbsp;QRCode&#8203;(java.lang.String&nbsp;qrCodeContents)</pre>
 <a id="encodeToQrCode(java.lang.String,int,int)">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>encodeToQrCode</h4>
 <pre class="methodSignature">protected static&nbsp;android.graphics.Bitmap&nbsp;encodeToQrCode&#8203;(java.lang.String&nbsp;text,
@@ -366,24 +343,6 @@ public&nbsp;QRCode&#8203;(java.lang.String&nbsp;qrCodeContents)</pre>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>QR code Bitmap</dd>
 </dl>
-</li>
-</ul>
-<a id="isDeleted()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>isDeleted</h4>
-<pre class="methodSignature">public&nbsp;java.lang.Boolean&nbsp;isDeleted()</pre>
-</li>
-</ul>
-<a id="deleteQR()">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>deleteQR</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;deleteQR()</pre>
 </li>
 </ul>
 </li>
