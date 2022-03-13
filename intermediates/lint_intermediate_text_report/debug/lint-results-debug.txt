@@ -76,6 +76,67 @@
    However, you may simply not be aware that a more recent version is
    available, and that is what this lint check helps find.
 
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:31: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+            android:textSize="32dp"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:40: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+            android:textSize="32dp"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:55: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="32dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:25: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="24dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:38: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="16dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SpUsage":
+   When setting text sizes, you should normally use sp, or "scale-independent
+   pixels". This is like the dp unit, but it is also scaled by the user's font
+   size preference. It is recommend you use this unit when specifying font
+   sizes, so they will be adjusted for both the screen density and the user's
+   preference.
+
+   There are cases where you might need to use dp; typically this happens when
+   the text is in a container with a specific dp-size. This will prevent the
+   text from spilling outside the container. Note however that this means that
+   the user's font size settings are not respected, so consider adjusting the
+   layout itself to be more flexible.
+
+   https://developer.android.com/training/multiscreen/screendensities.html
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable-v24: Warning: This folder configuration (v24) is unnecessary; minSdkVersion is 26. Merge all the resources in this folder into drawable. [ObsoleteSdkInt]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/mipmap-anydpi-v26: Warning: This folder configuration (v26) is unnecessary; minSdkVersion is 26. Merge all the resources in this folder into mipmap-anydpi. [ObsoleteSdkInt]
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:36: Warning: Do not place Android context classes in static fields (static reference to FirebaseFirestore which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
+    public static FirebaseFirestore db;
+           ~~~~~~
+
+   Explanation for issues of type "StaticFieldLeak":
+   A static field will leak contexts.
+
+   Non-static inner classes have an implicit reference to their outer class.
+   If that outer class is for example a Fragment or Activity, then this
+   reference means that the long-running handler/loader/task will hold a
+   reference to the activity which prevents it from getting garbage
+   collected.
+
+   Similarly, direct field references to activities and fragments from these
+   longer running instances can cause leaks.
+
+   ViewModel classes should never point to Views or non-application Contexts.
+
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_code_scanner.xml:2: Warning: This <FrameLayout> can be replaced with a <merge> tag [MergeRootFrame]
 <FrameLayout
 ^
@@ -98,6 +159,57 @@
    accidental leftovers from copy/pasting XML from other files or
    documentation.
 
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:97: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+
+   Explanation for issues of type "Autofill":
+   Specify an autofillHints attribute when targeting SDK version 26 or higher
+   or explicitly specify that the view is not important for autofill. Your app
+   can help an autofill service classify the data correctly by providing the
+   meaning of each view that could be autofillable, such as views representing
+   usernames, passwords, credit card fields, email addresses, etc.
+
+   The hints can have any value, but it is recommended to use predefined
+   values like 'username' for a username or 'creditCardNumber' for a credit
+   card number. For a list of all predefined autofill hint constants, see the
+   AUTOFILL_HINT_ constants in the View reference at
+   https://developer.android.com/reference/android/view/View.html.
+
+   You can mark a view unimportant for autofill by specifying an
+   importantForAutofill attribute on that view or a parent view. See
+   https://developer.android.com/reference/android/view/View.html#setImportant
+   ForAutofill(int).
+
+   https://developer.android.com/guide/topics/text/autofill.html
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:8: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:9: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+
+   Explanation for issues of type "ContentDescription":
+   Non-textual widgets like ImageViews and ImageButtons should use the
+   contentDescription attribute to specify a textual description of the widget
+   such that screen readers and other accessibility tools can adequately
+   describe the user interface.
+
+   Note that elements in application screens that are purely decorative and do
+   not provide any content or enable a user action should not have
+   accessibility content descriptions. In this case, just suppress the lint
+   warning with a tools:ignore="ContentDescription" attribute.
+
+   Note that for text fields, you should not set both the hint and the
+   contentDescription attributes since the hint will never be shown. Just set
+   the hint.
+
+   https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml:15: Warning: Hardcoded string "QR Code #1", should use @string resource [HardcodedText]
+        android:text="QR Code #1"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml:14: Warning: Hardcoded string "123", should use @string resource [HardcodedText]
         android:text="123"
         ~~~~~~~~~~~~~~~~~~
@@ -110,6 +222,24 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml:51: Warning: Hardcoded string "Save location", should use @string resource [HardcodedText]
         android:text="Save location"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:32: Warning: Hardcoded string "QR NAME", should use @string resource [HardcodedText]
+            android:text="QR NAME"
+            ~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:41: Warning: Hardcoded string "QR LOCATION", should use @string resource [HardcodedText]
+            android:text="QR LOCATION"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:54: Warning: Hardcoded string "Score: 123456", should use @string resource [HardcodedText]
+        android:text="Score: 123456"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:67: Warning: Hardcoded string "See other players >", should use @string resource [HardcodedText]
+        android:text="See other players >"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:92: Warning: Hardcoded string "Send", should use @string resource [HardcodedText]
+        android:text="Send"
+        ~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:106: Warning: Hardcoded string "Type your comment here", should use @string resource [HardcodedText]
+        android:hint="Type your comment here"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/menu/bottom_nav_menu.xml:7: Warning: Hardcoded string "Search", should use @string resource [HardcodedText]
         android:title="Search" />
         ~~~~~~~~~~~~~~~~~~~~~~
@@ -122,6 +252,12 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/menu/bottom_nav_menu.xml:22: Warning: Hardcoded string "My Account", should use @string resource [HardcodedText]
         android:title="My Account" />
         ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:26: Warning: Hardcoded string "User Name", should use @string resource [HardcodedText]
+        android:text="User Name"
+        ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:39: Warning: Hardcoded string "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", should use @string resource [HardcodedText]
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
    Explanation for issues of type "HardcodedText":
    Hardcoding text attributes directly in layout files is bad for several
@@ -147,4 +283,4 @@
    Please define an explicit reason why it is ignored, and when it can be
    resolved.
 
-0 errors, 25 warnings
+0 errors, 45 warnings

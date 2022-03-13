@@ -5,7 +5,7 @@
 5    android:versionName="1.0" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="21"
+8        android:minSdkVersion="26"
 8-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="31" />
 9-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml
@@ -43,151 +43,166 @@
 25    </queries>
 26
 27    <application
-27-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:11:5-41:19
+27-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:11:5-48:19
 28        android:allowBackup="true"
 28-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:12:9-35
 29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 29-->[androidx.core:core:1.7.0] /home/runner/.gradle/caches/transforms-3/c356baf59343ea26fc21dbab6859661a/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
 30        android:debuggable="true"
-31        android:icon="@mipmap/ic_launcher"
-31-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:13:9-43
-32        android:label="@string/app_name"
-32-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:14:9-41
-33        android:roundIcon="@mipmap/ic_launcher_round"
-33-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:15:9-54
-34        android:supportsRtl="true"
-34-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:16:9-35
-35        android:theme="@style/Theme.QRGo" >
-35-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:17:9-42
-36        <activity
-36-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:18:9-21:67
-37            android:name="com.example.qr_go.NewGameQRActivity"
-37-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:19:13-46
-38            android:exported="false"
-38-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:20:13-37
-39            android:parentActivityName="com.example.qr_go.QRCodeScannerActivity" />
-39-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:21:13-64
-40        <activity
-40-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:22:9-25:58
-41            android:name="com.example.qr_go.QRCodeScannerActivity"
-41-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:23:13-50
-42            android:exported="false"
-42-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:24:13-37
-43            android:parentActivityName="com.example.qr_go.MapsActivity" />
-43-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:25:13-55
-44
-45        <meta-data
-46            android:name="com.google.android.geo.API_KEY"
-46-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:28:13-58
-47            android:value="AIzaSyBwdjiGdUudmbI1R4sFmg3Dnzpu8XvrJ9w" />
-47-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:29:13-44
-48
+31        android:extractNativeLibs="false"
+32        android:icon="@mipmap/ic_launcher"
+32-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:13:9-43
+33        android:label="@string/app_name"
+33-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:14:9-41
+34        android:roundIcon="@mipmap/ic_launcher_round"
+34-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:15:9-54
+35        android:supportsRtl="true"
+35-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:16:9-35
+36        android:theme="@style/Theme.QRGo" >
+36-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:17:9-42
+37        <activity
+37-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:18:9-21:67
+38            android:name="com.example.qr_go.NewGameQRActivity"
+38-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:19:13-46
+39            android:exported="false"
+39-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:20:13-37
+40            android:parentActivityName="com.example.qr_go.QRCodeScannerActivity" />
+40-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:21:13-64
+41        <activity
+41-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:22:9-25:58
+42            android:name="com.example.qr_go.QRCodeScannerActivity"
+42-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:23:13-50
+43            android:exported="false"
+43-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:24:13-37
+44            android:parentActivityName="com.example.qr_go.MapsActivity" />
+44-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:25:13-55
+45        <activity
+45-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:26:9-29:58
+46            android:name="com.example.qr_go.MyQRCodesActivity"
+46-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:27:13-46
+47            android:exported="false"
+47-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:28:13-37
+48            android:parentActivityName="com.example.qr_go.MapsActivity" />
+48-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:29:13-55
 49        <activity
-49-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:31:9-40:20
-50            android:name="com.example.qr_go.MapsActivity"
-50-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:32:13-41
-51            android:exported="true"
-51-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:33:13-36
-52            android:label="@string/title_activity_maps" >
-52-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:34:13-56
-53            <intent-filter>
-53-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:35:13-39:29
-54                <action android:name="android.intent.action.MAIN" />
-54-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:36:17-69
-54-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:36:25-66
-55
-56                <category android:name="android.intent.category.LAUNCHER" />
-56-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:38:17-77
-56-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:38:27-74
-57            </intent-filter>
-58        </activity>
-59        <!-- Needs to be explicitly declared on P+ -->
-60        <uses-library
-60-->[com.google.android.gms:play-services-maps:17.0.1] /home/runner/.gradle/caches/transforms-3/c327240cb649466ac51ce98392a52b6a/transformed/play-services-maps-17.0.1/AndroidManifest.xml:39:9-41:40
-61            android:name="org.apache.http.legacy"
-61-->[com.google.android.gms:play-services-maps:17.0.1] /home/runner/.gradle/caches/transforms-3/c327240cb649466ac51ce98392a52b6a/transformed/play-services-maps-17.0.1/AndroidManifest.xml:40:13-50
-62            android:required="false" />
-62-->[com.google.android.gms:play-services-maps:17.0.1] /home/runner/.gradle/caches/transforms-3/c327240cb649466ac51ce98392a52b6a/transformed/play-services-maps-17.0.1/AndroidManifest.xml:41:13-37
+49-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:30:9-32:40
+50            android:name="com.example.qr_go.QRInfoActivity"
+50-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:31:13-43
+51            android:exported="false" />
+51-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:32:13-37
+52
+53        <meta-data
+54            android:name="com.google.android.geo.API_KEY"
+54-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:35:13-58
+55            android:value="AIzaSyBwdjiGdUudmbI1R4sFmg3Dnzpu8XvrJ9w" />
+55-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:36:13-44
+56
+57        <activity
+57-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:38:9-47:20
+58            android:name="com.example.qr_go.MapsActivity"
+58-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:39:13-41
+59            android:exported="true"
+59-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:40:13-36
+60            android:label="@string/title_activity_maps" >
+60-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:41:13-56
+61            <intent-filter>
+61-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:42:13-46:29
+62                <action android:name="android.intent.action.MAIN" />
+62-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:43:17-69
+62-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:43:25-66
 63
-64        <service
-64-->[com.google.firebase:firebase-firestore:24.0.1] /home/runner/.gradle/caches/transforms-3/0af5193ba465b3c416dbfc5edb6e408e/transformed/firebase-firestore-24.0.1/AndroidManifest.xml:17:9-23:19
-65            android:name="com.google.firebase.components.ComponentDiscoveryService"
-65-->[com.google.firebase:firebase-firestore:24.0.1] /home/runner/.gradle/caches/transforms-3/0af5193ba465b3c416dbfc5edb6e408e/transformed/firebase-firestore-24.0.1/AndroidManifest.xml:18:13-84
-66            android:directBootAware="true"
-66-->[com.google.firebase:firebase-common:20.0.0] /home/runner/.gradle/caches/transforms-3/4fadc38f57146a51a168254b53bd734f/transformed/firebase-common-20.0.0/AndroidManifest.xml:35:13-43
-67            android:exported="false" >
-67-->[com.google.firebase:firebase-firestore:24.0.1] /home/runner/.gradle/caches/transforms-3/0af5193ba465b3c416dbfc5edb6e408e/transformed/firebase-firestore-24.0.1/AndroidManifest.xml:19:13-37
-68            <meta-data
-68-->[com.google.firebase:firebase-firestore:24.0.1] /home/runner/.gradle/caches/transforms-3/0af5193ba465b3c416dbfc5edb6e408e/transformed/firebase-firestore-24.0.1/AndroidManifest.xml:20:13-22:85
-69                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-69-->[com.google.firebase:firebase-firestore:24.0.1] /home/runner/.gradle/caches/transforms-3/0af5193ba465b3c416dbfc5edb6e408e/transformed/firebase-firestore-24.0.1/AndroidManifest.xml:21:17-111
-70                android:value="com.google.firebase.components.ComponentRegistrar" />
-70-->[com.google.firebase:firebase-firestore:24.0.1] /home/runner/.gradle/caches/transforms-3/0af5193ba465b3c416dbfc5edb6e408e/transformed/firebase-firestore-24.0.1/AndroidManifest.xml:22:17-82
-71        </service>
-72
-73        <provider
-73-->[com.google.firebase:firebase-common:20.0.0] /home/runner/.gradle/caches/transforms-3/4fadc38f57146a51a168254b53bd734f/transformed/firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
-74            android:name="com.google.firebase.provider.FirebaseInitProvider"
-74-->[com.google.firebase:firebase-common:20.0.0] /home/runner/.gradle/caches/transforms-3/4fadc38f57146a51a168254b53bd734f/transformed/firebase-common-20.0.0/AndroidManifest.xml:27:13-77
-75            android:authorities="com.example.qr_go.firebaseinitprovider"
-75-->[com.google.firebase:firebase-common:20.0.0] /home/runner/.gradle/caches/transforms-3/4fadc38f57146a51a168254b53bd734f/transformed/firebase-common-20.0.0/AndroidManifest.xml:28:13-72
-76            android:directBootAware="true"
-76-->[com.google.firebase:firebase-common:20.0.0] /home/runner/.gradle/caches/transforms-3/4fadc38f57146a51a168254b53bd734f/transformed/firebase-common-20.0.0/AndroidManifest.xml:29:13-43
-77            android:exported="false"
-77-->[com.google.firebase:firebase-common:20.0.0] /home/runner/.gradle/caches/transforms-3/4fadc38f57146a51a168254b53bd734f/transformed/firebase-common-20.0.0/AndroidManifest.xml:30:13-37
-78            android:initOrder="100" />
-78-->[com.google.firebase:firebase-common:20.0.0] /home/runner/.gradle/caches/transforms-3/4fadc38f57146a51a168254b53bd734f/transformed/firebase-common-20.0.0/AndroidManifest.xml:31:13-36
-79
-80        <activity
-80-->[com.google.android.gms:play-services-base:17.1.0] /home/runner/.gradle/caches/transforms-3/407269bb735bbb2dd149e80dc95822a2/transformed/play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
-81            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-81-->[com.google.android.gms:play-services-base:17.1.0] /home/runner/.gradle/caches/transforms-3/407269bb735bbb2dd149e80dc95822a2/transformed/play-services-base-17.1.0/AndroidManifest.xml:24:13-79
-82            android:exported="false"
-82-->[com.google.android.gms:play-services-base:17.1.0] /home/runner/.gradle/caches/transforms-3/407269bb735bbb2dd149e80dc95822a2/transformed/play-services-base-17.1.0/AndroidManifest.xml:25:13-37
-83            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-83-->[com.google.android.gms:play-services-base:17.1.0] /home/runner/.gradle/caches/transforms-3/407269bb735bbb2dd149e80dc95822a2/transformed/play-services-base-17.1.0/AndroidManifest.xml:26:13-72
-84
-85        <meta-data
-85-->[com.google.android.gms:play-services-basement:17.0.0] /home/runner/.gradle/caches/transforms-3/cf649f13946389c3018e2a3bb5bdce45/transformed/play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
-86            android:name="com.google.android.gms.version"
-86-->[com.google.android.gms:play-services-basement:17.0.0] /home/runner/.gradle/caches/transforms-3/cf649f13946389c3018e2a3bb5bdce45/transformed/play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
-87            android:value="@integer/google_play_services_version" />
-87-->[com.google.android.gms:play-services-basement:17.0.0] /home/runner/.gradle/caches/transforms-3/cf649f13946389c3018e2a3bb5bdce45/transformed/play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
-88
-89        <provider
-89-->[androidx.emoji2:emoji2:1.0.0] /home/runner/.gradle/caches/transforms-3/3e74a7bebca8191734707973760d094e/transformed/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
-90            android:name="androidx.startup.InitializationProvider"
-90-->[androidx.emoji2:emoji2:1.0.0] /home/runner/.gradle/caches/transforms-3/3e74a7bebca8191734707973760d094e/transformed/emoji2-1.0.0/AndroidManifest.xml:27:13-67
-91            android:authorities="com.example.qr_go.androidx-startup"
-91-->[androidx.emoji2:emoji2:1.0.0] /home/runner/.gradle/caches/transforms-3/3e74a7bebca8191734707973760d094e/transformed/emoji2-1.0.0/AndroidManifest.xml:28:13-68
-92            android:exported="false" >
-92-->[androidx.emoji2:emoji2:1.0.0] /home/runner/.gradle/caches/transforms-3/3e74a7bebca8191734707973760d094e/transformed/emoji2-1.0.0/AndroidManifest.xml:29:13-37
-93            <meta-data
-93-->[androidx.emoji2:emoji2:1.0.0] /home/runner/.gradle/caches/transforms-3/3e74a7bebca8191734707973760d094e/transformed/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
-94                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-94-->[androidx.emoji2:emoji2:1.0.0] /home/runner/.gradle/caches/transforms-3/3e74a7bebca8191734707973760d094e/transformed/emoji2-1.0.0/AndroidManifest.xml:32:17-75
-95                android:value="androidx.startup" />
-95-->[androidx.emoji2:emoji2:1.0.0] /home/runner/.gradle/caches/transforms-3/3e74a7bebca8191734707973760d094e/transformed/emoji2-1.0.0/AndroidManifest.xml:33:17-49
-96            <meta-data
-96-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/runner/.gradle/caches/transforms-3/50198bcd9124397ae18b28f214621175/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
-97                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-97-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/runner/.gradle/caches/transforms-3/50198bcd9124397ae18b28f214621175/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
-98                android:value="androidx.startup" />
-98-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/runner/.gradle/caches/transforms-3/50198bcd9124397ae18b28f214621175/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
-99        </provider>
-100
-101        <uses-library
-101-->[androidx.window:window:1.0.0] /home/runner/.gradle/caches/transforms-3/46ff6747cf344798896fc9ef99607d87/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
-102            android:name="androidx.window.extensions"
-102-->[androidx.window:window:1.0.0] /home/runner/.gradle/caches/transforms-3/46ff6747cf344798896fc9ef99607d87/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
-103            android:required="false" />
-103-->[androidx.window:window:1.0.0] /home/runner/.gradle/caches/transforms-3/46ff6747cf344798896fc9ef99607d87/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
-104        <uses-library
-104-->[androidx.window:window:1.0.0] /home/runner/.gradle/caches/transforms-3/46ff6747cf344798896fc9ef99607d87/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
-105            android:name="androidx.window.sidecar"
-105-->[androidx.window:window:1.0.0] /home/runner/.gradle/caches/transforms-3/46ff6747cf344798896fc9ef99607d87/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
-106            android:required="false" />
-106-->[androidx.window:window:1.0.0] /home/runner/.gradle/caches/transforms-3/46ff6747cf344798896fc9ef99607d87/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
-107    </application>
+64                <category android:name="android.intent.category.LAUNCHER" />
+64-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:45:17-77
+64-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:45:27-74
+65            </intent-filter>
+66        </activity>
+67        <!-- Needs to be explicitly declared on P+ -->
+68        <uses-library
+68-->[com.google.android.gms:play-services-maps:17.0.1] /home/runner/.gradle/caches/transforms-3/c327240cb649466ac51ce98392a52b6a/transformed/play-services-maps-17.0.1/AndroidManifest.xml:39:9-41:40
+69            android:name="org.apache.http.legacy"
+69-->[com.google.android.gms:play-services-maps:17.0.1] /home/runner/.gradle/caches/transforms-3/c327240cb649466ac51ce98392a52b6a/transformed/play-services-maps-17.0.1/AndroidManifest.xml:40:13-50
+70            android:required="false" />
+70-->[com.google.android.gms:play-services-maps:17.0.1] /home/runner/.gradle/caches/transforms-3/c327240cb649466ac51ce98392a52b6a/transformed/play-services-maps-17.0.1/AndroidManifest.xml:41:13-37
+71
+72        <service
+72-->[com.google.firebase:firebase-firestore:24.0.1] /home/runner/.gradle/caches/transforms-3/0af5193ba465b3c416dbfc5edb6e408e/transformed/firebase-firestore-24.0.1/AndroidManifest.xml:17:9-23:19
+73            android:name="com.google.firebase.components.ComponentDiscoveryService"
+73-->[com.google.firebase:firebase-firestore:24.0.1] /home/runner/.gradle/caches/transforms-3/0af5193ba465b3c416dbfc5edb6e408e/transformed/firebase-firestore-24.0.1/AndroidManifest.xml:18:13-84
+74            android:directBootAware="true"
+74-->[com.google.firebase:firebase-common:20.0.0] /home/runner/.gradle/caches/transforms-3/4fadc38f57146a51a168254b53bd734f/transformed/firebase-common-20.0.0/AndroidManifest.xml:35:13-43
+75            android:exported="false" >
+75-->[com.google.firebase:firebase-firestore:24.0.1] /home/runner/.gradle/caches/transforms-3/0af5193ba465b3c416dbfc5edb6e408e/transformed/firebase-firestore-24.0.1/AndroidManifest.xml:19:13-37
+76            <meta-data
+76-->[com.google.firebase:firebase-firestore:24.0.1] /home/runner/.gradle/caches/transforms-3/0af5193ba465b3c416dbfc5edb6e408e/transformed/firebase-firestore-24.0.1/AndroidManifest.xml:20:13-22:85
+77                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+77-->[com.google.firebase:firebase-firestore:24.0.1] /home/runner/.gradle/caches/transforms-3/0af5193ba465b3c416dbfc5edb6e408e/transformed/firebase-firestore-24.0.1/AndroidManifest.xml:21:17-111
+78                android:value="com.google.firebase.components.ComponentRegistrar" />
+78-->[com.google.firebase:firebase-firestore:24.0.1] /home/runner/.gradle/caches/transforms-3/0af5193ba465b3c416dbfc5edb6e408e/transformed/firebase-firestore-24.0.1/AndroidManifest.xml:22:17-82
+79        </service>
+80
+81        <provider
+81-->[com.google.firebase:firebase-common:20.0.0] /home/runner/.gradle/caches/transforms-3/4fadc38f57146a51a168254b53bd734f/transformed/firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
+82            android:name="com.google.firebase.provider.FirebaseInitProvider"
+82-->[com.google.firebase:firebase-common:20.0.0] /home/runner/.gradle/caches/transforms-3/4fadc38f57146a51a168254b53bd734f/transformed/firebase-common-20.0.0/AndroidManifest.xml:27:13-77
+83            android:authorities="com.example.qr_go.firebaseinitprovider"
+83-->[com.google.firebase:firebase-common:20.0.0] /home/runner/.gradle/caches/transforms-3/4fadc38f57146a51a168254b53bd734f/transformed/firebase-common-20.0.0/AndroidManifest.xml:28:13-72
+84            android:directBootAware="true"
+84-->[com.google.firebase:firebase-common:20.0.0] /home/runner/.gradle/caches/transforms-3/4fadc38f57146a51a168254b53bd734f/transformed/firebase-common-20.0.0/AndroidManifest.xml:29:13-43
+85            android:exported="false"
+85-->[com.google.firebase:firebase-common:20.0.0] /home/runner/.gradle/caches/transforms-3/4fadc38f57146a51a168254b53bd734f/transformed/firebase-common-20.0.0/AndroidManifest.xml:30:13-37
+86            android:initOrder="100" />
+86-->[com.google.firebase:firebase-common:20.0.0] /home/runner/.gradle/caches/transforms-3/4fadc38f57146a51a168254b53bd734f/transformed/firebase-common-20.0.0/AndroidManifest.xml:31:13-36
+87
+88        <activity
+88-->[com.google.android.gms:play-services-base:17.1.0] /home/runner/.gradle/caches/transforms-3/407269bb735bbb2dd149e80dc95822a2/transformed/play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
+89            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+89-->[com.google.android.gms:play-services-base:17.1.0] /home/runner/.gradle/caches/transforms-3/407269bb735bbb2dd149e80dc95822a2/transformed/play-services-base-17.1.0/AndroidManifest.xml:24:13-79
+90            android:exported="false"
+90-->[com.google.android.gms:play-services-base:17.1.0] /home/runner/.gradle/caches/transforms-3/407269bb735bbb2dd149e80dc95822a2/transformed/play-services-base-17.1.0/AndroidManifest.xml:25:13-37
+91            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+91-->[com.google.android.gms:play-services-base:17.1.0] /home/runner/.gradle/caches/transforms-3/407269bb735bbb2dd149e80dc95822a2/transformed/play-services-base-17.1.0/AndroidManifest.xml:26:13-72
+92
+93        <meta-data
+93-->[com.google.android.gms:play-services-basement:17.0.0] /home/runner/.gradle/caches/transforms-3/cf649f13946389c3018e2a3bb5bdce45/transformed/play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+94            android:name="com.google.android.gms.version"
+94-->[com.google.android.gms:play-services-basement:17.0.0] /home/runner/.gradle/caches/transforms-3/cf649f13946389c3018e2a3bb5bdce45/transformed/play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+95            android:value="@integer/google_play_services_version" />
+95-->[com.google.android.gms:play-services-basement:17.0.0] /home/runner/.gradle/caches/transforms-3/cf649f13946389c3018e2a3bb5bdce45/transformed/play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+96
+97        <provider
+97-->[androidx.emoji2:emoji2:1.0.0] /home/runner/.gradle/caches/transforms-3/3e74a7bebca8191734707973760d094e/transformed/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+98            android:name="androidx.startup.InitializationProvider"
+98-->[androidx.emoji2:emoji2:1.0.0] /home/runner/.gradle/caches/transforms-3/3e74a7bebca8191734707973760d094e/transformed/emoji2-1.0.0/AndroidManifest.xml:27:13-67
+99            android:authorities="com.example.qr_go.androidx-startup"
+99-->[androidx.emoji2:emoji2:1.0.0] /home/runner/.gradle/caches/transforms-3/3e74a7bebca8191734707973760d094e/transformed/emoji2-1.0.0/AndroidManifest.xml:28:13-68
+100            android:exported="false" >
+100-->[androidx.emoji2:emoji2:1.0.0] /home/runner/.gradle/caches/transforms-3/3e74a7bebca8191734707973760d094e/transformed/emoji2-1.0.0/AndroidManifest.xml:29:13-37
+101            <meta-data
+101-->[androidx.emoji2:emoji2:1.0.0] /home/runner/.gradle/caches/transforms-3/3e74a7bebca8191734707973760d094e/transformed/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+102                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+102-->[androidx.emoji2:emoji2:1.0.0] /home/runner/.gradle/caches/transforms-3/3e74a7bebca8191734707973760d094e/transformed/emoji2-1.0.0/AndroidManifest.xml:32:17-75
+103                android:value="androidx.startup" />
+103-->[androidx.emoji2:emoji2:1.0.0] /home/runner/.gradle/caches/transforms-3/3e74a7bebca8191734707973760d094e/transformed/emoji2-1.0.0/AndroidManifest.xml:33:17-49
+104            <meta-data
+104-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/runner/.gradle/caches/transforms-3/50198bcd9124397ae18b28f214621175/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+105                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+105-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/runner/.gradle/caches/transforms-3/50198bcd9124397ae18b28f214621175/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+106                android:value="androidx.startup" />
+106-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/runner/.gradle/caches/transforms-3/50198bcd9124397ae18b28f214621175/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+107        </provider>
 108
-109</manifest>
+109        <uses-library
+109-->[androidx.window:window:1.0.0] /home/runner/.gradle/caches/transforms-3/46ff6747cf344798896fc9ef99607d87/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+110            android:name="androidx.window.extensions"
+110-->[androidx.window:window:1.0.0] /home/runner/.gradle/caches/transforms-3/46ff6747cf344798896fc9ef99607d87/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+111            android:required="false" />
+111-->[androidx.window:window:1.0.0] /home/runner/.gradle/caches/transforms-3/46ff6747cf344798896fc9ef99607d87/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+112        <uses-library
+112-->[androidx.window:window:1.0.0] /home/runner/.gradle/caches/transforms-3/46ff6747cf344798896fc9ef99607d87/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+113            android:name="androidx.window.sidecar"
+113-->[androidx.window:window:1.0.0] /home/runner/.gradle/caches/transforms-3/46ff6747cf344798896fc9ef99607d87/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+114            android:required="false" />
+114-->[androidx.window:window:1.0.0] /home/runner/.gradle/caches/transforms-3/46ff6747cf344798896fc9ef99607d87/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+115    </application>
+116
+117</manifest>

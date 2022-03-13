@@ -2,6 +2,15 @@
 <incidents format="6" by="lint 7.1.0" type="incidents">
 
     <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="This folder configuration (`v24`) is unnecessary; `minSdkVersion` is 26. Merge all the resources in this folder into `drawable`.">
+        <fix-data file="${:app*debug*sourceProvider*0*resDir*0}/drawable-v24" folderName="drawable" requiresApi="26"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable-v24"/>
+    </incident>
+
+    <incident
         id="RedundantNamespace"
         severity="warning"
         message="This namespace declaration is redundant">
@@ -34,6 +43,20 @@
             endLine="23"
             endColumn="14"
             endOffset="968"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;QR Code #1&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
+            line="15"
+            column="9"
+            startOffset="624"
+            endLine="15"
+            endColumn="34"
+            endOffset="649"/>
     </incident>
 
     <incident
@@ -93,6 +116,278 @@
     </incident>
 
     <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="8"
+            column="6"
+            startOffset="344"
+            endLine="8"
+            endColumn="15"
+            endOffset="353"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;QR NAME&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="32"
+            column="13"
+            startOffset="1305"
+            endLine="32"
+            endColumn="35"
+            endOffset="1327"/>
+    </incident>
+
+    <incident
+        id="SpUsage"
+        severity="warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes">
+        <fix-replace
+            description="Replace with sp"
+            oldPattern=".*(di?p)"
+            replacement="sp"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="31"
+            column="13"
+            startOffset="1269"
+            endLine="31"
+            endColumn="36"
+            endOffset="1292"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;QR LOCATION&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="41"
+            column="13"
+            startOffset="1648"
+            endLine="41"
+            endColumn="39"
+            endOffset="1674"/>
+    </incident>
+
+    <incident
+        id="SpUsage"
+        severity="warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes">
+        <fix-replace
+            description="Replace with sp"
+            oldPattern=".*(di?p)"
+            replacement="sp"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="40"
+            column="13"
+            startOffset="1612"
+            endLine="40"
+            endColumn="36"
+            endOffset="1635"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Score: 123456&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="54"
+            column="9"
+            startOffset="2124"
+            endLine="54"
+            endColumn="37"
+            endOffset="2152"/>
+    </incident>
+
+    <incident
+        id="SpUsage"
+        severity="warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes">
+        <fix-replace
+            description="Replace with sp"
+            oldPattern=".*(di?p)"
+            replacement="sp"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="55"
+            column="9"
+            startOffset="2161"
+            endLine="55"
+            endColumn="32"
+            endOffset="2184"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;See other players >&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="67"
+            column="9"
+            startOffset="2627"
+            endLine="67"
+            endColumn="43"
+            endOffset="2661"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Send&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="92"
+            column="9"
+            startOffset="3634"
+            endLine="92"
+            endColumn="28"
+            endOffset="3653"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="97"
+            column="6"
+            startOffset="3806"
+            endLine="97"
+            endColumn="14"
+            endOffset="3814"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Type your comment here&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="106"
+            column="9"
+            startOffset="4135"
+            endLine="106"
+            endColumn="46"
+            endOffset="4172"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/list_comments_content.xml"
+            line="9"
+            column="6"
+            startOffset="345"
+            endLine="9"
+            endColumn="15"
+            endOffset="354"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;User Name&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/list_comments_content.xml"
+            line="26"
+            column="9"
+            startOffset="974"
+            endLine="26"
+            endColumn="33"
+            endOffset="998"/>
+    </incident>
+
+    <incident
+        id="SpUsage"
+        severity="warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes">
+        <fix-replace
+            description="Replace with sp"
+            oldPattern=".*(di?p)"
+            replacement="sp"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/list_comments_content.xml"
+            line="25"
+            column="9"
+            startOffset="942"
+            endLine="25"
+            endColumn="32"
+            endOffset="965"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/list_comments_content.xml"
+            line="39"
+            column="9"
+            startOffset="1499"
+            endLine="39"
+            endColumn="147"
+            endOffset="1637"/>
+    </incident>
+
+    <incident
+        id="SpUsage"
+        severity="warning"
+        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes">
+        <fix-replace
+            description="Replace with sp"
+            oldPattern=".*(di?p)"
+            replacement="sp"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/list_comments_content.xml"
+            line="38"
+            column="9"
+            startOffset="1467"
+            endLine="38"
+            endColumn="32"
+            endOffset="1490"/>
+    </incident>
+
+    <incident
         id="HardcodedText"
         severity="warning"
         message="Hardcoded string &quot;Search&quot;, should use `@string` resource">
@@ -149,6 +444,29 @@
     </incident>
 
     <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="This folder configuration (`v26`) is unnecessary; `minSdkVersion` is 26. Merge all the resources in this folder into `mipmap-anydpi`.">
+        <fix-data file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-anydpi-v26" folderName="mipmap-anydpi" requiresApi="26"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-anydpi-v26"/>
+    </incident>
+
+    <incident
+        id="StaticFieldLeak"
+        severity="warning"
+        message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
+            line="36"
+            column="12"
+            startOffset="1226"
+            endLine="36"
+            endColumn="18"
+            endOffset="1232"/>
+    </incident>
+
+    <incident
         id="CommitPrefEdits"
         severity="warning"
         message="`SharedPreferences.edit()` without a corresponding `commit()` or `apply()` call">
@@ -156,10 +474,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
             line="74"
             column="43"
-            startOffset="2891"
+            startOffset="2905"
             endLine="74"
             endColumn="60"
-            endOffset="2908"/>
+            endOffset="2922"/>
     </incident>
 
     <incident
@@ -170,10 +488,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
             line="87"
             column="26"
-            startOffset="3583"
+            startOffset="3597"
             endLine="87"
             endColumn="41"
-            endOffset="3598"/>
+            endOffset="3612"/>
     </incident>
 
     <incident
@@ -184,10 +502,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
             line="90"
             column="26"
-            startOffset="3748"
+            startOffset="3762"
             endLine="90"
             endColumn="43"
-            endOffset="3765"/>
+            endOffset="3779"/>
     </incident>
 
     <incident
@@ -198,10 +516,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
             line="93"
             column="26"
-            startOffset="3915"
+            startOffset="3932"
             endLine="93"
             endColumn="44"
-            endOffset="3933"/>
+            endOffset="3950"/>
     </incident>
 
     <incident
@@ -212,10 +530,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
             line="96"
             column="26"
-            startOffset="4090"
+            startOffset="4107"
             endLine="96"
             endColumn="45"
-            endOffset="4109"/>
+            endOffset="4126"/>
     </incident>
 
     <incident
