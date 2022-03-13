@@ -7,6 +7,7 @@ import androidx.annotation.RequiresApi;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -98,6 +99,15 @@ public class GameQRCode extends QRCode {
         details.put("PhotoRef", "needtofix");
         details.put("Username", user.getUsername());
         userIds.put(user.getUserid(), details);
+    }
+    public ArrayList<String> getUserObjects(){
+        ArrayList<String> out= new ArrayList<String>();
+        for (Map.Entry<String, HashMap<String, String>> details:userIds.entrySet() ){
+            HashMap<String, String> temp = details.getValue();
+            String Username = temp.get("Username");
+            out.add(Username);
+        }
+        return out;
     }
 
     /**

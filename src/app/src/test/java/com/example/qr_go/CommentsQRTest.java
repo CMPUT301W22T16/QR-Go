@@ -16,11 +16,6 @@ import java.util.UUID;
 public class CommentsQRTest {
     public static final String MOCK_MSG = "Test message 1";
     public static final String MOCK_USER = "user1";
-
-
-
-
-
     @Test
     public void testGetMessage() {
         Player player = new Player();
@@ -56,8 +51,6 @@ public class CommentsQRTest {
         comments.addComment(player1, msg, null);
         assertEquals(msg, comments.getMessage(player1.getUserid()));
         assertEquals(2, comments.getComments().size());
-
-
         ArrayList<Comment> commentArrayList = comments.getCommentObjects();
         if (commentArrayList.get(0).getUsername() == MOCK_USER){
             assertEquals("this is new message", commentArrayList.get(0).getMessage());
