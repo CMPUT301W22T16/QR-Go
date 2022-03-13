@@ -3,7 +3,15 @@
     <map id="UnusedResources">
         <entry
             name="model"
-            string="attr[colorControlNormal(R),actionBarSize(R),colorPrimaryVariant(R)],color[purple_200(U),black(U),teal_200(U),white(U),teal_700(U),purple_700(U),purple_500(U)],drawable[round_search_24(U),round_account_circle_24(U),baseline_dashboard_24(U),ic_launcher_foreground(U),round_qr_code_scanner_24(U),ic_launcher_background(U),ic_launcher_foreground_1(R)],id[container(D),buttonSend(U),inputComment(U),nav_my_account(U),qrIcon(U),buttonOtherPlayers(U),commenterName(U),scanner_view(U),location_checkbox(U),score(U),score_text(U),userList(U),qrScore(U),myQRList(U),map(U),nav_my_codes(U),usersContent(D),nav_scan_code(U),message(U),bt_temp_qr(U),bottom_nav_view(U),qrName(U),nav_search(U),qrLocation(D),save_game_qr(U),commenterPhoto(U)],layout[activity_code_scanner(U),activity_scanned_users(U),list_comments_content(U),activity_my_qr_codes(U),activity_qr_info(U),activity_new_game_qractivity(U),list_users_content(U),activity_maps(U)],menu[bottom_nav_menu(U)],mipmap[ic_launcher_round(U),ic_launcher(U)],string[title_activity_maps(U),app_name(U)],style[Theme_QRGo(U),Theme_MaterialComponents_DayNight_DarkActionBar(R)];a^0,b^0,c^0,d^10,e^0,2d^b^2a,2f^e^15^26^1d^13^16^12,30^1b^29,32^1^33,33^a^c^e^b,34^f^d,35^f^d,38^39^9^8^6^5^7^4^2^3;;;"/>
+            string="attr[colorControlNormal(R),actionBarSize(R),colorPrimaryVariant(R)],color[purple_200(U),black(U),teal_200(U),white(U),teal_700(U),purple_700(U),purple_500(U)],drawable[round_search_24(U),round_account_circle_24(U),baseline_dashboard_24(U),ic_launcher_foreground(U),round_qr_code_scanner_24(U),ic_launcher_background(U),ic_launcher_foreground_1(R)],id[container(D),nav_my_account(U),qrIcon(D),nav_scan_code(U),scanner_view(U),location_checkbox(U),score(U),take_qr_photo_imageview(U),score_text(U),bottom_nav_view(U),qrName(D),take_qr_photo_button(U),nav_search(U),qrLocation(D),save_game_qr(U),map(U),nav_my_codes(U)],layout[activity_code_scanner(U),activity_qr_info(D),activity_new_game_qractivity(U),activity_maps(U)],menu[bottom_nav_menu(U)],mipmap[ic_launcher_round(U),ic_launcher(U)],string[title_activity_maps(U),app_name(U)],style[Theme_QRGo(U),Theme_MaterialComponents_DayNight_DarkActionBar(R)],sample[avatars(E)];a^0,b^0,c^0,d^10,e^0,23^2d^13^1b,24^19^1f^7^4^16^1c^17^e,25^1^26,26^a^c^e^b,27^f^d,28^f^d,2b^2c^9^8^6^5^7^4^2^3;;;"/>
+        <location id="R.layout.activity_qr_info"
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="2"
+            column="1"
+            startOffset="39"
+            endLine="45"
+            endColumn="53"
+            endOffset="1809"/>
     </map>
 
 </incidents>
