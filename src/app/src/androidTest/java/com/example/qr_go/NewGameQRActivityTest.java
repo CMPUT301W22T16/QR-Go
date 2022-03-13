@@ -54,7 +54,7 @@ public class NewGameQRActivityTest {
         solo.clickOnCheckBox(CHECKBOX_INDEX); // click on first checkbox
         assertFalse(solo.isCheckBoxChecked(CHECKBOX_INDEX)); // unchecked
     }
-    
+
     @Test
     public void testTakePhoto() {
         // When take photo button is clicked, should launch camera
