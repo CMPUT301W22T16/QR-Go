@@ -93,118 +93,6 @@
     </incident>
 
     <incident
-        id="UselessParent"
-        severity="warning"
-        message="This `LinearLayout` layout or its `LinearLayout` parent is unnecessary">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="7"
-            column="6"
-            startOffset="235"
-            endLine="7"
-            endColumn="18"
-            endOffset="247"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Player 1&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="28"
-            column="17"
-            startOffset="955"
-            endLine="28"
-            endColumn="40"
-            endOffset="978"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;QR Codes&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="38"
-            column="21"
-            startOffset="1410"
-            endLine="38"
-            endColumn="44"
-            endOffset="1433"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;00000&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="44"
-            column="21"
-            startOffset="1647"
-            endLine="44"
-            endColumn="41"
-            endOffset="1667"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Highest Score&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="54"
-            column="21"
-            startOffset="2090"
-            endLine="54"
-            endColumn="49"
-            endOffset="2118"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;00000&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="61"
-            column="21"
-            startOffset="2384"
-            endLine="61"
-            endColumn="41"
-            endOffset="2404"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Highest Score&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="71"
-            column="21"
-            startOffset="2825"
-            endLine="71"
-            endColumn="49"
-            endOffset="2853"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;00000&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="78"
-            column="21"
-            startOffset="3120"
-            endLine="78"
-            endColumn="41"
-            endOffset="3140"/>
-    </incident>
-
-    <incident
         id="HardcodedText"
         severity="warning"
         message="Hardcoded string &quot;Search&quot;, should use `@string` resource">
@@ -266,12 +154,12 @@
         message="`SharedPreferences.edit()` without a corresponding `commit()` or `apply()` call">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="82"
+            line="74"
             column="43"
-            startOffset="3198"
-            endLine="82"
+            startOffset="2891"
+            endLine="74"
             endColumn="60"
-            endOffset="3215"/>
+            endOffset="2908"/>
     </incident>
 
     <incident
@@ -280,12 +168,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="95"
+            line="87"
             column="26"
-            startOffset="3890"
-            endLine="95"
+            startOffset="3583"
+            endLine="87"
             endColumn="41"
-            endOffset="3905"/>
+            endOffset="3598"/>
     </incident>
 
     <incident
@@ -294,12 +182,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="98"
+            line="90"
             column="26"
-            startOffset="4055"
-            endLine="98"
+            startOffset="3748"
+            endLine="90"
             endColumn="43"
-            endOffset="4072"/>
+            endOffset="3765"/>
     </incident>
 
     <incident
@@ -308,12 +196,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="101"
+            line="93"
             column="26"
-            startOffset="4222"
-            endLine="101"
+            startOffset="3915"
+            endLine="93"
             endColumn="44"
-            endOffset="4240"/>
+            endOffset="3933"/>
     </incident>
 
     <incident
@@ -322,26 +210,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="104"
+            line="96"
             column="26"
-            startOffset="4397"
-            endLine="104"
+            startOffset="4090"
+            endLine="96"
             endColumn="45"
-            endOffset="4416"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/PlayerInfoActivity.java"
-            line="72"
-            column="27"
-            startOffset="2836"
-            endLine="72"
-            endColumn="63"
-            endOffset="2872"/>
+            endOffset="4109"/>
     </incident>
 
     <incident

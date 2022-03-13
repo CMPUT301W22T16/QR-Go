@@ -174,10 +174,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 39 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 25 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Sun Mar 13 09:53:25 UTC 2022      </nav>
+Check performed at Sun Mar 13 16:06:45 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -189,12 +189,8 @@ Check performed at Sun Mar 13 09:53:25 UTC 2022      </nav>
       <a class="mdl-navigation__link" href="#NonConstantResourceId"><i class="material-icons warning-icon">warning</i>Checks use of resource IDs in places requiring constants (4)</a>
       <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (8)</a>
       <a class="mdl-navigation__link" href="#MergeRootFrame"><i class="material-icons warning-icon">warning</i>FrameLayout can be replaced with <code>&lt;merge></code> tag (1)</a>
-      <a class="mdl-navigation__link" href="#UnusedResources"><i class="material-icons warning-icon">warning</i>Unused resources (1)</a>
-      <a class="mdl-navigation__link" href="#UselessParent"><i class="material-icons warning-icon">warning</i>Unnecessary parent layout (1)</a>
       <a class="mdl-navigation__link" href="#RedundantNamespace"><i class="material-icons warning-icon">warning</i>Redundant namespace (1)</a>
-      <a class="mdl-navigation__link" href="#SetTextI18n"><i class="material-icons warning-icon">warning</i>TextView Internationalization (1)</a>
-      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (15)</a>
-      <a class="mdl-navigation__link" href="#RtlHardcoded"><i class="material-icons warning-icon">warning</i>Using left/right instead of start/end attributes (4)</a>
+      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (8)</a>
       <a class="mdl-navigation__link" href="#IgnoreWithoutReason"><i class="material-icons warning-icon">warning</i>@Ignore without Reason (1)</a>
     </nav>
   </div>
@@ -229,26 +225,12 @@ Check performed at Sun Mar 13 09:53:25 UTC 2022      </nav>
 <a href="#MergeRootFrame">MergeRootFrame</a>: FrameLayout can be replaced with <code>&lt;merge></code> tag</td></tr>
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#UnusedResources">UnusedResources</a>: Unused resources</td></tr>
-<tr>
-<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#UselessParent">UselessParent</a>: Unnecessary parent layout</td></tr>
-<tr>
-<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#RedundantNamespace">RedundantNamespace</a>: Redundant namespace</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Internationalization">Internationalization</a>
 </td></tr>
 <tr>
-<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#SetTextI18n">SetTextI18n</a>: TextView Internationalization</td></tr>
-<tr>
-<td class="countColumn">15</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">8</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#HardcodedText">HardcodedText</a>: Hardcoded text</td></tr>
-<tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Internationalization:Bidirectional Text">Internationalization:Bidirectional Text</a>
-</td></tr>
-<tr>
-<td class="countColumn">4</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#RtlHardcoded">RtlHardcoded</a>: Using left/right instead of start/end attributes</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Testing">Testing</a>
 </td></tr>
 <tr>
@@ -272,14 +254,14 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:82</span>: <span class="message"><code>SharedPreferences.edit()</code> without a corresponding <code>commit()</code> or <code>apply()</code> call</span><br /><pre class="errorlines">
-<span class="lineno">  79 </span>        <span class="keyword">if</span> (currentUUID == <span class="keyword">null</span>) {
-<span class="lineno">  80 </span>            User newUser = <span class="keyword">new</span> Player();
-<span class="lineno">  81 </span>            currentUUID = newUser.getUserid();
-<span class="caretline"><span class="lineno">  82 </span>            SharedPreferences.Editor ed = <span class="warning">loggedUser.edit()</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  83 </span>            ed.putString(User.USER_ID, currentUUID);
-<span class="lineno">  84 </span>            <span class="comment">// TODO save user to the firestore database</span>
-<span class="lineno">  85 </span>        }
+<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:74</span>: <span class="message"><code>SharedPreferences.edit()</code> without a corresponding <code>commit()</code> or <code>apply()</code> call</span><br /><pre class="errorlines">
+<span class="lineno">  71 </span>        <span class="keyword">if</span> (currentUUID == <span class="keyword">null</span>) {
+<span class="lineno">  72 </span>            User newUser = <span class="keyword">new</span> Player();
+<span class="lineno">  73 </span>            currentUUID = newUser.getUserid();
+<span class="caretline"><span class="lineno">  74 </span>            SharedPreferences.Editor ed = <span class="warning">loggedUser.edit()</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  75 </span>            ed.putString(User.USER_ID, currentUUID);
+<span class="lineno">  76 </span>            <span class="comment">// TODO save user to the firestore database</span>
+<span class="lineno">  77 </span>        }
 </pre>
 
 </div>
@@ -368,44 +350,44 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:95</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
-<span class="lineno">  92 </span>            <span class="keyword">public</span> <span class="keyword">boolean</span> onNavigationItemSelected(<span class="annotation">@NonNull</span> MenuItem item) {
-<span class="lineno">  93 </span>                <span class="keyword">int</span> id = item.getItemId();
-<span class="lineno">  94 </span>                <span class="keyword">switch</span> (id) {
-<span class="caretline"><span class="lineno">  95 </span>                    <span class="keyword">case</span> <span class="warning">R.id.nav_search</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  96 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
-<span class="lineno">  97 </span>                        <span class="keyword">break</span>;
-<span class="lineno">  98 </span>                    <span class="keyword">case</span> R.id.nav_my_codes:
+<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:87</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
+<span class="lineno">  84 </span>            <span class="keyword">public</span> <span class="keyword">boolean</span> onNavigationItemSelected(<span class="annotation">@NonNull</span> MenuItem item) {
+<span class="lineno">  85 </span>                <span class="keyword">int</span> id = item.getItemId();
+<span class="lineno">  86 </span>                <span class="keyword">switch</span> (id) {
+<span class="caretline"><span class="lineno">  87 </span>                    <span class="keyword">case</span> <span class="warning">R.id.nav_search</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  88 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
+<span class="lineno">  89 </span>                        <span class="keyword">break</span>;
+<span class="lineno">  90 </span>                    <span class="keyword">case</span> R.id.nav_my_codes:
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:98</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
-<span class="lineno">  95 </span>                    <span class="keyword">case</span> R.id.nav_search:
-<span class="lineno">  96 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
-<span class="lineno">  97 </span>                        <span class="keyword">break</span>;
-<span class="caretline"><span class="lineno">  98 </span>                    <span class="keyword">case</span> <span class="warning">R.id.nav_my_codes</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  99 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
-<span class="lineno"> 100 </span>                        <span class="keyword">break</span>;
-<span class="lineno"> 101 </span>                    <span class="keyword">case</span> R.id.nav_scan_code:
+<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:90</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
+<span class="lineno">  87 </span>                    <span class="keyword">case</span> R.id.nav_search:
+<span class="lineno">  88 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
+<span class="lineno">  89 </span>                        <span class="keyword">break</span>;
+<span class="caretline"><span class="lineno">  90 </span>                    <span class="keyword">case</span> <span class="warning">R.id.nav_my_codes</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  91 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
+<span class="lineno">  92 </span>                        <span class="keyword">break</span>;
+<span class="lineno">  93 </span>                    <span class="keyword">case</span> R.id.nav_scan_code:
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:101</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
-<span class="lineno">  98 </span>                    <span class="keyword">case</span> R.id.nav_my_codes:
-<span class="lineno">  99 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
-<span class="lineno"> 100 </span>                        <span class="keyword">break</span>;
-<span class="caretline"><span class="lineno"> 101 </span>                    <span class="keyword">case</span> <span class="warning">R.id.nav_scan_code</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 102 </span>                        startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, QRCodeScannerActivity.<span class="keyword">class</span>));
-<span class="lineno"> 103 </span>                        <span class="keyword">break</span>;
-<span class="lineno"> 104 </span>                    <span class="keyword">case</span> R.id.nav_my_account:
+<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:93</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
+<span class="lineno">  90 </span>                    <span class="keyword">case</span> R.id.nav_my_codes:
+<span class="lineno">  91 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
+<span class="lineno">  92 </span>                        <span class="keyword">break</span>;
+<span class="caretline"><span class="lineno">  93 </span>                    <span class="keyword">case</span> <span class="warning">R.id.nav_scan_code</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  94 </span>                        startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, QRCodeScannerActivity.<span class="keyword">class</span>));
+<span class="lineno">  95 </span>                        <span class="keyword">break</span>;
+<span class="lineno">  96 </span>                    <span class="keyword">case</span> R.id.nav_my_account:
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:104</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
-<span class="lineno"> 101 </span>                    <span class="keyword">case</span> R.id.nav_scan_code:
-<span class="lineno"> 102 </span>                        startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, QRCodeScannerActivity.<span class="keyword">class</span>));
-<span class="lineno"> 103 </span>                        <span class="keyword">break</span>;
-<span class="caretline"><span class="lineno"> 104 </span>                    <span class="keyword">case</span> <span class="warning">R.id.nav_my_account</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 105 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
-<span class="lineno"> 106 </span>                        <span class="keyword">break</span>;
-<span class="lineno"> 107 </span>                }
+<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:96</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
+<span class="lineno">  93 </span>                    <span class="keyword">case</span> R.id.nav_scan_code:
+<span class="lineno">  94 </span>                        startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, QRCodeScannerActivity.<span class="keyword">class</span>));
+<span class="lineno">  95 </span>                        <span class="keyword">break</span>;
+<span class="caretline"><span class="lineno">  96 </span>                    <span class="keyword">case</span> <span class="warning">R.id.nav_my_account</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  97 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
+<span class="lineno">  98 </span>                        <span class="keyword">break</span>;
+<span class="lineno">  99 </span>                }
 </pre>
 
 </div>
@@ -590,96 +572,6 @@ If a <code>&lt;FrameLayout></code> is the root of a layout and does not provide 
 Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="MergeRootFrameCardLink" onclick="hideid('MergeRootFrameCard');">
 Dismiss</button>            </div>
             </div>
-          </section><a name="UnusedResources"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="UnusedResourcesCard" style="display: block;">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Unused resources</h2>
-  </div>
-              <div class="mdl-card__supporting-text">
-<div class="issue">
-<div class="warningslist">
-<span class="location"><a href="../../src/main/res/drawable/sample_prof_pic.xml">../../src/main/res/drawable/sample_prof_pic.xml</a>:2</span>: <span class="message">The resource <code>R.drawable.sample_prof_pic</code> appears to be unused</span><br /><pre class="errorlines">
-<span class="lineno"> 1 </span><span class="prologue">&lt;?xml version="1.0" encoding="utf-8"?></span>
-<span class="caretline"><span class="lineno"> 2 </span><span class="warning"><span class="tag">&lt;selector</span><span class="attribute"> </span><span class="prefix">xmlns:</span><span class="attribute">android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span>></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 3 </span>
-<span class="lineno"> 4 </span><span class="tag">&lt;/selector></span></pre>
-
-</div>
-<div class="metadata"><div class="explanation" id="explanationUnusedResources" style="display: none;">
-Unused resources make applications larger and slow down builds.<br/>
-<br/>
-The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.<br/>
-<br/>
-You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
-To suppress this error, use the issue id "UnusedResources" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="chips">
-<span class="mdl-chip">
-    <span class="mdl-chip__text">UnusedResources</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Performance</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Warning</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 3/10</span>
-</span>
-</div>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationUnusedResourcesLink" onclick="reveal('explanationUnusedResources');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="UnusedResourcesCardLink" onclick="hideid('UnusedResourcesCard');">
-Dismiss</button>            </div>
-            </div>
-          </section><a name="UselessParent"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="UselessParentCard" style="display: block;">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Unnecessary parent layout</h2>
-  </div>
-              <div class="mdl-card__supporting-text">
-<div class="issue">
-<div class="warningslist">
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:7</span>: <span class="message">This <code>LinearLayout</code> layout or its <code>LinearLayout</code> parent is unnecessary</span><br /><pre class="errorlines">
-<span class="lineno">  4 </span>    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"match_parent"</span>
-<span class="lineno">  5 </span>    <span class="prefix">android:</span><span class="attribute">orientation</span>=<span class="value">"vertical"</span>>
-<span class="lineno">  6 </span>
-<span class="caretline"><span class="lineno">  7 </span>    <span class="tag">&lt;</span><span class="warning"><span class="tag">LinearLayout</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
-</span><span class="lineno">  8 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
-<span class="lineno">  9 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 10 </span>        <span class="prefix">android:</span><span class="attribute">orientation</span>=<span class="value">"horizontal"</span></pre>
-
-</div>
-<div class="metadata"><div class="explanation" id="explanationUselessParent" style="display: none;">
-A layout with children that has no siblings, is not a scrollview or a root layout, and does not have a background, can be removed and have its children moved directly into the parent for a flatter and more efficient layout hierarchy.<br/>To suppress this error, use the issue id "UselessParent" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="chips">
-<span class="mdl-chip">
-    <span class="mdl-chip__text">UselessParent</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Performance</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Warning</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 2/10</span>
-</span>
-</div>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationUselessParentLink" onclick="reveal('explanationUselessParent');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="UselessParentCardLink" onclick="hideid('UselessParentCard');">
-Dismiss</button>            </div>
-            </div>
           </section><a name="RedundantNamespace"></a>
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="RedundantNamespaceCard" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
@@ -727,55 +619,7 @@ Dismiss</button>            </div>
             </div>
           </section>
 <a name="Internationalization"></a>
-<a name="SetTextI18n"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="SetTextI18nCard" style="display: block;">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">TextView Internationalization</h2>
-  </div>
-              <div class="mdl-card__supporting-text">
-<div class="issue">
-<div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/example/qr_go/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/PlayerInfoActivity.java</a>:72</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno">  69 </span>                    }
-<span class="lineno">  70 </span>                });
-<span class="lineno">  71 </span>        usernameText.setText(selectedUser.getUsername());
-<span class="caretline"><span class="lineno">  72 </span>        qrNumText.setText(<span class="warning">Integer.toString(myQRCodeIDs.size())</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  73 </span>        totalScoreText.setText(userScore);
-<span class="lineno">  74 </span>
-</pre>
-
-</div>
-<div class="metadata"><div class="explanation" id="explanationSetTextI18n" style="display: none;">
-When calling <code>TextView#setText</code><br/>
-* Never call <code>Number#toString()</code> to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using <code>String#format</code> with proper format specifications (<code>%d</code> or <code>%f</code>) instead.<br/>
-* Do not pass a string literal (e.g. "Hello") to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.<br/>
-* Do not build messages by concatenating text chunks. Such messages can not be properly translated.<br/><div class="moreinfo">More info: <a href="https://developer.android.com/guide/topics/resources/localization.html">https://developer.android.com/guide/topics/resources/localization.html</a>
-</div>To suppress this error, use the issue id "SetTextI18n" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="chips">
-<span class="mdl-chip">
-    <span class="mdl-chip__text">SetTextI18n</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Internationalization</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Warning</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 6/10</span>
-</span>
-</div>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationSetTextI18nLink" onclick="reveal('explanationSetTextI18n');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="SetTextI18nCardLink" onclick="hideid('SetTextI18nCard');">
-Dismiss</button>            </div>
-            </div>
-          </section><a name="HardcodedText"></a>
+<a name="HardcodedText"></a>
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="HardcodedTextCard" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
   <div class="mdl-card__title">
@@ -821,71 +665,6 @@ Dismiss</button>            </div>
 <span class="lineno"> 53 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintBottom_toTopOf</span>=<span class="value">"@+id/save_game_qr"</span>
 <span class="lineno"> 54 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:28</span>: <span class="message">Hardcoded string "Player 1", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 25 </span><span class="attribute">                </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/userNameText"</span>
-<span class="lineno"> 26 </span>                <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
-<span class="lineno"> 27 </span>                <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 28 </span>                <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Player 1"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 29 </span>                <span class="prefix">android:</span><span class="attribute">textStyle</span>=<span class="value">"bold|italic"</span>/>
-<span class="lineno"> 30 </span>            <span class="tag">&lt;LinearLayout</span><span class="attribute">
-</span><span class="lineno"> 31 </span><span class="attribute">                </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/QRData"</span></pre>
-
-<button class="mdl-button mdl-js-button mdl-button--primary" id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 10 More Occurrences...</button>
-<div id="HardcodedTextDiv" style="display: none">
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:38</span>: <span class="message">Hardcoded string "QR Codes", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 35 </span>                <span class="tag">&lt;TextView</span><span class="attribute">
-</span><span class="lineno"> 36 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 37 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 38 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"QR Codes"</span></span>/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 39 </span>
-<span class="lineno"> 40 </span>                <span class="tag">&lt;TextView</span><span class="attribute">
-</span><span class="lineno"> 41 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/numOfQRCodes"</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:44</span>: <span class="message">Hardcoded string "00000", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 41 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/numOfQRCodes"</span>
-<span class="lineno"> 42 </span>                    <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 43 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 44 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"00000"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 45 </span>            <span class="tag">&lt;/LinearLayout></span>
-<span class="lineno"> 46 </span>            <span class="tag">&lt;LinearLayout</span><span class="attribute">
-</span><span class="lineno"> 47 </span><span class="attribute">                </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/highestScoreData"</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:54</span>: <span class="message">Hardcoded string "Highest Score", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 51 </span>                <span class="tag">&lt;TextView</span><span class="attribute">
-</span><span class="lineno"> 52 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 53 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 54 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Highest Score"</span></span>/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 55 </span>
-<span class="lineno"> 56 </span>                <span class="tag">&lt;TextView</span><span class="attribute">
-</span><span class="lineno"> 57 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/userHighScore"</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:61</span>: <span class="message">Hardcoded string "00000", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 58 </span>                    <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 59 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 60 </span>                    <span class="prefix">android:</span><span class="attribute">layout_gravity</span>=<span class="value">"right"</span>
-<span class="caretline"><span class="lineno"> 61 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"00000"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 62 </span>            <span class="tag">&lt;/LinearLayout></span>
-<span class="lineno"> 63 </span>            <span class="tag">&lt;LinearLayout</span><span class="attribute">
-</span><span class="lineno"> 64 </span><span class="attribute">                </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/totalScoreData"</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:71</span>: <span class="message">Hardcoded string "Highest Score", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 68 </span>                <span class="tag">&lt;TextView</span><span class="attribute">
-</span><span class="lineno"> 69 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 70 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 71 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Highest Score"</span></span>/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 72 </span>
-<span class="lineno"> 73 </span>                <span class="tag">&lt;TextView</span><span class="attribute">
-</span><span class="lineno"> 74 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/userTotalScore"</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:78</span>: <span class="message">Hardcoded string "00000", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 75 </span>                    <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 76 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 77 </span>                    <span class="prefix">android:</span><span class="attribute">layout_gravity</span>=<span class="value">"right"</span>
-<span class="caretline"><span class="lineno"> 78 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"00000"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 79 </span>            <span class="tag">&lt;/LinearLayout></span>
-<span class="lineno"> 80 </span>
-<span class="lineno"> 81 </span>        <span class="tag">&lt;/LinearLayout></span></pre>
-
 <span class="location"><a href="../../src/main/res/menu/bottom_nav_menu.xml">../../src/main/res/menu/bottom_nav_menu.xml</a>:7</span>: <span class="message">Hardcoded string "Search", should use <code>@string</code> resource</span><br /><pre class="errorlines">
 <span class="lineno">  4 </span>    <span class="tag">&lt;item</span><span class="attribute">
 </span><span class="lineno">  5 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/nav_search"</span>
@@ -922,7 +701,6 @@ Dismiss</button>            </div>
 <span class="lineno"> 24 </span><span class="tag">&lt;/menu></span></pre>
 
 </div>
-</div>
 <div class="metadata"><div class="explanation" id="explanationHardcodedText" style="display: none;">
 Hardcoding text attributes directly in layout files is bad for several reasons:<br/>
 <br/>
@@ -952,87 +730,6 @@ There are quickfixes to automatically extract this hardcoded string into a resou
               <div class="mdl-card__actions mdl-card--border">
 <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationHardcodedTextLink" onclick="reveal('explanationHardcodedText');">
 Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="HardcodedTextCardLink" onclick="hideid('HardcodedTextCard');">
-Dismiss</button>            </div>
-            </div>
-          </section>
-<a name="Internationalization:Bidirectional Text"></a>
-<a name="RtlHardcoded"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="RtlHardcodedCard" style="display: block;">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Using left/right instead of start/end attributes</h2>
-  </div>
-              <div class="mdl-card__supporting-text">
-<div class="issue">
-<div class="warningslist">
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:14</span>: <span class="message">Consider replacing <code>android:layout_marginLeft</code> with <code>android:layout_marginStart="50dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 11 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"100dp"</span>>
-<span class="lineno"> 12 </span>
-<span class="lineno"> 13 </span>        <span class="tag">&lt;TextView</span><span class="attribute">
-</span><span class="caretline"><span class="lineno"> 14 </span><span class="attribute">            </span><span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginLeft</span></span>=<span class="value">"50dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 15 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"100dp"</span>
-<span class="lineno"> 16 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"100dp"</span>/>
-</pre>
-
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:21</span>: <span class="message">Consider replacing <code>android:layout_marginLeft</code> with <code>android:layout_marginStart="50dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 18 </span>        <span class="tag">&lt;LinearLayout</span><span class="attribute">
-</span><span class="lineno"> 19 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"200dp"</span>
-<span class="lineno"> 20 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"128dp"</span>
-<span class="caretline"><span class="lineno"> 21 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginLeft</span></span>=<span class="value">"50dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 22 </span>            <span class="prefix">android:</span><span class="attribute">orientation</span>=<span class="value">"vertical"</span>>
-<span class="lineno"> 23 </span>
-<span class="lineno"> 24 </span>            <span class="tag">&lt;TextView</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:60</span>: <span class="message">Use "<code>end</code>" instead of "<code>right</code>" to ensure correct behavior in right-to-left locales</span><br /><pre class="errorlines">
-<span class="lineno"> 57 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/userHighScore"</span>
-<span class="lineno"> 58 </span>                    <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 59 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 60 </span>                    <span class="prefix">android:</span><span class="attribute">layout_gravity</span>=<span class="value">"</span><span class="warning"><span class="value">right</span></span><span class="value">"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 61 </span>                    <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"00000"</span> />
-<span class="lineno"> 62 </span>            <span class="tag">&lt;/LinearLayout></span>
-<span class="lineno"> 63 </span>            <span class="tag">&lt;LinearLayout</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:77</span>: <span class="message">Use "<code>end</code>" instead of "<code>right</code>" to ensure correct behavior in right-to-left locales</span><br /><pre class="errorlines">
-<span class="lineno"> 74 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/userTotalScore"</span>
-<span class="lineno"> 75 </span>                    <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 76 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 77 </span>                    <span class="prefix">android:</span><span class="attribute">layout_gravity</span>=<span class="value">"</span><span class="warning"><span class="value">right</span></span><span class="value">"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 78 </span>                    <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"00000"</span> />
-<span class="lineno"> 79 </span>            <span class="tag">&lt;/LinearLayout></span>
-</pre>
-
-</div>
-<div class="metadata"><div class="explanation" id="explanationRtlHardcoded" style="display: none;">
-Using <code>Gravity#LEFT</code> and <code>Gravity#RIGHT</code> can lead to problems when a layout is rendered in locales where text flows from right to left. Use <code>Gravity#START</code> and <code>Gravity#END</code> instead. Similarly, in XML <code>gravity</code> and <code>layout_gravity</code> attributes, use <code>start</code> rather than <code>left</code>.<br/>
-<br/>
-For XML attributes such as paddingLeft and <code>layout_marginLeft</code>, use <code>paddingStart</code> and <code>layout_marginStart</code>. <b>NOTE</b>: If your <code>minSdkVersion</code> is less than 17, you should add <b>both</b> the older left/right attributes <b>as well as</b> the new start/end attributes. On older platforms, where RTL is not supported and the start/end attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.<br/>
-<br/>
-(Note: For <code>Gravity#LEFT</code> and <code>Gravity#START</code>, you can use these constants even when targeting older platforms, because the <code>start</code> bitmask is a superset of the <code>left</code> bitmask. Therefore, you can use <code>gravity="start"</code> rather than <code>gravity="left|start"</code>.)<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
-To suppress this error, use the issue id "RtlHardcoded" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="chips">
-<span class="mdl-chip">
-    <span class="mdl-chip__text">RtlHardcoded</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Bidirectional Text</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Internationalization</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Warning</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 5/10</span>
-</span>
-</div>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationRtlHardcodedLink" onclick="reveal('explanationRtlHardcoded');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="RtlHardcodedCardLink" onclick="hideid('RtlHardcodedCard');">
 Dismiss</button>            </div>
             </div>
           </section>
