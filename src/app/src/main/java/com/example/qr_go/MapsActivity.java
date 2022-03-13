@@ -105,7 +105,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         QRGoDBUtil DBUti = new QRGoDBUtil();
-        DBUti.test1();
+        DBUti.test3();
 
 
     }
