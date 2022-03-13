@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":2,"i1":2,"i2":1,"i3":2,"i4":2,"i5":2,"i6":2,"i7":2,"i8":2,"i9":2,"i10":2,"i11":2,"i12":2,"i13":2,"i14":2,"i15":2,"i16":2,"i17":2,"i18":2};
+var data = {"i0":2,"i1":2,"i2":2,"i3":1,"i4":2,"i5":2,"i6":2,"i7":2,"i8":2,"i9":2,"i10":2,"i11":2,"i12":2,"i13":2,"i14":2,"i15":2,"i16":2,"i17":2,"i18":2,"i19":2};
 var tabs = {65535:["t0","All Classes"],1:["t1","Interface Summary"],2:["t2","Class Summary"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -111,43 +111,49 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <tr id="i0" class="altColor">
 <td class="colFirst"><a href="com/example/qr_go/Comment.html" title="class in com.example.qr_go">Comment</a></td>
 <th class="colLast" scope="row">
-<div class="block">this is the revised version of comments, originally Matthew's code</div>
+<div class="block">This is a class that represents a comment made by a user to a QRCode</div>
 </th>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><a href="com/example/qr_go/CommentsQR.html" title="class in com.example.qr_go">CommentsQR</a></td>
+<th class="colLast" scope="row">
+<div class="block">this is the revised version of comments, originally Matthew's code</div>
+</th>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><a href="com/example/qr_go/GameQRCode.html" title="class in com.example.qr_go">GameQRCode</a></td>
 <th class="colLast" scope="row">
 <div class="block">GameQRCode represents QR codes that players will scan to score points
  Each GameQRCode contains a list of users that scanned it</div>
 </th>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><a href="com/example/qr_go/GeneratesNewQR.html" title="interface in com.example.qr_go">GeneratesNewQR</a></td>
 <th class="colLast" scope="row">&nbsp;</th>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><a href="com/example/qr_go/GeoLocation.html" title="class in com.example.qr_go">GeoLocation</a></td>
 <th class="colLast" scope="row">&nbsp;</th>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><a href="com/example/qr_go/ListComments.html" title="class in com.example.qr_go">ListComments</a></td>
 <th class="colLast" scope="row">
 <div class="block">list of comments to be stored into database</div>
 </th>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><a href="com/example/qr_go/LoginQRCode.html" title="class in com.example.qr_go">LoginQRCode</a></td>
 <th class="colLast" scope="row">
 <div class="block">LoginQRCode is the QR code that users can use to login to their account on another device</div>
 </th>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><a href="com/example/qr_go/MapsActivity.html" title="class in com.example.qr_go">MapsActivity</a></td>
 <th class="colLast" scope="row">
 <div class="block">MainActivity</div>
 </th>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><a href="com/example/qr_go/NewGameQRActivity.html" title="class in com.example.qr_go">NewGameQRActivity</a></td>
 <th class="colLast" scope="row">
 <div class="block">This activity is shown after user scans a QR code
@@ -155,27 +161,27 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  1.</div>
 </th>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><a href="com/example/qr_go/Owner.html" title="class in com.example.qr_go">Owner</a></td>
 <th class="colLast" scope="row">
 <div class="block">Class that represents an owner user with enhanced privileges</div>
 </th>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><a href="com/example/qr_go/Photo.html" title="class in com.example.qr_go">Photo</a></td>
 <th class="colLast" scope="row">&nbsp;</th>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><a href="com/example/qr_go/Player.html" title="class in com.example.qr_go">Player</a></td>
 <th class="colLast" scope="row">
 <div class="block">Class that represents a regular player user</div>
 </th>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><a href="com/example/qr_go/ProfilePicture.html" title="class in com.example.qr_go">ProfilePicture</a></td>
 <th class="colLast" scope="row">&nbsp;</th>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><a href="com/example/qr_go/QRCode.html" title="class in com.example.qr_go">QRCode</a></td>
 <th class="colLast" scope="row">
 <div class="block">QRCode is the super class from which GameQRCode and LoginQRCode subclasses extend from
@@ -183,34 +189,34 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  This hash is stored into the protected variable `hash`</div>
 </th>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><a href="com/example/qr_go/QRCodeScannerActivity.html" title="class in com.example.qr_go">QRCodeScannerActivity</a></td>
 <th class="colLast" scope="row">
 <div class="block">QRCodeScanner is the activity that scans QR codes
  Library: https://github.com/yuriy-budiyev/code-scanner</div>
 </th>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><a href="com/example/qr_go/QRGoDBUtil.html" title="class in com.example.qr_go">QRGoDBUtil</a></td>
 <th class="colLast" scope="row">&nbsp;</th>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><a href="com/example/qr_go/QRPhoto.html" title="class in com.example.qr_go">QRPhoto</a></td>
 <th class="colLast" scope="row">&nbsp;</th>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><a href="com/example/qr_go/StatusQRCode.html" title="class in com.example.qr_go">StatusQRCode</a></td>
 <th class="colLast" scope="row">
 <div class="block">StatusQRCode allows other plays to scan in order to view the status page of a player</div>
 </th>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><a href="com/example/qr_go/User.html" title="class in com.example.qr_go">User</a></td>
 <th class="colLast" scope="row">
 <div class="block">Represents a user.</div>
 </th>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><a href="com/example/qr_go/UsernameGenerator.html" title="class in com.example.qr_go">UsernameGenerator</a></td>
 <th class="colLast" scope="row">
 <div class="block">Class for generating usernames</div>
