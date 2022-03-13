@@ -90,7 +90,14 @@ public class NewGameQRActivity extends AppCompatActivity {
                 LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
                 @SuppressLint("MissingPermission") Location gpsLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
                 @SuppressLint("MissingPermission") Location networkLocation = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-                gameQRCode.setLocation(gpsLocation!=null?   gpsLocation : networkLocation); // set the location
+                GeoLocation gpsGeoLocation = new GeoLocation(gameQRCode.getId());
+                if(gpsLocation!=null) {
+                    gpsGeoLocation.setCoords(gpsLocation.getLongitude(), gpsLocation.getLatitude());
+                } else {
+                    gpsGeoLocation.setCoords(networkLocation.getLongitude(), networkLocation.getLatitude());
+                }
+
+                gameQRCode.setGeoLocation(gpsGeoLocation); // set the location
             }
 
         } catch (NoSuchMethodError e) {

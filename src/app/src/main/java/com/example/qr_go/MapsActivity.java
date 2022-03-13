@@ -31,6 +31,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * MainActivity
@@ -41,7 +42,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private static String currentUUID;
     FirebaseFirestore db;
     CollectionReference collectionReference;
-    ArrayList<ArrayList<String>> latLonList;
+    ArrayList<GeoLocation> geoLocationList;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -117,13 +118,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     @Override
                     // code from https://stackoverflow.com/questions/65465335/get-specific-field-from-firestore-with-whereequalto
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        
+                        HashMap<String, Integer> tempMap = new HashMap<>();
                         if(task.isSuccessful()) {
-                            ArrayList<String> tempList = new ArrayList<String>();
+
                             for(QueryDocumentSnapshot document : task.getResult()) {
-                                tempList.add((String)document.get("latitude"));
-                                tempList.add((String)document.get("longitude"));
-                                latLonList.add(tempList);
+                                GeoLocation tempGeoLocation = new GeoLocation((String)document.get("id"));
+                                tempGeoLocation.setCoords(tempMap.get("longitude"),tempMap.get("latitude"));
+                                geoLocationList.add(tempGeoLocation);
+
                             }
                         }
                     }
@@ -148,14 +150,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        for(int i = 0; i< latLonList.size(); i++){
-            LatLng newLoc = new LatLng(Integer.parseInt(latLonList.get(i).get(0)), Integer.parseInt(latLonList.get(i).get(1)));
+        for(int i = 0; i< geoLocationList.size(); i++){
+            LatLng newLoc = new LatLng(geoLocationList.get(i).getLatitude(), geoLocationList.get(i).getLongitude());
             mMap.addMarker(new MarkerOptions().position(newLoc).title("NewMarker"));
         }
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
 
     /**
