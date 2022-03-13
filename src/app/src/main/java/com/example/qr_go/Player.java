@@ -24,8 +24,8 @@ public class Player extends User {
      * Constructor for player class for mock data
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public Player(String uuid, String password, String username, Integer totalScore, String email) {
-        super(uuid, password, username, totalScore, email);
+    public Player(String uuid, String password, String username, String email) {
+        super(uuid, password, username, email);
     }
 
     /**
