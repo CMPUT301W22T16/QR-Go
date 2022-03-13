@@ -112,26 +112,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
-        db.collection("GameQRCodes")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    // code from https://stackoverflow.com/questions/65465335/get-specific-field-from-firestore-with-whereequalto
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        HashMap<String, Integer> tempMap = new HashMap<>();
-                        if(task.isSuccessful()) {
 
-                            for(QueryDocumentSnapshot document : task.getResult()) {
-                                GeoLocation tempGeoLocation = new GeoLocation((String)document.get("id"));
-                                tempGeoLocation.setCoords(tempMap.get("longitude"),tempMap.get("latitude"));
-                                geoLocationList.add(tempGeoLocation);
-
-                            }
-                        }
-                    }
-
-
-                });
 
 
 
@@ -150,10 +131,30 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        for(int i = 0; i< geoLocationList.size(); i++){
-            LatLng newLoc = new LatLng(geoLocationList.get(i).getLatitude(), geoLocationList.get(i).getLongitude());
-            mMap.addMarker(new MarkerOptions().position(newLoc).title("NewMarker"));
-        }
+        db.collection("GameQRCodes")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    // code from https://stackoverflow.com/questions/65465335/get-specific-field-from-firestore-with-whereequalto
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        HashMap<String, Integer> tempMap = new HashMap<>();
+                        if(task.isSuccessful()) {
+
+                            for(QueryDocumentSnapshot document : task.getResult()) {
+                                GeoLocation tempGeoLocation = new GeoLocation((String)document.get("id"));
+                                tempGeoLocation.setCoords(tempMap.get("longitude"),tempMap.get("latitude"));
+                                geoLocationList.add(tempGeoLocation);
+                            }
+                        }
+                        for(int i = 0; i< geoLocationList.size(); i++){
+                            LatLng newLoc = new LatLng(geoLocationList.get(i).getLatitude(), geoLocationList.get(i).getLongitude());
+                            mMap.addMarker(new MarkerOptions().position(newLoc).title("NewMarker"));
+                        }
+                    }
+
+
+                });
+
     }
 
     /**
