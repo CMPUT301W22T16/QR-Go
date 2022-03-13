@@ -110,7 +110,7 @@ public class QRGoDBUtil {
      * @param gameqrcode
      * @Author Darius Fang
      */
-    void addCommenttoDB( Comment comments, GameQRCode gameqrcode){
+    void addCommenttoDB( CommentsQR comments, GameQRCode gameqrcode){
         db.collection("Comments").document(gameqrcode.getHash()).set(comments.getComments());
     }
 
@@ -190,7 +190,7 @@ public class QRGoDBUtil {
         /**
          * Assumption: in qrinfo activity, comments are loaded, input updated comments
          */
-        Comment comments = new Comment();
+        CommentsQR comments = new CommentsQR();
         comments.addComment(player, "hi this is working", null);
 
 //        playerids of qrcode

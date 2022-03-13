@@ -1,40 +1,18 @@
 package com.example.qr_go;
 
-import java.util.HashMap;
+import java.io.Serializable;
 import java.util.UUID;
 
 /**
  * This is a class that represents a comment made by a user to a QRCode
  */
+public class Comment implements Serializable {
+    private String message;
+    private String username;
 
-/**
- * this is the revised version of comments, originally Matthew's code
- * @Author Darius Fang
- */
-public class Comment {
-    private HashMap<String, String> details = new HashMap<>();
-    private HashMap<String, HashMap<String, String>> comments;
-    public Comment(User user, String message, String photolink) {
-        this.comments = new HashMap<>();
-        createDetails(user, message, photolink);
-        comments.put(user.getUserid(), details);
-    }
-    public Comment() {
-        this.comments = new HashMap<>();
-    }
-    private void createDetails(User user, String message, String photolink){
-        details.clear();
-        details.put("Username", user.getUsername());
-        details.put("Message", message);
-        details.put("PhotoRef", photolink);
-    }
-    public void addComment(User user, String message, String photolink){
-        createDetails(user, message, photolink);
-        comments.put(user.getUserid(), details);
-    }
-    public HashMap<String, HashMap<String, String>> getComments()
-    {
-        return this.comments;
+    public Comment(String username, String message) {
+        this.username = username;
+        this.message = message;
 
     }
 
@@ -43,10 +21,12 @@ public class Comment {
      * @return
      *      Returns this comment's message
      */
-    public String getMessage(String userId)
-    {
-        return comments.get(userId).get("Message");
+    public String getMessage() {
+        return message;
+    }
 
+    public String getUsername() {
+        return username;
     }
 
     /**
@@ -54,11 +34,8 @@ public class Comment {
      * @param message
      *          The new message that replaces the old message
      */
-    public void setMessage(String userId, String message) {
-        HashMap<String, String> details = comments.get(userId);
-        details.put("Message", message);
-        comments.put(userId, details);
-
+    public void setMessage(String message) {
+        this.message = message;
     }
 
 
