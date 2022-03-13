@@ -43,7 +43,7 @@ public class ListComments extends ArrayAdapter {
         TextView message = (TextView) view.findViewById(R.id.message);
 
         // show comment's message
-        message.setText(comment.getMessage());
+//        message.setText(comment.getMessage());
 
         return view;
     }

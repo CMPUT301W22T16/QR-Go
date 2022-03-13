@@ -3,6 +3,7 @@ package com.example.qr_go;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -55,7 +56,9 @@ public class QRInfoActivity extends AppCompatActivity {
      * Adds a new comment to this page
      */
     public void addComment(View view) {
-
+        EditText newCommentMsg = (EditText) findViewById(R.id.inputComment);
+        String message = newCommentMsg.getText().toString();
+        Comment comment = new Comment();
     }
 
 }
