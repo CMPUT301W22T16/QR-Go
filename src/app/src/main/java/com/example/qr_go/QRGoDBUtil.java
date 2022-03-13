@@ -130,17 +130,17 @@ public class QRGoDBUtil {
                 }catch (Exception e){
                     /** sometimes the db picks up that it exists while in fact it does not... strange
                      */
-                    ListComments comments = new ListComments();
-                    comments.addComment(comment);
-                    addCommenttoDBContinue(comments, gameqrcode);
+//                    ListComments comments = new ListComments();
+//                    comments.addComment(comment);
+//                    addCommenttoDBContinue(comments, gameqrcode);
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                ListComments comments = new ListComments();
-                comments.addComment(comment);
-                addCommenttoDBContinue(comments, gameqrcode);
+//                ListComments comments = new ListComments();
+//                comments.addComment(comment);
+//                addCommenttoDBContinue(comments, gameqrcode);
             }
         });;
 
