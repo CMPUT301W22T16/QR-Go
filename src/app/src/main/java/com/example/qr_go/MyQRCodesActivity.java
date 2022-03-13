@@ -23,7 +23,10 @@ public class MyQRCodesActivity extends AppCompatActivity {
         tempButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MyQRCodesActivity.this, QRInfoActivity.class));
+                Intent intent = new Intent(MyQRCodesActivity.this, QRInfoActivity.class);
+//                QRCode selectedGame = gameDataList.get(position);
+//                intent.putExtra("selectedGameID", selectedGame.getID());
+                startActivity(intent);
             }
         });
 

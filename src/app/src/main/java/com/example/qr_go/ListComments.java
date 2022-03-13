@@ -5,13 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /** list of comments to be stored into database
  *
@@ -39,11 +39,11 @@ public class ListComments extends ArrayAdapter {
         Comment comment = comments.get(position);
 
 //        ImageView commenterPicture = (ImageView) view.findViewById(R.id.commenterPhoto);
-//        TextView commenterName = (TextView) view.findViewById(R.id.commenterName);
+        TextView commenterName = (TextView) view.findViewById(R.id.commenterName);
         TextView message = (TextView) view.findViewById(R.id.message);
 
         // show comment's message
-//        message.setText(comment.getMessage());
+        message.setText(comment.getMessage());
 
         return view;
     }
@@ -52,8 +52,8 @@ public class ListComments extends ArrayAdapter {
      * add comment to the list
      * @param comment comment to be added
      */
-    public void addComment(Comment comment) {
-        comments.add(comment);
+    public void addComment(CommentsQR comment) {
+//        comments.add(comment);
     }
 
     /**

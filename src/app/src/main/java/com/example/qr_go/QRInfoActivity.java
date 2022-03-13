@@ -58,7 +58,7 @@ public class QRInfoActivity extends AppCompatActivity {
     public void addComment(View view) {
         EditText newCommentMsg = (EditText) findViewById(R.id.inputComment);
         String message = newCommentMsg.getText().toString();
-        Comment comment = new Comment();
+//        Comment comments = new CommentQR();
     }
 
 }
