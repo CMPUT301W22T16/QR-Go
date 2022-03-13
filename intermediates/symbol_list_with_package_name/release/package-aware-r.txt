@@ -2739,6 +2739,7 @@ id bounceStart
 id bt_temp_qr
 id buttonOtherPlayers
 id buttonPanel
+id buttonSend
 id cache_measures
 id callMeasure
 id cancel_button
@@ -2862,6 +2863,7 @@ id image
 id immediateStop
 id included
 id info
+id inputComment
 id invisible
 id inward
 id italic
@@ -2943,6 +2945,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id myQRList
 id nav_controller_view_tag
 id nav_host_fragment_container
 id nav_my_account

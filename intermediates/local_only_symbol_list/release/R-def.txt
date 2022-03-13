@@ -16,12 +16,15 @@ drawable round_search_24
 id bottom_nav_view
 id bt_temp_qr
 id buttonOtherPlayers
+id buttonSend
 id commenterName
 id commenterPhoto
 id container
+id inputComment
 id location_checkbox
 id map
 id message
+id myQRList
 id nav_my_account
 id nav_my_codes
 id nav_scan_code

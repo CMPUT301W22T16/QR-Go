@@ -104,6 +104,18 @@
 
    https://developer.android.com/training/multiscreen/screendensities.html
 
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:92: Warning: Use databinding or explicit wiring of click listener in code [UsingOnClickInXml from appcompat-1.4.1]
+        android:onClick="addComment"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UsingOnClickInXml":
+   Old versions of the platform do not properly support resolving
+   android:onClick
+
+   Vendor: Android Open Source Project (appcompat-1.4.1)
+   Identifier: appcompat-1.4.1
+   Feedback: https://issuetracker.google.com/issues/new?component=192731
+
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:36: Warning: Do not place Android context classes in static fields (static reference to FirebaseFirestore which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
     public static FirebaseFirestore db;
            ~~~~~~
@@ -143,6 +155,30 @@
    element. Namespace declarations elsewhere in the document are typically
    accidental leftovers from copy/pasting XML from other files or
    documentation.
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:96: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+
+   Explanation for issues of type "Autofill":
+   Specify an autofillHints attribute when targeting SDK version 26 or higher
+   or explicitly specify that the view is not important for autofill. Your app
+   can help an autofill service classify the data correctly by providing the
+   meaning of each view that could be autofillable, such as views representing
+   usernames, passwords, credit card fields, email addresses, etc.
+
+   The hints can have any value, but it is recommended to use predefined
+   values like 'username' for a username or 'creditCardNumber' for a credit
+   card number. For a list of all predefined autofill hint constants, see the
+   AUTOFILL_HINT_ constants in the View reference at
+   https://developer.android.com/reference/android/view/View.html.
+
+   You can mark a view unimportant for autofill by specifying an
+   importantForAutofill attribute on that view or a parent view. See
+   https://developer.android.com/reference/android/view/View.html#setImportant
+   ForAutofill(int).
+
+   https://developer.android.com/guide/topics/text/autofill.html
 
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:8: Warning: Missing contentDescription attribute on image [ContentDescription]
     <ImageView
@@ -195,6 +231,12 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:67: Warning: Hardcoded string "See other players >", should use @string resource [HardcodedText]
         android:text="See other players >"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:91: Warning: Hardcoded string "Send", should use @string resource [HardcodedText]
+        android:text="Send"
+        ~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:105: Warning: Hardcoded string "Type your comment here", should use @string resource [HardcodedText]
+        android:hint="Type your comment here"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/menu/bottom_nav_menu.xml:7: Warning: Hardcoded string "Search", should use @string resource [HardcodedText]
         android:title="Search" />
         ~~~~~~~~~~~~~~~~~~~~~~
@@ -238,4 +280,4 @@
    Please define an explicit reason why it is ignored, and when it can be
    resolved.
 
-0 errors, 39 warnings
+0 errors, 43 warnings

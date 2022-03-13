@@ -5,7 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,6 +27,15 @@ public final class ActivityQrInfoBinding implements ViewBinding {
   public final Button buttonOtherPlayers;
 
   @NonNull
+  public final Button buttonSend;
+
+  @NonNull
+  public final EditText inputComment;
+
+  @NonNull
+  public final ListView myQRList;
+
+  @NonNull
   public final ImageView qrIcon;
 
   @NonNull
@@ -37,10 +48,14 @@ public final class ActivityQrInfoBinding implements ViewBinding {
   public final TextView qrScore;
 
   private ActivityQrInfoBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button buttonOtherPlayers, @NonNull ImageView qrIcon, @NonNull TextView qrLocation,
-      @NonNull TextView qrName, @NonNull TextView qrScore) {
+      @NonNull Button buttonOtherPlayers, @NonNull Button buttonSend,
+      @NonNull EditText inputComment, @NonNull ListView myQRList, @NonNull ImageView qrIcon,
+      @NonNull TextView qrLocation, @NonNull TextView qrName, @NonNull TextView qrScore) {
     this.rootView = rootView;
     this.buttonOtherPlayers = buttonOtherPlayers;
+    this.buttonSend = buttonSend;
+    this.inputComment = inputComment;
+    this.myQRList = myQRList;
     this.qrIcon = qrIcon;
     this.qrLocation = qrLocation;
     this.qrName = qrName;
@@ -80,6 +95,24 @@ public final class ActivityQrInfoBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.buttonSend;
+      Button buttonSend = ViewBindings.findChildViewById(rootView, id);
+      if (buttonSend == null) {
+        break missingId;
+      }
+
+      id = R.id.inputComment;
+      EditText inputComment = ViewBindings.findChildViewById(rootView, id);
+      if (inputComment == null) {
+        break missingId;
+      }
+
+      id = R.id.myQRList;
+      ListView myQRList = ViewBindings.findChildViewById(rootView, id);
+      if (myQRList == null) {
+        break missingId;
+      }
+
       id = R.id.qrIcon;
       ImageView qrIcon = ViewBindings.findChildViewById(rootView, id);
       if (qrIcon == null) {
@@ -104,8 +137,8 @@ public final class ActivityQrInfoBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityQrInfoBinding((ConstraintLayout) rootView, buttonOtherPlayers, qrIcon,
-          qrLocation, qrName, qrScore);
+      return new ActivityQrInfoBinding((ConstraintLayout) rootView, buttonOtherPlayers, buttonSend,
+          inputComment, myQRList, qrIcon, qrLocation, qrName, qrScore);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

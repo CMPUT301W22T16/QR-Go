@@ -238,6 +238,62 @@
     </incident>
 
     <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Send&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="91"
+            column="9"
+            startOffset="3594"
+            endLine="91"
+            endColumn="28"
+            endOffset="3613"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="96"
+            column="6"
+            startOffset="3766"
+            endLine="96"
+            endColumn="14"
+            endOffset="3774"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Type your comment here&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="105"
+            column="9"
+            startOffset="4095"
+            endLine="105"
+            endColumn="46"
+            endOffset="4132"/>
+    </incident>
+
+    <incident
         id="ContentDescription"
         severity="warning"
         message="Missing `contentDescription` attribute on image">
