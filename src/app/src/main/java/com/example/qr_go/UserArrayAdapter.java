@@ -19,6 +19,7 @@ public class UserArrayAdapter extends ArrayAdapter<UserListDisplayContainer> imp
     private ArrayList<UserListDisplayContainer> allUserDisplays;
     private ArrayList<UserListDisplayContainer> userDisplays;
     private Integer sortPos;
+    private Integer userPos = 0;
 
     public UserArrayAdapter(@NonNull Context context, ArrayList<UserListDisplayContainer> userDisplays, Integer sortPos) {
         super(context, 0, userDisplays);
@@ -41,7 +42,12 @@ public class UserArrayAdapter extends ArrayAdapter<UserListDisplayContainer> imp
         TextView usernameView = view.findViewById(R.id.username_view);
         TextView scoreView = view.findViewById(R.id.user_score_view);
 
-        usernameView.setText(userToDisplay.getUsername());
+        if (userToDisplay.getIsCurrentUser()) {
+            usernameView.setText(String.valueOf(position+1) + "|" + userToDisplay.getUsername() + " (you)");
+            userPos = position;
+        } else {
+            usernameView.setText(String.valueOf(position+1) + "|" + userToDisplay.getUsername());
+        }
         scoreView.setText(userToDisplay.getTotalScore().toString());
         switch(sortPos) {
             case 0:
@@ -51,8 +57,7 @@ public class UserArrayAdapter extends ArrayAdapter<UserListDisplayContainer> imp
                 scoreView.setText(userToDisplay.getNumQRs().toString() + " scanned");
                 break;
             default:
-                // TODO: Get highest unique score
-                scoreView.setText("Highest QR Score: " + userToDisplay.getTotalScore().toString());
+                scoreView.setText("Highest QR Score: " + userToDisplay.getHighestScore().toString());
                 break;
         }
 
@@ -97,4 +102,8 @@ public class UserArrayAdapter extends ArrayAdapter<UserListDisplayContainer> imp
             notifyDataSetChanged();
         }
     };
+
+    public Integer getUserPos() {
+        return userPos;
+    }
 }

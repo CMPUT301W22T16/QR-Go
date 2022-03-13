@@ -26,7 +26,7 @@ import java.util.ArrayList;
  */
 public class UserSearchFragment extends SortableFragment {
     private ListView userListView;
-    private ArrayAdapter<UserListDisplayContainer> userAdapter;
+    private UserArrayAdapter userAdapter;
     private ArrayList<UserListDisplayContainer> userDisplays;
     private View view;
 
@@ -78,6 +78,7 @@ public class UserSearchFragment extends SortableFragment {
         userAdapter = new UserArrayAdapter(view.getContext(), userDisplays, sortPos);
         userListView.setAdapter(userAdapter);
         userAdapter.notifyDataSetChanged();
+        userListView.setSelection(userAdapter.getUserPos());
     }
 
     public void setSearchFiltering() {

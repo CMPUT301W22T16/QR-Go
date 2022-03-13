@@ -26,7 +26,7 @@ import java.util.ArrayList;
  */
 public class QRSearchFragment extends SortableFragment {
     private ListView qrListView;
-    private ArrayAdapter<QRListDisplayContainer> qrAdapter;
+    private QRArrayAdapter qrAdapter;
     private ArrayList<QRListDisplayContainer> qrDisplays;
     private View view;
 

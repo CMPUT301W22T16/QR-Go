@@ -12,6 +12,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 /**
@@ -50,10 +52,17 @@ public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> impleme
                 scoreView.setText("Score: " + qrToDisplay.getScore().toString());
                 break;
             default:
-                // TODO: Get proximity
-                Integer distance =  Math.round(qrToDisplay.getDistance());
-                String distanceString = distance>10000 ? ">10000" : distance.toString();
-                scoreView.setText(distanceString + "m away");
+                Float distance =  qrToDisplay.getDistance();
+                String distanceString;
+                if (distance > 1000) {
+                    DecimalFormat df = new DecimalFormat("#.##");
+                    df.setRoundingMode(RoundingMode.CEILING);
+                    Float distanceInKM = distance/1000;
+                    distanceString = df.format(distanceInKM) + "km";
+                } else {
+                    distanceString = distance.toString() + "m";
+                }
+                scoreView.setText(distanceString + " away");
                 break;
         }
 

@@ -77,6 +77,7 @@ public class SearchActivity extends FragmentActivity {
             } else {
                 // If has permissions, set location by default
                 setUserLocation();
+//                disableLocation();
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -287,19 +288,21 @@ public class SearchActivity extends FragmentActivity {
         });
 
         // Get users and QRs from the database
-        playersColRef.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+        playersColRef.whereNotEqualTo("deleted", true).get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                 userDisplays.clear();
                 for(DocumentSnapshot snapshot : queryDocumentSnapshots) {
-                    // TODO: Update how to get total score, highest unique score, and number of qr codes scanned with updated User class
-                    ArrayList<String> qrCodes = (ArrayList<String>) snapshot.get("scannedQRCodeIds");
+                    Player user = snapshot.toObject(Player.class);
                     UserListDisplayContainer userToDisplay =
                             new UserListDisplayContainer(
-                                    snapshot.get("userid", String.class),
-                                    snapshot.get("username", String.class),
-                                    snapshot.get("totalScore", Integer.class),
-                                    qrCodes.size()
+                                    user.getUserid(),
+                                    user.getUsername(),
+                                    user.getTotalScore(),
+                                    user.getScannedQRCodeIds().size(),
+                                    user.getHighestUniqueScore(),
+                                    MapsActivity.getUserId()==user.getUserid()
                             );
                     userDisplays.add(userToDisplay);
                 }
@@ -309,19 +312,22 @@ public class SearchActivity extends FragmentActivity {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                 for(DocumentSnapshot snapshot : queryDocumentSnapshots) {
-                    ArrayList<String> qrCodes = (ArrayList<String>) snapshot.get("scannedQRCodeIds");
+                    Owner user = snapshot.toObject(Owner.class);
                     UserListDisplayContainer userToDisplay =
                             new UserListDisplayContainer(
-                                    snapshot.get("userid", String.class),
-                                    snapshot.get("username", String.class),
-                                    snapshot.get("totalScore", Integer.class),
-                                    qrCodes.size()
+                                    user.getUserid(),
+                                    user.getUsername(),
+                                    user.getTotalScore(),
+                                    user.getScannedQRCodeIds().size(),
+                                    user.getHighestUniqueScore(),
+                                    MapsActivity.getUserId()==user.getUserid()
                             );
                     userDisplays.add(userToDisplay);
                 }
             }
         });
-        qrColRef.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+        qrColRef.whereNotEqualTo("deleted", true).get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                 qrDisplays.clear();
