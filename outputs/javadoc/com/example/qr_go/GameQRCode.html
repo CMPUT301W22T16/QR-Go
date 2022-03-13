@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -175,10 +175,6 @@ extends <a href="QRCode.html" title="class in com.example.qr_go">QRCode</a></pre
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">GameQRCode</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String)">GameQRCode</a></span>&#8203;(java.lang.String&nbsp;qrCodeContents)</code></th>
 <td class="colLast">
 <div class="block">When creating a new GameQRCode, initialize the list of userIds
@@ -212,34 +208,41 @@ extends <a href="QRCode.html" title="class in com.example.qr_go">QRCode</a></pre
 </td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addUser(java.lang.String)">addUser</a></span>&#8203;(java.lang.String&nbsp;userId)</code></th>
+<td class="colLast">
+<div class="block">Add a new user who scanned this game qr code</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>protected java.lang.Integer</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#calculateScore(java.lang.String)">calculateScore</a></span>&#8203;(java.lang.String&nbsp;hash)</code></th>
 <td class="colLast">
 <div class="block">Given a hash, the score of the hash is calculated</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>android.location.Location</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLocation()">getLocation</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Get last known location of QR code</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.lang.Integer</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getScore()">getScore</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Getter for score</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code>java.util.HashMap&lt;java.lang.String,&#8203;java.util.HashMap&lt;java.lang.String,&#8203;java.lang.String&gt;&gt;</code></td>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>java.util.ArrayList&lt;java.lang.String&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUserIds()">getUserIds</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Getter for userIds</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setLocation(android.location.Location)">setLocation</a></span>&#8203;(android.location.Location&nbsp;location)</code></th>
 <td class="colLast">
@@ -252,7 +255,7 @@ extends <a href="QRCode.html" title="class in com.example.qr_go">QRCode</a></pre
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;com.example.qr_go.<a href="QRCode.html" title="class in com.example.qr_go">QRCode</a></h3>
-<code><a href="QRCode.html#deleteQR()">deleteQR</a>, <a href="QRCode.html#encodeToQrCode(java.lang.String,int,int)">encodeToQrCode</a>, <a href="QRCode.html#getHash()">getHash</a>, <a href="QRCode.html#getId()">getId</a>, <a href="QRCode.html#isDeleted()">isDeleted</a></code></li>
+<code><a href="QRCode.html#encodeToQrCode(java.lang.String,int,int)">encodeToQrCode</a>, <a href="QRCode.html#getHash()">getHash</a>, <a href="QRCode.html#getId()">getId</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
@@ -280,7 +283,7 @@ extends <a href="QRCode.html" title="class in com.example.qr_go">QRCode</a></pre
 <a id="&lt;init&gt;(java.lang.String)">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>GameQRCode</h4>
 <pre>@RequiresApi(api=26)
@@ -292,15 +295,6 @@ public&nbsp;GameQRCode&#8203;(java.lang.String&nbsp;qrCodeContents)</pre>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>qrCodeContents</code> - </dd>
 </dl>
-</li>
-</ul>
-<a id="&lt;init&gt;()">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>GameQRCode</h4>
-<pre>public&nbsp;GameQRCode()</pre>
 </li>
 </ul>
 </li>
@@ -349,7 +343,7 @@ public&nbsp;GameQRCode&#8203;(java.lang.String&nbsp;qrCodeContents)</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getUserIds</h4>
-<pre class="methodSignature">public&nbsp;java.util.HashMap&lt;java.lang.String,&#8203;java.util.HashMap&lt;java.lang.String,&#8203;java.lang.String&gt;&gt;&nbsp;getUserIds()</pre>
+<pre class="methodSignature">public&nbsp;java.util.ArrayList&lt;java.lang.String&gt;&nbsp;getUserIds()</pre>
 <div class="block">Getter for userIds</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -364,6 +358,16 @@ public&nbsp;GameQRCode&#8203;(java.lang.String&nbsp;qrCodeContents)</pre>
 <li class="blockList">
 <h4>addUser</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;addUser&#8203;(<a href="User.html" title="class in com.example.qr_go">User</a>&nbsp;user)</pre>
+<div class="block">Add a new user who scanned this game qr code</div>
+</li>
+</ul>
+<a id="addUser(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addUser</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;addUser&#8203;(java.lang.String&nbsp;userId)</pre>
 <div class="block">Add a new user who scanned this game qr code</div>
 </li>
 </ul>
