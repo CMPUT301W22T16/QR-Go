@@ -1,12 +1,10 @@
 package com.example.qr_go;
 
 import android.os.Build;
-import android.util.Pair;
 
 import androidx.annotation.RequiresApi;
 
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.UUID;
 
 /**
