@@ -2736,8 +2736,6 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id bt_temp_qr
-id buttonOtherPlayers
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2764,8 +2762,6 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
-id commenterName
-id commenterPhoto
 id compress
 id confirm_button
 id constraint
@@ -2989,10 +2985,6 @@ id position
 id postLayout
 id progress_circular
 id progress_horizontal
-id qrIcon
-id qrLocation
-id qrName
-id qrScore
 id radio
 id ratio
 id rectangles
@@ -3235,9 +3227,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_code_scanner
 layout activity_maps
-layout activity_my_qr_codes
 layout activity_new_game_qractivity
-layout activity_qr_info
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3254,7 +3244,6 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout list_comments_content
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
