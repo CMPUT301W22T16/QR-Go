@@ -217,12 +217,12 @@
         message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="37"
+            line="36"
             column="12"
-            startOffset="1273"
-            endLine="37"
+            startOffset="1226"
+            endLine="36"
             endColumn="18"
-            endOffset="1279"/>
+            endOffset="1232"/>
     </incident>
 
     <incident
@@ -231,12 +231,12 @@
         message="`SharedPreferences.edit()` without a corresponding `commit()` or `apply()` call">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="75"
+            line="74"
             column="43"
-            startOffset="2952"
-            endLine="75"
+            startOffset="2905"
+            endLine="74"
             endColumn="60"
-            endOffset="2969"/>
+            endOffset="2922"/>
     </incident>
 
     <incident
@@ -245,12 +245,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="88"
+            line="87"
             column="26"
-            startOffset="3644"
-            endLine="88"
+            startOffset="3597"
+            endLine="87"
             endColumn="41"
-            endOffset="3659"/>
+            endOffset="3612"/>
     </incident>
 
     <incident
@@ -259,12 +259,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="91"
+            line="90"
             column="26"
-            startOffset="3809"
-            endLine="91"
+            startOffset="3762"
+            endLine="90"
             endColumn="43"
-            endOffset="3826"/>
+            endOffset="3779"/>
     </incident>
 
     <incident
@@ -273,12 +273,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="94"
+            line="93"
             column="26"
-            startOffset="3976"
-            endLine="94"
+            startOffset="3932"
+            endLine="93"
             endColumn="44"
-            endOffset="3994"/>
+            endOffset="3950"/>
     </incident>
 
     <incident
@@ -287,12 +287,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="97"
+            line="96"
             column="26"
-            startOffset="4151"
-            endLine="97"
+            startOffset="4107"
+            endLine="96"
             endColumn="45"
-            endOffset="4170"/>
+            endOffset="4126"/>
     </incident>
 
     <incident
