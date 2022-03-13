@@ -39,20 +39,6 @@
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;QR Code #1&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="15"
-            column="9"
-            startOffset="624"
-            endLine="15"
-            endColumn="34"
-            endOffset="649"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
         message="Hardcoded string &quot;123&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
@@ -84,12 +70,12 @@
         message="Hardcoded string &quot;Save&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="40"
+            line="41"
             column="9"
-            startOffset="1549"
-            endLine="40"
+            startOffset="1589"
+            endLine="41"
             endColumn="28"
-            endOffset="1568"/>
+            endOffset="1608"/>
     </incident>
 
     <incident
@@ -98,12 +84,47 @@
         message="Hardcoded string &quot;Save location&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="51"
+            line="52"
             column="9"
-            startOffset="1963"
-            endLine="51"
+            startOffset="2003"
+            endLine="52"
             endColumn="37"
-            endOffset="1991"/>
+            endOffset="2031"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Take photo of object&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="67"
+            column="9"
+            startOffset="2625"
+            endLine="67"
+            endColumn="44"
+            endOffset="2660"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
+            line="75"
+            column="6"
+            startOffset="2950"
+            endLine="75"
+            endColumn="15"
+            endOffset="2959"/>
     </incident>
 
     <incident
@@ -133,30 +154,12 @@
         message="Hardcoded string &quot;QR NAME&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="32"
+            line="30"
             column="13"
-            startOffset="1305"
-            endLine="32"
+            startOffset="1240"
+            endLine="30"
             endColumn="35"
-            endOffset="1327"/>
-    </incident>
-
-    <incident
-        id="SpUsage"
-        severity="warning"
-        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes">
-        <fix-replace
-            description="Replace with sp"
-            oldPattern=".*(di?p)"
-            replacement="sp"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="31"
-            column="13"
-            startOffset="1269"
-            endLine="31"
-            endColumn="36"
-            endOffset="1292"/>
+            endOffset="1262"/>
     </incident>
 
     <incident
@@ -165,199 +168,12 @@
         message="Hardcoded string &quot;QR LOCATION&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="41"
-            column="13"
-            startOffset="1648"
-            endLine="41"
-            endColumn="39"
-            endOffset="1674"/>
-    </incident>
-
-    <incident
-        id="SpUsage"
-        severity="warning"
-        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes">
-        <fix-replace
-            description="Replace with sp"
-            oldPattern=".*(di?p)"
-            replacement="sp"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="40"
-            column="13"
-            startOffset="1612"
-            endLine="40"
-            endColumn="36"
-            endOffset="1635"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Score: 123456&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="54"
-            column="9"
-            startOffset="2124"
-            endLine="54"
-            endColumn="37"
-            endOffset="2152"/>
-    </incident>
-
-    <incident
-        id="SpUsage"
-        severity="warning"
-        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes">
-        <fix-replace
-            description="Replace with sp"
-            oldPattern=".*(di?p)"
-            replacement="sp"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="55"
-            column="9"
-            startOffset="2161"
-            endLine="55"
-            endColumn="32"
-            endOffset="2184"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;See other players >&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="67"
-            column="9"
-            startOffset="2627"
-            endLine="67"
-            endColumn="43"
-            endOffset="2661"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Send&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="91"
-            column="9"
-            startOffset="3594"
-            endLine="91"
-            endColumn="28"
-            endOffset="3613"/>
-    </incident>
-
-    <incident
-        id="Autofill"
-        severity="warning"
-        message="Missing `autofillHints` attribute">
-        <fix-alternatives>
-            <fix-attribute
-                description="Set autofillHints"
-                namespace="http://schemas.android.com/apk/res/android"
-                attribute="autofillHints"
-                value=""
-                dot="0"
-                mark="0"/>
-            <fix-attribute
-                description="Set importantForAutofill=&quot;no&quot;"
-                namespace="http://schemas.android.com/apk/res/android"
-                attribute="importantForAutofill"
-                value="no"/>
-        </fix-alternatives>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="96"
-            column="6"
-            startOffset="3766"
-            endLine="96"
-            endColumn="14"
-            endOffset="3774"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Type your comment here&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="105"
-            column="9"
-            startOffset="4095"
-            endLine="105"
-            endColumn="46"
-            endOffset="4132"/>
-    </incident>
-
-    <incident
-        id="ContentDescription"
-        severity="warning"
-        message="Missing `contentDescription` attribute on image">
-        <fix-attribute
-            description="Set contentDescription"
-            namespace="http://schemas.android.com/apk/res/android"
-            attribute="contentDescription"
-            value="TODO"
-            dot="4"
-            mark="0"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/list_comments_content.xml"
-            line="9"
-            column="6"
-            startOffset="345"
-            endLine="9"
-            endColumn="15"
-            endOffset="354"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;User Name&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/list_comments_content.xml"
-            line="26"
-            column="9"
-            startOffset="974"
-            endLine="26"
-            endColumn="33"
-            endOffset="998"/>
-    </incident>
-
-    <incident
-        id="SpUsage"
-        severity="warning"
-        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes">
-        <fix-replace
-            description="Replace with sp"
-            oldPattern=".*(di?p)"
-            replacement="sp"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/list_comments_content.xml"
-            line="25"
-            column="9"
-            startOffset="942"
-            endLine="25"
-            endColumn="32"
-            endOffset="965"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/list_comments_content.xml"
             line="38"
-            column="9"
-            startOffset="1467"
+            column="13"
+            startOffset="1547"
             endLine="38"
-            endColumn="147"
-            endOffset="1605"/>
+            endColumn="39"
+            endOffset="1573"/>
     </incident>
 
     <incident
@@ -422,26 +238,12 @@
         message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="36"
+            line="37"
             column="12"
-            startOffset="1226"
-            endLine="36"
+            startOffset="1273"
+            endLine="37"
             endColumn="18"
-            endOffset="1232"/>
-    </incident>
-
-    <incident
-        id="CommitPrefEdits"
-        severity="warning"
-        message="`SharedPreferences.edit()` without a corresponding `commit()` or `apply()` call">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="74"
-            column="43"
-            startOffset="2905"
-            endLine="74"
-            endColumn="60"
-            endOffset="2922"/>
+            endOffset="1279"/>
     </incident>
 
     <incident
@@ -450,26 +252,26 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="87"
-            column="26"
-            startOffset="3597"
-            endLine="87"
-            endColumn="41"
-            endOffset="3612"/>
-    </incident>
-
-    <incident
-        id="NonConstantResourceId"
-        severity="warning"
-        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="90"
+            line="91"
             column="26"
             startOffset="3762"
-            endLine="90"
+            endLine="91"
+            endColumn="41"
+            endOffset="3777"/>
+    </incident>
+
+    <incident
+        id="NonConstantResourceId"
+        severity="warning"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
+            line="94"
+            column="26"
+            startOffset="3927"
+            endLine="94"
             endColumn="43"
-            endOffset="3779"/>
+            endOffset="3944"/>
     </incident>
 
     <incident
@@ -478,12 +280,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="93"
+            line="97"
             column="26"
-            startOffset="3932"
-            endLine="93"
+            startOffset="4094"
+            endLine="97"
             endColumn="44"
-            endOffset="3950"/>
+            endOffset="4112"/>
     </incident>
 
     <incident
@@ -492,12 +294,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="96"
+            line="100"
             column="26"
-            startOffset="4107"
-            endLine="96"
+            startOffset="4269"
+            endLine="100"
             endColumn="45"
-            endOffset="4126"/>
+            endOffset="4288"/>
     </incident>
 
     <incident
@@ -644,12 +446,12 @@
             replacement="1.4.0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="50"
+            line="51"
             column="31"
-            startOffset="1758"
-            endLine="50"
+            startOffset="1823"
+            endLine="51"
             endColumn="59"
-            endOffset="1786"/>
+            endOffset="1851"/>
     </incident>
 
     <incident
@@ -663,12 +465,12 @@
             replacement="1.4.0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="51"
+            line="52"
             column="31"
-            startOffset="1817"
-            endLine="51"
+            startOffset="1882"
+            endLine="52"
             endColumn="58"
-            endOffset="1844"/>
+            endOffset="1909"/>
     </incident>
 
     <incident
