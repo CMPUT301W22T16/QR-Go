@@ -42,11 +42,12 @@ public class UserArrayAdapter extends ArrayAdapter<UserListDisplayContainer> imp
         TextView usernameView = view.findViewById(R.id.username_view);
         TextView scoreView = view.findViewById(R.id.user_score_view);
 
+        Integer userRank = userToDisplay.getRankPosition();
         if (userToDisplay.getIsCurrentUser()) {
-            usernameView.setText(String.valueOf(position+1) + "|" + userToDisplay.getUsername() + " (you)");
+            usernameView.setText(String.valueOf(userRank) + "|" + userToDisplay.getUsername() + " (you)");
             userPos = position;
         } else {
-            usernameView.setText(String.valueOf(position+1) + "|" + userToDisplay.getUsername());
+            usernameView.setText(String.valueOf(userRank) + "|" + userToDisplay.getUsername());
         }
         scoreView.setText(userToDisplay.getTotalScore().toString());
         switch(sortPos) {

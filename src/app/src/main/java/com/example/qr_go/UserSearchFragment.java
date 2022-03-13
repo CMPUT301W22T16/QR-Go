@@ -75,6 +75,11 @@ public class UserSearchFragment extends SortableFragment {
                 userDisplays.sort(new UserListTotalScoreComparator());
                 break;
         }
+        int rank = 1;
+        for (UserListDisplayContainer user : userDisplays) {
+            user.setRankPosition(new Integer(rank));
+            rank++;
+        }
         userAdapter = new UserArrayAdapter(view.getContext(), userDisplays, sortPos);
         userListView.setAdapter(userAdapter);
         userAdapter.notifyDataSetChanged();
