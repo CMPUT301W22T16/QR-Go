@@ -17,6 +17,8 @@ public class QRInfoActivity extends AppCompatActivity {
     private ListComments comment;
 //    private GeoLocation location;     // TODO: uncomment after GeoLocation is implemented
 
+    CommentsQR comments;
+
     ListView commentList;
     ArrayAdapter<Comment> commentAdapter;
     ArrayList<Comment> commentDataList;
@@ -27,13 +29,30 @@ public class QRInfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_qr_info);
 
         commentList = findViewById(R.id.myQRList);
-        commentDataList = new ArrayList<>();
-        commentAdapter = new ListComments(this, commentDataList);
 
+        comments = new CommentsQR();
+
+        // TODO: these are temporary. grab data from DB.
+        String []usernames = {"User1", "User2", "User3", "User4", "User5", "User6"};
+        String []msgs = {"msg 1", "msg 2", "msg 3", "msg 4", "msg 5", "msg 6"};
+
+        for(int i=0; i<usernames.length; i++) {
+            Player player = new Player();
+            player.setUsername(usernames[i]);
+            comments.addComment(player, msgs[i], null);
+        }
+
+        commentDataList = comments.getCommentObjects();
+        //TODO: sort commentDataList
+
+        commentAdapter = new ListComments(this, commentDataList);
         commentList.setAdapter(commentAdapter);
     }
 
-    public void showUsersList() {
+
+    public void showUsersList(View view) {
+
+
 
     }
 
