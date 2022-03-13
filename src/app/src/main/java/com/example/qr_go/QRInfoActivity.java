@@ -8,7 +8,7 @@ public class QRInfoActivity extends AppCompatActivity {
 
     private GameQRCode selectedQR;
     private QRPhoto[] QRPhotos;
-    private Comment[] comments;
+    private ListComments comment;
 //    private GeoLocation location;     // TODO: uncomment after GeoLocation is implemented
 
     @Override
