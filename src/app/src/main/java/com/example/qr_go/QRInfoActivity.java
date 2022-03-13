@@ -1,5 +1,6 @@
 package com.example.qr_go;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -51,9 +52,8 @@ public class QRInfoActivity extends AppCompatActivity {
 
 
     public void showUsersList(View view) {
-
-
-
+        Intent intent = new Intent(QRInfoActivity.this, ScannedUsersActivity.class);
+        startActivity(intent);
     }
 
     /**

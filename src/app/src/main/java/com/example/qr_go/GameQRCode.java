@@ -33,7 +33,10 @@ public class GameQRCode extends QRCode {
         this.userIds = new HashMap<>();
         this.score = calculateScore(this.hash);
     }
-    public GameQRCode(){super();}
+    public GameQRCode(){
+        super();
+        this.userIds = new HashMap<>();
+    }
 
 
     /**
