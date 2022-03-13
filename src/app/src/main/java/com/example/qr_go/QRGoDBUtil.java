@@ -3,6 +3,7 @@ package com.example.qr_go;
 import android.content.Context;
 import android.os.Build;
 import android.util.Log;
+import android.util.Pair;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -13,12 +14,10 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.WriteBatch;
 
-import java.nio.file.FileAlreadyExistsException;
-import java.security.NoSuchAlgorithmException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 
 @RequiresApi(api = Build.VERSION_CODES.O)
@@ -113,39 +112,12 @@ public class QRGoDBUtil {
 
     /**
      * starts by getting the comment from the db, if it cannot find one it will make one, method continues to addCommenttoDBContinue
-     * @param comment
+     * @param comments
      * @param gameqrcode
      * @Author Darius Fang
      */
-    void addCommenttoDB(Comment comment, GameQRCode gameqrcode){
-        DocumentReference docRef = db.collection("Comments").document(gameqrcode.getHash());
-        docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-            @Override
-            //@RequiresApi(api = Build.VERSION_CODES.O)
-            public void onSuccess(DocumentSnapshot documentSnapshot) {
-                try {
-                    ListComments comments = documentSnapshot.toObject(ListComments.class);
-                    comments.addComment(comment);
-                    addCommenttoDBContinue(comments, gameqrcode);
-                }catch (Exception e){
-                    /** sometimes the db picks up that it exists while in fact it does not... strange
-                     */
-                    ListComments comments = new ListComments();
-                    comments.addComment(comment);
-                    addCommenttoDBContinue(comments, gameqrcode);
-                }
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                ListComments comments = new ListComments();
-                comments.addComment(comment);
-                addCommenttoDBContinue(comments, gameqrcode);
-            }
-        });;
-
-
-
+    void addCommenttoDB( HashMap<String, HashMap<String, String>> comments, GameQRCode gameqrcode){
+        db.collection("Comments").document(gameqrcode.getHash()).set(comments);
     }
 
     /**
@@ -154,25 +126,15 @@ public class QRGoDBUtil {
      * @param gameQRCode
      * @Author Darius Fang
      */
-    public void addCommenttoDBContinue(ListComments comments, GameQRCode gameQRCode){
-        if (comments.size() >= 1){
-            db.collection("Comments").document(gameQRCode.getHash()).set(comments);
-        }
-        else{
-            //it failed send error message
-        }
 
-    }
 
     /**
      * deletes the player by flagging them to be invisable
      * @param player
      * @Author Darius Fang
      */
-    void deletePlayerFromDB(Player player){
+    public void deletePlayerFromDB(Player player){
         DocumentReference docRef = db.collection("Players").document(player.getUserid());
-
-        QRCodeList.clear();
         docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             @RequiresApi(api = Build.VERSION_CODES.O)
@@ -189,23 +151,23 @@ public class QRGoDBUtil {
         });
 
     }
-
+    public void deleteGameQRcodeFromPlayer(){
+        return;
+    }
     /**
      * deletes the gameqrcode by flagging it
      * @param gameqrcode
      * @Author Darius Fang
      */
-    void deleteGameQRFromDB(GameQRCode gameqrcode){
+    public void deleteGameQRFromDB(GameQRCode gameqrcode){
         DocumentReference docRef = db.collection("GameQRCodes").document(gameqrcode.getHash());
-
-        QRCodeList.clear();
         docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             @RequiresApi(api = Build.VERSION_CODES.O)
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 try {
-                    GameQRCode qrcode = documentSnapshot.toObject(GameQRCode.class);
-                    qrcode.deleteQR();
+                    GameQRCode gameqrcode = documentSnapshot.toObject(GameQRCode.class);
+                    gameqrcode.deleteQR();
                     db.collection("GameQRCodes").document(gameqrcode.getHash()).set(gameqrcode);
                 }catch (Exception e){
                     /** sometimes the db picks up that it exists while in fact it does not... strange
@@ -215,6 +177,7 @@ public class QRGoDBUtil {
         });
 
     }
+
     /**this is to test the db will be thrown out**/
 
     void test1(){
@@ -224,4 +187,25 @@ public class QRGoDBUtil {
         updateScannedQRtoDB(qrcode,player, null);
 
     }
+    void test2() {
+        GameQRCode qrcode = new GameQRCode("BFG5DGW54\n");
+        deleteGameQRFromDB(qrcode);
+    }
+    void test3() {
+        GameQRCode qrcode = new GameQRCode("BFG5DGW54\n");
+        Player player = new Player();
+        Comment comment = new Comment(null, "test");
+        /**
+         * Assumption: in qrinfo activity, comments are loaded, input updated comments
+         */
+        HashMap<String, HashMap<String, String>>  comments = new HashMap<>();
+        HashMap<String, String> details = new HashMap<>();
+        details.put("Username", "Darius");
+        details.put("Message", "Darius");
+        details.put("PhotoRef", "adf");
+        details.put("Deleted", "true");
+        comments.put(player.getUserid(), details);
+        addCommenttoDB(comments, qrcode);
+    }
+
 }

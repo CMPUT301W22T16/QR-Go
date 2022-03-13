@@ -35,7 +35,14 @@ public class Player extends User {
     public Boolean isOwner() {
         return false;
     }
+
+    /**
+     * @return if the player is deleted
+     */
     public Boolean isDeleted(){ return isInvisable;}
+    /**
+     * flags the player as deleted
+     */
     public void deletePlayer(){isInvisable = true;}
 
 
