@@ -89,18 +89,32 @@ public class QRCodeScannerActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * After resuming, start the codeScanner if it is defined
+     */
     @Override
     protected void onResume() {
         super.onResume();
         if (mCodeScanner != null) mCodeScanner.startPreview();
     }
 
+    /**
+     * If pausing, then release the resources of the code scanner
+     */
     @Override
     protected void onPause() {
         if (mCodeScanner != null) mCodeScanner.releaseResources();
         super.onPause();
     }
 
+    /**
+     * Called after user has accepted/denied permissions
+     * If camera permission is granted, then start the code scanner and camera
+     * If permission is denied, exit the activity, and show an error toast
+     * @param requestCode
+     * @param permissions
+     * @param grantResults
+     */
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {

@@ -36,8 +36,8 @@ public abstract class User {
         totalScore = 0;
         email = "";
         scannedQRCodeIds = new ArrayList<>();
-        loginQR = new LoginQRCode(this);
-        statusQR = new StatusQRCode(this);
+       //loginQR = new LoginQRCode(this);
+        //statusQR = new StatusQRCode(this);
     }
 
     /**
@@ -134,16 +134,16 @@ public abstract class User {
     /**
      * @return User's login QR code
      */
-    public LoginQRCode getLoginQR() {
-        return loginQR;
-    }
+//    public LoginQRCode getLoginQR() {
+//        return loginQR;
+//    }
 
     /**
      * @return User's status QR code
      */
-    public StatusQRCode getStatusQR() {
-        return statusQR;
-    }
+//    public StatusQRCode getStatusQR() {
+//        return statusQR;
+//    }
 
     /**
      * @param email user's new email
@@ -151,5 +151,6 @@ public abstract class User {
     public void setEmail(String email) {
         this.email = email;
     }
+
 
 }

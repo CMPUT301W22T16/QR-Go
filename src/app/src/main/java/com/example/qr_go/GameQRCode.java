@@ -31,6 +31,7 @@ public class GameQRCode extends QRCode {
         this.userIds = new ArrayList<>();
         this.score = calculateScore(this.hash);
     }
+    public GameQRCode(){super();}
 
 
     /**

@@ -24,6 +24,7 @@ import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 
 /**
@@ -33,8 +34,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
     private static String currentUUID;
-    FirebaseFirestore db;
-    CollectionReference collectionReference;
+    public static FirebaseFirestore db;
+    private CollectionReference collectionReference;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -73,7 +74,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             currentUUID = newUser.getUserid();
             SharedPreferences.Editor ed = loggedUser.edit();
             ed.putString(User.USER_ID, currentUUID);
-            // TODO save user to the firestore database
+            ed.apply(); // apply changes
+            // Save user to the firestore database
+            db.collection("Players").document(newUser.getUserid()).set(newUser);
         }
 
         // Set onClick for BottomNavigation nav items
@@ -100,6 +103,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 return true;
             }
         });
+
+
+
+        QRGoDBUtil DBUti = new QRGoDBUtil();
+        DBUti.test1();
 
 
     }
