@@ -1,5 +1,6 @@
 package com.example.qr_go;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
@@ -45,11 +46,11 @@ public class UserSearchFragment extends SortableFragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // TODO: Start new activity
-                /*
-                Intent intent = new Intent(view.getContext(), OpenSessionActivity.class);
+
+                Intent intent = new Intent(view.getContext(), PlayerInfoActivity.class);
                 intent.putExtra("SELECTED_USER", userDisplays.get(position).getUserid());
                 view.getContext().startActivity(intent);
-                 */
+
             }
         });
     }

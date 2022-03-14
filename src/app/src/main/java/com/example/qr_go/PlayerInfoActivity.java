@@ -24,11 +24,13 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class PlayerInfoActivity extends AppCompatActivity {
+
     private User selectedUser;
     private String selectedUserID;
-    private ArrayList<String> myQRCodeIDs;
+    private HashMap<Integer, String> myQRCodeIDs;
     private ArrayList<GameQRCode> myQRCodes;
     private Integer userScore;
     final String TAG = "Sample";
@@ -44,6 +46,9 @@ public class PlayerInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player_info);
+        Intent intent = getIntent();
+        String selectedUserID = intent.getStringExtra("SELECTED_USER");
+
 
         TextView usernameText = findViewById(R.id.userNameText);
         TextView qrNumText = findViewById(R.id.numOfQRCodes);
@@ -63,7 +68,7 @@ public class PlayerInfoActivity extends AppCompatActivity {
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 selectedUser.setUsername((String) document.getData().get("username"));
                                 userScore = (Integer) document.getData().get("totalScore");
-                                myQRCodeIDs = (ArrayList<String>) document.getData().get("scannedQRCodeIds");
+                                myQRCodeIDs = (HashMap<Integer,String>) document.getData().get("scannedQRCodeIds");
                             }
                         }
                     }
