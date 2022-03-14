@@ -19,12 +19,12 @@
             attribute="xmlns:android"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_maps.xml"
-            line="22"
+            line="23"
             column="15"
-            startOffset="924"
-            endLine="22"
+            startOffset="969"
+            endLine="23"
             endColumn="73"
-            endOffset="982"/>
+            endOffset="1027"/>
     </incident>
 
     <incident
@@ -37,12 +37,12 @@
             replacement="androidx.fragment.app.FragmentContainerView"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_maps.xml"
-            line="22"
+            line="23"
             column="6"
-            startOffset="915"
-            endLine="22"
+            startOffset="960"
+            endLine="23"
             endColumn="14"
-            endOffset="923"/>
+            endOffset="968"/>
     </incident>
 
     <incident
@@ -172,10 +172,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
             line="28"
             column="17"
-            startOffset="957"
+            startOffset="955"
             endLine="28"
             endColumn="40"
-            endOffset="980"/>
+            endOffset="978"/>
     </incident>
 
     <incident
@@ -186,10 +186,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
             line="38"
             column="21"
-            startOffset="1405"
+            startOffset="1410"
             endLine="38"
             endColumn="44"
-            endOffset="1428"/>
+            endOffset="1433"/>
     </incident>
 
     <incident
@@ -198,12 +198,12 @@
         message="Hardcoded string &quot;00000&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="45"
+            line="44"
             column="21"
-            startOffset="1695"
-            endLine="45"
+            startOffset="1647"
+            endLine="44"
             endColumn="41"
-            endOffset="1715"/>
+            endOffset="1667"/>
     </incident>
 
     <incident
@@ -212,12 +212,12 @@
         message="Hardcoded string &quot;Highest Score&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="55"
+            line="54"
             column="21"
-            startOffset="2138"
-            endLine="55"
+            startOffset="2090"
+            endLine="54"
             endColumn="49"
-            endOffset="2166"/>
+            endOffset="2118"/>
     </incident>
 
     <incident
@@ -226,12 +226,12 @@
         message="Hardcoded string &quot;00000&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="62"
+            line="61"
             column="21"
-            startOffset="2436"
-            endLine="62"
+            startOffset="2384"
+            endLine="61"
             endColumn="41"
-            endOffset="2456"/>
+            endOffset="2404"/>
     </incident>
 
     <incident
@@ -240,12 +240,12 @@
         message="Hardcoded string &quot;Highest Score&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="72"
+            line="71"
             column="21"
-            startOffset="2877"
-            endLine="72"
+            startOffset="2825"
+            endLine="71"
             endColumn="49"
-            endOffset="2905"/>
+            endOffset="2853"/>
     </incident>
 
     <incident
@@ -254,12 +254,12 @@
         message="Hardcoded string &quot;00000&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="79"
+            line="78"
             column="21"
-            startOffset="3176"
-            endLine="79"
+            startOffset="3120"
+            endLine="78"
             endColumn="41"
-            endOffset="3196"/>
+            endOffset="3140"/>
     </incident>
 
     <incident
@@ -1204,39 +1204,11 @@
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/PlayerInfoActivity.java"
             line="77"
-            column="54"
-            startOffset="3145"
+            column="27"
+            startOffset="3016"
             endLine="77"
-            endColumn="110"
-            endOffset="3201"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/PlayerInfoActivity.java"
-            line="78"
-            column="47"
-            startOffset="3250"
-            endLine="78"
-            endColumn="108"
-            endOffset="3311"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/PlayerInfoActivity.java"
-            line="79"
-            column="52"
-            startOffset="3365"
-            endLine="79"
-            endColumn="100"
-            endOffset="3413"/>
+            endColumn="63"
+            endOffset="3052"/>
     </incident>
 
     <incident
@@ -1245,12 +1217,12 @@
         message="Do not place Android context classes in static fields; this is a memory leak">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/SearchActivity.java"
-            line="64"
+            line="63"
             column="13"
-            startOffset="2282"
-            endLine="64"
+            startOffset="2245"
+            endLine="63"
             endColumn="19"
-            endOffset="2288"/>
+            endOffset="2251"/>
     </incident>
 
     <incident
