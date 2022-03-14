@@ -2888,6 +2888,7 @@ id light
 id line1
 id line3
 id linear
+id linearLayout
 id listMode
 id list_item
 id locale
@@ -2994,6 +2995,7 @@ id pathRelative
 id peekHeight
 id percent
 id pin
+id playerEmail
 id playerHighScore
 id playerNameText
 id playerPhoto
@@ -3121,6 +3123,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView2
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon

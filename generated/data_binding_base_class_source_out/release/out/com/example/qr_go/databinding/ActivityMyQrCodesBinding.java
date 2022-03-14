@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -20,11 +22,47 @@ public final class ActivityMyQrCodesBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final LinearLayout QRData;
+
+  @NonNull
   public final Button btTempQr;
 
-  private ActivityMyQrCodesBinding(@NonNull ConstraintLayout rootView, @NonNull Button btTempQr) {
+  @NonNull
+  public final LinearLayout highestScoreData;
+
+  @NonNull
+  public final LinearLayout linearLayout;
+
+  @NonNull
+  public final TextView numOfQRCodes;
+
+  @NonNull
+  public final TextView playerHighScore;
+
+  @NonNull
+  public final TextView playerNameText;
+
+  @NonNull
+  public final TextView playerTotalScore;
+
+  @NonNull
+  public final LinearLayout totalScoreData;
+
+  private ActivityMyQrCodesBinding(@NonNull ConstraintLayout rootView, @NonNull LinearLayout QRData,
+      @NonNull Button btTempQr, @NonNull LinearLayout highestScoreData,
+      @NonNull LinearLayout linearLayout, @NonNull TextView numOfQRCodes,
+      @NonNull TextView playerHighScore, @NonNull TextView playerNameText,
+      @NonNull TextView playerTotalScore, @NonNull LinearLayout totalScoreData) {
     this.rootView = rootView;
+    this.QRData = QRData;
     this.btTempQr = btTempQr;
+    this.highestScoreData = highestScoreData;
+    this.linearLayout = linearLayout;
+    this.numOfQRCodes = numOfQRCodes;
+    this.playerHighScore = playerHighScore;
+    this.playerNameText = playerNameText;
+    this.playerTotalScore = playerTotalScore;
+    this.totalScoreData = totalScoreData;
   }
 
   @Override
@@ -54,13 +92,63 @@ public final class ActivityMyQrCodesBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.QRData;
+      LinearLayout QRData = ViewBindings.findChildViewById(rootView, id);
+      if (QRData == null) {
+        break missingId;
+      }
+
       id = R.id.bt_temp_qr;
       Button btTempQr = ViewBindings.findChildViewById(rootView, id);
       if (btTempQr == null) {
         break missingId;
       }
 
-      return new ActivityMyQrCodesBinding((ConstraintLayout) rootView, btTempQr);
+      id = R.id.highestScoreData;
+      LinearLayout highestScoreData = ViewBindings.findChildViewById(rootView, id);
+      if (highestScoreData == null) {
+        break missingId;
+      }
+
+      id = R.id.linearLayout;
+      LinearLayout linearLayout = ViewBindings.findChildViewById(rootView, id);
+      if (linearLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.numOfQRCodes;
+      TextView numOfQRCodes = ViewBindings.findChildViewById(rootView, id);
+      if (numOfQRCodes == null) {
+        break missingId;
+      }
+
+      id = R.id.playerHighScore;
+      TextView playerHighScore = ViewBindings.findChildViewById(rootView, id);
+      if (playerHighScore == null) {
+        break missingId;
+      }
+
+      id = R.id.playerNameText;
+      TextView playerNameText = ViewBindings.findChildViewById(rootView, id);
+      if (playerNameText == null) {
+        break missingId;
+      }
+
+      id = R.id.playerTotalScore;
+      TextView playerTotalScore = ViewBindings.findChildViewById(rootView, id);
+      if (playerTotalScore == null) {
+        break missingId;
+      }
+
+      id = R.id.totalScoreData;
+      LinearLayout totalScoreData = ViewBindings.findChildViewById(rootView, id);
+      if (totalScoreData == null) {
+        break missingId;
+      }
+
+      return new ActivityMyQrCodesBinding((ConstraintLayout) rootView, QRData, btTempQr,
+          highestScoreData, linearLayout, numOfQRCodes, playerHighScore, playerNameText,
+          playerTotalScore, totalScoreData);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
