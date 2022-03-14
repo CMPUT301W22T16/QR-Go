@@ -1,5 +1,6 @@
 package com.example.qr_go;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
@@ -45,12 +46,9 @@ public class QRSearchFragment extends SortableFragment {
         qrListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // TODO: Start new activity
-                /*
-                Intent intent = new Intent(view.getContext(), OpenSessionActivity.class);
-                intent.putExtra("SELECTED_QR", qrDisplays.get(position).getId());
+                Intent intent = new Intent(view.getContext(), QRInfoActivity.class);
+                intent.putExtra("QRid", qrDisplays.get(position).getId());
                 view.getContext().startActivity(intent);
-                 */
             }
         });
     }
