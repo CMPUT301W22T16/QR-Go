@@ -10,6 +10,9 @@ public class GameQRCodeTest {
     public void checkScore() {
         GameQRCode code = new GameQRCode("BFG5DGW54\n");
         assertEquals(111, (int) code.getScore());
+        // Empty string QR code is 27 cuz when hashing "" is becomes a longer string
+        GameQRCode emptyCode = new GameQRCode("");
+        assertEquals(27, (int) emptyCode.getScore());
     }
 
     @Test

@@ -1,6 +1,7 @@
 package com.example.qr_go;
 
 import android.os.Build;
+import android.util.Pair;
 
 import androidx.annotation.RequiresApi;
 
@@ -34,8 +35,8 @@ public abstract class User {
         username = UsernameGenerator.generateUsername();
         email = "";
         scannedQRCodeIds = new HashMap<>();
-        loginQR = new LoginQRCode(this);
-        statusQR = new StatusQRCode(this);
+        //loginQR = new LoginQRCode(this);
+        //statusQR = new StatusQRCode(this);
     }
 
     /**
@@ -50,8 +51,8 @@ public abstract class User {
         this.username = username;
         this.email = email;
         scannedQRCodeIds = new HashMap<>();
-        loginQR = new LoginQRCode(this);
-        statusQR = new StatusQRCode(this);
+        //loginQR = new LoginQRCode(this);
+        //statusQR = new StatusQRCode(this);
     }
 
     /**
@@ -159,19 +160,19 @@ public abstract class User {
         return email;
     }
 
-    /**
-     * @return User's login QR code
-     */
-    public LoginQRCode getLoginQR() {
-        return loginQR;
-    }
+//     /**
+//      * @return User's login QR code
+//      */
+//     public LoginQRCode getLoginQR() {
+//         return loginQR;
+//     }
 
-    /**
-     * @return User's status QR code
-     */
-    public StatusQRCode getStatusQR() {
-        return statusQR;
-    }
+//     /**
+//      * @return User's status QR code
+//      */
+//     public StatusQRCode getStatusQR() {
+//         return statusQR;
+//     }
 
     /**
      * @param email user's new email
