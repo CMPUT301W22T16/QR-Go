@@ -22,11 +22,11 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/playerNameText"
+                android:id="@+id/userNameText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Player 1"
-                android:textStyle="bold"/>
+                android:textStyle="bold|italic"/>
             <LinearLayout
                 android:id="@+id/QRData"
                 android:layout_width="match_parent"
@@ -41,7 +41,6 @@
                     android:id="@+id/numOfQRCodes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="45dp"
                     android:text="00000" />
             </LinearLayout>
             <LinearLayout
@@ -55,10 +54,10 @@
                     android:text="Highest Score"/>
 
                 <TextView
-                    android:id="@+id/playerHighScore"
+                    android:id="@+id/userHighScore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="19dp"
+                    android:layout_gravity="right"
                     android:text="00000" />
             </LinearLayout>
             <LinearLayout
@@ -72,10 +71,10 @@
                     android:text="Highest Score"/>
 
                 <TextView
-                    android:id="@+id/playerTotalScore"
+                    android:id="@+id/userTotalScore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="19dp"
+                    android:layout_gravity="right"
                     android:text="00000" />
             </LinearLayout>
 

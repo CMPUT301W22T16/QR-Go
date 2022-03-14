@@ -36,7 +36,7 @@ public final class ActivityQrInfoBinding implements ViewBinding {
   public final ListView myQRList;
 
   @NonNull
-  public final ImageView playerPhoto;
+  public final ImageView qrIcon;
 
   @NonNull
   public final TextView qrLocation;
@@ -49,14 +49,14 @@ public final class ActivityQrInfoBinding implements ViewBinding {
 
   private ActivityQrInfoBinding(@NonNull ConstraintLayout rootView,
       @NonNull Button buttonOtherPlayers, @NonNull Button buttonSend,
-      @NonNull EditText inputComment, @NonNull ListView myQRList, @NonNull ImageView playerPhoto,
+      @NonNull EditText inputComment, @NonNull ListView myQRList, @NonNull ImageView qrIcon,
       @NonNull TextView qrLocation, @NonNull TextView qrName, @NonNull TextView qrScore) {
     this.rootView = rootView;
     this.buttonOtherPlayers = buttonOtherPlayers;
     this.buttonSend = buttonSend;
     this.inputComment = inputComment;
     this.myQRList = myQRList;
-    this.playerPhoto = playerPhoto;
+    this.qrIcon = qrIcon;
     this.qrLocation = qrLocation;
     this.qrName = qrName;
     this.qrScore = qrScore;
@@ -113,9 +113,9 @@ public final class ActivityQrInfoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.playerPhoto;
-      ImageView playerPhoto = ViewBindings.findChildViewById(rootView, id);
-      if (playerPhoto == null) {
+      id = R.id.qrIcon;
+      ImageView qrIcon = ViewBindings.findChildViewById(rootView, id);
+      if (qrIcon == null) {
         break missingId;
       }
 
@@ -138,7 +138,7 @@ public final class ActivityQrInfoBinding implements ViewBinding {
       }
 
       return new ActivityQrInfoBinding((ConstraintLayout) rootView, buttonOtherPlayers, buttonSend,
-          inputComment, myQRList, playerPhoto, qrLocation, qrName, qrScore);
+          inputComment, myQRList, qrIcon, qrLocation, qrName, qrScore);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
