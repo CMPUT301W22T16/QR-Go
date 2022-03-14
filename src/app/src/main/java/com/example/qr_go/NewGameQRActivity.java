@@ -189,7 +189,9 @@ public class NewGameQRActivity extends AppCompatActivity {
         db.updateScannedQRtoDB(gameQRCode, new Player(currentUserId, null, null, null), null);
 
         // Go to view QR code activity
-        startActivity(new Intent(this, MapsActivity.class));
+        Intent QRInfo = new Intent(this, QRInfoActivity.class);
+        QRInfo.putExtra("QRid", gameQRCode.getId());
+        startActivity(QRInfo);
     }
 
 }
