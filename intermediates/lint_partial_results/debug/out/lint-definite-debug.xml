@@ -19,12 +19,12 @@
             attribute="xmlns:android"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_maps.xml"
-            line="23"
+            line="22"
             column="15"
-            startOffset="969"
-            endLine="23"
+            startOffset="924"
+            endLine="22"
             endColumn="73"
-            endOffset="1027"/>
+            endOffset="982"/>
     </incident>
 
     <incident
@@ -37,12 +37,12 @@
             replacement="androidx.fragment.app.FragmentContainerView"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_maps.xml"
-            line="23"
+            line="22"
             column="6"
-            startOffset="960"
-            endLine="23"
+            startOffset="915"
+            endLine="22"
             endColumn="14"
-            endOffset="968"/>
+            endOffset="923"/>
     </incident>
 
     <incident

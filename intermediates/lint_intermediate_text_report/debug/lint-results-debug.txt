@@ -20,7 +20,7 @@
 
    https://developer.android.com/reference/java/util/Locale.html#default_locale
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_maps.xml:23: Warning: Replace the <fragment> tag with FragmentContainerView. [FragmentTagUsage from fragment-1.4.0]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_maps.xml:22: Warning: Replace the <fragment> tag with FragmentContainerView. [FragmentTagUsage from fragment-1.4.0]
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
      ~~~~~~~~
 
@@ -229,7 +229,7 @@
    children moved directly into the parent for a flatter and more efficient
    layout hierarchy.
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_maps.xml:23: Warning: This namespace declaration is redundant [RedundantNamespace]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_maps.xml:22: Warning: This namespace declaration is redundant [RedundantNamespace]
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:78: Warning: This namespace declaration is redundant [RedundantNamespace]
