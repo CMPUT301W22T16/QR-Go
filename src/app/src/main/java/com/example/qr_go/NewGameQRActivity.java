@@ -118,27 +118,16 @@ public class NewGameQRActivity extends AppCompatActivity {
                     ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                 // Acquire a reference to the system Location Manager
                 LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-<<<<<<< HEAD
-                @SuppressLint("MissingPermission") Location gpsLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-                @SuppressLint("MissingPermission") Location networkLocation = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
                 GeoLocation gpsGeoLocation = new GeoLocation(gameQRCode.getId());
-                if(gpsLocation!=null) {
-                    gpsGeoLocation.setCoords(gpsLocation.getLongitude(), gpsLocation.getLatitude());
-                } else {
-                    gpsGeoLocation.setCoords(networkLocation.getLongitude(), networkLocation.getLatitude());
-                }
-
-                gameQRCode.setGeoLocation(gpsGeoLocation); // set the location
-=======
                 // Define a listener that responds to location updates
                 LocationListener locationListener = new LocationListener() {
                     public void onLocationChanged(Location location) {
-                        gameQRCode.setLocation(location); // set the location
+                        gpsGeoLocation.setCoords(location.getLongitude(), location.getLatitude()); // set the location
+                        gameQRCode.setGeoLocation(gpsGeoLocation);
                     }
                 };
                 // Register the listener with the Location Manager to receive location updates
                 locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
->>>>>>> c7d5bf905dfc5d5a1be19ea920f020670dd4b6d6
             }
 
         } catch (NoSuchMethodError e) {
@@ -193,7 +182,7 @@ public class NewGameQRActivity extends AppCompatActivity {
     public void saveNewQRCode(View view) {
         // If user has unchecked the location, then set location as null
         if (!locationCheckbox.isChecked()) {
-            gameQRCode.setLocation(null);
+            gameQRCode.setGeoLocation(null);
         }
 
         // Save QR code to database
