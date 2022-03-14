@@ -140,20 +140,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         //locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,0,this);
         db.collection("GameQRCodes")
-                .whereNotEqualTo("location", null)
+                .whereNotEqualTo("geoLocation", null)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     // code from https://stackoverflow.com/questions/65465335/get-specific-field-from-firestore-with-whereequalto
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        HashMap<String, Double> tempMap = new HashMap<>();
+                        Map tempMap = new HashMap<>();
                         if(task.isSuccessful()) {
 
                             for(QueryDocumentSnapshot document : task.getResult()) {
                                 GeoLocation tempGeoLocation = new GeoLocation((String)document.get("id"));
-                                tempMap = (HashMap<String,Double>)document.get("location");
+                                tempMap = (Map)document.get("geoLocation");
                                 if(tempMap.containsKey("latitude")) {
-                                    tempGeoLocation.setCoords(tempMap.get("longitude"),tempMap.get("latitude"));
+                                    tempGeoLocation.setCoords((Double)tempMap.get("longitude"),(Double)tempMap.get("latitude"));
                                     geoLocationList.add(tempGeoLocation);
                                 }
 
