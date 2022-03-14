@@ -34,7 +34,9 @@
             android:parentActivityName=".MapsActivity" />
         <activity
             android:name=".QRInfoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MapsActivity"
+            />
         <activity
             android:name=".ScannedUsersActivity"
             android:exported="false"
