@@ -98,7 +98,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         startActivity(new Intent(MapsActivity.this, QRCodeScannerActivity.class));
                         break;
                     case R.id.nav_my_account:
-//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));
+                        startActivity(new Intent(MapsActivity.this, PlayerProfileActivity.class));
                         break;
                 }
                 return true;

@@ -10,8 +10,6 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
@@ -27,9 +25,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 import com.google.firebase.firestore.CollectionReference;
@@ -47,6 +43,7 @@ import java.util.Map;
 public class SearchActivity extends FragmentActivity {
     private final int LOCATION_REQUEST_CODE = 101;
     private Location userLocation;
+    LocationManager locationManager;
     // String arrays holding the sorting options
     private String[] qrSortOptions = {"Score", "Proximity"};
     private final String[] playerSortOptions = {"Total Score", "# QR Codes", "Unique Score"};
@@ -175,12 +172,13 @@ public class SearchActivity extends FragmentActivity {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
                     ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                 // Acquire a reference to the system Location Manager
-                LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+                locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
                 // Define a listener that responds to location updates
                 LocationListener locationListener = new LocationListener() {
                     public void onLocationChanged(Location location) {
                         userLocation = new Location(location);
                         startViews();
+                        locationManager.removeUpdates(this);
                     }
                 };
                 // Register the listener with the Location Manager to receive location updates
@@ -197,11 +195,6 @@ public class SearchActivity extends FragmentActivity {
 
     @SuppressLint("MissingPermission")
     private void startViews() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
-                ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-            LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-            locationManager.removeUpdates(location -> {});
-        }
         // Initialize database references
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         CollectionReference playersColRef = db.collection("Players");
@@ -360,4 +353,5 @@ public class SearchActivity extends FragmentActivity {
         });
 
     }
+
 }
