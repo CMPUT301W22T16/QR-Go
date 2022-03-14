@@ -1,20 +1,19 @@
 package com.example.qr_go;
 
+import java.io.Serializable;
 import java.util.UUID;
 
 /**
  * This is a class that represents a comment made by a user to a QRCode
  */
-public class Comment {
-
-    private UUID commentId;
+public class Comment implements Serializable {
     private String message;
-    private UUID attachedQRId;
+    private String username;
 
-    public Comment(UUID attachedQRId, String message) {
-        this.commentId = UUID.randomUUID();
+    public Comment(String username, String message) {
+        this.username = username;
         this.message = message;
-        this.attachedQRId = attachedQRId;
+
     }
 
     /**
@@ -24,6 +23,10 @@ public class Comment {
      */
     public String getMessage() {
         return message;
+    }
+
+    public String getUsername() {
+        return username;
     }
 
     /**

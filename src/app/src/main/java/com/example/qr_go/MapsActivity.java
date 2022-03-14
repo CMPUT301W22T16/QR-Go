@@ -24,6 +24,7 @@ import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 
 /**
@@ -33,7 +34,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
     private static String currentUUID;
-    FirebaseFirestore db;
+    public static FirebaseFirestore db;
+
     CollectionReference collectionReference;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -73,7 +75,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             currentUUID = newUser.getUserid();
             SharedPreferences.Editor ed = loggedUser.edit();
             ed.putString(User.USER_ID, currentUUID);
-            // TODO save user to the firestore database
+            ed.apply(); // apply changes
+            // Save user to the firestore database
+            db.collection("Players").document(newUser.getUserid()).set(newUser);
         }
 
         // Set onClick for BottomNavigation nav items
@@ -88,7 +92,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));
                         break;
                     case R.id.nav_my_codes:
-//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));
+                        startActivity(new Intent(MapsActivity.this, MyQRCodesActivity.class));
                         break;
                     case R.id.nav_scan_code:
                         startActivity(new Intent(MapsActivity.this, QRCodeScannerActivity.class));
@@ -100,7 +104,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 return true;
             }
         });
-
 
     }
 
