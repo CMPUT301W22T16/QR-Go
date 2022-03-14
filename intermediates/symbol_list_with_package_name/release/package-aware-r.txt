@@ -2994,6 +2994,9 @@ id pathRelative
 id peekHeight
 id percent
 id pin
+id playerHighScore
+id playerNameText
+id playerTotalScore
 id position
 id postLayout
 id progress_circular
@@ -3146,10 +3149,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
-id userHighScore
 id userList
-id userNameText
-id userTotalScore
 id user_list
 id user_score_view
 id username_view

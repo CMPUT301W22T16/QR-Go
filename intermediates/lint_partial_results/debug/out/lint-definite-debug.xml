@@ -172,10 +172,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
             line="28"
             column="17"
-            startOffset="955"
+            startOffset="957"
             endLine="28"
             endColumn="40"
-            endOffset="978"/>
+            endOffset="980"/>
     </incident>
 
     <incident
@@ -186,10 +186,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
             line="38"
             column="21"
-            startOffset="1410"
+            startOffset="1405"
             endLine="38"
             endColumn="44"
-            endOffset="1433"/>
+            endOffset="1428"/>
     </incident>
 
     <incident
@@ -198,12 +198,12 @@
         message="Hardcoded string &quot;00000&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="44"
+            line="45"
             column="21"
-            startOffset="1647"
-            endLine="44"
+            startOffset="1695"
+            endLine="45"
             endColumn="41"
-            endOffset="1667"/>
+            endOffset="1715"/>
     </incident>
 
     <incident
@@ -212,12 +212,12 @@
         message="Hardcoded string &quot;Highest Score&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="54"
+            line="55"
             column="21"
-            startOffset="2090"
-            endLine="54"
+            startOffset="2138"
+            endLine="55"
             endColumn="49"
-            endOffset="2118"/>
+            endOffset="2166"/>
     </incident>
 
     <incident
@@ -226,12 +226,12 @@
         message="Hardcoded string &quot;00000&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="61"
+            line="62"
             column="21"
-            startOffset="2384"
-            endLine="61"
+            startOffset="2436"
+            endLine="62"
             endColumn="41"
-            endOffset="2404"/>
+            endOffset="2456"/>
     </incident>
 
     <incident
@@ -240,12 +240,12 @@
         message="Hardcoded string &quot;Highest Score&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="71"
+            line="72"
             column="21"
-            startOffset="2825"
-            endLine="71"
+            startOffset="2877"
+            endLine="72"
             endColumn="49"
-            endOffset="2853"/>
+            endOffset="2905"/>
     </incident>
 
     <incident
@@ -254,12 +254,12 @@
         message="Hardcoded string &quot;00000&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="78"
+            line="79"
             column="21"
-            startOffset="3120"
-            endLine="78"
+            startOffset="3176"
+            endLine="79"
             endColumn="41"
-            endOffset="3140"/>
+            endOffset="3196"/>
     </incident>
 
     <incident
@@ -1204,11 +1204,39 @@
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/PlayerInfoActivity.java"
             line="77"
-            column="27"
-            startOffset="3016"
+            column="54"
+            startOffset="3145"
             endLine="77"
-            endColumn="63"
-            endOffset="3052"/>
+            endColumn="110"
+            endOffset="3201"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/PlayerInfoActivity.java"
+            line="78"
+            column="47"
+            startOffset="3250"
+            endLine="78"
+            endColumn="108"
+            endOffset="3311"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/PlayerInfoActivity.java"
+            line="79"
+            column="52"
+            startOffset="3365"
+            endLine="79"
+            endColumn="100"
+            endOffset="3413"/>
     </incident>
 
     <incident
