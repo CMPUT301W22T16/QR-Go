@@ -82,6 +82,11 @@ public class QRGoDBUtil {
         if (QRCodeList.isEmpty()){
             gameqrcode.addUser(player);
             db.collection("GameQRCodes").document(gameqrcode.getHash()).set(gameqrcode);
+            player.addQRCode(gameqrcode);
+            db.collection("Players").document(player.getUserid()).set(player);
+            if (qrphoto != null) {
+                db.collection("QRPhotos").document(qrphoto.getQRID()).set(qrphoto);
+            }
         }
         else{
             gameqrcode = QRCodeList.get(0);
@@ -90,10 +95,7 @@ public class QRGoDBUtil {
                 gameqrcode.addUser(player);
                 db.collection("GameQRCodes").document(gameqrcode.getHash()).update("userIds", gameqrcode.getUserIds());
                 // Update Player to DB
-
-                if (!player.getScannedQRCodeIds().containsKey(gameqrcode.getId())){
-                    player.addQRCode(gameqrcode);
-                }
+                player.addQRCode(gameqrcode);
                 db.collection("Players").document(player.getUserid()).set(player);
                 // Update Photo to DB
                 if (qrphoto != null){
@@ -187,11 +189,13 @@ public class QRGoDBUtil {
     void test3() {
         GameQRCode qrcode = new GameQRCode("BFG5DGW54\n");
         Player player = new Player();
+        Player player1 = new Player();
         /**
          * Assumption: in qrinfo activity, comments are loaded, input updated comments
          */
         CommentsQR comments = new CommentsQR();
         comments.addComment(player, "hi this is working", null);
+        comments.addComment(player1, "hi this is working adfdsf", null);
 
 //        playerids of qrcode
 //        HashMap<String, HashMap<String, String>>  playerIDs = new HashMap<>();
@@ -212,6 +216,11 @@ public class QRGoDBUtil {
 //        string ref
 //        String qrid
         addCommenttoDB(comments, qrcode);
+    }
+    void test4(){
+        Player player = new Player();
+        db.collection("Players").document(player.getUserid()).set(player);
+        deletePlayerFromDB(player);
     }
 
 }

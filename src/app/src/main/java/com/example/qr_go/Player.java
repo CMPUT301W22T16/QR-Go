@@ -27,6 +27,7 @@ public class Player extends User {
     @RequiresApi(api = Build.VERSION_CODES.O)
     public Player(String uuid, String password, String username, String email) {
         super(uuid, password, username, email);
+        boolean isInvisable = false;
     }
 
     /**

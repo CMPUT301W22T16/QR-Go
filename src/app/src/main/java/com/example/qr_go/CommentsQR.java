@@ -19,22 +19,22 @@ public class CommentsQR {
     // TODO: add qrid to constructor
     public CommentsQR(User user, String message, String photolink) {
         this.comments = new HashMap<>();
-        HashMap<String, String> details = createDetails(user, message, photolink);
+        HashMap<String, String> details = new HashMap<>();
+        details.put("Username", user.getUsername());
+        details.put("Message", message);
+        details.put("PhotoRef", photolink);
         comments.put(user.getUserid(), details);
     }
     public CommentsQR() {
         this.comments = new HashMap<>();
     }
-    private HashMap<String, String> createDetails(User user, String message, String photolink){
+
+    public void addComment(User user, String message, String photolink){
+
         HashMap<String, String> details = new HashMap<>();
         details.put("Username", user.getUsername());
         details.put("Message", message);
         details.put("PhotoRef", photolink);
-        return details;
-    }
-    public void addComment(User user, String message, String photolink){
-        createDetails(user, message, photolink);
-        HashMap<String, String> details = createDetails(user, message, photolink);
         comments.put(user.getUserid(), details);
     }
     public HashMap<String, HashMap<String, String>> getComments()
