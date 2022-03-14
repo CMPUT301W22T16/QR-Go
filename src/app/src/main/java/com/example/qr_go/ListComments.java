@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+
 /** list of comments to be stored into database
  *
  */
@@ -47,14 +48,15 @@ public class ListComments extends ArrayAdapter {
         message.setText(comment.getMessage());
 
         return view;
+
     }
 
     /**
      * add comment to the list
      * @param comment comment to be added
      */
-    public void addComment(CommentsQR comment) {
-//        comments.add(comment);
+    public void addComment(Comment comment){
+        comments.add(comment);
     }
 
     /**

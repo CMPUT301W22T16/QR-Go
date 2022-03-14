@@ -79,30 +79,30 @@ public class QRGoDBUtil {
      * @Author Darius Fang
      */
     void updateScannedQRtoDBContinue(GameQRCode gameqrcode, Player player, QRPhoto qrphoto){
-//        if (QRCodeList.isEmpty()){
-//            gameqrcode.addUser(player);
-//            db.collection("GameQRCodes").document(gameqrcode.getHash()).set(gameqrcode);
-//        }
-//        else{
-//            gameqrcode = QRCodeList.get(0);
-//            // Add GameQR to DB
-//            if (!gameqrcode.getUserIds().containsKey(player.getUserid())) {
-//                gameqrcode.addUser(player);
-//                db.collection("GameQRCodes").document(gameqrcode.getHash()).update("userIds", gameqrcode.getUserIds());
-//                // Update Player to DB
-//
-//                if (!player.getScannedQRCodeIds().containsKey(gameqrcode.getId())){
-//                    player.addQRCode(gameqrcode);
-//                }
-//                db.collection("Players").document(player.getUserid()).set(player);
-//                // Update Photo to DB
-//                if (qrphoto != null){
-//                    db.collection("QRPhotos").document(qrphoto.getQRID()).set(qrphoto);
-//                }
-//            }else{
-//                Toast.makeText(context.getApplicationContext(), "You already scanned this :/", Toast.LENGTH_LONG).show();
-//            }
-//        }
+        if (QRCodeList.isEmpty()){
+            gameqrcode.addUser(player);
+            db.collection("GameQRCodes").document(gameqrcode.getHash()).set(gameqrcode);
+        }
+        else{
+            gameqrcode = QRCodeList.get(0);
+            // Add GameQR to DB
+            if (!gameqrcode.getUserIds().containsKey(player.getUserid())) {
+                gameqrcode.addUser(player);
+                db.collection("GameQRCodes").document(gameqrcode.getHash()).update("userIds", gameqrcode.getUserIds());
+                // Update Player to DB
+
+                if (!player.getScannedQRCodeIds().containsKey(gameqrcode.getId())){
+                    player.addQRCode(gameqrcode);
+                }
+                db.collection("Players").document(player.getUserid()).set(player);
+                // Update Photo to DB
+                if (qrphoto != null){
+                    db.collection("QRPhotos").document(qrphoto.getQRID()).set(qrphoto);
+                }
+            }else{
+                Toast.makeText(context.getApplicationContext(), "You already scanned this :/", Toast.LENGTH_LONG).show();
+            }
+        }
     }
     /**
      * starts by getting the comment from the db, if it cannot find one it will make one, method continues to addCommenttoDBContinue
@@ -135,7 +135,7 @@ public class QRGoDBUtil {
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 try {
                     Player player = documentSnapshot.toObject(Player.class);
-//                    player.deletePlayer();
+                    player.deletePlayer();
                     db.collection("Players").document(player.getUserid()).set(player);
                 }catch (Exception e){
                     /** sometimes the db picks up that it exists while in fact it does not... strange
@@ -161,7 +161,7 @@ public class QRGoDBUtil {
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 try {
                     GameQRCode gameqrcode = documentSnapshot.toObject(GameQRCode.class);
-//                    gameqrcode.deleteQR();
+                    gameqrcode.deleteQR();
                     db.collection("GameQRCodes").document(gameqrcode.getHash()).set(gameqrcode);
                 }catch (Exception e){
                     /** sometimes the db picks up that it exists while in fact it does not... strange
