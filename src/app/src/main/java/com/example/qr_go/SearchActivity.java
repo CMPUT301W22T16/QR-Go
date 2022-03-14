@@ -302,7 +302,7 @@ public class SearchActivity extends FragmentActivity {
                                     user.getTotalScore(),
                                     user.getScannedQRCodeIds().size(),
                                     user.getHighestUniqueScore(),
-                                    MapsActivity.getUserId()==user.getUserid()
+                                    MapsActivity.getUserId().equals(user.getUserid())
                             );
                     userDisplays.add(userToDisplay);
                 }
@@ -320,7 +320,7 @@ public class SearchActivity extends FragmentActivity {
                                     user.getTotalScore(),
                                     user.getScannedQRCodeIds().size(),
                                     user.getHighestUniqueScore(),
-                                    MapsActivity.getUserId()==user.getUserid()
+                                    MapsActivity.getUserId().equals(user.getUserid())
                             );
                     userDisplays.add(userToDisplay);
                 }
