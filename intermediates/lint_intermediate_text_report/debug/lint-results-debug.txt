@@ -180,7 +180,7 @@
 
    https://android-developers.googleblog.com/2009/03/android-layout-tricks-3-optimize-by.html
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/UserSearchFragment.java:80: Warning: Use Integer.valueOf(rank) instead [UseValueOf]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/UserSearchFragment.java:81: Warning: Use Integer.valueOf(rank) instead [UseValueOf]
             user.setRankPosition(new Integer(rank));
                                  ~~~~~~~~~~~~~~~~~
 
@@ -296,7 +296,7 @@
 
    https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerInfoActivity.java:72: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerInfoActivity.java:77: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
         qrNumText.setText(Integer.toString(myQRCodeIDs.size()));
                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRArrayAdapter.java:52: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]

@@ -979,12 +979,12 @@
             replacement="Integer.valueOf"/>
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserSearchFragment.java"
-            line="80"
+            line="81"
             column="34"
-            startOffset="2748"
-            endLine="80"
+            startOffset="2741"
+            endLine="81"
             endColumn="51"
-            endOffset="2765"/>
+            endOffset="2758"/>
     </incident>
 
     <incident
@@ -1203,12 +1203,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/PlayerInfoActivity.java"
-            line="72"
+            line="77"
             column="27"
-            startOffset="2866"
-            endLine="72"
+            startOffset="3016"
+            endLine="77"
             endColumn="63"
-            endOffset="2902"/>
+            endOffset="3052"/>
     </incident>
 
     <incident

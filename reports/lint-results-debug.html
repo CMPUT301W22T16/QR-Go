@@ -177,7 +177,7 @@ document.getElementById(id).style.display = 'none';
       <span class="mdl-layout-title">Lint Report: 104 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Mon Mar 14 01:30:02 UTC 2022      </nav>
+Check performed at Mon Mar 14 01:44:05 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -895,14 +895,14 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/example/qr_go/UserSearchFragment.java">../../src/main/java/com/example/qr_go/UserSearchFragment.java</a>:80</span>: <span class="message">Use <code>Integer.valueOf(rank)</code> instead</span><br /><pre class="errorlines">
-<span class="lineno">  77 </span>        }
-<span class="lineno">  78 </span>        <span class="keyword">int</span> rank = <span class="number">1</span>;
-<span class="lineno">  79 </span>        <span class="keyword">for</span> (UserListDisplayContainer user : userDisplays) {
-<span class="caretline"><span class="lineno">  80 </span>            user.setRankPosition(<span class="warning"><span class="keyword">new</span> Integer(rank)</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  81 </span>            rank++;
-<span class="lineno">  82 </span>        }
-<span class="lineno">  83 </span>        userAdapter = <span class="keyword">new</span> UserArrayAdapter(view.getContext(), userDisplays, sortPos);
+<span class="location"><a href="../../src/main/java/com/example/qr_go/UserSearchFragment.java">../../src/main/java/com/example/qr_go/UserSearchFragment.java</a>:81</span>: <span class="message">Use <code>Integer.valueOf(rank)</code> instead</span><br /><pre class="errorlines">
+<span class="lineno">  78 </span>        }
+<span class="lineno">  79 </span>        <span class="keyword">int</span> rank = <span class="number">1</span>;
+<span class="lineno">  80 </span>        <span class="keyword">for</span> (UserListDisplayContainer user : userDisplays) {
+<span class="caretline"><span class="lineno">  81 </span>            user.setRankPosition(<span class="warning"><span class="keyword">new</span> Integer(rank)</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  82 </span>            rank++;
+<span class="lineno">  83 </span>        }
+<span class="lineno">  84 </span>        userAdapter = <span class="keyword">new</span> UserArrayAdapter(view.getContext(), userDisplays, sortPos);
 </pre>
 
 </div>
@@ -1276,13 +1276,13 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/example/qr_go/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/PlayerInfoActivity.java</a>:72</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno">  69 </span>                    }
-<span class="lineno">  70 </span>                });
-<span class="lineno">  71 </span>        usernameText.setText(selectedUser.getUsername());
-<span class="caretline"><span class="lineno">  72 </span>        qrNumText.setText(<span class="warning">Integer.toString(myQRCodeIDs.size())</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  73 </span>        totalScoreText.setText(userScore);
-<span class="lineno">  74 </span>
+<span class="location"><a href="../../src/main/java/com/example/qr_go/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/PlayerInfoActivity.java</a>:77</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
+<span class="lineno">  74 </span>                    }
+<span class="lineno">  75 </span>                });
+<span class="lineno">  76 </span>        usernameText.setText(selectedUser.getUsername());
+<span class="caretline"><span class="lineno">  77 </span>        qrNumText.setText(<span class="warning">Integer.toString(myQRCodeIDs.size())</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  78 </span>        totalScoreText.setText(userScore);
+<span class="lineno">  79 </span>
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/QRArrayAdapter.java">../../src/main/java/com/example/qr_go/QRArrayAdapter.java</a>:52</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
