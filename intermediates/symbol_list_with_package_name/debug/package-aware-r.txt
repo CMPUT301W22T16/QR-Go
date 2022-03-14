@@ -2736,7 +2736,10 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id bt_temp_qr
+id buttonOtherPlayers
 id buttonPanel
+id buttonSend
 id cache_measures
 id callMeasure
 id cancel_button
@@ -2762,6 +2765,8 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
+id commenterName
+id commenterPhoto
 id compress
 id confirm_button
 id constraint
@@ -2858,6 +2863,7 @@ id image
 id immediateStop
 id included
 id info
+id inputComment
 id invisible
 id inward
 id italic
@@ -2939,6 +2945,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id myQRList
 id nav_controller_view_tag
 id nav_host_fragment_container
 id nav_my_account
@@ -2988,6 +2995,7 @@ id progress_horizontal
 id qrIcon
 id qrLocation
 id qrName
+id qrScore
 id radio
 id ratio
 id rectangles
@@ -3125,6 +3133,8 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id userList
+id usersContent
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3232,8 +3242,10 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_code_scanner
 layout activity_maps
+layout activity_my_qr_codes
 layout activity_new_game_qractivity
 layout activity_qr_info
+layout activity_scanned_users
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3250,6 +3262,8 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout list_comments_content
+layout list_users_content
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
