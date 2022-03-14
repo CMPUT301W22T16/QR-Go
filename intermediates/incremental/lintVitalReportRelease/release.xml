@@ -1,7 +1,7 @@
 <variant
     name="release"
     package="com.example.qr_go"
-    minSdkVersion="26"
+    minSdkVersion="21"
     targetSdkVersion="31"
     mergedManifest="build/intermediates/merged_manifest/release/AndroidManifest.xml"
     manifestMergeReport="build/outputs/logs/manifest-merger-release-report.txt"
