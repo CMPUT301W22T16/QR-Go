@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 7.1.0" type="partial_results">
+    <map id="UnusedResources">
+        <entry
+            name="model"
+            string="attr[colorPrimary(R),colorControlNormal(R),actionBarSize(R),colorOnPrimary(R),colorPrimaryVariant(R)],color[purple_200(U),black(U),teal_200(U),white(U),teal_700(U),purple_700(U),purple_500(U)],drawable[ic_baseline_chevron_left_24(U),round_search_24(U),round_account_circle_24(U),baseline_dashboard_24(U),ic_launcher_foreground(U),round_qr_code_scanner_24(U),ic_launcher_background(U),ic_launcher_foreground_1(R)],id[container(D),username_view(U),nav_my_account(U),qrIcon(D),search_pager(U),scanner_view(U),location_checkbox(U),back_button(U),score(U),take_qr_photo_imageview(U),score_text(U),qr_id_view(U),search_bar(U),user_score_view(U),map(U),nav_my_codes(U),search_tab_layout(U),nav_scan_code(U),qr_score_view(U),qr_list(U),user_list(U),bottom_nav_view(U),qrName(D),take_qr_photo_button(U),nav_search(U),qrLocation(D),save_game_qr(U),sort_spinner(U)],layout[activity_code_scanner(U),user_list_content(U),activity_search(U),activity_qr_info(D),spinner_item(U),qr_list_content(U),fragment_qr_search(U),activity_new_game_qractivity(U),fragment_user_search(U),activity_maps(U)],menu[bottom_nav_menu(U)],mipmap[ic_launcher_round(U),ic_launcher(U)],string[title_activity_maps(U),app_name(U)],style[Theme_QRGo(U),Widget_MaterialComponents_Button_TextButton_Icon(R),Theme_MaterialComponents_DayNight_DarkActionBar(R)],sample[avatars(E)];c^1,d^1,e^1,f^1,10^13,11^1,32^0^c^40^3,33^42^17^2a,34^0,37^1e^2e^9^6^1a^2b^1c^11,39^2^3a,3a^d^f^11^e,3b^12^10,3c^12^10,3f^41^b^a^8^7^9^6^4^5;;;"/>
+        <location id="R.layout.activity_qr_info"
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="2"
+            column="1"
+            startOffset="39"
+            endLine="45"
+            endColumn="53"
+            endOffset="1809"/>
+    </map>
+
+</incidents>
