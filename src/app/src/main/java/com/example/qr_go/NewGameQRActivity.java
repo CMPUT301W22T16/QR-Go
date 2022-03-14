@@ -18,11 +18,19 @@ import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.ArrayList;
 
 /**
  * This activity is shown after user scans a QR code
@@ -188,10 +196,26 @@ public class NewGameQRActivity extends AppCompatActivity {
         // Save QR code to database
         QRGoDBUtil db = new QRGoDBUtil(this); // pass in context to do toast
         String currentUserId = MapsActivity.getUserId();
-        db.updateScannedQRtoDB(gameQRCode, new Player(currentUserId, null, null, null), null);
-
-        // Go to view QR code activity
-        startActivity(new Intent(this, MapsActivity.class));
+        ArrayList<GameQRCode> QRCodeList = new ArrayList<GameQRCode>();
+        FirebaseFirestore firestoreDb = MapsActivity.db;
+        DocumentReference docRef = firestoreDb.collection("Players").document(currentUserId);
+        docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                try {
+                    Player player = documentSnapshot.toObject(Player.class);
+                    db.updateScannedQRtoDB(gameQRCode, player, null);
+                }catch (Exception e){
+                    /** sometimes the db picks up that it exists while in fact it does not... strange
+                     */
+                    Log.d("Player Not Found", "Player scanning does not exist");
+                }
+                // Go to view QR code activity
+                Intent QRInfo = new Intent(view.getContext(), QRInfoActivity.class);
+                QRInfo.putExtra("QRid", gameQRCode.getId());
+                startActivity(QRInfo);
+            }
+        });
     }
 
 }

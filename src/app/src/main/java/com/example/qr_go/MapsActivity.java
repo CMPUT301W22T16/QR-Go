@@ -104,21 +104,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 int id = item.getItemId();
                 switch (id) {
                     case R.id.nav_search:
-//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));
+                        startActivity(new Intent(MapsActivity.this, SearchActivity.class));
                         break;
                     case R.id.nav_my_codes:
-//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));
+                        startActivity(new Intent(MapsActivity.this, MyQRCodesActivity.class));
                         break;
                     case R.id.nav_scan_code:
                         startActivity(new Intent(MapsActivity.this, QRCodeScannerActivity.class));
                         break;
                     case R.id.nav_my_account:
-//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));
+                        startActivity(new Intent(MapsActivity.this, PlayerProfileActivity.class));
                         break;
                 }
                 return true;
             }
         });
+        QRGoDBUtil db = new QRGoDBUtil();
+        db.test3();
 
     }
 

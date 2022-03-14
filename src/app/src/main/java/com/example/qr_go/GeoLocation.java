@@ -15,7 +15,6 @@ public class GeoLocation {
     private double latitude;
     private Address address;
     private String locatedQRId;
-
     public GeoLocation(String locatedQRId) {
 
         this.locatedQRId = locatedQRId;

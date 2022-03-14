@@ -7,9 +7,13 @@ plugins {
 android {
     compileSdk 31
 
+    lintOptions {
+        abortOnError false
+    }
+
     defaultConfig {
         applicationId "com.example.qr_go"
-        minSdk 21
+        minSdk 26
         targetSdk 31
         versionCode 1
         versionName "1.0"
