@@ -72,8 +72,7 @@ public class UserSearchFragment extends SortableFragment {
                 userDisplays.sort(new UserListNumScannedComparator());
                 break;
             default:
-                // TODO: Implement sorting via unique qr score
-                userDisplays.sort(new UserListTotalScoreComparator());
+                userDisplays.sort(new UserListUniqueQRComparator());
                 break;
         }
         int rank = 1;
