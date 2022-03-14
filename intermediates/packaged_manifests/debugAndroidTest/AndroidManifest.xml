@@ -3,7 +3,7 @@
     package="com.example.qr_go.test" >
 
     <uses-sdk
-        android:minSdkVersion="21"
+        android:minSdkVersion="26"
         android:targetSdkVersion="31" />
 
     <instrumentation
@@ -21,7 +21,9 @@
 
     <uses-permission android:name="android.permission.REORDER_TASKS" />
 
-    <application android:debuggable="true" >
+    <application
+        android:debuggable="true"
+        android:extractNativeLibs="false" >
         <uses-library android:name="android.test.runner" />
 
         <activity
