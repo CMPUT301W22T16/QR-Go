@@ -47,6 +47,7 @@ public class PlayerInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player_info);
+
         Intent intent = getIntent();
         String selectedPlayerID = intent.getStringExtra("SELECTED_USER");
 

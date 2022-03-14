@@ -326,7 +326,7 @@ public class SearchActivity extends FragmentActivity {
                 qrDisplays.clear();
                 for(DocumentSnapshot snapshot : queryDocumentSnapshots) {
                     Float distance;
-                    Map qrLocationMap = (Map) snapshot.get("location");
+                    Map qrLocationMap = (Map) snapshot.get("geoLocation");
                     // If no recorded location, set distance as null, else calculate the distance
                     if (qrLocationMap == null || userLocation == null) {
                         distance = null;

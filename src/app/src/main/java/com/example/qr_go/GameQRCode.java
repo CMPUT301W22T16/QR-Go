@@ -1,6 +1,6 @@
 package com.example.qr_go;
 
-import android.location.Location;
+
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
@@ -17,8 +17,9 @@ import java.util.regex.Pattern;
  */
 public class GameQRCode extends QRCode {
     private Integer score;
+    private GeoLocation location;
     private HashMap<String, HashMap<String, String>> userIds;
-    private Location location;
+
 
     /**
      * When creating a new GameQRCode, initialize the list of userIds
@@ -115,9 +116,9 @@ public class GameQRCode extends QRCode {
 
     /**
      * Get last known location of QR code
-     * @return Location object
+     * @return GeoLocation object
      */
-    public Location getLocation() {
+    public GeoLocation getGeoLocation() {
         return location;
     }
 
@@ -125,7 +126,7 @@ public class GameQRCode extends QRCode {
      * Set a new location of recently added QR code
      * @param location new location to set to
      */
-    public void setLocation(Location location) {
+    public void setGeoLocation(GeoLocation location) {
         this.location = location;
     }
 }

@@ -4,8 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,15 +20,22 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
-import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
+
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * MainActivity
@@ -35,12 +45,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     private static String currentUUID;
     public static FirebaseFirestore db;
+    protected LocationManager locationManager;
+    protected LocationListener locationListener;
+
 
     CollectionReference collectionReference;
+    ArrayList<GeoLocation> geoLocationList;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        geoLocationList = new ArrayList<GeoLocation>();
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_maps);
@@ -121,11 +136,38 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        //Code from https://javapapers.com/android/get-current-location-in-android/
+        //locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        //locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,0,this);
+        db.collection("GameQRCodes")
+                .whereNotEqualTo("geoLocation", null)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    // code from https://stackoverflow.com/questions/65465335/get-specific-field-from-firestore-with-whereequalto
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        Map tempMap = new HashMap<>();
+                        if(task.isSuccessful()) {
 
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+                            for(QueryDocumentSnapshot document : task.getResult()) {
+                                GeoLocation tempGeoLocation = new GeoLocation((String)document.get("id"));
+                                tempMap = (Map)document.get("geoLocation");
+                                if(tempMap.containsKey("latitude")) {
+                                    tempGeoLocation.setCoords((Double)tempMap.get("longitude"),(Double)tempMap.get("latitude"));
+                                    geoLocationList.add(tempGeoLocation);
+                                }
+
+                            }
+                        }
+                        for(int i = 0; i< geoLocationList.size(); i++){
+                            LatLng newLoc = new LatLng(geoLocationList.get(i).getLatitude(), geoLocationList.get(i).getLongitude());
+                            mMap.addMarker(new MarkerOptions().position(newLoc).title("NewMarker"));
+                        }
+                    }
+
+
+                });
+
     }
 
     /**
