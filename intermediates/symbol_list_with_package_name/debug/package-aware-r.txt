@@ -2571,7 +2571,6 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
-drawable ic_baseline_chevron_left_24
 drawable ic_clock_black_24dp
 drawable ic_code_scanner_auto_focus_off
 drawable ic_code_scanner_auto_focus_on
@@ -2631,6 +2630,7 @@ drawable notify_panel_notification_icon_bg
 drawable round_account_circle_24
 drawable round_qr_code_scanner_24
 drawable round_search_24
+drawable sample_prof_pic
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -2642,6 +2642,7 @@ id CTRL
 id FUNCTION
 id META
 id NO_DEBUG
+id QRData
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -2725,7 +2726,6 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
-id back_button
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -2738,7 +2738,10 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id bt_temp_qr
+id buttonOtherPlayers
 id buttonPanel
+id buttonSend
 id cache_measures
 id callMeasure
 id cancel_button
@@ -2764,6 +2767,8 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
+id commenterName
+id commenterPhoto
 id compress
 id confirm_button
 id constraint
@@ -2845,6 +2850,7 @@ id groups
 id guideline
 id header_title
 id hideable
+id highestScoreData
 id home
 id homeAsUp
 id honorRequest
@@ -2860,6 +2866,7 @@ id image
 id immediateStop
 id included
 id info
+id inputComment
 id invisible
 id inward
 id italic
@@ -2941,6 +2948,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id myQRList
 id nav_controller_view_tag
 id nav_host_fragment_container
 id nav_my_account
@@ -2965,6 +2973,7 @@ id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id numOfQRCodes
 id off
 id on
 id onInterceptTouchReturnSwipe
@@ -2990,9 +2999,7 @@ id progress_horizontal
 id qrIcon
 id qrLocation
 id qrName
-id qr_id_view
-id qr_list
-id qr_score_view
+id qrScore
 id radio
 id ratio
 id rectangles
@@ -3026,10 +3033,8 @@ id search_close_btn
 id search_edit_frame
 id search_go_btn
 id search_mag_icon
-id search_pager
 id search_plate
 id search_src_text
-id search_tab_layout
 id search_voice_btn
 id select_dialog_listview
 id selected
@@ -3050,7 +3055,6 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
-id sort_spinner
 id south
 id spacer
 id special_effects_controller_view_tag
@@ -3119,6 +3123,7 @@ id title_template
 id toggle
 id top
 id topPanel
+id totalScoreData
 id touch_outside
 id transitionToEnd
 id transitionToStart
@@ -3133,9 +3138,11 @@ id uniform
 id unlabeled
 id up
 id useLogo
-id user_list
-id user_score_view
-id username_view
+id userHighScore
+id userList
+id userNameText
+id userTotalScore
+id usersContent
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3243,9 +3250,11 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_code_scanner
 layout activity_maps
+layout activity_my_qr_codes
 layout activity_new_game_qractivity
+layout activity_player_info
 layout activity_qr_info
-layout activity_search
+layout activity_scanned_users
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3262,8 +3271,8 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout fragment_qr_search
-layout fragment_user_search
+layout list_comments_content
+layout list_users_content
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3316,11 +3325,9 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
-layout qr_list_content
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
-layout spinner_item
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_chip_zero_corner_radius
@@ -3337,7 +3344,6 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
-layout user_list_content
 menu bottom_nav_menu
 menu example_menu
 menu example_menu2
