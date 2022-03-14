@@ -5,16 +5,103 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="50dp" />
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="128dp"
+            android:layout_marginLeft="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/playerNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Player 1"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/QRData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QR Codes" />
+
+                <TextView
+                    android:id="@+id/numOfQRCodes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:text="00000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/highestScoreData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Highest Score" />
+
+                <TextView
+                    android:id="@+id/playerHighScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="19dp"
+                    android:text="00000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/totalScoreData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Highest Score" />
+
+                <TextView
+                    android:id="@+id/playerTotalScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="19dp"
+                    android:text="00000" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
 <!--    TODO: Replace this with list view for QRCodes-->
     <Button
         android:id="@+id/bt_temp_qr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:text="QR Code #1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
