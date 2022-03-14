@@ -1,5 +1,6 @@
 package com.example.qr_go;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -49,8 +50,6 @@ public class PlayerInfoActivity extends AppCompatActivity {
         TextView totalScoreText = findViewById(R.id.userTotalScore);
         TextView highestScoreText = findViewById(R.id.userHighScore);
 
-
-        final Boolean[] valid = new Boolean[1];
         userDBInst = FirebaseFirestore.getInstance();
 
         userDBInst.collection("Players")
