@@ -21,6 +21,10 @@
             android:exported="false"
             android:parentActivityName=".QRCodeScannerActivity" />
         <activity
+            android:name=".SearchActivity"
+            android:exported="false">
+        </activity>
+        <activity
             android:name=".QRCodeScannerActivity"
             android:exported="false"
             android:parentActivityName=".MapsActivity" />
