@@ -24,7 +24,11 @@ public class Comment implements Serializable {
     public String getMessage() {
         return message;
     }
-
+    /**
+     * Getter for username
+     * @return
+     *      Returns this comment's username
+     */
     public String getUsername() {
         return username;
     }

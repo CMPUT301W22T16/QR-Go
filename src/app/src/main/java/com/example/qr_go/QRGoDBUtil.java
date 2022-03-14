@@ -18,6 +18,7 @@ import java.util.ArrayList;
 @RequiresApi(api = Build.VERSION_CODES.O)
 /**
  * QRGODBUtil is a util class that helps with manipulating the db
+ * @Author Darius Fang
  */
 public class QRGoDBUtil {
     /**global variables
@@ -33,7 +34,7 @@ public class QRGoDBUtil {
         super();
     }
     /** Gets QR  from database then it executes updateScannedQRtoDBContinue
-     *
+     *  if it exists, it will update the current, otherwise it will make a new one
      * @Author Darius Fang
      */
 
@@ -116,13 +117,6 @@ public class QRGoDBUtil {
         db.collection("Comments").document(gameqrcode.getHash()).set(comments.getComments());
     }
 
-    /**
-     * Adding comment list back to the database
-     * @param comments
-     * @param gameQRCode
-     * @Author Darius Fang
-     */
-
 
     /**
      * deletes the player by flagging them to be invisable
@@ -147,6 +141,11 @@ public class QRGoDBUtil {
         });
 
     }
+    /**
+     * deletes the gameqrcode of the player
+     *
+     * @Author Darius Fang
+     */
     public void deleteGameQRcodeFromPlayer(){
         return;
     }

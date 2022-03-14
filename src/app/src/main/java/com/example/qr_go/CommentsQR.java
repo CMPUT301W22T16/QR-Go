@@ -6,11 +6,8 @@ import java.util.Map;
 import java.util.UUID;
 
 /**
- * This is a class that represents a comment made by a user to a QRCode
- */
-
-/**
- * this is the revised version of comments, originally Matthew's code
+ * Custom conatiner for comments, used for database interface, and can be translated to an arraylist for the android adapter
+ * this is the revised version of comments container, originally Matthew's work
  * @Author Darius Fang
  */
 public class CommentsQR {
@@ -29,6 +26,12 @@ public class CommentsQR {
         this.comments = new HashMap<>();
     }
 
+    /**
+     * adds the comment onto the hashmap stack
+     * @param user user to be added
+     * @param message message of the user
+     * @param photolink profile of user
+     */
     public void addComment(User user, String message, String photolink){
 
         HashMap<String, String> details = new HashMap<>();
@@ -37,12 +40,16 @@ public class CommentsQR {
         details.put("PhotoRef", photolink);
         comments.put(user.getUserid(), details);
     }
+
+    /**
+     * Comment getter
+     * @return HashMap<String, HashMap<String, String>
+     */
     public HashMap<String, HashMap<String, String>> getComments()
     {
         return this.comments;
 
     }
-
     /**
      * Getter for message
      * @return
@@ -64,6 +71,11 @@ public class CommentsQR {
         comments.put(userId, details);
 
     }
+
+    /**
+     * Custom converstion for formating of android adapter
+     * @return ArrayList<Comment>
+     */
     public ArrayList<Comment> getCommentObjects(){
         ArrayList<Comment> out= new ArrayList<Comment>();
         for (Map.Entry<String, HashMap<String, String>> details:comments.entrySet() ){
