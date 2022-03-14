@@ -266,12 +266,54 @@
         message="`SharedPreferences.edit()` without a corresponding `commit()` or `apply()` call">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="83"
+            line="74"
             column="43"
-            startOffset="3219"
-            endLine="83"
+            startOffset="2891"
+            endLine="74"
             endColumn="60"
-            endOffset="3236"/>
+            endOffset="2908"/>
+    </incident>
+
+    <incident
+        id="NonConstantResourceId"
+        severity="warning"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
+            line="87"
+            column="26"
+            startOffset="3583"
+            endLine="87"
+            endColumn="41"
+            endOffset="3598"/>
+    </incident>
+
+    <incident
+        id="NonConstantResourceId"
+        severity="warning"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
+            line="90"
+            column="26"
+            startOffset="3748"
+            endLine="90"
+            endColumn="43"
+            endOffset="3765"/>
+    </incident>
+
+    <incident
+        id="NonConstantResourceId"
+        severity="warning"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
+            line="93"
+            column="26"
+            startOffset="3915"
+            endLine="93"
+            endColumn="44"
+            endOffset="3933"/>
     </incident>
 
     <incident
@@ -282,52 +324,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
             line="96"
             column="26"
-            startOffset="3911"
+            startOffset="4090"
             endLine="96"
-            endColumn="41"
-            endOffset="3926"/>
-    </incident>
-
-    <incident
-        id="NonConstantResourceId"
-        severity="warning"
-        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="99"
-            column="26"
-            startOffset="4076"
-            endLine="99"
-            endColumn="43"
-            endOffset="4093"/>
-    </incident>
-
-    <incident
-        id="NonConstantResourceId"
-        severity="warning"
-        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="102"
-            column="26"
-            startOffset="4243"
-            endLine="102"
-            endColumn="44"
-            endOffset="4261"/>
-    </incident>
-
-    <incident
-        id="NonConstantResourceId"
-        severity="warning"
-        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="105"
-            column="26"
-            startOffset="4418"
-            endLine="105"
             endColumn="45"
-            endOffset="4437"/>
+            endOffset="4109"/>
     </incident>
 
     <incident
@@ -338,10 +338,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/PlayerInfoActivity.java"
             line="72"
             column="27"
-            startOffset="2836"
+            startOffset="2866"
             endLine="72"
             endColumn="63"
-            endOffset="2872"/>
+            endOffset="2902"/>
     </incident>
 
     <incident

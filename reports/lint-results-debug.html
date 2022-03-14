@@ -177,7 +177,7 @@ document.getElementById(id).style.display = 'none';
       <span class="mdl-layout-title">Lint Report: 39 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Sun Mar 13 23:42:23 UTC 2022      </nav>
+Check performed at Mon Mar 14 00:56:29 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -272,14 +272,14 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:83</span>: <span class="message"><code>SharedPreferences.edit()</code> without a corresponding <code>commit()</code> or <code>apply()</code> call</span><br /><pre class="errorlines">
-<span class="lineno">  80 </span>        <span class="keyword">if</span> (currentUUID == <span class="keyword">null</span>) {
-<span class="lineno">  81 </span>            User newUser = <span class="keyword">new</span> Player();
-<span class="lineno">  82 </span>            currentUUID = newUser.getUserid();
-<span class="caretline"><span class="lineno">  83 </span>            SharedPreferences.Editor ed = <span class="warning">loggedUser.edit()</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  84 </span>            ed.putString(User.USER_ID, currentUUID);
-<span class="lineno">  85 </span>            <span class="comment">// TODO save user to the firestore database</span>
-<span class="lineno">  86 </span>        }
+<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:74</span>: <span class="message"><code>SharedPreferences.edit()</code> without a corresponding <code>commit()</code> or <code>apply()</code> call</span><br /><pre class="errorlines">
+<span class="lineno">  71 </span>        <span class="keyword">if</span> (currentUUID == <span class="keyword">null</span>) {
+<span class="lineno">  72 </span>            User newUser = <span class="keyword">new</span> Player();
+<span class="lineno">  73 </span>            currentUUID = newUser.getUserid();
+<span class="caretline"><span class="lineno">  74 </span>            SharedPreferences.Editor ed = <span class="warning">loggedUser.edit()</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  75 </span>            ed.putString(User.USER_ID, currentUUID);
+<span class="lineno">  76 </span>            <span class="comment">// TODO save user to the firestore database</span>
+<span class="lineno">  77 </span>        }
 </pre>
 
 </div>
@@ -368,44 +368,44 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:87</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
+<span class="lineno">  84 </span>            <span class="keyword">public</span> <span class="keyword">boolean</span> onNavigationItemSelected(<span class="annotation">@NonNull</span> MenuItem item) {
+<span class="lineno">  85 </span>                <span class="keyword">int</span> id = item.getItemId();
+<span class="lineno">  86 </span>                <span class="keyword">switch</span> (id) {
+<span class="caretline"><span class="lineno">  87 </span>                    <span class="keyword">case</span> <span class="warning">R.id.nav_search</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  88 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
+<span class="lineno">  89 </span>                        <span class="keyword">break</span>;
+<span class="lineno">  90 </span>                    <span class="keyword">case</span> R.id.nav_my_codes:
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:90</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
+<span class="lineno">  87 </span>                    <span class="keyword">case</span> R.id.nav_search:
+<span class="lineno">  88 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
+<span class="lineno">  89 </span>                        <span class="keyword">break</span>;
+<span class="caretline"><span class="lineno">  90 </span>                    <span class="keyword">case</span> <span class="warning">R.id.nav_my_codes</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  91 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
+<span class="lineno">  92 </span>                        <span class="keyword">break</span>;
+<span class="lineno">  93 </span>                    <span class="keyword">case</span> R.id.nav_scan_code:
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:93</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
+<span class="lineno">  90 </span>                    <span class="keyword">case</span> R.id.nav_my_codes:
+<span class="lineno">  91 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
+<span class="lineno">  92 </span>                        <span class="keyword">break</span>;
+<span class="caretline"><span class="lineno">  93 </span>                    <span class="keyword">case</span> <span class="warning">R.id.nav_scan_code</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  94 </span>                        startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, QRCodeScannerActivity.<span class="keyword">class</span>));
+<span class="lineno">  95 </span>                        <span class="keyword">break</span>;
+<span class="lineno">  96 </span>                    <span class="keyword">case</span> R.id.nav_my_account:
+</pre>
+
 <span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:96</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
-<span class="lineno">  93 </span>            <span class="keyword">public</span> <span class="keyword">boolean</span> onNavigationItemSelected(<span class="annotation">@NonNull</span> MenuItem item) {
-<span class="lineno">  94 </span>                <span class="keyword">int</span> id = item.getItemId();
-<span class="lineno">  95 </span>                <span class="keyword">switch</span> (id) {
-<span class="caretline"><span class="lineno">  96 </span>                    <span class="keyword">case</span> <span class="warning">R.id.nav_search</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  93 </span>                    <span class="keyword">case</span> R.id.nav_scan_code:
+<span class="lineno">  94 </span>                        startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, QRCodeScannerActivity.<span class="keyword">class</span>));
+<span class="lineno">  95 </span>                        <span class="keyword">break</span>;
+<span class="caretline"><span class="lineno">  96 </span>                    <span class="keyword">case</span> <span class="warning">R.id.nav_my_account</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">  97 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
 <span class="lineno">  98 </span>                        <span class="keyword">break</span>;
-<span class="lineno">  99 </span>                    <span class="keyword">case</span> R.id.nav_my_codes:
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:99</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
-<span class="lineno">  96 </span>                    <span class="keyword">case</span> R.id.nav_search:
-<span class="lineno">  97 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
-<span class="lineno">  98 </span>                        <span class="keyword">break</span>;
-<span class="caretline"><span class="lineno">  99 </span>                    <span class="keyword">case</span> <span class="warning">R.id.nav_my_codes</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 100 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
-<span class="lineno"> 101 </span>                        <span class="keyword">break</span>;
-<span class="lineno"> 102 </span>                    <span class="keyword">case</span> R.id.nav_scan_code:
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:102</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
-<span class="lineno">  99 </span>                    <span class="keyword">case</span> R.id.nav_my_codes:
-<span class="lineno"> 100 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
-<span class="lineno"> 101 </span>                        <span class="keyword">break</span>;
-<span class="caretline"><span class="lineno"> 102 </span>                    <span class="keyword">case</span> <span class="warning">R.id.nav_scan_code</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 103 </span>                        startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, QRCodeScannerActivity.<span class="keyword">class</span>));
-<span class="lineno"> 104 </span>                        <span class="keyword">break</span>;
-<span class="lineno"> 105 </span>                    <span class="keyword">case</span> R.id.nav_my_account:
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:105</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
-<span class="lineno"> 102 </span>                    <span class="keyword">case</span> R.id.nav_scan_code:
-<span class="lineno"> 103 </span>                        startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, QRCodeScannerActivity.<span class="keyword">class</span>));
-<span class="lineno"> 104 </span>                        <span class="keyword">break</span>;
-<span class="caretline"><span class="lineno"> 105 </span>                    <span class="keyword">case</span> <span class="warning">R.id.nav_my_account</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 106 </span><span class="comment">//                        startActivity(new Intent(MapsActivity.this, MapsActivity.class));</span>
-<span class="lineno"> 107 </span>                        <span class="keyword">break</span>;
-<span class="lineno"> 108 </span>                }
+<span class="lineno">  99 </span>                }
 </pre>
 
 </div>
