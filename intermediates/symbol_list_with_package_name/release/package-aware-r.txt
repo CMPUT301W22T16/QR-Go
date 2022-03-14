@@ -2630,7 +2630,6 @@ drawable notify_panel_notification_icon_bg
 drawable round_account_circle_24
 drawable round_qr_code_scanner_24
 drawable round_search_24
-drawable sample_prof_pic
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -2642,7 +2641,6 @@ id CTRL
 id FUNCTION
 id META
 id NO_DEBUG
-id QRData
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -2845,7 +2843,6 @@ id groups
 id guideline
 id header_title
 id hideable
-id highestScoreData
 id home
 id homeAsUp
 id honorRequest
@@ -2966,7 +2963,6 @@ id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
-id numOfQRCodes
 id off
 id on
 id onInterceptTouchReturnSwipe
@@ -2989,6 +2985,9 @@ id position
 id postLayout
 id progress_circular
 id progress_horizontal
+id qrIcon
+id qrLocation
+id qrName
 id radio
 id ratio
 id rectangles
@@ -3082,6 +3081,8 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
+id take_qr_photo_button
+id take_qr_photo_imageview
 id terrain
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
@@ -3110,7 +3111,6 @@ id title_template
 id toggle
 id top
 id topPanel
-id totalScoreData
 id touch_outside
 id transitionToEnd
 id transitionToStart
@@ -3125,9 +3125,6 @@ id uniform
 id unlabeled
 id up
 id useLogo
-id userHighScore
-id userNameText
-id userTotalScore
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3236,7 +3233,7 @@ layout abc_tooltip
 layout activity_code_scanner
 layout activity_maps
 layout activity_new_game_qractivity
-layout activity_player_info
+layout activity_qr_info
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
