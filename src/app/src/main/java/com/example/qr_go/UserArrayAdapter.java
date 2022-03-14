@@ -19,7 +19,6 @@ public class UserArrayAdapter extends ArrayAdapter<UserListDisplayContainer> imp
     private ArrayList<UserListDisplayContainer> allUserDisplays;
     private ArrayList<UserListDisplayContainer> userDisplays;
     private Integer sortPos;
-    private Integer userPos = 0;
 
     public UserArrayAdapter(@NonNull Context context, ArrayList<UserListDisplayContainer> userDisplays, Integer sortPos) {
         super(context, 0, userDisplays);
@@ -45,7 +44,6 @@ public class UserArrayAdapter extends ArrayAdapter<UserListDisplayContainer> imp
         Integer userRank = userToDisplay.getRankPosition();
         if (userToDisplay.getIsCurrentUser()) {
             usernameView.setText(String.valueOf(userRank) + "| " + userToDisplay.getUsername() + " (you)");
-            userPos = position;
         } else {
             usernameView.setText(String.valueOf(userRank) + "| " + userToDisplay.getUsername());
         }
@@ -104,7 +102,4 @@ public class UserArrayAdapter extends ArrayAdapter<UserListDisplayContainer> imp
         }
     };
 
-    public Integer getUserPos() {
-        return userPos;
-    }
 }
