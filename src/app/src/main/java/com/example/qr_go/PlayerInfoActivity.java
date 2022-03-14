@@ -56,6 +56,7 @@ public class PlayerInfoActivity extends AppCompatActivity {
         TextView qrNumText = findViewById(R.id.numOfQRCodes);
         TextView totalScoreText = findViewById(R.id.playerTotalScore);
         TextView highestScoreText = findViewById(R.id.playerHighScore);
+        TextView playerEmailText = findViewById(R.id.playerEmail);
 
         playerDBInst = FirebaseFirestore.getInstance();
 
@@ -78,6 +79,7 @@ public class PlayerInfoActivity extends AppCompatActivity {
                             highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
                             qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
                             totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
+                            playerEmailText.setText(selectedPlayer.getEmail());
                         }
                     }
                 });
