@@ -131,7 +131,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">CommentsQR</span>
 extends java.lang.Object</pre>
-<div class="block">this is the revised version of comments, originally Matthew's code</div>
+<div class="block">Custom conatiner for comments, used for database interface, and can be translated to an arraylist for the android adapter
+ this is the revised version of comments container, originally Matthew's work</div>
 </li>
 </ul>
 </div>
@@ -184,17 +185,23 @@ extends java.lang.Object</pre>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addComment(com.example.qr_go.User,java.lang.String,java.lang.String)">addComment</a></span>&#8203;(<a href="User.html" title="class in com.example.qr_go">User</a>&nbsp;user,
           java.lang.String&nbsp;message,
           java.lang.String&nbsp;photolink)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">adds the comment onto the hashmap stack</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.util.ArrayList&lt;<a href="Comment.html" title="class in com.example.qr_go">Comment</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCommentObjects()">getCommentObjects</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Custom converstion for formating of android adapter</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>java.util.HashMap&lt;java.lang.String,&#8203;java.util.HashMap&lt;java.lang.String,&#8203;java.lang.String&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getComments()">getComments</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Comment getter</div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
@@ -274,6 +281,13 @@ extends java.lang.Object</pre>
 <pre class="methodSignature">public&nbsp;void&nbsp;addComment&#8203;(<a href="User.html" title="class in com.example.qr_go">User</a>&nbsp;user,
                        java.lang.String&nbsp;message,
                        java.lang.String&nbsp;photolink)</pre>
+<div class="block">adds the comment onto the hashmap stack</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>user</code> - user to be added</dd>
+<dd><code>message</code> - message of the user</dd>
+<dd><code>photolink</code> - profile of user</dd>
+</dl>
 </li>
 </ul>
 <a id="getComments()">
@@ -283,6 +297,11 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>getComments</h4>
 <pre class="methodSignature">public&nbsp;java.util.HashMap&lt;java.lang.String,&#8203;java.util.HashMap&lt;java.lang.String,&#8203;java.lang.String&gt;&gt;&nbsp;getComments()</pre>
+<div class="block">Comment getter</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>HashMap<String, HashMap<String, String></dd>
+</dl>
 </li>
 </ul>
 <a id="getMessage(java.lang.String)">
@@ -321,6 +340,11 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>getCommentObjects</h4>
 <pre class="methodSignature">public&nbsp;java.util.ArrayList&lt;<a href="Comment.html" title="class in com.example.qr_go">Comment</a>&gt;&nbsp;getCommentObjects()</pre>
+<div class="block">Custom converstion for formating of android adapter</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>ArrayList<Comment></dd>
+</dl>
 </li>
 </ul>
 </li>
