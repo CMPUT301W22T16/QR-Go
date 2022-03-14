@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.qr_go.UserTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-03-14T01:46:13" hostname="fv-az39-670" time="0.044">
+<testsuite name="com.example.qr_go.UserTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-03-14T01:58:45" hostname="fv-az72-704" time="0.023">
   <properties/>
-  <testcase name="testGetHighestScore" classname="com.example.qr_go.UserTest" time="0.025"/>
+  <testcase name="testGetHighestScore" classname="com.example.qr_go.UserTest" time="0.011"/>
   <testcase name="testRemoveQRCode" classname="com.example.qr_go.UserTest" time="0.002"/>
-  <testcase name="testAddQRCode" classname="com.example.qr_go.UserTest" time="0.003"/>
-  <testcase name="testGetTotalScore" classname="com.example.qr_go.UserTest" time="0.006"/>
+  <testcase name="testAddQRCode" classname="com.example.qr_go.UserTest" time="0.002"/>
+  <testcase name="testGetTotalScore" classname="com.example.qr_go.UserTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

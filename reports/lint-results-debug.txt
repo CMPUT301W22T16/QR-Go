@@ -180,7 +180,7 @@
 
    https://android-developers.googleblog.com/2009/03/android-layout-tricks-3-optimize-by.html
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/UserSearchFragment.java:81: Warning: Use Integer.valueOf(rank) instead [UseValueOf]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/UserSearchFragment.java:80: Warning: Use Integer.valueOf(rank) instead [UseValueOf]
             user.setRankPosition(new Integer(rank));
                                  ~~~~~~~~~~~~~~~~~
 
@@ -315,14 +315,14 @@
                 scoreView.setText(distanceString + " away");
                                                    ~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/UserArrayAdapter.java:47: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
-            usernameView.setText(String.valueOf(userRank) + "|" + userToDisplay.getUsername() + " (you)");
-                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            usernameView.setText(String.valueOf(userRank) + "| " + userToDisplay.getUsername() + " (you)");
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/UserArrayAdapter.java:47: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
-            usernameView.setText(String.valueOf(userRank) + "|" + userToDisplay.getUsername() + " (you)");
-                                                                                                ~~~~~~~~
+            usernameView.setText(String.valueOf(userRank) + "| " + userToDisplay.getUsername() + " (you)");
+                                                                                                 ~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/UserArrayAdapter.java:50: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
-            usernameView.setText(String.valueOf(userRank) + "|" + userToDisplay.getUsername());
-                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            usernameView.setText(String.valueOf(userRank) + "| " + userToDisplay.getUsername());
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/UserArrayAdapter.java:52: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
         scoreView.setText(userToDisplay.getTotalScore().toString());
                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

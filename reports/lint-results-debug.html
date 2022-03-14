@@ -177,7 +177,7 @@ document.getElementById(id).style.display = 'none';
       <span class="mdl-layout-title">Lint Report: 104 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Mon Mar 14 01:46:20 UTC 2022      </nav>
+Check performed at Mon Mar 14 01:58:50 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -895,14 +895,14 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/example/qr_go/UserSearchFragment.java">../../src/main/java/com/example/qr_go/UserSearchFragment.java</a>:81</span>: <span class="message">Use <code>Integer.valueOf(rank)</code> instead</span><br /><pre class="errorlines">
-<span class="lineno">  78 </span>        }
-<span class="lineno">  79 </span>        <span class="keyword">int</span> rank = <span class="number">1</span>;
-<span class="lineno">  80 </span>        <span class="keyword">for</span> (UserListDisplayContainer user : userDisplays) {
-<span class="caretline"><span class="lineno">  81 </span>            user.setRankPosition(<span class="warning"><span class="keyword">new</span> Integer(rank)</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  82 </span>            rank++;
-<span class="lineno">  83 </span>        }
-<span class="lineno">  84 </span>        userAdapter = <span class="keyword">new</span> UserArrayAdapter(view.getContext(), userDisplays, sortPos);
+<span class="location"><a href="../../src/main/java/com/example/qr_go/UserSearchFragment.java">../../src/main/java/com/example/qr_go/UserSearchFragment.java</a>:80</span>: <span class="message">Use <code>Integer.valueOf(rank)</code> instead</span><br /><pre class="errorlines">
+<span class="lineno">  77 </span>        }
+<span class="lineno">  78 </span>        <span class="keyword">int</span> rank = <span class="number">1</span>;
+<span class="lineno">  79 </span>        <span class="keyword">for</span> (UserListDisplayContainer user : userDisplays) {
+<span class="caretline"><span class="lineno">  80 </span>            user.setRankPosition(<span class="warning"><span class="keyword">new</span> Integer(rank)</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  81 </span>            rank++;
+<span class="lineno">  82 </span>        }
+<span class="lineno">  83 </span>        userAdapter = <span class="keyword">new</span> UserArrayAdapter(view.getContext(), userDisplays, sortPos);
 </pre>
 
 </div>
@@ -1339,40 +1339,40 @@ Dismiss</button>            </div>
 <span class="lineno">  44 </span>
 <span class="lineno">  45 </span>  Integer userRank = userToDisplay.getRankPosition();
 <span class="lineno">  46 </span>  <span class="keyword">if</span> (userToDisplay.getIsCurrentUser()) {
-<span class="caretline"><span class="lineno">  47 </span>      usernameView.setText(<span class="warning">String.valueOf(userRank) + <span class="string">"|"</span> + userToDisplay.getUsername() + <span class="string">" (you)"</span></span>);</span>
+<span class="caretline"><span class="lineno">  47 </span>      usernameView.setText(<span class="warning">String.valueOf(userRank) + <span class="string">"| "</span> + userToDisplay.getUsername() + <span class="string">" (you)"</span></span>);</span>
 <span class="lineno">  48 </span>      userPos = position;
 <span class="lineno">  49 </span>  } <span class="keyword">else</span> {
-<span class="lineno">  50 </span>      usernameView.setText(String.valueOf(userRank) + <span class="string">"|"</span> + userToDisplay.getUsername());
+<span class="lineno">  50 </span>      usernameView.setText(String.valueOf(userRank) + <span class="string">"| "</span> + userToDisplay.getUsername());
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/UserArrayAdapter.java</a>:47</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
 <span class="lineno">  44 </span>
 <span class="lineno">  45 </span>  Integer userRank = userToDisplay.getRankPosition();
 <span class="lineno">  46 </span>  <span class="keyword">if</span> (userToDisplay.getIsCurrentUser()) {
-<span class="caretline"><span class="lineno">  47 </span>      usernameView.setText(String.valueOf(userRank) + <span class="string">"|"</span> + userToDisplay.getUsername() + <span class="warning"><span class="string">" (you)"</span></span>);</span>
+<span class="caretline"><span class="lineno">  47 </span>      usernameView.setText(String.valueOf(userRank) + <span class="string">"| "</span> + userToDisplay.getUsername() + <span class="warning"><span class="string">" (you)"</span></span>);</span>
 <span class="lineno">  48 </span>      userPos = position;
 <span class="lineno">  49 </span>  } <span class="keyword">else</span> {
-<span class="lineno">  50 </span>      usernameView.setText(String.valueOf(userRank) + <span class="string">"|"</span> + userToDisplay.getUsername());
+<span class="lineno">  50 </span>      usernameView.setText(String.valueOf(userRank) + <span class="string">"| "</span> + userToDisplay.getUsername());
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/UserArrayAdapter.java</a>:50</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno">  47 </span>      usernameView.setText(String.valueOf(userRank) + <span class="string">"|"</span> + userToDisplay.getUsername() + <span class="string">" (you)"</span>);
+<span class="lineno">  47 </span>      usernameView.setText(String.valueOf(userRank) + <span class="string">"| "</span> + userToDisplay.getUsername() + <span class="string">" (you)"</span>);
 <span class="lineno">  48 </span>      userPos = position;
 <span class="lineno">  49 </span>  } <span class="keyword">else</span> {
-<span class="caretline"><span class="lineno">  50 </span>      usernameView.setText(<span class="warning">String.valueOf(userRank) + <span class="string">"|"</span> + userToDisplay.getUsername()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="caretline"><span class="lineno">  50 </span>      usernameView.setText(<span class="warning">String.valueOf(userRank) + <span class="string">"| "</span> + userToDisplay.getUsername()</span>);&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">  51 </span>  }
 <span class="lineno">  52 </span>  scoreView.setText(userToDisplay.getTotalScore().toString());
 <span class="lineno">  53 </span>  <span class="keyword">switch</span>(sortPos) {
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/UserArrayAdapter.java</a>:52</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno">  49 </span>   } <span class="keyword">else</span> {
-<span class="lineno">  50 </span>       usernameView.setText(String.valueOf(userRank) + <span class="string">"|"</span> + userToDisplay.getUsername());
-<span class="lineno">  51 </span>   }
-<span class="caretline"><span class="lineno">  52 </span>   scoreView.setText(<span class="warning">userToDisplay.getTotalScore().toString()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  53 </span>   <span class="keyword">switch</span>(sortPos) {
-<span class="lineno">  54 </span>       <span class="keyword">case</span> <span class="number">0</span>:
-<span class="lineno">  55 </span>           scoreView.setText(<span class="string">"Total Score: "</span> + userToDisplay.getTotalScore().toString());
+<span class="lineno">  49 </span>  } <span class="keyword">else</span> {
+<span class="lineno">  50 </span>      usernameView.setText(String.valueOf(userRank) + <span class="string">"| "</span> + userToDisplay.getUsername());
+<span class="lineno">  51 </span>  }
+<span class="caretline"><span class="lineno">  52 </span>  scoreView.setText(<span class="warning">userToDisplay.getTotalScore().toString()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  53 </span>  <span class="keyword">switch</span>(sortPos) {
+<span class="lineno">  54 </span>      <span class="keyword">case</span> <span class="number">0</span>:
+<span class="lineno">  55 </span>          scoreView.setText(<span class="string">"Total Score: "</span> + userToDisplay.getTotalScore().toString());
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/UserArrayAdapter.java</a>:55</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">

@@ -979,12 +979,12 @@
             replacement="Integer.valueOf"/>
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserSearchFragment.java"
-            line="81"
+            line="80"
             column="34"
-            startOffset="2741"
-            endLine="81"
+            startOffset="2676"
+            endLine="80"
             endColumn="51"
-            endOffset="2758"/>
+            endOffset="2693"/>
     </incident>
 
     <incident
@@ -995,10 +995,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
             line="84"
             column="62"
-            startOffset="3088"
+            startOffset="3090"
             endLine="84"
             endColumn="73"
-            endOffset="3099"/>
+            endOffset="3101"/>
     </incident>
 
     <incident
@@ -1009,10 +1009,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
             line="87"
             column="44"
-            startOffset="3226"
+            startOffset="3228"
             endLine="87"
             endColumn="55"
-            endOffset="3237"/>
+            endOffset="3239"/>
     </incident>
 
     <incident
@@ -1025,8 +1025,8 @@
             column="34"
             startOffset="1702"
             endLine="47"
-            endColumn="105"
-            endOffset="1773"/>
+            endColumn="106"
+            endOffset="1774"/>
     </incident>
 
     <incident
@@ -1036,11 +1036,11 @@
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
             line="47"
-            column="97"
-            startOffset="1765"
+            column="98"
+            startOffset="1766"
             endLine="47"
-            endColumn="105"
-            endOffset="1773"/>
+            endColumn="106"
+            endOffset="1774"/>
     </incident>
 
     <incident
@@ -1051,10 +1051,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
             line="50"
             column="34"
-            startOffset="1858"
+            startOffset="1859"
             endLine="50"
-            endColumn="94"
-            endOffset="1918"/>
+            endColumn="95"
+            endOffset="1920"/>
     </incident>
 
     <incident
@@ -1065,10 +1065,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
             line="52"
             column="27"
-            startOffset="1957"
+            startOffset="1959"
             endLine="52"
             endColumn="67"
-            endOffset="1997"/>
+            endOffset="1999"/>
     </incident>
 
     <incident
@@ -1079,10 +1079,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
             line="55"
             column="35"
-            startOffset="2080"
+            startOffset="2082"
             endLine="55"
             endColumn="93"
-            endOffset="2138"/>
+            endOffset="2140"/>
     </incident>
 
     <incident
@@ -1093,10 +1093,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
             line="55"
             column="35"
-            startOffset="2080"
+            startOffset="2082"
             endLine="55"
             endColumn="50"
-            endOffset="2095"/>
+            endOffset="2097"/>
     </incident>
 
     <incident
@@ -1107,10 +1107,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
             line="55"
             column="53"
-            startOffset="2098"
+            startOffset="2100"
             endLine="55"
             endColumn="93"
-            endOffset="2138"/>
+            endOffset="2140"/>
     </incident>
 
     <incident
@@ -1121,10 +1121,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
             line="58"
             column="35"
-            startOffset="2218"
+            startOffset="2220"
             endLine="58"
             endColumn="84"
-            endOffset="2267"/>
+            endOffset="2269"/>
     </incident>
 
     <incident
@@ -1135,10 +1135,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
             line="58"
             column="35"
-            startOffset="2218"
+            startOffset="2220"
             endLine="58"
             endColumn="71"
-            endOffset="2254"/>
+            endOffset="2256"/>
     </incident>
 
     <incident
@@ -1149,10 +1149,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
             line="58"
             column="74"
-            startOffset="2257"
+            startOffset="2259"
             endLine="58"
             endColumn="84"
-            endOffset="2267"/>
+            endOffset="2269"/>
     </incident>
 
     <incident
@@ -1163,10 +1163,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
             line="61"
             column="35"
-            startOffset="2348"
+            startOffset="2350"
             endLine="61"
             endColumn="100"
-            endOffset="2413"/>
+            endOffset="2415"/>
     </incident>
 
     <incident
@@ -1177,10 +1177,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
             line="61"
             column="35"
-            startOffset="2348"
+            startOffset="2350"
             endLine="61"
             endColumn="55"
-            endOffset="2368"/>
+            endOffset="2370"/>
     </incident>
 
     <incident
@@ -1191,10 +1191,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
             line="61"
             column="58"
-            startOffset="2371"
+            startOffset="2373"
             endLine="61"
             endColumn="100"
-            endOffset="2413"/>
+            endOffset="2415"/>
     </incident>
 
     <incident
