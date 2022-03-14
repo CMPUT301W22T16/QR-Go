@@ -16,6 +16,7 @@ import java.util.UUID;
 public class CommentsQRTest {
     public static final String MOCK_MSG = "Test message 1";
     public static final String MOCK_USER = "user1";
+
     @Test
     public void testGetMessage() {
         Player player = new Player();

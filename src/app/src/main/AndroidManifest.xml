@@ -28,6 +28,17 @@
             android:name=".QRCodeScannerActivity"
             android:exported="false"
             android:parentActivityName=".MapsActivity" />
+        <activity
+            android:name=".MyQRCodesActivity"
+            android:exported="false"
+            android:parentActivityName=".MapsActivity" />
+        <activity
+            android:name=".QRInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ScannedUsersActivity"
+            android:exported="false"
+            android:parentActivityName=".QRInfoActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

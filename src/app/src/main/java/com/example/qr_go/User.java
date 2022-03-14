@@ -6,7 +6,6 @@ import android.util.Pair;
 import androidx.annotation.RequiresApi;
 
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.UUID;
 
 /**
@@ -161,19 +160,19 @@ public abstract class User {
         return email;
     }
 
-    /**
-     * @return User's login QR code
-     */
-    public LoginQRCode getLoginQR() {
-        return loginQR;
-    }
+//     /**
+//      * @return User's login QR code
+//      */
+//     public LoginQRCode getLoginQR() {
+//         return loginQR;
+//     }
 
-    /**
-     * @return User's status QR code
-     */
-    public StatusQRCode getStatusQR() {
-        return statusQR;
-    }
+//     /**
+//      * @return User's status QR code
+//      */
+//     public StatusQRCode getStatusQR() {
+//         return statusQR;
+//     }
 
     /**
      * @param email user's new email
