@@ -37,6 +37,10 @@
             android:exported="false"
             android:parentActivityName=".MapsActivity" />
         <activity
+            android:name=".PlayerProfileActivity"
+            android:exported="false"
+            android:parentActivityName=".MapsActivity" />
+        <activity
             android:name=".QRInfoActivity"
             android:exported="false"
             android:parentActivityName=".MapsActivity"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,10 +7,11 @@
     android:layout_margin="15dp">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="0dp">
+        android:layout_margin="0dp"
+        android:orientation="horizontal">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/back_button"
@@ -26,58 +27,48 @@
             app:iconSize="30dp"
             app:iconTint="?colorPrimary" />
 
-        <Spinner
-            android:id="@+id/sort_spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="bottom"
-            android:background="@null"/>
-
     </RelativeLayout>
 
-    <EditText
-        android:id="@+id/search_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Search Bar"
-        android:inputType="textPersonName" />
+    <ImageView
+        android:id="@+id/playerPhoto"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/round_account_circle_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
 
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="10dp"
-        app:strokeWidth="2dp"
-        app:strokeColor="?colorPrimary"
-        app:cardCornerRadius="5dp">
-        <com.google.android.material.tabs.TabLayout
-            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
-            android:id="@+id/search_tab_layout"
-            app:tabIndicatorGravity="stretch"
-            app:tabMaxWidth="0dp"
-            app:tabGravity="fill"
-            app:tabMode="fixed"
-            app:tabIndicatorColor="?colorPrimary"
-            app:tabSelectedTextColor="?colorOnPrimary"
-            app:tabTextColor="?colorPrimary"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/playerPhoto"
+        app:layout_constraintStart_toEndOf="@+id/playerPhoto"
+        app:layout_constraintTop_toTopOf="@+id/playerPhoto" >
+
+        <EditText
+            android:id="@+id/player_username"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <com.google.android.material.tabs.TabItem
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="QR Codes" />
-            <com.google.android.material.tabs.TabItem
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Players" />
-        </com.google.android.material.tabs.TabLayout>
-    </com.google.android.material.card.MaterialCardView>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.viewpager2.widget.ViewPager2
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/search_pager"
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/player_email"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerPhoto" />
 
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

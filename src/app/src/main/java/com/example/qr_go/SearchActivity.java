@@ -10,8 +10,6 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
@@ -27,9 +25,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 import com.google.firebase.firestore.CollectionReference;
@@ -84,7 +80,7 @@ public class SearchActivity extends FragmentActivity {
         }
 
         Button backButton = (Button) findViewById(R.id.back_button);
-        searchBar = (EditText) findViewById(R.id.search_bar);
+        searchBar = (EditText) findViewById(R.id.player_username);
 
         // Back button listener
         backButton.setOnClickListener(new View.OnClickListener() {

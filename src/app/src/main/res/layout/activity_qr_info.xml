@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/qrIcon"
+        android:id="@+id/playerPhoto"
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:layout_marginStart="16dp"
@@ -20,9 +20,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/qrIcon"
-        app:layout_constraintStart_toEndOf="@+id/qrIcon"
-        app:layout_constraintTop_toTopOf="@+id/qrIcon" >
+        app:layout_constraintBottom_toBottomOf="@+id/playerPhoto"
+        app:layout_constraintStart_toEndOf="@+id/playerPhoto"
+        app:layout_constraintTop_toTopOf="@+id/playerPhoto" >
 
         <TextView
             android:id="@+id/qrName"
@@ -55,7 +55,7 @@
         android:textSize="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/qrIcon" />
+        app:layout_constraintTop_toBottomOf="@+id/playerPhoto" />
 
     <Button
         android:id="@+id/buttonOtherPlayers"
