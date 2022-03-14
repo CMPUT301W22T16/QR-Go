@@ -6,6 +6,8 @@ import android.os.Build;
 import androidx.annotation.RequiresApi;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -15,8 +17,8 @@ import java.util.regex.Pattern;
  */
 public class GameQRCode extends QRCode {
     private Integer score;
-    private ArrayList<String> userIds;
-        private Location location;
+    private HashMap<String, HashMap<String, String>> userIds;
+    private Location location;
 
     /**
      * When creating a new GameQRCode, initialize the list of userIds
@@ -28,8 +30,12 @@ public class GameQRCode extends QRCode {
     @RequiresApi(api = Build.VERSION_CODES.O)
     public GameQRCode(String qrCodeContents) {
         super(qrCodeContents); // gets hash
-        this.userIds = new ArrayList<>();
+        this.userIds = new HashMap<>();
         this.score = calculateScore(this.hash);
+    }
+    public GameQRCode(){
+        super();
+        this.userIds = new HashMap<>();
     }
 
 
@@ -84,7 +90,7 @@ public class GameQRCode extends QRCode {
      *
      * @return list of userIds who scanned this qr code
      */
-    public ArrayList<String> getUserIds() {
+    public HashMap<String, HashMap<String, String>> getUserIds() {
         return userIds;
     }
 
@@ -92,14 +98,19 @@ public class GameQRCode extends QRCode {
      * Add a new user who scanned this game qr code
      */
     public void addUser(User user) {
-        userIds.add(user.getUserid());
+        HashMap<String, String> details = new HashMap<>();
+        details.put("PhotoRef", "needtofix");
+        details.put("Username", user.getUsername());
+        userIds.put(user.getUserid(), details);
     }
-
-    /**
-     * Add a new user who scanned this game qr code
-     */
-    public void addUser(String userId) {
-        userIds.add(userId);
+    public ArrayList<String> getUserObjects(){
+        ArrayList<String> out= new ArrayList<String>();
+        for (Map.Entry<String, HashMap<String, String>> details:userIds.entrySet() ){
+            HashMap<String, String> temp = details.getValue();
+            String Username = temp.get("Username");
+            out.add(Username);
+        }
+        return out;
     }
 
     /**

@@ -36,8 +36,8 @@ public abstract class User {
         username = UsernameGenerator.generateUsername();
         email = "";
         scannedQRCodeIds = new HashMap<>();
-        loginQR = new LoginQRCode(this);
-        statusQR = new StatusQRCode(this);
+        //loginQR = new LoginQRCode(this);
+        //statusQR = new StatusQRCode(this);
     }
 
     /**
@@ -52,8 +52,8 @@ public abstract class User {
         this.username = username;
         this.email = email;
         scannedQRCodeIds = new HashMap<>();
-        loginQR = new LoginQRCode(this);
-        statusQR = new StatusQRCode(this);
+        //loginQR = new LoginQRCode(this);
+        //statusQR = new StatusQRCode(this);
     }
 
     /**
