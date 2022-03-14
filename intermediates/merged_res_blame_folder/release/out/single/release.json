@@ -12,8 +12,16 @@
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_fragment_user_search.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/fragment_user_search.xml"
+    },
+    {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_activity_player_info.xml.flat",
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml"
+    },
+    {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/drawable_ic_baseline_chevron_left_24.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable/ic_baseline_chevron_left_24.xml"
     },
     {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/mipmap-mdpi_ic_launcher.webp.flat",
@@ -56,8 +64,16 @@
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_users_content.xml"
     },
     {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_fragment_qr_search.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/fragment_qr_search.xml"
+    },
+    {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/drawable_ic_launcher_background.xml.flat",
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_activity_search.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
     },
     {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/mipmap-xhdpi_ic_launcher_round.webp.flat",
@@ -72,24 +88,36 @@
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/drawable_sample_prof_pic.xml.flat",
-        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable/sample_prof_pic.xml"
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_qr_list_content.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml"
     },
     {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_activity_maps.xml.flat",
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_maps.xml"
     },
     {
-        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_activity_new_game_qractivity.xml.flat",
-        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml"
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/drawable_sample_prof_pic.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable/sample_prof_pic.xml"
     },
     {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_activity_new_game_qractivity.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml"
+    },
+    {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/drawable-v24_round_account_circle_24.xml.flat",
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable-v24/round_account_circle_24.xml"
+    },
+    {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_spinner_item.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/spinner_item.xml"
+    },
+    {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_user_list_content.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_list_content.xml"
     },
     {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/mipmap-hdpi_ic_launcher.webp.flat",
