@@ -25,6 +25,10 @@
             android:exported="false">
         </activity>
         <activity
+            android:name=".PlayerInfoActivity"
+            android:exported="false"
+            android:parentActivityName=".UserSearchFragment" />
+        <activity
             android:name=".QRCodeScannerActivity"
             android:exported="false"
             android:parentActivityName=".MapsActivity" />
