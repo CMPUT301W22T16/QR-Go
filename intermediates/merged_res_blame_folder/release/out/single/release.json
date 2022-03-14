@@ -12,8 +12,16 @@
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_fragment_user_search.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/fragment_user_search.xml"
+    },
+    {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_activity_player_info.xml.flat",
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml"
+    },
+    {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/drawable_ic_baseline_chevron_left_24.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable/ic_baseline_chevron_left_24.xml"
     },
     {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/mipmap-mdpi_ic_launcher.webp.flat",
@@ -22,6 +30,10 @@
     {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_activity_scanned_users.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_scanned_users.xml"
     },
     {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/mipmap-xhdpi_ic_launcher.webp.flat",
@@ -40,32 +52,56 @@
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_list_comments_content.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml"
+    },
+    {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/drawable-v24_round_search_24.xml.flat",
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable-v24/round_search_24.xml"
     },
     {
-        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "/home/runner/work/QR-Go/QR-Go/src/app/build/generated/res/pngs/release/drawable-anydpi-v24/ic_launcher_foreground.xml"
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_list_users_content.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_users_content.xml"
+    },
+    {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_fragment_qr_search.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/fragment_qr_search.xml"
     },
     {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/drawable_ic_launcher_background.xml.flat",
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable/ic_launcher_background.xml"
     },
     {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_activity_search.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
+    },
+    {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_player_profile_activity.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
+    },
+    {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
     },
     {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/drawable_sample_prof_pic.xml.flat",
-        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable/sample_prof_pic.xml"
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_qr_list_content.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml"
     },
     {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_activity_maps.xml.flat",
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_maps.xml"
+    },
+    {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/drawable_sample_prof_pic.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable/sample_prof_pic.xml"
     },
     {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/mipmap-xxxhdpi_ic_launcher.webp.flat",
@@ -80,6 +116,14 @@
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable-v24/round_account_circle_24.xml"
     },
     {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_spinner_item.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/spinner_item.xml"
+    },
+    {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_user_list_content.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_list_content.xml"
+    },
+    {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/mipmap-hdpi_ic_launcher.webp.flat",
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/mipmap-hdpi/ic_launcher.webp"
     },
@@ -90,6 +134,10 @@
     {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_activity_my_qr_codes.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
     },
     {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/mipmap-anydpi-v26_ic_launcher.xml.flat",
