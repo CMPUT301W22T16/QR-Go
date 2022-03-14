@@ -35,7 +35,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     private static String currentUUID;
     public static FirebaseFirestore db;
-    private CollectionReference collectionReference;
+
+    CollectionReference collectionReference;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -103,12 +104,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 return true;
             }
         });
-
-
-
-        QRGoDBUtil DBUti = new QRGoDBUtil();
-        DBUti.test1();
-
 
     }
 

@@ -1,10 +1,12 @@
 package com.example.qr_go;
 
 import android.os.Build;
+import android.util.Pair;
 
 import androidx.annotation.RequiresApi;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.UUID;
 
 /**
@@ -14,10 +16,10 @@ public abstract class User {
     private String userid; // Unique ID to identify users.
     private String password; // Password for verifying a user
     private String username;
-    private Integer totalScore;
     private LoginQRCode loginQR;
     private StatusQRCode statusQR;
-    private ArrayList<String> scannedQRCodeIds;
+    private HashMap<String, Integer> scannedQRCodeIds;
+    private Integer totalScore;
     private String email;
 
     public static final String CURRENT_USER = "LOGIN";
@@ -35,8 +37,8 @@ public abstract class User {
         username = UsernameGenerator.generateUsername();
         totalScore = 0;
         email = "";
-        scannedQRCodeIds = new ArrayList<>();
-       //loginQR = new LoginQRCode(this);
+        scannedQRCodeIds = new HashMap<>();
+        //loginQR = new LoginQRCode(this);
         //statusQR = new StatusQRCode(this);
     }
 
@@ -50,11 +52,10 @@ public abstract class User {
         // Generate a new random UUID for a new user's password
         this.password = password;
         this.username = username;
-        this.totalScore = 0;
         this.email = email;
-        scannedQRCodeIds = new ArrayList<>();
-        loginQR = new LoginQRCode(this);
-        statusQR = new StatusQRCode(this);
+        scannedQRCodeIds = new HashMap<>();
+        //loginQR = new LoginQRCode(this);
+        //statusQR = new StatusQRCode(this);
     }
 
     /**
@@ -64,28 +65,40 @@ public abstract class User {
     public abstract Boolean isOwner();
 
     /**
-     * Adds a QR code to the user's list of scanned QR codes and its score to the user's total
+     * Adds a QR code to the user's list of scanned QR codes if the user has not already scanned
+     * it
      * @param qr GameQRCode object which is to be added to the player's list of scanned QRs
+     * @return true if the qr code was successfully added, false otherwise
      */
-    public void addQRCode(GameQRCode qr) {
-        scannedQRCodeIds.add(qr.getId());
-        totalScore += qr.getScore();
+    public Boolean addQRCode(GameQRCode qr) {
+        String qrID = qr.getId();
+        Integer qrScore = qr.getScore();
+        if (!scannedQRCodeIds.containsKey(qrID)) {
+            scannedQRCodeIds.put(qrID, qrScore);
+            return true;
+        }
+        return false;
     }
 
     /**
      * Deletes a QR code to the user's list of scanned QR codes and subtracts its score from the
      * user's total
      * @param qr GameQRCode object which is to be removed from the player's list of scanned QRs
+     * @return true if the qr code was successfully deleted, false otherwise
      */
-    public void deleteQRCode(GameQRCode qr) {
-        scannedQRCodeIds.remove(qr.getId());
-        totalScore -= qr.getScore();
+    public Boolean deleteQRCode(GameQRCode qr) {
+        String qrID = qr.getId();
+        if (scannedQRCodeIds.containsKey(qrID)) {
+            scannedQRCodeIds.remove(qr.getId());
+            return true;
+        }
+        return false;
     }
 
     /**
      * @return ArrayList of IDs of a user's scanned QR codes
      */
-    public ArrayList<String> getScannedQRCodeIds() {
+    public HashMap<String, Integer> getScannedQRCodeIds() {
         return scannedQRCodeIds;
     }
 
@@ -104,10 +117,29 @@ public abstract class User {
     }
 
     /**
+     * Returns the sum of all the user's scores
      * @return user's total score
      */
     public Integer getTotalScore() {
+        Integer totalScore = 0;
+        for (Integer score : scannedQRCodeIds.values()) {
+            totalScore += score;
+        }
         return totalScore;
+    }
+
+    /**
+     * Returns the highest unique score that the user has
+     * @return user's highest unique score
+     */
+    public Integer getHighestUniqueScore() {
+        Integer highestScore = 0;
+        for (Integer score : scannedQRCodeIds.values()) {
+            if (score > highestScore) {
+                highestScore = score;
+            }
+        }
+        return highestScore;
     }
 
     /**
@@ -134,16 +166,16 @@ public abstract class User {
     /**
      * @return User's login QR code
      */
-//    public LoginQRCode getLoginQR() {
-//        return loginQR;
-//    }
+    public LoginQRCode getLoginQR() {
+        return loginQR;
+    }
 
     /**
      * @return User's status QR code
      */
-//    public StatusQRCode getStatusQR() {
-//        return statusQR;
-//    }
+    public StatusQRCode getStatusQR() {
+        return statusQR;
+    }
 
     /**
      * @param email user's new email
@@ -151,6 +183,5 @@ public abstract class User {
     public void setEmail(String email) {
         this.email = email;
     }
-
 
 }
