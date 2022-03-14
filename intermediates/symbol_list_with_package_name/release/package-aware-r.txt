@@ -2571,6 +2571,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_baseline_chevron_left_24
 drawable ic_clock_black_24dp
 drawable ic_code_scanner_auto_focus_off
 drawable ic_code_scanner_auto_focus_on
@@ -2726,6 +2727,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id back_button
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3000,6 +3002,9 @@ id qrIcon
 id qrLocation
 id qrName
 id qrScore
+id qr_id_view
+id qr_list
+id qr_score_view
 id radio
 id ratio
 id rectangles
@@ -3033,8 +3038,10 @@ id search_close_btn
 id search_edit_frame
 id search_go_btn
 id search_mag_icon
+id search_pager
 id search_plate
 id search_src_text
+id search_tab_layout
 id search_voice_btn
 id select_dialog_listview
 id selected
@@ -3055,6 +3062,7 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
+id sort_spinner
 id south
 id spacer
 id special_effects_controller_view_tag
@@ -3142,6 +3150,9 @@ id userHighScore
 id userList
 id userNameText
 id userTotalScore
+id user_list
+id user_score_view
+id username_view
 id usersContent
 id vertical_only
 id view_offset_helper
@@ -3255,6 +3266,7 @@ layout activity_new_game_qractivity
 layout activity_player_info
 layout activity_qr_info
 layout activity_scanned_users
+layout activity_search
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3271,6 +3283,8 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_qr_search
+layout fragment_user_search
 layout list_comments_content
 layout list_users_content
 layout m3_alert_dialog
@@ -3325,9 +3339,11 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout qr_list_content
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout spinner_item
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_chip_zero_corner_radius
@@ -3344,6 +3360,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout user_list_content
 menu bottom_nav_menu
 menu example_menu
 menu example_menu2
@@ -3405,16 +3422,10 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
-string default_web_client_id
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
-string gcm_defaultSenderId
-string google_api_key
-string google_app_id
-string google_crash_reporting_api_key
-string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
@@ -3506,7 +3517,6 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
-string project_id
 string search_menu_title
 string status_bar_notification_info_overflow
 string title_activity_maps
