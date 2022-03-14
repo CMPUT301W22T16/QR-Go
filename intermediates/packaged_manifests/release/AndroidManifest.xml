@@ -44,10 +44,6 @@
             android:exported="false"
             android:parentActivityName="com.example.qr_go.QRCodeScannerActivity" />
         <activity
-            android:name="com.example.qr_go.SearchActivity"
-            android:exported="false" >
-        </activity>
-        <activity
             android:name="com.example.qr_go.QRCodeScannerActivity"
             android:exported="false"
             android:parentActivityName="com.example.qr_go.MapsActivity" />
