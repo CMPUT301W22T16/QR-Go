@@ -29,6 +29,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -40,7 +41,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
     private static String currentUUID;
-    FirebaseFirestore db;
+    public static FirebaseFirestore db;
+
     CollectionReference collectionReference;
     ArrayList<GeoLocation> geoLocationList;
 
@@ -82,7 +84,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             currentUUID = newUser.getUserid();
             SharedPreferences.Editor ed = loggedUser.edit();
             ed.putString(User.USER_ID, currentUUID);
-            // TODO save user to the firestore database
+            ed.apply(); // apply changes
+            // Save user to the firestore database
+            db.collection("Players").document(newUser.getUserid()).set(newUser);
         }
 
         // Set onClick for BottomNavigation nav items
@@ -109,13 +113,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 return true;
             }
         });
-
-
-
-
-
-
-
 
     }
 

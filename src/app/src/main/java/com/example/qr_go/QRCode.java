@@ -25,7 +25,7 @@ import java.util.Base64;
  */
 public class QRCode {
     protected String hash;
-
+    private boolean isInvisable;
     /**
      * QR code
      *
@@ -43,8 +43,10 @@ public class QRCode {
         } catch (NoSuchAlgorithmException e) {
             this.hash = null;
         }
+        boolean isInvisable = false;
 
     }
+    public QRCode(){ }
 
     /**
      * Converts bytes[] from SHA-256 hashing into string
@@ -102,5 +104,6 @@ public class QRCode {
         }
         return bmp;
     }
-
+    public Boolean isDeleted(){ return isInvisable;}
+    public void deleteQR(){isInvisable = true;}
 }
