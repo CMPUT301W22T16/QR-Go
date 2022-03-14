@@ -2994,11 +2994,16 @@ id pathRelative
 id peekHeight
 id percent
 id pin
+id playerHighScore
+id playerNameText
+id playerPhoto
+id playerTotalScore
+id player_email
+id player_username
 id position
 id postLayout
 id progress_circular
 id progress_horizontal
-id qrIcon
 id qrLocation
 id qrName
 id qrScore
@@ -3008,6 +3013,7 @@ id qr_score_view
 id radio
 id ratio
 id rectangles
+id relativeLayout
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3146,10 +3152,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
-id userHighScore
 id userList
-id userNameText
-id userTotalScore
 id user_list
 id user_score_view
 id username_view
@@ -3339,6 +3342,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout player_profile_activity
 layout qr_list_content
 layout select_dialog_item_material
 layout select_dialog_multichoice_material

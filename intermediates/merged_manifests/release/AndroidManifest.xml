@@ -60,6 +60,10 @@
             android:exported="false"
             android:parentActivityName="com.example.qr_go.MapsActivity" />
         <activity
+            android:name="com.example.qr_go.PlayerProfileActivity"
+            android:exported="false"
+            android:parentActivityName="com.example.qr_go.MapsActivity" />
+        <activity
             android:name="com.example.qr_go.QRInfoActivity"
             android:exported="false"
             android:parentActivityName="com.example.qr_go.MapsActivity" />

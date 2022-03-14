@@ -58,5 +58,9 @@
     {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_my_qr_codes.xml",
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
+    },
+    {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/player_profile_activity.xml",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
     }
 ]
