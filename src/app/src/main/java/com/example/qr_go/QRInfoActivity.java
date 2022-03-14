@@ -13,6 +13,9 @@ import java.util.ArrayList;
 
 public class QRInfoActivity extends AppCompatActivity {
 
+    private QRGoDBUtil db;
+    private Player thisTempPlayer; // TODO: temporary, replace with currently logged in user
+
     private GameQRCode selectedQR;
     private QRPhoto[] QRPhotos;
     private ListComments comment;
@@ -29,9 +32,18 @@ public class QRInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr_info);
 
+        db = new QRGoDBUtil(this);
+
         commentList = findViewById(R.id.myQRList);
 
         comments = new CommentsQR();
+
+        // TODO: temporary, set to currently logged in user
+        thisTempPlayer = new Player();
+        thisTempPlayer.setUsername("QRInfo Temp Player");
+
+        // TODO: temporary, set to currently viewing GameQRCode
+        selectedQR = new GameQRCode();
 
         // TODO: these are temporary. grab data from DB.
         String []usernames = {"User1", "User2", "User3", "User4", "User5", "User6"};
@@ -74,10 +86,16 @@ public class QRInfoActivity extends AppCompatActivity {
     /**
      * Adds a new comment to this page
      */
-    public void addComment(View view) {
-        EditText newCommentMsg = (EditText) findViewById(R.id.inputComment);
-        String message = newCommentMsg.getText().toString();
-//        Comment comments = new CommentQR();
+    public void addComment(View view) { // TODO: add to DB
+        EditText inputComment = (EditText) findViewById(R.id.inputComment);
+        String message = inputComment.getText().toString();
+
+        Comment comment = new Comment(thisTempPlayer.getUsername(), message);
+        comments.addComment(thisTempPlayer, message, null);
+        commentAdapter.add(comment);
+//        db.addCommenttoDB(comments, selectedQR);
+
+        inputComment.setText(""); // clear input after send
     }
 
 }
