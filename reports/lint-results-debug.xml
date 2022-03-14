@@ -1532,7 +1532,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml"
-            line="98"
+            line="99"
             column="13"/>
     </issue>
 
@@ -2115,6 +2115,22 @@
     <issue
         id="RtlHardcoded"
         severity="Warning"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;19dp&quot;` to better support right-to-left layouts"
+        category="Internationalization:Bidirectional Text"
+        priority="5"
+        summary="Using left/right instead of start/end attributes"
+        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. **NOTE**: If your `minSdkVersion` is less than 17, you should add **both** the older left/right attributes **as well as** the new start/end attributes. On older platforms, where RTL is not supported and the start/end attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
+        errorLine1="            android:layout_marginLeft=&quot;19dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml"
+            line="98"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        severity="Warning"
         message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;19dp&quot;` to better support right-to-left layouts"
         category="Internationalization:Bidirectional Text"
         priority="5"
@@ -2124,7 +2140,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml"
-            line="104"
+            line="105"
             column="13"/>
     </issue>
 

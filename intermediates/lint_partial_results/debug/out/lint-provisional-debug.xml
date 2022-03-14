@@ -341,6 +341,29 @@
     <incident
         id="RtlHardcoded"
         severity="warning"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;19dp&quot;` to better support right-to-left layouts">
+        <fix-replace
+            description="Replace with android:layout_marginStart=&quot;19dp&quot;"
+            oldString="layout_marginLeft"
+            replacement="layout_marginStart"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
+            line="98"
+            column="13"
+            startOffset="3632"
+            endLine="98"
+            endColumn="38"
+            endOffset="3657"/>
+        <map>
+            <entry
+                name="applies"
+                int="10"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
         message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;19dp&quot;` to better support right-to-left layouts">
         <fix-replace
             description="Replace with android:layout_marginEnd=&quot;19dp&quot;"
@@ -348,12 +371,12 @@
             replacement="layout_marginEnd"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="104"
+            line="105"
             column="13"
-            startOffset="3827"
-            endLine="104"
+            startOffset="3872"
+            endLine="105"
             endColumn="39"
-            endOffset="3853"/>
+            endOffset="3898"/>
         <map>
             <entry
                 name="applies"

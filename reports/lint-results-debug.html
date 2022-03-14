@@ -174,10 +174,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 1 error and 136 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 1 error and 137 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Mon Mar 14 20:17:13 UTC 2022      </nav>
+Check performed at Mon Mar 14 20:24:25 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -204,7 +204,7 @@ Check performed at Mon Mar 14 20:17:13 UTC 2022      </nav>
       <a class="mdl-navigation__link" href="#SetTextI18n"><i class="material-icons warning-icon">warning</i>TextView Internationalization (24)</a>
       <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (45)</a>
       <a class="mdl-navigation__link" href="#RtlSymmetry"><i class="material-icons warning-icon">warning</i>Padding and margin symmetry (2)</a>
-      <a class="mdl-navigation__link" href="#RtlHardcoded"><i class="material-icons warning-icon">warning</i>Using left/right instead of start/end attributes (19)</a>
+      <a class="mdl-navigation__link" href="#RtlHardcoded"><i class="material-icons warning-icon">warning</i>Using left/right instead of start/end attributes (20)</a>
       <a class="mdl-navigation__link" href="#IgnoreWithoutReason"><i class="material-icons warning-icon">warning</i>@Ignore without Reason (1)</a>
     </nav>
   </div>
@@ -291,7 +291,7 @@ Check performed at Mon Mar 14 20:17:13 UTC 2022      </nav>
 <td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#RtlSymmetry">RtlSymmetry</a>: Padding and margin symmetry</td></tr>
 <tr>
-<td class="countColumn">19</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">20</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#RtlHardcoded">RtlHardcoded</a>: Using left/right instead of start/end attributes</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Testing">Testing</a>
 </td></tr>
@@ -1014,8 +1014,7 @@ Dismiss</button>            </div>
 <span class="caretline"><span class="lineno">  95 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">  96 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
 <span class="lineno">  97 </span>            <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
-<span class="lineno">  98 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Email:"</span> />
-</pre>
+<span class="lineno">  98 </span>            <span class="prefix">android:</span><span class="attribute">layout_marginLeft</span>=<span class="value">"19dp"</span></pre>
 
 <span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:19</span>: <span class="message">Use a <code>layout_width</code> of <code>0dp</code> instead of <code>wrap_content</code> for better performance</span><br /><pre class="errorlines">
 <span class="lineno"> 16 </span>
@@ -1852,14 +1851,14 @@ Dismiss</button>            </div>
 <span class="lineno">  81 </span>
 <span class="lineno">  82 </span>        <span class="tag">&lt;/LinearLayout></span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:98</span>: <span class="message">Hardcoded string "Email:", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno">  95 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:99</span>: <span class="message">Hardcoded string "Email:", should use <code>@string</code> resource</span><br /><pre class="errorlines">
 <span class="lineno">  96 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
 <span class="lineno">  97 </span>            <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
-<span class="caretline"><span class="lineno">  98 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Email:"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  99 </span>
-<span class="lineno"> 100 </span>        <span class="tag">&lt;TextView</span><span class="attribute">
-</span><span class="lineno"> 101 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerEmail"</span></pre>
+<span class="lineno">  98 </span>            <span class="prefix">android:</span><span class="attribute">layout_marginLeft</span>=<span class="value">"19dp"</span>
+<span class="caretline"><span class="lineno">  99 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Email:"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 100 </span>
+<span class="lineno"> 101 </span>        <span class="tag">&lt;TextView</span><span class="attribute">
+</span><span class="lineno"> 102 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerEmail"</span></pre>
 
 <span class="location"><a href="../../src/main/res/layout/activity_qr_info.xml">../../src/main/res/layout/activity_qr_info.xml</a>:32</span>: <span class="message">Hardcoded string "QR NAME", should use <code>@string</code> resource</span><br /><pre class="errorlines">
 <span class="lineno">  29 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
@@ -2236,7 +2235,7 @@ Dismiss</button>            </div>
 <span class="lineno">  89 </span>            <span class="tag">&lt;/LinearLayout></span>
 </pre>
 
-<button class="mdl-button mdl-js-button mdl-button--primary" id="RtlHardcodedDivLink" onclick="reveal('RtlHardcodedDiv');" />+ 14 More Occurrences...</button>
+<button class="mdl-button mdl-js-button mdl-button--primary" id="RtlHardcodedDivLink" onclick="reveal('RtlHardcodedDiv');" />+ 15 More Occurrences...</button>
 <div id="RtlHardcodedDiv" style="display: none">
 <span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:14</span>: <span class="message">Consider replacing <code>android:layout_marginLeft</code> with <code>android:layout_marginStart="50dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
 <span class="lineno">  11 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"100dp"</span>>
@@ -2283,13 +2282,22 @@ Dismiss</button>            </div>
 <span class="lineno">  80 </span>            <span class="tag">&lt;/LinearLayout></span>
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:104</span>: <span class="message">Consider replacing <code>android:layout_marginRight</code> with <code>android:layout_marginEnd="19dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 101 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerEmail"</span>
-<span class="lineno"> 102 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 103 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 104 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginRight</span></span>=<span class="value">"19dp"</span>/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 105 </span>    <span class="tag">&lt;/LinearLayout></span>
-<span class="lineno"> 106 </span>
+<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:98</span>: <span class="message">Consider replacing <code>android:layout_marginLeft</code> with <code>android:layout_marginStart="19dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno">  95 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  96 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  97 </span>            <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
+<span class="caretline"><span class="lineno">  98 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginLeft</span></span>=<span class="value">"19dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  99 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Email:"</span> />
+<span class="lineno"> 100 </span>
+<span class="lineno"> 101 </span>        <span class="tag">&lt;TextView</span></pre>
+
+<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:105</span>: <span class="message">Consider replacing <code>android:layout_marginRight</code> with <code>android:layout_marginEnd="19dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 102 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerEmail"</span>
+<span class="lineno"> 103 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 104 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 105 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginRight</span></span>=<span class="value">"19dp"</span>/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 106 </span>    <span class="tag">&lt;/LinearLayout></span>
+<span class="lineno"> 107 </span>
 </pre>
 
 <span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:20</span>: <span class="message">Consider replacing <code>android:layout_alignParentLeft</code> with <code>android:layout_alignParentStart="true"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
