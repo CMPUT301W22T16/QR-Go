@@ -2893,6 +2893,7 @@ id listMode
 id list_item
 id locale
 id location_checkbox
+id lowestScoreData
 id ltr
 id map
 id masked
@@ -2997,6 +2998,7 @@ id percent
 id pin
 id playerEmail
 id playerHighScore
+id playerLowScore
 id playerNameText
 id playerPhoto
 id playerTotalScore

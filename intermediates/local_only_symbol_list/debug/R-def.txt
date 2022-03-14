@@ -28,6 +28,7 @@ id highestScoreData
 id inputComment
 id linearLayout
 id location_checkbox
+id lowestScoreData
 id map
 id message
 id myQRList
@@ -38,6 +39,7 @@ id nav_search
 id numOfQRCodes
 id playerEmail
 id playerHighScore
+id playerLowScore
 id playerNameText
 id playerPhoto
 id playerTotalScore

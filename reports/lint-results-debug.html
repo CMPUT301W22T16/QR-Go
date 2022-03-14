@@ -174,10 +174,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 1 error and 137 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 1 error and 145 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Mon Mar 14 20:33:03 UTC 2022      </nav>
+Check performed at Mon Mar 14 20:34:06 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -201,10 +201,10 @@ Check performed at Mon Mar 14 20:33:03 UTC 2022      </nav>
       <a class="mdl-navigation__link" href="#TextFields"><i class="material-icons warning-icon">warning</i>Missing <code>inputType</code> (1)</a>
       <a class="mdl-navigation__link" href="#Autofill"><i class="material-icons warning-icon">warning</i>Use Autofill (4)</a>
       <a class="mdl-navigation__link" href="#ContentDescription"><i class="material-icons warning-icon">warning</i>Image without <code>contentDescription</code> (4)</a>
-      <a class="mdl-navigation__link" href="#SetTextI18n"><i class="material-icons warning-icon">warning</i>TextView Internationalization (24)</a>
-      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (45)</a>
+      <a class="mdl-navigation__link" href="#SetTextI18n"><i class="material-icons warning-icon">warning</i>TextView Internationalization (26)</a>
+      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (49)</a>
       <a class="mdl-navigation__link" href="#RtlSymmetry"><i class="material-icons warning-icon">warning</i>Padding and margin symmetry (2)</a>
-      <a class="mdl-navigation__link" href="#RtlHardcoded"><i class="material-icons warning-icon">warning</i>Using left/right instead of start/end attributes (20)</a>
+      <a class="mdl-navigation__link" href="#RtlHardcoded"><i class="material-icons warning-icon">warning</i>Using left/right instead of start/end attributes (22)</a>
       <a class="mdl-navigation__link" href="#IgnoreWithoutReason"><i class="material-icons warning-icon">warning</i>@Ignore without Reason (1)</a>
     </nav>
   </div>
@@ -280,10 +280,10 @@ Check performed at Mon Mar 14 20:33:03 UTC 2022      </nav>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Internationalization">Internationalization</a>
 </td></tr>
 <tr>
-<td class="countColumn">24</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">26</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#SetTextI18n">SetTextI18n</a>: TextView Internationalization</td></tr>
 <tr>
-<td class="countColumn">45</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">49</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#HardcodedText">HardcodedText</a>: Hardcoded text</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Internationalization:Bidirectional Text">Internationalization:Bidirectional Text</a>
 </td></tr>
@@ -291,7 +291,7 @@ Check performed at Mon Mar 14 20:33:03 UTC 2022      </nav>
 <td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#RtlSymmetry">RtlSymmetry</a>: Padding and margin symmetry</td></tr>
 <tr>
-<td class="countColumn">20</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">22</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#RtlHardcoded">RtlHardcoded</a>: Using left/right instead of start/end attributes</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Testing">Testing</a>
 </td></tr>
@@ -1007,14 +1007,14 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:95</span>: <span class="message">Use a <code>layout_width</code> of <code>0dp</code> instead of <code>wrap_content</code> for better performance</span><br /><pre class="errorlines">
-<span class="lineno">  92 </span>
-<span class="lineno">  93 </span>        <span class="tag">&lt;TextView</span><span class="attribute">
-</span><span class="lineno">  94 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/textView2"</span>
-<span class="caretline"><span class="lineno">  95 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  96 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  97 </span>            <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
-<span class="lineno">  98 </span>            <span class="prefix">android:</span><span class="attribute">layout_marginLeft</span>=<span class="value">"19dp"</span></pre>
+<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:116</span>: <span class="message">Use a <code>layout_width</code> of <code>0dp</code> instead of <code>wrap_content</code> for better performance</span><br /><pre class="errorlines">
+<span class="lineno"> 113 </span>
+<span class="lineno"> 114 </span>        <span class="tag">&lt;TextView</span><span class="attribute">
+</span><span class="lineno"> 115 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/textView2"</span>
+<span class="caretline"><span class="lineno"> 116 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 117 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 118 </span>            <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
+<span class="lineno"> 119 </span>            <span class="prefix">android:</span><span class="attribute">layout_marginLeft</span>=<span class="value">"19dp"</span></pre>
 
 <span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:19</span>: <span class="message">Use a <code>layout_width</code> of <code>0dp</code> instead of <code>wrap_content</code> for better performance</span><br /><pre class="errorlines">
 <span class="lineno"> 16 </span>
@@ -1391,66 +1391,86 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/example/qr_go/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/MyQRCodesActivity.java</a>:57</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno"> 54 </span>          <span class="comment">//myQRCodeIDs = (HashMap&lt;Integer,String>) document.getData().get("scannedQRCodeIds");</span>
-<span class="lineno"> 55 </span>      }
-<span class="lineno"> 56 </span>      playernameText.setText(selectedPlayer.getUsername());
-<span class="caretline"><span class="lineno"> 57 </span>      highestScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getHighestUniqueScore())</span>);</span>
-<span class="lineno"> 58 </span>      qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
-<span class="lineno"> 59 </span>      totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
-<span class="lineno"> 60 </span>  }
-</pre>
-
 <span class="location"><a href="../../src/main/java/com/example/qr_go/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/MyQRCodesActivity.java</a>:58</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno"> 55 </span>          }
-<span class="lineno"> 56 </span>          playernameText.setText(selectedPlayer.getUsername());
-<span class="lineno"> 57 </span>          highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
-<span class="caretline"><span class="lineno"> 58 </span>          qrNumText.setText(<span class="warning">Integer.toString(selectedPlayer.getScannedQRCodeIds().size())</span>);</span>
-<span class="lineno"> 59 </span>          totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
-<span class="lineno"> 60 </span>      }
-<span class="lineno"> 61 </span>  }
+<span class="lineno"> 55 </span>      <span class="comment">//myQRCodeIDs = (HashMap&lt;Integer,String>) document.getData().get("scannedQRCodeIds");</span>
+<span class="lineno"> 56 </span>  }
+<span class="lineno"> 57 </span>  playernameText.setText(selectedPlayer.getUsername());
+<span class="caretline"><span class="lineno"> 58 </span>  highestScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getHighestUniqueScore())</span>);</span>
+<span class="lineno"> 59 </span>  lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
+<span class="lineno"> 60 </span>  qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
+<span class="lineno"> 61 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/MyQRCodesActivity.java</a>:59</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno"> 56 </span>              playernameText.setText(selectedPlayer.getUsername());
-<span class="lineno"> 57 </span>              highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
-<span class="lineno"> 58 </span>              qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
-<span class="caretline"><span class="lineno"> 59 </span>              totalScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getTotalScore())</span>);</span>
-<span class="lineno"> 60 </span>          }
-<span class="lineno"> 61 </span>      }
-<span class="lineno"> 62 </span>  });
+<span class="lineno"> 56 </span>      }
+<span class="lineno"> 57 </span>      playernameText.setText(selectedPlayer.getUsername());
+<span class="lineno"> 58 </span>      highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
+<span class="caretline"><span class="lineno"> 59 </span>      lowestScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getLowestUniqueScore())</span>);</span>
+<span class="lineno"> 60 </span>      qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
+<span class="lineno"> 61 </span>      totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
+<span class="lineno"> 62 </span>  }
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/PlayerInfoActivity.java</a>:79</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno">  76 </span>      <span class="comment">//myQRCodeIDs = (HashMap&lt;Integer,String>) document.getData().get("scannedQRCodeIds");</span>
-<span class="lineno">  77 </span>  }
-<span class="lineno">  78 </span>  playernameText.setText(selectedPlayer.getUsername());
-<span class="caretline"><span class="lineno">  79 </span>  highestScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getHighestUniqueScore())</span>);</span>
-<span class="lineno">  80 </span>  qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
-<span class="lineno">  81 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
-<span class="lineno">  82 </span>  playerEmailText.setText(selectedPlayer.getEmail());
+<span class="location"><a href="../../src/main/java/com/example/qr_go/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/MyQRCodesActivity.java</a>:60</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
+<span class="lineno"> 57 </span>          playernameText.setText(selectedPlayer.getUsername());
+<span class="lineno"> 58 </span>          highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
+<span class="lineno"> 59 </span>          lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
+<span class="caretline"><span class="lineno"> 60 </span>          qrNumText.setText(<span class="warning">Integer.toString(selectedPlayer.getScannedQRCodeIds().size())</span>);</span>
+<span class="lineno"> 61 </span>          totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
+<span class="lineno"> 62 </span>      }
+<span class="lineno"> 63 </span>  }
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/MyQRCodesActivity.java</a>:61</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
+<span class="lineno"> 58 </span>              highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
+<span class="lineno"> 59 </span>              lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
+<span class="lineno"> 60 </span>              qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
+<span class="caretline"><span class="lineno"> 61 </span>              totalScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getTotalScore())</span>);</span>
+<span class="lineno"> 62 </span>          }
+<span class="lineno"> 63 </span>      }
+<span class="lineno"> 64 </span>  });
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/PlayerInfoActivity.java</a>:80</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno">  77 </span>      }
-<span class="lineno">  78 </span>      playernameText.setText(selectedPlayer.getUsername());
-<span class="lineno">  79 </span>      highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
-<span class="caretline"><span class="lineno">  80 </span>      qrNumText.setText(<span class="warning">Integer.toString(selectedPlayer.getScannedQRCodeIds().size())</span>);</span>
-<span class="lineno">  81 </span>      totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
-<span class="lineno">  82 </span>      playerEmailText.setText(selectedPlayer.getEmail());
-<span class="lineno">  83 </span>  }
+<span class="lineno">  77 </span>      <span class="comment">//myQRCodeIDs = (HashMap&lt;Integer,String>) document.getData().get("scannedQRCodeIds");</span>
+<span class="lineno">  78 </span>  }
+<span class="lineno">  79 </span>  playernameText.setText(selectedPlayer.getUsername());
+<span class="caretline"><span class="lineno">  80 </span>  highestScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getHighestUniqueScore())</span>);</span>
+<span class="lineno">  81 </span>  lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
+<span class="lineno">  82 </span>  qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
+<span class="lineno">  83 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
 </pre>
 
-<button class="mdl-button mdl-js-button mdl-button--primary" id="SetTextI18nDivLink" onclick="reveal('SetTextI18nDiv');" />+ 19 More Occurrences...</button>
+<button class="mdl-button mdl-js-button mdl-button--primary" id="SetTextI18nDivLink" onclick="reveal('SetTextI18nDiv');" />+ 21 More Occurrences...</button>
 <div id="SetTextI18nDiv" style="display: none">
 <span class="location"><a href="../../src/main/java/com/example/qr_go/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/PlayerInfoActivity.java</a>:81</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno">  78 </span>          playernameText.setText(selectedPlayer.getUsername());
-<span class="lineno">  79 </span>          highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
-<span class="lineno">  80 </span>          qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
-<span class="caretline"><span class="lineno">  81 </span>          totalScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getTotalScore())</span>);</span>
-<span class="lineno">  82 </span>          playerEmailText.setText(selectedPlayer.getEmail());
-<span class="lineno">  83 </span>      }
-<span class="lineno">  84 </span>  }
+<span class="lineno">  78 </span>  }
+<span class="lineno">  79 </span>  playernameText.setText(selectedPlayer.getUsername());
+<span class="lineno">  80 </span>  highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
+<span class="caretline"><span class="lineno">  81 </span>  lowestScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getLowestUniqueScore())</span>);</span>
+<span class="lineno">  82 </span>  qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
+<span class="lineno">  83 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
+<span class="lineno">  84 </span>  playerEmailText.setText(selectedPlayer.getEmail());
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/PlayerInfoActivity.java</a>:82</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
+<span class="lineno">  79 </span>      playernameText.setText(selectedPlayer.getUsername());
+<span class="lineno">  80 </span>      highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
+<span class="lineno">  81 </span>      lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
+<span class="caretline"><span class="lineno">  82 </span>      qrNumText.setText(<span class="warning">Integer.toString(selectedPlayer.getScannedQRCodeIds().size())</span>);</span>
+<span class="lineno">  83 </span>      totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
+<span class="lineno">  84 </span>      playerEmailText.setText(selectedPlayer.getEmail());
+<span class="lineno">  85 </span>  }
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/PlayerInfoActivity.java</a>:83</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
+<span class="lineno">  80 </span>          highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
+<span class="lineno">  81 </span>          lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
+<span class="lineno">  82 </span>          qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
+<span class="caretline"><span class="lineno">  83 </span>          totalScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getTotalScore())</span>);</span>
+<span class="lineno">  84 </span>          playerEmailText.setText(selectedPlayer.getEmail());
+<span class="lineno">  85 </span>      }
+<span class="lineno">  86 </span>  }
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/QRArrayAdapter.java">../../src/main/java/com/example/qr_go/QRArrayAdapter.java</a>:52</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
@@ -1713,33 +1733,51 @@ Dismiss</button>            </div>
 <span class="lineno">  71 </span>
 <span class="lineno">  72 </span>            <span class="tag">&lt;LinearLayout</span></pre>
 
-<button class="mdl-button mdl-js-button mdl-button--primary" id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 40 More Occurrences...</button>
+<button class="mdl-button mdl-js-button mdl-button--primary" id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 44 More Occurrences...</button>
 <div id="HardcodedTextDiv" style="display: none">
-<span class="location"><a href="../../src/main/res/layout/activity_my_qr_codes.xml">../../src/main/res/layout/activity_my_qr_codes.xml</a>:81</span>: <span class="message">Hardcoded string "Highest Score", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="location"><a href="../../src/main/res/layout/activity_my_qr_codes.xml">../../src/main/res/layout/activity_my_qr_codes.xml</a>:81</span>: <span class="message">Hardcoded string "Lowest Score", should use <code>@string</code> resource</span><br /><pre class="errorlines">
 <span class="lineno">  78 </span>                <span class="tag">&lt;TextView</span><span class="attribute">
 </span><span class="lineno">  79 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
 <span class="lineno">  80 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno">  81 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Highest Score"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="caretline"><span class="lineno">  81 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Lowest Score"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">  82 </span>
 <span class="lineno">  83 </span>                <span class="tag">&lt;TextView</span><span class="attribute">
-</span><span class="lineno">  84 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerTotalScore"</span></pre>
+</span><span class="lineno">  84 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerLowScore"</span></pre>
 
 <span class="location"><a href="../../src/main/res/layout/activity_my_qr_codes.xml">../../src/main/res/layout/activity_my_qr_codes.xml</a>:88</span>: <span class="message">Hardcoded string "00000", should use <code>@string</code> resource</span><br /><pre class="errorlines">
 <span class="lineno">  85 </span>                    <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
 <span class="lineno">  86 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  87 </span>                    <span class="prefix">android:</span><span class="attribute">layout_marginLeft</span>=<span class="value">"19dp"</span>
+<span class="lineno">  87 </span>                    <span class="prefix">android:</span><span class="attribute">layout_marginLeft</span>=<span class="value">"22dp"</span>
 <span class="caretline"><span class="lineno">  88 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"00000"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">  89 </span>            <span class="tag">&lt;/LinearLayout></span>
 <span class="lineno">  90 </span>
-<span class="lineno">  91 </span>        <span class="tag">&lt;/LinearLayout></span></pre>
+</pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_my_qr_codes.xml">../../src/main/res/layout/activity_my_qr_codes.xml</a>:102</span>: <span class="message">Hardcoded string "QR Code #1", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno">  99 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 100 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 101 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginStart</span>=<span class="value">"16dp"</span>
-<span class="caretline"><span class="lineno"> 102 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"QR Code #1"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 103 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span>
-<span class="lineno"> 104 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintTop_toBottomOf</span>=<span class="value">"@+id/linearLayout"</span> />
+<span class="location"><a href="../../src/main/res/layout/activity_my_qr_codes.xml">../../src/main/res/layout/activity_my_qr_codes.xml</a>:101</span>: <span class="message">Hardcoded string "Total Score", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno">  98 </span>                <span class="tag">&lt;TextView</span><span class="attribute">
+</span><span class="lineno">  99 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 100 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 101 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Total Score"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 102 </span>
+<span class="lineno"> 103 </span>                <span class="tag">&lt;TextView</span><span class="attribute">
+</span><span class="lineno"> 104 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerTotalScore"</span></pre>
+
+<span class="location"><a href="../../src/main/res/layout/activity_my_qr_codes.xml">../../src/main/res/layout/activity_my_qr_codes.xml</a>:108</span>: <span class="message">Hardcoded string "00000", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 105 </span>                    <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 106 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 107 </span>                    <span class="prefix">android:</span><span class="attribute">layout_marginLeft</span>=<span class="value">"36dp"</span>
+<span class="caretline"><span class="lineno"> 108 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"00000"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 109 </span>            <span class="tag">&lt;/LinearLayout></span>
+<span class="lineno"> 110 </span>
+<span class="lineno"> 111 </span>        <span class="tag">&lt;/LinearLayout></span></pre>
+
+<span class="location"><a href="../../src/main/res/layout/activity_my_qr_codes.xml">../../src/main/res/layout/activity_my_qr_codes.xml</a>:122</span>: <span class="message">Hardcoded string "QR Code #1", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 119 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 120 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 121 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginStart</span>=<span class="value">"16dp"</span>
+<span class="caretline"><span class="lineno"> 122 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"QR Code #1"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 123 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span>
+<span class="lineno"> 124 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintTop_toBottomOf</span>=<span class="value">"@+id/linearLayout"</span> />
 </pre>
 
 <span class="location"><a href="../../src/main/res/layout/activity_new_game_qractivity.xml">../../src/main/res/layout/activity_new_game_qractivity.xml</a>:14</span>: <span class="message">Hardcoded string "123", should use <code>@string</code> resource</span><br /><pre class="errorlines">
@@ -1830,35 +1868,53 @@ Dismiss</button>            </div>
 <span class="lineno">  61 </span>                    <span class="prefix">android:</span><span class="attribute">layout_marginLeft</span>=<span class="value">"19dp"</span>
 <span class="caretline"><span class="lineno">  62 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"00000"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">  63 </span>            <span class="tag">&lt;/LinearLayout></span>
-<span class="lineno">  64 </span>            <span class="tag">&lt;LinearLayout</span><span class="attribute">
-</span><span class="lineno">  65 </span><span class="attribute">                </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/totalScoreData"</span></pre>
+<span class="lineno">  64 </span>
+<span class="lineno">  65 </span>            <span class="tag">&lt;LinearLayout</span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:72</span>: <span class="message">Hardcoded string "Highest Score", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno">  69 </span>                <span class="tag">&lt;TextView</span><span class="attribute">
-</span><span class="lineno">  70 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  71 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno">  72 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Highest Score"</span></span>/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  73 </span>
-<span class="lineno">  74 </span>                <span class="tag">&lt;TextView</span><span class="attribute">
-</span><span class="lineno">  75 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerTotalScore"</span></pre>
+<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:74</span>: <span class="message">Hardcoded string "Lowest Score", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno">  71 </span>                <span class="tag">&lt;TextView</span><span class="attribute">
+</span><span class="lineno">  72 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  73 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno">  74 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Lowest Score"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  75 </span>
+<span class="lineno">  76 </span>                <span class="tag">&lt;TextView</span><span class="attribute">
+</span><span class="lineno">  77 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerLowScore"</span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:79</span>: <span class="message">Hardcoded string "00000", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno">  76 </span>                    <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  77 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  78 </span>                    <span class="prefix">android:</span><span class="attribute">layout_marginLeft</span>=<span class="value">"19dp"</span>
-<span class="caretline"><span class="lineno">  79 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"00000"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  80 </span>            <span class="tag">&lt;/LinearLayout></span>
-<span class="lineno">  81 </span>
-<span class="lineno">  82 </span>        <span class="tag">&lt;/LinearLayout></span></pre>
+<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:81</span>: <span class="message">Hardcoded string "00000", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno">  78 </span>                    <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  79 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  80 </span>                    <span class="prefix">android:</span><span class="attribute">layout_marginLeft</span>=<span class="value">"22dp"</span>
+<span class="caretline"><span class="lineno">  81 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"00000"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  82 </span>            <span class="tag">&lt;/LinearLayout></span>
+<span class="lineno">  83 </span>
+<span class="lineno">  84 </span>            <span class="tag">&lt;LinearLayout</span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:99</span>: <span class="message">Hardcoded string "Email:", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno">  96 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  97 </span>            <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
-<span class="lineno">  98 </span>            <span class="prefix">android:</span><span class="attribute">layout_marginLeft</span>=<span class="value">"19dp"</span>
-<span class="caretline"><span class="lineno">  99 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Email:"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 100 </span>
-<span class="lineno"> 101 </span>        <span class="tag">&lt;TextView</span><span class="attribute">
-</span><span class="lineno"> 102 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerEmail"</span></pre>
+<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:93</span>: <span class="message">Hardcoded string "Total Score", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno">  90 </span>                <span class="tag">&lt;TextView</span><span class="attribute">
+</span><span class="lineno">  91 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  92 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno">  93 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Total Score"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  94 </span>
+<span class="lineno">  95 </span>                <span class="tag">&lt;TextView</span><span class="attribute">
+</span><span class="lineno">  96 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerTotalScore"</span></pre>
+
+<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:100</span>: <span class="message">Hardcoded string "00000", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno">  97 </span>                    <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  98 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  99 </span>                    <span class="prefix">android:</span><span class="attribute">layout_marginLeft</span>=<span class="value">"36dp"</span>
+<span class="caretline"><span class="lineno"> 100 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"00000"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 101 </span>            <span class="tag">&lt;/LinearLayout></span>
+<span class="lineno"> 102 </span>
+<span class="lineno"> 103 </span>        <span class="tag">&lt;/LinearLayout></span></pre>
+
+<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:120</span>: <span class="message">Hardcoded string "Email:", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 117 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 118 </span>            <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
+<span class="lineno"> 119 </span>            <span class="prefix">android:</span><span class="attribute">layout_marginLeft</span>=<span class="value">"19dp"</span>
+<span class="caretline"><span class="lineno"> 120 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Email:"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 121 </span>
+<span class="lineno"> 122 </span>        <span class="tag">&lt;TextView</span><span class="attribute">
+</span><span class="lineno"> 123 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerEmail"</span></pre>
 
 <span class="location"><a href="../../src/main/res/layout/activity_qr_info.xml">../../src/main/res/layout/activity_qr_info.xml</a>:32</span>: <span class="message">Hardcoded string "QR NAME", should use <code>@string</code> resource</span><br /><pre class="errorlines">
 <span class="lineno">  29 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
@@ -2226,17 +2282,26 @@ Dismiss</button>            </div>
 <span class="lineno">  70 </span>            <span class="tag">&lt;/LinearLayout></span>
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_my_qr_codes.xml">../../src/main/res/layout/activity_my_qr_codes.xml</a>:87</span>: <span class="message">Consider replacing <code>android:layout_marginLeft</code> with <code>android:layout_marginStart="19dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno">  84 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerTotalScore"</span>
+<span class="location"><a href="../../src/main/res/layout/activity_my_qr_codes.xml">../../src/main/res/layout/activity_my_qr_codes.xml</a>:87</span>: <span class="message">Consider replacing <code>android:layout_marginLeft</code> with <code>android:layout_marginStart="22dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno">  84 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerLowScore"</span>
 <span class="lineno">  85 </span>                    <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
 <span class="lineno">  86 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno">  87 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginLeft</span></span>=<span class="value">"19dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="caretline"><span class="lineno">  87 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginLeft</span></span>=<span class="value">"22dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">  88 </span>                    <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"00000"</span> />
 <span class="lineno">  89 </span>            <span class="tag">&lt;/LinearLayout></span>
 </pre>
 
-<button class="mdl-button mdl-js-button mdl-button--primary" id="RtlHardcodedDivLink" onclick="reveal('RtlHardcodedDiv');" />+ 15 More Occurrences...</button>
+<button class="mdl-button mdl-js-button mdl-button--primary" id="RtlHardcodedDivLink" onclick="reveal('RtlHardcodedDiv');" />+ 17 More Occurrences...</button>
 <div id="RtlHardcodedDiv" style="display: none">
+<span class="location"><a href="../../src/main/res/layout/activity_my_qr_codes.xml">../../src/main/res/layout/activity_my_qr_codes.xml</a>:107</span>: <span class="message">Consider replacing <code>android:layout_marginLeft</code> with <code>android:layout_marginStart="36dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 104 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerTotalScore"</span>
+<span class="lineno"> 105 </span>                    <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 106 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 107 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginLeft</span></span>=<span class="value">"36dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 108 </span>                    <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"00000"</span> />
+<span class="lineno"> 109 </span>            <span class="tag">&lt;/LinearLayout></span>
+</pre>
+
 <span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:14</span>: <span class="message">Consider replacing <code>android:layout_marginLeft</code> with <code>android:layout_marginStart="50dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
 <span class="lineno">  11 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"100dp"</span>>
 <span class="lineno">  12 </span>
@@ -2271,33 +2336,42 @@ Dismiss</button>            </div>
 <span class="caretline"><span class="lineno">  61 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginLeft</span></span>=<span class="value">"19dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">  62 </span>                    <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"00000"</span> />
 <span class="lineno">  63 </span>            <span class="tag">&lt;/LinearLayout></span>
-<span class="lineno">  64 </span>            <span class="tag">&lt;LinearLayout</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:78</span>: <span class="message">Consider replacing <code>android:layout_marginLeft</code> with <code>android:layout_marginStart="19dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno">  75 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerTotalScore"</span>
-<span class="lineno">  76 </span>                    <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  77 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno">  78 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginLeft</span></span>=<span class="value">"19dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  79 </span>                    <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"00000"</span> />
-<span class="lineno">  80 </span>            <span class="tag">&lt;/LinearLayout></span>
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:98</span>: <span class="message">Consider replacing <code>android:layout_marginLeft</code> with <code>android:layout_marginStart="19dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno">  95 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  96 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  97 </span>            <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
-<span class="caretline"><span class="lineno">  98 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginLeft</span></span>=<span class="value">"19dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  99 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Email:"</span> />
-<span class="lineno"> 100 </span>
-<span class="lineno"> 101 </span>        <span class="tag">&lt;TextView</span></pre>
+<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:80</span>: <span class="message">Consider replacing <code>android:layout_marginLeft</code> with <code>android:layout_marginStart="22dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno">  77 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerLowScore"</span>
+<span class="lineno">  78 </span>                    <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  79 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno">  80 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginLeft</span></span>=<span class="value">"22dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  81 </span>                    <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"00000"</span> />
+<span class="lineno">  82 </span>            <span class="tag">&lt;/LinearLayout></span>
+</pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:105</span>: <span class="message">Consider replacing <code>android:layout_marginRight</code> with <code>android:layout_marginEnd="19dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 102 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerEmail"</span>
-<span class="lineno"> 103 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 104 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 105 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginRight</span></span>=<span class="value">"19dp"</span>/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 106 </span>    <span class="tag">&lt;/LinearLayout></span>
-<span class="lineno"> 107 </span>
+<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:99</span>: <span class="message">Consider replacing <code>android:layout_marginLeft</code> with <code>android:layout_marginStart="36dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno">  96 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerTotalScore"</span>
+<span class="lineno">  97 </span>                    <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  98 </span>                    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno">  99 </span>                    <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginLeft</span></span>=<span class="value">"36dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 100 </span>                    <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"00000"</span> />
+<span class="lineno"> 101 </span>            <span class="tag">&lt;/LinearLayout></span>
+</pre>
+
+<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:119</span>: <span class="message">Consider replacing <code>android:layout_marginLeft</code> with <code>android:layout_marginStart="19dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 116 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 117 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 118 </span>            <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
+<span class="caretline"><span class="lineno"> 119 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginLeft</span></span>=<span class="value">"19dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 120 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Email:"</span> />
+<span class="lineno"> 121 </span>
+<span class="lineno"> 122 </span>        <span class="tag">&lt;TextView</span></pre>
+
+<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:126</span>: <span class="message">Consider replacing <code>android:layout_marginRight</code> with <code>android:layout_marginEnd="19dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 123 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerEmail"</span>
+<span class="lineno"> 124 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 125 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 126 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginRight</span></span>=<span class="value">"19dp"</span>/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 127 </span>    <span class="tag">&lt;/LinearLayout></span>
+<span class="lineno"> 128 </span>
 </pre>
 
 <span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:20</span>: <span class="message">Consider replacing <code>android:layout_alignParentLeft</code> with <code>android:layout_alignParentStart="true"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
