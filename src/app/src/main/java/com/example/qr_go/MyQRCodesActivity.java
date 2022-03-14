@@ -35,6 +35,7 @@ public class MyQRCodesActivity extends AppCompatActivity {
         TextView qrNumText = findViewById(R.id.numOfQRCodes);
         TextView totalScoreText = findViewById(R.id.playerTotalScore);
         TextView highestScoreText = findViewById(R.id.playerHighScore);
+        TextView lowestScoreText = findViewById(R.id.playerLowScore);
 
         playerDBInst = FirebaseFirestore.getInstance();
 
@@ -55,6 +56,7 @@ public class MyQRCodesActivity extends AppCompatActivity {
                             }
                             playernameText.setText(selectedPlayer.getUsername());
                             highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
+                            lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
                             qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
                             totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
                         }

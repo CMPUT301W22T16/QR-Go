@@ -140,6 +140,21 @@ public abstract class User {
     }
 
     /**
+     * Returns the lowest unique score that the user has
+     * @return user's lowest unique score
+     */
+    public Integer getLowestUniqueScore() {
+        Integer lowestScore = Integer.MAX_VALUE;
+        for (Integer score : scannedQRCodeIds.values()) {
+            if (score < lowestScore) {
+                lowestScore = score;
+            }
+        }
+        // if no codes were found, return 0
+        return lowestScore == Integer.MAX_VALUE ? 0 : lowestScore;
+    }
+
+    /**
      * @return user's username
      */
     public String getUsername() {
