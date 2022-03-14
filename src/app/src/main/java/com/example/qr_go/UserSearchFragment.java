@@ -45,8 +45,6 @@ public class UserSearchFragment extends SortableFragment {
         userListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // TODO: Start new activity
-
                 Intent intent = new Intent(view.getContext(), PlayerInfoActivity.class);
                 intent.putExtra("SELECTED_USER", userDisplays.get(position).getUserid());
                 view.getContext().startActivity(intent);
@@ -76,14 +74,18 @@ public class UserSearchFragment extends SortableFragment {
                 break;
         }
         int rank = 1;
+        int userPos = 0;
         for (UserListDisplayContainer user : userDisplays) {
             user.setRankPosition(new Integer(rank));
+            if (user.getIsCurrentUser()) {
+                userPos = rank-1;
+            }
             rank++;
         }
         userAdapter = new UserArrayAdapter(view.getContext(), userDisplays, sortPos);
         userListView.setAdapter(userAdapter);
         userAdapter.notifyDataSetChanged();
-        userListView.setSelection(userAdapter.getUserPos());
+        userListView.setSelection(userPos);
     }
 
     public void setSearchFiltering() {

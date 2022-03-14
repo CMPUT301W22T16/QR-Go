@@ -46,7 +46,7 @@ public class QRCode {
         boolean isInvisable = false;
 
     }
-    public QRCode(){ }
+    public QRCode(){boolean isInvisable = false; }
 
     /**
      * Converts bytes[] from SHA-256 hashing into string

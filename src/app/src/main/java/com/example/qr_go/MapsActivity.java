@@ -104,6 +104,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 return true;
             }
         });
+        QRGoDBUtil db = new QRGoDBUtil();
+        db.test3();
 
     }
 
