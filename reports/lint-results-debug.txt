@@ -50,16 +50,16 @@
    Identifier: fragment-1.4.0
    Feedback: https://issuetracker.google.com/issues/new?component=192731
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:91: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:106: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
                     case R.id.nav_search:
                          ~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:94: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:109: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
                     case R.id.nav_my_codes:
                          ~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:97: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:112: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
                     case R.id.nav_scan_code:
                          ~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:100: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:115: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
                     case R.id.nav_my_account:
                          ~~~~~~~~~~~~~~~~~~~
 
@@ -162,7 +162,7 @@
    where the version qualifier is less than or equal to the minSdkVersion,
    where the contents should be merged into the best folder.
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:37: Warning: Do not place Android context classes in static fields (static reference to FirebaseFirestore which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:47: Warning: Do not place Android context classes in static fields (static reference to FirebaseFirestore which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
     public static FirebaseFirestore db;
            ~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerProfileActivity.java:22: Warning: Do not place Android context classes in static fields (static reference to FirebaseFirestore which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
@@ -341,13 +341,13 @@
 
    https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerInfoActivity.java:77: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerInfoActivity.java:78: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
                             highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerInfoActivity.java:78: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerInfoActivity.java:79: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
                             qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerInfoActivity.java:79: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerInfoActivity.java:80: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
                             totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRArrayAdapter.java:52: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]

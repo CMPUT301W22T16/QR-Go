@@ -177,7 +177,7 @@ document.getElementById(id).style.display = 'none';
       <span class="mdl-layout-title">Lint Report: 1 error and 119 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Mon Mar 14 05:30:26 UTC 2022      </nav>
+Check performed at Mon Mar 14 15:41:32 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -473,44 +473,44 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:91</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
-<span class="lineno">  88 </span>       <span class="keyword">public</span> <span class="keyword">boolean</span> onNavigationItemSelected(<span class="annotation">@NonNull</span> MenuItem item) {
-<span class="lineno">  89 </span>           <span class="keyword">int</span> id = item.getItemId();
-<span class="lineno">  90 </span>           <span class="keyword">switch</span> (id) {
-<span class="caretline"><span class="lineno">  91 </span>               <span class="keyword">case</span> <span class="warning">R.id.nav_search</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  92 </span>                   startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, SearchActivity.<span class="keyword">class</span>));
-<span class="lineno">  93 </span>                   <span class="keyword">break</span>;
-<span class="lineno">  94 </span>               <span class="keyword">case</span> R.id.nav_my_codes:
+<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:106</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
+<span class="lineno"> 103 </span>       <span class="keyword">public</span> <span class="keyword">boolean</span> onNavigationItemSelected(<span class="annotation">@NonNull</span> MenuItem item) {
+<span class="lineno"> 104 </span>           <span class="keyword">int</span> id = item.getItemId();
+<span class="lineno"> 105 </span>           <span class="keyword">switch</span> (id) {
+<span class="caretline"><span class="lineno"> 106 </span>               <span class="keyword">case</span> <span class="warning">R.id.nav_search</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 107 </span>                   startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, SearchActivity.<span class="keyword">class</span>));
+<span class="lineno"> 108 </span>                   <span class="keyword">break</span>;
+<span class="lineno"> 109 </span>               <span class="keyword">case</span> R.id.nav_my_codes:
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:94</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
-<span class="lineno">  91 </span>    <span class="keyword">case</span> R.id.nav_search:
-<span class="lineno">  92 </span>        startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, SearchActivity.<span class="keyword">class</span>));
-<span class="lineno">  93 </span>        <span class="keyword">break</span>;
-<span class="caretline"><span class="lineno">  94 </span>    <span class="keyword">case</span> <span class="warning">R.id.nav_my_codes</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  95 </span>        startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, MyQRCodesActivity.<span class="keyword">class</span>));
-<span class="lineno">  96 </span>        <span class="keyword">break</span>;
-<span class="lineno">  97 </span>    <span class="keyword">case</span> R.id.nav_scan_code:
+<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:109</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
+<span class="lineno"> 106 </span>    <span class="keyword">case</span> R.id.nav_search:
+<span class="lineno"> 107 </span>        startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, SearchActivity.<span class="keyword">class</span>));
+<span class="lineno"> 108 </span>        <span class="keyword">break</span>;
+<span class="caretline"><span class="lineno"> 109 </span>    <span class="keyword">case</span> <span class="warning">R.id.nav_my_codes</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 110 </span>        startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, MyQRCodesActivity.<span class="keyword">class</span>));
+<span class="lineno"> 111 </span>        <span class="keyword">break</span>;
+<span class="lineno"> 112 </span>    <span class="keyword">case</span> R.id.nav_scan_code:
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:97</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
-<span class="lineno">  94 </span>  <span class="keyword">case</span> R.id.nav_my_codes:
-<span class="lineno">  95 </span>      startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, MyQRCodesActivity.<span class="keyword">class</span>));
-<span class="lineno">  96 </span>      <span class="keyword">break</span>;
-<span class="caretline"><span class="lineno">  97 </span>  <span class="keyword">case</span> <span class="warning">R.id.nav_scan_code</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  98 </span>      startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, QRCodeScannerActivity.<span class="keyword">class</span>));
-<span class="lineno">  99 </span>      <span class="keyword">break</span>;
-<span class="lineno"> 100 </span>  <span class="keyword">case</span> R.id.nav_my_account:
+<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:112</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
+<span class="lineno"> 109 </span>  <span class="keyword">case</span> R.id.nav_my_codes:
+<span class="lineno"> 110 </span>      startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, MyQRCodesActivity.<span class="keyword">class</span>));
+<span class="lineno"> 111 </span>      <span class="keyword">break</span>;
+<span class="caretline"><span class="lineno"> 112 </span>  <span class="keyword">case</span> <span class="warning">R.id.nav_scan_code</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 113 </span>      startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, QRCodeScannerActivity.<span class="keyword">class</span>));
+<span class="lineno"> 114 </span>      <span class="keyword">break</span>;
+<span class="lineno"> 115 </span>  <span class="keyword">case</span> R.id.nav_my_account:
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:100</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
-<span class="lineno">  97 </span>      <span class="keyword">case</span> R.id.nav_scan_code:
-<span class="lineno">  98 </span>          startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, QRCodeScannerActivity.<span class="keyword">class</span>));
-<span class="lineno">  99 </span>          <span class="keyword">break</span>;
-<span class="caretline"><span class="lineno"> 100 </span>      <span class="keyword">case</span> <span class="warning">R.id.nav_my_account</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 101 </span>          startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, PlayerProfileActivity.<span class="keyword">class</span>));
-<span class="lineno"> 102 </span>          <span class="keyword">break</span>;
-<span class="lineno"> 103 </span>  }
+<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:115</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
+<span class="lineno"> 112 </span>      <span class="keyword">case</span> R.id.nav_scan_code:
+<span class="lineno"> 113 </span>          startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, QRCodeScannerActivity.<span class="keyword">class</span>));
+<span class="lineno"> 114 </span>          <span class="keyword">break</span>;
+<span class="caretline"><span class="lineno"> 115 </span>      <span class="keyword">case</span> <span class="warning">R.id.nav_my_account</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 116 </span>          startActivity(<span class="keyword">new</span> Intent(MapsActivity.<span class="keyword">this</span>, PlayerProfileActivity.<span class="keyword">class</span>));
+<span class="lineno"> 117 </span>          <span class="keyword">break</span>;
+<span class="lineno"> 118 </span>  }
 </pre>
 
 </div>
@@ -853,13 +853,13 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:37</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>FirebaseFirestore</code> which has field <code>context</code> pointing to <code>Context</code>); this is a memory leak</span><br /><pre class="errorlines">
-<span class="lineno">  34 </span>
-<span class="lineno">  35 </span>    <span class="keyword">private</span> GoogleMap mMap;
-<span class="lineno">  36 </span>    <span class="keyword">private</span> <span class="keyword">static</span> String currentUUID;
-<span class="caretline"><span class="lineno">  37 </span>    <span class="keyword">public</span> <span class="warning"><span class="keyword">static</span></span> FirebaseFirestore db;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  38 </span>
-<span class="lineno">  39 </span>    CollectionReference collectionReference;
+<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:47</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>FirebaseFirestore</code> which has field <code>context</code> pointing to <code>Context</code>); this is a memory leak</span><br /><pre class="errorlines">
+<span class="lineno">  44 </span>
+<span class="lineno">  45 </span>    <span class="keyword">private</span> GoogleMap mMap;
+<span class="lineno">  46 </span>    <span class="keyword">private</span> <span class="keyword">static</span> String currentUUID;
+<span class="caretline"><span class="lineno">  47 </span>    <span class="keyword">public</span> <span class="warning"><span class="keyword">static</span></span> FirebaseFirestore db;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  48 </span>    <span class="keyword">protected</span> LocationManager locationManager;
+<span class="lineno">  49 </span>    <span class="keyword">protected</span> LocationListener locationListener;
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/PlayerProfileActivity.java">../../src/main/java/com/example/qr_go/PlayerProfileActivity.java</a>:22</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>FirebaseFirestore</code> which has field <code>context</code> pointing to <code>Context</code>); this is a memory leak</span><br /><pre class="errorlines">
@@ -1430,34 +1430,34 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/example/qr_go/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/PlayerInfoActivity.java</a>:77</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno">  74 </span>          <span class="comment">//myQRCodeIDs = (HashMap&lt;Integer,String>) document.getData().get("scannedQRCodeIds");</span>
-<span class="lineno">  75 </span>      }
-<span class="lineno">  76 </span>      playernameText.setText(selectedPlayer.getUsername());
-<span class="caretline"><span class="lineno">  77 </span>      highestScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getHighestUniqueScore())</span>);</span>
-<span class="lineno">  78 </span>      qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
-<span class="lineno">  79 </span>      totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
-<span class="lineno">  80 </span>  }
-</pre>
-
 <span class="location"><a href="../../src/main/java/com/example/qr_go/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/PlayerInfoActivity.java</a>:78</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno">  75 </span>          }
-<span class="lineno">  76 </span>          playernameText.setText(selectedPlayer.getUsername());
-<span class="lineno">  77 </span>          highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
-<span class="caretline"><span class="lineno">  78 </span>          qrNumText.setText(<span class="warning">Integer.toString(selectedPlayer.getScannedQRCodeIds().size())</span>);</span>
-<span class="lineno">  79 </span>          totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
-<span class="lineno">  80 </span>      }
+<span class="lineno">  75 </span>          <span class="comment">//myQRCodeIDs = (HashMap&lt;Integer,String>) document.getData().get("scannedQRCodeIds");</span>
+<span class="lineno">  76 </span>      }
+<span class="lineno">  77 </span>      playernameText.setText(selectedPlayer.getUsername());
+<span class="caretline"><span class="lineno">  78 </span>      highestScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getHighestUniqueScore())</span>);</span>
+<span class="lineno">  79 </span>      qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
+<span class="lineno">  80 </span>      totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
 <span class="lineno">  81 </span>  }
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/PlayerInfoActivity.java</a>:79</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno">  76 </span>              playernameText.setText(selectedPlayer.getUsername());
-<span class="lineno">  77 </span>              highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
-<span class="lineno">  78 </span>              qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
-<span class="caretline"><span class="lineno">  79 </span>              totalScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getTotalScore())</span>);</span>
-<span class="lineno">  80 </span>          }
+<span class="lineno">  76 </span>          }
+<span class="lineno">  77 </span>          playernameText.setText(selectedPlayer.getUsername());
+<span class="lineno">  78 </span>          highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
+<span class="caretline"><span class="lineno">  79 </span>          qrNumText.setText(<span class="warning">Integer.toString(selectedPlayer.getScannedQRCodeIds().size())</span>);</span>
+<span class="lineno">  80 </span>          totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
 <span class="lineno">  81 </span>      }
-<span class="lineno">  82 </span>  });
+<span class="lineno">  82 </span>  }
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/PlayerInfoActivity.java</a>:80</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
+<span class="lineno">  77 </span>              playernameText.setText(selectedPlayer.getUsername());
+<span class="lineno">  78 </span>              highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
+<span class="lineno">  79 </span>              qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
+<span class="caretline"><span class="lineno">  80 </span>              totalScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getTotalScore())</span>);</span>
+<span class="lineno">  81 </span>          }
+<span class="lineno">  82 </span>      }
+<span class="lineno">  83 </span>  });
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/QRArrayAdapter.java">../../src/main/java/com/example/qr_go/QRArrayAdapter.java</a>:52</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">

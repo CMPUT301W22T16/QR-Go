@@ -783,6 +783,29 @@
     </incident>
 
     <incident
+        id="TextFields"
+        severity="warning"
+        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="71"
+            column="9"
+            startOffset="2786"
+            endLine="71"
+            endColumn="43"
+            endOffset="2820"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="66"
+            column="9"
+            startOffset="2589"
+            endLine="66"
+            endColumn="39"
+            endOffset="2619"
+            message="id defined here"/>
+    </incident>
+
+    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -808,29 +831,6 @@
             endLine="65"
             endColumn="14"
             endOffset="2580"/>
-    </incident>
-
-    <incident
-        id="TextFields"
-        severity="warning"
-        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="71"
-            column="9"
-            startOffset="2786"
-            endLine="71"
-            endColumn="43"
-            endOffset="2820"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="66"
-            column="9"
-            startOffset="2589"
-            endLine="66"
-            endColumn="39"
-            endOffset="2619"
-            message="id defined here"/>
     </incident>
 
     <incident
@@ -1002,12 +1002,12 @@
         message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="37"
+            line="47"
             column="12"
-            startOffset="1273"
-            endLine="37"
+            startOffset="1625"
+            endLine="47"
             endColumn="18"
-            endOffset="1279"/>
+            endOffset="1631"/>
     </incident>
 
     <incident
@@ -1016,12 +1016,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="91"
+            line="106"
             column="26"
-            startOffset="3762"
-            endLine="91"
+            startOffset="4311"
+            endLine="106"
             endColumn="41"
-            endOffset="3777"/>
+            endOffset="4326"/>
     </incident>
 
     <incident
@@ -1030,12 +1030,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="94"
+            line="109"
             column="26"
-            startOffset="3927"
-            endLine="94"
+            startOffset="4476"
+            endLine="109"
             endColumn="43"
-            endOffset="3944"/>
+            endOffset="4493"/>
     </incident>
 
     <incident
@@ -1044,12 +1044,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="97"
+            line="112"
             column="26"
-            startOffset="4097"
-            endLine="97"
+            startOffset="4646"
+            endLine="112"
             endColumn="44"
-            endOffset="4115"/>
+            endOffset="4664"/>
     </incident>
 
     <incident
@@ -1058,12 +1058,12 @@
         message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="100"
+            line="115"
             column="26"
-            startOffset="4272"
-            endLine="100"
+            startOffset="4821"
+            endLine="115"
             endColumn="45"
-            endOffset="4291"/>
+            endOffset="4840"/>
     </incident>
 
     <incident
@@ -1373,26 +1373,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/PlayerInfoActivity.java"
-            line="77"
-            column="54"
-            startOffset="3145"
-            endLine="77"
-            endColumn="110"
-            endOffset="3201"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/PlayerInfoActivity.java"
             line="78"
-            column="47"
-            startOffset="3250"
+            column="54"
+            startOffset="3146"
             endLine="78"
-            endColumn="108"
-            endOffset="3311"/>
+            endColumn="110"
+            endOffset="3202"/>
     </incident>
 
     <incident
@@ -1402,11 +1388,25 @@
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/PlayerInfoActivity.java"
             line="79"
-            column="52"
-            startOffset="3365"
+            column="47"
+            startOffset="3251"
             endLine="79"
+            endColumn="108"
+            endOffset="3312"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/PlayerInfoActivity.java"
+            line="80"
+            column="52"
+            startOffset="3366"
+            endLine="80"
             endColumn="100"
-            endOffset="3413"/>
+            endOffset="3414"/>
     </incident>
 
     <incident
