@@ -80,7 +80,7 @@ public class SearchActivity extends FragmentActivity {
         }
 
         Button backButton = (Button) findViewById(R.id.back_button);
-        searchBar = (EditText) findViewById(R.id.player_username);
+        searchBar = (EditText) findViewById(R.id.search_bar);
 
         // Back button listener
         backButton.setOnClickListener(new View.OnClickListener() {
