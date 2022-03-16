@@ -1,10 +1,12 @@
 package com.example.qr_go;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -15,31 +17,28 @@ public class BaseActivity extends FragmentActivity {
     protected void initializeNavbar() {
         // Set onClick for BottomNavigation nav items
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav_view);
-        System.out.println("IN BASE ACTIVITYY");
-        System.out.println("bottomNavigationView" + bottomNavigationView);
-
         bottomNavigationView.getMenu().getItem(0).setCheckable(false); // don't select first item by default
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
-                switch (id) {
-                    case R.id.nav_search:
-                        startActivity(new Intent(BaseActivity.this, SearchActivity.class));
-                        break;
-                    case R.id.nav_my_codes:
-                        startActivity(new Intent(BaseActivity.this, MyQRCodesActivity.class));
-                        break;
-                    case R.id.nav_scan_code:
-                        startActivity(new Intent(BaseActivity.this, QRCodeScannerActivity.class));
-                        break;
-                    case R.id.nav_my_account:
-                        startActivity(new Intent(BaseActivity.this, PlayerProfileActivity.class));
-                        break;
-                    case R.id.nav_home:
-                        startActivity(new Intent(BaseActivity.this, MapsActivity.class));
-                        break;
-                }
+                Intent intent = new Intent(BaseActivity.this, MapsActivity.class);
+                if (id == R.id.nav_search)
+                    intent = new Intent(BaseActivity.this, SearchActivity.class);
+                else if (id == R.id.nav_my_codes)
+                    intent = new Intent(BaseActivity.this, MyQRCodesActivity.class);
+                else if (id == R.id.nav_scan_code)
+                    intent = new Intent(BaseActivity.this, QRCodeScannerActivity.class);
+                else if (id == R.id.nav_my_account)
+                    intent = new Intent(BaseActivity.this, PlayerProfileActivity.class);
+                else if (id == R.id.nav_home)
+                    intent = new Intent(BaseActivity.this, MapsActivity.class);
+
+                intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP); // bring up the already opened activity
+                startActivity(intent);
+
+
                 return true;
             }
         });
