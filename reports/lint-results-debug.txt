@@ -50,29 +50,6 @@
    Identifier: fragment-1.4.0
    Feedback: https://issuetracker.google.com/issues/new?component=192731
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/BaseActivity.java:27: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
-                    case R.id.nav_search:
-                         ~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/BaseActivity.java:30: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
-                    case R.id.nav_my_codes:
-                         ~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/BaseActivity.java:33: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
-                    case R.id.nav_scan_code:
-                         ~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/BaseActivity.java:36: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
-                    case R.id.nav_my_account:
-                         ~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/BaseActivity.java:39: Warning: Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements [NonConstantResourceId]
-                    case R.id.nav_home:
-                         ~~~~~~~~~~~~~
-
-   Explanation for issues of type "NonConstantResourceId":
-   Avoid the usage of resource IDs where constant expressions are required.
-
-   A future version of the Android Gradle Plugin will generate R classes with
-   non-constant IDs in order to improve the performance of incremental
-   compilation.
-
 /home/runner/work/QR-Go/QR-Go/src/app/build.gradle:43: Warning: A newer version of com.google.android.gms:play-services-maps than 17.0.1 is available: 18.0.2 [GradleDependency]
     implementation 'com.google.android.gms:play-services-maps:17.0.1'
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -705,4 +682,4 @@
    Please define an explicit reason why it is ignored, and when it can be
    resolved.
 
-1 errors, 148 warnings
+1 errors, 143 warnings

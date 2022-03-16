@@ -174,10 +174,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 1 error and 148 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 1 error and 143 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Wed Mar 16 23:06:55 UTC 2022      </nav>
+Check performed at Wed Mar 16 23:15:08 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -187,7 +187,6 @@ Check performed at Wed Mar 16 23:06:55 UTC 2022      </nav>
       <a class="mdl-navigation__link" href="#DefaultLocale"><i class="material-icons warning-icon">warning</i>Implied default locale in case conversion (2)</a>
       <a class="mdl-navigation__link" href="#MissingConstraints"><i class="material-icons error-icon">error</i>Missing Constraints in ConstraintLayout (1)</a>
       <a class="mdl-navigation__link" href="#FragmentTagUsage"><i class="material-icons warning-icon">warning</i>Use FragmentContainerView instead of the &lt;fragment> tag (1)</a>
-      <a class="mdl-navigation__link" href="#NonConstantResourceId"><i class="material-icons warning-icon">warning</i>Checks use of resource IDs in places requiring constants (5)</a>
       <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (8)</a>
       <a class="mdl-navigation__link" href="#SpUsage"><i class="material-icons warning-icon">warning</i>Using <code>dp</code> instead of <code>sp</code> for text sizes (5)</a>
       <a class="mdl-navigation__link" href="#ObsoleteLayoutParam"><i class="material-icons warning-icon">warning</i>Obsolete layout params (3)</a>
@@ -229,9 +228,6 @@ Check performed at Wed Mar 16 23:06:55 UTC 2022      </nav>
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#FragmentTagUsage">FragmentTagUsage</a>: Use FragmentContainerView instead of the &lt;fragment> tag</td></tr>
-<tr>
-<td class="countColumn">5</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#NonConstantResourceId">NonConstantResourceId</a>: Checks use of resource IDs in places requiring constants</td></tr>
 <tr>
 <td class="countColumn">8</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#GradleDependency">GradleDependency</a>: Obsolete Gradle Dependency</td></tr>
@@ -458,93 +454,6 @@ Feedback: <a href="https://issuetracker.google.com/issues/new?component=192731">
               <div class="mdl-card__actions mdl-card--border">
 <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationFragmentTagUsageLink" onclick="reveal('explanationFragmentTagUsage');">
 Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="FragmentTagUsageCardLink" onclick="hideid('FragmentTagUsageCard');">
-Dismiss</button>            </div>
-            </div>
-          </section><a name="NonConstantResourceId"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="NonConstantResourceIdCard" style="display: block;">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Checks use of resource IDs in places requiring constants</h2>
-  </div>
-              <div class="mdl-card__supporting-text">
-<div class="issue">
-<div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/example/qr_go/BaseActivity.java">../../src/main/java/com/example/qr_go/BaseActivity.java</a>:27</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
-<span class="lineno"> 24 </span>       <span class="keyword">public</span> <span class="keyword">boolean</span> onNavigationItemSelected(<span class="annotation">@NonNull</span> MenuItem item) {
-<span class="lineno"> 25 </span>           <span class="keyword">int</span> id = item.getItemId();
-<span class="lineno"> 26 </span>           <span class="keyword">switch</span> (id) {
-<span class="caretline"><span class="lineno"> 27 </span>               <span class="keyword">case</span> <span class="warning">R.id.nav_search</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 28 </span>                   startActivity(<span class="keyword">new</span> Intent(BaseActivity.<span class="keyword">this</span>, SearchActivity.<span class="keyword">class</span>));
-<span class="lineno"> 29 </span>                   <span class="keyword">break</span>;
-<span class="lineno"> 30 </span>               <span class="keyword">case</span> R.id.nav_my_codes:
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/BaseActivity.java">../../src/main/java/com/example/qr_go/BaseActivity.java</a>:30</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
-<span class="lineno"> 27 </span>    <span class="keyword">case</span> R.id.nav_search:
-<span class="lineno"> 28 </span>        startActivity(<span class="keyword">new</span> Intent(BaseActivity.<span class="keyword">this</span>, SearchActivity.<span class="keyword">class</span>));
-<span class="lineno"> 29 </span>        <span class="keyword">break</span>;
-<span class="caretline"><span class="lineno"> 30 </span>    <span class="keyword">case</span> <span class="warning">R.id.nav_my_codes</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 31 </span>        startActivity(<span class="keyword">new</span> Intent(BaseActivity.<span class="keyword">this</span>, MyQRCodesActivity.<span class="keyword">class</span>));
-<span class="lineno"> 32 </span>        <span class="keyword">break</span>;
-<span class="lineno"> 33 </span>    <span class="keyword">case</span> R.id.nav_scan_code:
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/BaseActivity.java">../../src/main/java/com/example/qr_go/BaseActivity.java</a>:33</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
-<span class="lineno"> 30 </span>  <span class="keyword">case</span> R.id.nav_my_codes:
-<span class="lineno"> 31 </span>      startActivity(<span class="keyword">new</span> Intent(BaseActivity.<span class="keyword">this</span>, MyQRCodesActivity.<span class="keyword">class</span>));
-<span class="lineno"> 32 </span>      <span class="keyword">break</span>;
-<span class="caretline"><span class="lineno"> 33 </span>  <span class="keyword">case</span> <span class="warning">R.id.nav_scan_code</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 34 </span>      startActivity(<span class="keyword">new</span> Intent(BaseActivity.<span class="keyword">this</span>, QRCodeScannerActivity.<span class="keyword">class</span>));
-<span class="lineno"> 35 </span>      <span class="keyword">break</span>;
-<span class="lineno"> 36 </span>  <span class="keyword">case</span> R.id.nav_my_account:
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/BaseActivity.java">../../src/main/java/com/example/qr_go/BaseActivity.java</a>:36</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
-<span class="lineno"> 33 </span>  <span class="keyword">case</span> R.id.nav_scan_code:
-<span class="lineno"> 34 </span>      startActivity(<span class="keyword">new</span> Intent(BaseActivity.<span class="keyword">this</span>, QRCodeScannerActivity.<span class="keyword">class</span>));
-<span class="lineno"> 35 </span>      <span class="keyword">break</span>;
-<span class="caretline"><span class="lineno"> 36 </span>  <span class="keyword">case</span> <span class="warning">R.id.nav_my_account</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 37 </span>      startActivity(<span class="keyword">new</span> Intent(BaseActivity.<span class="keyword">this</span>, PlayerProfileActivity.<span class="keyword">class</span>));
-<span class="lineno"> 38 </span>      <span class="keyword">break</span>;
-<span class="lineno"> 39 </span>  <span class="keyword">case</span> R.id.nav_home:
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/BaseActivity.java">../../src/main/java/com/example/qr_go/BaseActivity.java</a>:39</span>: <span class="message">Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them in switch case statements</span><br /><pre class="errorlines">
-<span class="lineno"> 36 </span>      <span class="keyword">case</span> R.id.nav_my_account:
-<span class="lineno"> 37 </span>          startActivity(<span class="keyword">new</span> Intent(BaseActivity.<span class="keyword">this</span>, PlayerProfileActivity.<span class="keyword">class</span>));
-<span class="lineno"> 38 </span>          <span class="keyword">break</span>;
-<span class="caretline"><span class="lineno"> 39 </span>      <span class="keyword">case</span> <span class="warning">R.id.nav_home</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 40 </span>          startActivity(<span class="keyword">new</span> Intent(BaseActivity.<span class="keyword">this</span>, MapsActivity.<span class="keyword">class</span>));
-<span class="lineno"> 41 </span>          <span class="keyword">break</span>;
-<span class="lineno"> 42 </span>  }
-</pre>
-
-</div>
-<div class="metadata"><div class="explanation" id="explanationNonConstantResourceId" style="display: none;">
-Avoid the usage of resource IDs where constant expressions are required.<br/>
-<br/>
-A future version of the Android Gradle Plugin will generate R classes with non-constant IDs in order to improve the performance of incremental compilation.<br/>To suppress this error, use the issue id "NonConstantResourceId" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="chips">
-<span class="mdl-chip">
-    <span class="mdl-chip__text">NonConstantResourceId</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Correctness</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Warning</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 5/10</span>
-</span>
-</div>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationNonConstantResourceIdLink" onclick="reveal('explanationNonConstantResourceId');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="NonConstantResourceIdCardLink" onclick="hideid('NonConstantResourceIdCard');">
 Dismiss</button>            </div>
             </div>
           </section><a name="GradleDependency"></a>
