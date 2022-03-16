@@ -13,6 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.qr_go.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.button.MaterialButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -24,6 +25,9 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
 
   @NonNull
   public final MaterialButton backButton;
+
+  @NonNull
+  public final BottomNavigationView bottomNavView;
 
   @NonNull
   public final EditText playerEmail;
@@ -38,11 +42,12 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
   public final RelativeLayout relativeLayout;
 
   private PlayerProfileActivityBinding(@NonNull ConstraintLayout rootView,
-      @NonNull MaterialButton backButton, @NonNull EditText playerEmail,
-      @NonNull ImageView playerPhoto, @NonNull EditText playerUsername,
-      @NonNull RelativeLayout relativeLayout) {
+      @NonNull MaterialButton backButton, @NonNull BottomNavigationView bottomNavView,
+      @NonNull EditText playerEmail, @NonNull ImageView playerPhoto,
+      @NonNull EditText playerUsername, @NonNull RelativeLayout relativeLayout) {
     this.rootView = rootView;
     this.backButton = backButton;
+    this.bottomNavView = bottomNavView;
     this.playerEmail = playerEmail;
     this.playerPhoto = playerPhoto;
     this.playerUsername = playerUsername;
@@ -82,6 +87,12 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.bottom_nav_view;
+      BottomNavigationView bottomNavView = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNavView == null) {
+        break missingId;
+      }
+
       id = R.id.player_email;
       EditText playerEmail = ViewBindings.findChildViewById(rootView, id);
       if (playerEmail == null) {
@@ -106,8 +117,8 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
         break missingId;
       }
 
-      return new PlayerProfileActivityBinding((ConstraintLayout) rootView, backButton, playerEmail,
-          playerPhoto, playerUsername, relativeLayout);
+      return new PlayerProfileActivityBinding((ConstraintLayout) rootView, backButton,
+          bottomNavView, playerEmail, playerPhoto, playerUsername, relativeLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

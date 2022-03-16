@@ -218,12 +218,12 @@
         message="Use databinding or explicit wiring of click listener in code">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="40"
+            line="41"
             column="9"
-            startOffset="1549"
-            endLine="40"
+            startOffset="1555"
+            endLine="41"
             endColumn="40"
-            endOffset="1580"/>
+            endOffset="1586"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -235,12 +235,12 @@
         message="Use databinding or explicit wiring of click listener in code">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="66"
+            line="67"
             column="9"
-            startOffset="2583"
-            endLine="66"
+            startOffset="2589"
+            endLine="67"
             endColumn="42"
-            endOffset="2616"/>
+            endOffset="2622"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -256,12 +256,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="14"
+            line="15"
             column="13"
-            startOffset="451"
-            endLine="14"
+            startOffset="507"
+            endLine="15"
             endColumn="38"
-            endOffset="476"/>
+            endOffset="532"/>
         <map>
             <entry
                 name="applies"
@@ -279,12 +279,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="21"
+            line="22"
             column="13"
-            startOffset="687"
-            endLine="21"
+            startOffset="743"
+            endLine="22"
             endColumn="38"
-            endOffset="712"/>
+            endOffset="768"/>
         <map>
             <entry
                 name="applies"
@@ -302,12 +302,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="44"
+            line="45"
             column="21"
-            startOffset="1642"
-            endLine="44"
+            startOffset="1698"
+            endLine="45"
             endColumn="46"
-            endOffset="1667"/>
+            endOffset="1723"/>
         <map>
             <entry
                 name="applies"
@@ -325,12 +325,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="61"
+            line="62"
             column="21"
-            startOffset="2383"
-            endLine="61"
+            startOffset="2439"
+            endLine="62"
             endColumn="46"
-            endOffset="2408"/>
+            endOffset="2464"/>
         <map>
             <entry
                 name="applies"
@@ -348,12 +348,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="80"
+            line="81"
             column="21"
-            startOffset="3124"
-            endLine="80"
+            startOffset="3180"
+            endLine="81"
             endColumn="46"
-            endOffset="3149"/>
+            endOffset="3205"/>
         <map>
             <entry
                 name="applies"
@@ -371,12 +371,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="99"
+            line="100"
             column="21"
-            startOffset="3865"
-            endLine="99"
+            startOffset="3921"
+            endLine="100"
             endColumn="46"
-            endOffset="3890"/>
+            endOffset="3946"/>
         <map>
             <entry
                 name="applies"
@@ -394,12 +394,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="119"
+            line="120"
             column="13"
-            startOffset="4374"
-            endLine="119"
+            startOffset="4430"
+            endLine="120"
             endColumn="38"
-            endOffset="4399"/>
+            endOffset="4455"/>
         <map>
             <entry
                 name="applies"
@@ -417,12 +417,12 @@
             replacement="layout_marginEnd"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="126"
+            line="127"
             column="13"
-            startOffset="4614"
-            endLine="126"
+            startOffset="4670"
+            endLine="127"
             endColumn="39"
-            endOffset="4640"/>
+            endOffset="4696"/>
         <map>
             <entry
                 name="applies"
@@ -564,10 +564,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
             line="21"
             column="13"
-            startOffset="871"
+            startOffset="843"
             endLine="21"
             endColumn="43"
-            endOffset="901"/>
+            endOffset="873"/>
         <map>
             <entry
                 name="applies"
@@ -583,10 +583,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
             line="23"
             column="13"
-            startOffset="959"
+            startOffset="931"
             endLine="23"
             endColumn="32"
-            endOffset="978"/>
+            endOffset="950"/>
         <map>
             <entry
                 name="applies"
@@ -606,10 +606,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
             line="23"
             column="13"
-            startOffset="959"
+            startOffset="931"
             endLine="23"
             endColumn="32"
-            endOffset="978"/>
+            endOffset="950"/>
         <map>
             <entry
                 name="applies"
