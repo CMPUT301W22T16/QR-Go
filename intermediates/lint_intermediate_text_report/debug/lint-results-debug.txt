@@ -259,7 +259,7 @@
    accidental leftovers from copy/pasting XML from other files or
    documentation.
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:71: Warning: The view name (@+id/player_email) suggests this is an e-mail address, but it does not include 'textEmail' in the inputType [TextFields]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:73: Warning: The view name (@+id/player_email) suggests this is an e-mail address, but it does not include 'textEmail' in the inputType [TextFields]
         android:inputType="textPersonName"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:66: id defined here
@@ -567,7 +567,7 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:58: Warning: Hardcoded string "Username", should use @string resource [HardcodedText]
             android:hint="Username"
             ~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:70: Warning: Hardcoded string "Email", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:72: Warning: Hardcoded string "Email", should use @string resource [HardcodedText]
         android:hint="Email"
         ~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:12: Warning: Hardcoded string "12345", should use @string resource [HardcodedText]

@@ -965,6 +965,29 @@
     </incident>
 
     <incident
+        id="TextFields"
+        severity="warning"
+        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="73"
+            column="9"
+            startOffset="2840"
+            endLine="73"
+            endColumn="43"
+            endOffset="2874"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="66"
+            column="9"
+            startOffset="2561"
+            endLine="66"
+            endColumn="39"
+            endOffset="2591"
+            message="id defined here"/>
+    </incident>
+
+    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -993,40 +1016,17 @@
     </incident>
 
     <incident
-        id="TextFields"
-        severity="warning"
-        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="71"
-            column="9"
-            startOffset="2758"
-            endLine="71"
-            endColumn="43"
-            endOffset="2792"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="66"
-            column="9"
-            startOffset="2561"
-            endLine="66"
-            endColumn="39"
-            endOffset="2591"
-            message="id defined here"/>
-    </incident>
-
-    <incident
         id="HardcodedText"
         severity="warning"
         message="Hardcoded string &quot;Email&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="70"
+            line="72"
             column="9"
-            startOffset="2729"
-            endLine="70"
+            startOffset="2811"
+            endLine="72"
             endColumn="29"
-            endOffset="2749"/>
+            endOffset="2831"/>
     </incident>
 
     <incident
