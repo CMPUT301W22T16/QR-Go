@@ -26,7 +26,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class PlayerInfoActivity extends AppCompatActivity {
+public class PlayerInfoActivity extends BaseActivity {
 
     private Player selectedPlayer;
     private String selectedPlayerID;
@@ -47,6 +47,7 @@ public class PlayerInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player_info);
+        initializeNavbar();
 
         Intent intent = getIntent();
         String selectedPlayerID = intent.getStringExtra("SELECTED_USER");

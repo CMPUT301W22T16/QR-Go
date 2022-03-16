@@ -1,6 +1,7 @@
 package com.example.qr_go;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -17,7 +19,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
-public class PlayerProfileActivity extends AppCompatActivity {
+@RequiresApi(api = Build.VERSION_CODES.O)
+public class PlayerProfileActivity extends BaseActivity {
 
     public static FirebaseFirestore db;
     private Player currentUser = new Player();
@@ -26,6 +29,7 @@ public class PlayerProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.player_profile_activity);
+        initializeNavbar();
         Button backButton = (Button) findViewById(R.id.back_button);
 
         // Back button listener

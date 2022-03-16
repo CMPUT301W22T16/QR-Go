@@ -1,17 +1,19 @@
 package com.example.qr_go;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class QRInfoActivity extends AppCompatActivity {
+public class QRInfoActivity extends BaseActivity {
 
     private QRGoDBUtil db;
     private Player thisTempPlayer; // TODO: temporary, replace with currently logged in user
@@ -27,10 +29,12 @@ public class QRInfoActivity extends AppCompatActivity {
     ArrayAdapter<Comment> commentAdapter;
     ArrayList<Comment> commentDataList;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr_info);
+        initializeNavbar();
 
         db = new QRGoDBUtil(this);
 

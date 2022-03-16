@@ -40,7 +40,7 @@ import java.util.Map;
 /**
  * Represents the search activity
  */
-public class SearchActivity extends FragmentActivity {
+public class SearchActivity extends BaseActivity {
     private final int LOCATION_REQUEST_CODE = 101;
     private Location userLocation;
     LocationManager locationManager;
@@ -65,6 +65,7 @@ public class SearchActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+        initializeNavbar();
         // Request location permissions
         // Code taken from NewGameQRActivity.java file
         try {
