@@ -52,6 +52,10 @@
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_scanned_users.xml"
     },
     {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/incremental/mergeReleaseResources/stripped.dir/layout/fragment_show_qr_code.xml",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/fragment_show_qr_code.xml"
+    },
+    {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/incremental/mergeReleaseResources/stripped.dir/layout/user_list_content.xml",
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_list_content.xml"
     },

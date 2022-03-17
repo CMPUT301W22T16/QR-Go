@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.qr_go.PhotoUnitTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-03-16T23:15:03" hostname="fv-az47-804" time="0.007">
+<testsuite name="com.example.qr_go.PhotoUnitTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-03-17T20:04:44" hostname="fv-az83-443" time="0.013">
   <properties/>
-  <testcase name="checkProfilePictureRandom" classname="com.example.qr_go.PhotoUnitTest" time="0.004"/>
+  <testcase name="checkProfilePictureRandom" classname="com.example.qr_go.PhotoUnitTest" time="0.003"/>
   <testcase name="checkQRPhotoIDRandom" classname="com.example.qr_go.PhotoUnitTest" time="0.001"/>
-  <testcase name="checkQRPhotoID" classname="com.example.qr_go.PhotoUnitTest" time="0.0"/>
+  <testcase name="checkQRPhotoID" classname="com.example.qr_go.PhotoUnitTest" time="0.007"/>
   <testcase name="checkProfilePicture" classname="com.example.qr_go.PhotoUnitTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

@@ -2808,6 +2808,7 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id divider
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -2842,6 +2843,8 @@ id floating
 id forever
 id fragment_container_view_tag
 id frost
+id generate_login_qr
+id generate_status_qr
 id ghost_view
 id ghost_view_holder
 id gone
@@ -3013,6 +3016,7 @@ id progress_horizontal
 id qrLocation
 id qrName
 id qrScore
+id qr_code_image
 id qr_id_view
 id qr_list
 id qr_score_view
@@ -3294,6 +3298,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_qr_search
+layout fragment_show_qr_code
 layout fragment_user_search
 layout list_comments_content
 layout list_users_content

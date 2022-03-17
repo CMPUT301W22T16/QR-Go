@@ -2808,6 +2808,7 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id divider
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -2842,6 +2843,8 @@ id floating
 id forever
 id fragment_container_view_tag
 id frost
+id generate_login_qr
+id generate_status_qr
 id ghost_view
 id ghost_view_holder
 id gone
@@ -3013,6 +3016,7 @@ id progress_horizontal
 id qrLocation
 id qrName
 id qrScore
+id qr_code_image
 id qr_id_view
 id qr_list
 id qr_score_view
@@ -3294,6 +3298,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_qr_search
+layout fragment_show_qr_code
 layout fragment_user_search
 layout list_comments_content
 layout list_users_content
@@ -3433,10 +3438,16 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string default_web_client_id
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string gcm_defaultSenderId
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
@@ -3528,6 +3539,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string project_id
 string search_menu_title
 string status_bar_notification_info_overflow
 string title_activity_maps

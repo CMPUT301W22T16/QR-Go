@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -30,6 +31,15 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
   public final BottomNavigationView bottomNavView;
 
   @NonNull
+  public final View divider;
+
+  @NonNull
+  public final TextView generateLoginQr;
+
+  @NonNull
+  public final TextView generateStatusQr;
+
+  @NonNull
   public final EditText playerEmail;
 
   @NonNull
@@ -43,11 +53,15 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
 
   private PlayerProfileActivityBinding(@NonNull ConstraintLayout rootView,
       @NonNull MaterialButton backButton, @NonNull BottomNavigationView bottomNavView,
+      @NonNull View divider, @NonNull TextView generateLoginQr, @NonNull TextView generateStatusQr,
       @NonNull EditText playerEmail, @NonNull ImageView playerPhoto,
       @NonNull EditText playerUsername, @NonNull RelativeLayout relativeLayout) {
     this.rootView = rootView;
     this.backButton = backButton;
     this.bottomNavView = bottomNavView;
+    this.divider = divider;
+    this.generateLoginQr = generateLoginQr;
+    this.generateStatusQr = generateStatusQr;
     this.playerEmail = playerEmail;
     this.playerPhoto = playerPhoto;
     this.playerUsername = playerUsername;
@@ -93,6 +107,24 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.divider;
+      View divider = ViewBindings.findChildViewById(rootView, id);
+      if (divider == null) {
+        break missingId;
+      }
+
+      id = R.id.generate_login_qr;
+      TextView generateLoginQr = ViewBindings.findChildViewById(rootView, id);
+      if (generateLoginQr == null) {
+        break missingId;
+      }
+
+      id = R.id.generate_status_qr;
+      TextView generateStatusQr = ViewBindings.findChildViewById(rootView, id);
+      if (generateStatusQr == null) {
+        break missingId;
+      }
+
       id = R.id.player_email;
       EditText playerEmail = ViewBindings.findChildViewById(rootView, id);
       if (playerEmail == null) {
@@ -118,7 +150,8 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
       }
 
       return new PlayerProfileActivityBinding((ConstraintLayout) rootView, backButton,
-          bottomNavView, playerEmail, playerPhoto, playerUsername, relativeLayout);
+          bottomNavView, divider, generateLoginQr, generateStatusQr, playerEmail, playerPhoto,
+          playerUsername, relativeLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

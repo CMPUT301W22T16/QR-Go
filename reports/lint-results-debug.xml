@@ -49,7 +49,7 @@
         errorLine2="     ~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="9"
+            line="10"
             column="6"/>
     </issue>
 
@@ -333,7 +333,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="22"
+            line="23"
             column="13"/>
     </issue>
 
@@ -373,7 +373,7 @@
         errorLine2="           ~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
-            line="47"
+            line="48"
             column="12"/>
     </issue>
 
@@ -389,7 +389,7 @@
         errorLine2="           ~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerProfileActivity.java"
-            line="25"
+            line="30"
             column="12"/>
     </issue>
 
@@ -567,11 +567,11 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="73"
+            line="74"
             column="9"/>
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="66"
+            line="67"
             column="9"
             message="id defined here"/>
     </issue>
@@ -626,7 +626,7 @@
         errorLine2="         ~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="52"
+            line="53"
             column="10"/>
     </issue>
 
@@ -644,7 +644,7 @@
         errorLine2="     ~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="65"
+            line="66"
             column="6"/>
     </issue>
 
@@ -697,6 +697,24 @@
         errorLine1="    &lt;ImageView"
         errorLine2="     ~~~~~~~~~">
         <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/fragment_show_qr_code.xml"
+            line="8"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="Missing `contentDescription` attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Image without `contentDescription`"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.&#xA;&#xA;Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.&#xA;&#xA;Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`."
+        url="https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases"
+        urls="https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases"
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
+        <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml"
             line="9"
             column="6"/>
@@ -716,7 +734,7 @@
         errorLine2="     ~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="32"
+            line="33"
             column="6"/>
     </issue>
 
@@ -1888,7 +1906,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="24"
+            line="25"
             column="13"/>
     </issue>
 
@@ -1904,7 +1922,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="58"
+            line="59"
             column="13"/>
     </issue>
 
@@ -1920,7 +1938,39 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="72"
+            line="73"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Generate my game status qr code&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;Generate my game status qr code&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
+            line="114"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Generate my login qr code&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;Generate my login qr code&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
+            line="131"
             column="9"/>
     </issue>
 
@@ -2016,7 +2066,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="23"
+            line="24"
             column="13"/>
     </issue>
 
@@ -2304,7 +2354,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="21"
+            line="22"
             column="13"/>
     </issue>
 
@@ -2320,7 +2370,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="23"
+            line="24"
             column="13"/>
     </issue>
 

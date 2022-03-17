@@ -562,12 +562,12 @@
             replacement="layout_alignParentStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="21"
+            line="22"
             column="13"
-            startOffset="843"
-            endLine="21"
+            startOffset="894"
+            endLine="22"
             endColumn="43"
-            endOffset="873"/>
+            endOffset="924"/>
         <map>
             <entry
                 name="applies"
@@ -581,12 +581,12 @@
         message="When you define `paddingLeft` you should probably also define `paddingRight` for right-to-left symmetry">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="23"
+            line="24"
             column="13"
-            startOffset="931"
-            endLine="23"
+            startOffset="982"
+            endLine="24"
             endColumn="32"
-            endOffset="950"/>
+            endOffset="1001"/>
         <map>
             <entry
                 name="applies"
@@ -604,16 +604,50 @@
             replacement="paddingStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="23"
+            line="24"
             column="13"
-            startOffset="931"
-            endLine="23"
+            startOffset="982"
+            endLine="24"
             endColumn="32"
-            endOffset="950"/>
+            endOffset="1001"/>
         <map>
             <entry
                 name="applies"
                 int="10"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="112"
+            column="9"
+            startOffset="4513"
+            endLine="112"
+            endColumn="43"
+            endOffset="4547"/>
+        <map>
+            <condition minLT="23"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="129"
+            column="9"
+            startOffset="5204"
+            endLine="129"
+            endColumn="42"
+            endOffset="5237"/>
+        <map>
+            <condition minLT="23"/>
         </map>
     </incident>
 
