@@ -1,5 +1,6 @@
 package com.example.qr_go;
 
+import static com.example.qr_go.QRCode.encodeToQrCode;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
@@ -10,10 +11,12 @@ import org.junit.Test;
 
 
 public class LoginQRCodeTest {
+    private String mockUserId = "user-id";
+    private String mockPassword = "password";
 
     @Ignore // need to mock firestore
     @Test
-    public void testIsLoginValid()  {
+    public void testIsLoginValid() {
 
         String id = "testid";
         String password = "testpassword";
@@ -23,6 +26,16 @@ public class LoginQRCodeTest {
         // since nothing exists in firestore
         // TODO: I have changed isLoginValid to take callback functions
 //        assertFalse(loginQRCode.isLoginValid());
+    }
 
+    @Test
+    public void testParsingContent() {
+        LoginQRCode loginQRCode1 = new LoginQRCode(mockUserId + "\n" + mockPassword);
+        assertEquals(mockUserId, loginQRCode1.getUserId());
+        assertEquals(mockPassword, loginQRCode1.getPassword());
+        // With QR-IDENTIFIER in the front
+        LoginQRCode loginQRCode2 = new LoginQRCode(LoginQRCode.QR_IDENTIFIER+ mockUserId + "\n" + mockPassword);
+        assertEquals(mockUserId, loginQRCode2.getUserId());
+        assertEquals(mockPassword, loginQRCode2.getPassword());
     }
 }
