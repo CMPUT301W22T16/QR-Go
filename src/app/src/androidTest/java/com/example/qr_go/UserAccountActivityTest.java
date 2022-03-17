@@ -68,7 +68,7 @@ public class UserAccountActivityTest {
         StatusQRCode statusQRCode = new StatusQRCode(mockUserId + "\n" + mockPassword);
         assertTrue(encodeToQrCode(StatusQRCode.QR_IDENTIFIER + mockUserId + "\n" + mockPassword, 800, 800).sameAs(statusQRCode.getQRCode()));
     }
-    
+
 
     @After
     public void tearDown() throws Exception {
