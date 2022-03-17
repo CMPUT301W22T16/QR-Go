@@ -44,6 +44,7 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private static String currentUUID;
+    private static String userPassword;
     public static FirebaseFirestore db;
     private SharedPreferences loggedUser;
     protected LocationManager locationManager;
@@ -85,11 +86,14 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback {
         if (loggedUser == null) {
             loggedUser = this.getSharedPreferences(User.CURRENT_USER, MODE_PRIVATE);
             currentUUID = loggedUser.getString(User.USER_ID, null);
+            userPassword = loggedUser.getString(User.USER_PWD, null);
             if (currentUUID == null) {
                 User newUser = new Player();
                 currentUUID = newUser.getUserid();
+                userPassword = newUser.getPassword();
                 SharedPreferences.Editor ed = loggedUser.edit();
                 ed.putString(User.USER_ID, currentUUID);
+                ed.putString(User.USER_PWD, userPassword);
                 ed.apply(); // apply changes
                 // Save user to the firestore database
                 db.collection("Players").document(newUser.getUserid()).set(newUser);
@@ -144,6 +148,13 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback {
      */
     public static String getUserId() {
         return currentUUID;
+    }
+
+    /**
+     * Get password of currently logged in user
+     */
+    public static String getPassword() {
+        return userPassword;
     }
 
 }

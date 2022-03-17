@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import com.budiyev.android.codescanner.DecodeCallback;
 import com.google.common.collect.Maps;
 import com.google.zxing.Result;
 
+import java.util.function.Consumer;
 
 
 /**
@@ -64,11 +66,30 @@ public class QRCodeScannerActivity extends AppCompatActivity {
                             String text = result.getText();
                             // Create a new QR code object depending on type of QR code
                             if (text.startsWith(LoginQRCode.QR_IDENTIFIER)) {
+                                Toast.makeText(QRCodeScannerActivity.this, "Validating login QR\nPlease wait", Toast.LENGTH_LONG).show(); // show loading
                                 LoginQRCode loginQRCode = new LoginQRCode(text);
-                                Toast.makeText(QRCodeScannerActivity.this, "DEBUG LOGIN QR", Toast.LENGTH_SHORT).show();
+                                Consumer<String> successCb = (String msg) -> {
+                                    // Change user to the new user in shared preferences
+                                    SharedPreferences prefs = getApplication().getSharedPreferences(User.CURRENT_USER, MODE_PRIVATE);
+                                    SharedPreferences.Editor ed = prefs.edit();
+                                    ed.putString(User.USER_ID, loginQRCode.getUserId());
+                                    ed.putString(User.USER_PWD, loginQRCode.getPassword());
+                                    ed.apply(); // apply changes
+                                    Toast.makeText(getApplicationContext(), "Switched player accounts", Toast.LENGTH_LONG).show();
+                                    // Go to account activity
+                                    startActivity(new Intent(QRCodeScannerActivity.this, PlayerProfileActivity.class));
+                                };
+                                Consumer<String> failureCb = (String msg) -> {
+                                    Toast.makeText(QRCodeScannerActivity.this, msg, Toast.LENGTH_LONG).show(); // show error
+                                };
+
+                                loginQRCode.isLoginValid(successCb, failureCb);
                             } else if (text.startsWith(StatusQRCode.QR_IDENTIFIER)) {
                                 StatusQRCode statusQRCode = new StatusQRCode(text);
-                                Toast.makeText(QRCodeScannerActivity.this, "DEBUG STATUS QR", Toast.LENGTH_SHORT).show();
+                                // Go to the player's profile
+                                Intent intent = new Intent(QRCodeScannerActivity.this, PlayerInfoActivity.class);
+                                intent.putExtra("SELECTED_USER", statusQRCode.getData());
+                                startActivity(intent);
                             } else {
                                 // New Game QR code > go to NewGameQRActivity
                                 Intent intent = new Intent(QRCodeScannerActivity.this, NewGameQRActivity.class);
@@ -111,6 +132,7 @@ public class QRCodeScannerActivity extends AppCompatActivity {
      * Called after user has accepted/denied permissions
      * If camera permission is granted, then start the code scanner and camera
      * If permission is denied, exit the activity, and show an error toast
+     *
      * @param requestCode
      * @param permissions
      * @param grantResults

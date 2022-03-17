@@ -1,13 +1,18 @@
 package com.example.qr_go;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -91,5 +96,37 @@ public class PlayerProfileActivity extends BaseActivity {
             @Override
             public void afterTextChanged(Editable editable) {}
         });
+    }
+
+    /**
+     * Opens an AlertDialog and displays the qr code bitmap into the ImageView
+     * @param qrBitmap
+     */
+    private void openQrDialog(String title, Bitmap qrBitmap){
+        View view = LayoutInflater.from(this).inflate(R.layout.fragment_show_qr_code, null);
+        ImageView imageView = view.findViewById(R.id.qr_code_image);
+        imageView.setImageBitmap(qrBitmap);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(view).setTitle(title).setPositiveButton("Close",null).create().show();
+    }
+
+    /**
+     * Generate game status qr code and display to the user
+     * @param view
+     */
+    public void generateStatusQR(View view) {
+        StatusQRCode statusQRCode = new StatusQRCode(MapsActivity.getUserId());
+        openQrDialog("My Game Status QR Code", statusQRCode.getQRCode());
+    }
+
+    /**
+     * Generate login qr code and display to the user
+     * @param view
+     */
+    public void generateLoginQR(View view){
+        String loginQrData = MapsActivity.getUserId() + "\n" + MapsActivity.getPassword();
+        LoginQRCode loginQRCode = new LoginQRCode(loginQrData);
+        openQrDialog("My Login QR Code", loginQRCode.getQRCode());
     }
 }

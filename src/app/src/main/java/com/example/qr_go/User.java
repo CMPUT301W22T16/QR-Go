@@ -22,6 +22,8 @@ public abstract class User {
 
     public static final String CURRENT_USER = "LOGIN";
     public static final String USER_ID = "uuid";
+    public static final String USER_PWD = "password";
+
 
     /**
      * Constructor for user class
