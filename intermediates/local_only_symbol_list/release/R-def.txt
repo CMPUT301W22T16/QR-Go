@@ -8,6 +8,7 @@ color teal_200
 color teal_700
 color white
 drawable baseline_dashboard_24
+drawable baseline_home_24
 drawable ic_baseline_chevron_left_24
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -24,6 +25,9 @@ id buttonSend
 id commenterName
 id commenterPhoto
 id container
+id divider
+id generate_login_qr
+id generate_status_qr
 id highestScoreData
 id inputComment
 id linearLayout
@@ -32,6 +36,7 @@ id lowestScoreData
 id map
 id message
 id myQRList
+id nav_home
 id nav_my_account
 id nav_my_codes
 id nav_scan_code
@@ -48,6 +53,7 @@ id player_username
 id qrLocation
 id qrName
 id qrScore
+id qr_code_image
 id qr_id_view
 id qr_list
 id qr_score_view
@@ -78,6 +84,7 @@ layout activity_qr_info
 layout activity_scanned_users
 layout activity_search
 layout fragment_qr_search
+layout fragment_show_qr_code
 layout fragment_user_search
 layout list_comments_content
 layout list_users_content

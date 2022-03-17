@@ -14,6 +14,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.qr_go.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -21,6 +22,9 @@ import java.lang.String;
 public final class ActivityNewGameQractivityBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
+
+  @NonNull
+  public final BottomNavigationView bottomNavView;
 
   @NonNull
   public final CheckBox locationCheckbox;
@@ -41,10 +45,11 @@ public final class ActivityNewGameQractivityBinding implements ViewBinding {
   public final ImageView takeQrPhotoImageview;
 
   private ActivityNewGameQractivityBinding(@NonNull ConstraintLayout rootView,
-      @NonNull CheckBox locationCheckbox, @NonNull Button saveGameQr, @NonNull TextView score,
-      @NonNull TextView scoreText, @NonNull Button takeQrPhotoButton,
-      @NonNull ImageView takeQrPhotoImageview) {
+      @NonNull BottomNavigationView bottomNavView, @NonNull CheckBox locationCheckbox,
+      @NonNull Button saveGameQr, @NonNull TextView score, @NonNull TextView scoreText,
+      @NonNull Button takeQrPhotoButton, @NonNull ImageView takeQrPhotoImageview) {
     this.rootView = rootView;
+    this.bottomNavView = bottomNavView;
     this.locationCheckbox = locationCheckbox;
     this.saveGameQr = saveGameQr;
     this.score = score;
@@ -80,6 +85,12 @@ public final class ActivityNewGameQractivityBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bottom_nav_view;
+      BottomNavigationView bottomNavView = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNavView == null) {
+        break missingId;
+      }
+
       id = R.id.location_checkbox;
       CheckBox locationCheckbox = ViewBindings.findChildViewById(rootView, id);
       if (locationCheckbox == null) {
@@ -116,8 +127,8 @@ public final class ActivityNewGameQractivityBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityNewGameQractivityBinding((ConstraintLayout) rootView, locationCheckbox,
-          saveGameQr, score, scoreText, takeQrPhotoButton, takeQrPhotoImageview);
+      return new ActivityNewGameQractivityBinding((ConstraintLayout) rootView, bottomNavView,
+          locationCheckbox, saveGameQr, score, scoreText, takeQrPhotoButton, takeQrPhotoImageview);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
