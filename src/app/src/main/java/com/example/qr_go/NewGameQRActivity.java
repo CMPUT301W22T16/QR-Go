@@ -39,7 +39,7 @@ import java.util.ArrayList;
  * 2. Location
  * Then user will click on save to create the new QR code
  */
-public class NewGameQRActivity extends AppCompatActivity {
+public class NewGameQRActivity extends BaseActivity {
     private GameQRCode gameQRCode;
     private final int LOCATION_REQUEST_CODE = 101;
     private CheckBox locationCheckbox;
@@ -51,6 +51,7 @@ public class NewGameQRActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_game_qractivity);
+        initializeNavbar();
 
         // (0) Get views and instances
         locationCheckbox = findViewById(R.id.location_checkbox);

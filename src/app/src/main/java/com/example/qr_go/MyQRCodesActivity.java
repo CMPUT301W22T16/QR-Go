@@ -17,7 +17,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
-public class MyQRCodesActivity extends AppCompatActivity {
+public class MyQRCodesActivity extends BaseActivity {
 
     private Button tempButton;
     FirebaseFirestore playerDBInst;
@@ -27,6 +27,7 @@ public class MyQRCodesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_qr_codes);
+        initializeNavbar();
 
         String selectedPlayerID = MapsActivity.getUserId();
 
