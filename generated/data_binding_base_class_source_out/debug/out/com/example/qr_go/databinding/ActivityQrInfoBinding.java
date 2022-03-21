@@ -15,6 +15,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.qr_go.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -22,6 +23,9 @@ import java.lang.String;
 public final class ActivityQrInfoBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
+
+  @NonNull
+  public final BottomNavigationView bottomNavView;
 
   @NonNull
   public final Button buttonOtherPlayers;
@@ -48,10 +52,12 @@ public final class ActivityQrInfoBinding implements ViewBinding {
   public final TextView qrScore;
 
   private ActivityQrInfoBinding(@NonNull ConstraintLayout rootView,
-      @NonNull Button buttonOtherPlayers, @NonNull Button buttonSend,
-      @NonNull EditText inputComment, @NonNull ListView myQRList, @NonNull ImageView playerPhoto,
-      @NonNull TextView qrLocation, @NonNull TextView qrName, @NonNull TextView qrScore) {
+      @NonNull BottomNavigationView bottomNavView, @NonNull Button buttonOtherPlayers,
+      @NonNull Button buttonSend, @NonNull EditText inputComment, @NonNull ListView myQRList,
+      @NonNull ImageView playerPhoto, @NonNull TextView qrLocation, @NonNull TextView qrName,
+      @NonNull TextView qrScore) {
     this.rootView = rootView;
+    this.bottomNavView = bottomNavView;
     this.buttonOtherPlayers = buttonOtherPlayers;
     this.buttonSend = buttonSend;
     this.inputComment = inputComment;
@@ -89,6 +95,12 @@ public final class ActivityQrInfoBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bottom_nav_view;
+      BottomNavigationView bottomNavView = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNavView == null) {
+        break missingId;
+      }
+
       id = R.id.buttonOtherPlayers;
       Button buttonOtherPlayers = ViewBindings.findChildViewById(rootView, id);
       if (buttonOtherPlayers == null) {
@@ -137,8 +149,9 @@ public final class ActivityQrInfoBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityQrInfoBinding((ConstraintLayout) rootView, buttonOtherPlayers, buttonSend,
-          inputComment, myQRList, playerPhoto, qrLocation, qrName, qrScore);
+      return new ActivityQrInfoBinding((ConstraintLayout) rootView, bottomNavView,
+          buttonOtherPlayers, buttonSend, inputComment, myQRList, playerPhoto, qrLocation, qrName,
+          qrScore);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

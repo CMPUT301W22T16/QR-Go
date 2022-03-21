@@ -218,12 +218,12 @@
         message="Use databinding or explicit wiring of click listener in code">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="40"
+            line="41"
             column="9"
-            startOffset="1549"
-            endLine="40"
+            startOffset="1555"
+            endLine="41"
             endColumn="40"
-            endOffset="1580"/>
+            endOffset="1586"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -235,12 +235,12 @@
         message="Use databinding or explicit wiring of click listener in code">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="66"
+            line="67"
             column="9"
-            startOffset="2583"
-            endLine="66"
+            startOffset="2589"
+            endLine="67"
             endColumn="42"
-            endOffset="2616"/>
+            endOffset="2622"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -256,12 +256,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="14"
+            line="15"
             column="13"
-            startOffset="452"
-            endLine="14"
+            startOffset="508"
+            endLine="15"
             endColumn="38"
-            endOffset="477"/>
+            endOffset="533"/>
         <map>
             <entry
                 name="applies"
@@ -279,12 +279,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="22"
+            line="23"
             column="13"
-            startOffset="748"
-            endLine="22"
+            startOffset="804"
+            endLine="23"
             endColumn="38"
-            endOffset="773"/>
+            endOffset="829"/>
         <map>
             <entry
                 name="applies"
@@ -302,12 +302,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="45"
+            line="46"
             column="21"
-            startOffset="1703"
-            endLine="45"
+            startOffset="1759"
+            endLine="46"
             endColumn="46"
-            endOffset="1728"/>
+            endOffset="1784"/>
         <map>
             <entry
                 name="applies"
@@ -325,12 +325,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="62"
+            line="63"
             column="21"
-            startOffset="2444"
-            endLine="62"
+            startOffset="2500"
+            endLine="63"
             endColumn="46"
-            endOffset="2469"/>
+            endOffset="2525"/>
         <map>
             <entry
                 name="applies"
@@ -348,12 +348,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="81"
+            line="82"
             column="21"
-            startOffset="3185"
-            endLine="81"
+            startOffset="3241"
+            endLine="82"
             endColumn="46"
-            endOffset="3210"/>
+            endOffset="3266"/>
         <map>
             <entry
                 name="applies"
@@ -371,12 +371,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="100"
+            line="101"
             column="21"
-            startOffset="3926"
-            endLine="100"
+            startOffset="3982"
+            endLine="101"
             endColumn="46"
-            endOffset="3951"/>
+            endOffset="4007"/>
         <map>
             <entry
                 name="applies"
@@ -394,12 +394,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="120"
+            line="121"
             column="13"
-            startOffset="4435"
-            endLine="120"
+            startOffset="4491"
+            endLine="121"
             endColumn="38"
-            endOffset="4460"/>
+            endOffset="4516"/>
         <map>
             <entry
                 name="applies"
@@ -417,12 +417,12 @@
             replacement="layout_marginEnd"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="127"
+            line="128"
             column="13"
-            startOffset="4675"
-            endLine="127"
+            startOffset="4731"
+            endLine="128"
             endColumn="39"
-            endOffset="4701"/>
+            endOffset="4757"/>
         <map>
             <entry
                 name="applies"
@@ -562,12 +562,12 @@
             replacement="layout_alignParentStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="21"
+            line="22"
             column="13"
-            startOffset="871"
-            endLine="21"
+            startOffset="894"
+            endLine="22"
             endColumn="43"
-            endOffset="901"/>
+            endOffset="924"/>
         <map>
             <entry
                 name="applies"
@@ -581,12 +581,12 @@
         message="When you define `paddingLeft` you should probably also define `paddingRight` for right-to-left symmetry">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="23"
+            line="24"
             column="13"
-            startOffset="959"
-            endLine="23"
+            startOffset="982"
+            endLine="24"
             endColumn="32"
-            endOffset="978"/>
+            endOffset="1001"/>
         <map>
             <entry
                 name="applies"
@@ -604,16 +604,50 @@
             replacement="paddingStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="23"
+            line="24"
             column="13"
-            startOffset="959"
-            endLine="23"
+            startOffset="982"
+            endLine="24"
             endColumn="32"
-            endOffset="978"/>
+            endOffset="1001"/>
         <map>
             <entry
                 name="applies"
                 int="10"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="112"
+            column="9"
+            startOffset="4513"
+            endLine="112"
+            endColumn="43"
+            endOffset="4547"/>
+        <map>
+            <condition minLT="23"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="130"
+            column="9"
+            startOffset="5237"
+            endLine="130"
+            endColumn="42"
+            endOffset="5270"/>
+        <map>
+            <condition minLT="23"/>
         </map>
     </incident>
 
