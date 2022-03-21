@@ -301,7 +301,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
-            line="21"
+            line="20"
             column="13"/>
     </issue>
 
@@ -317,7 +317,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
-            line="33"
+            line="32"
             column="13"/>
     </issue>
 
@@ -547,12 +547,12 @@
         priority="1"
         summary="Redundant namespace"
         explanation="In Android XML documents, only specify the namespace on the root/document element. Namespace declarations elsewhere in the document are typically accidental leftovers from copy/pasting XML from other files or documentation."
-        errorLine1="        xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="            xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
-            line="78"
-            column="9"/>
+            line="84"
+            column="13"/>
     </issue>
 
     <issue
@@ -608,7 +608,7 @@
         errorLine2="     ~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
-            line="40"
+            line="38"
             column="6"/>
     </issue>
 
@@ -1750,7 +1750,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
-            line="23"
+            line="22"
             column="13"/>
     </issue>
 
@@ -1766,7 +1766,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
-            line="44"
+            line="42"
             column="9"/>
     </issue>
 
@@ -1782,7 +1782,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
-            line="69"
+            line="70"
             column="17"/>
     </issue>
 
@@ -1798,7 +1798,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
-            line="73"
+            line="74"
             column="17"/>
     </issue>
 
@@ -2086,7 +2086,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
-            line="22"
+            line="21"
             column="13"/>
     </issue>
 
@@ -2342,7 +2342,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
-            line="20"
+            line="19"
             column="13"/>
     </issue>
 
@@ -2358,7 +2358,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
-            line="22"
+            line="21"
             column="13"/>
     </issue>
 
@@ -2374,7 +2374,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
-            line="34"
+            line="33"
             column="13"/>
     </issue>
 

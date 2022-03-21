@@ -474,12 +474,12 @@
             replacement="layout_alignParentStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="20"
+            line="19"
             column="13"
-            startOffset="812"
-            endLine="20"
+            startOffset="789"
+            endLine="19"
             endColumn="43"
-            endOffset="842"/>
+            endOffset="819"/>
         <map>
             <entry
                 name="applies"
@@ -493,12 +493,12 @@
         message="When you define `paddingLeft` you should probably also define `paddingRight` for right-to-left symmetry">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="22"
+            line="21"
             column="13"
-            startOffset="902"
-            endLine="22"
+            startOffset="879"
+            endLine="21"
             endColumn="32"
-            endOffset="921"/>
+            endOffset="898"/>
         <map>
             <entry
                 name="applies"
@@ -516,12 +516,12 @@
             replacement="paddingStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="22"
+            line="21"
             column="13"
-            startOffset="902"
-            endLine="22"
+            startOffset="879"
+            endLine="21"
             endColumn="32"
-            endOffset="921"/>
+            endOffset="898"/>
         <map>
             <entry
                 name="applies"
@@ -539,12 +539,12 @@
             replacement="layout_alignParentEnd"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="34"
+            line="33"
             column="13"
-            startOffset="1363"
-            endLine="34"
+            startOffset="1340"
+            endLine="33"
             endColumn="44"
-            endOffset="1394"/>
+            endOffset="1371"/>
         <map>
             <entry
                 name="applies"

@@ -682,12 +682,12 @@
             attribute="xmlns:android"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="78"
-            column="9"
-            startOffset="3214"
-            endLine="78"
-            endColumn="67"
-            endOffset="3272"/>
+            line="84"
+            column="13"
+            startOffset="3482"
+            endLine="84"
+            endColumn="71"
+            endOffset="3540"/>
     </incident>
 
     <incident
@@ -696,12 +696,12 @@
         message="Invalid layout param in a `RelativeLayout`: `layout_weight`">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="21"
+            line="20"
             column="13"
-            startOffset="863"
-            endLine="21"
+            startOffset="840"
+            endLine="20"
             endColumn="38"
-            endOffset="888"/>
+            endOffset="865"/>
     </incident>
 
     <incident
@@ -710,12 +710,12 @@
         message="Hardcoded string &quot;Back&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="23"
+            line="22"
             column="13"
-            startOffset="941"
-            endLine="23"
+            startOffset="918"
+            endLine="22"
             endColumn="32"
-            endOffset="960"/>
+            endOffset="937"/>
     </incident>
 
     <incident
@@ -724,12 +724,12 @@
         message="Invalid layout param in a `RelativeLayout`: `layout_weight`">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="33"
+            line="32"
             column="13"
-            startOffset="1324"
-            endLine="33"
+            startOffset="1301"
+            endLine="32"
             endColumn="38"
-            endOffset="1349"/>
+            endOffset="1326"/>
     </incident>
 
     <incident
@@ -752,12 +752,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="40"
+            line="38"
             column="6"
-            startOffset="1522"
-            endLine="40"
+            startOffset="1497"
+            endLine="38"
             endColumn="14"
-            endOffset="1530"/>
+            endOffset="1505"/>
     </incident>
 
     <incident
@@ -766,12 +766,12 @@
         message="Hardcoded string &quot;Search Bar&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="44"
+            line="42"
             column="9"
-            startOffset="1669"
-            endLine="44"
+            startOffset="1644"
+            endLine="42"
             endColumn="34"
-            endOffset="1694"/>
+            endOffset="1669"/>
     </incident>
 
     <incident
@@ -780,12 +780,12 @@
         message="Hardcoded string &quot;QR Codes&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="69"
+            line="70"
             column="17"
-            startOffset="2814"
-            endLine="69"
+            startOffset="2886"
+            endLine="70"
             endColumn="40"
-            endOffset="2837"/>
+            endOffset="2909"/>
     </incident>
 
     <incident
@@ -794,12 +794,12 @@
         message="Hardcoded string &quot;Players&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="73"
+            line="74"
             column="17"
-            startOffset="3020"
-            endLine="73"
+            startOffset="3092"
+            endLine="74"
             endColumn="39"
-            endOffset="3042"/>
+            endOffset="3114"/>
     </incident>
 
     <incident
@@ -1028,6 +1028,29 @@
     </incident>
 
     <incident
+        id="TextFields"
+        severity="warning"
+        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="74"
+            column="9"
+            startOffset="2891"
+            endLine="74"
+            endColumn="43"
+            endOffset="2925"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="67"
+            column="9"
+            startOffset="2612"
+            endLine="67"
+            endColumn="39"
+            endOffset="2642"
+            message="id defined here"/>
+    </incident>
+
+    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -1053,29 +1076,6 @@
             endLine="66"
             endColumn="14"
             endOffset="2603"/>
-    </incident>
-
-    <incident
-        id="TextFields"
-        severity="warning"
-        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="74"
-            column="9"
-            startOffset="2891"
-            endLine="74"
-            endColumn="43"
-            endOffset="2925"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="67"
-            column="9"
-            startOffset="2612"
-            endLine="67"
-            endColumn="39"
-            endOffset="2642"
-            message="id defined here"/>
     </incident>
 
     <incident
