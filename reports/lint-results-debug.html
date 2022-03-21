@@ -177,7 +177,7 @@ document.getElementById(id).style.display = 'none';
       <span class="mdl-layout-title">Lint Report: 1 error and 148 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Mon Mar 21 13:40:46 UTC 2022      </nav>
+Check performed at Mon Mar 21 19:40:06 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -787,14 +787,14 @@ Dismiss</button>            </div>
 <span class="lineno">  32 </span>
 <span class="lineno">  33 </span>    <span class="annotation">@Override</span></pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/SearchActivity.java">../../src/main/java/com/example/qr_go/SearchActivity.java</a>:60</span>: <span class="message">Do not place Android context classes in static fields; this is a memory leak</span><br /><pre class="errorlines">
-<span class="lineno">  57 </span>    <span class="keyword">private</span> <span class="keyword">static</span> ArrayList&lt;QRListDisplayContainer> qrDisplays;
-<span class="lineno">  58 </span>
-<span class="lineno">  59 </span>    <span class="comment">// The search bar</span>
-<span class="caretline"><span class="lineno">  60 </span>    <span class="keyword">private</span> <span class="warning"><span class="keyword">static</span></span> EditText searchBar;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  61 </span>
+<span class="location"><a href="../../src/main/java/com/example/qr_go/SearchActivity.java">../../src/main/java/com/example/qr_go/SearchActivity.java</a>:61</span>: <span class="message">Do not place Android context classes in static fields; this is a memory leak</span><br /><pre class="errorlines">
+<span class="lineno">  58 </span>    <span class="keyword">private</span> <span class="keyword">static</span> ArrayList&lt;QRListDisplayContainer> qrDisplays;
+<span class="lineno">  59 </span>
+<span class="lineno">  60 </span>    <span class="comment">// The search bar</span>
+<span class="caretline"><span class="lineno">  61 </span>    <span class="keyword">private</span> <span class="warning"><span class="keyword">static</span></span> EditText searchBar;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">  62 </span>
-<span class="lineno">  63 </span>    <span class="annotation">@RequiresApi</span>(api = Build.VERSION_CODES.P)
+<span class="lineno">  63 </span>    <span class="comment">// The context</span>
+<span class="lineno">  64 </span>    Context context;
 </pre>
 
 </div>

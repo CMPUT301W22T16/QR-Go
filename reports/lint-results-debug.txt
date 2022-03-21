@@ -148,7 +148,7 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerProfileActivity.java:30: Warning: Do not place Android context classes in static fields (static reference to FirebaseFirestore which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
     public static FirebaseFirestore db;
            ~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/SearchActivity.java:60: Warning: Do not place Android context classes in static fields; this is a memory leak [StaticFieldLeak]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/SearchActivity.java:61: Warning: Do not place Android context classes in static fields; this is a memory leak [StaticFieldLeak]
     private static EditText searchBar;
             ~~~~~~
 

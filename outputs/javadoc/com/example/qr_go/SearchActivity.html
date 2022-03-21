@@ -420,6 +420,35 @@ protected&nbsp;void&nbsp;onCreate&#8203;(android.os.Bundle&nbsp;savedInstanceSta
 </dl>
 </li>
 </ul>
+<a id="onRequestPermissionsResult(int,java.lang.String[],int[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onRequestPermissionsResult</h4>
+<pre class="methodSignature">@RequiresApi(api=28)
+public&nbsp;void&nbsp;onRequestPermissionsResult&#8203;(int&nbsp;requestCode,
+                                       @NonNull
+                                       java.lang.String[]&nbsp;permissions,
+                                       @NonNull
+                                       int[]&nbsp;grantResults)</pre>
+<div class="block">Once user has accepted/denied permission access
+ If permission granted, set the location of the QR code
+ If permission denied, disable the location
+
+ Code from NewGameQRActivity.java</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>onRequestPermissionsResult</code>&nbsp;in interface&nbsp;<code>androidx.core.app.ActivityCompat.OnRequestPermissionsResultCallback</code></dd>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>onRequestPermissionsResult</code>&nbsp;in class&nbsp;<code>androidx.fragment.app.FragmentActivity</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>requestCode</code> - </dd>
+<dd><code>permissions</code> - </dd>
+<dd><code>grantResults</code> - </dd>
+</dl>
+</li>
+</ul>
 <a id="getUserDisplays()">
 <!--   -->
 </a>
@@ -449,7 +478,7 @@ protected&nbsp;void&nbsp;onCreate&#8203;(android.os.Bundle&nbsp;savedInstanceSta
 <a id="getSearchBar()">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>getSearchBar</h4>
 <pre class="methodSignature">public static&nbsp;android.widget.EditText&nbsp;getSearchBar()</pre>
@@ -457,35 +486,6 @@ protected&nbsp;void&nbsp;onCreate&#8203;(android.os.Bundle&nbsp;savedInstanceSta
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The search bar EditText</dd>
-</dl>
-</li>
-</ul>
-<a id="onRequestPermissionsResult(int,java.lang.String[],int[])">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>onRequestPermissionsResult</h4>
-<pre class="methodSignature">@RequiresApi(api=28)
-public&nbsp;void&nbsp;onRequestPermissionsResult&#8203;(int&nbsp;requestCode,
-                                       @NonNull
-                                       java.lang.String[]&nbsp;permissions,
-                                       @NonNull
-                                       int[]&nbsp;grantResults)</pre>
-<div class="block">Once user has accepted/denied permission access
- If permission granted, set the location of the QR code
- If permission denied, disable the location
-
- Code from NewGameQRActivity.java</div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code>onRequestPermissionsResult</code>&nbsp;in interface&nbsp;<code>androidx.core.app.ActivityCompat.OnRequestPermissionsResultCallback</code></dd>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code>onRequestPermissionsResult</code>&nbsp;in class&nbsp;<code>androidx.fragment.app.FragmentActivity</code></dd>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>requestCode</code> - </dd>
-<dd><code>permissions</code> - </dd>
-<dd><code>grantResults</code> - </dd>
 </dl>
 </li>
 </ul>
