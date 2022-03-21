@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -179,12 +179,6 @@ implements <a href="GeneratesNewQR.html" title="interface in com.example.qr_go">
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(com.example.qr_go.User)">LoginQRCode</a></span>&#8203;(<a href="User.html" title="class in com.example.qr_go">User</a>&nbsp;user)</code></th>
-<td class="colLast">
-<div class="block">On create, convert qr content to hash</div>
-</td>
-</tr>
-<tr class="rowColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String)">LoginQRCode</a></span>&#8203;(java.lang.String&nbsp;qrCodeContents)</code></th>
 <td class="colLast">
 <div class="block">QR code</div>
@@ -209,15 +203,26 @@ implements <a href="GeneratesNewQR.html" title="interface in com.example.qr_go">
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPassword()">getPassword</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>android.graphics.Bitmap</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getQRCode()">getQRCode</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Converts the user's id and password to a QR code</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isLoginValid(java.lang.String)">isLoginValid</a></span>&#8203;(java.lang.String&nbsp;qrCodeContent)</code></th>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUserId()">getUserId</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isLoginValid(java.util.function.Consumer,java.util.function.Consumer)">isLoginValid</a></span>&#8203;(java.util.function.Consumer&lt;java.lang.String&gt;&nbsp;successCb,
+            java.util.function.Consumer&lt;java.lang.String&gt;&nbsp;failureCb)</code></th>
 <td class="colLast">
 <div class="block">Validates if login QR code and password is valid</div>
 </td>
@@ -253,21 +258,6 @@ implements <a href="GeneratesNewQR.html" title="interface in com.example.qr_go">
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a id="&lt;init&gt;(com.example.qr_go.User)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>LoginQRCode</h4>
-<pre>@RequiresApi(api=26)
-public&nbsp;LoginQRCode&#8203;(<a href="User.html" title="class in com.example.qr_go">User</a>&nbsp;user)</pre>
-<div class="block">On create, convert qr content to hash</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>user</code> - string content of qr code</dd>
-</dl>
-</li>
-</ul>
 <a id="&lt;init&gt;(java.lang.String)">
 <!--   -->
 </a>
@@ -293,24 +283,21 @@ public&nbsp;LoginQRCode&#8203;(java.lang.String&nbsp;qrCodeContents)</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="isLoginValid(java.lang.String)">
+<a id="isLoginValid(java.util.function.Consumer,java.util.function.Consumer)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>isLoginValid</h4>
-<pre class="methodSignature">public&nbsp;boolean&nbsp;isLoginValid&#8203;(java.lang.String&nbsp;qrCodeContent)</pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;isLoginValid&#8203;(java.util.function.Consumer&lt;java.lang.String&gt;&nbsp;successCb,
+                         java.util.function.Consumer&lt;java.lang.String&gt;&nbsp;failureCb)</pre>
 <div class="block">Validates if login QR code and password is valid</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>whether qr code is valid</dd>
-</dl>
 </li>
 </ul>
 <a id="getQRCode()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getQRCode</h4>
 <pre class="methodSignature">public&nbsp;android.graphics.Bitmap&nbsp;getQRCode()</pre>
@@ -320,6 +307,32 @@ public&nbsp;LoginQRCode&#8203;(java.lang.String&nbsp;qrCodeContents)</pre>
 <dd><code><a href="GeneratesNewQR.html#getQRCode()">getQRCode</a></code>&nbsp;in interface&nbsp;<code><a href="GeneratesNewQR.html" title="interface in com.example.qr_go">GeneratesNewQR</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>QR code to display</dd>
+</dl>
+</li>
+</ul>
+<a id="getUserId()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getUserId</h4>
+<pre class="methodSignature">public&nbsp;java.lang.String&nbsp;getUserId()</pre>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>user's id</dd>
+</dl>
+</li>
+</ul>
+<a id="getPassword()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getPassword</h4>
+<pre class="methodSignature">public&nbsp;java.lang.String&nbsp;getPassword()</pre>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>user's password</dd>
 </dl>
 </li>
 </ul>
