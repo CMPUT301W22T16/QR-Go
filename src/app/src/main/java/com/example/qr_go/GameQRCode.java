@@ -20,7 +20,6 @@ public class GameQRCode extends QRCode {
     private GeoLocation location;
     private HashMap<String, HashMap<String, String>> userIds;
 
-
     /**
      * When creating a new GameQRCode, initialize the list of userIds
      * gets the hash from the qr content,
@@ -104,14 +103,11 @@ public class GameQRCode extends QRCode {
         details.put("Username", user.getUsername());
         userIds.put(user.getUserid(), details);
     }
+    public void deleteUser(String userid){
+        userIds.remove(userid);
+    }
     public ArrayList<String> getUserObjects(){
-        ArrayList<String> out= new ArrayList<String>();
-        for (Map.Entry<String, HashMap<String, String>> details:userIds.entrySet() ){
-            HashMap<String, String> temp = details.getValue();
-            String Username = temp.get("Username");
-            out.add(Username);
-        }
-        return out;
+        return new ArrayList<>(userIds.keySet());
     }
 
     /**

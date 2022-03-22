@@ -10,10 +10,14 @@ import androidx.annotation.RequiresApi;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 
 @RequiresApi(api = Build.VERSION_CODES.O)
 /**
@@ -39,7 +43,7 @@ public class QRGoDBUtil {
      */
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    void updateScannedQRtoDB(@NonNull GameQRCode gameqrcode, Player  player, QRPhoto qrphoto) {
+    public void updateScannedQRtoDB(@NonNull GameQRCode gameqrcode, Player  player, QRPhoto qrphoto) {
 
         DocumentReference docRef = db.collection("GameQRCodes").document(gameqrcode.getHash());
 
@@ -79,7 +83,7 @@ public class QRGoDBUtil {
      * @param qrphoto
      * @Author Darius Fang
      */
-    void updateScannedQRtoDBContinue(GameQRCode gameqrcode, Player player, QRPhoto qrphoto){
+    private void updateScannedQRtoDBContinue(GameQRCode gameqrcode, Player player, QRPhoto qrphoto){
         if (QRCodeList.isEmpty()){
             gameqrcode.addUser(player);
             db.collection("GameQRCodes").document(gameqrcode.getHash()).set(gameqrcode);
@@ -113,17 +117,16 @@ public class QRGoDBUtil {
      * @param gameqrcode
      * @Author Darius Fang
      */
-    void addCommenttoDB( CommentsQR comments, GameQRCode gameqrcode){
+    public void addCommenttoDB( CommentsQR comments, GameQRCode gameqrcode){
         db.collection("Comments").document(gameqrcode.getHash()).set(comments.getComments());
     }
-
 
     /**
      * deletes the player by flagging them to be invisable
      * @param player
      * @Author Darius Fang
      */
-    public void deletePlayerFromDB(Player player){
+    public void deletePlayerFromDB(@NonNull Player player){
         DocumentReference docRef = db.collection("Players").document(player.getUserid());
         docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
@@ -133,21 +136,53 @@ public class QRGoDBUtil {
                     Player player = documentSnapshot.toObject(Player.class);
                     player.deletePlayer();
                     db.collection("Players").document(player.getUserid()).set(player);
+                    deletePlayerFromDBContinue(player.getUserid());
                 }catch (Exception e){
                     /** sometimes the db picks up that it exists while in fact it does not... strange
                      */
                 }
             }
         });
-
+    }
+    /**
+     * this portion deletes the playerid from all qrids
+     * @Author Darius Fang
+     **/
+    private void deletePlayerFromDBContinue(String userId){
+        CollectionReference QRRef = db.collection("GameQRCodes");
+        QRRef.orderBy("userIds."+userId).get() .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                for(DocumentSnapshot snapshot : queryDocumentSnapshots) {
+                    try {
+                        GameQRCode qrcode = snapshot.toObject(GameQRCode.class);
+                        qrcode.deleteUser(userId);
+                        db.collection("GameQRCodes").document(qrcode.getId()).set(qrcode);
+                    }
+                    catch (Exception e){
+                        /** breaks if object is an older version**/
+                    }
+                }
+            }
+        });
     }
     /**
      * deletes the gameqrcode of the player
      *
      * @Author Darius Fang
      */
-    public void deleteGameQRcodeFromPlayer(){
-        return;
+    public void deleteGameQRcodeFromPlayer(String qrid, Player player){
+        player.deleteQRCode(qrid);
+        db.collection("Players").document(player.getUserid()).set(player);
+        DocumentReference docRef = db.collection("GameQRCodes").document(qrid);
+        docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        GameQRCode qrcode = documentSnapshot.toObject(GameQRCode.class);
+                        qrcode.deleteUser(player.getUserid());
+                        db.collection("GameQRCodes").document(qrcode.getHash()).set(qrcode);
+                }});
+
     }
     /**
      * deletes the gameqrcode by flagging it
@@ -164,6 +199,7 @@ public class QRGoDBUtil {
                     GameQRCode gameqrcode = documentSnapshot.toObject(GameQRCode.class);
                     gameqrcode.deleteQR();
                     db.collection("GameQRCodes").document(gameqrcode.getHash()).set(gameqrcode);
+                    deleteGameQRFromDBContinue(gameqrcode.getId());
                 }catch (Exception e){
                     /** sometimes the db picks up that it exists while in fact it does not... strange
                      */
@@ -171,7 +207,27 @@ public class QRGoDBUtil {
             }
         });
     }
-
+    /**
+     this portion deletes the qrids from all players
+     **/
+    private void deleteGameQRFromDBContinue(String qrid){
+        CollectionReference QRRef = db.collection("Players");
+        QRRef.orderBy("scannedQRCodeIds."+qrid).get() .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                for(DocumentSnapshot snapshot : queryDocumentSnapshots) {
+                    try {
+                        Player player = snapshot.toObject(Player.class);
+                        player.deleteQRCode(qrid);
+                        db.collection("Players").document(player.getUserid()).set(player);
+                    }
+                    catch (Exception e){
+                        /** breaks if object is an older version**/
+                    }
+                }
+            }
+        });
+    }
     /**this is to test the db will be thrown out**/
 
     void test1(){
@@ -217,9 +273,20 @@ public class QRGoDBUtil {
         addCommenttoDB(comments, qrcode);
     }
     void test4(){
-        Player player = new Player();
+        Player player = new Player("ea7f3186-c04a-4e41-8a77-e975065071f9", "fd7467b8-71fa-424f-b434-e1e9437eb1c6", "FunkyCoder8063", "");
         db.collection("Players").document(player.getUserid()).set(player);
         deletePlayerFromDB(player);
+    }
+
+    void test5(){
+        Player player = new Player("ea7f3186-c04a-4e41-8a77-e975065071f9", "fd7467b8-71fa-424f-b434-e1e9437eb1c6", "FunkyCoder8063", "");
+        GameQRCode qrcode = new GameQRCode("BFG5DGW50\n");
+        updateScannedQRtoDB(qrcode,player, null);
+    }
+    void test5a(){
+        Player player = new Player("ea7f3186-c04a-4e41-8a77-e975065071f9", "fd7467b8-71fa-424f-b434-e1e9437eb1c6", "FunkyCoder8063", "");
+        GameQRCode qrcode = new GameQRCode("BFG5DGW50\n");
+        deleteGameQRcodeFromPlayer(qrcode.getHash(),player);
     }
 
 }

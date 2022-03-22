@@ -68,7 +68,8 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback {
         mapFragment.getMapAsync(this);
 
         QRGoDBUtil db = new QRGoDBUtil();
-        db.test3();
+        db.test2();
+
 
     }
 
