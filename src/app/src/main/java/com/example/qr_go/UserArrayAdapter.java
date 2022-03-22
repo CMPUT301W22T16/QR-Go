@@ -46,6 +46,13 @@ public class UserArrayAdapter extends ArrayAdapter<UserListDisplayContainer> imp
         // Show the delete button if the current user is an owner
         if (SearchActivity.getUserOwner()) {
             delButton.setVisibility(View.VISIBLE);
+            delButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // This is the id of the user being deleted
+                    String userid = userToDisplay.getUserid();
+                }
+            });
         } else {
             delButton.setVisibility(View.GONE);
         }

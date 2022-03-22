@@ -52,6 +52,13 @@ public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> impleme
         // Show the delete button if the current user is an owner
         if (SearchActivity.getUserOwner()) {
             delButton.setVisibility(View.VISIBLE);
+            delButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // This is the id of the qr being deleted
+                    String qrid = qrToDisplay.getId();
+                }
+            });
         } else {
             delButton.setVisibility(View.GONE);
         }
