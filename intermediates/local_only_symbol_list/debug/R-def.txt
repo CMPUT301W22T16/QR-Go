@@ -25,7 +25,10 @@ id buttonSend
 id commenterName
 id commenterPhoto
 id container
-id divider
+id divider2
+id divider3
+id divider4
+id edit_profile_photo
 id generate_login_qr
 id generate_status_qr
 id highestScoreData
@@ -46,10 +49,10 @@ id playerEmail
 id playerHighScore
 id playerLowScore
 id playerNameText
-id playerPhoto
 id playerTotalScore
 id player_email
 id player_username
+id profile_photo
 id qrLocation
 id qrName
 id qrScore

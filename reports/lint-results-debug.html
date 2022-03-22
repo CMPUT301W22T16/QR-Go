@@ -174,10 +174,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 1 error and 147 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 2 errors and 148 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Tue Mar 22 01:04:37 UTC 2022      </nav>
+Check performed at Tue Mar 22 01:12:35 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -185,7 +185,7 @@ Check performed at Tue Mar 22 01:04:37 UTC 2022      </nav>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
       <a class="mdl-navigation__link" href="#DefaultLocale"><i class="material-icons warning-icon">warning</i>Implied default locale in case conversion (2)</a>
-      <a class="mdl-navigation__link" href="#MissingConstraints"><i class="material-icons error-icon">error</i>Missing Constraints in ConstraintLayout (1)</a>
+      <a class="mdl-navigation__link" href="#MissingConstraints"><i class="material-icons error-icon">error</i>Missing Constraints in ConstraintLayout (2)</a>
       <a class="mdl-navigation__link" href="#FragmentTagUsage"><i class="material-icons warning-icon">warning</i>Use FragmentContainerView instead of the &lt;fragment> tag (1)</a>
       <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (8)</a>
       <a class="mdl-navigation__link" href="#SpUsage"><i class="material-icons warning-icon">warning</i>Using <code>dp</code> instead of <code>sp</code> for text sizes (5)</a>
@@ -201,7 +201,7 @@ Check performed at Tue Mar 22 01:04:37 UTC 2022      </nav>
       <a class="mdl-navigation__link" href="#Autofill"><i class="material-icons warning-icon">warning</i>Use Autofill (4)</a>
       <a class="mdl-navigation__link" href="#ContentDescription"><i class="material-icons warning-icon">warning</i>Image without <code>contentDescription</code> (7)</a>
       <a class="mdl-navigation__link" href="#SetTextI18n"><i class="material-icons warning-icon">warning</i>TextView Internationalization (26)</a>
-      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (52)</a>
+      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (53)</a>
       <a class="mdl-navigation__link" href="#RtlSymmetry"><i class="material-icons warning-icon">warning</i>Padding and margin symmetry (2)</a>
       <a class="mdl-navigation__link" href="#RtlHardcoded"><i class="material-icons warning-icon">warning</i>Using left/right instead of start/end attributes (22)</a>
       <a class="mdl-navigation__link" href="#IgnoreWithoutReason"><i class="material-icons warning-icon">warning</i>@Ignore without Reason (1)</a>
@@ -223,7 +223,7 @@ Check performed at Tue Mar 22 01:04:37 UTC 2022      </nav>
 <td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#DefaultLocale">DefaultLocale</a>: Implied default locale in case conversion</td></tr>
 <tr>
-<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons error-icon">error</i>
+<td class="countColumn">2</td><td class="issueColumn"><i class="material-icons error-icon">error</i>
 <a href="#MissingConstraints">MissingConstraints</a>: Missing Constraints in ConstraintLayout</td></tr>
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
@@ -279,7 +279,7 @@ Check performed at Tue Mar 22 01:04:37 UTC 2022      </nav>
 <td class="countColumn">26</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#SetTextI18n">SetTextI18n</a>: TextView Internationalization</td></tr>
 <tr>
-<td class="countColumn">52</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">53</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#HardcodedText">HardcodedText</a>: Hardcoded text</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Internationalization:Bidirectional Text">Internationalization:Bidirectional Text</a>
 </td></tr>
@@ -379,6 +379,15 @@ Dismiss</button>            </div>
 </span><span class="lineno">  11 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/relativeLayout"</span>
 <span class="lineno">  12 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
 <span class="lineno">  13 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span></pre>
+
+<span class="location"><a href="../../src/main/res/layout/player_profile_activity.xml">../../src/main/res/layout/player_profile_activity.xml</a>:98</span>: <span class="message">This view is not constrained horizontally: at runtime it will jump to the left unless you add a horizontal constraint</span><br /><pre class="errorlines">
+<span class="lineno">  95 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span>
+<span class="lineno">  96 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintTop_toBottomOf</span>=<span class="value">"@+id/divider3"</span> />
+<span class="lineno">  97 </span>
+<span class="caretline"><span class="lineno">  98 </span>    <span class="tag">&lt;</span><span class="error"><span class="tag">View</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
+</span><span class="lineno">  99 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/divider4"</span>
+<span class="lineno"> 100 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"409dp"</span>
+<span class="lineno"> 101 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"1dp"</span></pre>
 
 </div>
 <div class="metadata"><div class="explanation" id="explanationMissingConstraints" style="display: none;">
@@ -601,7 +610,7 @@ Dismiss</button>            </div>
 <span class="caretline"><span class="lineno">  55 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"32dp"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">  56 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span>
 <span class="lineno">  57 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span>
-<span class="lineno">  58 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintTop_toBottomOf</span>=<span class="value">"@+id/playerPhoto"</span> />
+<span class="lineno">  58 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintTop_toBottomOf</span>=<span class="value">"@+id/profile_photo"</span> />
 </pre>
 
 <span class="location"><a href="../../src/main/res/layout/list_comments_content.xml">../../src/main/res/layout/list_comments_content.xml</a>:25</span>: <span class="message">Should use "<code>sp</code>" instead of "<code>dp</code>" for text sizes</span><br /><pre class="errorlines">
@@ -778,14 +787,14 @@ Dismiss</button>            </div>
 <span class="lineno">  51 </span>    <span class="keyword">protected</span> LocationListener locationListener;
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/PlayerProfileActivity.java">../../src/main/java/com/example/qr_go/PlayerProfileActivity.java</a>:30</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>FirebaseFirestore</code> which has field <code>context</code> pointing to <code>Context</code>); this is a memory leak</span><br /><pre class="errorlines">
-<span class="lineno">  27 </span><span class="annotation">@RequiresApi</span>(api = Build.VERSION_CODES.O)
-<span class="lineno">  28 </span><span class="keyword">public</span> <span class="keyword">class</span> PlayerProfileActivity <span class="keyword">extends</span> BaseActivity {
-<span class="lineno">  29 </span>
-<span class="caretline"><span class="lineno">  30 </span>    <span class="keyword">public</span> <span class="warning"><span class="keyword">static</span></span> FirebaseFirestore db;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  31 </span>    <span class="keyword">private</span> Player currentUser = <span class="keyword">new</span> Player();
-<span class="lineno">  32 </span>
-<span class="lineno">  33 </span>    <span class="annotation">@Override</span></pre>
+<span class="location"><a href="../../src/main/java/com/example/qr_go/PlayerProfileActivity.java">../../src/main/java/com/example/qr_go/PlayerProfileActivity.java</a>:37</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>FirebaseFirestore</code> which has field <code>context</code> pointing to <code>Context</code>); this is a memory leak</span><br /><pre class="errorlines">
+<span class="lineno">  34 </span><span class="annotation">@RequiresApi</span>(api = Build.VERSION_CODES.O)
+<span class="lineno">  35 </span><span class="keyword">public</span> <span class="keyword">class</span> PlayerProfileActivity <span class="keyword">extends</span> BaseActivity {
+<span class="lineno">  36 </span>
+<span class="caretline"><span class="lineno">  37 </span>    <span class="keyword">public</span> <span class="warning"><span class="keyword">static</span></span> FirebaseFirestore db;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  38 </span>    <span class="keyword">private</span> Player currentUser = <span class="keyword">new</span> Player();
+<span class="lineno">  39 </span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> GET_FROM_GALLERY = <span class="number">3</span>;
+</pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/SearchActivity.java">../../src/main/java/com/example/qr_go/SearchActivity.java</a>:61</span>: <span class="message">Do not place Android context classes in static fields; this is a memory leak</span><br /><pre class="errorlines">
 <span class="lineno">  58 </span>    <span class="keyword">private</span> <span class="keyword">static</span> ArrayList&lt;QRListDisplayContainer> qrDisplays;
@@ -1095,24 +1104,23 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/res/layout/player_profile_activity.xml">../../src/main/res/layout/player_profile_activity.xml</a>:74</span>: <span class="message">The view name (<code>@+id/player_email</code>) suggests this is an e-mail address, but it does not include '<code>textEmail</code>' in the <code>inputType</code></span><br /><pre class="errorlines">
-<span class="lineno">  71 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"16dp"</span>
-<span class="lineno">  72 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginEnd</span>=<span class="value">"32dp"</span>
-<span class="lineno">  73 </span>        <span class="prefix">android:</span><span class="attribute">hint</span>=<span class="value">"Email"</span>
-<span class="caretline"><span class="lineno">  74 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">inputType</span>=<span class="value">"textPersonName"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  75 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span>
-<span class="lineno">  76 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span>
-<span class="lineno">  77 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintTop_toBottomOf</span>=<span class="value">"@+id/playerPhoto"</span> />
-</pre>
+<span class="location"><a href="../../src/main/res/layout/player_profile_activity.xml">../../src/main/res/layout/player_profile_activity.xml</a>:50</span>: <span class="message">The view name (<code>@+id/player_email</code>) suggests this is an e-mail address, but it does not include '<code>textEmail</code>' in the <code>inputType</code></span><br /><pre class="errorlines">
+<span class="lineno">  47 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  48 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"8dp"</span>
+<span class="lineno">  49 </span>        <span class="prefix">android:</span><span class="attribute">hint</span>=<span class="value">"Email"</span>
+<span class="caretline"><span class="lineno">  50 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">inputType</span>=<span class="value">"textPersonName"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  51 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span>
+<span class="lineno">  52 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintHorizontal_bias</span>=<span class="value">"0.506"</span>
+<span class="lineno">  53 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toEndOf</span>=<span class="value">"@+id/profile_photo"</span></pre>
 
-<ul><span class="location"><a href="../../src/main/res/layout/player_profile_activity.xml">../../src/main/res/layout/player_profile_activity.xml</a>:67</span>: <span class="message">id defined here</span><br /><pre class="errorlines">
-<span class="lineno">  64 </span>    <span class="tag">&lt;/androidx.constraintlayout.widget.ConstraintLayout></span>
-<span class="lineno">  65 </span>
-<span class="lineno">  66 </span>    <span class="tag">&lt;EditText</span><span class="attribute">
-</span><span class="caretline"><span class="lineno">  67 </span><span class="attribute">        </span><span class="warning"><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/player_email"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  68 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
-<span class="lineno">  69 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  70 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginStart</span>=<span class="value">"32dp"</span></pre>
+<ul><span class="location"><a href="../../src/main/res/layout/player_profile_activity.xml">../../src/main/res/layout/player_profile_activity.xml</a>:45</span>: <span class="message">id defined here</span><br /><pre class="errorlines">
+<span class="lineno">  42 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintTop_toTopOf</span>=<span class="value">"parent"</span> />
+<span class="lineno">  43 </span>
+<span class="lineno">  44 </span>    <span class="tag">&lt;EditText</span><span class="attribute">
+</span><span class="caretline"><span class="lineno">  45 </span><span class="attribute">        </span><span class="warning"><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/player_email"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  46 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"200dp"</span>
+<span class="lineno">  47 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  48 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"8dp"</span></pre>
 </ul></div>
 <div class="metadata"><div class="explanation" id="explanationTextFields" style="display: none;">
 Providing an <code>inputType</code> attribute on a text field improves usability because depending on the data to be input, optimized keyboards can be shown to the user (such as just digits and parentheses for a phone number). <br/>
@@ -1172,23 +1180,23 @@ Dismiss</button>            </div>
 <span class="lineno">  41 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/player_profile_activity.xml">../../src/main/res/layout/player_profile_activity.xml</a>:53</span>: <span class="message">Missing <code>autofillHints</code> attribute</span><br /><pre class="errorlines">
-<span class="lineno">  50 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toEndOf</span>=<span class="value">"@+id/playerPhoto"</span>
-<span class="lineno">  51 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintTop_toTopOf</span>=<span class="value">"@+id/playerPhoto"</span>>
-<span class="lineno">  52 </span>
-<span class="caretline"><span class="lineno">  53 </span>        <span class="tag">&lt;</span><span class="warning"><span class="tag">EditText</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
-</span><span class="lineno">  54 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/player_username"</span>
-<span class="lineno">  55 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
-<span class="lineno">  56 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span></pre>
+<span class="location"><a href="../../src/main/res/layout/player_profile_activity.xml">../../src/main/res/layout/player_profile_activity.xml</a>:44</span>: <span class="message">Missing <code>autofillHints</code> attribute</span><br /><pre class="errorlines">
+<span class="lineno">  41 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span>
+<span class="lineno">  42 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintTop_toTopOf</span>=<span class="value">"parent"</span> />
+<span class="lineno">  43 </span>
+<span class="caretline"><span class="lineno">  44 </span>    <span class="tag">&lt;</span><span class="warning"><span class="tag">EditText</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
+</span><span class="lineno">  45 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/player_email"</span>
+<span class="lineno">  46 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"200dp"</span>
+<span class="lineno">  47 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/player_profile_activity.xml">../../src/main/res/layout/player_profile_activity.xml</a>:66</span>: <span class="message">Missing <code>autofillHints</code> attribute</span><br /><pre class="errorlines">
-<span class="lineno">  63 </span>
-<span class="lineno">  64 </span>    <span class="tag">&lt;/androidx.constraintlayout.widget.ConstraintLayout></span>
-<span class="lineno">  65 </span>
-<span class="caretline"><span class="lineno">  66 </span>    <span class="tag">&lt;</span><span class="warning"><span class="tag">EditText</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
-</span><span class="lineno">  67 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/player_email"</span>
-<span class="lineno">  68 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
-<span class="lineno">  69 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span></pre>
+<span class="location"><a href="../../src/main/res/layout/player_profile_activity.xml">../../src/main/res/layout/player_profile_activity.xml</a>:56</span>: <span class="message">Missing <code>autofillHints</code> attribute</span><br /><pre class="errorlines">
+<span class="lineno">  53 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toEndOf</span>=<span class="value">"@+id/profile_photo"</span>
+<span class="lineno">  54 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintTop_toBottomOf</span>=<span class="value">"@+id/player_username"</span> />
+<span class="lineno">  55 </span>
+<span class="caretline"><span class="lineno">  56 </span>    <span class="tag">&lt;</span><span class="warning"><span class="tag">EditText</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
+</span><span class="lineno">  57 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/player_username"</span>
+<span class="lineno">  58 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"200dp"</span>
+<span class="lineno">  59 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span></pre>
 
 </div>
 <div class="metadata"><div class="explanation" id="explanationAutofill" style="display: none;">
@@ -1265,7 +1273,7 @@ Dismiss</button>            </div>
 <span class="lineno">   6 </span>    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"match_parent"</span>>
 <span class="lineno">   7 </span>
 <span class="caretline"><span class="lineno">   8 </span>    <span class="tag">&lt;</span><span class="warning"><span class="tag">ImageView</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
-</span><span class="lineno">   9 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerPhoto"</span>
+</span><span class="lineno">   9 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/profile_photo"</span>
 <span class="lineno">  10 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"160dp"</span>
 <span class="lineno">  11 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"160dp"</span></pre>
 
@@ -1292,9 +1300,9 @@ Dismiss</button>            </div>
 <span class="lineno">  31 </span>    <span class="tag">&lt;/RelativeLayout></span>
 <span class="lineno">  32 </span>
 <span class="caretline"><span class="lineno">  33 </span>    <span class="tag">&lt;</span><span class="warning"><span class="tag">ImageView</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
-</span><span class="lineno">  34 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerPhoto"</span>
-<span class="lineno">  35 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"160dp"</span>
-<span class="lineno">  36 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"160dp"</span></pre>
+</span><span class="lineno">  34 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/profile_photo"</span>
+<span class="lineno">  35 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"120dp"</span>
+<span class="lineno">  36 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"120dp"</span></pre>
 
 </div>
 <div class="metadata"><div class="explanation" id="explanationContentDescription" style="display: none;">
@@ -1681,7 +1689,7 @@ Dismiss</button>            </div>
 <span class="lineno">  72 </span>
 <span class="lineno">  73 </span>            <span class="tag">&lt;LinearLayout</span></pre>
 
-<button class="mdl-button mdl-js-button mdl-button--primary" id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 47 More Occurrences...</button>
+<button class="mdl-button mdl-js-button mdl-button--primary" id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 48 More Occurrences...</button>
 <div id="HardcodedTextDiv" style="display: none">
 <span class="location"><a href="../../src/main/res/layout/activity_my_qr_codes.xml">../../src/main/res/layout/activity_my_qr_codes.xml</a>:82</span>: <span class="message">Hardcoded string "Lowest Score", should use <code>@string</code> resource</span><br /><pre class="errorlines">
 <span class="lineno">  79 </span>                <span class="tag">&lt;TextView</span><span class="attribute">
@@ -2042,42 +2050,50 @@ Dismiss</button>            </div>
 <span class="lineno">  27 </span>            <span class="prefix">app:</span><span class="attribute">icon</span>=<span class="value">"@drawable/ic_baseline_chevron_left_24"</span>
 <span class="lineno">  28 </span>            <span class="prefix">app:</span><span class="attribute">iconSize</span>=<span class="value">"30dp"</span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/player_profile_activity.xml">../../src/main/res/layout/player_profile_activity.xml</a>:59</span>: <span class="message">Hardcoded string "Username", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno">  56 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  57 </span>            <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"16dp"</span>
-<span class="lineno">  58 </span>            <span class="prefix">android:</span><span class="attribute">layout_marginEnd</span>=<span class="value">"16dp"</span>
-<span class="caretline"><span class="lineno">  59 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">hint</span>=<span class="value">"Username"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  60 </span>            <span class="prefix">android:</span><span class="attribute">inputType</span>=<span class="value">"textPersonName"</span>
-<span class="lineno">  61 </span>            <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span>
-<span class="lineno">  62 </span>            <span class="prefix">app:</span><span class="attribute">layout_constraintTop_toTopOf</span>=<span class="value">"parent"</span> />
+<span class="location"><a href="../../src/main/res/layout/player_profile_activity.xml">../../src/main/res/layout/player_profile_activity.xml</a>:49</span>: <span class="message">Hardcoded string "Email", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno">  46 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"200dp"</span>
+<span class="lineno">  47 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  48 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"8dp"</span>
+<span class="caretline"><span class="lineno">  49 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">hint</span>=<span class="value">"Email"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  50 </span>        <span class="prefix">android:</span><span class="attribute">inputType</span>=<span class="value">"textPersonName"</span>
+<span class="lineno">  51 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span>
+<span class="lineno">  52 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintHorizontal_bias</span>=<span class="value">"0.506"</span></pre>
+
+<span class="location"><a href="../../src/main/res/layout/player_profile_activity.xml">../../src/main/res/layout/player_profile_activity.xml</a>:61</span>: <span class="message">Hardcoded string "Username", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno">  58 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"200dp"</span>
+<span class="lineno">  59 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  60 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"76dp"</span>
+<span class="caretline"><span class="lineno">  61 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">hint</span>=<span class="value">"Username"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  62 </span>        <span class="prefix">android:</span><span class="attribute">inputType</span>=<span class="value">"textPersonName"</span>
+<span class="lineno">  63 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span>
+<span class="lineno">  64 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintHorizontal_bias</span>=<span class="value">"0.506"</span></pre>
+
+<span class="location"><a href="../../src/main/res/layout/player_profile_activity.xml">../../src/main/res/layout/player_profile_activity.xml</a>:91</span>: <span class="message">Hardcoded string "Generate my login qr code", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno">  88 </span>        <span class="prefix">android:</span><span class="attribute">clickable</span>=<span class="value">"true"</span>
+<span class="lineno">  89 </span>        <span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"generateLoginQR"</span>
+<span class="lineno">  90 </span>        <span class="prefix">android:</span><span class="attribute">padding</span>=<span class="value">"10dp"</span>
+<span class="caretline"><span class="lineno">  91 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Generate my login qr code"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  92 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"20sp"</span>
+<span class="lineno">  93 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span>
+<span class="lineno">  94 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintHorizontal_bias</span>=<span class="value">"0.0"</span></pre>
+
+<span class="location"><a href="../../src/main/res/layout/player_profile_activity.xml">../../src/main/res/layout/player_profile_activity.xml</a>:129</span>: <span class="message">Hardcoded string "Generate my game status qr code", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 126 </span>        <span class="prefix">android:</span><span class="attribute">clickable</span>=<span class="value">"true"</span>
+<span class="lineno"> 127 </span>        <span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"generateStatusQR"</span>
+<span class="lineno"> 128 </span>        <span class="prefix">android:</span><span class="attribute">padding</span>=<span class="value">"10dp"</span>
+<span class="caretline"><span class="lineno"> 129 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Generate my game status qr code"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 130 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"20sp"</span>
+<span class="lineno"> 131 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span>
+<span class="lineno"> 132 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintHorizontal_bias</span>=<span class="value">"0.0"</span></pre>
+
+<span class="location"><a href="../../src/main/res/layout/player_profile_activity.xml">../../src/main/res/layout/player_profile_activity.xml</a>:153</span>: <span class="message">Hardcoded string "Edit Photo", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 150 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 151 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginStart</span>=<span class="value">"25dp"</span>
+<span class="lineno"> 152 </span>        <span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"editProfilePhoto"</span>
+<span class="caretline"><span class="lineno"> 153 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Edit Photo"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 154 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span>
+<span class="lineno"> 155 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintTop_toBottomOf</span>=<span class="value">"@+id/profile_photo"</span> />
 </pre>
-
-<span class="location"><a href="../../src/main/res/layout/player_profile_activity.xml">../../src/main/res/layout/player_profile_activity.xml</a>:73</span>: <span class="message">Hardcoded string "Email", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno">  70 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginStart</span>=<span class="value">"32dp"</span>
-<span class="lineno">  71 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"16dp"</span>
-<span class="lineno">  72 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginEnd</span>=<span class="value">"32dp"</span>
-<span class="caretline"><span class="lineno">  73 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">hint</span>=<span class="value">"Email"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  74 </span>        <span class="prefix">android:</span><span class="attribute">inputType</span>=<span class="value">"textPersonName"</span>
-<span class="lineno">  75 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span>
-<span class="lineno">  76 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/player_profile_activity.xml">../../src/main/res/layout/player_profile_activity.xml</a>:115</span>: <span class="message">Hardcoded string "Generate my game status qr code", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 112 </span>        <span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"generateStatusQR"</span>
-<span class="lineno"> 113 </span>        <span class="prefix">android:</span><span class="attribute">clickable</span>=<span class="value">"true"</span>
-<span class="lineno"> 114 </span>        <span class="prefix">android:</span><span class="attribute">padding</span>=<span class="value">"10dp"</span>
-<span class="caretline"><span class="lineno"> 115 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Generate my game status qr code"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 116 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"20sp"</span>
-<span class="lineno"> 117 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span>
-<span class="lineno"> 118 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintHorizontal_bias</span>=<span class="value">"0.0"</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/player_profile_activity.xml">../../src/main/res/layout/player_profile_activity.xml</a>:133</span>: <span class="message">Hardcoded string "Generate my login qr code", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 130 </span>        <span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"generateLoginQR"</span>
-<span class="lineno"> 131 </span>        <span class="prefix">android:</span><span class="attribute">clickable</span>=<span class="value">"true"</span>
-<span class="lineno"> 132 </span>        <span class="prefix">android:</span><span class="attribute">padding</span>=<span class="value">"10dp"</span>
-<span class="caretline"><span class="lineno"> 133 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Generate my login qr code"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 134 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"20sp"</span>
-<span class="lineno"> 135 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintBottom_toBottomOf</span>=<span class="value">"parent"</span>
-<span class="lineno"> 136 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span></pre>
 
 <span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:12</span>: <span class="message">Hardcoded string "12345", should use <code>@string</code> resource</span><br /><pre class="errorlines">
 <span class="lineno">  9 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/qr_id_view"</span>
@@ -2089,17 +2105,7 @@ Dismiss</button>            </div>
 <span class="lineno"> 15 </span>        />
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:21</span>: <span class="message">Hardcoded string "12345", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 18 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/qr_score_view"</span>
-<span class="lineno"> 19 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 20 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 21 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"12345"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 22 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"20sp"</span>
-<span class="lineno"> 23 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
-<span class="lineno"> 24 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"center|right"</span>
-</pre>
-
-<br/><b>NOTE: 2 results omitted.</b><br/><br/></div>
+<br/><b>NOTE: 3 results omitted.</b><br/><br/></div>
 </div>
 <div class="metadata"><div class="explanation" id="explanationHardcodedText" style="display: none;">
 Hardcoding text attributes directly in layout files is bad for several reasons:<br/>

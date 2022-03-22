@@ -54,6 +54,22 @@
     </issue>
 
     <issue
+        id="MissingConstraints"
+        severity="Error"
+        message="This view is not constrained horizontally: at runtime it will jump to the left unless you add a horizontal constraint"
+        category="Correctness"
+        priority="6"
+        summary="Missing Constraints in ConstraintLayout"
+        explanation="The layout editor allows you to place widgets anywhere on the canvas, and it records the current position with designtime attributes (such as `layout_editor_absoluteX`). These attributes are **not** applied at runtime, so if you push your layout on a device, the widgets may appear in a different location than shown in the editor. To fix this, make sure a widget has both horizontal and vertical constraints by dragging from the edge connections."
+        errorLine1="    &lt;View"
+        errorLine2="     ~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
+            line="98"
+            column="6"/>
+    </issue>
+
+    <issue
         id="FragmentTagUsage"
         severity="Warning"
         message="Replace the &lt;fragment> tag with FragmentContainerView."
@@ -389,7 +405,7 @@
         errorLine2="           ~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerProfileActivity.java"
-            line="30"
+            line="37"
             column="12"/>
     </issue>
 
@@ -551,11 +567,11 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="74"
+            line="50"
             column="9"/>
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="67"
+            line="45"
             column="9"
             message="id defined here"/>
     </issue>
@@ -606,12 +622,12 @@
         explanation="Specify an `autofillHints` attribute when targeting SDK version 26 or higher or explicitly specify that the view is not important for autofill. Your app can help an autofill service classify the data correctly by providing the meaning of each view that could be autofillable, such as views representing usernames, passwords, credit card fields, email addresses, etc.&#xA;&#xA;The hints can have any value, but it is recommended to use predefined values like &apos;username&apos; for a username or &apos;creditCardNumber&apos; for a credit card number. For a list of all predefined autofill hint constants, see the `AUTOFILL_HINT_` constants in the `View` reference at https://developer.android.com/reference/android/view/View.html.&#xA;&#xA;You can mark a view unimportant for autofill by specifying an `importantForAutofill` attribute on that view or a parent view. See https://developer.android.com/reference/android/view/View.html#setImportantForAutofill(int)."
         url="https://developer.android.com/guide/topics/text/autofill.html"
         urls="https://developer.android.com/guide/topics/text/autofill.html"
-        errorLine1="        &lt;EditText"
-        errorLine2="         ~~~~~~~~">
+        errorLine1="    &lt;EditText"
+        errorLine2="     ~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="53"
-            column="10"/>
+            line="44"
+            column="6"/>
     </issue>
 
     <issue
@@ -628,7 +644,7 @@
         errorLine2="     ~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="66"
+            line="56"
             column="6"/>
     </issue>
 
@@ -1933,22 +1949,6 @@
     <issue
         id="HardcodedText"
         severity="Warning"
-        message="Hardcoded string &quot;Username&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="            android:hint=&quot;Username&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="59"
-            column="13"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
         message="Hardcoded string &quot;Email&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
@@ -1958,23 +1958,23 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="73"
+            line="49"
             column="9"/>
     </issue>
 
     <issue
         id="HardcodedText"
         severity="Warning"
-        message="Hardcoded string &quot;Generate my game status qr code&quot;, should use `@string` resource"
+        message="Hardcoded string &quot;Username&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
         summary="Hardcoded text"
         explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="        android:text=&quot;Generate my game status qr code&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="        android:hint=&quot;Username&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="115"
+            line="61"
             column="9"/>
     </issue>
 
@@ -1990,7 +1990,39 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="133"
+            line="91"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Generate my game status qr code&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;Generate my game status qr code&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
+            line="129"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Edit Photo&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;Edit Photo&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
+            line="153"
             column="9"/>
     </issue>
 
