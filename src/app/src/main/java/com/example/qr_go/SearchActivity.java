@@ -61,7 +61,15 @@ public class SearchActivity extends BaseActivity {
     private static EditText searchBar;
 
     // The context
-    Context context;
+    private Context context;
+
+    // Firebase references
+    private FirebaseFirestore db;
+    private CollectionReference playersColRef;
+    private CollectionReference qrColRef;
+
+    // Variable which determines if the current user is an owner
+    private static Boolean isUserOwner;
 
 
     @RequiresApi(api = Build.VERSION_CODES.P)
@@ -72,10 +80,29 @@ public class SearchActivity extends BaseActivity {
         setContentView(R.layout.activity_search);
         initializeNavbar();
 
-        // Disable the location first so that there is at least a view that the user can see
-        // If location is enabled, then the views are updated and the user is able to sort
-        // using proximity when the location manager responds.
-        disableLocation();
+        // Initialize database references
+        db = FirebaseFirestore.getInstance();
+        playersColRef = db.collection("Players");
+        qrColRef = db.collection("GameQRCodes");
+
+        // Determine if the current user is an owner first
+        playersColRef.whereEqualTo("owner", true).get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                isUserOwner = false;
+                for(DocumentSnapshot snapshot : queryDocumentSnapshots) {
+                    String userid = snapshot.get("userid", String.class);
+                    if (userid.equals(MapsActivity.getUserId())){
+                        isUserOwner = true;
+                    }
+                }
+                // Disable the location first so that there is at least a view that the user can see
+                // If location is enabled, then the views are updated and the user is able to sort
+                // using proximity when the location manager responds.
+                disableLocation();
+            }
+        });
 
         Button backButton = (Button) findViewById(R.id.back_button);
         searchBar = (EditText) findViewById(R.id.search_bar);
@@ -105,11 +132,6 @@ public class SearchActivity extends BaseActivity {
     @SuppressLint("MissingPermission")
     @RequiresApi(api = Build.VERSION_CODES.P)
     private void startViews() {
-        // Initialize database references
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        CollectionReference playersColRef = db.collection("Players");
-        CollectionReference ownersColRef = db.collection("Owners");
-        CollectionReference qrColRef = db.collection("GameQRCodes");
 
         userDisplays = new ArrayList<>();
         qrDisplays = new ArrayList<>();
@@ -198,24 +220,6 @@ public class SearchActivity extends BaseActivity {
                 userDisplays.clear();
                 for(DocumentSnapshot snapshot : queryDocumentSnapshots) {
                     Player user = snapshot.toObject(Player.class);
-                    UserListDisplayContainer userToDisplay =
-                            new UserListDisplayContainer(
-                                    user.getUserid(),
-                                    user.getUsername(),
-                                    user.getTotalScore(),
-                                    user.getScannedQRCodeIds().size(),
-                                    user.getHighestUniqueScore(),
-                                    MapsActivity.getUserId().equals(user.getUserid())
-                            );
-                    userDisplays.add(userToDisplay);
-                }
-            }
-        });
-        ownersColRef.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-            @Override
-            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                for(DocumentSnapshot snapshot : queryDocumentSnapshots) {
-                    Owner user = snapshot.toObject(Owner.class);
                     UserListDisplayContainer userToDisplay =
                             new UserListDisplayContainer(
                                     user.getUserid(),
@@ -380,4 +384,10 @@ public class SearchActivity extends BaseActivity {
         mgr.hideSoftInputFromWindow(searchBar.getWindowToken(), 0);
     }
 
+    /**
+     * @return If the current user is an owner or not. Used for lists to determine owner view
+     */
+    public static Boolean getUserOwner() {
+        return isUserOwner;
+    }
 }

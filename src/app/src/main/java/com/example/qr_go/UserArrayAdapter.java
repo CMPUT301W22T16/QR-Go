@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
@@ -38,8 +39,16 @@ public class UserArrayAdapter extends ArrayAdapter<UserListDisplayContainer> imp
             view = LayoutInflater.from(context).inflate(R.layout.user_list_content, parent, false);
         }
 
+        Button delButton = (Button) view.findViewById(R.id.user_del_button);
         TextView usernameView = view.findViewById(R.id.username_view);
         TextView scoreView = view.findViewById(R.id.user_score_view);
+
+        // Show the delete button if the current user is an owner
+        if (SearchActivity.getUserOwner()) {
+            delButton.setVisibility(View.VISIBLE);
+        } else {
+            delButton.setVisibility(View.GONE);
+        }
 
         Integer userRank = userToDisplay.getRankPosition();
         if (userToDisplay.getIsCurrentUser()) {
@@ -59,7 +68,6 @@ public class UserArrayAdapter extends ArrayAdapter<UserListDisplayContainer> imp
                 scoreView.setText("Highest QR Score: " + userToDisplay.getHighestScore().toString());
                 break;
         }
-
 
         return view;
     }
