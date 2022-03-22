@@ -1028,6 +1028,29 @@
     </incident>
 
     <incident
+        id="TextFields"
+        severity="warning"
+        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="74"
+            column="9"
+            startOffset="2891"
+            endLine="74"
+            endColumn="43"
+            endOffset="2925"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="67"
+            column="9"
+            startOffset="2612"
+            endLine="67"
+            endColumn="39"
+            endOffset="2642"
+            message="id defined here"/>
+    </incident>
+
+    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -1053,29 +1076,6 @@
             endLine="66"
             endColumn="14"
             endOffset="2603"/>
-    </incident>
-
-    <incident
-        id="TextFields"
-        severity="warning"
-        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="74"
-            column="9"
-            startOffset="2891"
-            endLine="74"
-            endColumn="43"
-            endOffset="2925"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="67"
-            column="9"
-            startOffset="2612"
-            endLine="67"
-            endColumn="39"
-            endOffset="2642"
-            message="id defined here"/>
     </incident>
 
     <incident
@@ -1121,31 +1121,17 @@
     </incident>
 
     <incident
-        id="InefficientWeight"
-        severity="warning"
-        message="Use a `layout_width` of `0dp` instead of `wrap_content` for better performance">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
-            line="19"
-            column="9"
-            startOffset="603"
-            endLine="19"
-            endColumn="44"
-            endOffset="638"/>
-    </incident>
-
-    <incident
         id="HardcodedText"
         severity="warning"
         message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
-            line="12"
+            line="13"
             column="9"
-            startOffset="424"
-            endLine="12"
+            startOffset="481"
+            endLine="13"
             endColumn="29"
-            endOffset="444"/>
+            endOffset="501"/>
     </incident>
 
     <incident
@@ -1154,40 +1140,26 @@
         message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
-            line="21"
+            line="22"
             column="9"
-            startOffset="694"
-            endLine="21"
+            startOffset="751"
+            endLine="22"
             endColumn="29"
-            endOffset="714"/>
+            endOffset="771"/>
     </incident>
 
     <incident
-        id="InefficientWeight"
+        id="ObsoleteLayoutParam"
         severity="warning"
-        message="Use a `layout_width` of `0dp` instead of `wrap_content` for better performance">
+        message="Invalid layout param in a `LinearLayout`: `layout_alignParentRight`">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
-            line="19"
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
+            line="33"
             column="9"
-            startOffset="608"
-            endLine="19"
-            endColumn="44"
-            endOffset="643"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
-            line="12"
-            column="9"
-            startOffset="427"
-            endLine="12"
-            endColumn="29"
-            endOffset="447"/>
+            startOffset="1150"
+            endLine="33"
+            endColumn="47"
+            endOffset="1188"/>
     </incident>
 
     <incident
@@ -1196,12 +1168,40 @@
         message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
-            line="21"
+            line="13"
             column="9"
-            startOffset="699"
-            endLine="21"
+            startOffset="484"
+            endLine="13"
             endColumn="29"
-            endOffset="719"/>
+            endOffset="504"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
+            line="22"
+            column="9"
+            startOffset="756"
+            endLine="22"
+            endColumn="29"
+            endOffset="776"/>
+    </incident>
+
+    <incident
+        id="ObsoleteLayoutParam"
+        severity="warning"
+        message="Invalid layout param in a `LinearLayout`: `layout_alignParentRight`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
+            line="33"
+            column="9"
+            startOffset="1157"
+            endLine="33"
+            endColumn="47"
+            endOffset="1195"/>
     </incident>
 
     <incident
@@ -1359,12 +1359,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRArrayAdapter.java"
-            line="52"
+            line="61"
             column="35"
-            startOffset="1750"
-            endLine="52"
+            startOffset="2093"
+            endLine="61"
             endColumn="80"
-            endOffset="1795"/>
+            endOffset="2138"/>
     </incident>
 
     <incident
@@ -1373,12 +1373,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRArrayAdapter.java"
-            line="52"
+            line="61"
             column="35"
-            startOffset="1750"
-            endLine="52"
+            startOffset="2093"
+            endLine="61"
             endColumn="44"
-            endOffset="1759"/>
+            endOffset="2102"/>
     </incident>
 
     <incident
@@ -1387,12 +1387,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRArrayAdapter.java"
-            line="52"
+            line="61"
             column="47"
-            startOffset="1762"
-            endLine="52"
+            startOffset="2105"
+            endLine="61"
             endColumn="80"
-            endOffset="1795"/>
+            endOffset="2138"/>
     </incident>
 
     <incident
@@ -1401,12 +1401,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRArrayAdapter.java"
-            line="65"
+            line="74"
             column="35"
-            startOffset="2375"
-            endLine="65"
+            startOffset="2718"
+            endLine="74"
             endColumn="59"
-            endOffset="2399"/>
+            endOffset="2742"/>
     </incident>
 
     <incident
@@ -1415,12 +1415,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRArrayAdapter.java"
-            line="65"
+            line="74"
             column="52"
-            startOffset="2392"
-            endLine="65"
+            startOffset="2735"
+            endLine="74"
             endColumn="59"
-            endOffset="2399"/>
+            endOffset="2742"/>
     </incident>
 
     <incident
@@ -1450,12 +1450,12 @@
         message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="82"
+            line="90"
             column="62"
-            startOffset="3025"
-            endLine="82"
+            startOffset="3369"
+            endLine="90"
             endColumn="73"
-            endOffset="3036"/>
+            endOffset="3380"/>
     </incident>
 
     <incident
@@ -1464,12 +1464,12 @@
         message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="85"
+            line="93"
             column="44"
-            startOffset="3163"
-            endLine="85"
+            startOffset="3507"
+            endLine="93"
             endColumn="55"
-            endOffset="3174"/>
+            endOffset="3518"/>
     </incident>
 
     <incident
@@ -1478,12 +1478,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="46"
+            line="55"
             column="34"
-            startOffset="1669"
-            endLine="46"
+            startOffset="2014"
+            endLine="55"
             endColumn="106"
-            endOffset="1741"/>
+            endOffset="2086"/>
     </incident>
 
     <incident
@@ -1492,12 +1492,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="46"
+            line="55"
             column="98"
-            startOffset="1733"
-            endLine="46"
+            startOffset="2078"
+            endLine="55"
             endColumn="106"
-            endOffset="1741"/>
+            endOffset="2086"/>
     </incident>
 
     <incident
@@ -1506,12 +1506,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="48"
+            line="57"
             column="34"
-            startOffset="1794"
-            endLine="48"
+            startOffset="2139"
+            endLine="57"
             endColumn="95"
-            endOffset="1855"/>
+            endOffset="2200"/>
     </incident>
 
     <incident
@@ -1520,12 +1520,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="50"
+            line="59"
             column="27"
-            startOffset="1894"
-            endLine="50"
+            startOffset="2239"
+            endLine="59"
             endColumn="67"
-            endOffset="1934"/>
+            endOffset="2279"/>
     </incident>
 
     <incident
@@ -1534,12 +1534,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="53"
+            line="62"
             column="35"
-            startOffset="2017"
-            endLine="53"
+            startOffset="2362"
+            endLine="62"
             endColumn="93"
-            endOffset="2075"/>
+            endOffset="2420"/>
     </incident>
 
     <incident
@@ -1548,12 +1548,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="53"
+            line="62"
             column="35"
-            startOffset="2017"
-            endLine="53"
+            startOffset="2362"
+            endLine="62"
             endColumn="50"
-            endOffset="2032"/>
+            endOffset="2377"/>
     </incident>
 
     <incident
@@ -1562,12 +1562,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="53"
+            line="62"
             column="53"
-            startOffset="2035"
-            endLine="53"
+            startOffset="2380"
+            endLine="62"
             endColumn="93"
-            endOffset="2075"/>
+            endOffset="2420"/>
     </incident>
 
     <incident
@@ -1576,12 +1576,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="56"
+            line="65"
             column="35"
-            startOffset="2155"
-            endLine="56"
+            startOffset="2500"
+            endLine="65"
             endColumn="84"
-            endOffset="2204"/>
+            endOffset="2549"/>
     </incident>
 
     <incident
@@ -1590,12 +1590,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="56"
+            line="65"
             column="35"
-            startOffset="2155"
-            endLine="56"
+            startOffset="2500"
+            endLine="65"
             endColumn="71"
-            endOffset="2191"/>
+            endOffset="2536"/>
     </incident>
 
     <incident
@@ -1604,12 +1604,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="56"
+            line="65"
             column="74"
-            startOffset="2194"
-            endLine="56"
+            startOffset="2539"
+            endLine="65"
             endColumn="84"
-            endOffset="2204"/>
+            endOffset="2549"/>
     </incident>
 
     <incident
@@ -1618,12 +1618,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="59"
+            line="68"
             column="35"
-            startOffset="2285"
-            endLine="59"
+            startOffset="2630"
+            endLine="68"
             endColumn="100"
-            endOffset="2350"/>
+            endOffset="2695"/>
     </incident>
 
     <incident
@@ -1632,12 +1632,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="59"
+            line="68"
             column="35"
-            startOffset="2285"
-            endLine="59"
+            startOffset="2630"
+            endLine="68"
             endColumn="55"
-            endOffset="2305"/>
+            endOffset="2650"/>
     </incident>
 
     <incident
@@ -1646,12 +1646,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="59"
+            line="68"
             column="58"
-            startOffset="2308"
-            endLine="59"
+            startOffset="2653"
+            endLine="68"
             endColumn="100"
-            endOffset="2350"/>
+            endOffset="2695"/>
     </incident>
 
     <incident
