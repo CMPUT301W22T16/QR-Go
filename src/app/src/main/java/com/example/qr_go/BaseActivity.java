@@ -17,12 +17,12 @@ public class BaseActivity extends FragmentActivity {
     protected void initializeNavbar() {
         // Set onClick for BottomNavigation nav items
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav_view);
+        bottomNavigationView.getMenu().setGroupCheckable(0, false, true); // make navbar uncheckable (un-highlightable)
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
-                item.setCheckable(false); // don't allow items to be highlighted
                 Intent intent = new Intent(BaseActivity.this, MapsActivity.class);
                 if (id == R.id.nav_search)
                     intent = new Intent(BaseActivity.this, SearchActivity.class);
