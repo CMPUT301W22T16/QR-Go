@@ -15,5 +15,6 @@ public class Photo {
     protected String photoRef;
     Photo(String photoRef){
         this.photoRef = photoRef;
+        
     }
 }
