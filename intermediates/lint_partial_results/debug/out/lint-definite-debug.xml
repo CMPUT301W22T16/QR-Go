@@ -298,6 +298,20 @@
     </incident>
 
     <incident
+        id="InefficientWeight"
+        severity="warning"
+        message="Use a `layout_height` of `0dp` instead of `wrap_content` for better performance">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
+            line="135"
+            column="9"
+            startOffset="4945"
+            endLine="135"
+            endColumn="45"
+            endOffset="4981"/>
+    </incident>
+
+    <incident
         id="ContentDescription"
         severity="warning"
         message="Missing `contentDescription` attribute on image">
@@ -501,10 +515,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="32"
             column="13"
-            startOffset="1333"
+            startOffset="1325"
             endLine="32"
             endColumn="35"
-            endOffset="1355"/>
+            endOffset="1347"/>
     </incident>
 
     <incident
@@ -519,10 +533,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="31"
             column="13"
-            startOffset="1297"
+            startOffset="1289"
             endLine="31"
             endColumn="36"
-            endOffset="1320"/>
+            endOffset="1312"/>
     </incident>
 
     <incident
@@ -533,10 +547,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="41"
             column="13"
-            startOffset="1676"
+            startOffset="1668"
             endLine="41"
             endColumn="39"
-            endOffset="1702"/>
+            endOffset="1694"/>
     </incident>
 
     <incident
@@ -551,10 +565,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="40"
             column="13"
-            startOffset="1640"
+            startOffset="1632"
             endLine="40"
             endColumn="36"
-            endOffset="1663"/>
+            endOffset="1655"/>
     </incident>
 
     <incident
@@ -565,10 +579,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="54"
             column="9"
-            startOffset="2152"
+            startOffset="2144"
             endLine="54"
             endColumn="37"
-            endOffset="2180"/>
+            endOffset="2172"/>
     </incident>
 
     <incident
@@ -583,10 +597,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="55"
             column="9"
-            startOffset="2189"
+            startOffset="2181"
             endLine="55"
             endColumn="32"
-            endOffset="2212"/>
+            endOffset="2204"/>
     </incident>
 
     <incident
@@ -597,10 +611,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="67"
             column="9"
-            startOffset="2662"
+            startOffset="2652"
             endLine="67"
             endColumn="43"
-            endOffset="2696"/>
+            endOffset="2686"/>
     </incident>
 
     <incident
@@ -611,10 +625,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="92"
             column="9"
-            startOffset="3669"
+            startOffset="3659"
             endLine="92"
             endColumn="28"
-            endOffset="3688"/>
+            endOffset="3678"/>
     </incident>
 
     <incident
@@ -639,10 +653,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="97"
             column="6"
-            startOffset="3851"
+            startOffset="3841"
             endLine="97"
             endColumn="14"
-            endOffset="3859"/>
+            endOffset="3849"/>
     </incident>
 
     <incident
@@ -653,10 +667,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="106"
             column="9"
-            startOffset="4180"
+            startOffset="4170"
             endLine="106"
             endColumn="46"
-            endOffset="4217"/>
+            endOffset="4207"/>
     </incident>
 
     <incident
@@ -923,20 +937,6 @@
     </incident>
 
     <incident
-        id="MissingConstraints"
-        severity="error"
-        message="This view is not constrained horizontally: at runtime it will jump to the left unless you add a horizontal constraint">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="98"
-            column="6"
-            startOffset="3876"
-            endLine="98"
-            endColumn="10"
-            endOffset="3880"/>
-    </incident>
-
-    <incident
         id="ObsoleteLayoutParam"
         severity="warning"
         message="Invalid layout param in a `RelativeLayout`: `layout_weight`">
@@ -1005,12 +1005,26 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="44"
-            column="6"
-            startOffset="1662"
-            endLine="44"
-            endColumn="14"
-            endOffset="1670"/>
+            line="53"
+            column="10"
+            startOffset="2097"
+            endLine="53"
+            endColumn="18"
+            endOffset="2105"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Username&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="59"
+            column="13"
+            startOffset="2349"
+            endLine="59"
+            endColumn="36"
+            endOffset="2372"/>
     </incident>
 
     <incident
@@ -1019,35 +1033,21 @@
         message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="50"
+            line="74"
             column="9"
-            startOffset="1868"
-            endLine="50"
+            startOffset="2891"
+            endLine="74"
             endColumn="43"
-            endOffset="1902"/>
+            endOffset="2925"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="45"
+            line="67"
             column="9"
-            startOffset="1679"
-            endLine="45"
+            startOffset="2612"
+            endLine="67"
             endColumn="39"
-            endOffset="1709"
+            endOffset="2642"
             message="id defined here"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Email&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="49"
-            column="9"
-            startOffset="1839"
-            endLine="49"
-            endColumn="29"
-            endOffset="1859"/>
     </incident>
 
     <incident
@@ -1070,40 +1070,26 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="56"
+            line="66"
             column="6"
-            startOffset="2146"
-            endLine="56"
+            startOffset="2595"
+            endLine="66"
             endColumn="14"
-            endOffset="2154"/>
+            endOffset="2603"/>
     </incident>
 
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;Username&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Email&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="61"
+            line="73"
             column="9"
-            startOffset="2327"
-            endLine="61"
-            endColumn="32"
-            endOffset="2350"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Generate my login qr code&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="91"
-            column="9"
-            startOffset="3579"
-            endLine="91"
-            endColumn="49"
-            endOffset="3619"/>
+            startOffset="2862"
+            endLine="73"
+            endColumn="29"
+            endOffset="2882"/>
     </incident>
 
     <incident
@@ -1112,26 +1098,26 @@
         message="Hardcoded string &quot;Generate my game status qr code&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="129"
+            line="115"
             column="9"
-            startOffset="5102"
-            endLine="129"
+            startOffset="4620"
+            endLine="115"
             endColumn="55"
-            endOffset="5148"/>
+            endOffset="4666"/>
     </incident>
 
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;Edit Photo&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Generate my login qr code&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="153"
+            line="133"
             column="9"
-            startOffset="6076"
-            endLine="153"
-            endColumn="34"
-            endOffset="6101"/>
+            startOffset="5343"
+            endLine="133"
+            endColumn="49"
+            endOffset="5383"/>
     </incident>
 
     <incident
@@ -1730,12 +1716,12 @@
         message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/PlayerProfileActivity.java"
-            line="37"
+            line="30"
             column="12"
-            startOffset="1125"
-            endLine="37"
+            startOffset="940"
+            endLine="30"
             endColumn="18"
-            endOffset="1131"/>
+            endOffset="946"/>
     </incident>
 
     <incident

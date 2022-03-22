@@ -231,7 +231,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.Boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deleteQRCode(com.example.qr_go.GameQRCode)">deleteQRCode</a></span>&#8203;(<a href="GameQRCode.html" title="class in com.example.qr_go">GameQRCode</a>&nbsp;qr)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deleteQRCode(java.lang.String)">deleteQRCode</a></span>&#8203;(java.lang.String&nbsp;qrID)</code></th>
 <td class="colLast">
 <div class="block">Deletes a QR code to the user's list of scanned QR codes and subtracts its score from the
  user's total</div>
@@ -439,18 +439,18 @@ public&nbsp;User&#8203;(java.lang.String&nbsp;uuid,
 </dl>
 </li>
 </ul>
-<a id="deleteQRCode(com.example.qr_go.GameQRCode)">
+<a id="deleteQRCode(java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>deleteQRCode</h4>
-<pre class="methodSignature">public&nbsp;java.lang.Boolean&nbsp;deleteQRCode&#8203;(<a href="GameQRCode.html" title="class in com.example.qr_go">GameQRCode</a>&nbsp;qr)</pre>
+<pre class="methodSignature">public&nbsp;java.lang.Boolean&nbsp;deleteQRCode&#8203;(java.lang.String&nbsp;qrID)</pre>
 <div class="block">Deletes a QR code to the user's list of scanned QR codes and subtracts its score from the
  user's total</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>qr</code> - GameQRCode object which is to be removed from the player's list of scanned QRs</dd>
+<dd><code>qrID</code> - the ID of the gameQRcode</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>true if the qr code was successfully deleted, false otherwise</dd>
 </dl>

@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -219,32 +219,37 @@ extends <a href="QRCode.html" title="class in com.example.qr_go">QRCode</a></pre
 </td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deleteUser(java.lang.String)">deleteUser</a></span>&#8203;(java.lang.String&nbsp;userid)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="GeoLocation.html" title="class in com.example.qr_go">GeoLocation</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getGeoLocation()">getGeoLocation</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Get last known location of QR code</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.lang.Integer</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getScore()">getScore</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Getter for score</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.util.HashMap&lt;java.lang.String,&#8203;java.util.HashMap&lt;java.lang.String,&#8203;java.lang.String&gt;&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUserIds()">getUserIds</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Getter for userIds</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>java.util.ArrayList&lt;java.lang.String&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUserObjects()">getUserObjects</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setGeoLocation(com.example.qr_go.GeoLocation)">setGeoLocation</a></span>&#8203;(<a href="GeoLocation.html" title="class in com.example.qr_go">GeoLocation</a>&nbsp;location)</code></th>
 <td class="colLast">
@@ -370,6 +375,15 @@ public&nbsp;GameQRCode&#8203;(java.lang.String&nbsp;qrCodeContents)</pre>
 <h4>addUser</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;addUser&#8203;(<a href="User.html" title="class in com.example.qr_go">User</a>&nbsp;user)</pre>
 <div class="block">Add a new user who scanned this game qr code</div>
+</li>
+</ul>
+<a id="deleteUser(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>deleteUser</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;deleteUser&#8203;(java.lang.String&nbsp;userid)</pre>
 </li>
 </ul>
 <a id="getUserObjects()">

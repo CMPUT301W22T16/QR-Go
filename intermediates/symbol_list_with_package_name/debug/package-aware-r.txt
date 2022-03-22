@@ -2808,9 +2808,7 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
-id divider2
-id divider3
-id divider4
+id divider
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -2824,7 +2822,6 @@ id easeIn
 id easeInOut
 id easeOut
 id east
-id edit_profile_photo
 id edit_query
 id elastic
 id end
@@ -3008,12 +3005,12 @@ id playerEmail
 id playerHighScore
 id playerLowScore
 id playerNameText
+id playerPhoto
 id playerTotalScore
 id player_email
 id player_username
 id position
 id postLayout
-id profile_photo
 id progress_circular
 id progress_horizontal
 id qrLocation

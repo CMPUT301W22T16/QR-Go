@@ -438,10 +438,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="68"
             column="9"
-            startOffset="2705"
+            startOffset="2695"
             endLine="68"
             endColumn="40"
-            endOffset="2736"/>
+            endOffset="2726"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -455,10 +455,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="93"
             column="9"
-            startOffset="3697"
+            startOffset="3687"
             endLine="93"
             endColumn="37"
-            endOffset="3725"/>
+            endOffset="3715"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -623,46 +623,29 @@
         message="Use databinding or explicit wiring of click listener in code">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="89"
+            line="112"
             column="9"
-            startOffset="3506"
-            endLine="89"
+            startOffset="4513"
+            endLine="112"
+            endColumn="43"
+            endOffset="4547"/>
+        <map>
+            <condition minLT="23"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="130"
+            column="9"
+            startOffset="5237"
+            endLine="130"
             endColumn="42"
-            endOffset="3539"/>
-        <map>
-            <condition minLT="23"/>
-        </map>
-    </incident>
-
-    <incident
-        id="UsingOnClickInXml"
-        severity="warning"
-        message="Use databinding or explicit wiring of click listener in code">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="127"
-            column="9"
-            startOffset="5028"
-            endLine="127"
-            endColumn="43"
-            endOffset="5062"/>
-        <map>
-            <condition minLT="23"/>
-        </map>
-    </incident>
-
-    <incident
-        id="UsingOnClickInXml"
-        severity="warning"
-        message="Use databinding or explicit wiring of click listener in code">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="152"
-            column="9"
-            startOffset="6033"
-            endLine="152"
-            endColumn="43"
-            endOffset="6067"/>
+            endOffset="5270"/>
         <map>
             <condition minLT="23"/>
         </map>
