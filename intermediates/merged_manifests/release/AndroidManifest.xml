@@ -66,8 +66,7 @@
         <activity
             android:name="com.example.qr_go.QRInfoActivity"
             android:exported="false"
-            android:parentActivityName="com.example.qr_go.MapsActivity"
-            android:windowSoftInputMode="adjustPan" />
+            android:parentActivityName="com.example.qr_go.MapsActivity" />
         <activity
             android:name="com.example.qr_go.ScannedUsersActivity"
             android:exported="false"

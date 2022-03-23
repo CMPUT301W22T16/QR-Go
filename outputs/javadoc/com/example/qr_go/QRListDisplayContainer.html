@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
+var data = {"i0":10,"i1":10,"i2":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -152,10 +152,8 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.Integer,java.lang.String,java.lang.Double,java.lang.Double,java.lang.Float)">QRListDisplayContainer</a></span>&#8203;(java.lang.Integer&nbsp;score,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.Integer,java.lang.String,java.lang.Float)">QRListDisplayContainer</a></span>&#8203;(java.lang.Integer&nbsp;score,
                       java.lang.String&nbsp;id,
-                      java.lang.Double&nbsp;lat,
-                      java.lang.Double&nbsp;lon,
                       java.lang.Float&nbsp;distance)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -188,23 +186,8 @@ extends java.lang.Object</pre>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>java.lang.Double</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLat()">getLat</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>java.lang.Double</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLon()">getLon</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.lang.Integer</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getScore()">getScore</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setDistance(java.lang.Float)">setDistance</a></span>&#8203;(java.lang.Float&nbsp;distance)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -231,7 +214,7 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a id="&lt;init&gt;(java.lang.Integer,java.lang.String,java.lang.Double,java.lang.Double,java.lang.Float)">
+<a id="&lt;init&gt;(java.lang.Integer,java.lang.String,java.lang.Float)">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -239,8 +222,6 @@ extends java.lang.Object</pre>
 <h4>QRListDisplayContainer</h4>
 <pre>public&nbsp;QRListDisplayContainer&#8203;(java.lang.Integer&nbsp;score,
                               java.lang.String&nbsp;id,
-                              java.lang.Double&nbsp;lat,
-                              java.lang.Double&nbsp;lon,
                               java.lang.Float&nbsp;distance)</pre>
 </li>
 </ul>
@@ -272,40 +253,13 @@ extends java.lang.Object</pre>
 <pre class="methodSignature">public&nbsp;java.lang.String&nbsp;getId()</pre>
 </li>
 </ul>
-<a id="getLat()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getLat</h4>
-<pre class="methodSignature">public&nbsp;java.lang.Double&nbsp;getLat()</pre>
-</li>
-</ul>
-<a id="getLon()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getLon</h4>
-<pre class="methodSignature">public&nbsp;java.lang.Double&nbsp;getLon()</pre>
-</li>
-</ul>
 <a id="getDistance()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getDistance</h4>
-<pre class="methodSignature">public&nbsp;java.lang.Float&nbsp;getDistance()</pre>
-</li>
-</ul>
-<a id="setDistance(java.lang.Float)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>setDistance</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setDistance&#8203;(java.lang.Float&nbsp;distance)</pre>
+<h4>getDistance</h4>
+<pre class="methodSignature">public&nbsp;java.lang.Float&nbsp;getDistance()</pre>
 </li>
 </ul>
 </li>
