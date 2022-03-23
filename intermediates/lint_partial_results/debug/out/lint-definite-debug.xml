@@ -1331,12 +1331,12 @@
         message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="48"
+            line="54"
             column="12"
-            startOffset="1661"
-            endLine="48"
+            startOffset="1875"
+            endLine="54"
             endColumn="18"
-            endOffset="1667"/>
+            endOffset="1881"/>
     </incident>
 
     <incident
@@ -1428,34 +1428,6 @@
             endLine="79"
             endColumn="51"
             endOffset="2673"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRInfoActivity.java"
-            line="91"
-            column="49"
-            startOffset="3366"
-            endLine="91"
-            endColumn="80"
-            endOffset="3397"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="String literal in `setText` can not be translated. Use Android resources instead.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRInfoActivity.java"
-            line="91"
-            column="49"
-            startOffset="3366"
-            endLine="91"
-            endColumn="58"
-            endOffset="3375"/>
     </incident>
 
     <incident
