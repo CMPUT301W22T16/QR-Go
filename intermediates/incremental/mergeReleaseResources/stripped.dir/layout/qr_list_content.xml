@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_margin="10dp">
 
@@ -23,5 +24,17 @@
         android:layout_weight="1"
         android:gravity="center|right"
         />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/qr_del_button"
+        style="@style/Widget.Material3.Button.IconButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_weight="0"
+        android:paddingRight="0dp"
+        android:visibility="gone"
+        app:icon="@drawable/ic_baseline_delete_24"
+        app:iconSize="30dp" />
 
 </LinearLayout>
