@@ -20,6 +20,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class QRInfoActivity extends BaseActivity {
 
@@ -34,6 +36,10 @@ public class QRInfoActivity extends BaseActivity {
     private ListComments comment;
 //    private GeoLocation location;     // TODO: uncomment after GeoLocation is implemented
 
+    private Intent usersActivityIntent;
+
+    private ArrayList<String> scannedUsers;
+
     CommentsQR comments;
 
     ListView commentList;
@@ -47,8 +53,12 @@ public class QRInfoActivity extends BaseActivity {
         setContentView(R.layout.activity_qr_info);
         initializeNavbar();
 
+        usersActivityIntent = new Intent(QRInfoActivity.this, ScannedUsersActivity.class);
+
         db = new QRGoDBUtil(this);
         gameQRDBInst = FirebaseFirestore.getInstance();
+
+        scannedUsers = new ArrayList<>();
 
         TextView tvQRName = (TextView) findViewById(R.id.qrName);
         TextView tvQRLocation = (TextView) findViewById(R.id.qrLocation);
@@ -74,6 +84,7 @@ public class QRInfoActivity extends BaseActivity {
                                 for (DocumentSnapshot document : task.getResult()) {
                                     selectedQR = document.toObject(GameQRCode.class);
                                 }
+                                usersActivityIntent.putExtra("selectedQR", selectedQR);
 
                                 tvQRName.setText(selectedQR.getId());
 //                                tvQRLocation.setText(selectedQR.getGeoLocation().getAddress().toString());
@@ -117,9 +128,7 @@ public class QRInfoActivity extends BaseActivity {
 
 
     public void showUsersList(View view) {
-        Intent intent = new Intent(QRInfoActivity.this, ScannedUsersActivity.class);
-        intent.putExtra("QRid", selectedQRId);
-        startActivity(intent);
+        startActivity(usersActivityIntent);
     }
 
     /**

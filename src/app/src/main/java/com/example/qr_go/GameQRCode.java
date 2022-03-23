@@ -5,6 +5,7 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.regex.Matcher;
@@ -14,7 +15,7 @@ import java.util.regex.Pattern;
  * GameQRCode represents QR codes that players will scan to score points
  * Each GameQRCode contains a list of users that scanned it
  */
-public class GameQRCode extends QRCode {
+public class GameQRCode extends QRCode implements Serializable {
     private Integer score;
     private GeoLocation location;
     private HashMap<String, HashMap<String, String>> userIds;
