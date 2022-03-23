@@ -42,12 +42,14 @@ import java.util.Map;
 public class SearchActivity extends BaseActivity {
     private final int LOCATION_REQUEST_CODE = 101;
     private Location userLocation;
-    LocationManager locationManager;
+    private LocationManager locationManager;
     // String arrays holding the sorting options
     private String[] qrSortOptions = {"Score"};
     private final String[] playerSortOptions = {"Total Score", "# QR Codes", "Unique Score"};
     // Adapter for qr sort options as it may be updated with location
-    ArrayAdapter<String> qrSortOptionAdapter;
+    private ArrayAdapter<String> qrSortOptionAdapter;
+    // Fragment state adapter for tabs
+    private SearchFragmentStateAdapter searchPagerAdapter;
     // Current fragment being displayed
     private Integer currentFragment = 0;
     // Current position that sort spinner is selected as
@@ -70,7 +72,8 @@ public class SearchActivity extends BaseActivity {
 
     // Variable which determines if the current user is an owner
     private static Boolean isUserOwner;
-
+    // Variable which holds the userid of all owner users
+    private static ArrayList<String> ownerIds;
 
     @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
@@ -85,6 +88,9 @@ public class SearchActivity extends BaseActivity {
         playersColRef = db.collection("Players");
         qrColRef = db.collection("GameQRCodes");
 
+        // Initialize the ownerIds array
+        ownerIds = new ArrayList<>();
+
         // Determine if the current user is an owner first
         playersColRef.whereEqualTo("owner", true).get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
@@ -93,6 +99,7 @@ public class SearchActivity extends BaseActivity {
                 isUserOwner = false;
                 for(DocumentSnapshot snapshot : queryDocumentSnapshots) {
                     String userid = snapshot.get("userid", String.class);
+                    ownerIds.add(userid);
                     if (userid.equals(MapsActivity.getUserId())){
                         isUserOwner = true;
                     }
@@ -147,8 +154,7 @@ public class SearchActivity extends BaseActivity {
                 R.layout.spinner_item, playerSortOptionsDataList);
 
         Spinner sortOptionSpinner = (Spinner) findViewById(R.id.sort_spinner);
-        SearchFragmentStateAdapter searchPagerAdapter =
-                new SearchFragmentStateAdapter(this);
+        searchPagerAdapter = new SearchFragmentStateAdapter(this);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.search_tab_layout);
         ViewPager2 viewPager = (ViewPager2) findViewById(R.id.search_pager);
 
@@ -389,5 +395,32 @@ public class SearchActivity extends BaseActivity {
      */
     public static Boolean getUserOwner() {
         return isUserOwner;
+    }
+
+    /**
+     * @return All userids that are owners. Used for determining if they are deletable
+     */
+    public static ArrayList<String> getOwnerIds() {
+        return ownerIds;
+    }
+
+    /**
+     * Deletes the provided user from the activity's list and then forces the fragment to get the
+     * updated list
+     * @param user the user to delete
+     */
+    public void deleteUser(UserListDisplayContainer user) {
+        userDisplays.remove(user);
+        searchPagerAdapter.retrieveData(1);
+    }
+
+    /**
+     * Deletes the provided qr from the activity's list and then forces the fragment to get the
+     * updated list
+     * @param qr the qr to delete
+     */
+    public void deleteQR(QRListDisplayContainer qr) {
+        qrDisplays.remove(qr);
+        searchPagerAdapter.retrieveData(0);
     }
 }

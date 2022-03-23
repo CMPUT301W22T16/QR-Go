@@ -25,6 +25,7 @@ public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> impleme
     private Integer sortPos;
     private ArrayList<QRListDisplayContainer> allQrDisplays;
     private ArrayList<QRListDisplayContainer> qrDisplays;
+    private QRArrayAdapter adapter = this;
 
     public QRArrayAdapter(@NonNull Context context, ArrayList<QRListDisplayContainer> qrDisplays, Integer sortPos) {
         super(context, 0, qrDisplays);
@@ -57,6 +58,13 @@ public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> impleme
                 public void onClick(View v) {
                     // This is the id of the qr being deleted
                     String qrid = qrToDisplay.getId();
+                    QRGoDBUtil db = new QRGoDBUtil();
+                    qrDisplays.remove(qrToDisplay);
+                    allQrDisplays.remove(qrToDisplay);
+                    SearchActivity activity = (SearchActivity) context;
+                    activity.deleteQR(qrToDisplay);
+                    adapter.notifyDataSetChanged();
+                    db.deleteGameQRFromDB(qrid);
                 }
             });
         } else {
@@ -70,13 +78,13 @@ public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> impleme
             default:
                 Float distance =  qrToDisplay.getDistance();
                 String distanceString;
+                DecimalFormat df = new DecimalFormat("#.##");
+                df.setRoundingMode(RoundingMode.CEILING);
                 if (distance > 1000) {
-                    DecimalFormat df = new DecimalFormat("#.##");
-                    df.setRoundingMode(RoundingMode.CEILING);
                     Float distanceInKM = distance/1000;
                     distanceString = df.format(distanceInKM) + "km";
                 } else {
-                    distanceString = distance.toString() + "m";
+                    distanceString = df.format(distance) + "m";
                 }
                 scoreView.setText(distanceString + " away");
                 break;

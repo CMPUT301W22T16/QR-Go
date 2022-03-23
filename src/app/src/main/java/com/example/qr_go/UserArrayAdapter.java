@@ -1,5 +1,6 @@
 package com.example.qr_go;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +21,7 @@ public class UserArrayAdapter extends ArrayAdapter<UserListDisplayContainer> imp
     private ArrayList<UserListDisplayContainer> allUserDisplays;
     private ArrayList<UserListDisplayContainer> userDisplays;
     private Integer sortPos;
+    private UserArrayAdapter adapter = this;
 
     public UserArrayAdapter(@NonNull Context context, ArrayList<UserListDisplayContainer> userDisplays, Integer sortPos) {
         super(context, 0, userDisplays);
@@ -43,14 +45,23 @@ public class UserArrayAdapter extends ArrayAdapter<UserListDisplayContainer> imp
         TextView usernameView = view.findViewById(R.id.username_view);
         TextView scoreView = view.findViewById(R.id.user_score_view);
 
-        // Show the delete button if the current user is an owner
-        if (SearchActivity.getUserOwner()) {
+        // Show the delete button if the current user is an owner and the listed user is not an
+        // owner
+        if (SearchActivity.getUserOwner() && !SearchActivity.getOwnerIds().contains(userToDisplay.getUserid())) {
             delButton.setVisibility(View.VISIBLE);
             delButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     // This is the id of the user being deleted
                     String userid = userToDisplay.getUserid();
+                    // Delete the user from all lists in the activity and the database
+                    QRGoDBUtil db = new QRGoDBUtil();
+                    userDisplays.remove(userToDisplay);
+                    allUserDisplays.remove(userToDisplay);
+                    SearchActivity activity = (SearchActivity) context;
+                    activity.deleteUser(userToDisplay);
+                    adapter.notifyDataSetChanged();
+                    db.deletePlayerFromDB(userid);
                 }
             });
         } else {
