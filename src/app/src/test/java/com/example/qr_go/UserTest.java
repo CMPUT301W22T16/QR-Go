@@ -34,11 +34,11 @@ public class UserTest {
         GameQRCode qr = new GameQRCode("test");
         testUser.addQRCode(qr);
         Integer prevSize = testUser.getScannedQRCodeIds().size();
-        testUser.deleteQRCode(qr);
+        testUser.deleteQRCode(qr.getId());
         // Test that the number of scanned qr codes decreases
         assertEquals(prevSize-1, testUser.getScannedQRCodeIds().size());
         // Test that the user does not delete qr codes it does not have
-        assertFalse(testUser.deleteQRCode(qr));
+        assertFalse(testUser.deleteQRCode(qr.getId()));
     }
 
     @Test
@@ -54,7 +54,7 @@ public class UserTest {
         testUser.addQRCode(qr3);
         // Test that it gets total score of added values
         assertEquals(sumScores, testUser.getTotalScore());
-        testUser.deleteQRCode(qr1);
+        testUser.deleteQRCode(qr1.getId());
         sumScores -= qr1.getScore();
         // Test that it gets total score after deleted values
         assertEquals(sumScores, testUser.getTotalScore());
@@ -83,7 +83,7 @@ public class UserTest {
         testUser.addQRCode(qr3);
         // Test that it gets total score of added values
         assertEquals(currentMax, testUser.getHighestUniqueScore());
-        testUser.deleteQRCode(qrlist[maxIndex]);
+        testUser.deleteQRCode(qrlist[maxIndex].getId());
         // Test that it gets total score after deleted values
         assertNotEquals(currentMax, testUser.getHighestUniqueScore());
         assertTrue(testUser.getHighestUniqueScore() <= currentMax);

@@ -40,7 +40,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class PlayerInfoActivity extends AppCompatActivity {
+
+public class PlayerInfoActivity extends BaseActivity {
     private LocationManager locationManager;
     private LocationListener locationListener;
     private Location userLocation;
@@ -65,6 +66,7 @@ public class PlayerInfoActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player_info);
+        initializeNavbar();
         Intent intent = getIntent();
         String selectedPlayerID = intent.getStringExtra("SELECTED_USER");
         playerQRCodes = new HashMap<String, Integer>();

@@ -1,5 +1,6 @@
 package com.example.qr_go;
 
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Build;
 import android.util.Log;
@@ -16,71 +17,69 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.Callable;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 /**
  * LoginQRCode is the QR code that users can use to login to their account on another device
  */
-public class LoginQRCode extends QRCode implements  GeneratesNewQR {
+public class LoginQRCode extends QRCode implements GeneratesNewQR {
     static String QR_IDENTIFIER = "login-qr-code-"; // should be pre-pended to all LoginQRCodes
-    User user;
-    /**
-     * On create, convert qr content to hash
-     * @param user string content of qr code
-     */
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    public LoginQRCode(User user)  {
-        super(user.getUserid()+"\n"+user.getPassword());
-        this.user = user;
-    }
+    private String uid;
+    private String password;
+
     /**
      * QR code
+     *
      * @param qrCodeContents text contents scanned from QR code
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public LoginQRCode(String qrCodeContents)  {
+    public LoginQRCode(String qrCodeContents) {
         /* Constructor expected to be called when creating LoginQRCode for verifying if loginQR is
            correct, i.e., isLoginValid is called, this constructor could also not exist and
            isLoginValid could be a static method */
         super(qrCodeContents);
-        // Split by `\n` and get new user
-        String[] usernamePassword = qrCodeContents.split("\n");
+        qrCodeContents = qrCodeContents.replaceFirst("^" + QR_IDENTIFIER, "");
+        // turn qrCodeContent into uid and password
+        // assuming form of id + "\n" + password
+        String[] input = qrCodeContents.split("\n");
+        uid = input[0];
+        password = input[1];
     }
 
 
     /**
      * Validates if login QR code and password is valid
+     *
      * @return whether qr code is valid
      */
-    public boolean isLoginValid(String qrCodeContent) {
-        // turn qrCodeContent into uid and password
-        // assuming form of id + "\n" + password
-        String[] input = qrCodeContent.split("\n");
-        String uid = input[0];
-        String password = input[1];
-
+    public void isLoginValid(Consumer<String> successCb, Consumer<String> failureCb) {
         // check database to see if user id and password exist
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        DocumentReference docRef = db.collection("Users").document(uid); // correct name?
-        Map<String, Object> data = new HashMap<>();
+        DocumentReference docRef = db.collection("Players").document(uid);
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if (task.isSuccessful()) {
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
-                        Log.d("SUCCESS", "DocumentSnapshot data: " + document.getData());
-                        data.put("password", document.getData().get("password"));
+                        String dbPassword = (String) document.getData().get("password");
+                        if (password.equals(dbPassword)){
+                            successCb.accept("Login is valid");
+                        }else{
+                            failureCb.accept("Invalid username and/or password");
+                        }
                     } else {
-                        Log.d("FAILURE", "No such document");
+                        // User does not exist
+                        failureCb.accept("User does not exist");
                     }
                 } else {
                     Log.d("FAILURE", "get failed with ", task.getException());
+                    failureCb.accept("Database fetch failed");
                 }
             }
         });
-
-        // return result
-        return (data.get("password").equals(password));
     }
 
     /***
@@ -88,8 +87,22 @@ public class LoginQRCode extends QRCode implements  GeneratesNewQR {
      * @return QR code to display
      */
     @Override
-    public Bitmap getQRCode(){
-        return encodeToQrCode(user.getUserid()+"\n"+user.getPassword(), 100, 100);
+    public Bitmap getQRCode() {
+        // qr data is the identifier and then the userid and password
+        return encodeToQrCode(QR_IDENTIFIER + uid + "\n" + password, 800, 800);
     }
 
+    /**
+     * @return user's id
+     */
+    public String getUserId() {
+        return uid;
+    }
+
+    /**
+     * @return user's password
+     */
+    public String getPassword() {
+        return password;
+    }
 }

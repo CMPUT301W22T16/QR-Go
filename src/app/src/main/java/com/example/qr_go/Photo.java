@@ -15,5 +15,6 @@ public class Photo {
     protected byte[] image;
     Photo(byte[] image){
         this.image = image;
+
     }
 }

@@ -14,11 +14,11 @@ public class Player extends User {
     /**
      * Constructor for player class
      */
-    private boolean isInvisable;
+    private boolean deleted;
     @RequiresApi(api = Build.VERSION_CODES.O)
     public Player()   {
         super();
-        boolean isInvisable = false;
+        boolean deleted = false;
     }
 
     /**
@@ -27,7 +27,7 @@ public class Player extends User {
     @RequiresApi(api = Build.VERSION_CODES.O)
     public Player(String uuid, String password, String username, String email) {
         super(uuid, password, username, email);
-        boolean isInvisable = false;
+        boolean deleted = false;
     }
 
     /**
@@ -40,11 +40,11 @@ public class Player extends User {
     /**
      * @return if the player is deleted
      */
-    public Boolean isDeleted(){ return isInvisable;}
+    public Boolean isDeleted(){ return deleted;}
     /**
      * flags the player as deleted
      */
-    public void deletePlayer(){isInvisable = true;}
+    public void deletePlayer(){deleted = true;}
 
 
 }

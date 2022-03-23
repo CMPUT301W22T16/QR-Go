@@ -1,5 +1,7 @@
 package com.example.qr_go;
 import android.app.Activity;
+import android.content.Intent;
+
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.rule.ActivityTestRule;
 
@@ -27,10 +29,33 @@ public class MapsActivityTest {
     }
 
     @Test
-    public void testLaunchQRCodeScanner() {
-        // Test back button
+    public void testLaunchSearchActivity() {
+        solo.clickOnMenuItem("Search");
+        solo.assertCurrentActivity("Not in Search Activity", SearchActivity.class);
+    }
+
+    @Test
+    public void testLaunchMyQRCodesActivity() {
+        solo.clickOnMenuItem("My Codes");
+        solo.assertCurrentActivity("Not in My Codes Activity", MyQRCodesActivity.class);
+    }
+
+    @Test
+    public void testLaunchMapsActivity() {
+        solo.clickOnMenuItem("Home");
+        solo.assertCurrentActivity("Not in Maps Activity", MapsActivity.class);
+    }
+
+    @Test
+    public void testLaunchQRCodeScannerActivity() {
         solo.clickOnMenuItem("Scan Code");
         solo.assertCurrentActivity("Not in QR Code Scanner Activity", QRCodeScannerActivity.class);
+    }
+
+    @Test
+    public void testLaunchPlayerProfileActivity() {
+        solo.clickOnMenuItem("My Account");
+        solo.assertCurrentActivity("Not in My Account Activity", PlayerProfileActivity.class);
     }
 
     @After

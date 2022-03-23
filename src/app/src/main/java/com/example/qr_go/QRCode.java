@@ -25,7 +25,7 @@ import java.util.Base64;
  */
 public class QRCode {
     protected String hash;
-    private boolean isInvisable;
+    private boolean deleted;
     /**
      * QR code
      *
@@ -43,10 +43,10 @@ public class QRCode {
         } catch (NoSuchAlgorithmException e) {
             this.hash = null;
         }
-        boolean isInvisable = false;
+        boolean deleted = false;
 
     }
-    public QRCode(){boolean isInvisable = false; }
+    public QRCode(){boolean deleted = false; }
 
     /**
      * Converts bytes[] from SHA-256 hashing into string
@@ -81,8 +81,8 @@ public class QRCode {
 
     /**
      * Converts plain text to a QR code
-     * https://stackoverflow.com/a/27010646
-     *
+     * Source: https://stackoverflow.com/a/27010646
+     *      Author: Stephen Paul https://stackoverflow.com/users/1087131/stephen-paul
      * @param text   text to encode as QR code
      * @param width  width of QR code
      * @param height height of QR code
@@ -92,7 +92,7 @@ public class QRCode {
         QRCodeWriter writer = new QRCodeWriter();
         BitMatrix matrix = null;
         try {
-            matrix = writer.encode(text, BarcodeFormat.QR_CODE, 100, 100);
+            matrix = writer.encode(text, BarcodeFormat.QR_CODE, width, height);
         } catch (WriterException ex) {
             ex.printStackTrace();
         }
@@ -104,6 +104,6 @@ public class QRCode {
         }
         return bmp;
     }
-    public Boolean isDeleted(){ return isInvisable;}
-    public void deleteQR(){isInvisable = true;}
+    public Boolean isDeleted(){ return deleted;}
+    public void deleteQR(){deleted = true;}
 }

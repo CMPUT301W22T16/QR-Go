@@ -40,88 +40,61 @@ import java.util.Map;
 /**
  * MainActivity
  */
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity extends BaseActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private static String currentUUID;
+    private static String userPassword;
     public static FirebaseFirestore db;
+    private SharedPreferences loggedUser;
     protected LocationManager locationManager;
     protected LocationListener locationListener;
 
-
-    CollectionReference collectionReference;
     ArrayList<GeoLocation> geoLocationList;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        geoLocationList = new ArrayList<GeoLocation>();
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_maps);
+        initialize(); // initialize app on launch
+        initializeNavbar();
+
+
+        geoLocationList = new ArrayList<GeoLocation>();
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+    }
 
-        // Initialize FireStore database
-        db = FirebaseFirestore.getInstance();
-        collectionReference = db.collection("TEST");
-        HashMap<String, String> data = new HashMap<>();
-        data.put("TEST KEY", "TEST VALUE");
-        collectionReference.document("DOCUMENT").set(data).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                Log.d("SUCCESS", "Data has been added successfully!");
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Log.d("FAILURE", "Data could not be added: " + e.toString());
-            }
-        });
+    /**
+     * Initialize app on launch
+     * Connect to database
+     * Check user login
+     */
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    private void initialize() {
+        // Initialize FireStore database if it is already null
+        if (db == null) db = FirebaseFirestore.getInstance();
 
         // Log in the user or create a new user
-        SharedPreferences loggedUser = this.getSharedPreferences(User.CURRENT_USER, MODE_PRIVATE);
-        currentUUID = loggedUser.getString(User.USER_ID, null);
-        if (currentUUID == null) {
-            User newUser = new Player();
-            currentUUID = newUser.getUserid();
-            SharedPreferences.Editor ed = loggedUser.edit();
-            ed.putString(User.USER_ID, currentUUID);
-            ed.apply(); // apply changes
-            // Save user to the firestore database
-            db.collection("Players").document(newUser.getUserid()).set(newUser);
-        }
-
-        // Set onClick for BottomNavigation nav items
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav_view);
-        bottomNavigationView.getMenu().getItem(0).setCheckable(false); // don't select first item by default
-        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                int id = item.getItemId();
-                switch (id) {
-                    case R.id.nav_search:
-                        startActivity(new Intent(MapsActivity.this, SearchActivity.class));
-                        break;
-                    case R.id.nav_my_codes:
-                        startActivity(new Intent(MapsActivity.this, MyQRCodesActivity.class));
-                        break;
-                    case R.id.nav_scan_code:
-                        startActivity(new Intent(MapsActivity.this, QRCodeScannerActivity.class));
-                        break;
-                    case R.id.nav_my_account:
-                        startActivity(new Intent(MapsActivity.this, PlayerProfileActivity.class));
-                        break;
-                }
-                return true;
+        if (loggedUser == null) {
+            loggedUser = this.getSharedPreferences(User.CURRENT_USER, MODE_PRIVATE);
+            currentUUID = loggedUser.getString(User.USER_ID, null);
+            userPassword = loggedUser.getString(User.USER_PWD, null);
+            if (currentUUID == null) {
+                User newUser = new Player();
+                currentUUID = newUser.getUserid();
+                userPassword = newUser.getPassword();
+                SharedPreferences.Editor ed = loggedUser.edit();
+                ed.putString(User.USER_ID, currentUUID);
+                ed.putString(User.USER_PWD, userPassword);
+                ed.apply(); // apply changes
+                // Save user to the firestore database
+                db.collection("Players").document(newUser.getUserid()).set(newUser);
             }
-        });
-        QRGoDBUtil db = new QRGoDBUtil();
-        db.test3();
-
+        }
     }
 
     /**
@@ -147,33 +120,37 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     // code from https://stackoverflow.com/questions/65465335/get-specific-field-from-firestore-with-whereequalto
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         Map tempMap = new HashMap<>();
-                        if(task.isSuccessful()) {
+                        if (task.isSuccessful()) {
 
-                            for(QueryDocumentSnapshot document : task.getResult()) {
-                                GeoLocation tempGeoLocation = new GeoLocation((String)document.get("id"));
-                                tempMap = (Map)document.get("geoLocation");
-                                if(tempMap.containsKey("latitude")) {
-                                    tempGeoLocation.setCoords((Double)tempMap.get("longitude"),(Double)tempMap.get("latitude"));
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                GeoLocation tempGeoLocation = new GeoLocation((String) document.get("id"));
+                                tempMap = (Map) document.get("geoLocation");
+                                if (tempMap.containsKey("latitude")) {
+                                    tempGeoLocation.setCoords((Double) tempMap.get("longitude"), (Double) tempMap.get("latitude"));
                                     geoLocationList.add(tempGeoLocation);
                                 }
-
                             }
                         }
-                        for(int i = 0; i< geoLocationList.size(); i++){
+                        for (int i = 0; i < geoLocationList.size(); i++) {
                             LatLng newLoc = new LatLng(geoLocationList.get(i).getLatitude(), geoLocationList.get(i).getLongitude());
                             mMap.addMarker(new MarkerOptions().position(newLoc).title("NewMarker"));
                         }
                     }
-
-
                 });
-
     }
 
     /**
      * Get user id of currently logged in user
      */
-    public static String getUserId(){
+    public static String getUserId() {
         return currentUUID;
     }
+
+    /**
+     * Get password of currently logged in user
+     */
+    public static String getPassword() {
+        return userPassword;
+    }
+
 }

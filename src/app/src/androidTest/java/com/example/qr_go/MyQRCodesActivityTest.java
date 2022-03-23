@@ -34,7 +34,6 @@ public class MyQRCodesActivityTest {
         solo.assertCurrentActivity("Not in QR Info Activity", QRInfoActivity.class);
         solo.clickOnButton("See other players >");
         solo.assertCurrentActivity("Not in ScannedUsersActivity Activity", ScannedUsersActivity.class);
-
     }
 
     @After
