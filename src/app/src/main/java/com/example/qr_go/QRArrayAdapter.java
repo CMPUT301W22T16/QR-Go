@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.TextView;
@@ -24,6 +25,7 @@ public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> impleme
     private Integer sortPos;
     private ArrayList<QRListDisplayContainer> allQrDisplays;
     private ArrayList<QRListDisplayContainer> qrDisplays;
+    private QRArrayAdapter adapter = this;
 
     public QRArrayAdapter(@NonNull Context context, ArrayList<QRListDisplayContainer> qrDisplays, Integer sortPos) {
         super(context, 0, qrDisplays);
@@ -43,9 +45,31 @@ public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> impleme
             view = LayoutInflater.from(context).inflate(R.layout.qr_list_content, parent, false);
         }
 
+        Button delButton = (Button) view.findViewById(R.id.qr_del_button);
         TextView idView = view.findViewById(R.id.qr_id_view);
         TextView scoreView = view.findViewById(R.id.qr_score_view);
         idView.setText(qrToDisplay.getId().substring(0, 8));
+
+        // Show the delete button if the current user is an owner
+        if (SearchActivity.getUserOwner()) {
+            delButton.setVisibility(View.VISIBLE);
+            delButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // This is the id of the qr being deleted
+                    String qrid = qrToDisplay.getId();
+                    QRGoDBUtil db = new QRGoDBUtil();
+                    qrDisplays.remove(qrToDisplay);
+                    allQrDisplays.remove(qrToDisplay);
+                    SearchActivity activity = (SearchActivity) context;
+                    activity.deleteQR(qrToDisplay);
+                    adapter.notifyDataSetChanged();
+                    db.deleteGameQRFromDB(qrid);
+                }
+            });
+        } else {
+            delButton.setVisibility(View.GONE);
+        }
 
         switch(sortPos) {
             case 0:
@@ -54,13 +78,13 @@ public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> impleme
             default:
                 Float distance =  qrToDisplay.getDistance();
                 String distanceString;
+                DecimalFormat df = new DecimalFormat("#.##");
+                df.setRoundingMode(RoundingMode.CEILING);
                 if (distance > 1000) {
-                    DecimalFormat df = new DecimalFormat("#.##");
-                    df.setRoundingMode(RoundingMode.CEILING);
                     Float distanceInKM = distance/1000;
                     distanceString = df.format(distanceInKM) + "km";
                 } else {
-                    distanceString = distance.toString() + "m";
+                    distanceString = df.format(distance) + "m";
                 }
                 scoreView.setText(distanceString + " away");
                 break;
