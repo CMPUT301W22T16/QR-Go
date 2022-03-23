@@ -986,29 +986,6 @@
     </incident>
 
     <incident
-        id="TextFields"
-        severity="warning"
-        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="50"
-            column="9"
-            startOffset="1868"
-            endLine="50"
-            endColumn="43"
-            endOffset="1902"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="45"
-            column="9"
-            startOffset="1679"
-            endLine="45"
-            endColumn="39"
-            endOffset="1709"
-            message="id defined here"/>
-    </incident>
-
-    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -1034,6 +1011,29 @@
             endLine="44"
             endColumn="14"
             endOffset="1670"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="50"
+            column="9"
+            startOffset="1868"
+            endLine="50"
+            endColumn="43"
+            endOffset="1902"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="45"
+            column="9"
+            startOffset="1679"
+            endLine="45"
+            endColumn="39"
+            endOffset="1709"
+            message="id defined here"/>
     </incident>
 
     <incident
@@ -1140,12 +1140,12 @@
         message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
-            line="13"
+            line="14"
             column="9"
-            startOffset="481"
-            endLine="13"
+            startOffset="537"
+            endLine="14"
             endColumn="29"
-            endOffset="501"/>
+            endOffset="557"/>
     </incident>
 
     <incident
@@ -1154,12 +1154,12 @@
         message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
-            line="22"
+            line="23"
             column="9"
-            startOffset="751"
-            endLine="22"
+            startOffset="807"
+            endLine="23"
             endColumn="29"
-            endOffset="771"/>
+            endOffset="827"/>
     </incident>
 
     <incident
@@ -1168,12 +1168,12 @@
         message="Invalid layout param in a `LinearLayout`: `layout_alignParentRight`">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
-            line="33"
+            line="34"
             column="9"
-            startOffset="1150"
-            endLine="33"
+            startOffset="1206"
+            endLine="34"
             endColumn="47"
-            endOffset="1188"/>
+            endOffset="1244"/>
     </incident>
 
     <incident
@@ -1182,12 +1182,12 @@
         message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
-            line="13"
+            line="14"
             column="9"
-            startOffset="484"
-            endLine="13"
+            startOffset="540"
+            endLine="14"
             endColumn="29"
-            endOffset="504"/>
+            endOffset="560"/>
     </incident>
 
     <incident
@@ -1196,12 +1196,12 @@
         message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
-            line="22"
+            line="23"
             column="9"
-            startOffset="756"
-            endLine="22"
+            startOffset="812"
+            endLine="23"
             endColumn="29"
-            endOffset="776"/>
+            endOffset="832"/>
     </incident>
 
     <incident
@@ -1210,12 +1210,12 @@
         message="Invalid layout param in a `LinearLayout`: `layout_alignParentRight`">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
-            line="33"
+            line="34"
             column="9"
-            startOffset="1157"
-            endLine="33"
+            startOffset="1213"
+            endLine="34"
             endColumn="47"
-            endOffset="1195"/>
+            endOffset="1251"/>
     </incident>
 
     <incident
