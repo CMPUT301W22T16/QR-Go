@@ -7,7 +7,6 @@ import androidx.annotation.RequiresApi;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -25,7 +24,7 @@ public class GameQRCode extends QRCode {
      * gets the hash from the qr content,
      * and calculates the score from the hash
      *
-     * @param qrCodeContents
+     * @param qrCodeContents hash value
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
     public GameQRCode(String qrCodeContents) {
