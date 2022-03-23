@@ -2861,8 +2861,6 @@ id guideline
 id header_title
 id hideable
 id highestScoreData
-id highestScoreLayout
-id highest_score
 id home
 id homeAsUp
 id honorRequest
@@ -2904,8 +2902,6 @@ id list_item
 id locale
 id location_checkbox
 id lowestScoreData
-id lowestScoreLayout
-id lowest_score
 id ltr
 id map
 id masked
