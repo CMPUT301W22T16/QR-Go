@@ -1459,6 +1459,34 @@
     </incident>
 
     <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRInfoActivity.java"
+            line="91"
+            column="49"
+            startOffset="3366"
+            endLine="91"
+            endColumn="80"
+            endOffset="3397"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRInfoActivity.java"
+            line="91"
+            column="49"
+            startOffset="3366"
+            endLine="91"
+            endColumn="58"
+            endOffset="3375"/>
+    </incident>
+
+    <incident
         id="DefaultLocale"
         severity="warning"
         message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">

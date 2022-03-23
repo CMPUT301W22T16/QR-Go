@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.qr_go.CommentsQRTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-03-23T21:52:40" hostname="fv-az82-726" time="0.002">
+<testsuite name="com.example.qr_go.CommentsQRTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-03-23T21:55:58" hostname="fv-az131-232" time="0.002">
   <properties/>
   <testcase name="testCommentListSize" classname="com.example.qr_go.CommentsQRTest" time="0.001"/>
   <testcase name="testSetMessage" classname="com.example.qr_go.CommentsQRTest" time="0.001"/>
