@@ -7,7 +7,6 @@ import androidx.annotation.RequiresApi;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -20,13 +19,12 @@ public class GameQRCode extends QRCode {
     private GeoLocation location;
     private HashMap<String, HashMap<String, String>> userIds;
 
-
     /**
      * When creating a new GameQRCode, initialize the list of userIds
      * gets the hash from the qr content,
      * and calculates the score from the hash
      *
-     * @param qrCodeContents
+     * @param qrCodeContents hash value
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
     public GameQRCode(String qrCodeContents) {
@@ -104,14 +102,11 @@ public class GameQRCode extends QRCode {
         details.put("Username", user.getUsername());
         userIds.put(user.getUserid(), details);
     }
+    public void deleteUser(String userid){
+        userIds.remove(userid);
+    }
     public ArrayList<String> getUserObjects(){
-        ArrayList<String> out= new ArrayList<String>();
-        for (Map.Entry<String, HashMap<String, String>> details:userIds.entrySet() ){
-            HashMap<String, String> temp = details.getValue();
-            String Username = temp.get("Username");
-            out.add(Username);
-        }
-        return out;
+        return new ArrayList<>(userIds.keySet());
     }
 
     /**

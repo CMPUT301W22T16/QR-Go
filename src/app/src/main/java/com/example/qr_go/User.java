@@ -5,7 +5,9 @@ import android.util.Pair;
 
 import androidx.annotation.RequiresApi;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 /**
@@ -82,13 +84,12 @@ public abstract class User {
     /**
      * Deletes a QR code to the user's list of scanned QR codes and subtracts its score from the
      * user's total
-     * @param qr GameQRCode object which is to be removed from the player's list of scanned QRs
+     * @param qrID the ID of the gameQRcode
      * @return true if the qr code was successfully deleted, false otherwise
      */
-    public Boolean deleteQRCode(GameQRCode qr) {
-        String qrID = qr.getId();
+    public Boolean deleteQRCode(String qrID) {
         if (scannedQRCodeIds.containsKey(qrID)) {
-            scannedQRCodeIds.remove(qr.getId());
+            scannedQRCodeIds.remove(qrID);
             return true;
         }
         return false;

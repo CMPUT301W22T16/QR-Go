@@ -3,16 +3,14 @@ package com.example.qr_go;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
 
 /**
  * Custom conatiner for comments, used for database interface, and can be translated to an arraylist for the android adapter
  * this is the revised version of comments container, originally Matthew's work
- * @Author Darius Fang
+ * @author Darius Fang
  */
 public class CommentsQR {
     private HashMap<String, HashMap<String, String>> comments;
-    private String qrid;
     // TODO: add qrid to constructor
     public CommentsQR(User user, String message, String photolink) {
         this.comments = new HashMap<>();
@@ -77,7 +75,7 @@ public class CommentsQR {
      * @return ArrayList<Comment>
      */
     public ArrayList<Comment> getCommentObjects(){
-        ArrayList<Comment> out= new ArrayList<Comment>();
+        ArrayList<Comment> out= new ArrayList<>();
         for (Map.Entry<String, HashMap<String, String>> details:comments.entrySet() ){
             HashMap<String, String> temp = details.getValue();
             Comment comment = new Comment(temp.get("Username"), temp.get("Message"));
