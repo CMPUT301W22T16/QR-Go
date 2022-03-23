@@ -6,7 +6,7 @@
     android:layout_margin="10dp">
 
     <TextView
-        android:id="@+id/user_qr_id_view"
+        android:id="@+id/qr_id_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="12345"
@@ -15,7 +15,7 @@
         />
 
     <TextView
-        android:id="@+id/user_qr_score_view"
+        android:id="@+id/qr_score_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="12345"

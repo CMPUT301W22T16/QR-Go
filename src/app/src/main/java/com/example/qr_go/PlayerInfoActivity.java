@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +28,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -36,6 +38,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class PlayerInfoActivity extends AppCompatActivity {
     private LocationManager locationManager;
@@ -45,9 +48,12 @@ public class PlayerInfoActivity extends AppCompatActivity {
     private HashMap<String,Integer> playerQRCodes;
     private QRArrayAdapter qrAdapter;
     private ArrayList<QRListDisplayContainer> qrDisplays;
-    private ArrayAdapter<String> qrCodeList;
+    private ArrayList<String> qrCodeList;
     private QRListDisplayContainer qrCont;
-    FirebaseFirestore playerDBInst;
+    private ListView userQRList;
+    private ArrayList<String> testIDLIST;
+    CollectionReference playerDBInst;
+    CollectionReference qrDBInst;
     View view;
 
 
@@ -59,11 +65,12 @@ public class PlayerInfoActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player_info);
-
         Intent intent = getIntent();
         String selectedPlayerID = intent.getStringExtra("SELECTED_USER");
         playerQRCodes = new HashMap<String, Integer>();
-
+        testIDLIST = new ArrayList<String>();
+        userQRList = findViewById(R.id.user_qr_list);
+        qrDisplays = new ArrayList<QRListDisplayContainer>();
         TextView playernameText = findViewById(R.id.playerNameText);
         TextView qrNumText = findViewById(R.id.numOfQRCodes);
         TextView totalScoreText = findViewById(R.id.playerTotalScore);
@@ -71,9 +78,10 @@ public class PlayerInfoActivity extends AppCompatActivity {
         TextView lowestScoreText = findViewById(R.id.playerLowScore);
         TextView playerEmailText = findViewById(R.id.playerEmail);
 
-        playerDBInst = FirebaseFirestore.getInstance();
+        playerDBInst = FirebaseFirestore.getInstance().collection("Players");
 
-        playerDBInst.collection("Players")
+
+        playerDBInst
                 .whereEqualTo("userid", selectedPlayerID)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -84,7 +92,18 @@ public class PlayerInfoActivity extends AppCompatActivity {
 
                             for (DocumentSnapshot document : task.getResult()) {
                                 selectedPlayer = document.toObject(Player.class);
-                                //playerQRCodes = document.
+
+                            }
+                            Set<String> idSet = selectedPlayer.getScannedQRCodeIds().keySet();
+                            qrCodeList = new ArrayList<String>(idSet);
+                            for(int i = 0; i < qrCodeList.size(); i++) {
+                                QRListDisplayContainer qrToDisplay =
+                                        new QRListDisplayContainer(
+                                                selectedPlayer.getScannedQRCodeIds().get(qrCodeList.get(i)),
+                                                qrCodeList.get(i),
+                                                null
+                                        );
+                                qrDisplays.add(qrToDisplay);
                             }
                             playernameText.setText(selectedPlayer.getUsername());
                             highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
@@ -94,86 +113,21 @@ public class PlayerInfoActivity extends AppCompatActivity {
                             playerEmailText.setText(selectedPlayer.getEmail());
 
 
+
+
+                            qrAdapter = new QRArrayAdapter(PlayerInfoActivity.this, qrDisplays, 0);
+                            userQRList.setAdapter(qrAdapter);
+
+
+
                         }
                     }
                 });
 
-        // borrowed from marco but it doesn't work and I'm currently crying because he did a really good job at putting it together and i have no idea how to
-        // integrate it ://///
-        playerQRCodes = selectedPlayer.getScannedQRCodeIds();
-        for(int i = 0; i < playerQRCodes.size(); i++) {
-            playerDBInst.collection("QRCodes").
-                    whereNotEqualTo("deleted", true).
-                    whereEqualTo("id", playerQRCodes.get(i)).
-                    get().
-                    addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                        @Override
-                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                            qrDisplays.clear();
-                            for(DocumentSnapshot snapshot : queryDocumentSnapshots) {
-                                Float distance;
-                                Map qrLocationMap = (Map) snapshot.get("geoLocation");
-                                // If no recorded location, set distance as null, else calculate the distance
-                                if (qrLocationMap == null || userLocation == null) {
-                                    distance = null;
-                                } else {
-                                    Double qrLat = (Double) qrLocationMap.get("latitude");
-                                    Double qrLon = (Double) qrLocationMap.get("longitude");
-                                    Location qrLocation = new Location("qr");
-                                    qrLocation.setLatitude(qrLat);
-                                    qrLocation.setLongitude(qrLon);
-                                    distance = qrLocation.distanceTo(userLocation);
-                                }
-                                QRListDisplayContainer qrToDisplay =
-                                        new QRListDisplayContainer(
-                                                snapshot.get("score", Integer.class),
-                                                snapshot.get("id", String.class),
-                                                distance
-                                        );
-                                qrDisplays.add(qrToDisplay);
-                            }
-                            // Update the fragments after getting documents is done
-                            searchPagerAdapter.updateSort(currentFragment, sortPosition);
-
-                        }
-                    });
-
         }
 
-        qrCont = new QRListDisplayContainer();
-        qrAdapter = new QRArrayAdapter(view.getContext(), qrDisplays, sortPos);
-        qrListView.setAdapter(qrAdapter);
 
 
-
-//        for(int i = 0; i < myQRCodeIDs.size(); i++) {
-//            //Create loop to grab and instantiate all QR codes scanned by a player
-//            playerDBInst.collection("GameQRCodes")
-//                    .whereEqualTo(myQRCodeIDs.get(i), selectedPlayerID)
-//                    .get()
-//                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-//                        @RequiresApi(api = Build.VERSION_CODES.O)
-//                        @Override
-//                        // code from https://stackoverflow.com/questions/65465335/get-specific-field-from-firestore-with-whereequalto
-//                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
-//                            if (task.isSuccessful()) {
-//                                for (QueryDocumentSnapshot document : task.getResult()) {
-//                                    GameQRCode tempQR = new GameQRCode((String)document.getData().get("hash"));
-//                                    myQRCodes.add(tempQR);
-//                                    //get highest scoring QR
-//                                }
-//                            }
-//                        }
-//                    });
-//        }
-
-
-
-
-
-
-
-    }
 
     @SuppressLint("MissingPermission")
     @RequiresApi(api = Build.VERSION_CODES.P)
