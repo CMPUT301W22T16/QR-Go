@@ -78,6 +78,29 @@ public class MyQRCodesActivity extends BaseActivity {
                             lowestQRCode = selectedPlayer.getLowestQRCode();
                             lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(0, 8));
                             lowestScoreQrScoreText.setText("Score: " + lowestQRCode.getValue().toString());
+
+                            // dont have a listener if no QR codes are available
+                            if (highestQRCode.getValue() != 0) {
+                                highestScoreLayout.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        Intent intent = new Intent(view.getContext(), QRInfoActivity.class);
+                                        intent.putExtra("QRid", highestQRCode.getKey());
+                                        view.getContext().startActivity(intent);
+                                    }
+                                });
+                            }
+                            // dont have a listener if no QR codes are available
+                            if (lowestQRCode.getValue() != 0){
+                                lowestScoreLayout.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        Intent intent = new Intent(view.getContext(), QRInfoActivity.class);
+                                        intent.putExtra("QRid", lowestQRCode.getKey());
+                                        view.getContext().startActivity(intent);
+                                    }
+                                });
+                            }
                         }
                     }
                 });
@@ -91,24 +114,6 @@ public class MyQRCodesActivity extends BaseActivity {
 //                QRCode selectedGame = gameDataList.get(position);
 //                intent.putExtra("selectedGameID", selectedGame.getID());
                 startActivity(intent);
-            }
-        });
-
-        highestScoreLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), QRInfoActivity.class);
-                intent.putExtra("QRid", highestQRCode.getKey());
-                view.getContext().startActivity(intent);
-            }
-        });
-
-        lowestScoreLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), QRInfoActivity.class);
-                intent.putExtra("QRid", lowestQRCode.getKey());
-                view.getContext().startActivity(intent);
             }
         });
 
