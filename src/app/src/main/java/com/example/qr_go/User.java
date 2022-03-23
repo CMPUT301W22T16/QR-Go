@@ -168,7 +168,22 @@ public abstract class User {
                 return entry;
             }
         }
-        return null;
+        return new Map.Entry<String, Integer>() {
+            @Override
+            public String getKey() {
+                return "          ";
+            }
+
+            @Override
+            public Integer getValue() {
+                return 0;
+            }
+
+            @Override
+            public Integer setValue(Integer integer) {
+                return null;
+            }
+        };
     }
 
     /**
@@ -182,7 +197,22 @@ public abstract class User {
                 return entry;
             }
         }
-        return null;
+        return new Map.Entry<String, Integer>() {
+            @Override
+            public String getKey() {
+                return "          ";
+            }
+
+            @Override
+            public Integer getValue() {
+                return 0;
+            }
+
+            @Override
+            public Integer setValue(Integer integer) {
+                return null;
+            }
+        };
     }
 
     /**
