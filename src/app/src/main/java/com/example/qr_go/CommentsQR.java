@@ -12,7 +12,6 @@ import java.util.UUID;
  */
 public class CommentsQR {
     private HashMap<String, HashMap<String, String>> comments;
-    private String qrid;
     // TODO: add qrid to constructor
     public CommentsQR(User user, String message, String photolink) {
         this.comments = new HashMap<>();

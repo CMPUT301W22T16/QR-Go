@@ -39,6 +39,9 @@ public class QRGoDBUtil {
     }
     /** Gets QR  from database then it executes updateScannedQRtoDBContinue
      *  if it exists, it will update the current, otherwise it will make a new one
+     * @param gameqrcode the qrcode scanned
+     * @param player the player that scanned it
+     * @param qrphoto
      * @Author Darius Fang
      */
 
@@ -78,8 +81,8 @@ public class QRGoDBUtil {
      *
      * If user alreay scanned the qr, it will return a message to the user saying they already scanned it
      *
-     * @param gameqrcode
-     * @param player
+     * @param gameqrcode the qrcode that scanned it
+     * @param player the player that scanned it
      * @param qrphoto
      * @Author Darius Fang
      */
@@ -113,17 +116,17 @@ public class QRGoDBUtil {
     }
     /**
      * starts by getting the comment from the db, if it cannot find one it will make one, method continues to addCommenttoDBContinue
-     * @param comments
-     * @param gameqrcode
+     * @param comments the comment structure being updated
+     * @param gameqrcode qrcode of the comments
      * @Author Darius Fang
      */
-    public void addCommenttoDB( CommentsQR comments, GameQRCode gameqrcode){
+    public void addCommenttoDB(@NonNull CommentsQR comments, @NonNull GameQRCode gameqrcode){
         db.collection("Comments").document(gameqrcode.getHash()).set(comments.getComments());
     }
 
     /**
-     * deletes the player by flagging them to be invisable
-     * @param player
+     * deletes the player by flagging them to be invisable, then it continues to delete the player attached to GameQRcodes
+     * @param player player being deleted
      * @Author Darius Fang
      */
     public void deletePlayerFromDB(@NonNull Player player){
@@ -146,6 +149,7 @@ public class QRGoDBUtil {
     }
     /**
      * this portion deletes the playerid from all qrids
+     * @param userId the id of the player being deleted
      * @Author Darius Fang
      **/
     private void deletePlayerFromDBContinue(String userId){
@@ -168,10 +172,11 @@ public class QRGoDBUtil {
     }
     /**
      * deletes the gameqrcode of the player
-     *
+     * @param player player that is removing qrcode
+     * @param qrid qrid being removed from player
      * @Author Darius Fang
      */
-    public void deleteGameQRcodeFromPlayer(String qrid, Player player){
+    public void deleteGameQRcodeFromPlayer(String qrid, @NonNull Player player){
         player.deleteQRCode(qrid);
         db.collection("Players").document(player.getUserid()).set(player);
         DocumentReference docRef = db.collection("GameQRCodes").document(qrid);
@@ -185,11 +190,11 @@ public class QRGoDBUtil {
 
     }
     /**
-     * deletes the gameqrcode by flagging it
-     * @param gameqrcode
+     * deletes the gameqrcode by flagging it, removed attach id to all players
+     * @param gameqrcode the gameqrcode that is being deleted
      * @Author Darius Fang
      */
-    public void deleteGameQRFromDB(GameQRCode gameqrcode){
+    public void deleteGameQRFromDB(@NonNull GameQRCode gameqrcode){
         DocumentReference docRef = db.collection("GameQRCodes").document(gameqrcode.getHash());
         docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
@@ -209,6 +214,8 @@ public class QRGoDBUtil {
     }
     /**
      this portion deletes the qrids from all players
+     @param qrid the id of the gameqrcode
+     @Author Darius Fang
      **/
     private void deleteGameQRFromDBContinue(String qrid){
         CollectionReference QRRef = db.collection("Players");
