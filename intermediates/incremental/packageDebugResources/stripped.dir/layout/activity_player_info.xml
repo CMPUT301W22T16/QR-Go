@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="100dp">
+        android:layout_marginTop="20dp">
 
         <ImageView
             android:layout_marginLeft="50dp"
@@ -29,6 +29,12 @@
                 android:layout_height="wrap_content"
                 android:text="Player 1"
                 android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/playerEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Email:" />
             <LinearLayout
                 android:id="@+id/QRData"
                 android:layout_width="match_parent"
@@ -110,22 +116,22 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
 
         <TextView
-            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginLeft="19dp"
-            android:text="Email:" />
+            android:text="Scanned QR codes:"
+            android:textSize="20dp"/>
 
-        <TextView
-            android:id="@+id/playerEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="19dp"/>
+        <ListView
+            android:id="@+id/user_qr_list"
+            android:layout_width="350dp"
+            android:layout_height="match_parent" />
+
     </LinearLayout>
 
 
