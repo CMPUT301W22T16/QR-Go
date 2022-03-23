@@ -142,7 +142,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li>androidx.fragment.app.FragmentActivity</li>
 <li>
 <ul class="inheritance">
+<li><a href="BaseActivity.html" title="class in com.example.qr_go">com.example.qr_go.BaseActivity</a></li>
+<li>
+<ul class="inheritance">
 <li>com.example.qr_go.SearchActivity</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -169,7 +174,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dl>
 <hr>
 <pre>public class <span class="typeNameLabel">SearchActivity</span>
-extends androidx.fragment.app.FragmentActivity</pre>
+extends <a href="BaseActivity.html" title="class in com.example.qr_go">BaseActivity</a></pre>
 <div class="block">Represents the search activity</div>
 </li>
 </ul>
@@ -297,6 +302,13 @@ extends androidx.fragment.app.FragmentActivity</pre>
 </tr>
 </table>
 <ul class="blockList">
+<li class="blockList"><a id="methods.inherited.from.class.com.example.qr_go.BaseActivity">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;com.example.qr_go.<a href="BaseActivity.html" title="class in com.example.qr_go">BaseActivity</a></h3>
+<code><a href="BaseActivity.html#initializeNavbar()">initializeNavbar</a></code></li>
+</ul>
+<ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.androidx.fragment.app.FragmentActivity">
 <!--   -->
 </a>
@@ -408,6 +420,35 @@ protected&nbsp;void&nbsp;onCreate&#8203;(android.os.Bundle&nbsp;savedInstanceSta
 </dl>
 </li>
 </ul>
+<a id="onRequestPermissionsResult(int,java.lang.String[],int[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onRequestPermissionsResult</h4>
+<pre class="methodSignature">@RequiresApi(api=28)
+public&nbsp;void&nbsp;onRequestPermissionsResult&#8203;(int&nbsp;requestCode,
+                                       @NonNull
+                                       java.lang.String[]&nbsp;permissions,
+                                       @NonNull
+                                       int[]&nbsp;grantResults)</pre>
+<div class="block">Once user has accepted/denied permission access
+ If permission granted, set the location of the QR code
+ If permission denied, disable the location
+
+ Code from NewGameQRActivity.java</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>onRequestPermissionsResult</code>&nbsp;in interface&nbsp;<code>androidx.core.app.ActivityCompat.OnRequestPermissionsResultCallback</code></dd>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>onRequestPermissionsResult</code>&nbsp;in class&nbsp;<code>androidx.fragment.app.FragmentActivity</code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>requestCode</code> - </dd>
+<dd><code>permissions</code> - </dd>
+<dd><code>grantResults</code> - </dd>
+</dl>
+</li>
+</ul>
 <a id="getUserDisplays()">
 <!--   -->
 </a>
@@ -437,7 +478,7 @@ protected&nbsp;void&nbsp;onCreate&#8203;(android.os.Bundle&nbsp;savedInstanceSta
 <a id="getSearchBar()">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>getSearchBar</h4>
 <pre class="methodSignature">public static&nbsp;android.widget.EditText&nbsp;getSearchBar()</pre>
@@ -445,35 +486,6 @@ protected&nbsp;void&nbsp;onCreate&#8203;(android.os.Bundle&nbsp;savedInstanceSta
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The search bar EditText</dd>
-</dl>
-</li>
-</ul>
-<a id="onRequestPermissionsResult(int,java.lang.String[],int[])">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>onRequestPermissionsResult</h4>
-<pre class="methodSignature">@RequiresApi(api=28)
-public&nbsp;void&nbsp;onRequestPermissionsResult&#8203;(int&nbsp;requestCode,
-                                       @NonNull
-                                       java.lang.String[]&nbsp;permissions,
-                                       @NonNull
-                                       int[]&nbsp;grantResults)</pre>
-<div class="block">Once user has accepted/denied permission access
- If permission granted, set the location of the QR code
- If permission denied, disable the location
-
- Code from NewGameQRActivity.java</div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code>onRequestPermissionsResult</code>&nbsp;in interface&nbsp;<code>androidx.core.app.ActivityCompat.OnRequestPermissionsResultCallback</code></dd>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code>onRequestPermissionsResult</code>&nbsp;in class&nbsp;<code>androidx.fragment.app.FragmentActivity</code></dd>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>requestCode</code> - </dd>
-<dd><code>permissions</code> - </dd>
-<dd><code>grantResults</code> - </dd>
 </dl>
 </li>
 </ul>

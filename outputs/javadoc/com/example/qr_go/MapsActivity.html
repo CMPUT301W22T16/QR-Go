@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":9,"i1":10,"i2":10};
+var data = {"i0":9,"i1":9,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -142,7 +142,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li>androidx.fragment.app.FragmentActivity</li>
 <li>
 <ul class="inheritance">
+<li><a href="BaseActivity.html" title="class in com.example.qr_go">com.example.qr_go.BaseActivity</a></li>
+<li>
+<ul class="inheritance">
 <li>com.example.qr_go.MapsActivity</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -169,7 +174,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dl>
 <hr>
 <pre>public class <span class="typeNameLabel">MapsActivity</span>
-extends androidx.fragment.app.FragmentActivity
+extends <a href="BaseActivity.html" title="class in com.example.qr_go">BaseActivity</a>
 implements com.google.android.gms.maps.OnMapReadyCallback</pre>
 <div class="block">MainActivity</div>
 </li>
@@ -222,6 +227,11 @@ implements com.google.android.gms.maps.OnMapReadyCallback</pre>
 <tr class="altColor">
 <td class="colFirst"><code>protected android.location.LocationManager</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#locationManager">locationManager</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected android.location.Location</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#userLocation">userLocation</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -286,17 +296,24 @@ implements com.google.android.gms.maps.OnMapReadyCallback</pre>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPassword()">getPassword</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Get password of currently logged in user</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUserId()">getUserId</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Get user id of currently logged in user</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onCreate(android.os.Bundle)">onCreate</a></span>&#8203;(android.os.Bundle&nbsp;savedInstanceState)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onMapReady(com.google.android.gms.maps.GoogleMap)">onMapReady</a></span>&#8203;(com.google.android.gms.maps.GoogleMap&nbsp;googleMap)</code></th>
 <td class="colLast">
@@ -304,6 +321,13 @@ implements com.google.android.gms.maps.OnMapReadyCallback</pre>
 </td>
 </tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a id="methods.inherited.from.class.com.example.qr_go.BaseActivity">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;com.example.qr_go.<a href="BaseActivity.html" title="class in com.example.qr_go">BaseActivity</a></h3>
+<code><a href="BaseActivity.html#initializeNavbar()">initializeNavbar</a></code></li>
+</ul>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.androidx.fragment.app.FragmentActivity">
 <!--   -->
@@ -404,10 +428,19 @@ implements com.google.android.gms.maps.OnMapReadyCallback</pre>
 <a id="locationListener">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>locationListener</h4>
 <pre>protected&nbsp;android.location.LocationListener locationListener</pre>
+</li>
+</ul>
+<a id="userLocation">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>userLocation</h4>
+<pre>protected&nbsp;android.location.Location userLocation</pre>
 </li>
 </ul>
 </li>
@@ -459,7 +492,8 @@ protected&nbsp;void&nbsp;onCreate&#8203;(android.os.Bundle&nbsp;savedInstanceSta
 <ul class="blockList">
 <li class="blockList">
 <h4>onMapReady</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;onMapReady&#8203;(com.google.android.gms.maps.GoogleMap&nbsp;googleMap)</pre>
+<pre class="methodSignature">@RequiresApi(api=28)
+public&nbsp;void&nbsp;onMapReady&#8203;(com.google.android.gms.maps.GoogleMap&nbsp;googleMap)</pre>
 <div class="block">Manipulates the map once available.
  This callback is triggered when the map is ready to be used.
  This is where we can add markers or lines, add listeners or move the camera. In this case,
@@ -476,11 +510,21 @@ protected&nbsp;void&nbsp;onCreate&#8203;(android.os.Bundle&nbsp;savedInstanceSta
 <a id="getUserId()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getUserId</h4>
 <pre class="methodSignature">public static&nbsp;java.lang.String&nbsp;getUserId()</pre>
 <div class="block">Get user id of currently logged in user</div>
+</li>
+</ul>
+<a id="getPassword()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getPassword</h4>
+<pre class="methodSignature">public static&nbsp;java.lang.String&nbsp;getPassword()</pre>
+<div class="block">Get password of currently logged in user</div>
 </li>
 </ul>
 </li>

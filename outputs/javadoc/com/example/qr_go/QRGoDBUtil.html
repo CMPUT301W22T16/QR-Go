@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -179,23 +179,42 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deleteGameQRcodeFromPlayer()">deleteGameQRcodeFromPlayer</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addCommenttoDB(com.example.qr_go.CommentsQR,com.example.qr_go.GameQRCode)">addCommenttoDB</a></span>&#8203;(<a href="CommentsQR.html" title="class in com.example.qr_go">CommentsQR</a>&nbsp;comments,
+              <a href="GameQRCode.html" title="class in com.example.qr_go">GameQRCode</a>&nbsp;gameqrcode)</code></th>
 <td class="colLast">
-<div class="block">deletes the gameqrcode of the player</div>
+<div class="block">starts by getting the comment from the db, if it cannot find one it will make one, method continues to addCommenttoDBContinue</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deleteGameQRFromDB(com.example.qr_go.GameQRCode)">deleteGameQRFromDB</a></span>&#8203;(<a href="GameQRCode.html" title="class in com.example.qr_go">GameQRCode</a>&nbsp;gameqrcode)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deleteGameQRcodeFromPlayer(java.lang.String,com.example.qr_go.Player)">deleteGameQRcodeFromPlayer</a></span>&#8203;(java.lang.String&nbsp;qrid,
+                          <a href="Player.html" title="class in com.example.qr_go">Player</a>&nbsp;player)</code></th>
 <td class="colLast">
-<div class="block">deletes the gameqrcode by flagging it</div>
+<div class="block">deletes the gameqrcode of the player</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deletePlayerFromDB(com.example.qr_go.Player)">deletePlayerFromDB</a></span>&#8203;(<a href="Player.html" title="class in com.example.qr_go">Player</a>&nbsp;player)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deleteGameQRFromDB(java.lang.String)">deleteGameQRFromDB</a></span>&#8203;(java.lang.String&nbsp;qrid)</code></th>
 <td class="colLast">
-<div class="block">deletes the player by flagging them to be invisable</div>
+<div class="block">deletes the gameqrcode by flagging it, removed attach id to all players</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deletePlayerFromDB(java.lang.String)">deletePlayerFromDB</a></span>&#8203;(java.lang.String&nbsp;playerid)</code></th>
+<td class="colLast">
+<div class="block">deletes the player by flagging them to be invisable, then it continues to delete the player attached to GameQRcodes</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateScannedQRtoDB(com.example.qr_go.GameQRCode,com.example.qr_go.Player,com.example.qr_go.QRPhoto)">updateScannedQRtoDB</a></span>&#8203;(<a href="GameQRCode.html" title="class in com.example.qr_go">GameQRCode</a>&nbsp;gameqrcode,
+                   <a href="Player.html" title="class in com.example.qr_go">Player</a>&nbsp;player,
+                   <a href="QRPhoto.html" title="class in com.example.qr_go">QRPhoto</a>&nbsp;qrphoto)</code></th>
+<td class="colLast">
+<div class="block">Gets QR  from database then it executes updateScannedQRtoDBContinue
+  if it exists, it will update the current, otherwise it will make a new one</div>
 </td>
 </tr>
 </table>
@@ -250,41 +269,87 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="deletePlayerFromDB(com.example.qr_go.Player)">
+<a id="updateScannedQRtoDB(com.example.qr_go.GameQRCode,com.example.qr_go.Player,com.example.qr_go.QRPhoto)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateScannedQRtoDB</h4>
+<pre class="methodSignature">@RequiresApi(api=26)
+public&nbsp;void&nbsp;updateScannedQRtoDB&#8203;(@NonNull
+                                <a href="GameQRCode.html" title="class in com.example.qr_go">GameQRCode</a>&nbsp;gameqrcode,
+                                <a href="Player.html" title="class in com.example.qr_go">Player</a>&nbsp;player,
+                                <a href="QRPhoto.html" title="class in com.example.qr_go">QRPhoto</a>&nbsp;qrphoto)</pre>
+<div class="block">Gets QR  from database then it executes updateScannedQRtoDBContinue
+  if it exists, it will update the current, otherwise it will make a new one</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>gameqrcode</code> - the qrcode scanned</dd>
+<dd><code>player</code> - the player that scanned it</dd>
+<dd><code>qrphoto</code> - </dd>
+</dl>
+</li>
+</ul>
+<a id="addCommenttoDB(com.example.qr_go.CommentsQR,com.example.qr_go.GameQRCode)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addCommenttoDB</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;addCommenttoDB&#8203;(@NonNull
+                           <a href="CommentsQR.html" title="class in com.example.qr_go">CommentsQR</a>&nbsp;comments,
+                           @NonNull
+                           <a href="GameQRCode.html" title="class in com.example.qr_go">GameQRCode</a>&nbsp;gameqrcode)</pre>
+<div class="block">starts by getting the comment from the db, if it cannot find one it will make one, method continues to addCommenttoDBContinue</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>comments</code> - the comment structure being updated</dd>
+<dd><code>gameqrcode</code> - qrcode of the comments</dd>
+</dl>
+</li>
+</ul>
+<a id="deletePlayerFromDB(java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>deletePlayerFromDB</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;deletePlayerFromDB&#8203;(<a href="Player.html" title="class in com.example.qr_go">Player</a>&nbsp;player)</pre>
-<div class="block">deletes the player by flagging them to be invisable</div>
+<pre class="methodSignature">public&nbsp;void&nbsp;deletePlayerFromDB&#8203;(java.lang.String&nbsp;playerid)</pre>
+<div class="block">deletes the player by flagging them to be invisable, then it continues to delete the player attached to GameQRcodes</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>player</code> - </dd>
+<dd><code>playerid</code> - id of the player being deleted</dd>
 </dl>
 </li>
 </ul>
-<a id="deleteGameQRcodeFromPlayer()">
+<a id="deleteGameQRcodeFromPlayer(java.lang.String,com.example.qr_go.Player)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>deleteGameQRcodeFromPlayer</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;deleteGameQRcodeFromPlayer()</pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;deleteGameQRcodeFromPlayer&#8203;(java.lang.String&nbsp;qrid,
+                                       @NonNull
+                                       <a href="Player.html" title="class in com.example.qr_go">Player</a>&nbsp;player)</pre>
 <div class="block">deletes the gameqrcode of the player</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>player</code> - player that is removing qrcode</dd>
+<dd><code>qrid</code> - qrid being removed from player</dd>
+</dl>
 </li>
 </ul>
-<a id="deleteGameQRFromDB(com.example.qr_go.GameQRCode)">
+<a id="deleteGameQRFromDB(java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>deleteGameQRFromDB</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;deleteGameQRFromDB&#8203;(<a href="GameQRCode.html" title="class in com.example.qr_go">GameQRCode</a>&nbsp;gameqrcode)</pre>
-<div class="block">deletes the gameqrcode by flagging it</div>
+<pre class="methodSignature">public&nbsp;void&nbsp;deleteGameQRFromDB&#8203;(java.lang.String&nbsp;qrid)</pre>
+<div class="block">deletes the gameqrcode by flagging it, removed attach id to all players</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>gameqrcode</code> - </dd>
+<dd><code>qrid</code> - the id of the qrid being deleted</dd>
 </dl>
 </li>
 </ul>
