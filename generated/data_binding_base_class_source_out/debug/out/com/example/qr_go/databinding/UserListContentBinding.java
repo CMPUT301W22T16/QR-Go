@@ -11,7 +11,6 @@ import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.qr_go.R;
-import com.google.android.material.button.MaterialButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -21,19 +20,14 @@ public final class UserListContentBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final MaterialButton userDelButton;
-
-  @NonNull
   public final TextView userScoreView;
 
   @NonNull
   public final TextView usernameView;
 
-  private UserListContentBinding(@NonNull LinearLayout rootView,
-      @NonNull MaterialButton userDelButton, @NonNull TextView userScoreView,
+  private UserListContentBinding(@NonNull LinearLayout rootView, @NonNull TextView userScoreView,
       @NonNull TextView usernameView) {
     this.rootView = rootView;
-    this.userDelButton = userDelButton;
     this.userScoreView = userScoreView;
     this.usernameView = usernameView;
   }
@@ -65,12 +59,6 @@ public final class UserListContentBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.user_del_button;
-      MaterialButton userDelButton = ViewBindings.findChildViewById(rootView, id);
-      if (userDelButton == null) {
-        break missingId;
-      }
-
       id = R.id.user_score_view;
       TextView userScoreView = ViewBindings.findChildViewById(rootView, id);
       if (userScoreView == null) {
@@ -83,8 +71,7 @@ public final class UserListContentBinding implements ViewBinding {
         break missingId;
       }
 
-      return new UserListContentBinding((LinearLayout) rootView, userDelButton, userScoreView,
-          usernameView);
+      return new UserListContentBinding((LinearLayout) rootView, userScoreView, usernameView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
