@@ -462,22 +462,6 @@
     <issue
         id="InefficientWeight"
         severity="Warning"
-        message="Use a `layout_height` of `0dp` instead of `wrap_content` for better performance"
-        category="Performance"
-        priority="3"
-        summary="Inefficient layout weight"
-        explanation="When only a single widget in a `LinearLayout` defines a weight, it is more efficient to assign a width/height of `0dp` to it since it will absorb all the remaining space anyway. With a declared width/height of `0dp` it does not have to measure its own size first."
-        errorLine1="        android:layout_height=&quot;wrap_content&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml"
-            line="135"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="InefficientWeight"
-        severity="Warning"
         message="Use a `layout_width` of `0dp` instead of `wrap_content` for better performance"
         category="Performance"
         priority="3"

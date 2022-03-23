@@ -191,9 +191,6 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:118: Warning: Use a layout_width of 0dp instead of wrap_content for better performance [InefficientWeight]
             android:layout_width="wrap_content"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:135: Warning: Use a layout_height of 0dp instead of wrap_content for better performance [InefficientWeight]
-        android:layout_height="wrap_content"
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:19: Warning: Use a layout_width of 0dp instead of wrap_content for better performance [InefficientWeight]
         android:layout_width="wrap_content"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -697,4 +694,4 @@
    Please define an explicit reason why it is ignored, and when it can be
    resolved.
 
-1 errors, 148 warnings
+1 errors, 147 warnings
