@@ -177,7 +177,7 @@ document.getElementById(id).style.display = 'none';
       <span class="mdl-layout-title">Lint Report: 1 error and 149 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Wed Mar 23 19:19:07 UTC 2022      </nav>
+Check performed at Wed Mar 23 19:54:45 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -1469,24 +1469,24 @@ Dismiss</button>            </div>
 <span class="lineno"> 67 </span>        }
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/QRInfoActivity.java">../../src/main/java/com/example/qr_go/QRInfoActivity.java</a>:80</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno">  77 </span>
-<span class="lineno">  78 </span>                                tvQRName.setText(selectedQR.getId());
-<span class="lineno">  79 </span><span class="comment">//                                tvQRLocation.setText(selectedQR.getGeoLocation().getAddress().toString());</span>
-<span class="caretline"><span class="lineno">  80 </span>                                tvScore.setText(<span class="warning"><span class="string">"Score: "</span>+selectedQR.getScore()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  81 </span>
-<span class="lineno">  82 </span>                            }
-<span class="lineno">  83 </span>                            <span class="keyword">else</span> {
+<span class="location"><a href="../../src/main/java/com/example/qr_go/QRInfoActivity.java">../../src/main/java/com/example/qr_go/QRInfoActivity.java</a>:91</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno">  88 </span>
+<span class="lineno">  89 </span>                                tvQRName.setText(selectedQR.getId());
+<span class="lineno">  90 </span><span class="comment">//                                tvQRLocation.setText(selectedQR.getGeoLocation().getAddress().toString());</span>
+<span class="caretline"><span class="lineno">  91 </span>                                tvScore.setText(<span class="warning"><span class="string">"Score: "</span>+selectedQR.getScore()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  92 </span>
+<span class="lineno">  93 </span>                            }
+<span class="lineno">  94 </span>                            <span class="keyword">else</span> {
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/QRInfoActivity.java">../../src/main/java/com/example/qr_go/QRInfoActivity.java</a>:80</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
-<span class="lineno">  77 </span>
-<span class="lineno">  78 </span>                                tvQRName.setText(selectedQR.getId());
-<span class="lineno">  79 </span><span class="comment">//                                tvQRLocation.setText(selectedQR.getGeoLocation().getAddress().toString());</span>
-<span class="caretline"><span class="lineno">  80 </span>                                tvScore.setText(<span class="warning"><span class="string">"Score: "</span></span>+selectedQR.getScore());&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  81 </span>
-<span class="lineno">  82 </span>                            }
-<span class="lineno">  83 </span>                            <span class="keyword">else</span> {
+<span class="location"><a href="../../src/main/java/com/example/qr_go/QRInfoActivity.java">../../src/main/java/com/example/qr_go/QRInfoActivity.java</a>:91</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
+<span class="lineno">  88 </span>
+<span class="lineno">  89 </span>                                tvQRName.setText(selectedQR.getId());
+<span class="lineno">  90 </span><span class="comment">//                                tvQRLocation.setText(selectedQR.getGeoLocation().getAddress().toString());</span>
+<span class="caretline"><span class="lineno">  91 </span>                                tvScore.setText(<span class="warning"><span class="string">"Score: "</span></span>+selectedQR.getScore());&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  92 </span>
+<span class="lineno">  93 </span>                            }
+<span class="lineno">  94 </span>                            <span class="keyword">else</span> {
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/UserArrayAdapter.java</a>:46</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
