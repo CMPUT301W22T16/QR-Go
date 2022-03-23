@@ -23,7 +23,9 @@
             android:parentActivityName=".QRCodeScannerActivity" />
         <activity
             android:name=".SearchActivity"
-            android:exported="false">
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            >
         </activity>
         <activity
             android:name=".PlayerInfoActivity"
