@@ -70,8 +70,7 @@ public class MyQRCodesActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MyQRCodesActivity.this, QRInfoActivity.class);
-//                QRCode selectedGame = gameDataList.get(position);
-//                intent.putExtra("selectedGameID", selectedGame.getID());
+                intent.putExtra("QRid", "0e7cdfe2cbf54c2bbd5868ea42f3cf101a891907d33ee0d20c7bc31b0f597834");
                 startActivity(intent);
             }
         });

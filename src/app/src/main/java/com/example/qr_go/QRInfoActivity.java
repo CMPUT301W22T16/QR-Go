@@ -7,18 +7,29 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
 public class QRInfoActivity extends BaseActivity {
 
     private QRGoDBUtil db;
+    FirebaseFirestore gameQRDBInst;
     private Player thisTempPlayer; // TODO: temporary, replace with currently logged in user
 
     private GameQRCode selectedQR;
+    private String selectedQRId;
+
     private QRPhoto[] QRPhotos;
     private ListComments comment;
 //    private GeoLocation location;     // TODO: uncomment after GeoLocation is implemented
@@ -37,6 +48,44 @@ public class QRInfoActivity extends BaseActivity {
         initializeNavbar();
 
         db = new QRGoDBUtil(this);
+        gameQRDBInst = FirebaseFirestore.getInstance();
+
+        TextView tvQRName = (TextView) findViewById(R.id.qrName);
+        TextView tvQRLocation = (TextView) findViewById(R.id.qrLocation);
+        TextView tvScore = (TextView) findViewById(R.id.qrScore);
+
+        // Get information from extras
+        Bundle extras = getIntent().getExtras();
+        if(extras == null) {
+            selectedQR = null;
+        } else {
+            selectedQRId = extras.getString("QRid");
+
+            // set info from QRId
+            gameQRDBInst.collection("GameQRCodes")
+                    .whereEqualTo("id", selectedQRId)
+                    .get()
+                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                        @Override
+                        // code from https://stackoverflow.com/questions/65465335/get-specific-field-from-firestore-with-whereequalto
+                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                            if (task.isSuccessful()) {
+
+                                for (DocumentSnapshot document : task.getResult()) {
+                                    selectedQR = document.toObject(GameQRCode.class);
+                                }
+
+                                tvQRName.setText(selectedQR.getId());
+//                                tvQRLocation.setText(selectedQR.getGeoLocation().getAddress().toString());
+                                tvScore.setText("Score: "+selectedQR.getScore());
+
+                            }
+                            else {
+                                selectedQR = null;
+                            }
+                        }
+                    });
+        }
 
         commentList = findViewById(R.id.myQRList);
 
@@ -69,6 +118,7 @@ public class QRInfoActivity extends BaseActivity {
 
     public void showUsersList(View view) {
         Intent intent = new Intent(QRInfoActivity.this, ScannedUsersActivity.class);
+        intent.putExtra("QRid", selectedQRId);
         startActivity(intent);
     }
 
@@ -100,6 +150,10 @@ public class QRInfoActivity extends BaseActivity {
 //        db.addCommenttoDB(comments, selectedQR);
 
         inputComment.setText(""); // clear input after send
+    }
+
+    public void setSelectedQR(String QRId) {
+
     }
 
 }
