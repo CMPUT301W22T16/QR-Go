@@ -195,14 +195,14 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deleteGameQRFromDB(com.example.qr_go.GameQRCode)">deleteGameQRFromDB</a></span>&#8203;(<a href="GameQRCode.html" title="class in com.example.qr_go">GameQRCode</a>&nbsp;gameqrcode)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deleteGameQRFromDB(java.lang.String)">deleteGameQRFromDB</a></span>&#8203;(java.lang.String&nbsp;qrid)</code></th>
 <td class="colLast">
 <div class="block">deletes the gameqrcode by flagging it, removed attach id to all players</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deletePlayerFromDB(com.example.qr_go.Player)">deletePlayerFromDB</a></span>&#8203;(<a href="Player.html" title="class in com.example.qr_go">Player</a>&nbsp;player)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deletePlayerFromDB(java.lang.String)">deletePlayerFromDB</a></span>&#8203;(java.lang.String&nbsp;playerid)</code></th>
 <td class="colLast">
 <div class="block">deletes the player by flagging them to be invisable, then it continues to delete the player attached to GameQRcodes</div>
 </td>
@@ -308,18 +308,17 @@ public&nbsp;void&nbsp;updateScannedQRtoDB&#8203;(@NonNull
 </dl>
 </li>
 </ul>
-<a id="deletePlayerFromDB(com.example.qr_go.Player)">
+<a id="deletePlayerFromDB(java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>deletePlayerFromDB</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;deletePlayerFromDB&#8203;(@NonNull
-                               <a href="Player.html" title="class in com.example.qr_go">Player</a>&nbsp;player)</pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;deletePlayerFromDB&#8203;(java.lang.String&nbsp;playerid)</pre>
 <div class="block">deletes the player by flagging them to be invisable, then it continues to delete the player attached to GameQRcodes</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>player</code> - player being deleted</dd>
+<dd><code>playerid</code> - id of the player being deleted</dd>
 </dl>
 </li>
 </ul>
@@ -340,18 +339,17 @@ public&nbsp;void&nbsp;updateScannedQRtoDB&#8203;(@NonNull
 </dl>
 </li>
 </ul>
-<a id="deleteGameQRFromDB(com.example.qr_go.GameQRCode)">
+<a id="deleteGameQRFromDB(java.lang.String)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>deleteGameQRFromDB</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;deleteGameQRFromDB&#8203;(@NonNull
-                               <a href="GameQRCode.html" title="class in com.example.qr_go">GameQRCode</a>&nbsp;gameqrcode)</pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;deleteGameQRFromDB&#8203;(java.lang.String&nbsp;qrid)</pre>
 <div class="block">deletes the gameqrcode by flagging it, removed attach id to all players</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>gameqrcode</code> - the gameqrcode that is being deleted</dd>
+<dd><code>qrid</code> - the id of the qrid being deleted</dd>
 </dl>
 </li>
 </ul>
