@@ -10,7 +10,6 @@ color white
 drawable baseline_dashboard_24
 drawable baseline_home_24
 drawable ic_baseline_chevron_left_24
-drawable ic_baseline_delete_24
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable round_account_circle_24
@@ -26,7 +25,10 @@ id buttonSend
 id commenterName
 id commenterPhoto
 id container
-id divider
+id divider2
+id divider3
+id divider4
+id edit_profile_photo
 id generate_login_qr
 id generate_status_qr
 id highestScoreData
@@ -51,15 +53,14 @@ id playerEmail
 id playerHighScore
 id playerLowScore
 id playerNameText
-id playerPhoto
 id playerTotalScore
 id player_email
 id player_username
+id profile_photo
 id qrLocation
 id qrName
 id qrScore
 id qr_code_image
-id qr_del_button
 id qr_id_view
 id qr_list
 id qr_score_view
@@ -77,7 +78,6 @@ id take_qr_photo_imageview
 id textView2
 id totalScoreData
 id userList
-id user_del_button
 id user_list
 id user_score_view
 id username_view
