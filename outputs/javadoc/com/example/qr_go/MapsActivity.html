@@ -229,11 +229,6 @@ implements com.google.android.gms.maps.OnMapReadyCallback</pre>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#locationManager">locationManager</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected android.location.Location</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#userLocation">userLocation</a></span></code></th>
-<td class="colLast">&nbsp;</td>
-</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a id="fields.inherited.from.class.android.app.Activity">
@@ -428,19 +423,10 @@ implements com.google.android.gms.maps.OnMapReadyCallback</pre>
 <a id="locationListener">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>locationListener</h4>
 <pre>protected&nbsp;android.location.LocationListener locationListener</pre>
-</li>
-</ul>
-<a id="userLocation">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>userLocation</h4>
-<pre>protected&nbsp;android.location.Location userLocation</pre>
 </li>
 </ul>
 </li>
@@ -492,8 +478,7 @@ protected&nbsp;void&nbsp;onCreate&#8203;(android.os.Bundle&nbsp;savedInstanceSta
 <ul class="blockList">
 <li class="blockList">
 <h4>onMapReady</h4>
-<pre class="methodSignature">@RequiresApi(api=28)
-public&nbsp;void&nbsp;onMapReady&#8203;(com.google.android.gms.maps.GoogleMap&nbsp;googleMap)</pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;onMapReady&#8203;(com.google.android.gms.maps.GoogleMap&nbsp;googleMap)</pre>
 <div class="block">Manipulates the map once available.
  This callback is triggered when the map is ready to be used.
  This is where we can add markers or lines, add listeners or move the camera. In this case,

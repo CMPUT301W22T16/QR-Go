@@ -40,7 +40,7 @@ public final class ActivityQrInfoBinding implements ViewBinding {
   public final ListView myQRList;
 
   @NonNull
-  public final ImageView profilePhoto;
+  public final ImageView playerPhoto;
 
   @NonNull
   public final TextView qrLocation;
@@ -54,7 +54,7 @@ public final class ActivityQrInfoBinding implements ViewBinding {
   private ActivityQrInfoBinding(@NonNull ConstraintLayout rootView,
       @NonNull BottomNavigationView bottomNavView, @NonNull Button buttonOtherPlayers,
       @NonNull Button buttonSend, @NonNull EditText inputComment, @NonNull ListView myQRList,
-      @NonNull ImageView profilePhoto, @NonNull TextView qrLocation, @NonNull TextView qrName,
+      @NonNull ImageView playerPhoto, @NonNull TextView qrLocation, @NonNull TextView qrName,
       @NonNull TextView qrScore) {
     this.rootView = rootView;
     this.bottomNavView = bottomNavView;
@@ -62,7 +62,7 @@ public final class ActivityQrInfoBinding implements ViewBinding {
     this.buttonSend = buttonSend;
     this.inputComment = inputComment;
     this.myQRList = myQRList;
-    this.profilePhoto = profilePhoto;
+    this.playerPhoto = playerPhoto;
     this.qrLocation = qrLocation;
     this.qrName = qrName;
     this.qrScore = qrScore;
@@ -125,9 +125,9 @@ public final class ActivityQrInfoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.profile_photo;
-      ImageView profilePhoto = ViewBindings.findChildViewById(rootView, id);
-      if (profilePhoto == null) {
+      id = R.id.playerPhoto;
+      ImageView playerPhoto = ViewBindings.findChildViewById(rootView, id);
+      if (playerPhoto == null) {
         break missingId;
       }
 
@@ -150,7 +150,7 @@ public final class ActivityQrInfoBinding implements ViewBinding {
       }
 
       return new ActivityQrInfoBinding((ConstraintLayout) rootView, bottomNavView,
-          buttonOtherPlayers, buttonSend, inputComment, myQRList, profilePhoto, qrLocation, qrName,
+          buttonOtherPlayers, buttonSend, inputComment, myQRList, playerPhoto, qrLocation, qrName,
           qrScore);
     }
     String missingId = rootView.getResources().getResourceName(id);

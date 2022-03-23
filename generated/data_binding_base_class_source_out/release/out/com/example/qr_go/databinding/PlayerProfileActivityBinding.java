@@ -4,7 +4,6 @@ package com.example.qr_go.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -32,16 +31,7 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
   public final BottomNavigationView bottomNavView;
 
   @NonNull
-  public final View divider2;
-
-  @NonNull
-  public final View divider3;
-
-  @NonNull
-  public final View divider4;
-
-  @NonNull
-  public final Button editProfilePhoto;
+  public final View divider;
 
   @NonNull
   public final TextView generateLoginQr;
@@ -53,33 +43,28 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
   public final EditText playerEmail;
 
   @NonNull
-  public final EditText playerUsername;
+  public final ImageView playerPhoto;
 
   @NonNull
-  public final ImageView profilePhoto;
+  public final EditText playerUsername;
 
   @NonNull
   public final RelativeLayout relativeLayout;
 
   private PlayerProfileActivityBinding(@NonNull ConstraintLayout rootView,
       @NonNull MaterialButton backButton, @NonNull BottomNavigationView bottomNavView,
-      @NonNull View divider2, @NonNull View divider3, @NonNull View divider4,
-      @NonNull Button editProfilePhoto, @NonNull TextView generateLoginQr,
-      @NonNull TextView generateStatusQr, @NonNull EditText playerEmail,
-      @NonNull EditText playerUsername, @NonNull ImageView profilePhoto,
-      @NonNull RelativeLayout relativeLayout) {
+      @NonNull View divider, @NonNull TextView generateLoginQr, @NonNull TextView generateStatusQr,
+      @NonNull EditText playerEmail, @NonNull ImageView playerPhoto,
+      @NonNull EditText playerUsername, @NonNull RelativeLayout relativeLayout) {
     this.rootView = rootView;
     this.backButton = backButton;
     this.bottomNavView = bottomNavView;
-    this.divider2 = divider2;
-    this.divider3 = divider3;
-    this.divider4 = divider4;
-    this.editProfilePhoto = editProfilePhoto;
+    this.divider = divider;
     this.generateLoginQr = generateLoginQr;
     this.generateStatusQr = generateStatusQr;
     this.playerEmail = playerEmail;
+    this.playerPhoto = playerPhoto;
     this.playerUsername = playerUsername;
-    this.profilePhoto = profilePhoto;
     this.relativeLayout = relativeLayout;
   }
 
@@ -122,27 +107,9 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.divider2;
-      View divider2 = ViewBindings.findChildViewById(rootView, id);
-      if (divider2 == null) {
-        break missingId;
-      }
-
-      id = R.id.divider3;
-      View divider3 = ViewBindings.findChildViewById(rootView, id);
-      if (divider3 == null) {
-        break missingId;
-      }
-
-      id = R.id.divider4;
-      View divider4 = ViewBindings.findChildViewById(rootView, id);
-      if (divider4 == null) {
-        break missingId;
-      }
-
-      id = R.id.edit_profile_photo;
-      Button editProfilePhoto = ViewBindings.findChildViewById(rootView, id);
-      if (editProfilePhoto == null) {
+      id = R.id.divider;
+      View divider = ViewBindings.findChildViewById(rootView, id);
+      if (divider == null) {
         break missingId;
       }
 
@@ -164,15 +131,15 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.player_username;
-      EditText playerUsername = ViewBindings.findChildViewById(rootView, id);
-      if (playerUsername == null) {
+      id = R.id.playerPhoto;
+      ImageView playerPhoto = ViewBindings.findChildViewById(rootView, id);
+      if (playerPhoto == null) {
         break missingId;
       }
 
-      id = R.id.profile_photo;
-      ImageView profilePhoto = ViewBindings.findChildViewById(rootView, id);
-      if (profilePhoto == null) {
+      id = R.id.player_username;
+      EditText playerUsername = ViewBindings.findChildViewById(rootView, id);
+      if (playerUsername == null) {
         break missingId;
       }
 
@@ -183,8 +150,8 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
       }
 
       return new PlayerProfileActivityBinding((ConstraintLayout) rootView, backButton,
-          bottomNavView, divider2, divider3, divider4, editProfilePhoto, generateLoginQr,
-          generateStatusQr, playerEmail, playerUsername, profilePhoto, relativeLayout);
+          bottomNavView, divider, generateLoginQr, generateStatusQr, playerEmail, playerPhoto,
+          playerUsername, relativeLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
