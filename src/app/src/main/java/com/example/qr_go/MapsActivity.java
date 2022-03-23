@@ -2,17 +2,23 @@ package com.example.qr_go;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -49,6 +55,7 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback {
     private SharedPreferences loggedUser;
     protected LocationManager locationManager;
     protected LocationListener locationListener;
+    protected Location userLocation;
 
     ArrayList<GeoLocation> geoLocationList;
 
@@ -106,16 +113,19 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback {
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
+    @SuppressLint("MissingPermission")
+    @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        findUserLocation();
+        mMap.setMyLocationEnabled(true);
         //Code from https://javapapers.com/android/get-current-location-in-android/
-        //locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        //locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,0,0,this);
         db.collection("GameQRCodes")
                 .whereNotEqualTo("geoLocation", null)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @RequiresApi(api = Build.VERSION_CODES.P)
                     @Override
                     // code from https://stackoverflow.com/questions/65465335/get-specific-field-from-firestore-with-whereequalto
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -135,8 +145,37 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback {
                             LatLng newLoc = new LatLng(geoLocationList.get(i).getLatitude(), geoLocationList.get(i).getLongitude());
                             mMap.addMarker(new MarkerOptions().position(newLoc).title("NewMarker"));
                         }
+
                     }
                 });
+    }
+
+    @SuppressLint("MissingPermission")
+    @RequiresApi(api = Build.VERSION_CODES.P)
+    private void findUserLocation() {
+        try {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
+                    ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                // Acquire a reference to the system Location Manager
+                locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+                // Define a listener that responds to location updates
+                LocationListener locationListener = new LocationListener() {
+                    public void onLocationChanged(Location location) {
+                        userLocation = new Location(location);
+                        LatLng latLng = new LatLng(userLocation.getLatitude(),userLocation.getLongitude()); // whatever
+                        float zoom = 16;
+                                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom));
+                        locationManager.removeUpdates(this);
+                    }
+                };
+                // Register the listener with the Location Manager to receive location updates
+                locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
+            }
+
+        } catch (NoSuchMethodError e) {
+            e.printStackTrace();
+            Toast.makeText(this, "failed to get location", Toast.LENGTH_LONG).show();
+        }
     }
 
     /**
