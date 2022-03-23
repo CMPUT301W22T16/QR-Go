@@ -10,6 +10,7 @@ color white
 drawable baseline_dashboard_24
 drawable baseline_home_24
 drawable ic_baseline_chevron_left_24
+drawable ic_baseline_delete_24
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable round_account_circle_24
@@ -61,6 +62,7 @@ id qrLocation
 id qrName
 id qrScore
 id qr_code_image
+id qr_del_button
 id qr_id_view
 id qr_list
 id qr_score_view
@@ -78,6 +80,7 @@ id take_qr_photo_imageview
 id textView2
 id totalScoreData
 id userList
+id user_del_button
 id user_list
 id user_score_view
 id username_view
