@@ -174,10 +174,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 2 errors and 162 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 2 errors and 164 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Wed Mar 23 22:28:35 UTC 2022      </nav>
+Check performed at Thu Mar 24 01:42:56 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -200,7 +200,7 @@ Check performed at Wed Mar 23 22:28:35 UTC 2022      </nav>
       <a class="mdl-navigation__link" href="#TextFields"><i class="material-icons warning-icon">warning</i>Missing <code>inputType</code> (1)</a>
       <a class="mdl-navigation__link" href="#Autofill"><i class="material-icons warning-icon">warning</i>Use Autofill (4)</a>
       <a class="mdl-navigation__link" href="#ContentDescription"><i class="material-icons warning-icon">warning</i>Image without <code>contentDescription</code> (7)</a>
-      <a class="mdl-navigation__link" href="#SetTextI18n"><i class="material-icons warning-icon">warning</i>TextView Internationalization (32)</a>
+      <a class="mdl-navigation__link" href="#SetTextI18n"><i class="material-icons warning-icon">warning</i>TextView Internationalization (34)</a>
       <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (55)</a>
       <a class="mdl-navigation__link" href="#RtlSymmetry"><i class="material-icons warning-icon">warning</i>Padding and margin symmetry (4)</a>
       <a class="mdl-navigation__link" href="#RtlHardcoded"><i class="material-icons warning-icon">warning</i>Using left/right instead of start/end attributes (26)</a>
@@ -276,7 +276,7 @@ Check performed at Wed Mar 23 22:28:35 UTC 2022      </nav>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Internationalization">Internationalization</a>
 </td></tr>
 <tr>
-<td class="countColumn">32</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">34</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#SetTextI18n">SetTextI18n</a>: TextView Internationalization</td></tr>
 <tr>
 <td class="countColumn">55</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
@@ -1397,7 +1397,7 @@ Dismiss</button>            </div>
 <span class="lineno">  80 </span>  lowestScoreQrScoreText.setText(<span class="string">"Score: "</span> + lowestQRCode.getValue().toString());
 </pre>
 
-<button class="mdl-button mdl-js-button mdl-button--primary" id="SetTextI18nDivLink" onclick="reveal('SetTextI18nDiv');" />+ 27 More Occurrences...</button>
+<button class="mdl-button mdl-js-button mdl-button--primary" id="SetTextI18nDivLink" onclick="reveal('SetTextI18nDiv');" />+ 29 More Occurrences...</button>
 <div id="SetTextI18nDiv" style="display: none">
 <span class="location"><a href="../../src/main/java/com/example/qr_go/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/MyQRCodesActivity.java</a>:77</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
 <span class="lineno">  74 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
@@ -1535,6 +1535,26 @@ Dismiss</button>            </div>
 <span class="caretline"><span class="lineno">  89 </span>                scoreView.setText(distanceString + <span class="warning"><span class="string">" away"</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">  90 </span>                <span class="keyword">break</span>;
 <span class="lineno">  91 </span>        }
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/QRInfoActivity.java">../../src/main/java/com/example/qr_go/QRInfoActivity.java</a>:91</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno">  88 </span>
+<span class="lineno">  89 </span>                                tvQRName.setText(selectedQR.getId());
+<span class="lineno">  90 </span><span class="comment">//                                tvQRLocation.setText(selectedQR.getGeoLocation().getAddress().toString());</span>
+<span class="caretline"><span class="lineno">  91 </span>                                tvScore.setText(<span class="warning"><span class="string">"Score: "</span>+selectedQR.getScore()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  92 </span>
+<span class="lineno">  93 </span>                            }
+<span class="lineno">  94 </span>                            <span class="keyword">else</span> {
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/QRInfoActivity.java">../../src/main/java/com/example/qr_go/QRInfoActivity.java</a>:91</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
+<span class="lineno">  88 </span>
+<span class="lineno">  89 </span>                                tvQRName.setText(selectedQR.getId());
+<span class="lineno">  90 </span><span class="comment">//                                tvQRLocation.setText(selectedQR.getGeoLocation().getAddress().toString());</span>
+<span class="caretline"><span class="lineno">  91 </span>                                tvScore.setText(<span class="warning"><span class="string">"Score: "</span></span>+selectedQR.getScore());&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  92 </span>
+<span class="lineno">  93 </span>                            }
+<span class="lineno">  94 </span>                            <span class="keyword">else</span> {
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/UserArrayAdapter.java</a>:73</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
