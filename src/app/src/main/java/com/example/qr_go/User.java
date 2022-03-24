@@ -5,6 +5,7 @@ import android.util.Pair;
 
 import androidx.annotation.RequiresApi;
 
+import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -168,7 +169,7 @@ public abstract class User {
                 return entry;
             }
         }
-        return null;
+        return new AbstractMap.SimpleEntry<>("        ", 0);
     }
 
     /**
@@ -182,7 +183,7 @@ public abstract class User {
                 return entry;
             }
         }
-        return null;
+        return new AbstractMap.SimpleEntry<>("        ", 0);
     }
 
     /**
