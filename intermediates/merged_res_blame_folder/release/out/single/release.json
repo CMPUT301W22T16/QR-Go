@@ -68,6 +68,10 @@
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml"
     },
     {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/drawable_ic_baseline_delete_24.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable/ic_baseline_delete_24.xml"
+    },
+    {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/release/layout_list_users_content.xml.flat",
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_users_content.xml"
     },

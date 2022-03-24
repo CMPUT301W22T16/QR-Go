@@ -2573,6 +2573,7 @@ drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_baseline_chevron_left_24
+drawable ic_baseline_delete_24
 drawable ic_clock_black_24dp
 drawable ic_code_scanner_auto_focus_off
 drawable ic_code_scanner_auto_focus_on
@@ -2808,7 +2809,9 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
-id divider
+id divider2
+id divider3
+id divider4
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -2822,6 +2825,7 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id edit_profile_photo
 id edit_query
 id elastic
 id end
@@ -3009,18 +3013,19 @@ id playerEmail
 id playerHighScore
 id playerLowScore
 id playerNameText
-id playerPhoto
 id playerTotalScore
 id player_email
 id player_username
 id position
 id postLayout
+id profile_photo
 id progress_circular
 id progress_horizontal
 id qrLocation
 id qrName
 id qrScore
 id qr_code_image
+id qr_del_button
 id qr_id_view
 id qr_list
 id qr_score_view
@@ -3167,6 +3172,7 @@ id unlabeled
 id up
 id useLogo
 id userList
+id user_del_button
 id user_list
 id user_qr_list
 id user_score_view
