@@ -340,24 +340,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
             line="14"
             column="10"
-            startOffset="485"
+            startOffset="486"
             endLine="14"
             endColumn="19"
-            endOffset="494"/>
-    </incident>
-
-    <incident
-        id="InefficientWeight"
-        severity="warning"
-        message="Use a `layout_height` of `0dp` instead of `wrap_content` for better performance">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="35"
-            column="17"
-            startOffset="1276"
-            endLine="35"
-            endColumn="53"
-            endOffset="1312"/>
+            endOffset="495"/>
     </incident>
 
     <incident
@@ -368,24 +354,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
             line="30"
             column="17"
-            startOffset="1073"
+            startOffset="1074"
             endLine="30"
             endColumn="40"
-            endOffset="1096"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Email:&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="37"
-            column="17"
-            startOffset="1371"
-            endLine="37"
-            endColumn="38"
-            endOffset="1392"/>
+            endOffset="1097"/>
     </incident>
 
     <incident
@@ -394,12 +366,12 @@
         message="Hardcoded string &quot;QR Codes&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="46"
+            line="40"
             column="21"
-            startOffset="1777"
-            endLine="46"
+            startOffset="1522"
+            endLine="40"
             endColumn="44"
-            endOffset="1800"/>
+            endOffset="1545"/>
     </incident>
 
     <incident
@@ -408,12 +380,12 @@
         message="Hardcoded string &quot;00000&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="53"
+            line="47"
             column="21"
-            startOffset="2067"
-            endLine="53"
+            startOffset="1812"
+            endLine="47"
             endColumn="41"
-            endOffset="2087"/>
+            endOffset="1832"/>
     </incident>
 
     <incident
@@ -422,12 +394,12 @@
         message="Hardcoded string &quot;Highest Score&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="63"
+            line="57"
             column="21"
-            startOffset="2510"
-            endLine="63"
+            startOffset="2255"
+            endLine="57"
             endColumn="49"
-            endOffset="2538"/>
+            endOffset="2283"/>
     </incident>
 
     <incident
@@ -436,12 +408,12 @@
         message="Hardcoded string &quot;00000&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="70"
+            line="64"
             column="21"
-            startOffset="2808"
-            endLine="70"
+            startOffset="2553"
+            endLine="64"
             endColumn="41"
-            endOffset="2828"/>
+            endOffset="2573"/>
     </incident>
 
     <incident
@@ -450,12 +422,12 @@
         message="Hardcoded string &quot;Lowest Score&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="82"
+            line="76"
             column="21"
-            startOffset="3252"
-            endLine="82"
+            startOffset="2997"
+            endLine="76"
             endColumn="48"
-            endOffset="3279"/>
+            endOffset="3024"/>
     </incident>
 
     <incident
@@ -464,12 +436,12 @@
         message="Hardcoded string &quot;00000&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="89"
+            line="83"
             column="21"
-            startOffset="3549"
-            endLine="89"
+            startOffset="3294"
+            endLine="83"
             endColumn="41"
-            endOffset="3569"/>
+            endOffset="3314"/>
     </incident>
 
     <incident
@@ -478,12 +450,12 @@
         message="Hardcoded string &quot;Total Score&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="101"
+            line="95"
             column="21"
-            startOffset="3992"
-            endLine="101"
+            startOffset="3737"
+            endLine="95"
             endColumn="47"
-            endOffset="4018"/>
+            endOffset="3763"/>
     </incident>
 
     <incident
@@ -492,44 +464,40 @@
         message="Hardcoded string &quot;00000&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="108"
+            line="102"
             column="21"
-            startOffset="4290"
-            endLine="108"
+            startOffset="4035"
+            endLine="102"
             endColumn="41"
-            endOffset="4310"/>
+            endOffset="4055"/>
+    </incident>
+
+    <incident
+        id="InefficientWeight"
+        severity="warning"
+        message="Use a `layout_width` of `0dp` instead of `wrap_content` for better performance">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
+            line="118"
+            column="13"
+            startOffset="4356"
+            endLine="118"
+            endColumn="48"
+            endOffset="4391"/>
     </incident>
 
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;Scanned QR codes:&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Email:&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="127"
+            line="122"
             column="13"
-            startOffset="4739"
-            endLine="127"
-            endColumn="45"
-            endOffset="4771"/>
-    </incident>
-
-    <incident
-        id="SpUsage"
-        severity="warning"
-        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes">
-        <fix-replace
-            description="Replace with sp"
-            oldPattern=".*(di?p)"
-            replacement="sp"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="128"
-            column="13"
-            startOffset="4784"
-            endLine="128"
-            endColumn="36"
-            endOffset="4807"/>
+            startOffset="4536"
+            endLine="122"
+            endColumn="34"
+            endOffset="4557"/>
     </incident>
 
     <incident
@@ -561,10 +529,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="32"
             column="13"
-            startOffset="1325"
+            startOffset="1333"
             endLine="32"
             endColumn="35"
-            endOffset="1347"/>
+            endOffset="1355"/>
     </incident>
 
     <incident
@@ -579,10 +547,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="31"
             column="13"
-            startOffset="1289"
+            startOffset="1297"
             endLine="31"
             endColumn="36"
-            endOffset="1312"/>
+            endOffset="1320"/>
     </incident>
 
     <incident
@@ -593,10 +561,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="41"
             column="13"
-            startOffset="1668"
+            startOffset="1676"
             endLine="41"
             endColumn="39"
-            endOffset="1694"/>
+            endOffset="1702"/>
     </incident>
 
     <incident
@@ -611,10 +579,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="40"
             column="13"
-            startOffset="1632"
+            startOffset="1640"
             endLine="40"
             endColumn="36"
-            endOffset="1655"/>
+            endOffset="1663"/>
     </incident>
 
     <incident
@@ -625,10 +593,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="54"
             column="9"
-            startOffset="2144"
+            startOffset="2152"
             endLine="54"
             endColumn="37"
-            endOffset="2172"/>
+            endOffset="2180"/>
     </incident>
 
     <incident
@@ -643,10 +611,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="55"
             column="9"
-            startOffset="2181"
+            startOffset="2189"
             endLine="55"
             endColumn="32"
-            endOffset="2204"/>
+            endOffset="2212"/>
     </incident>
 
     <incident
@@ -657,10 +625,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="67"
             column="9"
-            startOffset="2652"
+            startOffset="2662"
             endLine="67"
             endColumn="43"
-            endOffset="2686"/>
+            endOffset="2696"/>
     </incident>
 
     <incident
@@ -671,10 +639,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="92"
             column="9"
-            startOffset="3659"
+            startOffset="3669"
             endLine="92"
             endColumn="28"
-            endOffset="3678"/>
+            endOffset="3688"/>
     </incident>
 
     <incident
@@ -699,10 +667,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="97"
             column="6"
-            startOffset="3841"
+            startOffset="3851"
             endLine="97"
             endColumn="14"
-            endOffset="3849"/>
+            endOffset="3859"/>
     </incident>
 
     <incident
@@ -713,10 +681,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="106"
             column="9"
-            startOffset="4170"
+            startOffset="4180"
             endLine="106"
             endColumn="46"
-            endOffset="4207"/>
+            endOffset="4217"/>
     </incident>
 
     <incident
@@ -983,6 +951,20 @@
     </incident>
 
     <incident
+        id="MissingConstraints"
+        severity="error"
+        message="This view is not constrained horizontally: at runtime it will jump to the left unless you add a horizontal constraint">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="98"
+            column="6"
+            startOffset="3876"
+            endLine="98"
+            endColumn="10"
+            endOffset="3880"/>
+    </incident>
+
+    <incident
         id="ObsoleteLayoutParam"
         severity="warning"
         message="Invalid layout param in a `RelativeLayout`: `layout_weight`">
@@ -1051,26 +1033,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="53"
-            column="10"
-            startOffset="2097"
-            endLine="53"
-            endColumn="18"
-            endOffset="2105"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Username&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="59"
-            column="13"
-            startOffset="2349"
-            endLine="59"
-            endColumn="36"
-            endOffset="2372"/>
+            line="44"
+            column="6"
+            startOffset="1662"
+            endLine="44"
+            endColumn="14"
+            endOffset="1670"/>
     </incident>
 
     <incident
@@ -1079,21 +1047,35 @@
         message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="74"
+            line="50"
             column="9"
-            startOffset="2891"
-            endLine="74"
+            startOffset="1868"
+            endLine="50"
             endColumn="43"
-            endOffset="2925"/>
+            endOffset="1902"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="67"
+            line="45"
             column="9"
-            startOffset="2612"
-            endLine="67"
+            startOffset="1679"
+            endLine="45"
             endColumn="39"
-            endOffset="2642"
+            endOffset="1709"
             message="id defined here"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Email&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="49"
+            column="9"
+            startOffset="1839"
+            endLine="49"
+            endColumn="29"
+            endOffset="1859"/>
     </incident>
 
     <incident
@@ -1116,40 +1098,26 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="66"
+            line="56"
             column="6"
-            startOffset="2595"
-            endLine="66"
+            startOffset="2146"
+            endLine="56"
             endColumn="14"
-            endOffset="2603"/>
+            endOffset="2154"/>
     </incident>
 
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;Email&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Username&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="73"
+            line="61"
             column="9"
-            startOffset="2862"
-            endLine="73"
-            endColumn="29"
-            endOffset="2882"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Generate my game status qr code&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="115"
-            column="9"
-            startOffset="4620"
-            endLine="115"
-            endColumn="55"
-            endOffset="4666"/>
+            startOffset="2327"
+            endLine="61"
+            endColumn="32"
+            endOffset="2350"/>
     </incident>
 
     <incident
@@ -1158,26 +1126,40 @@
         message="Hardcoded string &quot;Generate my login qr code&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="133"
+            line="91"
             column="9"
-            startOffset="5343"
-            endLine="133"
+            startOffset="3579"
+            endLine="91"
             endColumn="49"
-            endOffset="5383"/>
+            endOffset="3619"/>
     </incident>
 
     <incident
-        id="InefficientWeight"
+        id="HardcodedText"
         severity="warning"
-        message="Use a `layout_width` of `0dp` instead of `wrap_content` for better performance">
+        message="Hardcoded string &quot;Generate my game status qr code&quot;, should use `@string` resource">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
-            line="19"
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="129"
             column="9"
-            startOffset="603"
-            endLine="19"
-            endColumn="44"
-            endOffset="638"/>
+            startOffset="5102"
+            endLine="129"
+            endColumn="55"
+            endOffset="5148"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Edit Photo&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="153"
+            column="9"
+            startOffset="6076"
+            endLine="153"
+            endColumn="34"
+            endOffset="6101"/>
     </incident>
 
     <incident
@@ -1186,12 +1168,12 @@
         message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
-            line="12"
+            line="14"
             column="9"
-            startOffset="424"
-            endLine="12"
+            startOffset="537"
+            endLine="14"
             endColumn="29"
-            endOffset="444"/>
+            endOffset="557"/>
     </incident>
 
     <incident
@@ -1200,26 +1182,26 @@
         message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
-            line="21"
+            line="23"
             column="9"
-            startOffset="694"
-            endLine="21"
+            startOffset="807"
+            endLine="23"
             endColumn="29"
-            endOffset="714"/>
+            endOffset="827"/>
     </incident>
 
     <incident
-        id="InefficientWeight"
+        id="ObsoleteLayoutParam"
         severity="warning"
-        message="Use a `layout_width` of `0dp` instead of `wrap_content` for better performance">
+        message="Invalid layout param in a `LinearLayout`: `layout_alignParentRight`">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
-            line="19"
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
+            line="34"
             column="9"
-            startOffset="608"
-            endLine="19"
-            endColumn="44"
-            endOffset="643"/>
+            startOffset="1206"
+            endLine="34"
+            endColumn="47"
+            endOffset="1244"/>
     </incident>
 
     <incident
@@ -1228,12 +1210,12 @@
         message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
-            line="12"
+            line="14"
             column="9"
-            startOffset="427"
-            endLine="12"
+            startOffset="540"
+            endLine="14"
             endColumn="29"
-            endOffset="447"/>
+            endOffset="560"/>
     </incident>
 
     <incident
@@ -1242,54 +1224,26 @@
         message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
-            line="21"
+            line="23"
             column="9"
-            startOffset="699"
-            endLine="21"
+            startOffset="812"
+            endLine="23"
             endColumn="29"
-            endOffset="719"/>
+            endOffset="832"/>
     </incident>
 
     <incident
-        id="InefficientWeight"
+        id="ObsoleteLayoutParam"
         severity="warning"
-        message="Use a `layout_width` of `0dp` instead of `wrap_content` for better performance">
+        message="Invalid layout param in a `LinearLayout`: `layout_alignParentRight`">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_qr_list_content.xml"
-            line="19"
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
+            line="34"
             column="9"
-            startOffset="585"
-            endLine="19"
-            endColumn="44"
-            endOffset="620"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_qr_list_content.xml"
-            line="12"
-            column="9"
-            startOffset="413"
-            endLine="12"
-            endColumn="29"
-            endOffset="433"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_qr_list_content.xml"
-            line="21"
-            column="9"
-            startOffset="674"
-            endLine="21"
-            endColumn="29"
-            endOffset="694"/>
+            startOffset="1213"
+            endLine="34"
+            endColumn="47"
+            endOffset="1251"/>
     </incident>
 
     <incident
@@ -1531,12 +1485,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRArrayAdapter.java"
-            line="52"
+            line="76"
             column="35"
-            startOffset="1750"
-            endLine="52"
+            startOffset="2815"
+            endLine="76"
             endColumn="80"
-            endOffset="1795"/>
+            endOffset="2860"/>
     </incident>
 
     <incident
@@ -1545,12 +1499,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRArrayAdapter.java"
-            line="52"
+            line="76"
             column="35"
-            startOffset="1750"
-            endLine="52"
+            startOffset="2815"
+            endLine="76"
             endColumn="44"
-            endOffset="1759"/>
+            endOffset="2824"/>
     </incident>
 
     <incident
@@ -1559,12 +1513,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRArrayAdapter.java"
-            line="52"
+            line="76"
             column="47"
-            startOffset="1762"
-            endLine="52"
+            startOffset="2827"
+            endLine="76"
             endColumn="80"
-            endOffset="1795"/>
+            endOffset="2860"/>
     </incident>
 
     <incident
@@ -1573,12 +1527,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRArrayAdapter.java"
-            line="65"
+            line="89"
             column="35"
-            startOffset="2375"
-            endLine="65"
+            startOffset="3432"
+            endLine="89"
             endColumn="59"
-            endOffset="2399"/>
+            endOffset="3456"/>
     </incident>
 
     <incident
@@ -1587,12 +1541,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRArrayAdapter.java"
-            line="65"
+            line="89"
             column="52"
-            startOffset="2392"
-            endLine="65"
+            startOffset="3449"
+            endLine="89"
             endColumn="59"
-            endOffset="2399"/>
+            endOffset="3456"/>
     </incident>
 
     <incident
@@ -1622,12 +1576,12 @@
         message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="82"
+            line="108"
             column="62"
-            startOffset="3025"
-            endLine="82"
+            startOffset="4349"
+            endLine="108"
             endColumn="73"
-            endOffset="3036"/>
+            endOffset="4360"/>
     </incident>
 
     <incident
@@ -1636,12 +1590,12 @@
         message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="85"
+            line="111"
             column="44"
-            startOffset="3163"
-            endLine="85"
+            startOffset="4487"
+            endLine="111"
             endColumn="55"
-            endOffset="3174"/>
+            endOffset="4498"/>
     </incident>
 
     <incident
@@ -1650,12 +1604,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="46"
+            line="73"
             column="34"
-            startOffset="1669"
-            endLine="46"
+            startOffset="2994"
+            endLine="73"
             endColumn="106"
-            endOffset="1741"/>
+            endOffset="3066"/>
     </incident>
 
     <incident
@@ -1664,12 +1618,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="46"
+            line="73"
             column="98"
-            startOffset="1733"
-            endLine="46"
+            startOffset="3058"
+            endLine="73"
             endColumn="106"
-            endOffset="1741"/>
+            endOffset="3066"/>
     </incident>
 
     <incident
@@ -1678,12 +1632,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="48"
+            line="75"
             column="34"
-            startOffset="1794"
-            endLine="48"
+            startOffset="3119"
+            endLine="75"
             endColumn="95"
-            endOffset="1855"/>
+            endOffset="3180"/>
     </incident>
 
     <incident
@@ -1692,12 +1646,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="50"
+            line="77"
             column="27"
-            startOffset="1894"
-            endLine="50"
+            startOffset="3219"
+            endLine="77"
             endColumn="67"
-            endOffset="1934"/>
+            endOffset="3259"/>
     </incident>
 
     <incident
@@ -1706,12 +1660,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="53"
+            line="80"
             column="35"
-            startOffset="2017"
-            endLine="53"
+            startOffset="3342"
+            endLine="80"
             endColumn="93"
-            endOffset="2075"/>
+            endOffset="3400"/>
     </incident>
 
     <incident
@@ -1720,12 +1674,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="53"
+            line="80"
             column="35"
-            startOffset="2017"
-            endLine="53"
+            startOffset="3342"
+            endLine="80"
             endColumn="50"
-            endOffset="2032"/>
+            endOffset="3357"/>
     </incident>
 
     <incident
@@ -1734,12 +1688,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="53"
+            line="80"
             column="53"
-            startOffset="2035"
-            endLine="53"
+            startOffset="3360"
+            endLine="80"
             endColumn="93"
-            endOffset="2075"/>
+            endOffset="3400"/>
     </incident>
 
     <incident
@@ -1748,12 +1702,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="56"
+            line="83"
             column="35"
-            startOffset="2155"
-            endLine="56"
+            startOffset="3480"
+            endLine="83"
             endColumn="84"
-            endOffset="2204"/>
+            endOffset="3529"/>
     </incident>
 
     <incident
@@ -1762,12 +1716,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="56"
+            line="83"
             column="35"
-            startOffset="2155"
-            endLine="56"
+            startOffset="3480"
+            endLine="83"
             endColumn="71"
-            endOffset="2191"/>
+            endOffset="3516"/>
     </incident>
 
     <incident
@@ -1776,12 +1730,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="56"
+            line="83"
             column="74"
-            startOffset="2194"
-            endLine="56"
+            startOffset="3519"
+            endLine="83"
             endColumn="84"
-            endOffset="2204"/>
+            endOffset="3529"/>
     </incident>
 
     <incident
@@ -1790,12 +1744,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="59"
+            line="86"
             column="35"
-            startOffset="2285"
-            endLine="59"
+            startOffset="3610"
+            endLine="86"
             endColumn="100"
-            endOffset="2350"/>
+            endOffset="3675"/>
     </incident>
 
     <incident
@@ -1804,12 +1758,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="59"
+            line="86"
             column="35"
-            startOffset="2285"
-            endLine="59"
+            startOffset="3610"
+            endLine="86"
             endColumn="55"
-            endOffset="2305"/>
+            endOffset="3630"/>
     </incident>
 
     <incident
@@ -1818,12 +1772,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/UserArrayAdapter.java"
-            line="59"
+            line="86"
             column="58"
-            startOffset="2308"
-            endLine="59"
+            startOffset="3633"
+            endLine="86"
             endColumn="100"
-            endOffset="2350"/>
+            endOffset="3675"/>
     </incident>
 
     <incident
@@ -1832,12 +1786,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/PlayerInfoActivity.java"
-            line="113"
+            line="81"
             column="54"
-            startOffset="4757"
-            endLine="113"
+            startOffset="3306"
+            endLine="81"
             endColumn="110"
-            endOffset="4813"/>
+            endOffset="3362"/>
     </incident>
 
     <incident
@@ -1846,12 +1800,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/PlayerInfoActivity.java"
-            line="114"
+            line="82"
             column="53"
-            startOffset="4868"
-            endLine="114"
+            startOffset="3417"
+            endLine="82"
             endColumn="108"
-            endOffset="4923"/>
+            endOffset="3472"/>
     </incident>
 
     <incident
@@ -1860,12 +1814,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/PlayerInfoActivity.java"
-            line="115"
+            line="83"
             column="47"
-            startOffset="4972"
-            endLine="115"
+            startOffset="3521"
+            endLine="83"
             endColumn="108"
-            endOffset="5033"/>
+            endOffset="3582"/>
     </incident>
 
     <incident
@@ -1874,12 +1828,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/PlayerInfoActivity.java"
-            line="116"
+            line="84"
             column="52"
-            startOffset="5087"
-            endLine="116"
+            startOffset="3636"
+            endLine="84"
             endColumn="100"
-            endOffset="5135"/>
+            endOffset="3684"/>
     </incident>
 
     <incident
@@ -1888,12 +1842,12 @@
         message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/PlayerProfileActivity.java"
-            line="30"
+            line="37"
             column="12"
-            startOffset="940"
-            endLine="30"
+            startOffset="1125"
+            endLine="37"
             endColumn="18"
-            endOffset="946"/>
+            endOffset="1131"/>
     </incident>
 
     <incident
@@ -1902,12 +1856,12 @@
         message="Do not place Android context classes in static fields; this is a memory leak">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/SearchActivity.java"
-            line="61"
+            line="63"
             column="13"
-            startOffset="2173"
-            endLine="61"
+            startOffset="2287"
+            endLine="63"
             endColumn="19"
-            endOffset="2179"/>
+            endOffset="2293"/>
     </incident>
 
     <incident

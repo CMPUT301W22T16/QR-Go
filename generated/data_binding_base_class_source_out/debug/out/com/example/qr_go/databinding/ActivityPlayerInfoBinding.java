@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -52,18 +51,18 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
   public final TextView playerTotalScore;
 
   @NonNull
-  public final LinearLayout totalScoreData;
+  public final TextView textView2;
 
   @NonNull
-  public final ListView userQrList;
+  public final LinearLayout totalScoreData;
 
   private ActivityPlayerInfoBinding(@NonNull LinearLayout rootView, @NonNull LinearLayout QRData,
       @NonNull BottomNavigationView bottomNavView, @NonNull LinearLayout highestScoreData,
       @NonNull LinearLayout lowestScoreData, @NonNull TextView numOfQRCodes,
       @NonNull TextView playerEmail, @NonNull TextView playerHighScore,
       @NonNull TextView playerLowScore, @NonNull TextView playerNameText,
-      @NonNull TextView playerTotalScore, @NonNull LinearLayout totalScoreData,
-      @NonNull ListView userQrList) {
+      @NonNull TextView playerTotalScore, @NonNull TextView textView2,
+      @NonNull LinearLayout totalScoreData) {
     this.rootView = rootView;
     this.QRData = QRData;
     this.bottomNavView = bottomNavView;
@@ -75,8 +74,8 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
     this.playerLowScore = playerLowScore;
     this.playerNameText = playerNameText;
     this.playerTotalScore = playerTotalScore;
+    this.textView2 = textView2;
     this.totalScoreData = totalScoreData;
-    this.userQrList = userQrList;
   }
 
   @Override
@@ -166,21 +165,21 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView2;
+      TextView textView2 = ViewBindings.findChildViewById(rootView, id);
+      if (textView2 == null) {
+        break missingId;
+      }
+
       id = R.id.totalScoreData;
       LinearLayout totalScoreData = ViewBindings.findChildViewById(rootView, id);
       if (totalScoreData == null) {
         break missingId;
       }
 
-      id = R.id.user_qr_list;
-      ListView userQrList = ViewBindings.findChildViewById(rootView, id);
-      if (userQrList == null) {
-        break missingId;
-      }
-
       return new ActivityPlayerInfoBinding((LinearLayout) rootView, QRData, bottomNavView,
           highestScoreData, lowestScoreData, numOfQRCodes, playerEmail, playerHighScore,
-          playerLowScore, playerNameText, playerTotalScore, totalScoreData, userQrList);
+          playerLowScore, playerNameText, playerTotalScore, textView2, totalScoreData);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
