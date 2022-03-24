@@ -5,6 +5,7 @@ import android.util.Pair;
 
 import androidx.annotation.RequiresApi;
 
+import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -155,6 +156,34 @@ public abstract class User {
         }
         // if no codes were found, return 0
         return lowestScore == Integer.MAX_VALUE ? 0 : lowestScore;
+    }
+
+    /**
+     * Returns the QR Code with the highest unique score that the user has
+     * @return QR code with user's highest unique score, returns null if not found
+     */
+    public Map.Entry<String, Integer> getHighestQRCode(){
+        Integer highestScore = getHighestUniqueScore();
+        for (Map.Entry<String, Integer> entry : scannedQRCodeIds.entrySet()){
+            if (highestScore.equals(entry.getValue())){
+                return entry;
+            }
+        }
+        return new AbstractMap.SimpleEntry<>("        ", 0);
+    }
+
+    /**
+     * Returns the QR Code with the lowest unique score that the user has
+     * @return QR code with user's lowest unique score, returns null if not found
+     */
+    public Map.Entry<String, Integer> getLowestQRCode(){
+        Integer lowestScore = getLowestUniqueScore();
+        for (Map.Entry<String, Integer> entry : scannedQRCodeIds.entrySet()){
+            if (lowestScore.equals(entry.getValue())){
+                return entry;
+            }
+        }
+        return new AbstractMap.SimpleEntry<>("        ", 0);
     }
 
     /**

@@ -104,4 +104,5 @@ public class UserSearchFragment extends SortableFragment {
             }
         });
     }
+
 }
