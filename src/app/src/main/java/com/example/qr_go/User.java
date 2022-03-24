@@ -158,6 +158,64 @@ public abstract class User {
     }
 
     /**
+     * Returns the QR Code with the highest unique score that the user has
+     * @return QR code with user's highest unique score, returns null if not found
+     */
+    public Map.Entry<String, Integer> getHighestQRCode(){
+        Integer highestScore = getHighestUniqueScore();
+        for (Map.Entry<String, Integer> entry : scannedQRCodeIds.entrySet()){
+            if (highestScore.equals(entry.getValue())){
+                return entry;
+            }
+        }
+        return new Map.Entry<String, Integer>() {
+            @Override
+            public String getKey() {
+                return "          ";
+            }
+
+            @Override
+            public Integer getValue() {
+                return 0;
+            }
+
+            @Override
+            public Integer setValue(Integer integer) {
+                return null;
+            }
+        };
+    }
+
+    /**
+     * Returns the QR Code with the lowest unique score that the user has
+     * @return QR code with user's lowest unique score, returns null if not found
+     */
+    public Map.Entry<String, Integer> getLowestQRCode(){
+        Integer lowestScore = getLowestUniqueScore();
+        for (Map.Entry<String, Integer> entry : scannedQRCodeIds.entrySet()){
+            if (lowestScore.equals(entry.getValue())){
+                return entry;
+            }
+        }
+        return new Map.Entry<String, Integer>() {
+            @Override
+            public String getKey() {
+                return "          ";
+            }
+
+            @Override
+            public Integer getValue() {
+                return 0;
+            }
+
+            @Override
+            public Integer setValue(Integer integer) {
+                return null;
+            }
+        };
+    }
+
+    /**
      * @return user's username
      */
     public String getUsername() {
