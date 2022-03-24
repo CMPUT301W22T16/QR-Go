@@ -29,12 +29,21 @@
                 android:layout_height="wrap_content"
                 android:text="Player 1"
                 android:textStyle="bold"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email:" />
             <TextView
                 android:id="@+id/playerEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Email:" />
+                android:layout_marginLeft="45dp"
+                android:text="00000" />
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/QRData"
                 android:layout_width="match_parent"
@@ -113,6 +122,41 @@
 
 
     </LinearLayout>
+
+    <LinearLayout
+    android:id="@+id/highestScoreLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Highest Scoring QR Code:" />
+    <include
+        android:id="@+id/highest_score"
+        layout="@layout/qr_list_content"
+        />
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lowestScoreLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/highestScoreLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lowest Scoring QR Code" />
+        <include
+            android:id="@+id/lowest_score"
+            layout="@layout/qr_list_content"
+            />
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"

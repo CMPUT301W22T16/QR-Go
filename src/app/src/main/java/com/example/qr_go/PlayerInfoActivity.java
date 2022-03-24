@@ -12,6 +12,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -44,18 +45,16 @@ import java.util.Set;
 public class PlayerInfoActivity extends BaseActivity {
     private LocationManager locationManager;
     private LocationListener locationListener;
-    private Location userLocation;
     private Player selectedPlayer;
     private HashMap<String,Integer> playerQRCodes;
     private QRArrayAdapter qrAdapter;
     private ArrayList<QRListDisplayContainer> qrDisplays;
     private ArrayList<String> qrCodeList;
-    private QRListDisplayContainer qrCont;
     private ListView userQRList;
     private ArrayList<String> testIDLIST;
+    Map.Entry<String, Integer> highestQRCode;
+    Map.Entry<String, Integer> lowestQRCode;
     CollectionReference playerDBInst;
-    CollectionReference qrDBInst;
-    View view;
 
 
 
@@ -79,6 +78,12 @@ public class PlayerInfoActivity extends BaseActivity {
         TextView highestScoreText = findViewById(R.id.playerHighScore);
         TextView lowestScoreText = findViewById(R.id.playerLowScore);
         TextView playerEmailText = findViewById(R.id.playerEmail);
+        View highestScoreLayout = findViewById(R.id.highest_score);
+        View lowestScoreLayout = findViewById(R.id.lowest_score);
+        TextView highestScoreQrIDText = highestScoreLayout.findViewById(R.id.qr_id_view);
+        TextView highestScoreQrScoreText = highestScoreLayout.findViewById(R.id.qr_score_view);
+        TextView lowestScoreQrIDText = lowestScoreLayout.findViewById(R.id.qr_id_view);
+        TextView lowestScoreQrScoreText = lowestScoreLayout.findViewById(R.id.qr_score_view);
 
         playerDBInst = FirebaseFirestore.getInstance().collection("Players");
 
@@ -115,6 +120,12 @@ public class PlayerInfoActivity extends BaseActivity {
                             qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
                             totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
                             playerEmailText.setText(selectedPlayer.getEmail());
+                            highestQRCode = selectedPlayer.getHighestQRCode();
+                            highestScoreQrIDText.setText(highestQRCode.getKey().substring(0, 8));
+                            highestScoreQrScoreText.setText("Score: " + highestQRCode.getValue().toString());
+                            lowestQRCode = selectedPlayer.getLowestQRCode();
+                            lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(0, 8));
+                            lowestScoreQrScoreText.setText("Score: " + lowestQRCode.getValue().toString());
 
 
 
@@ -128,7 +139,15 @@ public class PlayerInfoActivity extends BaseActivity {
                     }
                 });
 
-        }
+        userQRList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(view.getContext(), QRInfoActivity.class);
+                intent.putExtra("QRid", qrDisplays.get(position).getId());
+                view.getContext().startActivity(intent);
+            }
+        });
+    }
 
 
 
