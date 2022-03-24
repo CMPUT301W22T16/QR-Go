@@ -1014,29 +1014,6 @@
     </incident>
 
     <incident
-        id="TextFields"
-        severity="warning"
-        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="50"
-            column="9"
-            startOffset="1868"
-            endLine="50"
-            endColumn="43"
-            endOffset="1902"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="45"
-            column="9"
-            startOffset="1679"
-            endLine="45"
-            endColumn="39"
-            endOffset="1709"
-            message="id defined here"/>
-    </incident>
-
-    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -1062,6 +1039,29 @@
             endLine="44"
             endColumn="14"
             endOffset="1670"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="50"
+            column="9"
+            startOffset="1868"
+            endLine="50"
+            endColumn="43"
+            endOffset="1902"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="45"
+            column="9"
+            startOffset="1679"
+            endLine="45"
+            endColumn="39"
+            endOffset="1709"
+            message="id defined here"/>
     </incident>
 
     <incident
@@ -1568,34 +1568,6 @@
             endLine="79"
             endColumn="51"
             endOffset="2673"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRInfoActivity.java"
-            line="91"
-            column="49"
-            startOffset="3366"
-            endLine="91"
-            endColumn="80"
-            endOffset="3397"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="String literal in `setText` can not be translated. Use Android resources instead.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRInfoActivity.java"
-            line="91"
-            column="49"
-            startOffset="3366"
-            endLine="91"
-            endColumn="58"
-            endOffset="3375"/>
     </incident>
 
     <incident

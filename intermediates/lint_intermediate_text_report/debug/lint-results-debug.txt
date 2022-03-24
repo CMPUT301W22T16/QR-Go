@@ -383,12 +383,6 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRArrayAdapter.java:89: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
                 scoreView.setText(distanceString + " away");
                                                    ~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRInfoActivity.java:91: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
-                                tvScore.setText("Score: "+selectedQR.getScore());
-                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRInfoActivity.java:91: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
-                                tvScore.setText("Score: "+selectedQR.getScore());
-                                                ~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/UserArrayAdapter.java:73: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
             usernameView.setText(String.valueOf(userRank) + "| " + userToDisplay.getUsername() + " (you)");
                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -748,4 +742,4 @@
    Please define an explicit reason why it is ignored, and when it can be
    resolved.
 
-2 errors, 164 warnings
+2 errors, 162 warnings
