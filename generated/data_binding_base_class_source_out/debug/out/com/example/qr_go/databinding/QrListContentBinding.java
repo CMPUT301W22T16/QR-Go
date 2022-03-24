@@ -11,7 +11,6 @@ import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.qr_go.R;
-import com.google.android.material.button.MaterialButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -21,18 +20,14 @@ public final class QrListContentBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final MaterialButton qrDelButton;
-
-  @NonNull
   public final TextView qrIdView;
 
   @NonNull
   public final TextView qrScoreView;
 
-  private QrListContentBinding(@NonNull LinearLayout rootView, @NonNull MaterialButton qrDelButton,
-      @NonNull TextView qrIdView, @NonNull TextView qrScoreView) {
+  private QrListContentBinding(@NonNull LinearLayout rootView, @NonNull TextView qrIdView,
+      @NonNull TextView qrScoreView) {
     this.rootView = rootView;
-    this.qrDelButton = qrDelButton;
     this.qrIdView = qrIdView;
     this.qrScoreView = qrScoreView;
   }
@@ -64,12 +59,6 @@ public final class QrListContentBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.qr_del_button;
-      MaterialButton qrDelButton = ViewBindings.findChildViewById(rootView, id);
-      if (qrDelButton == null) {
-        break missingId;
-      }
-
       id = R.id.qr_id_view;
       TextView qrIdView = ViewBindings.findChildViewById(rootView, id);
       if (qrIdView == null) {
@@ -82,7 +71,7 @@ public final class QrListContentBinding implements ViewBinding {
         break missingId;
       }
 
-      return new QrListContentBinding((LinearLayout) rootView, qrDelButton, qrIdView, qrScoreView);
+      return new QrListContentBinding((LinearLayout) rootView, qrIdView, qrScoreView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

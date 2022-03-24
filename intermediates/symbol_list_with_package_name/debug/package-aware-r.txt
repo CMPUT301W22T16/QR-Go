@@ -2573,7 +2573,6 @@ drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_baseline_chevron_left_24
-drawable ic_baseline_delete_24
 drawable ic_clock_black_24dp
 drawable ic_code_scanner_auto_focus_off
 drawable ic_code_scanner_auto_focus_on
@@ -2809,9 +2808,7 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
-id divider2
-id divider3
-id divider4
+id divider
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -2825,7 +2822,6 @@ id easeIn
 id easeInOut
 id easeOut
 id east
-id edit_profile_photo
 id edit_query
 id elastic
 id end
@@ -2861,8 +2857,6 @@ id guideline
 id header_title
 id hideable
 id highestScoreData
-id highestScoreLayout
-id highest_score
 id home
 id homeAsUp
 id honorRequest
@@ -2904,8 +2898,6 @@ id list_item
 id locale
 id location_checkbox
 id lowestScoreData
-id lowestScoreLayout
-id lowest_score
 id ltr
 id map
 id masked
@@ -3013,19 +3005,18 @@ id playerEmail
 id playerHighScore
 id playerLowScore
 id playerNameText
+id playerPhoto
 id playerTotalScore
 id player_email
 id player_username
 id position
 id postLayout
-id profile_photo
 id progress_circular
 id progress_horizontal
 id qrLocation
 id qrName
 id qrScore
 id qr_code_image
-id qr_del_button
 id qr_id_view
 id qr_list
 id qr_score_view
@@ -3140,6 +3131,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView2
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3172,9 +3164,7 @@ id unlabeled
 id up
 id useLogo
 id userList
-id user_del_button
 id user_list
-id user_qr_list
 id user_score_view
 id username_view
 id usersContent
@@ -3387,7 +3377,6 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 layout user_list_content
-layout user_qr_list_content
 menu bottom_nav_menu
 menu example_menu
 menu example_menu2
