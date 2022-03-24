@@ -114,6 +114,40 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/highestScoreLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Highest Scoring QR Code:" />
+        <include
+            android:id="@+id/highest_score"
+            layout="@layout/qr_list_content"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lowestScoreLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/highestScoreLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lowest Scoring QR Code" />
+        <include
+            android:id="@+id/lowest_score"
+            layout="@layout/qr_list_content"
+        />
+    </LinearLayout>
+
     <!--    TODO: Replace this with list view for QRCodes-->
     <Button
         android:id="@+id/bt_temp_qr"
@@ -122,7 +156,7 @@
         android:layout_marginStart="16dp"
         android:text="QR Code #1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/lowestScoreLayout" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav_view"
