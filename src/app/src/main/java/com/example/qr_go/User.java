@@ -5,6 +5,7 @@ import android.util.Pair;
 
 import androidx.annotation.RequiresApi;
 
+import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -168,22 +169,7 @@ public abstract class User {
                 return entry;
             }
         }
-        return new Map.Entry<String, Integer>() {
-            @Override
-            public String getKey() {
-                return "          ";
-            }
-
-            @Override
-            public Integer getValue() {
-                return 0;
-            }
-
-            @Override
-            public Integer setValue(Integer integer) {
-                return null;
-            }
-        };
+        return new AbstractMap.SimpleEntry<>("        ", 0);
     }
 
     /**
@@ -197,22 +183,7 @@ public abstract class User {
                 return entry;
             }
         }
-        return new Map.Entry<String, Integer>() {
-            @Override
-            public String getKey() {
-                return "          ";
-            }
-
-            @Override
-            public Integer getValue() {
-                return 0;
-            }
-
-            @Override
-            public Integer setValue(Integer integer) {
-                return null;
-            }
-        };
+        return new AbstractMap.SimpleEntry<>("        ", 0);
     }
 
     /**
