@@ -11,13 +11,19 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -146,26 +152,25 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback,Goo
                                 }
                             }
                         }
+                        Marker selectedMarker;
+                        String tempId;
                         for (int i = 0; i < geoLocationList.size(); i++) {
+                            tempId = geoLocationList
+                                    .get(i)
+                                    .getQRId();
                             if(geoLocationList.get(i).getScore() != null) {
                                 LatLng newLoc = new LatLng(geoLocationList.get(i).getLatitude(), geoLocationList.get(i).getLongitude());
-                                Marker selectedMarker = mMap.addMarker(new MarkerOptions().position(newLoc)
-                                        .title(geoLocationList
-                                                .get(i)
-                                                .getQRId()
-                                                .substring(0,8))
+                                selectedMarker = mMap.addMarker(new MarkerOptions().position(newLoc)
+                                        .title(tempId.substring(0,8))
                                         .snippet("Score: " + geoLocationList.get(i).getScore()));
-                                selectedMarker.showInfoWindow();
                             } else {
                                 LatLng newLoc = new LatLng(geoLocationList.get(i).getLatitude(), geoLocationList.get(i).getLongitude());
-                                Marker selectedMarker = mMap.addMarker(new MarkerOptions().position(newLoc)
-                                        .title("QR: " + geoLocationList
-                                                .get(i)
-                                                .getQRId()
-                                                .substring(0,8))
+                                selectedMarker = mMap.addMarker(new MarkerOptions().position(newLoc)
+                                        .title(tempId.substring(0,8))
                                         .snippet("Score: null"));
-                                selectedMarker.showInfoWindow();
                             }
+                            selectedMarker.setTag(tempId);
+
 
                         }
 
@@ -175,8 +180,9 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback,Goo
 
     @Override
     public void onInfoWindowClick(Marker marker) {
-        Toast.makeText(this, marker.getTitle(),
-                Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, QRInfoActivity.class);
+        intent.putExtra("QRid", (String)marker.getTag());
+        startActivity(intent);
     }
 
     @SuppressLint("MissingPermission")
