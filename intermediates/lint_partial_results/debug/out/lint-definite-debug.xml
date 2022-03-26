@@ -1014,6 +1014,29 @@
     </incident>
 
     <incident
+        id="TextFields"
+        severity="warning"
+        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="50"
+            column="9"
+            startOffset="1868"
+            endLine="50"
+            endColumn="43"
+            endOffset="1902"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="45"
+            column="9"
+            startOffset="1679"
+            endLine="45"
+            endColumn="39"
+            endOffset="1709"
+            message="id defined here"/>
+    </incident>
+
+    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -1039,29 +1062,6 @@
             endLine="44"
             endColumn="14"
             endOffset="1670"/>
-    </incident>
-
-    <incident
-        id="TextFields"
-        severity="warning"
-        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="50"
-            column="9"
-            startOffset="1868"
-            endLine="50"
-            endColumn="43"
-            endOffset="1902"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="45"
-            column="9"
-            startOffset="1679"
-            endLine="45"
-            endColumn="39"
-            endOffset="1709"
-            message="id defined here"/>
     </incident>
 
     <incident
@@ -1471,12 +1471,12 @@
         message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="55"
+            line="61"
             column="12"
-            startOffset="1960"
-            endLine="55"
+            startOffset="2148"
+            endLine="61"
             endColumn="18"
-            endOffset="1966"/>
+            endOffset="2154"/>
     </incident>
 
     <incident

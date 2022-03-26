@@ -177,7 +177,7 @@ document.getElementById(id).style.display = 'none';
       <span class="mdl-layout-title">Lint Report: 3 errors and 162 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Thu Mar 24 19:26:30 UTC 2022      </nav>
+Check performed at Sat Mar 26 07:01:15 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -428,13 +428,13 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:68</span>: <span class="message">Call requires API level 28 (current min is 26): <code>findUserLocation</code></span><br /><pre class="errorlines">
-<span class="lineno">  65 </span>    <span class="keyword">protected</span> <span class="keyword">void</span> onCreate(Bundle savedInstanceState) {
-<span class="lineno">  66 </span>        <span class="keyword">super</span>.onCreate(savedInstanceState);
-<span class="lineno">  67 </span>        setContentView(R.layout.activity_maps);
-<span class="caretline"><span class="lineno">  68 </span>        <span class="error">findUserLocation</span>();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  69 </span>        initialize(); <span class="comment">// initialize app on launch</span>
-<span class="lineno">  70 </span>        initializeNavbar();
+<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:74</span>: <span class="message">Call requires API level 28 (current min is 26): <code>findUserLocation</code></span><br /><pre class="errorlines">
+<span class="lineno">  71 </span>    <span class="keyword">protected</span> <span class="keyword">void</span> onCreate(Bundle savedInstanceState) {
+<span class="lineno">  72 </span>        <span class="keyword">super</span>.onCreate(savedInstanceState);
+<span class="lineno">  73 </span>        setContentView(R.layout.activity_maps);
+<span class="caretline"><span class="lineno">  74 </span>        <span class="error">findUserLocation</span>();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  75 </span>        initialize(); <span class="comment">// initialize app on launch</span>
+<span class="lineno">  76 </span>        initializeNavbar();
 </pre>
 
 </div>
@@ -854,14 +854,14 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:55</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>FirebaseFirestore</code> which has field <code>context</code> pointing to <code>Context</code>); this is a memory leak</span><br /><pre class="errorlines">
-<span class="lineno">  52 </span>    <span class="keyword">private</span> GoogleMap mMap;
-<span class="lineno">  53 </span>    <span class="keyword">private</span> <span class="keyword">static</span> String currentUUID;
-<span class="lineno">  54 </span>    <span class="keyword">private</span> <span class="keyword">static</span> String userPassword;
-<span class="caretline"><span class="lineno">  55 </span>    <span class="keyword">public</span> <span class="warning"><span class="keyword">static</span></span> FirebaseFirestore db;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  56 </span>    <span class="keyword">private</span> SharedPreferences loggedUser;
-<span class="lineno">  57 </span>    <span class="keyword">protected</span> LocationManager locationManager;
-<span class="lineno">  58 </span>    <span class="keyword">protected</span> LocationListener locationListener;
+<span class="location"><a href="../../src/main/java/com/example/qr_go/MapsActivity.java">../../src/main/java/com/example/qr_go/MapsActivity.java</a>:61</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>FirebaseFirestore</code> which has field <code>context</code> pointing to <code>Context</code>); this is a memory leak</span><br /><pre class="errorlines">
+<span class="lineno">  58 </span>    <span class="keyword">private</span> GoogleMap mMap;
+<span class="lineno">  59 </span>    <span class="keyword">private</span> <span class="keyword">static</span> String currentUUID;
+<span class="lineno">  60 </span>    <span class="keyword">private</span> <span class="keyword">static</span> String userPassword;
+<span class="caretline"><span class="lineno">  61 </span>    <span class="keyword">public</span> <span class="warning"><span class="keyword">static</span></span> FirebaseFirestore db;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  62 </span>    <span class="keyword">private</span> SharedPreferences loggedUser;
+<span class="lineno">  63 </span>    <span class="keyword">protected</span> LocationManager locationManager;
+<span class="lineno">  64 </span>    <span class="keyword">protected</span> LocationListener locationListener;
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/PlayerProfileActivity.java">../../src/main/java/com/example/qr_go/PlayerProfileActivity.java</a>:37</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>FirebaseFirestore</code> which has field <code>context</code> pointing to <code>Context</code>); this is a memory leak</span><br /><pre class="errorlines">
