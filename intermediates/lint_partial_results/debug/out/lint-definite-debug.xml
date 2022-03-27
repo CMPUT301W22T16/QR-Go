@@ -696,12 +696,12 @@
             attribute="xmlns:android"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="99"
+            line="100"
             column="13"
-            startOffset="4052"
-            endLine="99"
+            startOffset="4107"
+            endLine="100"
             endColumn="71"
-            endOffset="4110"/>
+            endOffset="4165"/>
     </incident>
 
     <incident
@@ -794,12 +794,12 @@
         message="Hardcoded string &quot;QR Codes&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="85"
+            line="86"
             column="17"
-            startOffset="3456"
-            endLine="85"
+            startOffset="3511"
+            endLine="86"
             endColumn="40"
-            endOffset="3479"/>
+            endOffset="3534"/>
     </incident>
 
     <incident
@@ -808,12 +808,12 @@
         message="Hardcoded string &quot;Players&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="89"
+            line="90"
             column="17"
-            startOffset="3662"
-            endLine="89"
+            startOffset="3717"
+            endLine="90"
             endColumn="39"
-            endOffset="3684"/>
+            endOffset="3739"/>
     </incident>
 
     <incident
@@ -1014,29 +1014,6 @@
     </incident>
 
     <incident
-        id="TextFields"
-        severity="warning"
-        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="50"
-            column="9"
-            startOffset="1868"
-            endLine="50"
-            endColumn="43"
-            endOffset="1902"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="45"
-            column="9"
-            startOffset="1679"
-            endLine="45"
-            endColumn="39"
-            endOffset="1709"
-            message="id defined here"/>
-    </incident>
-
-    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -1062,6 +1039,29 @@
             endLine="44"
             endColumn="14"
             endOffset="1670"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="50"
+            column="9"
+            startOffset="1868"
+            endLine="50"
+            endColumn="43"
+            endOffset="1902"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="45"
+            column="9"
+            startOffset="1679"
+            endLine="45"
+            endColumn="39"
+            endOffset="1709"
+            message="id defined here"/>
     </incident>
 
     <incident
@@ -1487,10 +1487,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRArrayAdapter.java"
             line="76"
             column="35"
-            startOffset="2815"
+            startOffset="2793"
             endLine="76"
             endColumn="80"
-            endOffset="2860"/>
+            endOffset="2838"/>
     </incident>
 
     <incident
@@ -1501,10 +1501,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRArrayAdapter.java"
             line="76"
             column="35"
-            startOffset="2815"
+            startOffset="2793"
             endLine="76"
             endColumn="44"
-            endOffset="2824"/>
+            endOffset="2802"/>
     </incident>
 
     <incident
@@ -1515,10 +1515,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRArrayAdapter.java"
             line="76"
             column="47"
-            startOffset="2827"
+            startOffset="2805"
             endLine="76"
             endColumn="80"
-            endOffset="2860"/>
+            endOffset="2838"/>
     </incident>
 
     <incident
@@ -1529,10 +1529,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRArrayAdapter.java"
             line="89"
             column="35"
-            startOffset="3432"
+            startOffset="3410"
             endLine="89"
             endColumn="59"
-            endOffset="3456"/>
+            endOffset="3434"/>
     </incident>
 
     <incident
@@ -1543,10 +1543,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRArrayAdapter.java"
             line="89"
             column="52"
-            startOffset="3449"
+            startOffset="3427"
             endLine="89"
             endColumn="59"
-            endOffset="3456"/>
+            endOffset="3434"/>
     </incident>
 
     <incident
