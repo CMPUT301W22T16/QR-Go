@@ -26,8 +26,7 @@ import java.util.Map;
 
 public class QRInfoActivity extends BaseActivity {
 
-    private QRGoDBUtil db;
-    FirebaseFirestore gameQRDBInst;
+    FirebaseFirestore db;
     private Player thisTempPlayer; // TODO: temporary, replace with currently logged in user
 
     private GameQRCode selectedQR;
@@ -54,8 +53,9 @@ public class QRInfoActivity extends BaseActivity {
 
         usersActivityIntent = new Intent(QRInfoActivity.this, ScannedUsersActivity.class);
 
-        db = new QRGoDBUtil(this);
-        gameQRDBInst = FirebaseFirestore.getInstance();
+        db = FirebaseFirestore.getInstance();
+
+        comments = new CommentsQR();
 
         TextView tvQRName = (TextView) findViewById(R.id.qrName);
         TextView tvQRLocation = (TextView) findViewById(R.id.qrLocation);
@@ -68,7 +68,7 @@ public class QRInfoActivity extends BaseActivity {
             selectedQRId = bundle.getString("QRid");
 
             // set info from QRId
-            gameQRDBInst.collection("GameQRCodes")
+            db.collection("GameQRCodes")
                     .whereEqualTo("id", selectedQRId)
                     .get()
                     .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -85,36 +85,35 @@ public class QRInfoActivity extends BaseActivity {
                                 tvQRName.setText(selectedQR.getId());
 //                                tvQRLocation.setText(selectedQR.getGeoLocation().getAddress().toString());
                                 tvScore.setText("Score: "+selectedQR.getScore());
-
-
-
 
                             }
                         }
                     });
 
             // get comments
-            gameQRDBInst.collection("Comments")
-                    .whereEqualTo("id", selectedQRId)
+            db.collection("Comments")
+                    .document(selectedQRId)
                     .get()
-                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                         @Override
-                        // code from https://stackoverflow.com/questions/65465335/get-specific-field-from-firestore-with-whereequalto
-                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                             if (task.isSuccessful()) {
+                                DocumentSnapshot document = task.getResult();
+                                Map<String, Object> map = document.getData();
+                                for(Object commentsInfo : map.values()) {
 
-                                for (DocumentSnapshot document : task.getResult()) {
-                                    selectedQR = document.toObject(GameQRCode.class);
+                                    Map<String, Object> commentInfo = (Map<String, Object>) commentsInfo;
+
+                                    Player player = new Player();
+                                    player.setUsername((String) commentInfo.get("Username"));
+                                    // TODO: add photolink when it is ready
+                                    comments.addComment(player, (String) commentInfo.get("Message"), null);
                                 }
-                                usersActivityIntent.putExtra("selectedQR", selectedQR);
 
-                                tvQRName.setText(selectedQR.getId());
-//                                tvQRLocation.setText(selectedQR.getGeoLocation().getAddress().toString());
-                                tvScore.setText("Score: "+selectedQR.getScore());
+                                commentDataList = comments.getCommentObjects();
 
-
-
-
+                                commentAdapter = new ListComments(QRInfoActivity.this, commentDataList);
+                                commentList.setAdapter(commentAdapter);
                             }
                         }
                     });
@@ -123,27 +122,9 @@ public class QRInfoActivity extends BaseActivity {
 
         commentList = findViewById(R.id.myQRList);
 
-        comments = new CommentsQR();
-
         // TODO: temporary, set to currently logged in user
         thisTempPlayer = new Player();
         thisTempPlayer.setUsername("QRInfo Temp Player");
-
-        // TODO: these are temporary. grab data from DB.
-        String []usernames = {"User1", "User2", "User3", "User4", "User5", "User6"};
-        String []msgs = {"msg 1", "msg 2", "msg 3", "msg 4", "msg 5", "msg 6"};
-
-        for(int i=0; i<usernames.length; i++) {
-            Player player = new Player();
-            player.setUsername(usernames[i]);
-            comments.addComment(player, msgs[i], null);
-        }
-
-        commentDataList = comments.getCommentObjects();
-        //TODO: sort commentDataList
-
-        commentAdapter = new ListComments(this, commentDataList);
-        commentList.setAdapter(commentAdapter);
     }
 
 

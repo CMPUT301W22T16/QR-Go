@@ -111,7 +111,7 @@ public class MyQRCodesActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MyQRCodesActivity.this, QRInfoActivity.class);
-                intent.putExtra("QRid", "0e7cdfe2cbf54c2bbd5868ea42f3cf101a891907d33ee0d20c7bc31b0f597834");
+                intent.putExtra("QRid", "696ce4dbd7bb57cbfe58b64f530f428b74999cb37e2ee60980490cd9552de3a6");
                 startActivity(intent);
             }
         });
