@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -39,11 +40,17 @@ public class QRSearchSpinnerAdapter extends ArrayAdapter<String> {
         View view = convertView;
 
         if(view == null) {
-            view = LayoutInflater.from(context).inflate(R.layout.spinner_item, parent, false);
+            view = LayoutInflater.from(context).inflate(R.layout.qr_search_spinner_item, parent, false);
         }
 
-        TextView textView = (TextView) view;
+        TextView textView = (TextView) view.findViewById(R.id.qr_search_option_text);
+        ImageView imageView = (ImageView) view.findViewById(R.id.qr_search_option_icon);
         textView.setText(optionsList.get(position));
+        if (position == 0) {
+            imageView.setImageResource(R.drawable.ic_baseline_public_24);
+        } else {
+            imageView.setImageResource(R.drawable.ic_baseline_my_location_24);
+        }
         return view;
     }
 }

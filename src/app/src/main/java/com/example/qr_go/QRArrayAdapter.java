@@ -20,7 +20,7 @@ import java.util.ArrayList;
 /**
  * Custom ArrayAdapter for displaying qr codes in a list
  */
-public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> implements Filterable {
+public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> {
     private Context context;
     private Integer sortPos;
     private ArrayList<QRListDisplayContainer> allQrDisplays;
