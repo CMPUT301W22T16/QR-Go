@@ -396,6 +396,13 @@ public class SearchActivity extends BaseActivity {
     }
 
     /**
+     * @return the qr search spinner
+     */
+    public static Spinner getQrSearchSpinner() {
+        return qrSearchSpinner;
+    }
+
+    /**
      * Utility function for clearing search bar and minimizing keyboard
      * https://stackoverflow.com/a/2342856
      */

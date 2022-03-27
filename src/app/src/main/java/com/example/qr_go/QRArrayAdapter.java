@@ -27,6 +27,8 @@ public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> {
     private ArrayList<QRListDisplayContainer> qrDisplays;
     private QRArrayAdapter adapter = this;
 
+    private final int localDistanceBoundary = 10000;
+
     public QRArrayAdapter(@NonNull Context context, ArrayList<QRListDisplayContainer> qrDisplays, Integer sortPos) {
         super(context, 0, qrDisplays);
         this.context = context;
@@ -93,30 +95,17 @@ public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> {
         return view;
     }
 
-    // Help with filtering from https://gist.github.com/codinginflow/eec0211b4fab5e5426319389377d71af
-
-    @Override
-    public Filter getFilter() { return qrFilter;}
-
-    private Filter qrFilter = new Filter() {
-        @Override
-        protected FilterResults performFiltering(CharSequence constraint) {
-            ArrayList<QRListDisplayContainer> filteredList = new ArrayList<>();
-
-
-            filteredList.addAll(allQrDisplays);
-
-            FilterResults results = new FilterResults();
-            results.values = filteredList;
-
-            return results;
+    public void filter(int filterOption) {
+        qrDisplays.clear();
+        if (filterOption == 1) {
+            for (QRListDisplayContainer qr : allQrDisplays) {
+                if (qr.getDistance() <= localDistanceBoundary) {
+                    qrDisplays.add(qr);
+                }
+            }
+        } else {
+            qrDisplays = allQrDisplays;
         }
-
-        @Override
-        protected void publishResults(CharSequence constraint, FilterResults results) {
-            qrDisplays.clear();
-            qrDisplays.addAll((ArrayList) results.values);
-            notifyDataSetChanged();
-        }
-    };
+        notifyDataSetChanged();
+    }
 }
