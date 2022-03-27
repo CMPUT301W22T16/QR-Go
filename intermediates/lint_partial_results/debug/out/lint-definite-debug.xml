@@ -588,15 +588,15 @@
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;Score: 123456&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Score: N/A&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="54"
             column="9"
             startOffset="2152"
             endLine="54"
-            endColumn="37"
-            endOffset="2180"/>
+            endColumn="34"
+            endOffset="2177"/>
     </incident>
 
     <incident
@@ -611,10 +611,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="55"
             column="9"
-            startOffset="2189"
+            startOffset="2186"
             endLine="55"
             endColumn="32"
-            endOffset="2212"/>
+            endOffset="2209"/>
     </incident>
 
     <incident
@@ -625,10 +625,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="67"
             column="9"
-            startOffset="2662"
+            startOffset="2659"
             endLine="67"
             endColumn="43"
-            endOffset="2696"/>
+            endOffset="2693"/>
     </incident>
 
     <incident
@@ -639,10 +639,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="92"
             column="9"
-            startOffset="3669"
+            startOffset="3666"
             endLine="92"
             endColumn="28"
-            endOffset="3688"/>
+            endOffset="3685"/>
     </incident>
 
     <incident
@@ -667,10 +667,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="97"
             column="6"
-            startOffset="3851"
+            startOffset="3848"
             endLine="97"
             endColumn="14"
-            endOffset="3859"/>
+            endOffset="3856"/>
     </incident>
 
     <incident
@@ -681,10 +681,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="106"
             column="9"
-            startOffset="4180"
+            startOffset="4177"
             endLine="106"
             endColumn="46"
-            endOffset="4217"/>
+            endOffset="4214"/>
     </incident>
 
     <incident
@@ -1576,12 +1576,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRInfoActivity.java"
-            line="91"
+            line="87"
             column="49"
-            startOffset="3366"
-            endLine="91"
+            startOffset="3256"
+            endLine="87"
             endColumn="80"
-            endOffset="3397"/>
+            endOffset="3287"/>
     </incident>
 
     <incident
@@ -1590,12 +1590,40 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRInfoActivity.java"
-            line="91"
+            line="87"
             column="49"
-            startOffset="3366"
-            endLine="91"
+            startOffset="3256"
+            endLine="87"
             endColumn="58"
-            endOffset="3375"/>
+            endOffset="3265"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRInfoActivity.java"
+            line="113"
+            column="49"
+            startOffset="4446"
+            endLine="113"
+            endColumn="80"
+            endOffset="4477"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRInfoActivity.java"
+            line="113"
+            column="49"
+            startOffset="4446"
+            endLine="113"
+            endColumn="58"
+            endOffset="4455"/>
     </incident>
 
     <incident

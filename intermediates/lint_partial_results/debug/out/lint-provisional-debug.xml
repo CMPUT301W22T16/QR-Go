@@ -494,10 +494,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="68"
             column="9"
-            startOffset="2705"
+            startOffset="2702"
             endLine="68"
             endColumn="40"
-            endOffset="2736"/>
+            endOffset="2733"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -511,10 +511,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="93"
             column="9"
-            startOffset="3697"
+            startOffset="3694"
             endLine="93"
             endColumn="37"
-            endOffset="3725"/>
+            endOffset="3722"/>
         <map>
             <condition minLT="23"/>
         </map>

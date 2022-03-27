@@ -411,10 +411,16 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRArrayAdapter.java:89: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
                 scoreView.setText(distanceString + " away");
                                                    ~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRInfoActivity.java:91: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRInfoActivity.java:87: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
                                 tvScore.setText("Score: "+selectedQR.getScore());
                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRInfoActivity.java:91: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRInfoActivity.java:87: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                                tvScore.setText("Score: "+selectedQR.getScore());
+                                                ~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRInfoActivity.java:113: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                                tvScore.setText("Score: "+selectedQR.getScore());
+                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRInfoActivity.java:113: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
                                 tvScore.setText("Score: "+selectedQR.getScore());
                                                 ~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/UserArrayAdapter.java:73: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
@@ -557,9 +563,9 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:41: Warning: Hardcoded string "QR LOCATION", should use @string resource [HardcodedText]
             android:text="QR LOCATION"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:54: Warning: Hardcoded string "Score: 123456", should use @string resource [HardcodedText]
-        android:text="Score: 123456"
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:54: Warning: Hardcoded string "Score: N/A", should use @string resource [HardcodedText]
+        android:text="Score: N/A"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:67: Warning: Hardcoded string "See other players >", should use @string resource [HardcodedText]
         android:text="See other players >"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -776,4 +782,4 @@
    Please define an explicit reason why it is ignored, and when it can be
    resolved.
 
-3 errors, 164 warnings
+3 errors, 166 warnings
