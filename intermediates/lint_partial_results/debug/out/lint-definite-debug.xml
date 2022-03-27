@@ -1578,10 +1578,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRInfoActivity.java"
             line="87"
             column="49"
-            startOffset="3256"
+            startOffset="3202"
             endLine="87"
             endColumn="80"
-            endOffset="3287"/>
+            endOffset="3233"/>
     </incident>
 
     <incident
@@ -1592,38 +1592,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRInfoActivity.java"
             line="87"
             column="49"
-            startOffset="3256"
+            startOffset="3202"
             endLine="87"
             endColumn="58"
-            endOffset="3265"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRInfoActivity.java"
-            line="113"
-            column="49"
-            startOffset="4446"
-            endLine="113"
-            endColumn="80"
-            endOffset="4477"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="String literal in `setText` can not be translated. Use Android resources instead.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRInfoActivity.java"
-            line="113"
-            column="49"
-            startOffset="4446"
-            endLine="113"
-            endColumn="58"
-            endOffset="4455"/>
+            endOffset="3211"/>
     </incident>
 
     <incident
