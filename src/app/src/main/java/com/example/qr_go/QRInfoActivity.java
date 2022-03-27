@@ -3,6 +3,7 @@ package com.example.qr_go;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -38,8 +39,6 @@ public class QRInfoActivity extends BaseActivity {
 
     private Intent usersActivityIntent;
 
-    private ArrayList<String> scannedUsers;
-
     CommentsQR comments;
 
     ListView commentList;
@@ -58,18 +57,15 @@ public class QRInfoActivity extends BaseActivity {
         db = new QRGoDBUtil(this);
         gameQRDBInst = FirebaseFirestore.getInstance();
 
-        scannedUsers = new ArrayList<>();
-
         TextView tvQRName = (TextView) findViewById(R.id.qrName);
         TextView tvQRLocation = (TextView) findViewById(R.id.qrLocation);
         TextView tvScore = (TextView) findViewById(R.id.qrScore);
 
         // Get information from extras
-        Bundle extras = getIntent().getExtras();
-        if(extras == null) {
-            selectedQR = null;
-        } else {
-            selectedQRId = extras.getString("QRid");
+        Bundle bundle = getIntent().getExtras();
+
+        if(bundle != null) {
+            selectedQRId = bundle.getString("QRid");
 
             // set info from QRId
             gameQRDBInst.collection("GameQRCodes")
@@ -90,12 +86,39 @@ public class QRInfoActivity extends BaseActivity {
 //                                tvQRLocation.setText(selectedQR.getGeoLocation().getAddress().toString());
                                 tvScore.setText("Score: "+selectedQR.getScore());
 
-                            }
-                            else {
-                                selectedQR = null;
+
+
+
                             }
                         }
                     });
+
+            // get comments
+            gameQRDBInst.collection("Comments")
+                    .whereEqualTo("id", selectedQRId)
+                    .get()
+                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                        @Override
+                        // code from https://stackoverflow.com/questions/65465335/get-specific-field-from-firestore-with-whereequalto
+                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                            if (task.isSuccessful()) {
+
+                                for (DocumentSnapshot document : task.getResult()) {
+                                    selectedQR = document.toObject(GameQRCode.class);
+                                }
+                                usersActivityIntent.putExtra("selectedQR", selectedQR);
+
+                                tvQRName.setText(selectedQR.getId());
+//                                tvQRLocation.setText(selectedQR.getGeoLocation().getAddress().toString());
+                                tvScore.setText("Score: "+selectedQR.getScore());
+
+
+
+
+                            }
+                        }
+                    });
+
         }
 
         commentList = findViewById(R.id.myQRList);
@@ -105,9 +128,6 @@ public class QRInfoActivity extends BaseActivity {
         // TODO: temporary, set to currently logged in user
         thisTempPlayer = new Player();
         thisTempPlayer.setUsername("QRInfo Temp Player");
-
-        // TODO: temporary, set to currently viewing GameQRCode
-        selectedQR = new GameQRCode();
 
         // TODO: these are temporary. grab data from DB.
         String []usernames = {"User1", "User2", "User3", "User4", "User5", "User6"};
