@@ -726,12 +726,12 @@
         message="Use &quot;`start`&quot; instead of &quot;`left`&quot; to ensure correct behavior in right-to-left locales">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="57"
+            line="59"
             column="30"
-            startOffset="2214"
-            endLine="57"
+            startOffset="2320"
+            endLine="59"
             endColumn="50"
-            endOffset="2234"/>
+            endOffset="2340"/>
         <map>
             <entry
                 name="applies"
@@ -749,12 +749,12 @@
             replacement="layout_alignParentStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="58"
+            line="60"
             column="13"
-            startOffset="2249"
-            endLine="58"
+            startOffset="2355"
+            endLine="60"
             endColumn="43"
-            endOffset="2279"/>
+            endOffset="2385"/>
         <map>
             <entry
                 name="applies"

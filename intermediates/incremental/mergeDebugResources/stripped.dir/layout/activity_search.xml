@@ -32,6 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
             android:layout_gravity="bottom"
             android:background="@null"/>
 
@@ -47,6 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Search Bar"
+            android:layout_alignParentBottom="true"
             android:inputType="textPersonName"
             android:visibility="gone" />
 
@@ -56,6 +58,7 @@
             android:layout_height="match_parent"
             android:gravity="left|center_vertical"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
             android:visibility="gone"
             android:background="@null"/>
     </RelativeLayout>
