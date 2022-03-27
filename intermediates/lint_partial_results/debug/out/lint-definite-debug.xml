@@ -696,12 +696,12 @@
             attribute="xmlns:android"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="84"
+            line="99"
             column="13"
-            startOffset="3482"
-            endLine="84"
+            startOffset="4052"
+            endLine="99"
             endColumn="71"
-            endOffset="3540"/>
+            endOffset="4110"/>
     </incident>
 
     <incident
@@ -710,12 +710,12 @@
         message="Invalid layout param in a `RelativeLayout`: `layout_weight`">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="20"
+            line="21"
             column="13"
-            startOffset="840"
-            endLine="20"
+            startOffset="881"
+            endLine="21"
             endColumn="38"
-            endOffset="865"/>
+            endOffset="906"/>
     </incident>
 
     <incident
@@ -724,12 +724,12 @@
         message="Hardcoded string &quot;Back&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="22"
+            line="23"
             column="13"
-            startOffset="918"
-            endLine="22"
+            startOffset="959"
+            endLine="23"
             endColumn="32"
-            endOffset="937"/>
+            endOffset="978"/>
     </incident>
 
     <incident
@@ -738,12 +738,12 @@
         message="Invalid layout param in a `RelativeLayout`: `layout_weight`">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="32"
+            line="33"
             column="13"
-            startOffset="1301"
-            endLine="32"
+            startOffset="1342"
+            endLine="33"
             endColumn="38"
-            endOffset="1326"/>
+            endOffset="1367"/>
     </incident>
 
     <incident
@@ -766,12 +766,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="38"
-            column="6"
-            startOffset="1497"
-            endLine="38"
-            endColumn="14"
-            endOffset="1505"/>
+            line="45"
+            column="10"
+            startOffset="1737"
+            endLine="45"
+            endColumn="18"
+            endOffset="1745"/>
     </incident>
 
     <incident
@@ -780,12 +780,12 @@
         message="Hardcoded string &quot;Search Bar&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="42"
-            column="9"
-            startOffset="1644"
-            endLine="42"
-            endColumn="34"
-            endOffset="1669"/>
+            line="49"
+            column="13"
+            startOffset="1900"
+            endLine="49"
+            endColumn="38"
+            endOffset="1925"/>
     </incident>
 
     <incident
@@ -794,12 +794,12 @@
         message="Hardcoded string &quot;QR Codes&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="70"
+            line="85"
             column="17"
-            startOffset="2886"
-            endLine="70"
+            startOffset="3456"
+            endLine="85"
             endColumn="40"
-            endOffset="2909"/>
+            endOffset="3479"/>
     </incident>
 
     <incident
@@ -808,12 +808,12 @@
         message="Hardcoded string &quot;Players&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="74"
+            line="89"
             column="17"
-            startOffset="3092"
-            endLine="74"
+            startOffset="3662"
+            endLine="89"
             endColumn="39"
-            endOffset="3114"/>
+            endOffset="3684"/>
     </incident>
 
     <incident
@@ -1471,12 +1471,12 @@
         message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="61"
+            line="55"
             column="12"
-            startOffset="2148"
-            endLine="61"
+            startOffset="1960"
+            endLine="55"
             endColumn="18"
-            endOffset="2154"/>
+            endOffset="1966"/>
     </incident>
 
     <incident
@@ -1862,6 +1862,20 @@
             endLine="63"
             endColumn="19"
             endOffset="2293"/>
+    </incident>
+
+    <incident
+        id="StaticFieldLeak"
+        severity="warning"
+        message="Do not place Android context classes in static fields; this is a memory leak">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/SearchActivity.java"
+            line="66"
+            column="13"
+            startOffset="2356"
+            endLine="66"
+            endColumn="19"
+            endOffset="2362"/>
     </incident>
 
     <incident

@@ -66,6 +66,7 @@ id qr_del_button
 id qr_id_view
 id qr_list
 id qr_score_view
+id qr_search_spinner
 id relativeLayout
 id save_game_qr
 id scanner_view

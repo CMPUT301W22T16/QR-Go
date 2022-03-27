@@ -530,12 +530,12 @@
             replacement="layout_alignParentStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="19"
+            line="20"
             column="13"
-            startOffset="789"
-            endLine="19"
+            startOffset="830"
+            endLine="20"
             endColumn="43"
-            endOffset="819"/>
+            endOffset="860"/>
         <map>
             <entry
                 name="applies"
@@ -549,12 +549,12 @@
         message="When you define `paddingLeft` you should probably also define `paddingRight` for right-to-left symmetry">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="21"
+            line="22"
             column="13"
-            startOffset="879"
-            endLine="21"
+            startOffset="920"
+            endLine="22"
             endColumn="32"
-            endOffset="898"/>
+            endOffset="939"/>
         <map>
             <entry
                 name="applies"
@@ -572,12 +572,12 @@
             replacement="paddingStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="21"
+            line="22"
             column="13"
-            startOffset="879"
-            endLine="21"
+            startOffset="920"
+            endLine="22"
             endColumn="32"
-            endOffset="898"/>
+            endOffset="939"/>
         <map>
             <entry
                 name="applies"
@@ -595,12 +595,54 @@
             replacement="layout_alignParentEnd"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="33"
+            line="34"
             column="13"
-            startOffset="1340"
-            endLine="33"
+            startOffset="1381"
+            endLine="34"
             endColumn="44"
-            endOffset="1371"/>
+            endOffset="1412"/>
+        <map>
+            <entry
+                name="applies"
+                int="10"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Use &quot;`start`&quot; instead of &quot;`left`&quot; to ensure correct behavior in right-to-left locales">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            line="57"
+            column="30"
+            startOffset="2214"
+            endLine="57"
+            endColumn="34"
+            endOffset="2218"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Consider replacing `android:layout_alignParentLeft` with `android:layout_alignParentStart=&quot;true&quot;` to better support right-to-left layouts">
+        <fix-replace
+            description="Replace with android:layout_alignParentStart=&quot;true&quot;"
+            oldString="layout_alignParentLeft"
+            replacement="layout_alignParentStart"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            line="58"
+            column="13"
+            startOffset="2233"
+            endLine="58"
+            endColumn="43"
+            endOffset="2263"/>
         <map>
             <entry
                 name="applies"
@@ -918,12 +960,12 @@
         <fix-data requiresApi="28"/>
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="74"
+            line="68"
             column="9"
-            startOffset="2615"
-            endLine="74"
+            startOffset="2427"
+            endLine="68"
             endColumn="25"
-            endOffset="2631"/>
+            endOffset="2443"/>
         <map>
             <entry
                 name="minSdk"
