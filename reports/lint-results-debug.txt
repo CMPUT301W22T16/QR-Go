@@ -126,7 +126,7 @@
         android:textSize="24dp"
         ~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:38: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
-        android:textSize="16dp"
+        android:textSize="32dp"
         ~~~~~~~~~~~~~~~~~~~~~~~
 
    Explanation for issues of type "SpUsage":
