@@ -1004,29 +1004,6 @@
     </incident>
 
     <incident
-        id="TextFields"
-        severity="warning"
-        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="27"
-            column="9"
-            startOffset="1000"
-            endLine="27"
-            endColumn="43"
-            endOffset="1034"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="22"
-            column="9"
-            startOffset="811"
-            endLine="22"
-            endColumn="39"
-            endOffset="841"
-            message="id defined here"/>
-    </incident>
-
-    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -1052,6 +1029,29 @@
             endLine="21"
             endColumn="14"
             endOffset="802"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="27"
+            column="9"
+            startOffset="1000"
+            endLine="27"
+            endColumn="43"
+            endOffset="1034"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="22"
+            column="9"
+            startOffset="811"
+            endLine="22"
+            endColumn="39"
+            endOffset="841"
+            message="id defined here"/>
     </incident>
 
     <incident
@@ -1505,10 +1505,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MapsActivity.java"
             line="50"
             column="12"
-            startOffset="1735"
+            startOffset="1736"
             endLine="50"
             endColumn="18"
-            endOffset="1741"/>
+            endOffset="1742"/>
     </incident>
 
     <incident
