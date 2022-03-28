@@ -14,7 +14,6 @@ import androidx.viewbinding.ViewBindings;
 import androidx.viewpager2.widget.ViewPager2;
 import com.example.qr_go.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.button.MaterialButton;
 import com.google.android.material.tabs.TabLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -23,9 +22,6 @@ import java.lang.String;
 public final class ActivitySearchBinding implements ViewBinding {
   @NonNull
   private final LinearLayout rootView;
-
-  @NonNull
-  public final MaterialButton backButton;
 
   @NonNull
   public final BottomNavigationView bottomNavView;
@@ -45,12 +41,11 @@ public final class ActivitySearchBinding implements ViewBinding {
   @NonNull
   public final Spinner sortSpinner;
 
-  private ActivitySearchBinding(@NonNull LinearLayout rootView, @NonNull MaterialButton backButton,
+  private ActivitySearchBinding(@NonNull LinearLayout rootView,
       @NonNull BottomNavigationView bottomNavView, @NonNull Spinner qrSearchSpinner,
       @NonNull EditText searchBar, @NonNull ViewPager2 searchPager,
       @NonNull TabLayout searchTabLayout, @NonNull Spinner sortSpinner) {
     this.rootView = rootView;
-    this.backButton = backButton;
     this.bottomNavView = bottomNavView;
     this.qrSearchSpinner = qrSearchSpinner;
     this.searchBar = searchBar;
@@ -86,12 +81,6 @@ public final class ActivitySearchBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.back_button;
-      MaterialButton backButton = ViewBindings.findChildViewById(rootView, id);
-      if (backButton == null) {
-        break missingId;
-      }
-
       id = R.id.bottom_nav_view;
       BottomNavigationView bottomNavView = ViewBindings.findChildViewById(rootView, id);
       if (bottomNavView == null) {
@@ -128,8 +117,8 @@ public final class ActivitySearchBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivitySearchBinding((LinearLayout) rootView, backButton, bottomNavView,
-          qrSearchSpinner, searchBar, searchPager, searchTabLayout, sortSpinner);
+      return new ActivitySearchBinding((LinearLayout) rootView, bottomNavView, qrSearchSpinner,
+          searchBar, searchPager, searchTabLayout, sortSpinner);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

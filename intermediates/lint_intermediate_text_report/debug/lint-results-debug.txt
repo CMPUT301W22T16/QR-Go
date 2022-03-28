@@ -20,10 +20,7 @@
 
    https://developer.android.com/reference/java/util/Locale.html#default_locale
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:10: Error: This view is not constrained. It only has designtime positions, so it will jump to (0,0) at runtime unless you add the constraints [MissingConstraints]
-    <RelativeLayout
-     ~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:98: Error: This view is not constrained horizontally: at runtime it will jump to the left unless you add a horizontal constraint [MissingConstraints]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:75: Error: This view is not constrained horizontally: at runtime it will jump to the left unless you add a horizontal constraint [MissingConstraints]
     <View
      ~~~~
 
@@ -34,34 +31,6 @@
    if you push your layout on a device, the widgets may appear in a different
    location than shown in the editor. To fix this, make sure a widget has both
    horizontal and vertical constraints by dragging from the edge connections.
-
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MapsActivity.java:63: Error: Call requires API level 28 (current min is 26): findUserLocation [NewApi]
-        findUserLocation();
-        ~~~~~~~~~~~~~~~~
-
-   Explanation for issues of type "NewApi":
-   This check scans through all the Android API calls in the application and
-   warns about any calls that are not available on all versions targeted by
-   this application (according to its minimum SDK attribute in the manifest).
-
-   If you really want to use this API and don't need to support older devices
-   just set the minSdkVersion in your build.gradle or AndroidManifest.xml
-   files.
-
-   If your code is deliberately accessing newer APIs, and you have ensured
-   (e.g. with conditional execution) that this code will only ever be called
-   on a supported platform, then you can annotate your class or method with
-   the @TargetApi annotation specifying the local minimum SDK to apply, such
-   as @TargetApi(11), such that this check considers 11 rather than your
-   manifest file's minimum SDK as the required API level.
-
-   If you are deliberately setting android: attributes in style definitions,
-   make sure you place this in a values-vNN folder in order to avoid running
-   into runtime conflicts on certain devices where manufacturers have added
-   custom attributes whose ids conflict with the new ones on later platforms.
-
-   Similarly, you can use tools:targetApi="11" in an XML file to indicate that
-   the element will only be inflated in an adequate context.
 
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_maps.xml:20: Warning: Replace the <fragment> tag with FragmentContainerView. [FragmentTagUsage from fragment-1.4.0]
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
@@ -147,14 +116,8 @@
 
    https://developer.android.com/training/multiscreen/screendensities.html
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:21: Warning: Invalid layout param in a RelativeLayout: layout_weight [ObsoleteLayoutParam]
-            android:layout_weight="0"
-            ~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:33: Warning: Invalid layout param in a RelativeLayout: layout_weight [ObsoleteLayoutParam]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:19: Warning: Invalid layout param in a RelativeLayout: layout_weight [ObsoleteLayoutParam]
             android:layout_weight="1"
-            ~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:23: Warning: Invalid layout param in a RelativeLayout: layout_weight [ObsoleteLayoutParam]
-            android:layout_weight="0"
             ~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:34: Warning: Invalid layout param in a LinearLayout: layout_alignParentRight [ObsoleteLayoutParam]
         android:layout_alignParentRight="true"
@@ -183,7 +146,7 @@
    where the contents should be merged into the best folder.
 
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MapsActivity.java:50: Warning: Do not place Android context classes in static fields (static reference to FirebaseFirestore which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
-    public static FirebaseFirestore db;
+    public static FirebaseFirestore db; // database singleton
            ~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerProfileActivity.java:39: Warning: Do not place Android context classes in static fields (static reference to FirebaseFirestore which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
     public static FirebaseFirestore db;
@@ -241,6 +204,9 @@
    the remaining space anyway. With a declared width/height of 0dp it does not
    have to measure its own size first.
 
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable/ic_baseline_chevron_left_24.xml:1: Warning: The resource R.drawable.ic_baseline_chevron_left_24 appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable/sample_prof_pic.xml:2: Warning: The resource R.drawable.sample_prof_pic appears to be unused [UnusedResources]
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 ^
@@ -263,7 +229,7 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_maps.xml:20: Warning: This namespace declaration is redundant [RedundantNamespace]
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:102: Warning: This namespace declaration is redundant [RedundantNamespace]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:88: Warning: This namespace declaration is redundant [RedundantNamespace]
             xmlns:android="http://schemas.android.com/apk/res/android"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -273,10 +239,10 @@
    accidental leftovers from copy/pasting XML from other files or
    documentation.
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:50: Warning: The view name (@+id/player_email) suggests this is an e-mail address, but it does not include 'textEmail' in the inputType [TextFields]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:27: Warning: The view name (@+id/player_email) suggests this is an e-mail address, but it does not include 'textEmail' in the inputType [TextFields]
         android:inputType="textPersonName"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:45: id defined here
+    /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:22: id defined here
 
    Explanation for issues of type "TextFields":
    Providing an inputType attribute on a text field improves usability because
@@ -294,13 +260,13 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:97: Warning: Missing autofillHints attribute [Autofill]
     <EditText
      ~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:45: Warning: Missing autofillHints attribute [Autofill]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:31: Warning: Missing autofillHints attribute [Autofill]
         <EditText
          ~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:44: Warning: Missing autofillHints attribute [Autofill]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:21: Warning: Missing autofillHints attribute [Autofill]
     <EditText
      ~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:56: Warning: Missing autofillHints attribute [Autofill]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:33: Warning: Missing autofillHints attribute [Autofill]
     <EditText
      ~~~~~~~~
 
@@ -342,7 +308,7 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:9: Warning: Missing contentDescription attribute on image [ContentDescription]
     <ImageView
      ~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:33: Warning: Missing contentDescription attribute on image [ContentDescription]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:10: Warning: Missing contentDescription attribute on image [ContentDescription]
     <ImageView
      ~~~~~~~~~
 
@@ -608,16 +574,13 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:106: Warning: Hardcoded string "Type your comment here", should use @string resource [HardcodedText]
         android:hint="Type your comment here"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:23: Warning: Hardcoded string "Back", should use @string resource [HardcodedText]
-            android:text="Back"
-            ~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:49: Warning: Hardcoded string "Search Bar", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:35: Warning: Hardcoded string "Search Bar", should use @string resource [HardcodedText]
             android:hint="Search Bar"
             ~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:88: Warning: Hardcoded string "QR Codes", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:74: Warning: Hardcoded string "QR Codes", should use @string resource [HardcodedText]
                 android:text="QR Codes" />
                 ~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:92: Warning: Hardcoded string "Players", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:78: Warning: Hardcoded string "Players", should use @string resource [HardcodedText]
                 android:text="Players" />
                 ~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/menu/bottom_nav_menu.xml:7: Warning: Hardcoded string "Search", should use @string resource [HardcodedText]
@@ -644,22 +607,19 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_users_content.xml:7: Warning: Hardcoded string "User Name", should use @string resource [HardcodedText]
     android:text="User Name"
     ~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:25: Warning: Hardcoded string "Back", should use @string resource [HardcodedText]
-            android:text="Back"
-            ~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:49: Warning: Hardcoded string "Email", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:26: Warning: Hardcoded string "Email", should use @string resource [HardcodedText]
         android:hint="Email"
         ~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:61: Warning: Hardcoded string "Username", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:38: Warning: Hardcoded string "Username", should use @string resource [HardcodedText]
         android:hint="Username"
         ~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:91: Warning: Hardcoded string "Generate my login qr code", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:68: Warning: Hardcoded string "Generate my login qr code", should use @string resource [HardcodedText]
         android:text="Generate my login qr code"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:129: Warning: Hardcoded string "Generate my game status qr code", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:106: Warning: Hardcoded string "Generate my game status qr code", should use @string resource [HardcodedText]
         android:text="Generate my game status qr code"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:153: Warning: Hardcoded string "Edit Photo", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:130: Warning: Hardcoded string "Edit Photo", should use @string resource [HardcodedText]
         android:text="Edit Photo"
         ~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:14: Warning: Hardcoded string "12345", should use @string resource [HardcodedText]
@@ -695,12 +655,6 @@
    There are quickfixes to automatically extract this hardcoded string into a
    resource lookup.
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:22: Warning: When you define paddingLeft you should probably also define paddingRight for right-to-left symmetry [RtlSymmetry]
-            android:paddingLeft="0dp"
-            ~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:24: Warning: When you define paddingLeft you should probably also define paddingRight for right-to-left symmetry [RtlSymmetry]
-            android:paddingLeft="0dp"
-            ~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:36: Warning: When you define paddingRight you should probably also define paddingLeft for right-to-left symmetry [RtlSymmetry]
         android:paddingRight="0dp"
         ~~~~~~~~~~~~~~~~~~~~
@@ -755,27 +709,15 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:116: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="36dp" to better support right-to-left layouts [RtlHardcoded]
                     android:layout_marginLeft="36dp"
                     ~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:20: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
-            android:layout_alignParentLeft="true"
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:22: Warning: Consider replacing android:paddingLeft with android:paddingStart="0dp" to better support right-to-left layouts [RtlHardcoded]
-            android:paddingLeft="0dp"
-            ~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:34: Warning: Consider replacing android:layout_alignParentRight with android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:20: Warning: Consider replacing android:layout_alignParentRight with android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
             android:layout_alignParentRight="true"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:58: Warning: Use "start" instead of "left" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:44: Warning: Use "start" instead of "left" to ensure correct behavior in right-to-left locales [RtlHardcoded]
             android:gravity="left|center_vertical"
                              ~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:59: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:45: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
             android:layout_alignParentLeft="true"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:22: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
-            android:layout_alignParentLeft="true"
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:24: Warning: Consider replacing android:paddingLeft with android:paddingStart="0dp" to better support right-to-left layouts [RtlHardcoded]
-            android:paddingLeft="0dp"
-            ~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:26: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
         android:gravity="center|right"
                          ~~~~~~~~~~~~
@@ -836,4 +778,4 @@
    Please define an explicit reason why it is ignored, and when it can be
    resolved.
 
-3 errors, 184 warnings
+1 errors, 175 warnings

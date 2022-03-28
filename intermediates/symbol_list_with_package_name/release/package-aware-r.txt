@@ -2731,7 +2731,6 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
-id back_button
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3037,7 +3036,6 @@ id qr_search_spinner
 id radio
 id ratio
 id rectangles
-id relativeLayout
 id reverseSawtooth
 id right
 id rightToLeft

@@ -20,7 +20,6 @@ drawable round_qr_code_scanner_24
 drawable round_search_24
 drawable sample_prof_pic
 id QRData
-id back_button
 id bottom_nav_view
 id bt_temp_qr
 id buttonOtherPlayers
@@ -71,7 +70,6 @@ id qr_score_view
 id qr_search_option_icon
 id qr_search_option_text
 id qr_search_spinner
-id relativeLayout
 id save_game_qr
 id scanner_view
 id score

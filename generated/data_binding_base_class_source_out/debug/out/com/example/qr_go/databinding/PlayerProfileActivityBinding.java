@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,7 +15,6 @@ import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.qr_go.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.button.MaterialButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -24,9 +22,6 @@ import java.lang.String;
 public final class PlayerProfileActivityBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
-
-  @NonNull
-  public final MaterialButton backButton;
 
   @NonNull
   public final BottomNavigationView bottomNavView;
@@ -58,18 +53,12 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
   @NonNull
   public final ImageView profilePhoto;
 
-  @NonNull
-  public final RelativeLayout relativeLayout;
-
   private PlayerProfileActivityBinding(@NonNull ConstraintLayout rootView,
-      @NonNull MaterialButton backButton, @NonNull BottomNavigationView bottomNavView,
-      @NonNull View divider2, @NonNull View divider3, @NonNull View divider4,
-      @NonNull Button editProfilePhoto, @NonNull TextView generateLoginQr,
+      @NonNull BottomNavigationView bottomNavView, @NonNull View divider2, @NonNull View divider3,
+      @NonNull View divider4, @NonNull Button editProfilePhoto, @NonNull TextView generateLoginQr,
       @NonNull TextView generateStatusQr, @NonNull EditText playerEmail,
-      @NonNull EditText playerUsername, @NonNull ImageView profilePhoto,
-      @NonNull RelativeLayout relativeLayout) {
+      @NonNull EditText playerUsername, @NonNull ImageView profilePhoto) {
     this.rootView = rootView;
-    this.backButton = backButton;
     this.bottomNavView = bottomNavView;
     this.divider2 = divider2;
     this.divider3 = divider3;
@@ -80,7 +69,6 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
     this.playerEmail = playerEmail;
     this.playerUsername = playerUsername;
     this.profilePhoto = profilePhoto;
-    this.relativeLayout = relativeLayout;
   }
 
   @Override
@@ -110,12 +98,6 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.back_button;
-      MaterialButton backButton = ViewBindings.findChildViewById(rootView, id);
-      if (backButton == null) {
-        break missingId;
-      }
-
       id = R.id.bottom_nav_view;
       BottomNavigationView bottomNavView = ViewBindings.findChildViewById(rootView, id);
       if (bottomNavView == null) {
@@ -176,15 +158,9 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.relativeLayout;
-      RelativeLayout relativeLayout = ViewBindings.findChildViewById(rootView, id);
-      if (relativeLayout == null) {
-        break missingId;
-      }
-
-      return new PlayerProfileActivityBinding((ConstraintLayout) rootView, backButton,
-          bottomNavView, divider2, divider3, divider4, editProfilePhoto, generateLoginQr,
-          generateStatusQr, playerEmail, playerUsername, profilePhoto, relativeLayout);
+      return new PlayerProfileActivityBinding((ConstraintLayout) rootView, bottomNavView, divider2,
+          divider3, divider4, editProfilePhoto, generateLoginQr, generateStatusQr, playerEmail,
+          playerUsername, profilePhoto);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
