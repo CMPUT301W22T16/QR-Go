@@ -170,10 +170,7 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback,Goo
                                         .snippet("Score: null"));
                             }
                             selectedMarker.setTag(tempId);
-
-
                         }
-
                     }
                 });
     }
