@@ -81,7 +81,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
-            line="74"
+            line="68"
             column="9"/>
     </issue>
 
@@ -313,7 +313,7 @@
         explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.&#xA;&#xA;There **are** cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
         url="https://developer.android.com/training/multiscreen/screendensities.html"
         urls="https://developer.android.com/training/multiscreen/screendensities.html"
-        errorLine1="        android:textSize=&quot;16dp&quot;"
+        errorLine1="        android:textSize=&quot;32dp&quot;"
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml"
@@ -437,7 +437,7 @@
         errorLine2="           ~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java"
-            line="61"
+            line="55"
             column="12"/>
     </issue>
 
@@ -1142,6 +1142,42 @@
         explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
         url="https://developer.android.com/guide/topics/resources/localization.html"
         urls="https://developer.android.com/guide/topics/resources/localization.html"
+        errorLine1="                                tvScore.setText(&quot;Score: &quot;+selectedQR.getScore());"
+        errorLine2="                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRInfoActivity.java"
+            line="87"
+            column="49"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        severity="Warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        category="Internationalization"
+        priority="6"
+        summary="TextView Internationalization"
+        explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
+        url="https://developer.android.com/guide/topics/resources/localization.html"
+        urls="https://developer.android.com/guide/topics/resources/localization.html"
+        errorLine1="                                tvScore.setText(&quot;Score: &quot;+selectedQR.getScore());"
+        errorLine2="                                                ~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRInfoActivity.java"
+            line="87"
+            column="49"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        severity="Warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        category="Internationalization"
+        priority="6"
+        summary="TextView Internationalization"
+        explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
+        url="https://developer.android.com/guide/topics/resources/localization.html"
+        urls="https://developer.android.com/guide/topics/resources/localization.html"
         errorLine1="            usernameView.setText(String.valueOf(userRank) + &quot;| &quot; + userToDisplay.getUsername() + &quot; (you)&quot;);"
         errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -1833,13 +1869,13 @@
     <issue
         id="HardcodedText"
         severity="Warning"
-        message="Hardcoded string &quot;Score: 123456&quot;, should use `@string` resource"
+        message="Hardcoded string &quot;Score: N/A&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
         summary="Hardcoded text"
         explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="        android:text=&quot;Score: 123456&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="        android:text=&quot;Score: N/A&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
             line="54"
