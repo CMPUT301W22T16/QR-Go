@@ -588,15 +588,15 @@
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;Score: N/A&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Score: 123456&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="54"
             column="9"
             startOffset="2152"
             endLine="54"
-            endColumn="34"
-            endOffset="2177"/>
+            endColumn="37"
+            endOffset="2180"/>
     </incident>
 
     <incident
@@ -611,10 +611,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="55"
             column="9"
-            startOffset="2186"
+            startOffset="2189"
             endLine="55"
             endColumn="32"
-            endOffset="2209"/>
+            endOffset="2212"/>
     </incident>
 
     <incident
@@ -625,10 +625,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="67"
             column="9"
-            startOffset="2659"
+            startOffset="2662"
             endLine="67"
             endColumn="43"
-            endOffset="2693"/>
+            endOffset="2696"/>
     </incident>
 
     <incident
@@ -639,10 +639,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="92"
             column="9"
-            startOffset="3666"
+            startOffset="3669"
             endLine="92"
             endColumn="28"
-            endOffset="3685"/>
+            endOffset="3688"/>
     </incident>
 
     <incident
@@ -667,10 +667,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="97"
             column="6"
-            startOffset="3848"
+            startOffset="3851"
             endLine="97"
             endColumn="14"
-            endOffset="3856"/>
+            endOffset="3859"/>
     </incident>
 
     <incident
@@ -681,10 +681,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="106"
             column="9"
-            startOffset="4177"
+            startOffset="4180"
             endLine="106"
             endColumn="46"
-            endOffset="4214"/>
+            endOffset="4217"/>
     </incident>
 
     <incident
@@ -1471,12 +1471,12 @@
         message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="55"
+            line="61"
             column="12"
-            startOffset="1960"
-            endLine="55"
+            startOffset="2148"
+            endLine="61"
             endColumn="18"
-            endOffset="1966"/>
+            endOffset="2154"/>
     </incident>
 
     <incident
@@ -1568,34 +1568,6 @@
             endLine="79"
             endColumn="51"
             endOffset="2673"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRInfoActivity.java"
-            line="87"
-            column="49"
-            startOffset="3202"
-            endLine="87"
-            endColumn="80"
-            endOffset="3233"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="String literal in `setText` can not be translated. Use Android resources instead.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/QRInfoActivity.java"
-            line="87"
-            column="49"
-            startOffset="3202"
-            endLine="87"
-            endColumn="58"
-            endOffset="3211"/>
     </incident>
 
     <incident
