@@ -35,7 +35,7 @@
    location than shown in the editor. To fix this, make sure a widget has both
    horizontal and vertical constraints by dragging from the edge connections.
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:74: Error: Call requires API level 28 (current min is 26): findUserLocation [NewApi]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:68: Error: Call requires API level 28 (current min is 26): findUserLocation [NewApi]
         findUserLocation();
         ~~~~~~~~~~~~~~~~
 
@@ -113,6 +113,9 @@
    However, you may simply not be aware that a more recent version is
    available, and that is what this lint check helps find.
 
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:172: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+            android:textSize="20dp"/>
+            ~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:31: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
             android:textSize="32dp"
             ~~~~~~~~~~~~~~~~~~~~~~~
@@ -126,7 +129,7 @@
         android:textSize="24dp"
         ~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:38: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
-        android:textSize="32dp"
+        android:textSize="16dp"
         ~~~~~~~~~~~~~~~~~~~~~~~
 
    Explanation for issues of type "SpUsage":
@@ -179,7 +182,7 @@
    where the version qualifier is less than or equal to the minSdkVersion,
    where the contents should be merged into the best folder.
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:61: Warning: Do not place Android context classes in static fields (static reference to FirebaseFirestore which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MapsActivity.java:55: Warning: Do not place Android context classes in static fields (static reference to FirebaseFirestore which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
     public static FirebaseFirestore db;
            ~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerProfileActivity.java:37: Warning: Do not place Android context classes in static fields (static reference to FirebaseFirestore which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
@@ -225,9 +228,9 @@
    Integer.valueOf(42). This will typically use less memory because common
    integers such as 0 and 1 will share a single instance.
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:118: Warning: Use a layout_width of 0dp instead of wrap_content for better performance [InefficientWeight]
-            android:layout_width="wrap_content"
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:19: Warning: Use a layout_width of 0dp instead of wrap_content for better performance [InefficientWeight]
+        android:layout_width="wrap_content"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
    Explanation for issues of type "InefficientWeight":
    When only a single widget in a LinearLayout defines a weight, it is more
@@ -237,6 +240,9 @@
 
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable/sample_prof_pic.xml:2: Warning: The resource R.drawable.sample_prof_pic appears to be unused [UnusedResources]
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
+^
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:2: Warning: The resource R.layout.user_qr_list_content appears to be unused [UnusedResources]
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 ^
 
    Explanation for issues of type "UnusedResources":
@@ -384,18 +390,36 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/MyQRCodesActivity.java:80: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
                             lowestScoreQrScoreText.setText("Score: " + lowestQRCode.getValue().toString());
                                                            ~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerInfoActivity.java:81: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerInfoActivity.java:118: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
                             highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerInfoActivity.java:82: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerInfoActivity.java:119: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
                             lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerInfoActivity.java:83: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerInfoActivity.java:120: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
                             qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerInfoActivity.java:84: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerInfoActivity.java:121: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
                             totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerInfoActivity.java:125: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                            highestScoreQrScoreText.setText("Score: " + highestQRCode.getValue().toString());
+                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerInfoActivity.java:125: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+                            highestScoreQrScoreText.setText("Score: " + highestQRCode.getValue().toString());
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerInfoActivity.java:125: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                            highestScoreQrScoreText.setText("Score: " + highestQRCode.getValue().toString());
+                                                            ~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerInfoActivity.java:128: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                            lowestScoreQrScoreText.setText("Score: " + lowestQRCode.getValue().toString());
+                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerInfoActivity.java:128: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+                            lowestScoreQrScoreText.setText("Score: " + lowestQRCode.getValue().toString());
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/PlayerInfoActivity.java:128: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                            lowestScoreQrScoreText.setText("Score: " + lowestQRCode.getValue().toString());
+                                                           ~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRArrayAdapter.java:76: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
                 scoreView.setText("Score: " + qrToDisplay.getScore().toString());
                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -411,12 +435,6 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRArrayAdapter.java:89: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
                 scoreView.setText(distanceString + " away");
                                                    ~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRInfoActivity.java:87: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
-                                tvScore.setText("Score: "+selectedQR.getScore());
-                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/QRInfoActivity.java:87: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
-                                tvScore.setText("Score: "+selectedQR.getScore());
-                                                ~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/UserArrayAdapter.java:73: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
             usernameView.setText(String.valueOf(userRank) + "| " + userToDisplay.getUsername() + " (you)");
                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -524,42 +542,54 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:30: Warning: Hardcoded string "Player 1", should use @string resource [HardcodedText]
                 android:text="Player 1"
                 ~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:40: Warning: Hardcoded string "QR Codes", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:39: Warning: Hardcoded string "Email:", should use @string resource [HardcodedText]
+                android:text="Email:" />
+                ~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:45: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
+                android:text="00000" />
+                ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:55: Warning: Hardcoded string "QR Codes", should use @string resource [HardcodedText]
                     android:text="QR Codes"/>
                     ~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:47: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:62: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
                     android:text="00000" />
                     ~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:57: Warning: Hardcoded string "Highest Score", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:72: Warning: Hardcoded string "Highest Score", should use @string resource [HardcodedText]
                     android:text="Highest Score"/>
                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:64: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:79: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
                     android:text="00000" />
                     ~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:76: Warning: Hardcoded string "Lowest Score", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:91: Warning: Hardcoded string "Lowest Score", should use @string resource [HardcodedText]
                     android:text="Lowest Score" />
                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:83: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:98: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
                     android:text="00000" />
                     ~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:95: Warning: Hardcoded string "Total Score", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:110: Warning: Hardcoded string "Total Score", should use @string resource [HardcodedText]
                     android:text="Total Score" />
                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:102: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:117: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
                     android:text="00000" />
                     ~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:122: Warning: Hardcoded string "Email:", should use @string resource [HardcodedText]
-            android:text="Email:" />
-            ~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:136: Warning: Hardcoded string "Highest Scoring QR Code:", should use @string resource [HardcodedText]
+        android:text="Highest Scoring QR Code:" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:153: Warning: Hardcoded string "Lowest Scoring QR Code", should use @string resource [HardcodedText]
+            android:text="Lowest Scoring QR Code" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:171: Warning: Hardcoded string "Scanned QR codes:", should use @string resource [HardcodedText]
+            android:text="Scanned QR codes:"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:32: Warning: Hardcoded string "QR NAME", should use @string resource [HardcodedText]
             android:text="QR NAME"
             ~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:41: Warning: Hardcoded string "QR LOCATION", should use @string resource [HardcodedText]
             android:text="QR LOCATION"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:54: Warning: Hardcoded string "Score: N/A", should use @string resource [HardcodedText]
-        android:text="Score: N/A"
-        ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:54: Warning: Hardcoded string "Score: 123456", should use @string resource [HardcodedText]
+        android:text="Score: 123456"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:67: Warning: Hardcoded string "See other players >", should use @string resource [HardcodedText]
         android:text="See other players >"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -635,6 +665,12 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_list_content.xml:23: Warning: Hardcoded string "12345", should use @string resource [HardcodedText]
         android:text="12345"
         ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:12: Warning: Hardcoded string "12345", should use @string resource [HardcodedText]
+        android:text="12345"
+        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:21: Warning: Hardcoded string "12345", should use @string resource [HardcodedText]
+        android:text="12345"
+        ~~~~~~~~~~~~~~~~~~~~
 
    Explanation for issues of type "HardcodedText":
    Hardcoding text attributes directly in layout files is bad for several
@@ -692,24 +728,21 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:23: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="50dp" to better support right-to-left layouts [RtlHardcoded]
             android:layout_marginLeft="50dp"
             ~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:46: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="45dp" to better support right-to-left layouts [RtlHardcoded]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:44: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="45dp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginLeft="45dp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:61: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="45dp" to better support right-to-left layouts [RtlHardcoded]
                     android:layout_marginLeft="45dp"
                     ~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:63: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="19dp" to better support right-to-left layouts [RtlHardcoded]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:78: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="19dp" to better support right-to-left layouts [RtlHardcoded]
                     android:layout_marginLeft="19dp"
                     ~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:82: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="22dp" to better support right-to-left layouts [RtlHardcoded]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:97: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="22dp" to better support right-to-left layouts [RtlHardcoded]
                     android:layout_marginLeft="22dp"
                     ~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:101: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="36dp" to better support right-to-left layouts [RtlHardcoded]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:116: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="36dp" to better support right-to-left layouts [RtlHardcoded]
                     android:layout_marginLeft="36dp"
                     ~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:121: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="19dp" to better support right-to-left layouts [RtlHardcoded]
-            android:layout_marginLeft="19dp"
-            ~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:128: Warning: Consider replacing android:layout_marginRight with android:layout_marginEnd="19dp" to better support right-to-left layouts [RtlHardcoded]
-            android:layout_marginRight="19dp"/>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:19: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
             android:layout_alignParentLeft="true"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -746,6 +779,9 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_list_content.xml:36: Warning: Consider replacing android:paddingRight with android:paddingEnd="0dp" to better support right-to-left layouts [RtlHardcoded]
         android:paddingRight="0dp"
         ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:24: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+        android:gravity="center|right"
+                         ~~~~~~~~~~~~
 
    Explanation for issues of type "RtlHardcoded":
    Using Gravity#LEFT and Gravity#RIGHT can lead to problems when a layout is
@@ -776,4 +812,4 @@
    Please define an explicit reason why it is ignored, and when it can be
    resolved.
 
-3 errors, 164 warnings
+3 errors, 176 warnings
