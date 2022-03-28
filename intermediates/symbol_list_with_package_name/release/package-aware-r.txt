@@ -2574,6 +2574,8 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_baseline_chevron_left_24
 drawable ic_baseline_delete_24
+drawable ic_baseline_my_location_24
+drawable ic_baseline_public_24
 drawable ic_clock_black_24dp
 drawable ic_code_scanner_auto_focus_off
 drawable ic_code_scanner_auto_focus_on
@@ -3029,6 +3031,9 @@ id qr_del_button
 id qr_id_view
 id qr_list
 id qr_score_view
+id qr_search_option_icon
+id qr_search_option_text
+id qr_search_spinner
 id radio
 id ratio
 id rectangles
@@ -3366,6 +3371,7 @@ layout notification_template_part_chronometer
 layout notification_template_part_time
 layout player_profile_activity
 layout qr_list_content
+layout qr_search_spinner_item
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -3449,16 +3455,10 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
-string default_web_client_id
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
-string gcm_defaultSenderId
-string google_api_key
-string google_app_id
-string google_crash_reporting_api_key
-string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
@@ -3550,7 +3550,6 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
-string project_id
 string search_menu_title
 string status_bar_notification_info_overflow
 string title_activity_maps

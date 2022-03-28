@@ -114,6 +114,118 @@
     </incident>
 
     <incident
+        id="VectorRaster"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/ic_baseline_my_location_24.xml"
+            line="6"
+            column="19"
+            startOffset="199"
+            endLine="6"
+            endColumn="43"
+            endOffset="223"/>
+        <map>
+            <entry
+                name="folderVersion"
+                int="-1"/>
+            <entry
+                name="containsFillType"
+                boolean="false"/>
+            <entry
+                name="message"
+                string="Resource references will not work correctly in images generated for this vector icon for API &lt; %1$d; check generated icon to make sure it looks acceptable"/>
+            <entry
+                name="containsGradient"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="VectorRaster"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/ic_baseline_my_location_24.xml"
+            line="8"
+            column="26"
+            startOffset="259"
+            endLine="8"
+            endColumn="46"
+            endOffset="279"/>
+        <map>
+            <entry
+                name="folderVersion"
+                int="-1"/>
+            <entry
+                name="containsFillType"
+                boolean="false"/>
+            <entry
+                name="message"
+                string="Resource references will not work correctly in images generated for this vector icon for API &lt; %1$d; check generated icon to make sure it looks acceptable"/>
+            <entry
+                name="containsGradient"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="VectorRaster"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/ic_baseline_public_24.xml"
+            line="6"
+            column="19"
+            startOffset="199"
+            endLine="6"
+            endColumn="43"
+            endOffset="223"/>
+        <map>
+            <entry
+                name="folderVersion"
+                int="-1"/>
+            <entry
+                name="containsFillType"
+                boolean="false"/>
+            <entry
+                name="message"
+                string="Resource references will not work correctly in images generated for this vector icon for API &lt; %1$d; check generated icon to make sure it looks acceptable"/>
+            <entry
+                name="containsGradient"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
+        id="VectorRaster"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/drawable/ic_baseline_public_24.xml"
+            line="8"
+            column="26"
+            startOffset="259"
+            endLine="8"
+            endColumn="46"
+            endOffset="279"/>
+        <map>
+            <entry
+                name="folderVersion"
+                int="-1"/>
+            <entry
+                name="containsFillType"
+                boolean="false"/>
+            <entry
+                name="message"
+                string="Resource references will not work correctly in images generated for this vector icon for API &lt; %1$d; check generated icon to make sure it looks acceptable"/>
+            <entry
+                name="containsGradient"
+                boolean="false"/>
+        </map>
+    </incident>
+
+    <incident
         id="VectorPath"
         severity="warning"
         message="Very long vector path (815 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
@@ -507,12 +619,12 @@
             replacement="layout_alignParentStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="19"
+            line="20"
             column="13"
-            startOffset="789"
-            endLine="19"
+            startOffset="830"
+            endLine="20"
             endColumn="43"
-            endOffset="819"/>
+            endOffset="860"/>
         <map>
             <entry
                 name="applies"
@@ -526,12 +638,12 @@
         message="When you define `paddingLeft` you should probably also define `paddingRight` for right-to-left symmetry">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="21"
+            line="22"
             column="13"
-            startOffset="879"
-            endLine="21"
+            startOffset="920"
+            endLine="22"
             endColumn="32"
-            endOffset="898"/>
+            endOffset="939"/>
         <map>
             <entry
                 name="applies"
@@ -549,12 +661,12 @@
             replacement="paddingStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="21"
+            line="22"
             column="13"
-            startOffset="879"
-            endLine="21"
+            startOffset="920"
+            endLine="22"
             endColumn="32"
-            endOffset="898"/>
+            endOffset="939"/>
         <map>
             <entry
                 name="applies"
@@ -572,12 +684,54 @@
             replacement="layout_alignParentEnd"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="33"
+            line="34"
             column="13"
-            startOffset="1340"
-            endLine="33"
+            startOffset="1381"
+            endLine="34"
             endColumn="44"
-            endOffset="1371"/>
+            endOffset="1412"/>
+        <map>
+            <entry
+                name="applies"
+                int="10"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Use &quot;`start`&quot; instead of &quot;`left`&quot; to ensure correct behavior in right-to-left locales">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            line="58"
+            column="30"
+            startOffset="2267"
+            endLine="58"
+            endColumn="50"
+            endOffset="2287"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Consider replacing `android:layout_alignParentLeft` with `android:layout_alignParentStart=&quot;true&quot;` to better support right-to-left layouts">
+        <fix-replace
+            description="Replace with android:layout_alignParentStart=&quot;true&quot;"
+            oldString="layout_alignParentLeft"
+            replacement="layout_alignParentStart"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
+            line="59"
+            column="13"
+            startOffset="2302"
+            endLine="59"
+            endColumn="43"
+            endOffset="2332"/>
         <map>
             <entry
                 name="applies"
@@ -782,6 +936,67 @@
             <entry
                 name="applies"
                 int="10"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlSymmetry"
+        severity="warning"
+        message="When you define `paddingRight` you should probably also define `paddingLeft` for right-to-left symmetry">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_search_spinner_item.xml"
+            line="14"
+            column="9"
+            startOffset="567"
+            endLine="14"
+            endColumn="29"
+            endOffset="587"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Consider replacing `android:paddingRight` with `android:paddingEnd=&quot;15dp&quot;` to better support right-to-left layouts">
+        <fix-replace
+            description="Replace with android:paddingEnd=&quot;15dp&quot;"
+            oldString="paddingRight"
+            replacement="paddingEnd"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_search_spinner_item.xml"
+            line="14"
+            column="9"
+            startOffset="567"
+            endLine="14"
+            endColumn="29"
+            endOffset="587"/>
+        <map>
+            <entry
+                name="applies"
+                int="10"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Use &quot;`start`&quot; instead of &quot;`left`&quot; to ensure correct behavior in right-to-left locales">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_search_spinner_item.xml"
+            line="24"
+            column="26"
+            startOffset="991"
+            endLine="24"
+            endColumn="30"
+            endOffset="995"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
         </map>
     </incident>
 

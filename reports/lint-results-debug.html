@@ -174,10 +174,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 3 errors and 178 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 3 errors and 184 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Mon Mar 28 01:43:59 UTC 2022      </nav>
+Check performed at Mon Mar 28 01:47:01 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -192,7 +192,7 @@ Check performed at Mon Mar 28 01:43:59 UTC 2022      </nav>
       <a class="mdl-navigation__link" href="#SpUsage"><i class="material-icons warning-icon">warning</i>Using <code>dp</code> instead of <code>sp</code> for text sizes (6)</a>
       <a class="mdl-navigation__link" href="#ObsoleteLayoutParam"><i class="material-icons warning-icon">warning</i>Obsolete layout params (5)</a>
       <a class="mdl-navigation__link" href="#ObsoleteSdkInt"><i class="material-icons warning-icon">warning</i>Obsolete SDK_INT Version Check (2)</a>
-      <a class="mdl-navigation__link" href="#StaticFieldLeak"><i class="material-icons warning-icon">warning</i>Static Field Leaks (3)</a>
+      <a class="mdl-navigation__link" href="#StaticFieldLeak"><i class="material-icons warning-icon">warning</i>Static Field Leaks (4)</a>
       <a class="mdl-navigation__link" href="#MergeRootFrame"><i class="material-icons warning-icon">warning</i>FrameLayout can be replaced with <code>&lt;merge></code> tag (1)</a>
       <a class="mdl-navigation__link" href="#UseValueOf"><i class="material-icons warning-icon">warning</i>Should use <code>valueOf</code> instead of <code>new</code> (1)</a>
       <a class="mdl-navigation__link" href="#InefficientWeight"><i class="material-icons warning-icon">warning</i>Inefficient layout weight (1)</a>
@@ -203,8 +203,8 @@ Check performed at Mon Mar 28 01:43:59 UTC 2022      </nav>
       <a class="mdl-navigation__link" href="#ContentDescription"><i class="material-icons warning-icon">warning</i>Image without <code>contentDescription</code> (7)</a>
       <a class="mdl-navigation__link" href="#SetTextI18n"><i class="material-icons warning-icon">warning</i>TextView Internationalization (40)</a>
       <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (61)</a>
-      <a class="mdl-navigation__link" href="#RtlSymmetry"><i class="material-icons warning-icon">warning</i>Padding and margin symmetry (4)</a>
-      <a class="mdl-navigation__link" href="#RtlHardcoded"><i class="material-icons warning-icon">warning</i>Using left/right instead of start/end attributes (26)</a>
+      <a class="mdl-navigation__link" href="#RtlSymmetry"><i class="material-icons warning-icon">warning</i>Padding and margin symmetry (5)</a>
+      <a class="mdl-navigation__link" href="#RtlHardcoded"><i class="material-icons warning-icon">warning</i>Using left/right instead of start/end attributes (30)</a>
       <a class="mdl-navigation__link" href="#IgnoreWithoutReason"><i class="material-icons warning-icon">warning</i>@Ignore without Reason (1)</a>
     </nav>
   </div>
@@ -247,7 +247,7 @@ Check performed at Mon Mar 28 01:43:59 UTC 2022      </nav>
 <td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#ObsoleteSdkInt">ObsoleteSdkInt</a>: Obsolete SDK_INT Version Check</td></tr>
 <tr>
-<td class="countColumn">3</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">4</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#StaticFieldLeak">StaticFieldLeak</a>: Static Field Leaks</td></tr>
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
@@ -288,10 +288,10 @@ Check performed at Mon Mar 28 01:43:59 UTC 2022      </nav>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Internationalization:Bidirectional Text">Internationalization:Bidirectional Text</a>
 </td></tr>
 <tr>
-<td class="countColumn">4</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">5</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#RtlSymmetry">RtlSymmetry</a>: Padding and margin symmetry</td></tr>
 <tr>
-<td class="countColumn">26</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">30</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#RtlHardcoded">RtlHardcoded</a>: Using left/right instead of start/end attributes</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Testing">Testing</a>
 </td></tr>
@@ -738,24 +738,24 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:20</span>: <span class="message">Invalid layout param in a <code>RelativeLayout</code>: <code>layout_weight</code></span><br /><pre class="errorlines">
-<span class="lineno">  17 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  18 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  19 </span>            <span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span>=<span class="value">"true"</span>
-<span class="caretline"><span class="lineno">  20 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"0"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  21 </span>            <span class="prefix">android:</span><span class="attribute">paddingLeft</span>=<span class="value">"0dp"</span>
-<span class="lineno">  22 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Back"</span>
-<span class="lineno">  23 </span>            <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"?colorPrimary"</span>
+<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:21</span>: <span class="message">Invalid layout param in a <code>RelativeLayout</code>: <code>layout_weight</code></span><br /><pre class="errorlines">
+<span class="lineno">  18 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  19 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  20 </span>            <span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span>=<span class="value">"true"</span>
+<span class="caretline"><span class="lineno">  21 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"0"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  22 </span>            <span class="prefix">android:</span><span class="attribute">paddingLeft</span>=<span class="value">"0dp"</span>
+<span class="lineno">  23 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Back"</span>
+<span class="lineno">  24 </span>            <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"?colorPrimary"</span>
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:32</span>: <span class="message">Invalid layout param in a <code>RelativeLayout</code>: <code>layout_weight</code></span><br /><pre class="errorlines">
-<span class="lineno">  29 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/sort_spinner"</span>
-<span class="lineno">  30 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  31 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno">  32 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  33 </span>            <span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span>=<span class="value">"true"</span>
-<span class="lineno">  34 </span>            <span class="prefix">android:</span><span class="attribute">layout_gravity</span>=<span class="value">"bottom"</span>
-<span class="lineno">  35 </span>            <span class="prefix">android:</span><span class="attribute">background</span>=<span class="value">"@null"</span>/>
+<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:33</span>: <span class="message">Invalid layout param in a <code>RelativeLayout</code>: <code>layout_weight</code></span><br /><pre class="errorlines">
+<span class="lineno">  30 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/sort_spinner"</span>
+<span class="lineno">  31 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  32 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno">  33 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  34 </span>            <span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span>=<span class="value">"true"</span>
+<span class="lineno">  35 </span>            <span class="prefix">android:</span><span class="attribute">layout_gravity</span>=<span class="value">"bottom"</span>
+<span class="lineno">  36 </span>            <span class="prefix">android:</span><span class="attribute">background</span>=<span class="value">"@null"</span>/>
 </pre>
 
 <span class="location"><a href="../../src/main/res/layout/player_profile_activity.xml">../../src/main/res/layout/player_profile_activity.xml</a>:23</span>: <span class="message">Invalid layout param in a <code>RelativeLayout</code>: <code>layout_weight</code></span><br /><pre class="errorlines">
@@ -888,9 +888,18 @@ Dismiss</button>            </div>
 <span class="lineno">  62 </span>    <span class="comment">// The search bar</span>
 <span class="caretline"><span class="lineno">  63 </span>    <span class="keyword">private</span> <span class="warning"><span class="keyword">static</span></span> EditText searchBar;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">  64 </span>
-<span class="lineno">  65 </span>    <span class="comment">// The context</span>
-<span class="lineno">  66 </span>    <span class="keyword">private</span> Context context;
+<span class="lineno">  65 </span>    <span class="comment">// The qr search spinner</span>
+<span class="lineno">  66 </span>    <span class="keyword">private</span> <span class="keyword">static</span> Spinner qrSearchSpinner;
 </pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/SearchActivity.java">../../src/main/java/com/example/qr_go/SearchActivity.java</a>:66</span>: <span class="message">Do not place Android context classes in static fields; this is a memory leak</span><br /><pre class="errorlines">
+<span class="lineno">  63 </span>    <span class="keyword">private</span> <span class="keyword">static</span> EditText searchBar;
+<span class="lineno">  64 </span>
+<span class="lineno">  65 </span>    <span class="comment">// The qr search spinner</span>
+<span class="caretline"><span class="lineno">  66 </span>    <span class="keyword">private</span> <span class="warning"><span class="keyword">static</span></span> Spinner qrSearchSpinner;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  67 </span>    <span class="comment">// The qr search spinner's adapter</span>
+<span class="lineno">  68 </span>    <span class="keyword">private</span> QRSearchSpinnerAdapter qrSearchSpinnerAdapter;
+<span class="lineno">  69 </span>    <span class="comment">// String array holding qr search options</span></pre>
 
 </div>
 <div class="metadata"><div class="explanation" id="explanationStaticFieldLeak" style="display: none;">
@@ -1129,14 +1138,14 @@ Dismiss</button>            </div>
 <span class="lineno"> 22 </span>        <span class="prefix">xmlns:</span><span class="attribute">tools</span>=<span class="value">"http://schemas.android.com/tools"</span>
 <span class="lineno"> 23 </span>        <span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/map"</span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:84</span>: <span class="message">This namespace declaration is redundant</span><br /><pre class="errorlines">
-<span class="lineno">  81 </span>        <span class="prefix">android:</span><span class="attribute">layout_margin</span>=<span class="value">"0dp"</span>
-<span class="lineno">  82 </span>        <span class="prefix">android:</span><span class="attribute">orientation</span>=<span class="value">"vertical"</span>>
-<span class="lineno">  83 </span>        <span class="tag">&lt;androidx.viewpager2.widget.ViewPager2</span><span class="attribute">
-</span><span class="caretline"><span class="lineno">  84 </span><span class="attribute">            </span><span class="warning"><span class="prefix">xmlns:</span><span class="attribute">android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  85 </span>            <span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/search_pager"</span>
-<span class="lineno">  86 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
-<span class="lineno">  87 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"0dp"</span>
+<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:102</span>: <span class="message">This namespace declaration is redundant</span><br /><pre class="errorlines">
+<span class="lineno">  99 </span>        <span class="prefix">android:</span><span class="attribute">layout_margin</span>=<span class="value">"0dp"</span>
+<span class="lineno"> 100 </span>        <span class="prefix">android:</span><span class="attribute">orientation</span>=<span class="value">"vertical"</span>>
+<span class="lineno"> 101 </span>        <span class="tag">&lt;androidx.viewpager2.widget.ViewPager2</span><span class="attribute">
+</span><span class="caretline"><span class="lineno"> 102 </span><span class="attribute">            </span><span class="warning"><span class="prefix">xmlns:</span><span class="attribute">android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 103 </span>            <span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/search_pager"</span>
+<span class="lineno"> 104 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno"> 105 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"0dp"</span>
 </pre>
 
 </div>
@@ -1243,14 +1252,14 @@ Dismiss</button>            </div>
 <span class="lineno">  99 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"0dp"</span>
 <span class="lineno"> 100 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:38</span>: <span class="message">Missing <code>autofillHints</code> attribute</span><br /><pre class="errorlines">
-<span class="lineno">  35 </span>            <span class="prefix">android:</span><span class="attribute">background</span>=<span class="value">"@null"</span>/>
-<span class="lineno">  36 </span>
-<span class="lineno">  37 </span>    <span class="tag">&lt;/RelativeLayout></span>
-<span class="caretline"><span class="lineno">  38 </span>    <span class="tag">&lt;</span><span class="warning"><span class="tag">EditText</span></span><span class="attribute"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
-</span><span class="lineno">  39 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/search_bar"</span>
-<span class="lineno">  40 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
-<span class="lineno">  41 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:45</span>: <span class="message">Missing <code>autofillHints</code> attribute</span><br /><pre class="errorlines">
+<span class="lineno">  42 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"45dp"</span>
+<span class="lineno">  43 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"0dp"</span>
+<span class="lineno">  44 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginHorizontal</span>=<span class="value">"15dp"</span>>
+<span class="caretline"><span class="lineno">  45 </span>        <span class="tag">&lt;</span><span class="warning"><span class="tag">EditText</span></span><span class="attribute"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
+</span><span class="lineno">  46 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/search_bar"</span>
+<span class="lineno">  47 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno">  48 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"match_parent"</span>
 </pre>
 
 <span class="location"><a href="../../src/main/res/layout/player_profile_activity.xml">../../src/main/res/layout/player_profile_activity.xml</a>:44</span>: <span class="message">Missing <code>autofillHints</code> attribute</span><br /><pre class="errorlines">
@@ -1613,52 +1622,52 @@ Dismiss</button>            </div>
 <span class="caretline"><span class="lineno"> 128 </span>  lowestScoreQrScoreText.setText(<span class="warning"><span class="string">"Score: "</span></span> + lowestQRCode.getValue().toString());</span>
 <span class="lineno"> 129 </span><span class="lineno"> 130 </span></pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/QRArrayAdapter.java">../../src/main/java/com/example/qr_go/QRArrayAdapter.java</a>:76</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno">  73 </span>
-<span class="lineno">  74 </span>        <span class="keyword">switch</span>(sortPos) {
-<span class="lineno">  75 </span>            <span class="keyword">case</span> <span class="number">0</span>:
-<span class="caretline"><span class="lineno">  76 </span>                scoreView.setText(<span class="warning"><span class="string">"Score: "</span> + qrToDisplay.getScore().toString()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  77 </span>                <span class="keyword">break</span>;
-<span class="lineno">  78 </span>            <span class="keyword">default</span>:
-<span class="lineno">  79 </span>                Float distance =  qrToDisplay.getDistance();
+<span class="location"><a href="../../src/main/java/com/example/qr_go/QRArrayAdapter.java">../../src/main/java/com/example/qr_go/QRArrayAdapter.java</a>:78</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno">  75 </span>
+<span class="lineno">  76 </span>        <span class="keyword">switch</span>(sortPos) {
+<span class="lineno">  77 </span>            <span class="keyword">case</span> <span class="number">0</span>:
+<span class="caretline"><span class="lineno">  78 </span>                scoreView.setText(<span class="warning"><span class="string">"Score: "</span> + qrToDisplay.getScore().toString()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  79 </span>                <span class="keyword">break</span>;
+<span class="lineno">  80 </span>            <span class="keyword">default</span>:
+<span class="lineno">  81 </span>                Float distance =  qrToDisplay.getDistance();
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/QRArrayAdapter.java">../../src/main/java/com/example/qr_go/QRArrayAdapter.java</a>:76</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno">  73 </span>
-<span class="lineno">  74 </span>        <span class="keyword">switch</span>(sortPos) {
-<span class="lineno">  75 </span>            <span class="keyword">case</span> <span class="number">0</span>:
-<span class="caretline"><span class="lineno">  76 </span>                scoreView.setText(<span class="string">"Score: "</span> + <span class="warning">qrToDisplay.getScore().toString()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  77 </span>                <span class="keyword">break</span>;
-<span class="lineno">  78 </span>            <span class="keyword">default</span>:
-<span class="lineno">  79 </span>                Float distance =  qrToDisplay.getDistance();
+<span class="location"><a href="../../src/main/java/com/example/qr_go/QRArrayAdapter.java">../../src/main/java/com/example/qr_go/QRArrayAdapter.java</a>:78</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
+<span class="lineno">  75 </span>
+<span class="lineno">  76 </span>        <span class="keyword">switch</span>(sortPos) {
+<span class="lineno">  77 </span>            <span class="keyword">case</span> <span class="number">0</span>:
+<span class="caretline"><span class="lineno">  78 </span>                scoreView.setText(<span class="string">"Score: "</span> + <span class="warning">qrToDisplay.getScore().toString()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  79 </span>                <span class="keyword">break</span>;
+<span class="lineno">  80 </span>            <span class="keyword">default</span>:
+<span class="lineno">  81 </span>                Float distance =  qrToDisplay.getDistance();
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/QRArrayAdapter.java">../../src/main/java/com/example/qr_go/QRArrayAdapter.java</a>:76</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
-<span class="lineno">  73 </span>
-<span class="lineno">  74 </span>        <span class="keyword">switch</span>(sortPos) {
-<span class="lineno">  75 </span>            <span class="keyword">case</span> <span class="number">0</span>:
-<span class="caretline"><span class="lineno">  76 </span>                scoreView.setText(<span class="warning"><span class="string">"Score: "</span></span> + qrToDisplay.getScore().toString());&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  77 </span>                <span class="keyword">break</span>;
-<span class="lineno">  78 </span>            <span class="keyword">default</span>:
-<span class="lineno">  79 </span>                Float distance =  qrToDisplay.getDistance();
+<span class="location"><a href="../../src/main/java/com/example/qr_go/QRArrayAdapter.java">../../src/main/java/com/example/qr_go/QRArrayAdapter.java</a>:78</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
+<span class="lineno">  75 </span>
+<span class="lineno">  76 </span>        <span class="keyword">switch</span>(sortPos) {
+<span class="lineno">  77 </span>            <span class="keyword">case</span> <span class="number">0</span>:
+<span class="caretline"><span class="lineno">  78 </span>                scoreView.setText(<span class="warning"><span class="string">"Score: "</span></span> + qrToDisplay.getScore().toString());&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  79 </span>                <span class="keyword">break</span>;
+<span class="lineno">  80 </span>            <span class="keyword">default</span>:
+<span class="lineno">  81 </span>                Float distance =  qrToDisplay.getDistance();
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/QRArrayAdapter.java">../../src/main/java/com/example/qr_go/QRArrayAdapter.java</a>:89</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno">  86 </span>                } <span class="keyword">else</span> {
-<span class="lineno">  87 </span>                    distanceString = df.format(distance) + <span class="string">"m"</span>;
-<span class="lineno">  88 </span>                }
-<span class="caretline"><span class="lineno">  89 </span>                scoreView.setText(<span class="warning">distanceString + <span class="string">" away"</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  90 </span>                <span class="keyword">break</span>;
-<span class="lineno">  91 </span>        }
+<span class="location"><a href="../../src/main/java/com/example/qr_go/QRArrayAdapter.java">../../src/main/java/com/example/qr_go/QRArrayAdapter.java</a>:91</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno">  88 </span>                } <span class="keyword">else</span> {
+<span class="lineno">  89 </span>                    distanceString = df.format(distance) + <span class="string">"m"</span>;
+<span class="lineno">  90 </span>                }
+<span class="caretline"><span class="lineno">  91 </span>                scoreView.setText(<span class="warning">distanceString + <span class="string">" away"</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  92 </span>                <span class="keyword">break</span>;
+<span class="lineno">  93 </span>        }
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/QRArrayAdapter.java">../../src/main/java/com/example/qr_go/QRArrayAdapter.java</a>:89</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
-<span class="lineno">  86 </span>                } <span class="keyword">else</span> {
-<span class="lineno">  87 </span>                    distanceString = df.format(distance) + <span class="string">"m"</span>;
-<span class="lineno">  88 </span>                }
-<span class="caretline"><span class="lineno">  89 </span>                scoreView.setText(distanceString + <span class="warning"><span class="string">" away"</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  90 </span>                <span class="keyword">break</span>;
-<span class="lineno">  91 </span>        }
+<span class="location"><a href="../../src/main/java/com/example/qr_go/QRArrayAdapter.java">../../src/main/java/com/example/qr_go/QRArrayAdapter.java</a>:91</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
+<span class="lineno">  88 </span>                } <span class="keyword">else</span> {
+<span class="lineno">  89 </span>                    distanceString = df.format(distance) + <span class="string">"m"</span>;
+<span class="lineno">  90 </span>                }
+<span class="caretline"><span class="lineno">  91 </span>                scoreView.setText(distanceString + <span class="warning"><span class="string">" away"</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  92 </span>                <span class="keyword">break</span>;
+<span class="lineno">  93 </span>        }
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/QRInfoActivity.java">../../src/main/java/com/example/qr_go/QRInfoActivity.java</a>:87</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
@@ -2186,44 +2195,44 @@ Dismiss</button>            </div>
 <span class="lineno"> 109 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span> />
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:22</span>: <span class="message">Hardcoded string "Back", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno">  19 </span>            <span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span>=<span class="value">"true"</span>
-<span class="lineno">  20 </span>            <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"0"</span>
-<span class="lineno">  21 </span>            <span class="prefix">android:</span><span class="attribute">paddingLeft</span>=<span class="value">"0dp"</span>
-<span class="caretline"><span class="lineno">  22 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Back"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  23 </span>            <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"?colorPrimary"</span>
-<span class="lineno">  24 </span>            <span class="prefix">app:</span><span class="attribute">icon</span>=<span class="value">"@drawable/ic_baseline_chevron_left_24"</span>
-<span class="lineno">  25 </span>            <span class="prefix">app:</span><span class="attribute">iconSize</span>=<span class="value">"30dp"</span>
+<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:23</span>: <span class="message">Hardcoded string "Back", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno">  20 </span>            <span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span>=<span class="value">"true"</span>
+<span class="lineno">  21 </span>            <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"0"</span>
+<span class="lineno">  22 </span>            <span class="prefix">android:</span><span class="attribute">paddingLeft</span>=<span class="value">"0dp"</span>
+<span class="caretline"><span class="lineno">  23 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Back"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  24 </span>            <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"?colorPrimary"</span>
+<span class="lineno">  25 </span>            <span class="prefix">app:</span><span class="attribute">icon</span>=<span class="value">"@drawable/ic_baseline_chevron_left_24"</span>
+<span class="lineno">  26 </span>            <span class="prefix">app:</span><span class="attribute">iconSize</span>=<span class="value">"30dp"</span>
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:42</span>: <span class="message">Hardcoded string "Search Bar", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno">  39 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/search_bar"</span>
-<span class="lineno">  40 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
-<span class="lineno">  41 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno">  42 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">hint</span>=<span class="value">"Search Bar"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  43 </span>        <span class="prefix">android:</span><span class="attribute">inputType</span>=<span class="value">"textPersonName"</span>
-<span class="lineno">  44 </span>
-<span class="lineno">  45 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginHorizontal</span>=<span class="value">"15dp"</span>/>
+<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:49</span>: <span class="message">Hardcoded string "Search Bar", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno">  46 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/search_bar"</span>
+<span class="lineno">  47 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno">  48 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"match_parent"</span>
+<span class="caretline"><span class="lineno">  49 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">hint</span>=<span class="value">"Search Bar"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  50 </span>            <span class="prefix">android:</span><span class="attribute">layout_alignParentBottom</span>=<span class="value">"true"</span>
+<span class="lineno">  51 </span>            <span class="prefix">android:</span><span class="attribute">inputType</span>=<span class="value">"textPersonName"</span>
+<span class="lineno">  52 </span>            <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span> />
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:70</span>: <span class="message">Hardcoded string "QR Codes", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno">  67 </span>            <span class="tag">&lt;com.google.android.material.tabs.TabItem</span><span class="attribute">
-</span><span class="lineno">  68 </span><span class="attribute">                </span><span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  69 </span>                <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno">  70 </span>                <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"QR Codes"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  71 </span>            <span class="tag">&lt;com.google.android.material.tabs.TabItem</span><span class="attribute">
-</span><span class="lineno">  72 </span><span class="attribute">                </span><span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  73 </span>                <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:88</span>: <span class="message">Hardcoded string "QR Codes", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno">  85 </span>            <span class="tag">&lt;com.google.android.material.tabs.TabItem</span><span class="attribute">
+</span><span class="lineno">  86 </span><span class="attribute">                </span><span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  87 </span>                <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno">  88 </span>                <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"QR Codes"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  89 </span>            <span class="tag">&lt;com.google.android.material.tabs.TabItem</span><span class="attribute">
+</span><span class="lineno">  90 </span><span class="attribute">                </span><span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  91 </span>                <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:74</span>: <span class="message">Hardcoded string "Players", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno">  71 </span>            <span class="tag">&lt;com.google.android.material.tabs.TabItem</span><span class="attribute">
-</span><span class="lineno">  72 </span><span class="attribute">                </span><span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  73 </span>                <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno">  74 </span>                <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Players"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  75 </span>        <span class="tag">&lt;/com.google.android.material.tabs.TabLayout></span>
-<span class="lineno">  76 </span>    <span class="tag">&lt;/com.google.android.material.card.MaterialCardView></span>
-<span class="lineno">  77 </span>
+<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:92</span>: <span class="message">Hardcoded string "Players", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno">  89 </span>            <span class="tag">&lt;com.google.android.material.tabs.TabItem</span><span class="attribute">
+</span><span class="lineno">  90 </span><span class="attribute">                </span><span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  91 </span>                <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno">  92 </span>                <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Players"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  93 </span>        <span class="tag">&lt;/com.google.android.material.tabs.TabLayout></span>
+<span class="lineno">  94 </span>    <span class="tag">&lt;/com.google.android.material.card.MaterialCardView></span>
+<span class="lineno">  95 </span>
 </pre>
 
 <span class="location"><a href="../../src/main/res/menu/bottom_nav_menu.xml">../../src/main/res/menu/bottom_nav_menu.xml</a>:7</span>: <span class="message">Hardcoded string "Search", should use <code>@string</code> resource</span><br /><pre class="errorlines">
@@ -2352,14 +2361,14 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:21</span>: <span class="message">When you define <code>paddingLeft</code> you should probably also define <code>paddingRight</code> for right-to-left symmetry</span><br /><pre class="errorlines">
-<span class="lineno">  18 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  19 </span>            <span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span>=<span class="value">"true"</span>
-<span class="lineno">  20 </span>            <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"0"</span>
-<span class="caretline"><span class="lineno">  21 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingLeft</span></span>=<span class="value">"0dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  22 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Back"</span>
-<span class="lineno">  23 </span>            <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"?colorPrimary"</span>
-<span class="lineno">  24 </span>            <span class="prefix">app:</span><span class="attribute">icon</span>=<span class="value">"@drawable/ic_baseline_chevron_left_24"</span>
+<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:22</span>: <span class="message">When you define <code>paddingLeft</code> you should probably also define <code>paddingRight</code> for right-to-left symmetry</span><br /><pre class="errorlines">
+<span class="lineno">  19 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  20 </span>            <span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span>=<span class="value">"true"</span>
+<span class="lineno">  21 </span>            <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"0"</span>
+<span class="caretline"><span class="lineno">  22 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingLeft</span></span>=<span class="value">"0dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  23 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Back"</span>
+<span class="lineno">  24 </span>            <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"?colorPrimary"</span>
+<span class="lineno">  25 </span>            <span class="prefix">app:</span><span class="attribute">icon</span>=<span class="value">"@drawable/ic_baseline_chevron_left_24"</span>
 </pre>
 
 <span class="location"><a href="../../src/main/res/layout/player_profile_activity.xml">../../src/main/res/layout/player_profile_activity.xml</a>:24</span>: <span class="message">When you define <code>paddingLeft</code> you should probably also define <code>paddingRight</code> for right-to-left symmetry</span><br /><pre class="errorlines">
@@ -2380,6 +2389,16 @@ Dismiss</button>            </div>
 <span class="lineno"> 38 </span>        <span class="prefix">app:</span><span class="attribute">icon</span>=<span class="value">"@drawable/ic_baseline_delete_24"</span>
 <span class="lineno"> 39 </span>        <span class="prefix">app:</span><span class="attribute">iconSize</span>=<span class="value">"30dp"</span> />
 </pre>
+
+<span class="location"><a href="../../src/main/res/layout/qr_search_spinner_item.xml">../../src/main/res/layout/qr_search_spinner_item.xml</a>:14</span>: <span class="message">When you define <code>paddingRight</code> you should probably also define <code>paddingLeft</code> for right-to-left symmetry</span><br /><pre class="errorlines">
+<span class="lineno"> 11 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 12 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 13 </span>        <span class="prefix">app:</span><span class="attribute">tint</span>=<span class="value">"?colorPrimary"</span>
+<span class="caretline"><span class="lineno"> 14 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"15dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 15 </span>        <span class="prefix">android:</span><span class="attribute">src</span>=<span class="value">"@drawable/ic_baseline_public_24"</span> />
+<span class="lineno"> 16 </span>
+<span class="lineno"> 17 </span>    <span class="tag">&lt;com.google.android.material.textview.MaterialTextView</span><span class="attribute">
+</span></pre>
 
 <span class="location"><a href="../../src/main/res/layout/user_list_content.xml">../../src/main/res/layout/user_list_content.xml</a>:36</span>: <span class="message">When you define <code>paddingRight</code> you should probably also define <code>paddingLeft</code> for right-to-left symmetry</span><br /><pre class="errorlines">
 <span class="lineno"> 33 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
@@ -2475,7 +2494,7 @@ Dismiss</button>            </div>
 <span class="lineno">  90 </span>            <span class="tag">&lt;/LinearLayout></span>
 </pre>
 
-<button class="mdl-button mdl-js-button mdl-button--primary" id="RtlHardcodedDivLink" onclick="reveal('RtlHardcodedDiv');" />+ 21 More Occurrences...</button>
+<button class="mdl-button mdl-js-button mdl-button--primary" id="RtlHardcodedDivLink" onclick="reveal('RtlHardcodedDiv');" />+ 25 More Occurrences...</button>
 <div id="RtlHardcodedDiv" style="display: none">
 <span class="location"><a href="../../src/main/res/layout/activity_my_qr_codes.xml">../../src/main/res/layout/activity_my_qr_codes.xml</a>:108</span>: <span class="message">Consider replacing <code>android:layout_marginLeft</code> with <code>android:layout_marginStart="36dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
 <span class="lineno"> 105 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerTotalScore"</span>
@@ -2550,34 +2569,54 @@ Dismiss</button>            </div>
 <span class="lineno"> 118 </span>            <span class="tag">&lt;/LinearLayout></span>
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:19</span>: <span class="message">Consider replacing <code>android:layout_alignParentLeft</code> with <code>android:layout_alignParentStart="true"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno">  16 </span>            <span class="attribute">style</span>=<span class="value">"@style/Widget.MaterialComponents.Button.TextButton.Icon"</span>
-<span class="lineno">  17 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  18 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno">  19 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span></span>=<span class="value">"true"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  20 </span>            <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"0"</span>
-<span class="lineno">  21 </span>            <span class="prefix">android:</span><span class="attribute">paddingLeft</span>=<span class="value">"0dp"</span>
-<span class="lineno">  22 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Back"</span>
+<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:20</span>: <span class="message">Consider replacing <code>android:layout_alignParentLeft</code> with <code>android:layout_alignParentStart="true"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno">  17 </span>            <span class="attribute">style</span>=<span class="value">"@style/Widget.MaterialComponents.Button.TextButton.Icon"</span>
+<span class="lineno">  18 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  19 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno">  20 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span></span>=<span class="value">"true"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  21 </span>            <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"0"</span>
+<span class="lineno">  22 </span>            <span class="prefix">android:</span><span class="attribute">paddingLeft</span>=<span class="value">"0dp"</span>
+<span class="lineno">  23 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Back"</span>
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:21</span>: <span class="message">Consider replacing <code>android:paddingLeft</code> with <code>android:paddingStart="0dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno">  18 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  19 </span>            <span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span>=<span class="value">"true"</span>
-<span class="lineno">  20 </span>            <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"0"</span>
-<span class="caretline"><span class="lineno">  21 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingLeft</span></span>=<span class="value">"0dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  22 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Back"</span>
-<span class="lineno">  23 </span>            <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"?colorPrimary"</span>
-<span class="lineno">  24 </span>            <span class="prefix">app:</span><span class="attribute">icon</span>=<span class="value">"@drawable/ic_baseline_chevron_left_24"</span>
+<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:22</span>: <span class="message">Consider replacing <code>android:paddingLeft</code> with <code>android:paddingStart="0dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno">  19 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  20 </span>            <span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span>=<span class="value">"true"</span>
+<span class="lineno">  21 </span>            <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"0"</span>
+<span class="caretline"><span class="lineno">  22 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingLeft</span></span>=<span class="value">"0dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  23 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Back"</span>
+<span class="lineno">  24 </span>            <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"?colorPrimary"</span>
+<span class="lineno">  25 </span>            <span class="prefix">app:</span><span class="attribute">icon</span>=<span class="value">"@drawable/ic_baseline_chevron_left_24"</span>
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:33</span>: <span class="message">Consider replacing <code>android:layout_alignParentRight</code> with <code>android:layout_alignParentEnd="true"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno">  30 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  31 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  32 </span>            <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
-<span class="caretline"><span class="lineno">  33 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span></span>=<span class="value">"true"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  34 </span>            <span class="prefix">android:</span><span class="attribute">layout_gravity</span>=<span class="value">"bottom"</span>
-<span class="lineno">  35 </span>            <span class="prefix">android:</span><span class="attribute">background</span>=<span class="value">"@null"</span>/>
-<span class="lineno">  36 </span>
+<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:34</span>: <span class="message">Consider replacing <code>android:layout_alignParentRight</code> with <code>android:layout_alignParentEnd="true"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno">  31 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  32 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  33 </span>            <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
+<span class="caretline"><span class="lineno">  34 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span></span>=<span class="value">"true"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  35 </span>            <span class="prefix">android:</span><span class="attribute">layout_gravity</span>=<span class="value">"bottom"</span>
+<span class="lineno">  36 </span>            <span class="prefix">android:</span><span class="attribute">background</span>=<span class="value">"@null"</span>/>
+<span class="lineno">  37 </span>
+</pre>
+
+<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:58</span>: <span class="message">Use "<code>start</code>" instead of "<code>left</code>" to ensure correct behavior in right-to-left locales</span><br /><pre class="errorlines">
+<span class="lineno">  55 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/qr_search_spinner"</span>
+<span class="lineno">  56 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno">  57 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"match_parent"</span>
+<span class="caretline"><span class="lineno">  58 </span>            <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"</span><span class="warning"><span class="value">left|center_vertical</span></span><span class="value">"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  59 </span>            <span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span>=<span class="value">"true"</span>
+<span class="lineno">  60 </span>            <span class="prefix">android:</span><span class="attribute">layout_alignParentBottom</span>=<span class="value">"true"</span>
+<span class="lineno">  61 </span>            <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
+</pre>
+
+<span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:59</span>: <span class="message">Consider replacing <code>android:layout_alignParentLeft</code> with <code>android:layout_alignParentStart="true"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno">  56 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno">  57 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"match_parent"</span>
+<span class="lineno">  58 </span>            <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"left|center_vertical"</span>
+<span class="caretline"><span class="lineno">  59 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span></span>=<span class="value">"true"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  60 </span>            <span class="prefix">android:</span><span class="attribute">layout_alignParentBottom</span>=<span class="value">"true"</span>
+<span class="lineno">  61 </span>            <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
+<span class="lineno">  62 </span>            <span class="prefix">android:</span><span class="attribute">background</span>=<span class="value">"@null"</span>/>
 </pre>
 
 <span class="location"><a href="../../src/main/res/layout/player_profile_activity.xml">../../src/main/res/layout/player_profile_activity.xml</a>:22</span>: <span class="message">Consider replacing <code>android:layout_alignParentLeft</code> with <code>android:layout_alignParentStart="true"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
@@ -2627,6 +2666,25 @@ Dismiss</button>            </div>
 <span class="lineno"> 38 </span>        <span class="prefix">app:</span><span class="attribute">icon</span>=<span class="value">"@drawable/ic_baseline_delete_24"</span>
 <span class="lineno"> 39 </span>        <span class="prefix">app:</span><span class="attribute">iconSize</span>=<span class="value">"30dp"</span> />
 </pre>
+
+<span class="location"><a href="../../src/main/res/layout/qr_search_spinner_item.xml">../../src/main/res/layout/qr_search_spinner_item.xml</a>:14</span>: <span class="message">Consider replacing <code>android:paddingRight</code> with <code>android:paddingEnd="15dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 11 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 12 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 13 </span>        <span class="prefix">app:</span><span class="attribute">tint</span>=<span class="value">"?colorPrimary"</span>
+<span class="caretline"><span class="lineno"> 14 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"15dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 15 </span>        <span class="prefix">android:</span><span class="attribute">src</span>=<span class="value">"@drawable/ic_baseline_public_24"</span> />
+<span class="lineno"> 16 </span>
+<span class="lineno"> 17 </span>    <span class="tag">&lt;com.google.android.material.textview.MaterialTextView</span><span class="attribute">
+</span></pre>
+
+<span class="location"><a href="../../src/main/res/layout/qr_search_spinner_item.xml">../../src/main/res/layout/qr_search_spinner_item.xml</a>:24</span>: <span class="message">Use "<code>start</code>" instead of "<code>left</code>" to ensure correct behavior in right-to-left locales</span><br /><pre class="errorlines">
+<span class="lineno"> 21 </span>        <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"?colorPrimary"</span>
+<span class="lineno"> 22 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"18sp"</span>
+<span class="lineno"> 23 </span>        <span class="prefix">android:</span><span class="attribute">textStyle</span>=<span class="value">"bold"</span>
+<span class="caretline"><span class="lineno"> 24 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"</span><span class="warning"><span class="value">left</span></span><span class="value">"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 25 </span>        />
+<span class="lineno"> 26 </span>
+<span class="lineno"> 27 </span><span class="tag">&lt;/LinearLayout></span></pre>
 
 <span class="location"><a href="../../src/main/res/layout/spinner_item.xml">../../src/main/res/layout/spinner_item.xml</a>:10</span>: <span class="message">Use "<code>end</code>" instead of "<code>right</code>" to ensure correct behavior in right-to-left locales</span><br /><pre class="errorlines">
 <span class="lineno">  7 </span>    <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"?colorPrimary"</span>

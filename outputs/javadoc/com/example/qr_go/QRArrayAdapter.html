@@ -144,8 +144,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dl>
 <hr>
 <pre>public class <span class="typeNameLabel">QRArrayAdapter</span>
-extends android.widget.ArrayAdapter&lt;<a href="QRListDisplayContainer.html" title="class in com.example.qr_go">QRListDisplayContainer</a>&gt;
-implements android.widget.Filterable</pre>
+extends android.widget.ArrayAdapter&lt;<a href="QRListDisplayContainer.html" title="class in com.example.qr_go">QRListDisplayContainer</a>&gt;</pre>
 <div class="block">Custom ArrayAdapter for displaying qr codes in a list</div>
 </li>
 </ul>
@@ -208,8 +207,8 @@ implements android.widget.Filterable</pre>
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>android.widget.Filter</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFilter()">getFilter</a></span>()</code></th>
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#filter(int)">filter</a></span>&#8203;(int&nbsp;filterOption)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -225,7 +224,7 @@ implements android.widget.Filterable</pre>
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;android.widget.ArrayAdapter</h3>
-<code>add, addAll, addAll, clear, createFromResource, getAutofillOptions, getContext, getCount, getDropDownView, getDropDownViewTheme, getItem, getItemId, getPosition, insert, notifyDataSetChanged, remove, setDropDownViewResource, setDropDownViewTheme, setNotifyOnChange, sort</code></li>
+<code>add, addAll, addAll, clear, createFromResource, getAutofillOptions, getContext, getCount, getDropDownView, getDropDownViewTheme, getFilter, getItem, getItemId, getPosition, insert, notifyDataSetChanged, remove, setDropDownViewResource, setDropDownViewTheme, setNotifyOnChange, sort</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.android.widget.BaseAdapter">
@@ -306,19 +305,13 @@ public&nbsp;android.view.View&nbsp;getView&#8203;(int&nbsp;position,
 </dl>
 </li>
 </ul>
-<a id="getFilter()">
+<a id="filter(int)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>getFilter</h4>
-<pre class="methodSignature">public&nbsp;android.widget.Filter&nbsp;getFilter()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code>getFilter</code>&nbsp;in interface&nbsp;<code>android.widget.Filterable</code></dd>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code>getFilter</code>&nbsp;in class&nbsp;<code>android.widget.ArrayAdapter&lt;<a href="QRListDisplayContainer.html" title="class in com.example.qr_go">QRListDisplayContainer</a>&gt;</code></dd>
-</dl>
+<h4>filter</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;filter&#8203;(int&nbsp;filterOption)</pre>
 </li>
 </ul>
 </li>

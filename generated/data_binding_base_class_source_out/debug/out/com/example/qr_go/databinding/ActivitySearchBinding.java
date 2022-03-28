@@ -31,6 +31,9 @@ public final class ActivitySearchBinding implements ViewBinding {
   public final BottomNavigationView bottomNavView;
 
   @NonNull
+  public final Spinner qrSearchSpinner;
+
+  @NonNull
   public final EditText searchBar;
 
   @NonNull
@@ -43,12 +46,13 @@ public final class ActivitySearchBinding implements ViewBinding {
   public final Spinner sortSpinner;
 
   private ActivitySearchBinding(@NonNull LinearLayout rootView, @NonNull MaterialButton backButton,
-      @NonNull BottomNavigationView bottomNavView, @NonNull EditText searchBar,
-      @NonNull ViewPager2 searchPager, @NonNull TabLayout searchTabLayout,
-      @NonNull Spinner sortSpinner) {
+      @NonNull BottomNavigationView bottomNavView, @NonNull Spinner qrSearchSpinner,
+      @NonNull EditText searchBar, @NonNull ViewPager2 searchPager,
+      @NonNull TabLayout searchTabLayout, @NonNull Spinner sortSpinner) {
     this.rootView = rootView;
     this.backButton = backButton;
     this.bottomNavView = bottomNavView;
+    this.qrSearchSpinner = qrSearchSpinner;
     this.searchBar = searchBar;
     this.searchPager = searchPager;
     this.searchTabLayout = searchTabLayout;
@@ -94,6 +98,12 @@ public final class ActivitySearchBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.qr_search_spinner;
+      Spinner qrSearchSpinner = ViewBindings.findChildViewById(rootView, id);
+      if (qrSearchSpinner == null) {
+        break missingId;
+      }
+
       id = R.id.search_bar;
       EditText searchBar = ViewBindings.findChildViewById(rootView, id);
       if (searchBar == null) {
@@ -119,7 +129,7 @@ public final class ActivitySearchBinding implements ViewBinding {
       }
 
       return new ActivitySearchBinding((LinearLayout) rootView, backButton, bottomNavView,
-          searchBar, searchPager, searchTabLayout, sortSpinner);
+          qrSearchSpinner, searchBar, searchPager, searchTabLayout, sortSpinner);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
