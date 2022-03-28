@@ -1,6 +1,7 @@
 package com.example.qr_go;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.os.Build;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
@@ -228,7 +229,10 @@ public class QRGoDBUtil {
     /**this is to test the db will be thrown out**/
     //TODO send image to DB, resize image before sending to DB, adding a way to reference inside the classes
     // TODO convert between byte and bitmap
+    void StoreImageToDB(Bitmap image){
 
+        return;
+    }
     void test1(){
         GameQRCode qrcode = new GameQRCode("BFG5DGW54\n");
         Player player = new Player();
