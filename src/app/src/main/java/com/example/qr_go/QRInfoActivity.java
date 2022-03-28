@@ -100,14 +100,16 @@ public class QRInfoActivity extends BaseActivity {
                             if (task.isSuccessful()) {
                                 DocumentSnapshot document = task.getResult();
                                 Map<String, Object> map = document.getData();
-                                for(Object commentsInfo : map.values()) {
+                                if(map != null) {
+                                    for (Object commentsInfo : map.values()) {
 
-                                    Map<String, Object> commentInfo = (Map<String, Object>) commentsInfo;
+                                        Map<String, Object> commentInfo = (Map<String, Object>) commentsInfo;
 
-                                    Player player = new Player();
-                                    player.setUsername((String) commentInfo.get("Username"));
-                                    // TODO: add photolink when it is ready
-                                    comments.addComment(player, (String) commentInfo.get("Message"), null);
+                                        Player player = new Player();
+                                        player.setUsername((String) commentInfo.get("Username"));
+                                        // TODO: add photolink when it is ready
+                                        comments.addComment(player, (String) commentInfo.get("Message"), null);
+                                    }
                                 }
 
                                 commentDataList = comments.getCommentObjects();
