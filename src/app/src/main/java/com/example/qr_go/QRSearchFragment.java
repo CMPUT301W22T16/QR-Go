@@ -25,6 +25,7 @@ import java.util.ArrayList;
 /**
  * Fragment that displays the results of qr searches
  */
+
 public class QRSearchFragment extends SortableFragment {
     private ListView qrListView;
     private QRArrayAdapter qrAdapter;
