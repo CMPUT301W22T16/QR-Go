@@ -88,7 +88,7 @@ public class QRCode {
      * @param height height of QR code
      * @return QR code Bitmap
      */
-    protected static Bitmap encodeToQrCode(String text, int width, int height) {
+    public static Bitmap encodeToQrCode(String text, int width, int height) {
         QRCodeWriter writer = new QRCodeWriter();
         BitMatrix matrix = null;
         try {

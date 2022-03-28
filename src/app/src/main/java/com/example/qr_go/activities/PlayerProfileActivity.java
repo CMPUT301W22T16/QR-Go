@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -24,44 +25,60 @@ import com.example.qr_go.R;
 import com.example.qr_go.objects.LoginQRCode;
 import com.example.qr_go.objects.Player;
 import com.example.qr_go.objects.StatusQRCode;
+import com.example.qr_go.utils.QRGoStorageUtil;
+import com.example.qr_go.utils.StringUtil;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
+import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 @RequiresApi(api = Build.VERSION_CODES.O)
 public class PlayerProfileActivity extends BaseActivity {
-
+    public StringUtil stringUtil = new StringUtil();
     public static FirebaseFirestore db;
     private Player currentUser = new Player();
     public static final int GET_FROM_GALLERY = 3;
-
+    public FirebaseStorage storage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.player_profile_activity);
         initializeNavbar();
-        Button backButton = (Button) findViewById(R.id.back_button);
-
-        // Back button listener
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
-                startActivity(intent);
-            }
-        });
-
+        
         EditText usernameEditText = findViewById(R.id.player_username);
         EditText emailEditText = findViewById(R.id.player_email);
-
+        ImageView profileImage = findViewById(R.id.profile_photo);
         String currentUserId = MapsActivity.getUserId();
-
         db = FirebaseFirestore.getInstance();
+        storage = MapsActivity.storage;
+        StorageReference storageRef = storage.getReference();
+        String ImageRef = stringUtil.ImagePlayerRef(currentUserId);
+        StorageReference islandRef = storageRef.child(ImageRef);
+
+        final long ONE_MEGABYTE = 5 * 1024 * 1024;
+        islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+            @Override
+            public void onSuccess(byte[] bytes) {
+                Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                profileImage.setImageBitmap(bitmap);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception exception) {
+                // Handle any errors
+                return;
+            }
+        });
 
         db.collection("Players")
                 .whereEqualTo("userid", currentUserId)
@@ -175,7 +192,9 @@ public class PlayerProfileActivity extends BaseActivity {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImage);
                 ImageView profileImage = findViewById(R.id.profile_photo);
                 profileImage.setImageBitmap(bitmap);
-                // TODO: save photo to database
+                QRGoStorageUtil StorageUtil = new QRGoStorageUtil();
+                StorageUtil.updateImageFromStorage(bitmap, stringUtil.ImagePlayerRef(MapsActivity.getUserId()));
+
             } catch (FileNotFoundException e) {
                 Toast.makeText(this, "ERROR: file not found", Toast.LENGTH_LONG).show();
                 e.printStackTrace();

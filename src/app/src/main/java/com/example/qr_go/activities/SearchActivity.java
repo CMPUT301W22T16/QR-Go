@@ -124,18 +124,8 @@ public class SearchActivity extends BaseActivity {
             }
         });
 
-        Button backButton = (Button) findViewById(R.id.back_button);
         searchBar = (EditText) findViewById(R.id.search_bar);
         qrSearchSpinner = (Spinner) findViewById(R.id.qr_search_spinner);
-
-        // Back button listener
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
     /**
@@ -166,7 +156,9 @@ public class SearchActivity extends BaseActivity {
                 R.layout.spinner_item, qrSortOptionsDataList);
         ArrayAdapter<String> playerSortOptionAdapter = new ArrayAdapter<>(this,
                 R.layout.spinner_item, playerSortOptionsDataList);
-        qrSearchSpinnerAdapter = new QRSearchSpinnerAdapter(this, qrSearchOptions);
+        ArrayList<String> qrSearchOptionsDataList = new ArrayList<>();
+        qrSearchOptionsDataList.addAll(Arrays.asList(qrSearchOptions));
+        qrSearchSpinnerAdapter = new QRSearchSpinnerAdapter(this, qrSearchOptionsDataList);
 
         Spinner sortOptionSpinner = (Spinner) findViewById(R.id.sort_spinner);
         searchPagerAdapter = new SearchFragmentStateAdapter(this);
@@ -221,6 +213,7 @@ public class SearchActivity extends BaseActivity {
                     case 1:
                         // When page is Players search
                         sortOptionSpinner.setAdapter(playerSortOptionAdapter);
+                        qrSearchSpinner.setSelection(0);
                         qrSearchSpinner.setVisibility(View.GONE);
                         searchBar.setVisibility(View.VISIBLE);
                         searchBar.setHint("Search Username");
@@ -376,7 +369,7 @@ public class SearchActivity extends BaseActivity {
         }
         // Add proximity as a search option;
         qrSortOptionAdapter.add("Proximity");
-//        qrSearchSpinnerAdapter.add("Regional");
+        qrSearchSpinnerAdapter.add("Regional");
     }
 
     /**

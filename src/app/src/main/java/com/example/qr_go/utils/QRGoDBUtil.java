@@ -19,6 +19,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
+
 import java.util.ArrayList;
 @RequiresApi(api = Build.VERSION_CODES.O)
 
@@ -27,7 +28,7 @@ public class QRGoDBUtil {
      * QRGODBUtil is a util class that helps with manipulating the db
      * These are global variables
      */
-    ArrayList<GameQRCode>  QRCodeList = new ArrayList<GameQRCode>();
+    ArrayList<GameQRCode>  QRCodeList = new ArrayList<>();
     FirebaseFirestore db = MapsActivity.db;
     private Context context;
     public QRGoDBUtil(Context context){
@@ -233,26 +234,7 @@ public class QRGoDBUtil {
         });
     }
 
-    /**
-     *  Returns GameQRCode from database via QRId
-     *
-     * @param QRId  the id of gameQRCode to retrieve
-     * @return  the actual GameQRCode object to return
-     */
-    private GameQRCode getGameQRCode(String QRId) {
-
-
-
-        return null;
-    }
-
     /**this is to test the db will be thrown out**/
-    //TODO send image to DB, resize image before sending to DB, adding a way to reference inside the classes
-    // TODO convert between byte and bitmap
-    void StoreImageToDB(Bitmap image){
-
-        return;
-    }
     void test1(){
         GameQRCode qrcode = new GameQRCode("BFG5DGW54\n");
         Player player = new Player();

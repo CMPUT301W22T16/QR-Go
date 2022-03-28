@@ -107,7 +107,7 @@ public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> {
                 }
             }
         } else {
-            qrDisplays = allQrDisplays;
+            qrDisplays.addAll(allQrDisplays);
         }
         notifyDataSetChanged();
     }
