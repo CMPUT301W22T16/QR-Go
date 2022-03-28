@@ -88,6 +88,7 @@ public class UserSearchFragment extends SortableFragment {
         userListView.setSelection(userPos);
     }
 
+    @Override
     public void setSearchFiltering() {
         SearchActivity.getSearchBar().addTextChangedListener(new TextWatcher() {
             @Override

@@ -75,23 +75,19 @@ public class QRSearchFragment extends SortableFragment {
         qrAdapter.notifyDataSetChanged();
     }
 
-    // TODO: Implement searching? how tho
+    @Override
     public void setSearchFiltering() {
-        SearchActivity.getSearchBar().addTextChangedListener(new TextWatcher() {
+        SearchActivity.getQrSearchSpinner().setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                qrAdapter.filter(position);
             }
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
+            public void onNothingSelected(AdapterView<?> parentView) {
+                return;
             }
 
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
         });
     }
 }

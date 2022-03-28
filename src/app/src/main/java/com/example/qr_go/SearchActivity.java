@@ -62,6 +62,13 @@ public class SearchActivity extends BaseActivity {
     // The search bar
     private static EditText searchBar;
 
+    // The qr search spinner
+    private static Spinner qrSearchSpinner;
+    // The qr search spinner's adapter
+    private QRSearchSpinnerAdapter qrSearchSpinnerAdapter;
+    // String array holding qr search options
+    private String[] qrSearchOptions = {"Global"};
+
     // The context
     private Context context;
 
@@ -113,6 +120,7 @@ public class SearchActivity extends BaseActivity {
 
         Button backButton = (Button) findViewById(R.id.back_button);
         searchBar = (EditText) findViewById(R.id.search_bar);
+        qrSearchSpinner = (Spinner) findViewById(R.id.qr_search_spinner);
 
         // Back button listener
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -152,11 +160,14 @@ public class SearchActivity extends BaseActivity {
                 R.layout.spinner_item, qrSortOptionsDataList);
         ArrayAdapter<String> playerSortOptionAdapter = new ArrayAdapter<>(this,
                 R.layout.spinner_item, playerSortOptionsDataList);
+        qrSearchSpinnerAdapter = new QRSearchSpinnerAdapter(this, qrSearchOptions);
 
         Spinner sortOptionSpinner = (Spinner) findViewById(R.id.sort_spinner);
         searchPagerAdapter = new SearchFragmentStateAdapter(this);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.search_tab_layout);
         ViewPager2 viewPager = (ViewPager2) findViewById(R.id.search_pager);
+
+        qrSearchSpinner.setAdapter(qrSearchSpinnerAdapter);
 
         // Set the listener for the spinner so that the fragments update their data based on
         // the selected sort option
@@ -198,11 +209,14 @@ public class SearchActivity extends BaseActivity {
                     case 0:
                         // When page is QR code search
                         sortOptionSpinner.setAdapter(qrSortOptionAdapter);
-                        searchBar.setHint("Search QR Location");
+                        searchBar.setVisibility(View.GONE);
+                        qrSearchSpinner.setVisibility(View.VISIBLE);
                         break;
                     case 1:
                         // When page is Players search
                         sortOptionSpinner.setAdapter(playerSortOptionAdapter);
+                        qrSearchSpinner.setVisibility(View.GONE);
+                        searchBar.setVisibility(View.VISIBLE);
                         searchBar.setHint("Search Username");
                         break;
                     default:
@@ -356,6 +370,7 @@ public class SearchActivity extends BaseActivity {
         }
         // Add proximity as a search option;
         qrSortOptionAdapter.add("Proximity");
+//        qrSearchSpinnerAdapter.add("Regional");
     }
 
     /**
@@ -378,6 +393,13 @@ public class SearchActivity extends BaseActivity {
      */
     public static EditText getSearchBar() {
         return searchBar;
+    }
+
+    /**
+     * @return the qr search spinner
+     */
+    public static Spinner getQrSearchSpinner() {
+        return qrSearchSpinner;
     }
 
     /**
