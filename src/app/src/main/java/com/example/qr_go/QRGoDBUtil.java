@@ -5,8 +5,11 @@ import android.os.Build;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -225,6 +228,20 @@ public class QRGoDBUtil {
             }
         });
     }
+
+    /**
+     *  Returns GameQRCode from database via QRId
+     *
+     * @param QRId  the id of gameQRCode to retrieve
+     * @return  the actual GameQRCode object to return
+     */
+    private GameQRCode getGameQRCode(String QRId) {
+
+
+
+        return null;
+    }
+
     /**this is to test the db will be thrown out**/
     //TODO send image to DB, resize image before sending to DB, adding a way to reference inside the classes
     // TODO convert between byte and bitmap
