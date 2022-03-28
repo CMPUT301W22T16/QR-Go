@@ -42,28 +42,26 @@ import java.util.Map;
 /**
  * MainActivity
  */
-public class MapsActivity extends BaseActivity implements OnMapReadyCallback,GoogleMap.OnInfoWindowClickListener {
+public class MapsActivity extends BaseActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
 
     private GoogleMap mMap;
-    private static String currentUUID;
-    private static String userPassword;
-    public static FirebaseFirestore db;
-    private SharedPreferences loggedUser;
+    private static String currentUUID; // userId singleton
+    private static String userPassword; // password singleton
+    public static FirebaseFirestore db; // database singleton
+    private static SharedPreferences sharedPrefs;
     protected LocationManager locationManager;
-    protected LocationListener locationListener;
     protected Location userLocation;
+    private final int LOCATION_REQUEST_CODE = 101;
+    private ArrayList<GeoLocation> geoLocationList;
 
-    ArrayList<GeoLocation> geoLocationList;
-
-    @RequiresApi(api = Build.VERSION_CODES.O)
+    @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         findUserLocation();
-        initialize(); // initialize app on launch
+        initializeData(); // initialize app on launch
         initializeNavbar();
-
 
         geoLocationList = new ArrayList<GeoLocation>();
 
@@ -73,25 +71,25 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback,Goo
     }
 
     /**
-     * Initialize app on launch
+     * Initialize app singletons on launch
      * Connect to database
      * Check user login
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    private void initialize() {
+    private void initializeData() {
         // Initialize FireStore database if it is already null
         if (db == null) db = FirebaseFirestore.getInstance();
 
         // Log in the user or create a new user
-        if (loggedUser == null) {
-            loggedUser = this.getSharedPreferences(User.CURRENT_USER, MODE_PRIVATE);
-            currentUUID = loggedUser.getString(User.USER_ID, null);
-            userPassword = loggedUser.getString(User.USER_PWD, null);
+        if (sharedPrefs == null) {
+            sharedPrefs = this.getSharedPreferences(User.CURRENT_USER, MODE_PRIVATE);
+            currentUUID = sharedPrefs.getString(User.USER_ID, null);
+            userPassword = sharedPrefs.getString(User.USER_PWD, null);
             if (currentUUID == null) {
                 User newUser = new Player();
                 currentUUID = newUser.getUserid();
                 userPassword = newUser.getPassword();
-                SharedPreferences.Editor ed = loggedUser.edit();
+                SharedPreferences.Editor ed = sharedPrefs.edit();
                 ed.putString(User.USER_ID, currentUUID);
                 ed.putString(User.USER_PWD, userPassword);
                 ed.apply(); // apply changes
@@ -117,7 +115,11 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback,Goo
         String qrId;
         mMap = googleMap;
 
-        mMap.setMyLocationEnabled(true);
+        // set my location on the map only if permission is allowed
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
+                ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED)
+            mMap.setMyLocationEnabled(true);
+
         mMap.setOnInfoWindowClickListener(this);
         //Code from https://javapapers.com/android/get-current-location-in-android/
         db.collection("GameQRCodes")
@@ -147,15 +149,15 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback,Goo
                             tempId = geoLocationList
                                     .get(i)
                                     .getQRId();
-                            if(geoLocationList.get(i).getScore() != null) {
+                            if (geoLocationList.get(i).getScore() != null) {
                                 LatLng newLoc = new LatLng(geoLocationList.get(i).getLatitude(), geoLocationList.get(i).getLongitude());
                                 selectedMarker = mMap.addMarker(new MarkerOptions().position(newLoc)
-                                        .title(tempId.substring(0,8))
+                                        .title(tempId.substring(0, 8))
                                         .snippet("Score: " + geoLocationList.get(i).getScore()));
                             } else {
                                 LatLng newLoc = new LatLng(geoLocationList.get(i).getLatitude(), geoLocationList.get(i).getLongitude());
                                 selectedMarker = mMap.addMarker(new MarkerOptions().position(newLoc)
-                                        .title(tempId.substring(0,8))
+                                        .title(tempId.substring(0, 8))
                                         .snippet("Score: null"));
                             }
                             selectedMarker.setTag(tempId);
@@ -167,7 +169,7 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback,Goo
     @Override
     public void onInfoWindowClick(Marker marker) {
         Intent intent = new Intent(this, QRInfoActivity.class);
-        intent.putExtra("QRid", (String)marker.getTag());
+        intent.putExtra("QRid", (String) marker.getTag());
         startActivity(intent);
     }
 
@@ -175,17 +177,20 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback,Goo
     @RequiresApi(api = Build.VERSION_CODES.P)
     private void findUserLocation() {
         try {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
-                    ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED ||
+                    ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+                requestPermissions(new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_REQUEST_CODE);
+
+            else {
                 // Acquire a reference to the system Location Manager
                 locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
                 // Define a listener that responds to location updates
                 LocationListener locationListener = new LocationListener() {
                     public void onLocationChanged(Location location) {
                         userLocation = new Location(location);
-                        LatLng latLng = new LatLng(userLocation.getLatitude(),userLocation.getLongitude()); // whatever
+                        LatLng latLng = new LatLng(userLocation.getLatitude(), userLocation.getLongitude()); // whatever
                         float zoom = 16;
-                                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom));
+                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom));
                         locationManager.removeUpdates(this);
                     }
                 };
@@ -196,6 +201,31 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback,Goo
         } catch (NoSuchMethodError e) {
             e.printStackTrace();
             Toast.makeText(this, "failed to get location", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    /**
+     * When user permission dialog returns from user
+     * If permission allowed, try finding the user's location again
+     * If not location, then need to set current location on maps to false
+     *
+     * @param requestCode
+     * @param permissions
+     * @param grantResults
+     */
+    @SuppressLint("MissingPermission")
+    @RequiresApi(api = Build.VERSION_CODES.P)
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == LOCATION_REQUEST_CODE) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // If permission granted, set the location
+                findUserLocation();
+                mMap.setMyLocationEnabled(true);
+            } else {
+                // No permission, set maps my location to false
+                mMap.setMyLocationEnabled(false);
+            }
         }
     }
 
@@ -212,5 +242,4 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback,Goo
     public static String getPassword() {
         return userPassword;
     }
-
 }

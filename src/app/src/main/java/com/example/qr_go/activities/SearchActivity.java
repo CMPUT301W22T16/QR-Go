@@ -124,18 +124,8 @@ public class SearchActivity extends BaseActivity {
             }
         });
 
-        Button backButton = (Button) findViewById(R.id.back_button);
         searchBar = (EditText) findViewById(R.id.search_bar);
         qrSearchSpinner = (Spinner) findViewById(R.id.qr_search_spinner);
-
-        // Back button listener
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
     /**
