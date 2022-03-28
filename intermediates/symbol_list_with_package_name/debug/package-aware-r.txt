@@ -3140,6 +3140,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView2
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3174,7 +3175,6 @@ id useLogo
 id userList
 id user_del_button
 id user_list
-id user_qr_list
 id user_score_view
 id username_view
 id usersContent
@@ -3387,7 +3387,6 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 layout user_list_content
-layout user_qr_list_content
 menu bottom_nav_menu
 menu example_menu
 menu example_menu2

@@ -77,11 +77,11 @@ id search_tab_layout
 id sort_spinner
 id take_qr_photo_button
 id take_qr_photo_imageview
+id textView2
 id totalScoreData
 id userList
 id user_del_button
 id user_list
-id user_qr_list
 id user_score_view
 id username_view
 id usersContent
@@ -102,7 +102,6 @@ layout player_profile_activity
 layout qr_list_content
 layout spinner_item
 layout user_list_content
-layout user_qr_list_content
 menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
