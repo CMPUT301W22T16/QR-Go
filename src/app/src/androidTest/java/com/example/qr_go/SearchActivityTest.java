@@ -3,6 +3,10 @@ import android.app.Activity;
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.rule.ActivityTestRule;
 
+import com.example.qr_go.activities.MapsActivity;
+import com.example.qr_go.activities.PlayerInfoActivity;
+import com.example.qr_go.activities.QRInfoActivity;
+import com.example.qr_go.activities.SearchActivity;
 import com.robotium.solo.Solo;
 
 import org.junit.After;
