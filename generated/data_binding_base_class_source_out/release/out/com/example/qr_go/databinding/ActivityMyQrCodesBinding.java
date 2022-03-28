@@ -4,12 +4,11 @@ package com.example.qr_go.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.qr_go.R;
@@ -20,16 +19,13 @@ import java.lang.String;
 
 public final class ActivityMyQrCodesBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
   public final LinearLayout QRData;
 
   @NonNull
   public final BottomNavigationView bottomNavView;
-
-  @NonNull
-  public final Button btTempQr;
 
   @NonNull
   public final QrListContentBinding highestScore;
@@ -39,9 +35,6 @@ public final class ActivityMyQrCodesBinding implements ViewBinding {
 
   @NonNull
   public final LinearLayout highestScoreLayout;
-
-  @NonNull
-  public final LinearLayout linearLayout;
 
   @NonNull
   public final QrListContentBinding lowestScore;
@@ -54,6 +47,9 @@ public final class ActivityMyQrCodesBinding implements ViewBinding {
 
   @NonNull
   public final TextView numOfQRCodes;
+
+  @NonNull
+  public final TextView playerEmail;
 
   @NonNull
   public final TextView playerHighScore;
@@ -70,37 +66,40 @@ public final class ActivityMyQrCodesBinding implements ViewBinding {
   @NonNull
   public final LinearLayout totalScoreData;
 
-  private ActivityMyQrCodesBinding(@NonNull ConstraintLayout rootView, @NonNull LinearLayout QRData,
-      @NonNull BottomNavigationView bottomNavView, @NonNull Button btTempQr,
-      @NonNull QrListContentBinding highestScore, @NonNull LinearLayout highestScoreData,
-      @NonNull LinearLayout highestScoreLayout, @NonNull LinearLayout linearLayout,
+  @NonNull
+  public final ListView userQrList;
+
+  private ActivityMyQrCodesBinding(@NonNull LinearLayout rootView, @NonNull LinearLayout QRData,
+      @NonNull BottomNavigationView bottomNavView, @NonNull QrListContentBinding highestScore,
+      @NonNull LinearLayout highestScoreData, @NonNull LinearLayout highestScoreLayout,
       @NonNull QrListContentBinding lowestScore, @NonNull LinearLayout lowestScoreData,
       @NonNull LinearLayout lowestScoreLayout, @NonNull TextView numOfQRCodes,
-      @NonNull TextView playerHighScore, @NonNull TextView playerLowScore,
-      @NonNull TextView playerNameText, @NonNull TextView playerTotalScore,
-      @NonNull LinearLayout totalScoreData) {
+      @NonNull TextView playerEmail, @NonNull TextView playerHighScore,
+      @NonNull TextView playerLowScore, @NonNull TextView playerNameText,
+      @NonNull TextView playerTotalScore, @NonNull LinearLayout totalScoreData,
+      @NonNull ListView userQrList) {
     this.rootView = rootView;
     this.QRData = QRData;
     this.bottomNavView = bottomNavView;
-    this.btTempQr = btTempQr;
     this.highestScore = highestScore;
     this.highestScoreData = highestScoreData;
     this.highestScoreLayout = highestScoreLayout;
-    this.linearLayout = linearLayout;
     this.lowestScore = lowestScore;
     this.lowestScoreData = lowestScoreData;
     this.lowestScoreLayout = lowestScoreLayout;
     this.numOfQRCodes = numOfQRCodes;
+    this.playerEmail = playerEmail;
     this.playerHighScore = playerHighScore;
     this.playerLowScore = playerLowScore;
     this.playerNameText = playerNameText;
     this.playerTotalScore = playerTotalScore;
     this.totalScoreData = totalScoreData;
+    this.userQrList = userQrList;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -137,12 +136,6 @@ public final class ActivityMyQrCodesBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.bt_temp_qr;
-      Button btTempQr = ViewBindings.findChildViewById(rootView, id);
-      if (btTempQr == null) {
-        break missingId;
-      }
-
       id = R.id.highest_score;
       View highestScore = ViewBindings.findChildViewById(rootView, id);
       if (highestScore == null) {
@@ -159,12 +152,6 @@ public final class ActivityMyQrCodesBinding implements ViewBinding {
       id = R.id.highestScoreLayout;
       LinearLayout highestScoreLayout = ViewBindings.findChildViewById(rootView, id);
       if (highestScoreLayout == null) {
-        break missingId;
-      }
-
-      id = R.id.linearLayout;
-      LinearLayout linearLayout = ViewBindings.findChildViewById(rootView, id);
-      if (linearLayout == null) {
         break missingId;
       }
 
@@ -190,6 +177,12 @@ public final class ActivityMyQrCodesBinding implements ViewBinding {
       id = R.id.numOfQRCodes;
       TextView numOfQRCodes = ViewBindings.findChildViewById(rootView, id);
       if (numOfQRCodes == null) {
+        break missingId;
+      }
+
+      id = R.id.playerEmail;
+      TextView playerEmail = ViewBindings.findChildViewById(rootView, id);
+      if (playerEmail == null) {
         break missingId;
       }
 
@@ -223,10 +216,16 @@ public final class ActivityMyQrCodesBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMyQrCodesBinding((ConstraintLayout) rootView, QRData, bottomNavView,
-          btTempQr, binding_highestScore, highestScoreData, highestScoreLayout, linearLayout,
-          binding_lowestScore, lowestScoreData, lowestScoreLayout, numOfQRCodes, playerHighScore,
-          playerLowScore, playerNameText, playerTotalScore, totalScoreData);
+      id = R.id.user_qr_list;
+      ListView userQrList = ViewBindings.findChildViewById(rootView, id);
+      if (userQrList == null) {
+        break missingId;
+      }
+
+      return new ActivityMyQrCodesBinding((LinearLayout) rootView, QRData, bottomNavView,
+          binding_highestScore, highestScoreData, highestScoreLayout, binding_lowestScore,
+          lowestScoreData, lowestScoreLayout, numOfQRCodes, playerEmail, playerHighScore,
+          playerLowScore, playerNameText, playerTotalScore, totalScoreData, userQrList);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
