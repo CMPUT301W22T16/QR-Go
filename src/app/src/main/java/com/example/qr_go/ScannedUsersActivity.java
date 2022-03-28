@@ -1,5 +1,6 @@
 package com.example.qr_go;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -24,15 +25,14 @@ public class ScannedUsersActivity extends AppCompatActivity {
         userList = findViewById(R.id.userList);
         userDataList = new ArrayList<String>();
 
-        // TODO: this is temp
-        String []usernames = {"User1", "User2", "User3", "User4", "User5", "User6"};
-        selectedQR = new GameQRCode();
-        for(int i=0; i<usernames.length; i++) {
-            Player player = new Player();
-            player.setUsername(usernames[i]);
-            selectedQR.addUser(player);
+        // Get information from extras
+        Bundle extras = getIntent().getExtras();
+        if(extras == null) {
+            selectedQR = null;
+        } else {
+            selectedQR = (GameQRCode) getIntent().getSerializableExtra("selectedQR");
+            userDataList = selectedQR.getUserObjects();
         }
-        userDataList = selectedQR.getUserObjects();
 
         userAdapter = new ArrayAdapter<>(this, R.layout.list_users_content, userDataList);
         userList.setAdapter(userAdapter);

@@ -3,25 +3,40 @@ package com.example.qr_go;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
+
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class QRInfoActivity extends BaseActivity {
 
-    private QRGoDBUtil db;
+    FirebaseFirestore db;
     private Player thisTempPlayer; // TODO: temporary, replace with currently logged in user
 
     private GameQRCode selectedQR;
+    private String selectedQRId;
+
     private QRPhoto[] QRPhotos;
     private ListComments comment;
 //    private GeoLocation location;     // TODO: uncomment after GeoLocation is implemented
+
+    private Intent usersActivityIntent;
 
     CommentsQR comments;
 
@@ -36,40 +51,85 @@ public class QRInfoActivity extends BaseActivity {
         setContentView(R.layout.activity_qr_info);
         initializeNavbar();
 
-        db = new QRGoDBUtil(this);
+        usersActivityIntent = new Intent(QRInfoActivity.this, ScannedUsersActivity.class);
 
-        commentList = findViewById(R.id.myQRList);
+        db = FirebaseFirestore.getInstance();
 
         comments = new CommentsQR();
+
+        TextView tvQRName = (TextView) findViewById(R.id.qrName);
+        TextView tvQRLocation = (TextView) findViewById(R.id.qrLocation);
+        TextView tvScore = (TextView) findViewById(R.id.qrScore);
+
+        // Get information from extras
+        Bundle bundle = getIntent().getExtras();
+
+        if(bundle != null) {
+            selectedQRId = bundle.getString("QRid");
+
+            // set info from QRId
+            db.collection("GameQRCodes")
+                    .whereEqualTo("id", selectedQRId)
+                    .get()
+                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                        @Override
+                        // code from https://stackoverflow.com/questions/65465335/get-specific-field-from-firestore-with-whereequalto
+                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                            if (task.isSuccessful()) {
+
+                                for (DocumentSnapshot document : task.getResult()) {
+                                    selectedQR = document.toObject(GameQRCode.class);
+                                }
+                                usersActivityIntent.putExtra("selectedQR", selectedQR);
+
+                                tvQRName.setText(selectedQR.getId());
+//                                tvQRLocation.setText(selectedQR.getGeoLocation().getAddress().toString());
+                                tvScore.setText("Score: "+selectedQR.getScore());
+
+                            }
+                        }
+                    });
+
+            // get comments
+            db.collection("Comments")
+                    .document(selectedQRId)
+                    .get()
+                    .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                            if (task.isSuccessful()) {
+                                DocumentSnapshot document = task.getResult();
+                                Map<String, Object> map = document.getData();
+                                for(Object commentsInfo : map.values()) {
+
+                                    Map<String, Object> commentInfo = (Map<String, Object>) commentsInfo;
+
+                                    Player player = new Player();
+                                    player.setUsername((String) commentInfo.get("Username"));
+                                    // TODO: add photolink when it is ready
+                                    comments.addComment(player, (String) commentInfo.get("Message"), null);
+                                }
+
+                                commentDataList = comments.getCommentObjects();
+
+                                commentAdapter = new ListComments(QRInfoActivity.this, commentDataList);
+                                commentList.setAdapter(commentAdapter);
+                            }
+                        }
+                    });
+
+        }
+
+        commentList = findViewById(R.id.myQRList);
 
         // TODO: temporary, set to currently logged in user
         thisTempPlayer = new Player();
         thisTempPlayer.setUsername("QRInfo Temp Player");
-
-        // TODO: temporary, set to currently viewing GameQRCode
-        selectedQR = new GameQRCode();
-
-        // TODO: these are temporary. grab data from DB.
-        String []usernames = {"User1", "User2", "User3", "User4", "User5", "User6"};
-        String []msgs = {"msg 1", "msg 2", "msg 3", "msg 4", "msg 5", "msg 6"};
-
-        for(int i=0; i<usernames.length; i++) {
-            Player player = new Player();
-            player.setUsername(usernames[i]);
-            comments.addComment(player, msgs[i], null);
-        }
-
-        commentDataList = comments.getCommentObjects();
-        //TODO: sort commentDataList
-
-        commentAdapter = new ListComments(this, commentDataList);
-        commentList.setAdapter(commentAdapter);
     }
 
 
     public void showUsersList(View view) {
-        Intent intent = new Intent(QRInfoActivity.this, ScannedUsersActivity.class);
-        startActivity(intent);
+        startActivity(usersActivityIntent);
     }
 
     /**
@@ -100,6 +160,10 @@ public class QRInfoActivity extends BaseActivity {
 //        db.addCommenttoDB(comments, selectedQR);
 
         inputComment.setText(""); // clear input after send
+    }
+
+    public void setSelectedQR(String QRId) {
+
     }
 
 }
