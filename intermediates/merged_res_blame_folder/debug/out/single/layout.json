@@ -20,6 +20,10 @@
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml"
     },
     {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/qr_search_spinner_item.xml",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_search_spinner_item.xml"
+    },
+    {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_code_scanner.xml",
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_code_scanner.xml"
     },
@@ -54,10 +58,6 @@
     {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_new_game_qractivity.xml",
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml"
-    },
-    {
-        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/user_qr_list_content.xml",
-        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml"
     },
     {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/list_users_content.xml",

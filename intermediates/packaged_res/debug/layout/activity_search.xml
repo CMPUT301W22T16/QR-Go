@@ -9,6 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginTop="15dp"
         android:layout_marginHorizontal="15dp">
 
         <com.google.android.material.button.MaterialButton
@@ -35,14 +36,31 @@
             android:background="@null"/>
 
     </RelativeLayout>
-    <EditText
-        android:id="@+id/search_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Search Bar"
-        android:inputType="textPersonName"
 
-        android:layout_marginHorizontal="15dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginHorizontal="15dp">
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Search Bar"
+            android:layout_alignParentBottom="true"
+            android:inputType="textPersonName"
+            android:visibility="gone" />
+
+        <Spinner
+            android:id="@+id/qr_search_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"
+            android:background="@null"/>
+    </RelativeLayout>
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
