@@ -4,11 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
 import com.example.qr_go.R;
+import com.example.qr_go.adapters.QRArrayAdapter;
+import com.example.qr_go.containers.QRListDisplayContainer;
 import com.example.qr_go.objects.Player;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -16,6 +19,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 public class MyQRCodesActivity extends BaseActivity {
@@ -25,13 +29,17 @@ public class MyQRCodesActivity extends BaseActivity {
     private Player selectedPlayer;
     Map.Entry<String, Integer> highestQRCode;
     Map.Entry<String, Integer> lowestQRCode;
+    private QRArrayAdapter qrAdapter;
+    private ArrayList<QRListDisplayContainer> qrDisplays;
+    private ListView userQRList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_qr_codes);
         initializeNavbar();
-
+        userQRList = findViewById(R.id.user_qr_list);
+        qrDisplays = new ArrayList<QRListDisplayContainer>();
         String selectedPlayerID = MapsActivity.getUserId();
 
 
@@ -61,9 +69,6 @@ public class MyQRCodesActivity extends BaseActivity {
 
                             for (DocumentSnapshot document : task.getResult()) {
                                 selectedPlayer = document.toObject(Player.class);
-                                //selectedPlayer.setUsername((String) document.getData().get("playername"));
-                                //playerScore = selectedPlayer.getTotalScore();
-                                //myQRCodeIDs = (HashMap<Integer,String>) document.getData().get("scannedQRCodeIds");
                             }
                             playernameText.setText(selectedPlayer.getUsername());
                             highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
@@ -99,20 +104,12 @@ public class MyQRCodesActivity extends BaseActivity {
                                     }
                                 });
                             }
+                            qrAdapter = new QRArrayAdapter(MyQRCodesActivity.this, qrDisplays, 0);
+                            userQRList.setAdapter(qrAdapter);
                         }
                     }
                 });
 
-//        TODO: replace this and add OnClickListener for a QRCode list
-        tempButton = (Button) findViewById(R.id.bt_temp_qr);
-        tempButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MyQRCodesActivity.this, QRInfoActivity.class);
-                intent.putExtra("QRid", "696ce4dbd7bb57cbfe58b64f530f428b74999cb37e2ee60980490cd9552de3a6");
-                startActivity(intent);
-            }
-        });
 
     }
 }

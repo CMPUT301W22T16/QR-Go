@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginTop="20dp">
 
         <ImageView
             android:layout_marginLeft="50dp"
@@ -30,18 +28,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Player 1"
-                android:textStyle="bold" />
-
+                android:textStyle="bold"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email:" />
+                <TextView
+                    android:id="@+id/playerEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:text="00000" />
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/QRData"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="QR Codes" />
+                    android:text="QR Codes"/>
 
                 <TextView
                     android:id="@+id/numOfQRCodes"
@@ -50,17 +61,15 @@
                     android:layout_marginLeft="45dp"
                     android:text="00000" />
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/highestScoreData"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Highest Score" />
+                    android:text="Highest Score"/>
 
                 <TextView
                     android:id="@+id/playerHighScore"
@@ -89,7 +98,6 @@
                     android:text="00000" />
             </LinearLayout>
 
-
             <LinearLayout
                 android:id="@+id/totalScoreData"
                 android:layout_width="match_parent"
@@ -112,6 +120,7 @@
         </LinearLayout>
 
 
+
     </LinearLayout>
 
     <LinearLayout
@@ -128,7 +137,7 @@
         <include
             android:id="@+id/highest_score"
             layout="@layout/qr_list_content"
-        />
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -145,29 +154,48 @@
         <include
             android:id="@+id/lowest_score"
             layout="@layout/qr_list_content"
-        />
+            />
     </LinearLayout>
 
-    <!--    TODO: Replace this with list view for QRCodes-->
-    <Button
-        android:id="@+id/bt_temp_qr"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="QR Code #1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lowestScoreLayout" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_nav_view"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        app:labelVisibilityMode="labeled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My scanned QR codes:"
+            android:textSize="20dp"/>
+
+        <ListView
+            android:id="@+id/user_qr_list"
+            android:layout_width="350dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        >
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="?android:attr/windowBackground"
+            app:menu="@menu/bottom_nav_menu"
+            app:labelVisibilityMode="labeled"
+            />
+    </LinearLayout>
+</LinearLayout>
