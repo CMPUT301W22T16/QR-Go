@@ -20,10 +20,9 @@ public class QRSearchSpinnerAdapter extends ArrayAdapter<String> {
     private ArrayList<String> optionsList;
     private Context context;
 
-    public QRSearchSpinnerAdapter(Context context, String[] options) {
+    public QRSearchSpinnerAdapter(Context context, ArrayList<String> options) {
         super(context, 0, options);
-        optionsList = new ArrayList<>();
-        optionsList.addAll(Arrays.asList(options));
+        optionsList = options;
         this.context = context;
     }
 
