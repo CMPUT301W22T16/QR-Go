@@ -40,47 +40,47 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QRGo" >
         <activity
-            android:name="com.example.qr_go.NewGameQRActivity"
+            android:name="com.example.qr_go.activities.NewGameQRActivity"
             android:exported="false"
-            android:parentActivityName="com.example.qr_go.QRCodeScannerActivity" />
+            android:parentActivityName="com.example.qr_go.activities.QRCodeScannerActivity" />
         <activity
-            android:name="com.example.qr_go.SearchActivity"
+            android:name="com.example.qr_go.activities.SearchActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name="com.example.qr_go.PlayerInfoActivity"
+            android:name="com.example.qr_go.activities.PlayerInfoActivity"
             android:exported="false"
-            android:parentActivityName="com.example.qr_go.UserSearchFragment" />
+            android:parentActivityName="com.example.qr_go.fragments.UserSearchFragment" />
         <activity
-            android:name="com.example.qr_go.QRCodeScannerActivity"
+            android:name="com.example.qr_go.activities.QRCodeScannerActivity"
             android:exported="false"
-            android:parentActivityName="com.example.qr_go.MapsActivity" />
+            android:parentActivityName="com.example.qr_go.activities.MapsActivity" />
         <activity
-            android:name="com.example.qr_go.MyQRCodesActivity"
+            android:name="com.example.qr_go.activities.MyQRCodesActivity"
             android:exported="false"
-            android:parentActivityName="com.example.qr_go.MapsActivity" />
+            android:parentActivityName="com.example.qr_go.activities.MapsActivity" />
         <activity
-            android:name="com.example.qr_go.PlayerProfileActivity"
+            android:name="com.example.qr_go.activities.PlayerProfileActivity"
             android:exported="false"
-            android:parentActivityName="com.example.qr_go.MapsActivity" />
+            android:parentActivityName="com.example.qr_go.activities.MapsActivity" />
         <activity
-            android:name="com.example.qr_go.QRInfoActivity"
+            android:name="com.example.qr_go.activities.QRInfoActivity"
             android:exported="false"
             android:launchMode="singleTop"
-            android:parentActivityName="com.example.qr_go.MapsActivity"
+            android:parentActivityName="com.example.qr_go.activities.MapsActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.example.qr_go.ScannedUsersActivity"
+            android:name="com.example.qr_go.activities.ScannedUsersActivity"
             android:exported="false"
-            android:parentActivityName="com.example.qr_go.QRInfoActivity" />
+            android:parentActivityName="com.example.qr_go.activities.QRInfoActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBwdjiGdUudmbI1R4sFmg3Dnzpu8XvrJ9w" />
 
         <activity
-            android:name="com.example.qr_go.MapsActivity"
+            android:name="com.example.qr_go.activities.MapsActivity"
             android:exported="true"
             android:label="@string/title_activity_maps" >
             <intent-filter>

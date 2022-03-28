@@ -70,74 +70,74 @@
 42        android:theme="@style/Theme.QRGo" >
 42-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:19:9-42
 43        <activity
-43-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:20:9-23:67
-44            android:name="com.example.qr_go.NewGameQRActivity"
-44-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:21:13-46
+43-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:20:9-23:78
+44            android:name="com.example.qr_go.activities.NewGameQRActivity"
+44-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:21:13-57
 45            android:exported="false"
 45-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:22:13-37
-46            android:parentActivityName="com.example.qr_go.QRCodeScannerActivity" />
-46-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:23:13-64
+46            android:parentActivityName="com.example.qr_go.activities.QRCodeScannerActivity" />
+46-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:23:13-75
 47        <activity
 47-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:24:9-29:20
-48            android:name="com.example.qr_go.SearchActivity"
-48-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:25:13-43
+48            android:name="com.example.qr_go.activities.SearchActivity"
+48-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:25:13-54
 49            android:exported="false"
 49-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:26:13-37
 50            android:windowSoftInputMode="adjustPan" >
 50-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:27:13-52
 51        </activity>
 52        <activity
-52-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:30:9-33:64
-53            android:name="com.example.qr_go.PlayerInfoActivity"
-53-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:31:13-47
+52-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:30:9-33:74
+53            android:name="com.example.qr_go.activities.PlayerInfoActivity"
+53-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:31:13-58
 54            android:exported="false"
 54-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:32:13-37
-55            android:parentActivityName="com.example.qr_go.UserSearchFragment" />
-55-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:33:13-61
+55            android:parentActivityName="com.example.qr_go.fragments.UserSearchFragment" />
+55-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:33:13-71
 56        <activity
-56-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:34:9-37:58
-57            android:name="com.example.qr_go.QRCodeScannerActivity"
-57-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:35:13-50
+56-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:34:9-37:69
+57            android:name="com.example.qr_go.activities.QRCodeScannerActivity"
+57-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:35:13-61
 58            android:exported="false"
 58-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:36:13-37
-59            android:parentActivityName="com.example.qr_go.MapsActivity" />
-59-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:37:13-55
+59            android:parentActivityName="com.example.qr_go.activities.MapsActivity" />
+59-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:37:13-66
 60        <activity
-60-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:38:9-41:58
-61            android:name="com.example.qr_go.MyQRCodesActivity"
-61-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:39:13-46
+60-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:38:9-41:69
+61            android:name="com.example.qr_go.activities.MyQRCodesActivity"
+61-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:39:13-57
 62            android:exported="false"
 62-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:40:13-37
-63            android:parentActivityName="com.example.qr_go.MapsActivity" />
-63-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:41:13-55
+63            android:parentActivityName="com.example.qr_go.activities.MapsActivity" />
+63-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:41:13-66
 64        <activity
-64-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:42:9-45:58
-65            android:name="com.example.qr_go.PlayerProfileActivity"
-65-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:43:13-50
+64-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:42:9-45:69
+65            android:name="com.example.qr_go.activities.PlayerProfileActivity"
+65-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:43:13-61
 66            android:exported="false"
 66-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:44:13-37
-67            android:parentActivityName="com.example.qr_go.MapsActivity" />
-67-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:45:13-55
+67            android:parentActivityName="com.example.qr_go.activities.MapsActivity" />
+67-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:45:13-66
 68        <activity
 68-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:46:9-51:46
-69            android:name="com.example.qr_go.QRInfoActivity"
-69-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:47:13-43
+69            android:name="com.example.qr_go.activities.QRInfoActivity"
+69-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:47:13-54
 70            android:exported="false"
 70-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:48:13-37
 71            android:launchMode="singleTop"
 71-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:51:13-43
-72            android:parentActivityName="com.example.qr_go.MapsActivity"
-72-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:49:13-55
+72            android:parentActivityName="com.example.qr_go.activities.MapsActivity"
+72-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:49:13-66
 73            android:windowSoftInputMode="adjustPan" />
 73-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:50:13-52
 74        <activity
-74-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:52:9-55:60
-75            android:name="com.example.qr_go.ScannedUsersActivity"
-75-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:53:13-49
+74-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:52:9-55:71
+75            android:name="com.example.qr_go.activities.ScannedUsersActivity"
+75-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:53:13-60
 76            android:exported="false"
 76-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:54:13-37
-77            android:parentActivityName="com.example.qr_go.QRInfoActivity" />
-77-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:55:13-57
+77            android:parentActivityName="com.example.qr_go.activities.QRInfoActivity" />
+77-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:55:13-68
 78
 79        <meta-data
 80            android:name="com.google.android.geo.API_KEY"
@@ -147,8 +147,8 @@
 82
 83        <activity
 83-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:61:9-70:20
-84            android:name="com.example.qr_go.MapsActivity"
-84-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:62:13-41
+84            android:name="com.example.qr_go.activities.MapsActivity"
+84-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:62:13-52
 85            android:exported="true"
 85-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:63:13-36
 86            android:label="@string/title_activity_maps" >

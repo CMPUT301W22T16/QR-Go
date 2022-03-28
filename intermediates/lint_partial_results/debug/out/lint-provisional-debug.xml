@@ -388,10 +388,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
             line="41"
             column="9"
-            startOffset="1555"
+            startOffset="1566"
             endLine="41"
             endColumn="40"
-            endOffset="1586"/>
+            endOffset="1597"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -405,10 +405,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
             line="67"
             column="9"
-            startOffset="2589"
+            startOffset="2600"
             endLine="67"
             endColumn="42"
-            endOffset="2622"/>
+            endOffset="2633"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -1128,13 +1128,13 @@
         message="">
         <fix-data requiresApi="28"/>
         <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/MapsActivity.java"
-            line="74"
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MapsActivity.java"
+            line="63"
             column="9"
-            startOffset="2615"
-            endLine="74"
+            startOffset="2160"
+            endLine="63"
             endColumn="25"
-            endOffset="2631"/>
+            endOffset="2176"/>
         <map>
             <entry
                 name="minSdk"
