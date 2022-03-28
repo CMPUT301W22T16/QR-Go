@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.qr_go.objects.UserTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-03-28T03:54:43" hostname="fv-az82-726" time="0.026">
+<testsuite name="com.example.qr_go.objects.UserTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-03-28T03:58:10" hostname="fv-az127-386" time="0.018">
   <properties/>
-  <testcase name="testGetHighestScore" classname="com.example.qr_go.objects.UserTest" time="0.011"/>
-  <testcase name="testRemoveQRCode" classname="com.example.qr_go.objects.UserTest" time="0.001"/>
-  <testcase name="testAddQRCode" classname="com.example.qr_go.objects.UserTest" time="0.001"/>
-  <testcase name="testGetTotalScore" classname="com.example.qr_go.objects.UserTest" time="0.002"/>
+  <testcase name="testGetHighestScore" classname="com.example.qr_go.objects.UserTest" time="0.008"/>
+  <testcase name="testRemoveQRCode" classname="com.example.qr_go.objects.UserTest" time="0.002"/>
+  <testcase name="testAddQRCode" classname="com.example.qr_go.objects.UserTest" time="0.002"/>
+  <testcase name="testGetTotalScore" classname="com.example.qr_go.objects.UserTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
