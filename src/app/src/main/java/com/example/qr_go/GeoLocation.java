@@ -13,6 +13,7 @@ public class GeoLocation {
 
     private double longitude;
     private double latitude;
+    private Long score;
     private Address address;
     private String locatedQRId;
     public GeoLocation(String locatedQRId) {
@@ -36,6 +37,14 @@ public class GeoLocation {
         return this.locatedQRId;
     }
 
+    public Long getScore() {
+        return score;
+    }
+
+    public void setScore(Long score) {
+        this.score = score;
+    }
+
     public void setAddress(Address address) {
         this.address = address;
     }
@@ -44,4 +53,5 @@ public class GeoLocation {
         this.longitude = longitude;
         this.latitude = latitude;
     }
+
 }

@@ -25,6 +25,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -46,7 +47,7 @@ import java.util.Map;
 /**
  * MainActivity
  */
-public class MapsActivity extends BaseActivity implements OnMapReadyCallback {
+public class MapsActivity extends BaseActivity implements OnMapReadyCallback,GoogleMap.OnInfoWindowClickListener {
 
     private GoogleMap mMap;
     private static String currentUUID;
@@ -64,6 +65,7 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+        findUserLocation();
         initialize(); // initialize app on launch
         initializeNavbar();
 
@@ -117,9 +119,11 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback {
     @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        String qrId;
         mMap = googleMap;
-        findUserLocation();
+
         mMap.setMyLocationEnabled(true);
+        mMap.setOnInfoWindowClickListener(this);
         //Code from https://javapapers.com/android/get-current-location-in-android/
         db.collection("GameQRCodes")
                 .whereNotEqualTo("geoLocation", null)
@@ -137,17 +141,42 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback {
                                 tempMap = (Map) document.get("geoLocation");
                                 if (tempMap.containsKey("latitude")) {
                                     tempGeoLocation.setCoords((Double) tempMap.get("longitude"), (Double) tempMap.get("latitude"));
+                                    tempGeoLocation.setScore((Long) document.get("score"));
                                     geoLocationList.add(tempGeoLocation);
                                 }
                             }
                         }
                         for (int i = 0; i < geoLocationList.size(); i++) {
-                            LatLng newLoc = new LatLng(geoLocationList.get(i).getLatitude(), geoLocationList.get(i).getLongitude());
-                            mMap.addMarker(new MarkerOptions().position(newLoc).title("NewMarker"));
+                            if(geoLocationList.get(i).getScore() != null) {
+                                LatLng newLoc = new LatLng(geoLocationList.get(i).getLatitude(), geoLocationList.get(i).getLongitude());
+                                Marker selectedMarker = mMap.addMarker(new MarkerOptions().position(newLoc)
+                                        .title(geoLocationList
+                                                .get(i)
+                                                .getQRId()
+                                                .substring(0,8))
+                                        .snippet("Score: " + geoLocationList.get(i).getScore()));
+                                selectedMarker.showInfoWindow();
+                            } else {
+                                LatLng newLoc = new LatLng(geoLocationList.get(i).getLatitude(), geoLocationList.get(i).getLongitude());
+                                Marker selectedMarker = mMap.addMarker(new MarkerOptions().position(newLoc)
+                                        .title("QR: " + geoLocationList
+                                                .get(i)
+                                                .getQRId()
+                                                .substring(0,8))
+                                        .snippet("Score: null"));
+                                selectedMarker.showInfoWindow();
+                            }
+
                         }
 
                     }
                 });
+    }
+
+    @Override
+    public void onInfoWindowClick(Marker marker) {
+        Toast.makeText(this, marker.getTitle(),
+                Toast.LENGTH_SHORT).show();
     }
 
     @SuppressLint("MissingPermission")
