@@ -11,8 +11,6 @@ drawable baseline_dashboard_24
 drawable baseline_home_24
 drawable ic_baseline_chevron_left_24
 drawable ic_baseline_delete_24
-drawable ic_baseline_my_location_24
-drawable ic_baseline_public_24
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable round_account_circle_24
@@ -68,9 +66,6 @@ id qr_del_button
 id qr_id_view
 id qr_list
 id qr_score_view
-id qr_search_option_icon
-id qr_search_option_text
-id qr_search_spinner
 id relativeLayout
 id save_game_qr
 id scanner_view
@@ -82,11 +77,11 @@ id search_tab_layout
 id sort_spinner
 id take_qr_photo_button
 id take_qr_photo_imageview
-id textView2
 id totalScoreData
 id userList
 id user_del_button
 id user_list
+id user_qr_list
 id user_score_view
 id username_view
 id usersContent
@@ -105,9 +100,9 @@ layout list_comments_content
 layout list_users_content
 layout player_profile_activity
 layout qr_list_content
-layout qr_search_spinner_item
 layout spinner_item
 layout user_list_content
+layout user_qr_list_content
 menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
