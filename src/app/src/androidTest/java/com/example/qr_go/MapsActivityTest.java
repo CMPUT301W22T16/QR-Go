@@ -1,10 +1,14 @@
 package com.example.qr_go;
 import android.app.Activity;
-import android.content.Intent;
 
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.rule.ActivityTestRule;
 
+import com.example.qr_go.activities.MapsActivity;
+import com.example.qr_go.activities.MyQRCodesActivity;
+import com.example.qr_go.activities.PlayerProfileActivity;
+import com.example.qr_go.activities.QRCodeScannerActivity;
+import com.example.qr_go.activities.SearchActivity;
 import com.robotium.solo.Solo;
 
 import org.junit.After;

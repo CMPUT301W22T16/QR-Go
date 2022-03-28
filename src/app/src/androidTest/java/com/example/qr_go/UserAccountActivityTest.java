@@ -1,7 +1,7 @@
 package com.example.qr_go;
 
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
-import static com.example.qr_go.QRCode.encodeToQrCode;
+import static com.example.qr_go.objects.QRCode.encodeToQrCode;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -10,11 +10,14 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.widget.ImageView;
 
-import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.rule.ActivityTestRule;
 
+import com.example.qr_go.activities.MapsActivity;
+import com.example.qr_go.activities.PlayerProfileActivity;
+import com.example.qr_go.objects.LoginQRCode;
+import com.example.qr_go.objects.StatusQRCode;
+import com.example.qr_go.objects.User;
 import com.robotium.solo.Solo;
 
 import org.junit.After;
