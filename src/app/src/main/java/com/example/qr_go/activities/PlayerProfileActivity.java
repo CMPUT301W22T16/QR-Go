@@ -45,17 +45,7 @@ public class PlayerProfileActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.player_profile_activity);
         initializeNavbar();
-        Button backButton = (Button) findViewById(R.id.back_button);
-
-        // Back button listener
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
-                startActivity(intent);
-            }
-        });
-
+        
         EditText usernameEditText = findViewById(R.id.player_username);
         EditText emailEditText = findViewById(R.id.player_email);
 

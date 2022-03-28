@@ -45,25 +45,23 @@ import java.util.Map;
 public class MapsActivity extends BaseActivity implements OnMapReadyCallback,GoogleMap.OnInfoWindowClickListener {
 
     private GoogleMap mMap;
-    private static String currentUUID;
-    private static String userPassword;
-    public static FirebaseFirestore db;
-    private SharedPreferences loggedUser;
+    private static String currentUUID; // userId singleton
+    private static String userPassword; // password singleton
+    public static FirebaseFirestore db; // database singleton
+    private static SharedPreferences sharedPrefs;
     protected LocationManager locationManager;
-    protected LocationListener locationListener;
     protected Location userLocation;
 
     ArrayList<GeoLocation> geoLocationList;
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
+    @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         findUserLocation();
-        initialize(); // initialize app on launch
+        initializeData(); // initialize app on launch
         initializeNavbar();
-
 
         geoLocationList = new ArrayList<GeoLocation>();
 
@@ -73,25 +71,25 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback,Goo
     }
 
     /**
-     * Initialize app on launch
+     * Initialize app singletons on launch
      * Connect to database
      * Check user login
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
-    private void initialize() {
+    private void initializeData() {
         // Initialize FireStore database if it is already null
         if (db == null) db = FirebaseFirestore.getInstance();
 
         // Log in the user or create a new user
-        if (loggedUser == null) {
-            loggedUser = this.getSharedPreferences(User.CURRENT_USER, MODE_PRIVATE);
-            currentUUID = loggedUser.getString(User.USER_ID, null);
-            userPassword = loggedUser.getString(User.USER_PWD, null);
+        if (sharedPrefs == null) {
+            sharedPrefs = this.getSharedPreferences(User.CURRENT_USER, MODE_PRIVATE);
+            currentUUID = sharedPrefs.getString(User.USER_ID, null);
+            userPassword = sharedPrefs.getString(User.USER_PWD, null);
             if (currentUUID == null) {
                 User newUser = new Player();
                 currentUUID = newUser.getUserid();
                 userPassword = newUser.getPassword();
-                SharedPreferences.Editor ed = loggedUser.edit();
+                SharedPreferences.Editor ed = sharedPrefs.edit();
                 ed.putString(User.USER_ID, currentUUID);
                 ed.putString(User.USER_PWD, userPassword);
                 ed.apply(); // apply changes
@@ -212,5 +210,4 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback,Goo
     public static String getPassword() {
         return userPassword;
     }
-
 }

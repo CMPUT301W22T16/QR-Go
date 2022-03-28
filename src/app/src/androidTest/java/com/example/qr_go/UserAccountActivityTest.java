@@ -10,6 +10,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.widget.Button;
 
 import androidx.test.rule.ActivityTestRule;
 
@@ -42,22 +43,11 @@ public class UserAccountActivityTest {
         editor.putString(User.USER_ID, mockUserId);
         editor.putString(User.USER_PWD, mockPassword);
         editor.apply(); // apply changes
-        // Go to MapsActivity to initialize the user id and password static fields
-        solo.clickOnButton("Back");
-        solo.goBackToActivity("PlayerProfileActivity");
     }
 
     @Test
     public void start() throws Exception {
         Activity activity = rule.getActivity();
-    }
-
-    @Test
-    public void testMyAccount() {
-        solo.clickOnMenuItem("My Account");
-        solo.assertCurrentActivity("Not in Player Profile Activity", PlayerProfileActivity.class);
-        solo.clickOnButton("Back");
-        solo.assertCurrentActivity("Not in Maps Activity", MapsActivity.class);
     }
 
     @Test
@@ -71,7 +61,6 @@ public class UserAccountActivityTest {
         StatusQRCode statusQRCode = new StatusQRCode(mockUserId + "\n" + mockPassword);
         assertTrue(encodeToQrCode(StatusQRCode.QR_IDENTIFIER + mockUserId + "\n" + mockPassword, 800, 800).sameAs(statusQRCode.getQRCode()));
     }
-
 
     @After
     public void tearDown() throws Exception {
