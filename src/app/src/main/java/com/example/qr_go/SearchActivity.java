@@ -370,7 +370,7 @@ public class SearchActivity extends BaseActivity {
         }
         // Add proximity as a search option;
         qrSortOptionAdapter.add("Proximity");
-        qrSearchSpinnerAdapter.add("Regional");
+//        qrSearchSpinnerAdapter.add("Regional");
     }
 
     /**

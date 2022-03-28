@@ -99,7 +99,7 @@ public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> {
         qrDisplays.clear();
         if (filterOption == 1) {
             for (QRListDisplayContainer qr : allQrDisplays) {
-                if (qr.getDistance() <= localDistanceBoundary) {
+                if (qr.getDistance() != null && qr.getDistance() <= localDistanceBoundary) {
                     qrDisplays.add(qr);
                 }
             }
