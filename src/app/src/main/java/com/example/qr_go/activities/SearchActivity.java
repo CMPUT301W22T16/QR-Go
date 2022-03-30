@@ -173,6 +173,7 @@ public class SearchActivity extends BaseActivity {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 clearSearchBar();
+                qrSearchSpinner.setSelection(0);
                 searchPagerAdapter.retrieveData(currentFragment);
                 searchPagerAdapter.updateSort(currentFragment, position);
                 sortPosition = position;
