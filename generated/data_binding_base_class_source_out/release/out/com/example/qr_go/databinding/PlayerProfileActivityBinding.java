@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -46,9 +45,6 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
   public final TextView generateStatusQr;
 
   @NonNull
-  public final CardView photoContainer;
-
-  @NonNull
   public final EditText playerEmail;
 
   @NonNull
@@ -60,9 +56,8 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
   private PlayerProfileActivityBinding(@NonNull ConstraintLayout rootView,
       @NonNull BottomNavigationView bottomNavView, @NonNull View divider2, @NonNull View divider3,
       @NonNull View divider4, @NonNull Button editProfilePhoto, @NonNull TextView generateLoginQr,
-      @NonNull TextView generateStatusQr, @NonNull CardView photoContainer,
-      @NonNull EditText playerEmail, @NonNull EditText playerUsername,
-      @NonNull ImageView profilePhoto) {
+      @NonNull TextView generateStatusQr, @NonNull EditText playerEmail,
+      @NonNull EditText playerUsername, @NonNull ImageView profilePhoto) {
     this.rootView = rootView;
     this.bottomNavView = bottomNavView;
     this.divider2 = divider2;
@@ -71,7 +66,6 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
     this.editProfilePhoto = editProfilePhoto;
     this.generateLoginQr = generateLoginQr;
     this.generateStatusQr = generateStatusQr;
-    this.photoContainer = photoContainer;
     this.playerEmail = playerEmail;
     this.playerUsername = playerUsername;
     this.profilePhoto = profilePhoto;
@@ -146,12 +140,6 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.photo_container;
-      CardView photoContainer = ViewBindings.findChildViewById(rootView, id);
-      if (photoContainer == null) {
-        break missingId;
-      }
-
       id = R.id.player_email;
       EditText playerEmail = ViewBindings.findChildViewById(rootView, id);
       if (playerEmail == null) {
@@ -171,8 +159,8 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
       }
 
       return new PlayerProfileActivityBinding((ConstraintLayout) rootView, bottomNavView, divider2,
-          divider3, divider4, editProfilePhoto, generateLoginQr, generateStatusQr, photoContainer,
-          playerEmail, playerUsername, profilePhoto);
+          divider3, divider4, editProfilePhoto, generateLoginQr, generateStatusQr, playerEmail,
+          playerUsername, profilePhoto);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

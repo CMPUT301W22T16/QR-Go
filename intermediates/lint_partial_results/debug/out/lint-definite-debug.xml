@@ -1020,12 +1020,12 @@
         message="This view is not constrained horizontally: at runtime it will jump to the left unless you add a horizontal constraint">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="82"
+            line="75"
             column="6"
-            startOffset="3275"
-            endLine="82"
+            startOffset="3008"
+            endLine="75"
             endColumn="10"
-            endOffset="3279"/>
+            endOffset="3012"/>
     </incident>
 
     <incident
@@ -1041,54 +1041,12 @@
             mark="0"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="20"
-            column="10"
-            startOffset="795"
-            endLine="20"
-            endColumn="19"
-            endOffset="804"/>
-    </incident>
-
-    <incident
-        id="Autofill"
-        severity="warning"
-        message="Missing `autofillHints` attribute">
-        <fix-alternatives>
-            <fix-attribute
-                description="Set autofillHints"
-                namespace="http://schemas.android.com/apk/res/android"
-                attribute="autofillHints"
-                value=""
-                dot="0"
-                mark="0"/>
-            <fix-attribute
-                description="Set importantForAutofill=&quot;no&quot;"
-                namespace="http://schemas.android.com/apk/res/android"
-                attribute="importantForAutofill"
-                value="no"/>
-        </fix-alternatives>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="27"
+            line="10"
             column="6"
-            startOffset="1056"
-            endLine="27"
-            endColumn="14"
-            endOffset="1064"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Username&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="32"
-            column="9"
-            startOffset="1237"
-            endLine="32"
-            endColumn="32"
-            endOffset="1260"/>
+            startOffset="384"
+            endLine="10"
+            endColumn="15"
+            endOffset="393"/>
     </incident>
 
     <incident
@@ -1097,20 +1055,20 @@
         message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="45"
+            line="27"
             column="9"
-            startOffset="1738"
-            endLine="45"
+            startOffset="1000"
+            endLine="27"
             endColumn="43"
-            endOffset="1772"/>
+            endOffset="1034"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="40"
+            line="22"
             column="9"
-            startOffset="1549"
-            endLine="40"
+            startOffset="811"
+            endLine="22"
             endColumn="39"
-            endOffset="1579"
+            endOffset="841"
             message="id defined here"/>
     </incident>
 
@@ -1134,12 +1092,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="39"
+            line="21"
             column="6"
-            startOffset="1532"
-            endLine="39"
+            startOffset="794"
+            endLine="21"
             endColumn="14"
-            endOffset="1540"/>
+            endOffset="802"/>
     </incident>
 
     <incident
@@ -1148,12 +1106,54 @@
         message="Hardcoded string &quot;Email&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="44"
+            line="26"
             column="9"
-            startOffset="1709"
-            endLine="44"
+            startOffset="971"
+            endLine="26"
             endColumn="29"
-            endOffset="1729"/>
+            endOffset="991"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="33"
+            column="6"
+            startOffset="1278"
+            endLine="33"
+            endColumn="14"
+            endOffset="1286"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Username&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="38"
+            column="9"
+            startOffset="1459"
+            endLine="38"
+            endColumn="32"
+            endOffset="1482"/>
     </incident>
 
     <incident
@@ -1162,12 +1162,12 @@
         message="Hardcoded string &quot;Generate my login qr code&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="75"
+            line="68"
             column="9"
-            startOffset="2978"
-            endLine="75"
+            startOffset="2711"
+            endLine="68"
             endColumn="49"
-            endOffset="3018"/>
+            endOffset="2751"/>
     </incident>
 
     <incident
@@ -1176,12 +1176,12 @@
         message="Hardcoded string &quot;Generate my game status qr code&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="113"
+            line="106"
             column="9"
-            startOffset="4501"
-            endLine="113"
+            startOffset="4234"
+            endLine="106"
             endColumn="55"
-            endOffset="4547"/>
+            endOffset="4280"/>
     </incident>
 
     <incident
@@ -1190,12 +1190,12 @@
         message="Hardcoded string &quot;Edit Photo&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="138"
+            line="130"
             column="9"
-            startOffset="5514"
-            endLine="138"
+            startOffset="5208"
+            endLine="130"
             endColumn="34"
-            endOffset="5539"/>
+            endOffset="5233"/>
     </incident>
 
     <incident
