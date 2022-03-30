@@ -762,12 +762,12 @@
             replacement="layout_alignParentStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
-            line="14"
+            line="15"
             column="9"
-            startOffset="571"
-            endLine="14"
+            startOffset="617"
+            endLine="15"
             endColumn="39"
-            endOffset="601"/>
+            endOffset="647"/>
         <map>
             <entry
                 name="applies"
@@ -827,12 +827,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
-            line="25"
+            line="28"
             column="9"
-            startOffset="1012"
-            endLine="25"
+            startOffset="1145"
+            endLine="28"
             endColumn="34"
-            endOffset="1037"/>
+            endOffset="1170"/>
         <map>
             <entry
                 name="applies"
@@ -850,12 +850,12 @@
             replacement="layout_toEndOf"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
-            line="26"
+            line="24"
             column="9"
-            startOffset="1054"
-            endLine="26"
+            startOffset="959"
+            endLine="24"
             endColumn="33"
-            endOffset="1078"/>
+            endOffset="983"/>
         <map>
             <entry
                 name="applies"
@@ -873,12 +873,12 @@
             replacement="layout_alignParentEnd"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
-            line="51"
+            line="53"
             column="9"
-            startOffset="1936"
-            endLine="51"
+            startOffset="1961"
+            endLine="53"
             endColumn="40"
-            endOffset="1967"/>
+            endOffset="1992"/>
         <map>
             <entry
                 name="applies"
@@ -892,12 +892,12 @@
         message="When you define `paddingRight` you should probably also define `paddingLeft` for right-to-left symmetry">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
-            line="53"
+            line="55"
             column="9"
-            startOffset="2030"
-            endLine="53"
+            startOffset="2055"
+            endLine="55"
             endColumn="29"
-            endOffset="2050"/>
+            endOffset="2075"/>
         <map>
             <entry
                 name="applies"
@@ -915,12 +915,12 @@
             replacement="paddingEnd"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
-            line="53"
+            line="55"
             column="9"
-            startOffset="2030"
-            endLine="53"
+            startOffset="2055"
+            endLine="55"
             endColumn="29"
-            endOffset="2050"/>
+            endOffset="2075"/>
         <map>
             <entry
                 name="applies"

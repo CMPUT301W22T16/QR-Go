@@ -174,10 +174,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 1 error and 190 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 1 error and 189 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Wed Mar 30 20:22:21 UTC 2022      </nav>
+Check performed at Wed Mar 30 20:24:29 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -199,7 +199,7 @@ Check performed at Wed Mar 30 20:22:21 UTC 2022      </nav>
       <a class="mdl-navigation__link" href="#RedundantNamespace"><i class="material-icons warning-icon">warning</i>Redundant namespace (2)</a>
       <a class="mdl-navigation__link" href="#TextFields"><i class="material-icons warning-icon">warning</i>Missing <code>inputType</code> (1)</a>
       <a class="mdl-navigation__link" href="#Autofill"><i class="material-icons warning-icon">warning</i>Use Autofill (4)</a>
-      <a class="mdl-navigation__link" href="#ContentDescription"><i class="material-icons warning-icon">warning</i>Image without <code>contentDescription</code> (8)</a>
+      <a class="mdl-navigation__link" href="#ContentDescription"><i class="material-icons warning-icon">warning</i>Image without <code>contentDescription</code> (7)</a>
       <a class="mdl-navigation__link" href="#SetTextI18n"><i class="material-icons warning-icon">warning</i>TextView Internationalization (41)</a>
       <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (62)</a>
       <a class="mdl-navigation__link" href="#RtlSymmetry"><i class="material-icons warning-icon">warning</i>Padding and margin symmetry (5)</a>
@@ -271,7 +271,7 @@ Check performed at Wed Mar 30 20:22:21 UTC 2022      </nav>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Accessibility">Accessibility</a>
 </td></tr>
 <tr>
-<td class="countColumn">8</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">7</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#ContentDescription">ContentDescription</a>: Image without <code>contentDescription</code></td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Internationalization">Internationalization</a>
 </td></tr>
@@ -768,23 +768,24 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MapsActivity.java">../../src/main/java/com/example/qr_go/activities/MapsActivity.java</a>:50</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>FirebaseFirestore</code> which has field <code>context</code> pointing to <code>Context</code>); this is a memory leak</span><br /><pre class="errorlines">
-<span class="lineno">  47 </span>    <span class="keyword">private</span> GoogleMap mMap;
-<span class="lineno">  48 </span>    <span class="keyword">private</span> <span class="keyword">static</span> String currentUUID; <span class="comment">// userId singleton</span>
-<span class="lineno">  49 </span>    <span class="keyword">private</span> <span class="keyword">static</span> String userPassword; <span class="comment">// password singleton</span>
-<span class="caretline"><span class="lineno">  50 </span>    <span class="keyword">public</span> <span class="warning"><span class="keyword">static</span></span> FirebaseFirestore db; <span class="comment">// database singleton</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  51 </span>    <span class="keyword">private</span> <span class="keyword">static</span> SharedPreferences sharedPrefs;
-<span class="lineno">  52 </span>    <span class="keyword">protected</span> LocationManager locationManager;
-<span class="lineno">  53 </span>    <span class="keyword">protected</span> Location userLocation;
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MapsActivity.java">../../src/main/java/com/example/qr_go/activities/MapsActivity.java</a>:51</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>FirebaseFirestore</code> which has field <code>context</code> pointing to <code>Context</code>); this is a memory leak</span><br /><pre class="errorlines">
+<span class="lineno">  48 </span>    <span class="keyword">private</span> GoogleMap mMap;
+<span class="lineno">  49 </span>    <span class="keyword">private</span> <span class="keyword">static</span> String currentUUID; <span class="comment">// userId singleton</span>
+<span class="lineno">  50 </span>    <span class="keyword">private</span> <span class="keyword">static</span> String userPassword; <span class="comment">// password singleton</span>
+<span class="caretline"><span class="lineno">  51 </span>    <span class="keyword">public</span> <span class="warning"><span class="keyword">static</span></span> FirebaseFirestore db; <span class="comment">// database singleton</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  52 </span>    <span class="keyword">public</span> <span class="keyword">static</span> FirebaseStorage storage;
+<span class="lineno">  53 </span>    <span class="keyword">private</span> <span class="keyword">static</span> SharedPreferences sharedPrefs;
+<span class="lineno">  54 </span>    <span class="keyword">protected</span> LocationManager locationManager;
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/PlayerProfileActivity.java">../../src/main/java/com/example/qr_go/activities/PlayerProfileActivity.java</a>:47</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>FirebaseFirestore</code> which has field <code>context</code> pointing to <code>Context</code>); this is a memory leak</span><br /><pre class="errorlines">
-<span class="lineno">  44 </span><span class="annotation">@RequiresApi</span>(api = Build.VERSION_CODES.O)
-<span class="lineno">  45 </span><span class="keyword">public</span> <span class="keyword">class</span> PlayerProfileActivity <span class="keyword">extends</span> BaseActivity {
-<span class="lineno">  46 </span>
-<span class="caretline"><span class="lineno">  47 </span>    <span class="keyword">public</span> <span class="warning"><span class="keyword">static</span></span> FirebaseFirestore db;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  48 </span>    <span class="keyword">private</span> Player currentUser = <span class="keyword">new</span> Player();
-<span class="lineno">  49 </span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> GET_FROM_GALLERY = <span class="number">3</span>;
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/PlayerProfileActivity.java">../../src/main/java/com/example/qr_go/activities/PlayerProfileActivity.java</a>:48</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>FirebaseFirestore</code> which has field <code>context</code> pointing to <code>Context</code>); this is a memory leak</span><br /><pre class="errorlines">
+<span class="lineno">  45 </span><span class="annotation">@RequiresApi</span>(api = Build.VERSION_CODES.O)
+<span class="lineno">  46 </span><span class="keyword">public</span> <span class="keyword">class</span> PlayerProfileActivity <span class="keyword">extends</span> BaseActivity {
+<span class="lineno">  47 </span>    <span class="keyword">public</span> StringUtil stringUtil = <span class="keyword">new</span> StringUtil();
+<span class="caretline"><span class="lineno">  48 </span>    <span class="keyword">public</span> <span class="warning"><span class="keyword">static</span></span> FirebaseFirestore db;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  49 </span>    <span class="keyword">private</span> Player currentUser = <span class="keyword">new</span> Player();
+<span class="lineno">  50 </span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> GET_FROM_GALLERY = <span class="number">3</span>;
+<span class="lineno">  51 </span>    <span class="keyword">public</span> FirebaseStorage storage;
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/activities/SearchActivity.java">../../src/main/java/com/example/qr_go/activities/SearchActivity.java</a>:69</span>: <span class="message">Do not place Android context classes in static fields; this is a memory leak</span><br /><pre class="errorlines">
@@ -1304,15 +1305,6 @@ Dismiss</button>            </div>
 <span class="lineno">  12 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"120dp"</span>
 <span class="lineno">  13 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"120dp"</span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/user_qr_list_content.xml">../../src/main/res/layout/user_qr_list_content.xml</a>:26</span>: <span class="message">Missing <code>contentDescription</code> attribute on image</span><br /><pre class="errorlines">
-<span class="lineno"> 23 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
-<span class="lineno"> 24 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"center|right"</span>
-<span class="lineno"> 25 </span>        />
-<span class="caretline"><span class="lineno"> 26 </span>    <span class="tag">&lt;</span><span class="warning"><span class="tag">ImageView</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
-</span><span class="lineno"> 27 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/trash_button"</span>
-<span class="lineno"> 28 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 29 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span></pre>
-
 </div>
 <div class="metadata"><div class="explanation" id="explanationContentDescription" style="display: none;">
 Non-textual widgets like ImageViews and ImageButtons should use the <code>contentDescription</code> attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.<br/>
@@ -1356,106 +1348,106 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java</a>:90</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno">  87 </span>      qrDisplays.add(qrToDisplay);
-<span class="lineno">  88 </span>  }
-<span class="lineno">  89 </span>  playernameText.setText(selectedPlayer.getUsername());
-<span class="caretline"><span class="lineno">  90 </span>  highestScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getHighestUniqueScore())</span>);</span>
-<span class="lineno">  91 </span>  lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
-<span class="lineno">  92 </span>  qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
-<span class="lineno">  93 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java</a>:74</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
+<span class="lineno">  71 </span>      selectedPlayer = document.toObject(Player.<span class="keyword">class</span>);
+<span class="lineno">  72 </span>  }
+<span class="lineno">  73 </span>  playernameText.setText(selectedPlayer.getUsername());
+<span class="caretline"><span class="lineno">  74 </span>  highestScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getHighestUniqueScore())</span>);</span>
+<span class="lineno">  75 </span>  lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
+<span class="lineno">  76 </span>  qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
+<span class="lineno">  77 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java</a>:91</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno">  88 </span>  }
-<span class="lineno">  89 </span>  playernameText.setText(selectedPlayer.getUsername());
-<span class="lineno">  90 </span>  highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
-<span class="caretline"><span class="lineno">  91 </span>  lowestScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getLowestUniqueScore())</span>);</span>
-<span class="lineno">  92 </span>  qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
-<span class="lineno">  93 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
-<span class="lineno">  94 </span>  highestQRCode = selectedPlayer.getHighestQRCode();
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java</a>:75</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
+<span class="lineno">  72 </span>  }
+<span class="lineno">  73 </span>  playernameText.setText(selectedPlayer.getUsername());
+<span class="lineno">  74 </span>  highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
+<span class="caretline"><span class="lineno">  75 </span>  lowestScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getLowestUniqueScore())</span>);</span>
+<span class="lineno">  76 </span>  qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
+<span class="lineno">  77 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
+<span class="lineno">  78 </span>  highestQRCode = selectedPlayer.getHighestQRCode();
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java</a>:92</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno">  89 </span>  playernameText.setText(selectedPlayer.getUsername());
-<span class="lineno">  90 </span>  highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
-<span class="lineno">  91 </span>  lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
-<span class="caretline"><span class="lineno">  92 </span>  qrNumText.setText(<span class="warning">Integer.toString(selectedPlayer.getScannedQRCodeIds().size())</span>);</span>
-<span class="lineno">  93 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
-<span class="lineno">  94 </span>  highestQRCode = selectedPlayer.getHighestQRCode();
-<span class="lineno">  95 </span>  highestScoreQrIDText.setText(highestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java</a>:76</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
+<span class="lineno">  73 </span>  playernameText.setText(selectedPlayer.getUsername());
+<span class="lineno">  74 </span>  highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
+<span class="lineno">  75 </span>  lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
+<span class="caretline"><span class="lineno">  76 </span>  qrNumText.setText(<span class="warning">Integer.toString(selectedPlayer.getScannedQRCodeIds().size())</span>);</span>
+<span class="lineno">  77 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
+<span class="lineno">  78 </span>  highestQRCode = selectedPlayer.getHighestQRCode();
+<span class="lineno">  79 </span>  highestScoreQrIDText.setText(highestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java</a>:93</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno">  90 </span>  highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
-<span class="lineno">  91 </span>  lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
-<span class="lineno">  92 </span>  qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
-<span class="caretline"><span class="lineno">  93 </span>  totalScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getTotalScore())</span>);</span>
-<span class="lineno">  94 </span>  highestQRCode = selectedPlayer.getHighestQRCode();
-<span class="lineno">  95 </span>  highestScoreQrIDText.setText(highestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
-<span class="lineno">  96 </span>  highestScoreQrScoreText.setText(<span class="string">"Score: "</span> + highestQRCode.getValue().toString());
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java</a>:77</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
+<span class="lineno">  74 </span>  highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
+<span class="lineno">  75 </span>  lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
+<span class="lineno">  76 </span>  qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
+<span class="caretline"><span class="lineno">  77 </span>  totalScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getTotalScore())</span>);</span>
+<span class="lineno">  78 </span>  highestQRCode = selectedPlayer.getHighestQRCode();
+<span class="lineno">  79 </span>  highestScoreQrIDText.setText(highestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
+<span class="lineno">  80 </span>  highestScoreQrScoreText.setText(<span class="string">"Score: "</span> + highestQRCode.getValue().toString());
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java</a>:96</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno">  93 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
-<span class="lineno">  94 </span>  highestQRCode = selectedPlayer.getHighestQRCode();
-<span class="lineno">  95 </span>  highestScoreQrIDText.setText(highestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
-<span class="caretline"><span class="lineno">  96 </span>  highestScoreQrScoreText.setText(<span class="warning"><span class="string">"Score: "</span> + highestQRCode.getValue().toString()</span>);</span>
-<span class="lineno">  97 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
-<span class="lineno">  98 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
-<span class="lineno">  99 </span>  lowestScoreQrScoreText.setText(<span class="string">"Score: "</span> + lowestQRCode.getValue().toString());
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java</a>:80</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno">  77 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
+<span class="lineno">  78 </span>  highestQRCode = selectedPlayer.getHighestQRCode();
+<span class="lineno">  79 </span>  highestScoreQrIDText.setText(highestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
+<span class="caretline"><span class="lineno">  80 </span>  highestScoreQrScoreText.setText(<span class="warning"><span class="string">"Score: "</span> + highestQRCode.getValue().toString()</span>);</span>
+<span class="lineno">  81 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
+<span class="lineno">  82 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
+<span class="lineno">  83 </span>  lowestScoreQrScoreText.setText(<span class="string">"Score: "</span> + lowestQRCode.getValue().toString());
 </pre>
 
 <button class="mdl-button mdl-js-button mdl-button--primary" id="SetTextI18nDivLink" onclick="reveal('SetTextI18nDiv');" />+ 36 More Occurrences...</button>
 <div id="SetTextI18nDiv" style="display: none">
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java</a>:96</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno">  93 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
-<span class="lineno">  94 </span>  highestQRCode = selectedPlayer.getHighestQRCode();
-<span class="lineno">  95 </span>  highestScoreQrIDText.setText(highestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
-<span class="caretline"><span class="lineno">  96 </span>  highestScoreQrScoreText.setText(<span class="string">"Score: "</span> + <span class="warning">highestQRCode.getValue().toString()</span>);</span>
-<span class="lineno">  97 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
-<span class="lineno">  98 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
-<span class="lineno">  99 </span>  lowestScoreQrScoreText.setText(<span class="string">"Score: "</span> + lowestQRCode.getValue().toString());
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java</a>:80</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
+<span class="lineno">  77 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
+<span class="lineno">  78 </span>  highestQRCode = selectedPlayer.getHighestQRCode();
+<span class="lineno">  79 </span>  highestScoreQrIDText.setText(highestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
+<span class="caretline"><span class="lineno">  80 </span>  highestScoreQrScoreText.setText(<span class="string">"Score: "</span> + <span class="warning">highestQRCode.getValue().toString()</span>);</span>
+<span class="lineno">  81 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
+<span class="lineno">  82 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
+<span class="lineno">  83 </span>  lowestScoreQrScoreText.setText(<span class="string">"Score: "</span> + lowestQRCode.getValue().toString());
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java</a>:96</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
-<span class="lineno">  93 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
-<span class="lineno">  94 </span>  highestQRCode = selectedPlayer.getHighestQRCode();
-<span class="lineno">  95 </span>  highestScoreQrIDText.setText(highestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
-<span class="caretline"><span class="lineno">  96 </span>  highestScoreQrScoreText.setText(<span class="warning"><span class="string">"Score: "</span></span> + highestQRCode.getValue().toString());</span>
-<span class="lineno">  97 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
-<span class="lineno">  98 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
-<span class="lineno">  99 </span>  lowestScoreQrScoreText.setText(<span class="string">"Score: "</span> + lowestQRCode.getValue().toString());
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java</a>:80</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
+<span class="lineno">  77 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
+<span class="lineno">  78 </span>  highestQRCode = selectedPlayer.getHighestQRCode();
+<span class="lineno">  79 </span>  highestScoreQrIDText.setText(highestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
+<span class="caretline"><span class="lineno">  80 </span>  highestScoreQrScoreText.setText(<span class="warning"><span class="string">"Score: "</span></span> + highestQRCode.getValue().toString());</span>
+<span class="lineno">  81 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
+<span class="lineno">  82 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
+<span class="lineno">  83 </span>  lowestScoreQrScoreText.setText(<span class="string">"Score: "</span> + lowestQRCode.getValue().toString());
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java</a>:99</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno">  96 </span>  highestScoreQrScoreText.setText(<span class="string">"Score: "</span> + highestQRCode.getValue().toString());
-<span class="lineno">  97 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
-<span class="lineno">  98 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
-<span class="caretline"><span class="lineno">  99 </span>  lowestScoreQrScoreText.setText(<span class="warning"><span class="string">"Score: "</span> + lowestQRCode.getValue().toString()</span>);</span>
-<span class="lineno"> 100 </span>
-<span class="lineno"> 101 </span>  <span class="comment">// dont have a listener if no QR codes are available</span>
-<span class="lineno"> 102 </span>  <span class="keyword">if</span> (highestQRCode.getValue() != <span class="number">0</span>) {
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java</a>:83</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno">  80 </span>  highestScoreQrScoreText.setText(<span class="string">"Score: "</span> + highestQRCode.getValue().toString());
+<span class="lineno">  81 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
+<span class="lineno">  82 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
+<span class="caretline"><span class="lineno">  83 </span>  lowestScoreQrScoreText.setText(<span class="warning"><span class="string">"Score: "</span> + lowestQRCode.getValue().toString()</span>);</span>
+<span class="lineno">  84 </span>
+<span class="lineno">  85 </span>  <span class="comment">// dont have a listener if no QR codes are available</span>
+<span class="lineno">  86 </span>  <span class="keyword">if</span> (highestQRCode.getValue() != <span class="number">0</span>) {
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java</a>:99</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno">  96 </span>  highestScoreQrScoreText.setText(<span class="string">"Score: "</span> + highestQRCode.getValue().toString());
-<span class="lineno">  97 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
-<span class="lineno">  98 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
-<span class="caretline"><span class="lineno">  99 </span>  lowestScoreQrScoreText.setText(<span class="string">"Score: "</span> + <span class="warning">lowestQRCode.getValue().toString()</span>);</span>
-<span class="lineno"> 100 </span>
-<span class="lineno"> 101 </span>  <span class="comment">// dont have a listener if no QR codes are available</span>
-<span class="lineno"> 102 </span>  <span class="keyword">if</span> (highestQRCode.getValue() != <span class="number">0</span>) {
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java</a>:83</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
+<span class="lineno">  80 </span>  highestScoreQrScoreText.setText(<span class="string">"Score: "</span> + highestQRCode.getValue().toString());
+<span class="lineno">  81 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
+<span class="lineno">  82 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
+<span class="caretline"><span class="lineno">  83 </span>  lowestScoreQrScoreText.setText(<span class="string">"Score: "</span> + <span class="warning">lowestQRCode.getValue().toString()</span>);</span>
+<span class="lineno">  84 </span>
+<span class="lineno">  85 </span>  <span class="comment">// dont have a listener if no QR codes are available</span>
+<span class="lineno">  86 </span>  <span class="keyword">if</span> (highestQRCode.getValue() != <span class="number">0</span>) {
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java</a>:99</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
-<span class="lineno">  96 </span>  highestScoreQrScoreText.setText(<span class="string">"Score: "</span> + highestQRCode.getValue().toString());
-<span class="lineno">  97 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
-<span class="lineno">  98 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
-<span class="caretline"><span class="lineno">  99 </span>  lowestScoreQrScoreText.setText(<span class="warning"><span class="string">"Score: "</span></span> + lowestQRCode.getValue().toString());</span>
-<span class="lineno"> 100 </span>
-<span class="lineno"> 101 </span>  <span class="comment">// dont have a listener if no QR codes are available</span>
-<span class="lineno"> 102 </span>  <span class="keyword">if</span> (highestQRCode.getValue() != <span class="number">0</span>) {
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java</a>:83</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
+<span class="lineno">  80 </span>  highestScoreQrScoreText.setText(<span class="string">"Score: "</span> + highestQRCode.getValue().toString());
+<span class="lineno">  81 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
+<span class="lineno">  82 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
+<span class="caretline"><span class="lineno">  83 </span>  lowestScoreQrScoreText.setText(<span class="warning"><span class="string">"Score: "</span></span> + lowestQRCode.getValue().toString());</span>
+<span class="lineno">  84 </span>
+<span class="lineno">  85 </span>  <span class="comment">// dont have a listener if no QR codes are available</span>
+<span class="lineno">  86 </span>  <span class="keyword">if</span> (highestQRCode.getValue() != <span class="number">0</span>) {
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java</a>:112</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
@@ -2304,23 +2296,23 @@ Dismiss</button>            </div>
 <div class="issue">
 <div class="warningslist">
 <span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:17</span>: <span class="message">When you define <code>paddingRight</code> you should probably also define <code>paddingLeft</code> for right-to-left symmetry</span><br /><pre class="errorlines">
-<span class="lineno"> 14 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span>=<span class="value">"true"</span>
-<span class="lineno"> 15 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
-<span class="lineno"> 16 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginVertical</span>=<span class="value">"15dp"</span>
+<span class="lineno"> 14 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginVertical</span>=<span class="value">"15dp"</span>
+<span class="lineno"> 15 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span>=<span class="value">"true"</span>
+<span class="lineno"> 16 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
 <span class="caretline"><span class="lineno"> 17 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"10dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 18 </span>        <span class="prefix">android:</span><span class="attribute">src</span>=<span class="value">"@drawable/round_qr_code_scanner_24"</span> />
+<span class="lineno"> 18 </span>        <span class="prefix">android:</span><span class="attribute">src</span>=<span class="value">"@drawable/round_qr_code_scanner_24"</span>/>
 <span class="lineno"> 19 </span>
 <span class="lineno"> 20 </span>    <span class="tag">&lt;LinearLayout</span><span class="attribute">
 </span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:53</span>: <span class="message">When you define <code>paddingRight</code> you should probably also define <code>paddingLeft</code> for right-to-left symmetry</span><br /><pre class="errorlines">
-<span class="lineno"> 50 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 51 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span>=<span class="value">"true"</span>
-<span class="lineno"> 52 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
-<span class="caretline"><span class="lineno"> 53 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"0dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 54 </span>        <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
-<span class="lineno"> 55 </span>        <span class="prefix">app:</span><span class="attribute">icon</span>=<span class="value">"@drawable/ic_baseline_delete_24"</span>
-<span class="lineno"> 56 </span>        <span class="prefix">app:</span><span class="attribute">iconSize</span>=<span class="value">"30dp"</span> />
+<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:55</span>: <span class="message">When you define <code>paddingRight</code> you should probably also define <code>paddingLeft</code> for right-to-left symmetry</span><br /><pre class="errorlines">
+<span class="lineno"> 52 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 53 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span>=<span class="value">"true"</span>
+<span class="lineno"> 54 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
+<span class="caretline"><span class="lineno"> 55 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"0dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 56 </span>        <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
+<span class="lineno"> 57 </span>        <span class="prefix">app:</span><span class="attribute">icon</span>=<span class="value">"@drawable/ic_baseline_delete_24"</span>
+<span class="lineno"> 58 </span>        <span class="prefix">app:</span><span class="attribute">iconSize</span>=<span class="value">"30dp"</span> />
 </pre>
 
 <span class="location"><a href="../../src/main/res/layout/qr_search_spinner_item.xml">../../src/main/res/layout/qr_search_spinner_item.xml</a>:14</span>: <span class="message">When you define <code>paddingRight</code> you should probably also define <code>paddingLeft</code> for right-to-left symmetry</span><br /><pre class="errorlines">
@@ -2551,64 +2543,64 @@ Dismiss</button>            </div>
 <span class="lineno">  50 </span>    <span class="tag">&lt;/RelativeLayout></span>
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:14</span>: <span class="message">Consider replacing <code>android:layout_alignParentLeft</code> with <code>android:layout_alignParentStart="true"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 11 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/qr_picture"</span>
-<span class="lineno"> 12 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"60dp"</span>
-<span class="lineno"> 13 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"60dp"</span>
-<span class="caretline"><span class="lineno"> 14 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span></span>=<span class="value">"true"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 15 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
-<span class="lineno"> 16 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginVertical</span>=<span class="value">"15dp"</span>
+<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:15</span>: <span class="message">Consider replacing <code>android:layout_alignParentLeft</code> with <code>android:layout_alignParentStart="true"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 12 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"60dp"</span>
+<span class="lineno"> 13 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"60dp"</span>
+<span class="lineno"> 14 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginVertical</span>=<span class="value">"15dp"</span>
+<span class="caretline"><span class="lineno"> 15 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span></span>=<span class="value">"true"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 16 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
 <span class="lineno"> 17 </span>        <span class="prefix">android:</span><span class="attribute">paddingRight</span>=<span class="value">"10dp"</span>
+<span class="lineno"> 18 </span>        <span class="prefix">android:</span><span class="attribute">src</span>=<span class="value">"@drawable/round_qr_code_scanner_24"</span>/>
 </pre>
 
 <span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:17</span>: <span class="message">Consider replacing <code>android:paddingRight</code> with <code>android:paddingEnd="10dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 14 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span>=<span class="value">"true"</span>
-<span class="lineno"> 15 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
-<span class="lineno"> 16 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginVertical</span>=<span class="value">"15dp"</span>
+<span class="lineno"> 14 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginVertical</span>=<span class="value">"15dp"</span>
+<span class="lineno"> 15 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span>=<span class="value">"true"</span>
+<span class="lineno"> 16 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
 <span class="caretline"><span class="lineno"> 17 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"10dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 18 </span>        <span class="prefix">android:</span><span class="attribute">src</span>=<span class="value">"@drawable/round_qr_code_scanner_24"</span> />
+<span class="lineno"> 18 </span>        <span class="prefix">android:</span><span class="attribute">src</span>=<span class="value">"@drawable/round_qr_code_scanner_24"</span>/>
 <span class="lineno"> 19 </span>
 <span class="lineno"> 20 </span>    <span class="tag">&lt;LinearLayout</span><span class="attribute">
 </span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:25</span>: <span class="message">Consider replacing <code>android:layout_marginLeft</code> with <code>android:layout_marginStart="10dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 22 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 23 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
-<span class="lineno"> 24 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginVertical</span>=<span class="value">"15dp"</span>
-<span class="caretline"><span class="lineno"> 25 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginLeft</span></span>=<span class="value">"10dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 26 </span>        <span class="prefix">android:</span><span class="attribute">layout_toRightOf</span>=<span class="value">"@id/qr_picture"</span>
+<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:24</span>: <span class="message">Consider replacing <code>android:layout_toRightOf</code> with <code>android:layout_toEndOf="@id/qr_picture"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 21 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 22 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"match_parent"</span>
+<span class="lineno"> 23 </span>        <span class="prefix">android:</span><span class="attribute">orientation</span>=<span class="value">"vertical"</span>
+<span class="caretline"><span class="lineno"> 24 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_toRightOf</span></span>=<span class="value">"@id/qr_picture"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 25 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
+<span class="lineno"> 26 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginVertical</span>=<span class="value">"15dp"</span>
 <span class="lineno"> 27 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"center_vertical"</span>
-<span class="lineno"> 28 </span>        <span class="prefix">android:</span><span class="attribute">orientation</span>=<span class="value">"vertical"</span>>
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:26</span>: <span class="message">Consider replacing <code>android:layout_toRightOf</code> with <code>android:layout_toEndOf="@id/qr_picture"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 23 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
-<span class="lineno"> 24 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginVertical</span>=<span class="value">"15dp"</span>
-<span class="lineno"> 25 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginLeft</span>=<span class="value">"10dp"</span>
-<span class="caretline"><span class="lineno"> 26 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_toRightOf</span></span>=<span class="value">"@id/qr_picture"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:28</span>: <span class="message">Consider replacing <code>android:layout_marginLeft</code> with <code>android:layout_marginStart="10dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 25 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
+<span class="lineno"> 26 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginVertical</span>=<span class="value">"15dp"</span>
 <span class="lineno"> 27 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"center_vertical"</span>
-<span class="lineno"> 28 </span>        <span class="prefix">android:</span><span class="attribute">orientation</span>=<span class="value">"vertical"</span>>
+<span class="caretline"><span class="lineno"> 28 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginLeft</span></span>=<span class="value">"10dp"</span>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno"> 29 </span>
+<span class="lineno"> 30 </span>        <span class="tag">&lt;TextView</span><span class="attribute">
+</span><span class="lineno"> 31 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/qr_id_view"</span>
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:51</span>: <span class="message">Consider replacing <code>android:layout_alignParentRight</code> with <code>android:layout_alignParentEnd="true"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 48 </span>        <span class="attribute">style</span>=<span class="value">"@style/Widget.Material3.Button.IconButton"</span>
-<span class="lineno"> 49 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 50 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 51 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span></span>=<span class="value">"true"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 52 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
-<span class="lineno"> 53 </span>        <span class="prefix">android:</span><span class="attribute">paddingRight</span>=<span class="value">"0dp"</span>
-<span class="lineno"> 54 </span>        <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
+<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:53</span>: <span class="message">Consider replacing <code>android:layout_alignParentRight</code> with <code>android:layout_alignParentEnd="true"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 50 </span>        <span class="attribute">style</span>=<span class="value">"@style/Widget.Material3.Button.IconButton"</span>
+<span class="lineno"> 51 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 52 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 53 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span></span>=<span class="value">"true"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 54 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
+<span class="lineno"> 55 </span>        <span class="prefix">android:</span><span class="attribute">paddingRight</span>=<span class="value">"0dp"</span>
+<span class="lineno"> 56 </span>        <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:53</span>: <span class="message">Consider replacing <code>android:paddingRight</code> with <code>android:paddingEnd="0dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 50 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 51 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span>=<span class="value">"true"</span>
-<span class="lineno"> 52 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
-<span class="caretline"><span class="lineno"> 53 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"0dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 54 </span>        <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
-<span class="lineno"> 55 </span>        <span class="prefix">app:</span><span class="attribute">icon</span>=<span class="value">"@drawable/ic_baseline_delete_24"</span>
-<span class="lineno"> 56 </span>        <span class="prefix">app:</span><span class="attribute">iconSize</span>=<span class="value">"30dp"</span> />
+<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:55</span>: <span class="message">Consider replacing <code>android:paddingRight</code> with <code>android:paddingEnd="0dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 52 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 53 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span>=<span class="value">"true"</span>
+<span class="lineno"> 54 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
+<span class="caretline"><span class="lineno"> 55 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"0dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 56 </span>        <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
+<span class="lineno"> 57 </span>        <span class="prefix">app:</span><span class="attribute">icon</span>=<span class="value">"@drawable/ic_baseline_delete_24"</span>
+<span class="lineno"> 58 </span>        <span class="prefix">app:</span><span class="attribute">iconSize</span>=<span class="value">"30dp"</span> />
 </pre>
 
 <span class="location"><a href="../../src/main/res/layout/qr_search_spinner_item.xml">../../src/main/res/layout/qr_search_spinner_item.xml</a>:14</span>: <span class="message">Consider replacing <code>android:paddingRight</code> with <code>android:paddingEnd="10dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
@@ -2714,8 +2706,8 @@ Dismiss</button>            </div>
 <span class="lineno"> 23 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
 <span class="caretline"><span class="lineno"> 24 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"</span><span class="warning"><span class="value">center|right</span></span><span class="value">"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno"> 25 </span>        />
-<span class="lineno"> 26 </span>    <span class="tag">&lt;ImageView</span><span class="attribute">
-</span><span class="lineno"> 27 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/trash_button"</span></pre>
+<span class="lineno"> 26 </span>
+<span class="lineno"> 27 </span><span class="tag">&lt;/LinearLayout></span></pre>
 
 </div>
 </div>
