@@ -1,7 +1,6 @@
 package com.example.qr_go.objects;
 import android.location.Address;
 
-
 public class GeoLocation {
     /**
      * Class for GeoLocation, contains location data such as address, latitude, longitude, and the
@@ -19,6 +18,9 @@ public class GeoLocation {
     public GeoLocation(String locatedQRId) {
 
         this.locatedQRId = locatedQRId;
+    }
+    public GeoLocation() {
+
     }
 
     public Address getAddress() {

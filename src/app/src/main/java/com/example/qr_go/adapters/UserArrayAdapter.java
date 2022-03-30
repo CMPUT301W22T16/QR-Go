@@ -40,14 +40,22 @@ public class UserArrayAdapter extends ArrayAdapter<UserListDisplayContainer> imp
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View view = convertView;
         UserListDisplayContainer userToDisplay = userDisplays.get(position);
+        String usernameDisplay;
 
         if(view == null) {
             view = LayoutInflater.from(context).inflate(R.layout.user_list_content, parent, false);
         }
 
+        if (userToDisplay.getUsername().length() > 15) {
+            usernameDisplay = userToDisplay.getUsername().substring(0, 15) + "...";
+        } else {
+            usernameDisplay = userToDisplay.getUsername();
+        }
+
         Button delButton = (Button) view.findViewById(R.id.user_del_button);
         TextView usernameView = view.findViewById(R.id.username_view);
         TextView scoreView = view.findViewById(R.id.user_score_view);
+        TextView rankView = view.findViewById(R.id.user_rank_view);
 
         // Show the delete button if the current user is an owner and the listed user is not an
         // owner
@@ -73,10 +81,11 @@ public class UserArrayAdapter extends ArrayAdapter<UserListDisplayContainer> imp
         }
 
         Integer userRank = userToDisplay.getRankPosition();
+        rankView.setText(String.valueOf(userRank) + "|");
         if (userToDisplay.getIsCurrentUser()) {
-            usernameView.setText(String.valueOf(userRank) + "| " + userToDisplay.getUsername() + " (you)");
+            usernameView.setText(usernameDisplay + " (you)");
         } else {
-            usernameView.setText(String.valueOf(userRank) + "| " + userToDisplay.getUsername());
+            usernameView.setText(usernameDisplay);
         }
         scoreView.setText(userToDisplay.getTotalScore().toString());
         switch(sortPos) {
