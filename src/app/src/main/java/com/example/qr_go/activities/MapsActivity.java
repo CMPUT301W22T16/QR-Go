@@ -171,7 +171,8 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback, Go
     @Override
     public void onInfoWindowClick(Marker marker) {
         Intent intent = new Intent(this, QRInfoActivity.class);
-        intent.putExtra("QRid", (String) marker.getTag());
+        String markerQrId = (String) marker.getTag();
+        intent.putExtra("QRid", markerQrId);
         startActivity(intent);
     }
 

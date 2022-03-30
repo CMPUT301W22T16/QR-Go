@@ -15,6 +15,7 @@ public class GeoLocation {
     private Long score;
     private Address address;
     private String locatedQRId;
+
     public GeoLocation(String locatedQRId) {
 
         this.locatedQRId = locatedQRId;
