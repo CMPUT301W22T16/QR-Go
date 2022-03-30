@@ -177,7 +177,7 @@ document.getElementById(id).style.display = 'none';
       <span class="mdl-layout-title">Lint Report: 1 error and 189 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Wed Mar 30 20:16:00 UTC 2022      </nav>
+Check performed at Wed Mar 30 20:17:22 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -768,23 +768,24 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MapsActivity.java">../../src/main/java/com/example/qr_go/activities/MapsActivity.java</a>:50</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>FirebaseFirestore</code> which has field <code>context</code> pointing to <code>Context</code>); this is a memory leak</span><br /><pre class="errorlines">
-<span class="lineno">  47 </span>    <span class="keyword">private</span> GoogleMap mMap;
-<span class="lineno">  48 </span>    <span class="keyword">private</span> <span class="keyword">static</span> String currentUUID; <span class="comment">// userId singleton</span>
-<span class="lineno">  49 </span>    <span class="keyword">private</span> <span class="keyword">static</span> String userPassword; <span class="comment">// password singleton</span>
-<span class="caretline"><span class="lineno">  50 </span>    <span class="keyword">public</span> <span class="warning"><span class="keyword">static</span></span> FirebaseFirestore db; <span class="comment">// database singleton</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  51 </span>    <span class="keyword">private</span> <span class="keyword">static</span> SharedPreferences sharedPrefs;
-<span class="lineno">  52 </span>    <span class="keyword">protected</span> LocationManager locationManager;
-<span class="lineno">  53 </span>    <span class="keyword">protected</span> Location userLocation;
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MapsActivity.java">../../src/main/java/com/example/qr_go/activities/MapsActivity.java</a>:51</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>FirebaseFirestore</code> which has field <code>context</code> pointing to <code>Context</code>); this is a memory leak</span><br /><pre class="errorlines">
+<span class="lineno">  48 </span>    <span class="keyword">private</span> GoogleMap mMap;
+<span class="lineno">  49 </span>    <span class="keyword">private</span> <span class="keyword">static</span> String currentUUID; <span class="comment">// userId singleton</span>
+<span class="lineno">  50 </span>    <span class="keyword">private</span> <span class="keyword">static</span> String userPassword; <span class="comment">// password singleton</span>
+<span class="caretline"><span class="lineno">  51 </span>    <span class="keyword">public</span> <span class="warning"><span class="keyword">static</span></span> FirebaseFirestore db; <span class="comment">// database singleton</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  52 </span>    <span class="keyword">public</span> <span class="keyword">static</span> FirebaseStorage storage;
+<span class="lineno">  53 </span>    <span class="keyword">private</span> <span class="keyword">static</span> SharedPreferences sharedPrefs;
+<span class="lineno">  54 </span>    <span class="keyword">protected</span> LocationManager locationManager;
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/PlayerProfileActivity.java">../../src/main/java/com/example/qr_go/activities/PlayerProfileActivity.java</a>:47</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>FirebaseFirestore</code> which has field <code>context</code> pointing to <code>Context</code>); this is a memory leak</span><br /><pre class="errorlines">
-<span class="lineno">  44 </span><span class="annotation">@RequiresApi</span>(api = Build.VERSION_CODES.O)
-<span class="lineno">  45 </span><span class="keyword">public</span> <span class="keyword">class</span> PlayerProfileActivity <span class="keyword">extends</span> BaseActivity {
-<span class="lineno">  46 </span>
-<span class="caretline"><span class="lineno">  47 </span>    <span class="keyword">public</span> <span class="warning"><span class="keyword">static</span></span> FirebaseFirestore db;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  48 </span>    <span class="keyword">private</span> Player currentUser = <span class="keyword">new</span> Player();
-<span class="lineno">  49 </span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> GET_FROM_GALLERY = <span class="number">3</span>;
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/PlayerProfileActivity.java">../../src/main/java/com/example/qr_go/activities/PlayerProfileActivity.java</a>:48</span>: <span class="message">Do not place Android context classes in static fields (static reference to <code>FirebaseFirestore</code> which has field <code>context</code> pointing to <code>Context</code>); this is a memory leak</span><br /><pre class="errorlines">
+<span class="lineno">  45 </span><span class="annotation">@RequiresApi</span>(api = Build.VERSION_CODES.O)
+<span class="lineno">  46 </span><span class="keyword">public</span> <span class="keyword">class</span> PlayerProfileActivity <span class="keyword">extends</span> BaseActivity {
+<span class="lineno">  47 </span>    <span class="keyword">public</span> StringUtil stringUtil = <span class="keyword">new</span> StringUtil();
+<span class="caretline"><span class="lineno">  48 </span>    <span class="keyword">public</span> <span class="warning"><span class="keyword">static</span></span> FirebaseFirestore db;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  49 </span>    <span class="keyword">private</span> Player currentUser = <span class="keyword">new</span> Player();
+<span class="lineno">  50 </span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> GET_FROM_GALLERY = <span class="number">3</span>;
+<span class="lineno">  51 </span>    <span class="keyword">public</span> FirebaseStorage storage;
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/activities/SearchActivity.java">../../src/main/java/com/example/qr_go/activities/SearchActivity.java</a>:69</span>: <span class="message">Do not place Android context classes in static fields; this is a memory leak</span><br /><pre class="errorlines">
