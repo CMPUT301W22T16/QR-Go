@@ -741,12 +741,12 @@
         message="Use databinding or explicit wiring of click listener in code">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="136"
+            line="137"
             column="9"
-            startOffset="5434"
-            endLine="136"
+            startOffset="5473"
+            endLine="137"
             endColumn="43"
-            endOffset="5468"/>
+            endOffset="5507"/>
         <map>
             <condition minLT="23"/>
         </map>

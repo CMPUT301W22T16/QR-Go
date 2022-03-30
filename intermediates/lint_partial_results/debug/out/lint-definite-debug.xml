@@ -1190,12 +1190,12 @@
         message="Hardcoded string &quot;Edit Photo&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="137"
+            line="138"
             column="9"
-            startOffset="5477"
-            endLine="137"
+            startOffset="5516"
+            endLine="138"
             endColumn="34"
-            endOffset="5502"/>
+            endOffset="5541"/>
     </incident>
 
     <incident

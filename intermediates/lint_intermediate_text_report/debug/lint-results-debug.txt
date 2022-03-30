@@ -631,7 +631,7 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:113: Warning: Hardcoded string "Generate my game status qr code", should use @string resource [HardcodedText]
         android:text="Generate my game status qr code"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:137: Warning: Hardcoded string "Edit Photo", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:138: Warning: Hardcoded string "Edit Photo", should use @string resource [HardcodedText]
         android:text="Edit Photo"
         ~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:34: Warning: Hardcoded string "12345", should use @string resource [HardcodedText]
