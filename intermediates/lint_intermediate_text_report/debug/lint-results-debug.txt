@@ -20,7 +20,7 @@
 
    https://developer.android.com/reference/java/util/Locale.html#default_locale
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:75: Error: This view is not constrained horizontally: at runtime it will jump to the left unless you add a horizontal constraint [MissingConstraints]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:82: Error: This view is not constrained horizontally: at runtime it will jump to the left unless you add a horizontal constraint [MissingConstraints]
     <View
      ~~~~
 
@@ -239,10 +239,10 @@
    accidental leftovers from copy/pasting XML from other files or
    documentation.
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:27: Warning: The view name (@+id/player_email) suggests this is an e-mail address, but it does not include 'textEmail' in the inputType [TextFields]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:45: Warning: The view name (@+id/player_email) suggests this is an e-mail address, but it does not include 'textEmail' in the inputType [TextFields]
         android:inputType="textPersonName"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:22: id defined here
+    /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:40: id defined here
 
    Explanation for issues of type "TextFields":
    Providing an inputType attribute on a text field improves usability because
@@ -263,10 +263,10 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:32: Warning: Missing autofillHints attribute [Autofill]
         <EditText
          ~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:21: Warning: Missing autofillHints attribute [Autofill]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:27: Warning: Missing autofillHints attribute [Autofill]
     <EditText
      ~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:33: Warning: Missing autofillHints attribute [Autofill]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:39: Warning: Missing autofillHints attribute [Autofill]
     <EditText
      ~~~~~~~~
 
@@ -308,9 +308,9 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:9: Warning: Missing contentDescription attribute on image [ContentDescription]
     <ImageView
      ~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:10: Warning: Missing contentDescription attribute on image [ContentDescription]
-    <ImageView
-     ~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:20: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:26: Warning: Missing contentDescription attribute on image [ContentDescription]
     <ImageView
      ~~~~~~~~~
@@ -619,19 +619,19 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_users_content.xml:7: Warning: Hardcoded string "User Name", should use @string resource [HardcodedText]
     android:text="User Name"
     ~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:26: Warning: Hardcoded string "Email", should use @string resource [HardcodedText]
-        android:hint="Email"
-        ~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:38: Warning: Hardcoded string "Username", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:32: Warning: Hardcoded string "Username", should use @string resource [HardcodedText]
         android:hint="Username"
         ~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:68: Warning: Hardcoded string "Generate my login qr code", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:44: Warning: Hardcoded string "Email", should use @string resource [HardcodedText]
+        android:hint="Email"
+        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:75: Warning: Hardcoded string "Generate my login qr code", should use @string resource [HardcodedText]
         android:text="Generate my login qr code"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:106: Warning: Hardcoded string "Generate my game status qr code", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:113: Warning: Hardcoded string "Generate my game status qr code", should use @string resource [HardcodedText]
         android:text="Generate my game status qr code"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:130: Warning: Hardcoded string "Edit Photo", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:137: Warning: Hardcoded string "Edit Photo", should use @string resource [HardcodedText]
         android:text="Edit Photo"
         ~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:34: Warning: Hardcoded string "12345", should use @string resource [HardcodedText]
