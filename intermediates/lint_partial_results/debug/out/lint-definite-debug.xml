@@ -1549,12 +1549,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/QRInfoActivity.java"
-            line="95"
+            line="96"
             column="49"
-            startOffset="3533"
-            endLine="95"
+            startOffset="3576"
+            endLine="96"
             endColumn="80"
-            endOffset="3564"/>
+            endOffset="3607"/>
     </incident>
 
     <incident
@@ -1563,12 +1563,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/QRInfoActivity.java"
-            line="95"
+            line="96"
             column="49"
-            startOffset="3533"
-            endLine="95"
+            startOffset="3576"
+            endLine="96"
             endColumn="58"
-            endOffset="3542"/>
+            endOffset="3585"/>
     </incident>
 
     <incident
