@@ -4,7 +4,7 @@ package com.example.qr_go.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,13 +19,16 @@ import java.lang.String;
 
 public final class UserListContentBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
-
-  @NonNull
-  public final ShapeableImageView qrSearchOptionIcon;
+  private final RelativeLayout rootView;
 
   @NonNull
   public final MaterialButton userDelButton;
+
+  @NonNull
+  public final ShapeableImageView userPicture;
+
+  @NonNull
+  public final TextView userRankView;
 
   @NonNull
   public final TextView userScoreView;
@@ -33,19 +36,21 @@ public final class UserListContentBinding implements ViewBinding {
   @NonNull
   public final TextView usernameView;
 
-  private UserListContentBinding(@NonNull LinearLayout rootView,
-      @NonNull ShapeableImageView qrSearchOptionIcon, @NonNull MaterialButton userDelButton,
-      @NonNull TextView userScoreView, @NonNull TextView usernameView) {
+  private UserListContentBinding(@NonNull RelativeLayout rootView,
+      @NonNull MaterialButton userDelButton, @NonNull ShapeableImageView userPicture,
+      @NonNull TextView userRankView, @NonNull TextView userScoreView,
+      @NonNull TextView usernameView) {
     this.rootView = rootView;
-    this.qrSearchOptionIcon = qrSearchOptionIcon;
     this.userDelButton = userDelButton;
+    this.userPicture = userPicture;
+    this.userRankView = userRankView;
     this.userScoreView = userScoreView;
     this.usernameView = usernameView;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -70,15 +75,21 @@ public final class UserListContentBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.qr_search_option_icon;
-      ShapeableImageView qrSearchOptionIcon = ViewBindings.findChildViewById(rootView, id);
-      if (qrSearchOptionIcon == null) {
-        break missingId;
-      }
-
       id = R.id.user_del_button;
       MaterialButton userDelButton = ViewBindings.findChildViewById(rootView, id);
       if (userDelButton == null) {
+        break missingId;
+      }
+
+      id = R.id.user_picture;
+      ShapeableImageView userPicture = ViewBindings.findChildViewById(rootView, id);
+      if (userPicture == null) {
+        break missingId;
+      }
+
+      id = R.id.user_rank_view;
+      TextView userRankView = ViewBindings.findChildViewById(rootView, id);
+      if (userRankView == null) {
         break missingId;
       }
 
@@ -94,8 +105,8 @@ public final class UserListContentBinding implements ViewBinding {
         break missingId;
       }
 
-      return new UserListContentBinding((LinearLayout) rootView, qrSearchOptionIcon, userDelButton,
-          userScoreView, usernameView);
+      return new UserListContentBinding((RelativeLayout) rootView, userDelButton, userPicture,
+          userRankView, userScoreView, usernameView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

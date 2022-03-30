@@ -174,10 +174,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 1 error and 183 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 1 error and 186 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Wed Mar 30 00:33:29 UTC 2022      </nav>
+Check performed at Wed Mar 30 02:04:16 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -189,7 +189,7 @@ Check performed at Wed Mar 30 00:33:29 UTC 2022      </nav>
       <a class="mdl-navigation__link" href="#FragmentTagUsage"><i class="material-icons warning-icon">warning</i>Use FragmentContainerView instead of the &lt;fragment> tag (1)</a>
       <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (8)</a>
       <a class="mdl-navigation__link" href="#SpUsage"><i class="material-icons warning-icon">warning</i>Using <code>dp</code> instead of <code>sp</code> for text sizes (7)</a>
-      <a class="mdl-navigation__link" href="#ObsoleteLayoutParam"><i class="material-icons warning-icon">warning</i>Obsolete layout params (3)</a>
+      <a class="mdl-navigation__link" href="#ObsoleteLayoutParam"><i class="material-icons warning-icon">warning</i>Obsolete layout params (2)</a>
       <a class="mdl-navigation__link" href="#ObsoleteSdkInt"><i class="material-icons warning-icon">warning</i>Obsolete SDK_INT Version Check (2)</a>
       <a class="mdl-navigation__link" href="#StaticFieldLeak"><i class="material-icons warning-icon">warning</i>Static Field Leaks (4)</a>
       <a class="mdl-navigation__link" href="#MergeRootFrame"><i class="material-icons warning-icon">warning</i>FrameLayout can be replaced with <code>&lt;merge></code> tag (1)</a>
@@ -201,9 +201,9 @@ Check performed at Wed Mar 30 00:33:29 UTC 2022      </nav>
       <a class="mdl-navigation__link" href="#Autofill"><i class="material-icons warning-icon">warning</i>Use Autofill (4)</a>
       <a class="mdl-navigation__link" href="#ContentDescription"><i class="material-icons warning-icon">warning</i>Image without <code>contentDescription</code> (7)</a>
       <a class="mdl-navigation__link" href="#SetTextI18n"><i class="material-icons warning-icon">warning</i>TextView Internationalization (40)</a>
-      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (61)</a>
+      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (62)</a>
       <a class="mdl-navigation__link" href="#RtlSymmetry"><i class="material-icons warning-icon">warning</i>Padding and margin symmetry (5)</a>
-      <a class="mdl-navigation__link" href="#RtlHardcoded"><i class="material-icons warning-icon">warning</i>Using left/right instead of start/end attributes (29)</a>
+      <a class="mdl-navigation__link" href="#RtlHardcoded"><i class="material-icons warning-icon">warning</i>Using left/right instead of start/end attributes (32)</a>
       <a class="mdl-navigation__link" href="#IgnoreWithoutReason"><i class="material-icons warning-icon">warning</i>@Ignore without Reason (1)</a>
     </nav>
   </div>
@@ -237,7 +237,7 @@ Check performed at Wed Mar 30 00:33:29 UTC 2022      </nav>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Performance">Performance</a>
 </td></tr>
 <tr>
-<td class="countColumn">3</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#ObsoleteLayoutParam">ObsoleteLayoutParam</a>: Obsolete layout params</td></tr>
 <tr>
 <td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
@@ -279,7 +279,7 @@ Check performed at Wed Mar 30 00:33:29 UTC 2022      </nav>
 <td class="countColumn">40</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#SetTextI18n">SetTextI18n</a>: TextView Internationalization</td></tr>
 <tr>
-<td class="countColumn">61</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">62</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#HardcodedText">HardcodedText</a>: Hardcoded text</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Internationalization:Bidirectional Text">Internationalization:Bidirectional Text</a>
 </td></tr>
@@ -287,7 +287,7 @@ Check performed at Wed Mar 30 00:33:29 UTC 2022      </nav>
 <td class="countColumn">5</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#RtlSymmetry">RtlSymmetry</a>: Padding and margin symmetry</td></tr>
 <tr>
-<td class="countColumn">29</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">32</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#RtlHardcoded">RtlHardcoded</a>: Using left/right instead of start/end attributes</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Testing">Testing</a>
 </td></tr>
@@ -312,24 +312,24 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:112</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toLowerCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
-<span class="lineno"> 109 </span>            <span class="keyword">if</span> (constraint == <span class="keyword">null</span> || constraint.length() == <span class="number">0</span>) {
-<span class="lineno"> 110 </span>                filteredList.addAll(allUserDisplays);
-<span class="lineno"> 111 </span>            } <span class="keyword">else</span> {
-<span class="caretline"><span class="lineno"> 112 </span>                String filterPattern = constraint.toString().<span class="warning">toLowerCase</span>().trim();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 113 </span>
-<span class="lineno"> 114 </span>                <span class="keyword">for</span> (UserListDisplayContainer item : allUserDisplays) {
-<span class="lineno"> 115 </span>                    <span class="keyword">if</span> (item.getUsername().toLowerCase().contains(filterPattern)) {
+<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:121</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toLowerCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
+<span class="lineno"> 118 </span>            <span class="keyword">if</span> (constraint == <span class="keyword">null</span> || constraint.length() == <span class="number">0</span>) {
+<span class="lineno"> 119 </span>                filteredList.addAll(allUserDisplays);
+<span class="lineno"> 120 </span>            } <span class="keyword">else</span> {
+<span class="caretline"><span class="lineno"> 121 </span>                String filterPattern = constraint.toString().<span class="warning">toLowerCase</span>().trim();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 122 </span>
+<span class="lineno"> 123 </span>                <span class="keyword">for</span> (UserListDisplayContainer item : allUserDisplays) {
+<span class="lineno"> 124 </span>                    <span class="keyword">if</span> (item.getUsername().toLowerCase().contains(filterPattern)) {
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:115</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toLowerCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
-<span class="lineno"> 112 </span>               String filterPattern = constraint.toString().toLowerCase().trim();
-<span class="lineno"> 113 </span>
-<span class="lineno"> 114 </span>               <span class="keyword">for</span> (UserListDisplayContainer item : allUserDisplays) {
-<span class="caretline"><span class="lineno"> 115 </span>                   <span class="keyword">if</span> (item.getUsername().<span class="warning">toLowerCase</span>().contains(filterPattern)) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 116 </span>                       filteredList.add(item);
-<span class="lineno"> 117 </span>                   }
-<span class="lineno"> 118 </span>               }
+<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:124</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use <code>toLowerCase(Locale)</code> instead. For strings meant to be internal use <code>Locale.ROOT</code>, otherwise <code>Locale.getDefault()</code>.</span><br /><pre class="errorlines">
+<span class="lineno"> 121 </span>               String filterPattern = constraint.toString().toLowerCase().trim();
+<span class="lineno"> 122 </span>
+<span class="lineno"> 123 </span>               <span class="keyword">for</span> (UserListDisplayContainer item : allUserDisplays) {
+<span class="caretline"><span class="lineno"> 124 </span>                   <span class="keyword">if</span> (item.getUsername().<span class="warning">toLowerCase</span>().contains(filterPattern)) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 125 </span>                       filteredList.add(item);
+<span class="lineno"> 126 </span>                   }
+<span class="lineno"> 127 </span>               }
 </pre>
 
 </div>
@@ -691,24 +691,14 @@ Dismiss</button>            </div>
 <span class="lineno">  22 </span>            <span class="prefix">android:</span><span class="attribute">background</span>=<span class="value">"@null"</span>/>
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:41</span>: <span class="message">Invalid layout param in a <code>LinearLayout</code>: <code>layout_alignParentRight</code></span><br /><pre class="errorlines">
-<span class="lineno"> 38 </span>        <span class="attribute">style</span>=<span class="value">"@style/Widget.Material3.Button.IconButton"</span>
-<span class="lineno"> 39 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 40 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 41 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span>=<span class="value">"true"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 42 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"0"</span>
-<span class="lineno"> 43 </span>        <span class="prefix">android:</span><span class="attribute">paddingRight</span>=<span class="value">"0dp"</span>
-<span class="lineno"> 44 </span>        <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
-</pre>
-
-<span class="location"><a href="../../src/main/res/layout/user_list_content.xml">../../src/main/res/layout/user_list_content.xml</a>:41</span>: <span class="message">Invalid layout param in a <code>LinearLayout</code>: <code>layout_alignParentRight</code></span><br /><pre class="errorlines">
-<span class="lineno"> 38 </span>        <span class="attribute">style</span>=<span class="value">"@style/Widget.Material3.Button.IconButton"</span>
-<span class="lineno"> 39 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 40 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 41 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span>=<span class="value">"true"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 42 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"0"</span>
-<span class="lineno"> 43 </span>        <span class="prefix">android:</span><span class="attribute">paddingRight</span>=<span class="value">"0dp"</span>
-<span class="lineno"> 44 </span>        <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
+<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:42</span>: <span class="message">Invalid layout param in a <code>LinearLayout</code>: <code>layout_alignParentRight</code></span><br /><pre class="errorlines">
+<span class="lineno"> 39 </span>        <span class="attribute">style</span>=<span class="value">"@style/Widget.Material3.Button.IconButton"</span>
+<span class="lineno"> 40 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 41 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 42 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span>=<span class="value">"true"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 43 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"0"</span>
+<span class="lineno"> 44 </span>        <span class="prefix">android:</span><span class="attribute">paddingRight</span>=<span class="value">"0dp"</span>
+<span class="lineno"> 45 </span>        <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
 </pre>
 
 </div>
@@ -1626,131 +1616,131 @@ Dismiss</button>            </div>
 <span class="lineno">  94 </span>                        }
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:77</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno">  74 </span>
-<span class="lineno">  75 </span>  Integer userRank = userToDisplay.getRankPosition();
-<span class="lineno">  76 </span>  <span class="keyword">if</span> (userToDisplay.getIsCurrentUser()) {
-<span class="caretline"><span class="lineno">  77 </span>      usernameView.setText(<span class="warning">String.valueOf(userRank) + <span class="string">"| "</span> + userToDisplay.getUsername() + <span class="string">" (you)"</span></span>);</span>
-<span class="lineno">  78 </span>  } <span class="keyword">else</span> {
-<span class="lineno">  79 </span>      usernameView.setText(String.valueOf(userRank) + <span class="string">"| "</span> + userToDisplay.getUsername());
-<span class="lineno">  80 </span>  }
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:77</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
-<span class="lineno">  74 </span>
-<span class="lineno">  75 </span>  Integer userRank = userToDisplay.getRankPosition();
-<span class="lineno">  76 </span>  <span class="keyword">if</span> (userToDisplay.getIsCurrentUser()) {
-<span class="caretline"><span class="lineno">  77 </span>      usernameView.setText(String.valueOf(userRank) + <span class="string">"| "</span> + userToDisplay.getUsername() + <span class="warning"><span class="string">" (you)"</span></span>);</span>
-<span class="lineno">  78 </span>  } <span class="keyword">else</span> {
-<span class="lineno">  79 </span>      usernameView.setText(String.valueOf(userRank) + <span class="string">"| "</span> + userToDisplay.getUsername());
-<span class="lineno">  80 </span>  }
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:79</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno">  76 </span>  <span class="keyword">if</span> (userToDisplay.getIsCurrentUser()) {
-<span class="lineno">  77 </span>      usernameView.setText(String.valueOf(userRank) + <span class="string">"| "</span> + userToDisplay.getUsername() + <span class="string">" (you)"</span>);
-<span class="lineno">  78 </span>  } <span class="keyword">else</span> {
-<span class="caretline"><span class="lineno">  79 </span>      usernameView.setText(<span class="warning">String.valueOf(userRank) + <span class="string">"| "</span> + userToDisplay.getUsername()</span>);&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  80 </span>  }
-<span class="lineno">  81 </span>  scoreView.setText(userToDisplay.getTotalScore().toString());
-<span class="lineno">  82 </span>  <span class="keyword">switch</span>(sortPos) {
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:81</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno">  78 </span>  } <span class="keyword">else</span> {
-<span class="lineno">  79 </span>      usernameView.setText(String.valueOf(userRank) + <span class="string">"| "</span> + userToDisplay.getUsername());
-<span class="lineno">  80 </span>  }
-<span class="caretline"><span class="lineno">  81 </span>  scoreView.setText(<span class="warning">userToDisplay.getTotalScore().toString()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  82 </span>  <span class="keyword">switch</span>(sortPos) {
-<span class="lineno">  83 </span>      <span class="keyword">case</span> <span class="number">0</span>:
-<span class="lineno">  84 </span>          scoreView.setText(<span class="string">"Total Score: "</span> + userToDisplay.getTotalScore().toString());
-</pre>
-
 <span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:84</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno">  81 </span>    scoreView.setText(userToDisplay.getTotalScore().toString());
-<span class="lineno">  82 </span>    <span class="keyword">switch</span>(sortPos) {
-<span class="lineno">  83 </span>        <span class="keyword">case</span> <span class="number">0</span>:
-<span class="caretline"><span class="lineno">  84 </span>            scoreView.setText(<span class="warning"><span class="string">"Total Score: "</span> + userToDisplay.getTotalScore().toString()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  85 </span>            <span class="keyword">break</span>;
-<span class="lineno">  86 </span>        <span class="keyword">case</span> <span class="number">1</span>:
-<span class="lineno">  87 </span>            scoreView.setText(userToDisplay.getNumQRs().toString() + <span class="string">" scanned"</span>);
+<span class="lineno">  81 </span>        }
+<span class="lineno">  82 </span>
+<span class="lineno">  83 </span>        Integer userRank = userToDisplay.getRankPosition();
+<span class="caretline"><span class="lineno">  84 </span>        rankView.setText(<span class="warning">String.valueOf(userRank) + <span class="string">"|"</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  85 </span>        <span class="keyword">if</span> (userToDisplay.getIsCurrentUser()) {
+<span class="lineno">  86 </span>            usernameView.setText(usernameDisplay + <span class="string">" (you)"</span>);
+<span class="lineno">  87 </span>        } <span class="keyword">else</span> {
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:84</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno">  81 </span>    scoreView.setText(userToDisplay.getTotalScore().toString());
-<span class="lineno">  82 </span>    <span class="keyword">switch</span>(sortPos) {
-<span class="lineno">  83 </span>        <span class="keyword">case</span> <span class="number">0</span>:
-<span class="caretline"><span class="lineno">  84 </span>            scoreView.setText(<span class="string">"Total Score: "</span> + <span class="warning">userToDisplay.getTotalScore().toString()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  85 </span>            <span class="keyword">break</span>;
-<span class="lineno">  86 </span>        <span class="keyword">case</span> <span class="number">1</span>:
-<span class="lineno">  87 </span>            scoreView.setText(userToDisplay.getNumQRs().toString() + <span class="string">" scanned"</span>);
+<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:86</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno">  83 </span>        Integer userRank = userToDisplay.getRankPosition();
+<span class="lineno">  84 </span>        rankView.setText(String.valueOf(userRank) + <span class="string">"|"</span>);
+<span class="lineno">  85 </span>        <span class="keyword">if</span> (userToDisplay.getIsCurrentUser()) {
+<span class="caretline"><span class="lineno">  86 </span>            usernameView.setText(<span class="warning">usernameDisplay + <span class="string">" (you)"</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  87 </span>        } <span class="keyword">else</span> {
+<span class="lineno">  88 </span>            usernameView.setText(usernameDisplay);
+<span class="lineno">  89 </span>        }
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:84</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
-<span class="lineno">  81 </span>    scoreView.setText(userToDisplay.getTotalScore().toString());
-<span class="lineno">  82 </span>    <span class="keyword">switch</span>(sortPos) {
-<span class="lineno">  83 </span>        <span class="keyword">case</span> <span class="number">0</span>:
-<span class="caretline"><span class="lineno">  84 </span>            scoreView.setText(<span class="warning"><span class="string">"Total Score: "</span></span> + userToDisplay.getTotalScore().toString());&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  85 </span>            <span class="keyword">break</span>;
-<span class="lineno">  86 </span>        <span class="keyword">case</span> <span class="number">1</span>:
-<span class="lineno">  87 </span>            scoreView.setText(userToDisplay.getNumQRs().toString() + <span class="string">" scanned"</span>);
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:87</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno">  84 </span>      scoreView.setText(<span class="string">"Total Score: "</span> + userToDisplay.getTotalScore().toString());
-<span class="lineno">  85 </span>      <span class="keyword">break</span>;
-<span class="lineno">  86 </span>  <span class="keyword">case</span> <span class="number">1</span>:
-<span class="caretline"><span class="lineno">  87 </span>      scoreView.setText(<span class="warning">userToDisplay.getNumQRs().toString() + <span class="string">" scanned"</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  88 </span>      <span class="keyword">break</span>;
-<span class="lineno">  89 </span>  <span class="keyword">default</span>:
-<span class="lineno">  90 </span>      scoreView.setText(<span class="string">"Highest QR Score: "</span> + userToDisplay.getHighestScore().toString());
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:87</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno">  84 </span>      scoreView.setText(<span class="string">"Total Score: "</span> + userToDisplay.getTotalScore().toString());
-<span class="lineno">  85 </span>      <span class="keyword">break</span>;
-<span class="lineno">  86 </span>  <span class="keyword">case</span> <span class="number">1</span>:
-<span class="caretline"><span class="lineno">  87 </span>      scoreView.setText(<span class="warning">userToDisplay.getNumQRs().toString()</span> + <span class="string">" scanned"</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  88 </span>      <span class="keyword">break</span>;
-<span class="lineno">  89 </span>  <span class="keyword">default</span>:
-<span class="lineno">  90 </span>      scoreView.setText(<span class="string">"Highest QR Score: "</span> + userToDisplay.getHighestScore().toString());
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:87</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
-<span class="lineno">  84 </span>      scoreView.setText(<span class="string">"Total Score: "</span> + userToDisplay.getTotalScore().toString());
-<span class="lineno">  85 </span>      <span class="keyword">break</span>;
-<span class="lineno">  86 </span>  <span class="keyword">case</span> <span class="number">1</span>:
-<span class="caretline"><span class="lineno">  87 </span>      scoreView.setText(userToDisplay.getNumQRs().toString() + <span class="warning"><span class="string">" scanned"</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  88 </span>      <span class="keyword">break</span>;
-<span class="lineno">  89 </span>  <span class="keyword">default</span>:
-<span class="lineno">  90 </span>      scoreView.setText(<span class="string">"Highest QR Score: "</span> + userToDisplay.getHighestScore().toString());
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:90</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno">  87 </span>          scoreView.setText(userToDisplay.getNumQRs().toString() + <span class="string">" scanned"</span>);
-<span class="lineno">  88 </span>          <span class="keyword">break</span>;
-<span class="lineno">  89 </span>      <span class="keyword">default</span>:
-<span class="caretline"><span class="lineno">  90 </span>          scoreView.setText(<span class="warning"><span class="string">"Highest QR Score: "</span> + userToDisplay.getHighestScore().toString()</span>);</span>
-<span class="lineno">  91 </span>          <span class="keyword">break</span>;
-<span class="lineno">  92 </span>  }
+<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:86</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
+<span class="lineno">  83 </span>        Integer userRank = userToDisplay.getRankPosition();
+<span class="lineno">  84 </span>        rankView.setText(String.valueOf(userRank) + <span class="string">"|"</span>);
+<span class="lineno">  85 </span>        <span class="keyword">if</span> (userToDisplay.getIsCurrentUser()) {
+<span class="caretline"><span class="lineno">  86 </span>            usernameView.setText(usernameDisplay + <span class="warning"><span class="string">" (you)"</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  87 </span>        } <span class="keyword">else</span> {
+<span class="lineno">  88 </span>            usernameView.setText(usernameDisplay);
+<span class="lineno">  89 </span>        }
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:90</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno">  87 </span>          scoreView.setText(userToDisplay.getNumQRs().toString() + <span class="string">" scanned"</span>);
-<span class="lineno">  88 </span>          <span class="keyword">break</span>;
-<span class="lineno">  89 </span>      <span class="keyword">default</span>:
-<span class="caretline"><span class="lineno">  90 </span>          scoreView.setText(<span class="string">"Highest QR Score: "</span> + <span class="warning">userToDisplay.getHighestScore().toString()</span>);</span>
-<span class="lineno">  91 </span>          <span class="keyword">break</span>;
-<span class="lineno">  92 </span>  }
+<span class="lineno">  87 </span>    } <span class="keyword">else</span> {
+<span class="lineno">  88 </span>        usernameView.setText(usernameDisplay);
+<span class="lineno">  89 </span>    }
+<span class="caretline"><span class="lineno">  90 </span>    scoreView.setText(<span class="warning">userToDisplay.getTotalScore().toString()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  91 </span>    <span class="keyword">switch</span>(sortPos) {
+<span class="lineno">  92 </span>        <span class="keyword">case</span> <span class="number">0</span>:
+<span class="lineno">  93 </span>            scoreView.setText(<span class="string">"Total Score: "</span> + userToDisplay.getTotalScore().toString());
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:90</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
-<span class="lineno">  87 </span>          scoreView.setText(userToDisplay.getNumQRs().toString() + <span class="string">" scanned"</span>);
-<span class="lineno">  88 </span>          <span class="keyword">break</span>;
-<span class="lineno">  89 </span>      <span class="keyword">default</span>:
-<span class="caretline"><span class="lineno">  90 </span>          scoreView.setText(<span class="warning"><span class="string">"Highest QR Score: "</span></span> + userToDisplay.getHighestScore().toString());</span>
-<span class="lineno">  91 </span>          <span class="keyword">break</span>;
-<span class="lineno">  92 </span>  }
+<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:93</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno">  90 </span>    scoreView.setText(userToDisplay.getTotalScore().toString());
+<span class="lineno">  91 </span>    <span class="keyword">switch</span>(sortPos) {
+<span class="lineno">  92 </span>        <span class="keyword">case</span> <span class="number">0</span>:
+<span class="caretline"><span class="lineno">  93 </span>            scoreView.setText(<span class="warning"><span class="string">"Total Score: "</span> + userToDisplay.getTotalScore().toString()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  94 </span>            <span class="keyword">break</span>;
+<span class="lineno">  95 </span>        <span class="keyword">case</span> <span class="number">1</span>:
+<span class="lineno">  96 </span>            scoreView.setText(userToDisplay.getNumQRs().toString() + <span class="string">" scanned"</span>);
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:93</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
+<span class="lineno">  90 </span>    scoreView.setText(userToDisplay.getTotalScore().toString());
+<span class="lineno">  91 </span>    <span class="keyword">switch</span>(sortPos) {
+<span class="lineno">  92 </span>        <span class="keyword">case</span> <span class="number">0</span>:
+<span class="caretline"><span class="lineno">  93 </span>            scoreView.setText(<span class="string">"Total Score: "</span> + <span class="warning">userToDisplay.getTotalScore().toString()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  94 </span>            <span class="keyword">break</span>;
+<span class="lineno">  95 </span>        <span class="keyword">case</span> <span class="number">1</span>:
+<span class="lineno">  96 </span>            scoreView.setText(userToDisplay.getNumQRs().toString() + <span class="string">" scanned"</span>);
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:93</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
+<span class="lineno">  90 </span>    scoreView.setText(userToDisplay.getTotalScore().toString());
+<span class="lineno">  91 </span>    <span class="keyword">switch</span>(sortPos) {
+<span class="lineno">  92 </span>        <span class="keyword">case</span> <span class="number">0</span>:
+<span class="caretline"><span class="lineno">  93 </span>            scoreView.setText(<span class="warning"><span class="string">"Total Score: "</span></span> + userToDisplay.getTotalScore().toString());&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  94 </span>            <span class="keyword">break</span>;
+<span class="lineno">  95 </span>        <span class="keyword">case</span> <span class="number">1</span>:
+<span class="lineno">  96 </span>            scoreView.setText(userToDisplay.getNumQRs().toString() + <span class="string">" scanned"</span>);
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:96</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno">  93 </span>      scoreView.setText(<span class="string">"Total Score: "</span> + userToDisplay.getTotalScore().toString());
+<span class="lineno">  94 </span>      <span class="keyword">break</span>;
+<span class="lineno">  95 </span>  <span class="keyword">case</span> <span class="number">1</span>:
+<span class="caretline"><span class="lineno">  96 </span>      scoreView.setText(<span class="warning">userToDisplay.getNumQRs().toString() + <span class="string">" scanned"</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  97 </span>      <span class="keyword">break</span>;
+<span class="lineno">  98 </span>  <span class="keyword">default</span>:
+<span class="lineno">  99 </span>      scoreView.setText(<span class="string">"Highest QR Score: "</span> + userToDisplay.getHighestScore().toString());
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:96</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
+<span class="lineno">  93 </span>      scoreView.setText(<span class="string">"Total Score: "</span> + userToDisplay.getTotalScore().toString());
+<span class="lineno">  94 </span>      <span class="keyword">break</span>;
+<span class="lineno">  95 </span>  <span class="keyword">case</span> <span class="number">1</span>:
+<span class="caretline"><span class="lineno">  96 </span>      scoreView.setText(<span class="warning">userToDisplay.getNumQRs().toString()</span> + <span class="string">" scanned"</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  97 </span>      <span class="keyword">break</span>;
+<span class="lineno">  98 </span>  <span class="keyword">default</span>:
+<span class="lineno">  99 </span>      scoreView.setText(<span class="string">"Highest QR Score: "</span> + userToDisplay.getHighestScore().toString());
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:96</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
+<span class="lineno">  93 </span>      scoreView.setText(<span class="string">"Total Score: "</span> + userToDisplay.getTotalScore().toString());
+<span class="lineno">  94 </span>      <span class="keyword">break</span>;
+<span class="lineno">  95 </span>  <span class="keyword">case</span> <span class="number">1</span>:
+<span class="caretline"><span class="lineno">  96 </span>      scoreView.setText(userToDisplay.getNumQRs().toString() + <span class="warning"><span class="string">" scanned"</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  97 </span>      <span class="keyword">break</span>;
+<span class="lineno">  98 </span>  <span class="keyword">default</span>:
+<span class="lineno">  99 </span>      scoreView.setText(<span class="string">"Highest QR Score: "</span> + userToDisplay.getHighestScore().toString());
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:99</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno">  96 </span>          scoreView.setText(userToDisplay.getNumQRs().toString() + <span class="string">" scanned"</span>);
+<span class="lineno">  97 </span>          <span class="keyword">break</span>;
+<span class="lineno">  98 </span>      <span class="keyword">default</span>:
+<span class="caretline"><span class="lineno">  99 </span>          scoreView.setText(<span class="warning"><span class="string">"Highest QR Score: "</span> + userToDisplay.getHighestScore().toString()</span>);</span>
+<span class="lineno"> 100 </span>          <span class="keyword">break</span>;
+<span class="lineno"> 101 </span>  }
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:99</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
+<span class="lineno">  96 </span>          scoreView.setText(userToDisplay.getNumQRs().toString() + <span class="string">" scanned"</span>);
+<span class="lineno">  97 </span>          <span class="keyword">break</span>;
+<span class="lineno">  98 </span>      <span class="keyword">default</span>:
+<span class="caretline"><span class="lineno">  99 </span>          scoreView.setText(<span class="string">"Highest QR Score: "</span> + <span class="warning">userToDisplay.getHighestScore().toString()</span>);</span>
+<span class="lineno"> 100 </span>          <span class="keyword">break</span>;
+<span class="lineno"> 101 </span>  }
+</pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:99</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
+<span class="lineno">  96 </span>          scoreView.setText(userToDisplay.getNumQRs().toString() + <span class="string">" scanned"</span>);
+<span class="lineno">  97 </span>          <span class="keyword">break</span>;
+<span class="lineno">  98 </span>      <span class="keyword">default</span>:
+<span class="caretline"><span class="lineno">  99 </span>          scoreView.setText(<span class="warning"><span class="string">"Highest QR Score: "</span></span> + userToDisplay.getHighestScore().toString());</span>
+<span class="lineno"> 100 </span>          <span class="keyword">break</span>;
+<span class="lineno"> 101 </span>  }
 </pre>
 
 </div>
@@ -1838,7 +1828,7 @@ Dismiss</button>            </div>
 <span class="lineno">  64 </span>            <span class="tag">&lt;LinearLayout</span><span class="attribute">
 </span><span class="lineno">  65 </span><span class="attribute">                </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/highestScoreData"</span></pre>
 
-<button class="mdl-button mdl-js-button mdl-button--primary" id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 56 More Occurrences...</button>
+<button class="mdl-button mdl-js-button mdl-button--primary" id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 57 More Occurrences...</button>
 <div id="HardcodedTextDiv" style="display: none">
 <span class="location"><a href="../../src/main/res/layout/activity_my_qr_codes.xml">../../src/main/res/layout/activity_my_qr_codes.xml</a>:72</span>: <span class="message">Hardcoded string "Highest Score", should use <code>@string</code> resource</span><br /><pre class="errorlines">
 <span class="lineno">  69 </span>                <span class="tag">&lt;TextView</span><span class="attribute">
@@ -2252,7 +2242,7 @@ Dismiss</button>            </div>
 <span class="lineno">  9 </span>
 <span class="lineno"> 10 </span><span class="tag">&lt;/TextView></span></pre>
 
-<br/><b>NOTE: 11 results omitted.</b><br/><br/></div>
+<br/><b>NOTE: 12 results omitted.</b><br/><br/></div>
 </div>
 <div class="metadata"><div class="explanation" id="explanationHardcodedText" style="display: none;">
 Hardcoding text attributes directly in layout files is bad for several reasons:<br/>
@@ -2296,24 +2286,24 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:14</span>: <span class="message">When you define <code>paddingRight</code> you should probably also define <code>paddingLeft</code> for right-to-left symmetry</span><br /><pre class="errorlines">
-<span class="lineno"> 11 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/qr_search_option_icon"</span>
-<span class="lineno"> 12 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"70dp"</span>
-<span class="lineno"> 13 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"70dp"</span>
-<span class="caretline"><span class="lineno"> 14 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"15dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 15 </span>        <span class="prefix">android:</span><span class="attribute">src</span>=<span class="value">"@drawable/round_qr_code_scanner_24"</span>/>
-<span class="lineno"> 16 </span>
-<span class="lineno"> 17 </span>    <span class="tag">&lt;TextView</span><span class="attribute">
+<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:15</span>: <span class="message">When you define <code>paddingRight</code> you should probably also define <code>paddingLeft</code> for right-to-left symmetry</span><br /><pre class="errorlines">
+<span class="lineno"> 12 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"60dp"</span>
+<span class="lineno"> 13 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"60dp"</span>
+<span class="lineno"> 14 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginVertical</span>=<span class="value">"15dp"</span>
+<span class="caretline"><span class="lineno"> 15 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"10dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 16 </span>        <span class="prefix">android:</span><span class="attribute">src</span>=<span class="value">"@drawable/round_qr_code_scanner_24"</span>/>
+<span class="lineno"> 17 </span>
+<span class="lineno"> 18 </span>    <span class="tag">&lt;TextView</span><span class="attribute">
 </span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:43</span>: <span class="message">When you define <code>paddingRight</code> you should probably also define <code>paddingLeft</code> for right-to-left symmetry</span><br /><pre class="errorlines">
-<span class="lineno"> 40 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 41 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span>=<span class="value">"true"</span>
-<span class="lineno"> 42 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"0"</span>
-<span class="caretline"><span class="lineno"> 43 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"0dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 44 </span>        <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
-<span class="lineno"> 45 </span>        <span class="prefix">app:</span><span class="attribute">icon</span>=<span class="value">"@drawable/ic_baseline_delete_24"</span>
-<span class="lineno"> 46 </span>        <span class="prefix">app:</span><span class="attribute">iconSize</span>=<span class="value">"30dp"</span> />
+<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:44</span>: <span class="message">When you define <code>paddingRight</code> you should probably also define <code>paddingLeft</code> for right-to-left symmetry</span><br /><pre class="errorlines">
+<span class="lineno"> 41 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 42 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span>=<span class="value">"true"</span>
+<span class="lineno"> 43 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"0"</span>
+<span class="caretline"><span class="lineno"> 44 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"0dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 45 </span>        <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
+<span class="lineno"> 46 </span>        <span class="prefix">app:</span><span class="attribute">icon</span>=<span class="value">"@drawable/ic_baseline_delete_24"</span>
+<span class="lineno"> 47 </span>        <span class="prefix">app:</span><span class="attribute">iconSize</span>=<span class="value">"30dp"</span> />
 </pre>
 
 <span class="location"><a href="../../src/main/res/layout/qr_search_spinner_item.xml">../../src/main/res/layout/qr_search_spinner_item.xml</a>:14</span>: <span class="message">When you define <code>paddingRight</code> you should probably also define <code>paddingLeft</code> for right-to-left symmetry</span><br /><pre class="errorlines">
@@ -2326,24 +2316,24 @@ Dismiss</button>            </div>
 <span class="lineno"> 17 </span>    <span class="tag">&lt;com.google.android.material.textview.MaterialTextView</span><span class="attribute">
 </span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/user_list_content.xml">../../src/main/res/layout/user_list_content.xml</a>:14</span>: <span class="message">When you define <code>paddingRight</code> you should probably also define <code>paddingLeft</code> for right-to-left symmetry</span><br /><pre class="errorlines">
-<span class="lineno"> 11 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/qr_search_option_icon"</span>
-<span class="lineno"> 12 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"70dp"</span>
-<span class="lineno"> 13 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"70dp"</span>
-<span class="caretline"><span class="lineno"> 14 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"15dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 15 </span>        <span class="prefix">android:</span><span class="attribute">src</span>=<span class="value">"@drawable/round_account_circle_24"</span>/>
-<span class="lineno"> 16 </span>
-<span class="lineno"> 17 </span>    <span class="tag">&lt;TextView</span><span class="attribute">
+<span class="location"><a href="../../src/main/res/layout/user_list_content.xml">../../src/main/res/layout/user_list_content.xml</a>:17</span>: <span class="message">When you define <code>paddingRight</code> you should probably also define <code>paddingLeft</code> for right-to-left symmetry</span><br /><pre class="errorlines">
+<span class="lineno"> 14 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginVertical</span>=<span class="value">"15dp"</span>
+<span class="lineno"> 15 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span>=<span class="value">"true"</span>
+<span class="lineno"> 16 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
+<span class="caretline"><span class="lineno"> 17 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"10dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 18 </span>        <span class="prefix">android:</span><span class="attribute">src</span>=<span class="value">"@drawable/round_account_circle_24"</span>/>
+<span class="lineno"> 19 </span>
+<span class="lineno"> 20 </span>    <span class="tag">&lt;TextView</span><span class="attribute">
 </span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/user_list_content.xml">../../src/main/res/layout/user_list_content.xml</a>:43</span>: <span class="message">When you define <code>paddingRight</code> you should probably also define <code>paddingLeft</code> for right-to-left symmetry</span><br /><pre class="errorlines">
-<span class="lineno"> 40 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 41 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span>=<span class="value">"true"</span>
-<span class="lineno"> 42 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"0"</span>
-<span class="caretline"><span class="lineno"> 43 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"0dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 44 </span>        <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
-<span class="lineno"> 45 </span>        <span class="prefix">app:</span><span class="attribute">icon</span>=<span class="value">"@drawable/ic_baseline_delete_24"</span>
-<span class="lineno"> 46 </span>        <span class="prefix">app:</span><span class="attribute">iconSize</span>=<span class="value">"30dp"</span> />
+<span class="location"><a href="../../src/main/res/layout/user_list_content.xml">../../src/main/res/layout/user_list_content.xml</a>:68</span>: <span class="message">When you define <code>paddingRight</code> you should probably also define <code>paddingLeft</code> for right-to-left symmetry</span><br /><pre class="errorlines">
+<span class="lineno"> 65 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 66 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span>=<span class="value">"true"</span>
+<span class="lineno"> 67 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"center_vertical"</span>
+<span class="caretline"><span class="lineno"> 68 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"0dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 69 </span>        <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
+<span class="lineno"> 70 </span>        <span class="prefix">app:</span><span class="attribute">icon</span>=<span class="value">"@drawable/ic_baseline_delete_24"</span>
+<span class="lineno"> 71 </span>        <span class="prefix">app:</span><span class="attribute">iconSize</span>=<span class="value">"30dp"</span> />
 </pre>
 
 </div>
@@ -2430,7 +2420,7 @@ Dismiss</button>            </div>
 <span class="lineno">  80 </span>            <span class="tag">&lt;/LinearLayout></span>
 </pre>
 
-<button class="mdl-button mdl-js-button mdl-button--primary" id="RtlHardcodedDivLink" onclick="reveal('RtlHardcodedDiv');" />+ 24 More Occurrences...</button>
+<button class="mdl-button mdl-js-button mdl-button--primary" id="RtlHardcodedDivLink" onclick="reveal('RtlHardcodedDiv');" />+ 27 More Occurrences...</button>
 <div id="RtlHardcodedDiv" style="display: none">
 <span class="location"><a href="../../src/main/res/layout/activity_my_qr_codes.xml">../../src/main/res/layout/activity_my_qr_codes.xml</a>:97</span>: <span class="message">Consider replacing <code>android:layout_marginLeft</code> with <code>android:layout_marginStart="22dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
 <span class="lineno">  94 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerLowScore"</span>
@@ -2544,44 +2534,44 @@ Dismiss</button>            </div>
 <span class="lineno">  48 </span>            <span class="prefix">android:</span><span class="attribute">background</span>=<span class="value">"@null"</span>/>
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:14</span>: <span class="message">Consider replacing <code>android:paddingRight</code> with <code>android:paddingEnd="15dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 11 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/qr_search_option_icon"</span>
-<span class="lineno"> 12 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"70dp"</span>
-<span class="lineno"> 13 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"70dp"</span>
-<span class="caretline"><span class="lineno"> 14 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"15dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 15 </span>        <span class="prefix">android:</span><span class="attribute">src</span>=<span class="value">"@drawable/round_qr_code_scanner_24"</span>/>
-<span class="lineno"> 16 </span>
-<span class="lineno"> 17 </span>    <span class="tag">&lt;TextView</span><span class="attribute">
+<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:15</span>: <span class="message">Consider replacing <code>android:paddingRight</code> with <code>android:paddingEnd="10dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 12 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"60dp"</span>
+<span class="lineno"> 13 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"60dp"</span>
+<span class="lineno"> 14 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginVertical</span>=<span class="value">"15dp"</span>
+<span class="caretline"><span class="lineno"> 15 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"10dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 16 </span>        <span class="prefix">android:</span><span class="attribute">src</span>=<span class="value">"@drawable/round_qr_code_scanner_24"</span>/>
+<span class="lineno"> 17 </span>
+<span class="lineno"> 18 </span>    <span class="tag">&lt;TextView</span><span class="attribute">
 </span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:33</span>: <span class="message">Use "<code>end</code>" instead of "<code>right</code>" to ensure correct behavior in right-to-left locales</span><br /><pre class="errorlines">
-<span class="lineno"> 30 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"12345"</span>
-<span class="lineno"> 31 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"20sp"</span>
-<span class="lineno"> 32 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
-<span class="caretline"><span class="lineno"> 33 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"</span><span class="warning"><span class="value">center|right</span></span><span class="value">"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 34 </span>        />
-<span class="lineno"> 35 </span>
-<span class="lineno"> 36 </span>    <span class="tag">&lt;com.google.android.material.button.MaterialButton</span><span class="attribute">
+<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:34</span>: <span class="message">Use "<code>end</code>" instead of "<code>right</code>" to ensure correct behavior in right-to-left locales</span><br /><pre class="errorlines">
+<span class="lineno"> 31 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"12345"</span>
+<span class="lineno"> 32 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"15sp"</span>
+<span class="lineno"> 33 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
+<span class="caretline"><span class="lineno"> 34 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"</span><span class="warning"><span class="value">center|right</span></span><span class="value">"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 35 </span>        />
+<span class="lineno"> 36 </span>
+<span class="lineno"> 37 </span>    <span class="tag">&lt;com.google.android.material.button.MaterialButton</span><span class="attribute">
 </span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:41</span>: <span class="message">Consider replacing <code>android:layout_alignParentRight</code> with <code>android:layout_alignParentEnd="true"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 38 </span>        <span class="attribute">style</span>=<span class="value">"@style/Widget.Material3.Button.IconButton"</span>
-<span class="lineno"> 39 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 40 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 41 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span></span>=<span class="value">"true"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 42 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"0"</span>
-<span class="lineno"> 43 </span>        <span class="prefix">android:</span><span class="attribute">paddingRight</span>=<span class="value">"0dp"</span>
-<span class="lineno"> 44 </span>        <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
+<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:42</span>: <span class="message">Consider replacing <code>android:layout_alignParentRight</code> with <code>android:layout_alignParentEnd="true"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 39 </span>        <span class="attribute">style</span>=<span class="value">"@style/Widget.Material3.Button.IconButton"</span>
+<span class="lineno"> 40 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 41 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 42 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span></span>=<span class="value">"true"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 43 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"0"</span>
+<span class="lineno"> 44 </span>        <span class="prefix">android:</span><span class="attribute">paddingRight</span>=<span class="value">"0dp"</span>
+<span class="lineno"> 45 </span>        <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:43</span>: <span class="message">Consider replacing <code>android:paddingRight</code> with <code>android:paddingEnd="0dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 40 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 41 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span>=<span class="value">"true"</span>
-<span class="lineno"> 42 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"0"</span>
-<span class="caretline"><span class="lineno"> 43 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"0dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 44 </span>        <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
-<span class="lineno"> 45 </span>        <span class="prefix">app:</span><span class="attribute">icon</span>=<span class="value">"@drawable/ic_baseline_delete_24"</span>
-<span class="lineno"> 46 </span>        <span class="prefix">app:</span><span class="attribute">iconSize</span>=<span class="value">"30dp"</span> />
+<span class="location"><a href="../../src/main/res/layout/qr_list_content.xml">../../src/main/res/layout/qr_list_content.xml</a>:44</span>: <span class="message">Consider replacing <code>android:paddingRight</code> with <code>android:paddingEnd="0dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 41 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 42 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span>=<span class="value">"true"</span>
+<span class="lineno"> 43 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"0"</span>
+<span class="caretline"><span class="lineno"> 44 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"0dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 45 </span>        <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
+<span class="lineno"> 46 </span>        <span class="prefix">app:</span><span class="attribute">icon</span>=<span class="value">"@drawable/ic_baseline_delete_24"</span>
+<span class="lineno"> 47 </span>        <span class="prefix">app:</span><span class="attribute">iconSize</span>=<span class="value">"30dp"</span> />
 </pre>
 
 <span class="location"><a href="../../src/main/res/layout/qr_search_spinner_item.xml">../../src/main/res/layout/qr_search_spinner_item.xml</a>:14</span>: <span class="message">Consider replacing <code>android:paddingRight</code> with <code>android:paddingEnd="15dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
@@ -2611,44 +2601,74 @@ Dismiss</button>            </div>
 <span class="lineno"> 11 </span>    <span class="prefix">android:</span><span class="attribute">padding</span>=<span class="value">"5dp"</span>
 <span class="lineno"> 12 </span>    /></pre>
 
-<span class="location"><a href="../../src/main/res/layout/user_list_content.xml">../../src/main/res/layout/user_list_content.xml</a>:14</span>: <span class="message">Consider replacing <code>android:paddingRight</code> with <code>android:paddingEnd="15dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 11 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/qr_search_option_icon"</span>
-<span class="lineno"> 12 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"70dp"</span>
-<span class="lineno"> 13 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"70dp"</span>
-<span class="caretline"><span class="lineno"> 14 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"15dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 15 </span>        <span class="prefix">android:</span><span class="attribute">src</span>=<span class="value">"@drawable/round_account_circle_24"</span>/>
-<span class="lineno"> 16 </span>
-<span class="lineno"> 17 </span>    <span class="tag">&lt;TextView</span><span class="attribute">
-</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/user_list_content.xml">../../src/main/res/layout/user_list_content.xml</a>:33</span>: <span class="message">Use "<code>end</code>" instead of "<code>right</code>" to ensure correct behavior in right-to-left locales</span><br /><pre class="errorlines">
-<span class="lineno"> 30 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"12345"</span>
-<span class="lineno"> 31 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"15sp"</span>
-<span class="lineno"> 32 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
-<span class="caretline"><span class="lineno"> 33 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"</span><span class="warning"><span class="value">center|right</span></span><span class="value">"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 34 </span>        />
-<span class="lineno"> 35 </span>
-<span class="lineno"> 36 </span>    <span class="tag">&lt;com.google.android.material.button.MaterialButton</span><span class="attribute">
-</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/user_list_content.xml">../../src/main/res/layout/user_list_content.xml</a>:41</span>: <span class="message">Consider replacing <code>android:layout_alignParentRight</code> with <code>android:layout_alignParentEnd="true"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 38 </span>        <span class="attribute">style</span>=<span class="value">"@style/Widget.Material3.Button.IconButton"</span>
-<span class="lineno"> 39 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 40 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 41 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span></span>=<span class="value">"true"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 42 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"0"</span>
-<span class="lineno"> 43 </span>        <span class="prefix">android:</span><span class="attribute">paddingRight</span>=<span class="value">"0dp"</span>
-<span class="lineno"> 44 </span>        <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
+<span class="location"><a href="../../src/main/res/layout/user_list_content.xml">../../src/main/res/layout/user_list_content.xml</a>:15</span>: <span class="message">Consider replacing <code>android:layout_alignParentLeft</code> with <code>android:layout_alignParentStart="true"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 12 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"60dp"</span>
+<span class="lineno"> 13 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"60dp"</span>
+<span class="lineno"> 14 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginVertical</span>=<span class="value">"15dp"</span>
+<span class="caretline"><span class="lineno"> 15 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span></span>=<span class="value">"true"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 16 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
+<span class="lineno"> 17 </span>        <span class="prefix">android:</span><span class="attribute">paddingRight</span>=<span class="value">"10dp"</span>
+<span class="lineno"> 18 </span>        <span class="prefix">android:</span><span class="attribute">src</span>=<span class="value">"@drawable/round_account_circle_24"</span>/>
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/user_list_content.xml">../../src/main/res/layout/user_list_content.xml</a>:43</span>: <span class="message">Consider replacing <code>android:paddingRight</code> with <code>android:paddingEnd="0dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 40 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 41 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span>=<span class="value">"true"</span>
-<span class="lineno"> 42 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"0"</span>
-<span class="caretline"><span class="lineno"> 43 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"0dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 44 </span>        <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
-<span class="lineno"> 45 </span>        <span class="prefix">app:</span><span class="attribute">icon</span>=<span class="value">"@drawable/ic_baseline_delete_24"</span>
-<span class="lineno"> 46 </span>        <span class="prefix">app:</span><span class="attribute">iconSize</span>=<span class="value">"30dp"</span> />
+<span class="location"><a href="../../src/main/res/layout/user_list_content.xml">../../src/main/res/layout/user_list_content.xml</a>:17</span>: <span class="message">Consider replacing <code>android:paddingRight</code> with <code>android:paddingEnd="10dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 14 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginVertical</span>=<span class="value">"15dp"</span>
+<span class="lineno"> 15 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentLeft</span>=<span class="value">"true"</span>
+<span class="lineno"> 16 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
+<span class="caretline"><span class="lineno"> 17 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"10dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 18 </span>        <span class="prefix">android:</span><span class="attribute">src</span>=<span class="value">"@drawable/round_account_circle_24"</span>/>
+<span class="lineno"> 19 </span>
+<span class="lineno"> 20 </span>    <span class="tag">&lt;TextView</span><span class="attribute">
+</span></pre>
+
+<span class="location"><a href="../../src/main/res/layout/user_list_content.xml">../../src/main/res/layout/user_list_content.xml</a>:25</span>: <span class="message">Consider replacing <code>android:layout_toRightOf</code> with <code>android:layout_toEndOf="@id/user_picture"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 22 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 23 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 24 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
+<span class="caretline"><span class="lineno"> 25 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_toRightOf</span></span>=<span class="value">"@id/user_picture"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 26 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"1"</span>
+<span class="lineno"> 27 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"28sp"</span>
+<span class="lineno"> 28 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginVertical</span>=<span class="value">"10dp"</span>
+</pre>
+
+<span class="location"><a href="../../src/main/res/layout/user_list_content.xml">../../src/main/res/layout/user_list_content.xml</a>:37</span>: <span class="message">Consider replacing <code>android:layout_toRightOf</code> with <code>android:layout_toEndOf="@id/user_rank_view"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 34 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 35 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"match_parent"</span>
+<span class="lineno"> 36 </span>        <span class="prefix">android:</span><span class="attribute">orientation</span>=<span class="value">"vertical"</span>
+<span class="caretline"><span class="lineno"> 37 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_toRightOf</span></span>=<span class="value">"@id/user_rank_view"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 38 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
+<span class="lineno"> 39 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginVertical</span>=<span class="value">"15dp"</span>
+<span class="lineno"> 40 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"center_vertical"</span>
+</pre>
+
+<span class="location"><a href="../../src/main/res/layout/user_list_content.xml">../../src/main/res/layout/user_list_content.xml</a>:41</span>: <span class="message">Consider replacing <code>android:layout_marginLeft</code> with <code>android:layout_marginStart="10dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 38 </span>        <span class="prefix">android:</span><span class="attribute">layout_centerVertical</span>=<span class="value">"true"</span>
+<span class="lineno"> 39 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginVertical</span>=<span class="value">"15dp"</span>
+<span class="lineno"> 40 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"center_vertical"</span>
+<span class="caretline"><span class="lineno"> 41 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginLeft</span></span>=<span class="value">"10dp"</span>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 42 </span>
+<span class="lineno"> 43 </span>        <span class="tag">&lt;TextView</span><span class="attribute">
+</span><span class="lineno"> 44 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/username_view"</span>
+</pre>
+
+<span class="location"><a href="../../src/main/res/layout/user_list_content.xml">../../src/main/res/layout/user_list_content.xml</a>:66</span>: <span class="message">Consider replacing <code>android:layout_alignParentRight</code> with <code>android:layout_alignParentEnd="true"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 63 </span>        <span class="attribute">style</span>=<span class="value">"@style/Widget.Material3.Button.IconButton"</span>
+<span class="lineno"> 64 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 65 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 66 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span></span>=<span class="value">"true"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 67 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"center_vertical"</span>
+<span class="lineno"> 68 </span>        <span class="prefix">android:</span><span class="attribute">paddingRight</span>=<span class="value">"0dp"</span>
+<span class="lineno"> 69 </span>        <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
+</pre>
+
+<span class="location"><a href="../../src/main/res/layout/user_list_content.xml">../../src/main/res/layout/user_list_content.xml</a>:68</span>: <span class="message">Consider replacing <code>android:paddingRight</code> with <code>android:paddingEnd="0dp"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
+<span class="lineno"> 65 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 66 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignParentRight</span>=<span class="value">"true"</span>
+<span class="lineno"> 67 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"center_vertical"</span>
+<span class="caretline"><span class="lineno"> 68 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">paddingRight</span></span>=<span class="value">"0dp"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 69 </span>        <span class="prefix">android:</span><span class="attribute">visibility</span>=<span class="value">"gone"</span>
+<span class="lineno"> 70 </span>        <span class="prefix">app:</span><span class="attribute">icon</span>=<span class="value">"@drawable/ic_baseline_delete_24"</span>
+<span class="lineno"> 71 </span>        <span class="prefix">app:</span><span class="attribute">iconSize</span>=<span class="value">"30dp"</span> />
 </pre>
 
 <span class="location"><a href="../../src/main/res/layout/user_qr_list_content.xml">../../src/main/res/layout/user_qr_list_content.xml</a>:24</span>: <span class="message">Use "<code>end</code>" instead of "<code>right</code>" to ensure correct behavior in right-to-left locales</span><br /><pre class="errorlines">
