@@ -3,6 +3,7 @@ package com.example.qr_go.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -21,6 +22,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.Set;
 
 public class MyQRCodesActivity extends BaseActivity {
 
@@ -31,6 +33,7 @@ public class MyQRCodesActivity extends BaseActivity {
     Map.Entry<String, Integer> lowestQRCode;
     private QRArrayAdapter qrAdapter;
     private ArrayList<QRListDisplayContainer> qrDisplays;
+    private ArrayList<String> qrCodeList;
     private ListView userQRList;
 
     @Override
@@ -69,6 +72,19 @@ public class MyQRCodesActivity extends BaseActivity {
 
                             for (DocumentSnapshot document : task.getResult()) {
                                 selectedPlayer = document.toObject(Player.class);
+                            }
+                            Set<String> idSet = selectedPlayer.getScannedQRCodeIds().keySet();
+                            qrCodeList = new ArrayList<String>(idSet);
+                            for(int i = 0; i < qrCodeList.size(); i++) {
+                                QRListDisplayContainer qrToDisplay =
+                                        new QRListDisplayContainer(
+                                                selectedPlayer.getScannedQRCodeIds().get(qrCodeList.get(i)),
+                                                qrCodeList.get(i),
+                                                null,
+                                                null,
+                                                null
+                                        );
+                                qrDisplays.add(qrToDisplay);
                             }
                             playernameText.setText(selectedPlayer.getUsername());
                             highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
@@ -109,7 +125,14 @@ public class MyQRCodesActivity extends BaseActivity {
                         }
                     }
                 });
-
+                userQRList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        Intent intent = new Intent(view.getContext(), QRInfoActivity.class);
+                        intent.putExtra("QRid", qrDisplays.get(position).getId());
+                        view.getContext().startActivity(intent);
+                    }
+                });
 
     }
 }
