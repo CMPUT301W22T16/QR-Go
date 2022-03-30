@@ -33,6 +33,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.storage.FirebaseStorage;
 
 import java.util.ArrayList;
 
@@ -48,6 +49,7 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback, Go
     private static String currentUUID; // userId singleton
     private static String userPassword; // password singleton
     public static FirebaseFirestore db; // database singleton
+    public static FirebaseStorage storage;
     private static SharedPreferences sharedPrefs;
     protected LocationManager locationManager;
     protected Location userLocation;
@@ -79,7 +81,7 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback, Go
     private void initializeData() {
         // Initialize FireStore database if it is already null
         if (db == null) db = FirebaseFirestore.getInstance();
-
+        if (storage == null) storage = FirebaseStorage.getInstance();
         // Log in the user or create a new user
         if (sharedPrefs == null) {
             sharedPrefs = this.getSharedPreferences(User.CURRENT_USER, MODE_PRIVATE);
