@@ -19,6 +19,7 @@ import com.example.qr_go.objects.CommentsQR;
 import com.example.qr_go.objects.GameQRCode;
 import com.example.qr_go.objects.Player;
 import com.example.qr_go.objects.QRPhoto;
+import com.example.qr_go.utils.QRGoDBUtil;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -180,13 +181,13 @@ public class QRInfoActivity extends BaseActivity {
                                 Comment comment = new Comment(currentUser.getUsername(), message);
                                 comments.addComment(currentUser, message, null);
                                 commentAdapter.add(comment);
+
+                                QRGoDBUtil dbUtil = new QRGoDBUtil();
+                                dbUtil.addCommenttoDB(comments, selectedQR);
                             }
                         }
                     }
                 });
-
-
-//        db.addCommenttoDB(comments, selectedQR);
 
         inputComment.setText(""); // clear input after send
     }
