@@ -802,12 +802,12 @@
             attribute="xmlns:android"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="88"
+            line="89"
             column="13"
-            startOffset="3583"
-            endLine="88"
+            startOffset="3656"
+            endLine="89"
             endColumn="71"
-            endOffset="3641"/>
+            endOffset="3714"/>
     </incident>
 
     <incident
@@ -816,12 +816,12 @@
         message="Invalid layout param in a `RelativeLayout`: `layout_weight`">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="19"
+            line="20"
             column="13"
-            startOffset="712"
-            endLine="19"
+            startOffset="755"
+            endLine="20"
             endColumn="38"
-            endOffset="737"/>
+            endOffset="780"/>
     </incident>
 
     <incident
@@ -844,12 +844,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="31"
+            line="32"
             column="10"
-            startOffset="1107"
-            endLine="31"
+            startOffset="1150"
+            endLine="32"
             endColumn="18"
-            endOffset="1115"/>
+            endOffset="1158"/>
     </incident>
 
     <incident
@@ -858,12 +858,12 @@
         message="Hardcoded string &quot;Search Bar&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="35"
+            line="36"
             column="13"
-            startOffset="1270"
-            endLine="35"
+            startOffset="1313"
+            endLine="36"
             endColumn="38"
-            endOffset="1295"/>
+            endOffset="1338"/>
     </incident>
 
     <incident
@@ -872,12 +872,12 @@
         message="Hardcoded string &quot;QR Codes&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="74"
+            line="75"
             column="17"
-            startOffset="2987"
-            endLine="74"
+            startOffset="3060"
+            endLine="75"
             endColumn="40"
-            endOffset="3010"/>
+            endOffset="3083"/>
     </incident>
 
     <incident
@@ -886,12 +886,12 @@
         message="Hardcoded string &quot;Players&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_search.xml"
-            line="78"
+            line="79"
             column="17"
-            startOffset="3193"
-            endLine="78"
+            startOffset="3266"
+            endLine="79"
             endColumn="39"
-            endOffset="3215"/>
+            endOffset="3288"/>
     </incident>
 
     <incident

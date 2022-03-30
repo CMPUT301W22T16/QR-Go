@@ -1,6 +1,7 @@
 R_DEF: Internal format may change without notice
 local
 color black
+color gray
 color purple_200
 color purple_500
 color purple_700
@@ -19,6 +20,7 @@ drawable round_account_circle_24
 drawable round_qr_code_scanner_24
 drawable round_search_24
 drawable sample_prof_pic
+drawable user_searchbar
 id QRData
 id bottom_nav_view
 id buttonOtherPlayers

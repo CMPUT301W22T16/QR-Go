@@ -152,6 +152,10 @@
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable/ic_baseline_delete_24.xml"
     },
     {
+        "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/debug/drawable_user_searchbar.xml.flat",
+        "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable/user_searchbar.xml"
+    },
+    {
         "merged": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"
     },

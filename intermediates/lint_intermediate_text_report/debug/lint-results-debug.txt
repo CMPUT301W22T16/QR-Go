@@ -119,7 +119,7 @@
 
    https://developer.android.com/training/multiscreen/screendensities.html
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:19: Warning: Invalid layout param in a RelativeLayout: layout_weight [ObsoleteLayoutParam]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:20: Warning: Invalid layout param in a RelativeLayout: layout_weight [ObsoleteLayoutParam]
             android:layout_weight="1"
             ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -201,6 +201,9 @@
    the remaining space anyway. With a declared width/height of 0dp it does not
    have to measure its own size first.
 
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/values/colors.xml:10: Warning: The resource R.color.gray appears to be unused [UnusedResources]
+    <color name="gray">#F0F0F0</color>
+           ~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable/ic_baseline_chevron_left_24.xml:1: Warning: The resource R.drawable.ic_baseline_chevron_left_24 appears to be unused [UnusedResources]
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
 ^
@@ -226,7 +229,7 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_maps.xml:20: Warning: This namespace declaration is redundant [RedundantNamespace]
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:88: Warning: This namespace declaration is redundant [RedundantNamespace]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:89: Warning: This namespace declaration is redundant [RedundantNamespace]
             xmlns:android="http://schemas.android.com/apk/res/android"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -257,7 +260,7 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:97: Warning: Missing autofillHints attribute [Autofill]
     <EditText
      ~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:31: Warning: Missing autofillHints attribute [Autofill]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:32: Warning: Missing autofillHints attribute [Autofill]
         <EditText
          ~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:21: Warning: Missing autofillHints attribute [Autofill]
@@ -580,13 +583,13 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:106: Warning: Hardcoded string "Type your comment here", should use @string resource [HardcodedText]
         android:hint="Type your comment here"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:35: Warning: Hardcoded string "Search Bar", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:36: Warning: Hardcoded string "Search Bar", should use @string resource [HardcodedText]
             android:hint="Search Bar"
             ~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:74: Warning: Hardcoded string "QR Codes", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:75: Warning: Hardcoded string "QR Codes", should use @string resource [HardcodedText]
                 android:text="QR Codes" />
                 ~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:78: Warning: Hardcoded string "Players", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:79: Warning: Hardcoded string "Players", should use @string resource [HardcodedText]
                 android:text="Players" />
                 ~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/menu/bottom_nav_menu.xml:7: Warning: Hardcoded string "Search", should use @string resource [HardcodedText]
@@ -671,7 +674,7 @@
         android:paddingRight="0dp"
         ~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_search_spinner_item.xml:14: Warning: When you define paddingRight you should probably also define paddingLeft for right-to-left symmetry [RtlSymmetry]
-        android:paddingRight="15dp"
+        android:paddingRight="10dp"
         ~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_list_content.xml:17: Warning: When you define paddingRight you should probably also define paddingLeft for right-to-left symmetry [RtlSymmetry]
         android:paddingRight="10dp"
@@ -727,13 +730,13 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:116: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="36dp" to better support right-to-left layouts [RtlHardcoded]
                     android:layout_marginLeft="36dp"
                     ~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:20: Warning: Consider replacing android:layout_alignParentRight with android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:21: Warning: Consider replacing android:layout_alignParentRight with android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
             android:layout_alignParentRight="true"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:44: Warning: Use "start" instead of "left" to ensure correct behavior in right-to-left locales [RtlHardcoded]
-            android:gravity="left|center_vertical"
-                             ~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:45: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:40: Warning: Consider replacing android:drawableLeft with android:drawableStart="@drawable/round_search_24" to better support right-to-left layouts [RtlHardcoded]
+            android:drawableLeft="@drawable/round_search_24"
+            ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:47: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
             android:layout_alignParentLeft="true"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:15: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
@@ -754,12 +757,12 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:55: Warning: Consider replacing android:paddingRight with android:paddingEnd="0dp" to better support right-to-left layouts [RtlHardcoded]
         android:paddingRight="0dp"
         ~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_search_spinner_item.xml:14: Warning: Consider replacing android:paddingRight with android:paddingEnd="15dp" to better support right-to-left layouts [RtlHardcoded]
-        android:paddingRight="15dp"
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_search_spinner_item.xml:14: Warning: Consider replacing android:paddingRight with android:paddingEnd="10dp" to better support right-to-left layouts [RtlHardcoded]
+        android:paddingRight="10dp"
         ~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_search_spinner_item.xml:24: Warning: Use "start" instead of "left" to ensure correct behavior in right-to-left locales [RtlHardcoded]
-        android:gravity="left"
-                         ~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_search_spinner_item.xml:26: Warning: Consider replacing android:layout_toRightOf with android:layout_toEndOf="@id/qr_search_option_icon" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_toRightOf="@id/qr_search_option_icon"
+        ~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/spinner_item.xml:10: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
     android:gravity="right"
                      ~~~~~
@@ -817,4 +820,4 @@
    Please define an explicit reason why it is ignored, and when it can be
    resolved.
 
-1 errors, 188 warnings
+1 errors, 189 warnings
