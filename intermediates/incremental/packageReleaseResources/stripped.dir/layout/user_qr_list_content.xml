@@ -23,5 +23,11 @@
         android:layout_weight="1"
         android:gravity="center|right"
         />
+    <ImageView
+        android:id="@+id/trash_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_delete_24"
+        />
 
 </LinearLayout>
