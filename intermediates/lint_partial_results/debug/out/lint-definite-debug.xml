@@ -1020,12 +1020,12 @@
         message="This view is not constrained horizontally: at runtime it will jump to the left unless you add a horizontal constraint">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="75"
+            line="81"
             column="6"
-            startOffset="3008"
-            endLine="75"
+            startOffset="3243"
+            endLine="81"
             endColumn="10"
-            endOffset="3012"/>
+            endOffset="3247"/>
     </incident>
 
     <incident
@@ -1041,35 +1041,12 @@
             mark="0"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="10"
-            column="6"
-            startOffset="384"
-            endLine="10"
-            endColumn="15"
-            endOffset="393"/>
-    </incident>
-
-    <incident
-        id="TextFields"
-        severity="warning"
-        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="27"
-            column="9"
-            startOffset="1000"
-            endLine="27"
-            endColumn="43"
-            endOffset="1034"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="22"
-            column="9"
-            startOffset="811"
-            endLine="22"
-            endColumn="39"
-            endOffset="841"
-            message="id defined here"/>
+            line="19"
+            column="10"
+            startOffset="763"
+            endLine="19"
+            endColumn="19"
+            endOffset="772"/>
     </incident>
 
     <incident
@@ -1090,56 +1067,14 @@
                 attribute="importantForAutofill"
                 value="no"/>
         </fix-alternatives>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="21"
-            column="6"
-            startOffset="794"
-            endLine="21"
-            endColumn="14"
-            endOffset="802"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Email&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
             line="26"
-            column="9"
-            startOffset="971"
-            endLine="26"
-            endColumn="29"
-            endOffset="991"/>
-    </incident>
-
-    <incident
-        id="Autofill"
-        severity="warning"
-        message="Missing `autofillHints` attribute">
-        <fix-alternatives>
-            <fix-attribute
-                description="Set autofillHints"
-                namespace="http://schemas.android.com/apk/res/android"
-                attribute="autofillHints"
-                value=""
-                dot="0"
-                mark="0"/>
-            <fix-attribute
-                description="Set importantForAutofill=&quot;no&quot;"
-                namespace="http://schemas.android.com/apk/res/android"
-                attribute="importantForAutofill"
-                value="no"/>
-        </fix-alternatives>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="33"
             column="6"
-            startOffset="1278"
-            endLine="33"
+            startOffset="1024"
+            endLine="26"
             endColumn="14"
-            endOffset="1286"/>
+            endOffset="1032"/>
     </incident>
 
     <incident
@@ -1148,12 +1083,77 @@
         message="Hardcoded string &quot;Username&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="38"
+            line="31"
             column="9"
-            startOffset="1459"
-            endLine="38"
+            startOffset="1205"
+            endLine="31"
             endColumn="32"
-            endOffset="1482"/>
+            endOffset="1228"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="38"
+            column="6"
+            startOffset="1500"
+            endLine="38"
+            endColumn="14"
+            endOffset="1508"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="44"
+            column="9"
+            startOffset="1706"
+            endLine="44"
+            endColumn="43"
+            endOffset="1740"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="39"
+            column="9"
+            startOffset="1517"
+            endLine="39"
+            endColumn="39"
+            endOffset="1547"
+            message="id defined here"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Email&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="43"
+            column="9"
+            startOffset="1677"
+            endLine="43"
+            endColumn="29"
+            endOffset="1697"/>
     </incident>
 
     <incident
@@ -1162,12 +1162,12 @@
         message="Hardcoded string &quot;Generate my login qr code&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="68"
+            line="74"
             column="9"
-            startOffset="2711"
-            endLine="68"
+            startOffset="2946"
+            endLine="74"
             endColumn="49"
-            endOffset="2751"/>
+            endOffset="2986"/>
     </incident>
 
     <incident
@@ -1176,12 +1176,12 @@
         message="Hardcoded string &quot;Generate my game status qr code&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="106"
+            line="112"
             column="9"
-            startOffset="4234"
-            endLine="106"
+            startOffset="4469"
+            endLine="112"
             endColumn="55"
-            endOffset="4280"/>
+            endOffset="4515"/>
     </incident>
 
     <incident
@@ -1190,12 +1190,12 @@
         message="Hardcoded string &quot;Edit Photo&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="130"
+            line="137"
             column="9"
-            startOffset="5208"
-            endLine="130"
+            startOffset="5482"
+            endLine="137"
             endColumn="34"
-            endOffset="5233"/>
+            endOffset="5507"/>
     </incident>
 
     <incident

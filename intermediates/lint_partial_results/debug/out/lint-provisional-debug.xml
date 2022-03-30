@@ -707,12 +707,12 @@
         message="Use databinding or explicit wiring of click listener in code">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="66"
+            line="72"
             column="9"
-            startOffset="2638"
-            endLine="66"
+            startOffset="2873"
+            endLine="72"
             endColumn="42"
-            endOffset="2671"/>
+            endOffset="2906"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -724,12 +724,12 @@
         message="Use databinding or explicit wiring of click listener in code">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="104"
+            line="110"
             column="9"
-            startOffset="4160"
-            endLine="104"
+            startOffset="4395"
+            endLine="110"
             endColumn="43"
-            endOffset="4194"/>
+            endOffset="4429"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -741,12 +741,12 @@
         message="Use databinding or explicit wiring of click listener in code">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="129"
+            line="136"
             column="9"
-            startOffset="5165"
-            endLine="129"
+            startOffset="5439"
+            endLine="136"
             endColumn="43"
-            endOffset="5199"/>
+            endOffset="5473"/>
         <map>
             <condition minLT="23"/>
         </map>
