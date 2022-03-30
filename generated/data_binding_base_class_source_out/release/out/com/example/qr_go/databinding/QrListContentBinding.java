@@ -4,7 +4,7 @@ package com.example.qr_go.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,14 +12,13 @@ import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.qr_go.R;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.imageview.ShapeableImageView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class QrListContentBinding implements ViewBinding {
   @NonNull
-  private final RelativeLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
   public final MaterialButton qrDelButton;
@@ -28,24 +27,19 @@ public final class QrListContentBinding implements ViewBinding {
   public final TextView qrIdView;
 
   @NonNull
-  public final ShapeableImageView qrPicture;
-
-  @NonNull
   public final TextView qrScoreView;
 
-  private QrListContentBinding(@NonNull RelativeLayout rootView,
-      @NonNull MaterialButton qrDelButton, @NonNull TextView qrIdView,
-      @NonNull ShapeableImageView qrPicture, @NonNull TextView qrScoreView) {
+  private QrListContentBinding(@NonNull LinearLayout rootView, @NonNull MaterialButton qrDelButton,
+      @NonNull TextView qrIdView, @NonNull TextView qrScoreView) {
     this.rootView = rootView;
     this.qrDelButton = qrDelButton;
     this.qrIdView = qrIdView;
-    this.qrPicture = qrPicture;
     this.qrScoreView = qrScoreView;
   }
 
   @Override
   @NonNull
-  public RelativeLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -82,20 +76,13 @@ public final class QrListContentBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.qr_picture;
-      ShapeableImageView qrPicture = ViewBindings.findChildViewById(rootView, id);
-      if (qrPicture == null) {
-        break missingId;
-      }
-
       id = R.id.qr_score_view;
       TextView qrScoreView = ViewBindings.findChildViewById(rootView, id);
       if (qrScoreView == null) {
         break missingId;
       }
 
-      return new QrListContentBinding((RelativeLayout) rootView, qrDelButton, qrIdView, qrPicture,
-          qrScoreView);
+      return new QrListContentBinding((LinearLayout) rootView, qrDelButton, qrIdView, qrScoreView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

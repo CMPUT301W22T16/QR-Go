@@ -10,7 +10,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="15dp"
-        android:layout_marginBottom="5dp"
         android:layout_marginHorizontal="15dp">
 
         <Spinner
@@ -36,17 +35,17 @@
             android:hint="Search Bar"
             android:layout_alignParentBottom="true"
             android:inputType="textPersonName"
-            android:background="@drawable/user_searchbar"
-            android:drawableLeft="@drawable/round_search_24"
             android:visibility="gone" />
 
         <Spinner
             android:id="@+id/qr_search_spinner"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:visibility="gone" />
+            android:visibility="gone"
+            android:background="@null"/>
     </RelativeLayout>
 
     <com.google.android.material.card.MaterialCardView

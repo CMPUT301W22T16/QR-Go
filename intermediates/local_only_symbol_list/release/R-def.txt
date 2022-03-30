@@ -1,7 +1,6 @@
 R_DEF: Internal format may change without notice
 local
 color black
-color gray
 color purple_200
 color purple_500
 color purple_700
@@ -20,7 +19,6 @@ drawable round_account_circle_24
 drawable round_qr_code_scanner_24
 drawable round_search_24
 drawable sample_prof_pic
-drawable user_searchbar
 id QRData
 id bottom_nav_view
 id buttonOtherPlayers
@@ -67,7 +65,6 @@ id qr_code_image
 id qr_del_button
 id qr_id_view
 id qr_list
-id qr_picture
 id qr_score_view
 id qr_search_option_icon
 id qr_search_option_text
@@ -83,12 +80,11 @@ id sort_spinner
 id take_qr_photo_button
 id take_qr_photo_imageview
 id totalScoreData
+id trash_button
 id userList
 id user_del_button
 id user_list
-id user_picture
 id user_qr_list
-id user_rank_view
 id user_score_view
 id username_view
 id usersContent

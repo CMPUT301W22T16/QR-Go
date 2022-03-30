@@ -4,6 +4,7 @@ package com.example.qr_go.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -25,11 +26,15 @@ public final class UserQrListContentBinding implements ViewBinding {
   @NonNull
   public final TextView qrScoreView;
 
+  @NonNull
+  public final ImageView trashButton;
+
   private UserQrListContentBinding(@NonNull LinearLayout rootView, @NonNull TextView qrIdView,
-      @NonNull TextView qrScoreView) {
+      @NonNull TextView qrScoreView, @NonNull ImageView trashButton) {
     this.rootView = rootView;
     this.qrIdView = qrIdView;
     this.qrScoreView = qrScoreView;
+    this.trashButton = trashButton;
   }
 
   @Override
@@ -71,7 +76,14 @@ public final class UserQrListContentBinding implements ViewBinding {
         break missingId;
       }
 
-      return new UserQrListContentBinding((LinearLayout) rootView, qrIdView, qrScoreView);
+      id = R.id.trash_button;
+      ImageView trashButton = ViewBindings.findChildViewById(rootView, id);
+      if (trashButton == null) {
+        break missingId;
+      }
+
+      return new UserQrListContentBinding((LinearLayout) rootView, qrIdView, qrScoreView,
+          trashButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
