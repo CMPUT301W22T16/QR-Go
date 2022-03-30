@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -56,7 +57,10 @@ public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> {
         idView.setText(qrToDisplay.getId().substring(0, 8) + "...");
 
         // Show the delete button if the current user is an owner
+        RelativeLayout.LayoutParams scoreParams =
+                new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
         if (SearchActivity.getUserOwner()) {
+            scoreParams.addRule(RelativeLayout.LEFT_OF, R.id.qr_del_button);
             delButton.setVisibility(View.VISIBLE);
             delButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -73,12 +77,15 @@ public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> {
                 }
             });
         } else {
+            scoreParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
             delButton.setVisibility(View.GONE);
         }
+        scoreParams.addRule(RelativeLayout.CENTER_VERTICAL);
+        scoreView.setLayoutParams(scoreParams);
 
         switch(sortPos) {
             case 0:
-                scoreView.setText("Score: " + qrToDisplay.getScore().toString());
+                scoreView.setText("Score:\n" + qrToDisplay.getScore().toString());
                 break;
             default:
                 Float distance =  qrToDisplay.getDistance();
@@ -91,7 +98,7 @@ public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> {
                 } else {
                     distanceString = df.format(distance) + "m";
                 }
-                scoreView.setText(distanceString + " away");
+                scoreView.setText(distanceString + "\naway");
                 break;
         }
 

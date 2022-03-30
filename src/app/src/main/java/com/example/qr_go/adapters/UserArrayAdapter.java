@@ -1,6 +1,9 @@
 package com.example.qr_go.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +38,7 @@ public class UserArrayAdapter extends ArrayAdapter<UserListDisplayContainer> imp
         this.sortPos = sortPos;
     }
 
+    @SuppressLint("ResourceAsColor")
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -81,11 +85,18 @@ public class UserArrayAdapter extends ArrayAdapter<UserListDisplayContainer> imp
         }
 
         Integer userRank = userToDisplay.getRankPosition();
-        rankView.setText(String.valueOf(userRank) + "|");
+        rankView.setText(String.valueOf(userRank));
         if (userToDisplay.getIsCurrentUser()) {
+            if (userToDisplay.getUsername().length() > 12) {
+                usernameDisplay = userToDisplay.getUsername().substring(0, 12) + "...";
+            }
             usernameView.setText(usernameDisplay + " (you)");
+            usernameView.setTextColor(Color.parseColor("#FF3700B3"));
+            usernameView.setTypeface(null, Typeface.BOLD);
         } else {
             usernameView.setText(usernameDisplay);
+            usernameView.setTextColor(Color.parseColor("#808080"));
+            usernameView.setTypeface(null, Typeface.NORMAL);
         }
         scoreView.setText(userToDisplay.getTotalScore().toString());
         switch(sortPos) {
