@@ -1092,29 +1092,6 @@
     </incident>
 
     <incident
-        id="TextFields"
-        severity="warning"
-        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="44"
-            column="9"
-            startOffset="1706"
-            endLine="44"
-            endColumn="43"
-            endOffset="1740"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="39"
-            column="9"
-            startOffset="1517"
-            endLine="39"
-            endColumn="39"
-            endOffset="1547"
-            message="id defined here"/>
-    </incident>
-
-    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -1140,6 +1117,29 @@
             endLine="38"
             endColumn="14"
             endOffset="1508"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="44"
+            column="9"
+            startOffset="1706"
+            endLine="44"
+            endColumn="43"
+            endOffset="1740"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="39"
+            column="9"
+            startOffset="1517"
+            endLine="39"
+            endColumn="39"
+            endOffset="1547"
+            message="id defined here"/>
     </incident>
 
     <incident
