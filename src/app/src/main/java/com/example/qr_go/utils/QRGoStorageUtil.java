@@ -2,23 +2,26 @@ package com.example.qr_go.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 
+import com.example.qr_go.activities.MapsActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
-
+@RequiresApi(api = Build.VERSION_CODES.O)
 public class QRGoStorageUtil {
     //TODO send image to DB, resize image before sending to DB, adding a way to reference inside the classes
     // TODO convert between byte and bitmap
-
+    FirebaseStorage storage = MapsActivity.storage;
     public void getImageFromStorage(String photoRef){
-        FirebaseStorage storage = FirebaseStorage.getInstance();
         StorageReference storageRef = storage.getReference();
         StorageReference islandRef = storageRef.child(photoRef);
 
@@ -40,7 +43,6 @@ public class QRGoStorageUtil {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
         byte[] data1 = baos.toByteArray();
-        FirebaseStorage storage = FirebaseStorage.getInstance();
         StorageReference storageRef = storage.getReference();
         StorageReference imageRef = storageRef.child(ref);
 

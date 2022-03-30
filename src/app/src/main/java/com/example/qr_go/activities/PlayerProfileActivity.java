@@ -26,6 +26,7 @@ import com.example.qr_go.objects.LoginQRCode;
 import com.example.qr_go.objects.Player;
 import com.example.qr_go.objects.StatusQRCode;
 import com.example.qr_go.utils.QRGoStorageUtil;
+import com.example.qr_go.utils.StringUtil;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -43,11 +44,11 @@ import java.io.IOException;
 
 @RequiresApi(api = Build.VERSION_CODES.O)
 public class PlayerProfileActivity extends BaseActivity {
-
+    public StringUtil stringUtil = new StringUtil();
     public static FirebaseFirestore db;
     private Player currentUser = new Player();
     public static final int GET_FROM_GALLERY = 3;
-
+    public FirebaseStorage storage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,11 +59,11 @@ public class PlayerProfileActivity extends BaseActivity {
         EditText emailEditText = findViewById(R.id.player_email);
         ImageView profileImage = findViewById(R.id.profile_photo);
         String currentUserId = MapsActivity.getUserId();
-
         db = FirebaseFirestore.getInstance();
-        FirebaseStorage storage = FirebaseStorage.getInstance();
+        storage = MapsActivity.storage;
         StorageReference storageRef = storage.getReference();
-        StorageReference islandRef = storageRef.child("test1.jpg");
+        String ImageRef = stringUtil.ImagePlayerRef(currentUserId);
+        StorageReference islandRef = storageRef.child(ImageRef);
 
         final long ONE_MEGABYTE = 5 * 1024 * 1024;
         islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
@@ -192,7 +193,8 @@ public class PlayerProfileActivity extends BaseActivity {
                 ImageView profileImage = findViewById(R.id.profile_photo);
                 profileImage.setImageBitmap(bitmap);
                 QRGoStorageUtil StorageUtil = new QRGoStorageUtil();
-                StorageUtil.updateImageFromStorage(bitmap, "test2.jpg");
+                StorageUtil.updateImageFromStorage(bitmap, stringUtil.ImagePlayerRef(MapsActivity.getUserId()));
+
             } catch (FileNotFoundException e) {
                 Toast.makeText(this, "ERROR: file not found", Toast.LENGTH_LONG).show();
                 e.printStackTrace();
