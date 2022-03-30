@@ -8,12 +8,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.qr_go.R;
 import com.example.qr_go.objects.GameQRCode;
+import com.example.qr_go.objects.Player;
 
 import java.util.ArrayList;
 
 public class ScannedUsersActivity extends AppCompatActivity {
 
-    GameQRCode selectedQR;
+    private GameQRCode selectedQR;
+
+    private ArrayList<Player> players;
 
     ListView userList;
     ArrayAdapter<String> userAdapter;
@@ -33,7 +36,9 @@ public class ScannedUsersActivity extends AppCompatActivity {
             selectedQR = null;
         } else {
             selectedQR = (GameQRCode) getIntent().getSerializableExtra("selectedQR");
+
             userDataList = selectedQR.getUserObjects();
+
         }
 
         userAdapter = new ArrayAdapter<>(this, R.layout.list_users_content, userDataList);
