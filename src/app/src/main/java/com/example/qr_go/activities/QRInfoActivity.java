@@ -23,6 +23,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
@@ -32,6 +33,7 @@ public class QRInfoActivity extends BaseActivity {
 
     FirebaseFirestore db;
     private Player thisTempPlayer; // TODO: temporary, replace with currently logged in user
+    private Player currentUser = new Player();
 
     private GameQRCode selectedQR;
     private String selectedQRId;
@@ -58,6 +60,8 @@ public class QRInfoActivity extends BaseActivity {
         usersActivityIntent = new Intent(QRInfoActivity.this, ScannedUsersActivity.class);
 
         db = FirebaseFirestore.getInstance();
+
+
 
         comments = new CommentsQR();
 
@@ -160,9 +164,28 @@ public class QRInfoActivity extends BaseActivity {
         EditText inputComment = (EditText) findViewById(R.id.inputComment);
         String message = inputComment.getText().toString();
 
-        Comment comment = new Comment(thisTempPlayer.getUsername(), message);
-        comments.addComment(thisTempPlayer, message, null);
-        commentAdapter.add(comment);
+        String currentUserId = MapsActivity.getUserId();
+
+        db.collection("Players")
+                .whereEqualTo("userid", currentUserId)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    // code from https://stackoverflow.com/questions/65465335/get-specific-field-from-firestore-with-whereequalto
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                currentUser = document.toObject(Player.class);
+
+                                Comment comment = new Comment(currentUser.getUsername(), message);
+                                comments.addComment(currentUser, message, null);
+                                commentAdapter.add(comment);
+                            }
+                        }
+                    }
+                });
+
+
 //        db.addCommenttoDB(comments, selectedQR);
 
         inputComment.setText(""); // clear input after send
