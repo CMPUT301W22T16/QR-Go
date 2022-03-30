@@ -1050,29 +1050,6 @@
     </incident>
 
     <incident
-        id="TextFields"
-        severity="warning"
-        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="27"
-            column="9"
-            startOffset="1000"
-            endLine="27"
-            endColumn="43"
-            endOffset="1034"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="22"
-            column="9"
-            startOffset="811"
-            endLine="22"
-            endColumn="39"
-            endOffset="841"
-            message="id defined here"/>
-    </incident>
-
-    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -1098,6 +1075,29 @@
             endLine="21"
             endColumn="14"
             endOffset="802"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="27"
+            column="9"
+            startOffset="1000"
+            endLine="27"
+            endColumn="43"
+            endOffset="1034"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="22"
+            column="9"
+            startOffset="811"
+            endLine="22"
+            endColumn="39"
+            endOffset="841"
+            message="id defined here"/>
     </incident>
 
     <incident
@@ -1204,12 +1204,12 @@
         message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
-            line="14"
+            line="21"
             column="9"
-            startOffset="537"
-            endLine="14"
+            startOffset="823"
+            endLine="21"
             endColumn="29"
-            endOffset="557"/>
+            endOffset="843"/>
     </incident>
 
     <incident
@@ -1218,12 +1218,12 @@
         message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
-            line="23"
+            line="30"
             column="9"
-            startOffset="807"
-            endLine="23"
+            startOffset="1093"
+            endLine="30"
             endColumn="29"
-            endOffset="827"/>
+            endOffset="1113"/>
     </incident>
 
     <incident
@@ -1232,12 +1232,12 @@
         message="Invalid layout param in a `LinearLayout`: `layout_alignParentRight`">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
-            line="34"
+            line="41"
             column="9"
-            startOffset="1206"
-            endLine="34"
+            startOffset="1492"
+            endLine="41"
             endColumn="47"
-            endOffset="1244"/>
+            endOffset="1530"/>
     </incident>
 
     <incident
@@ -1246,12 +1246,12 @@
         message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
-            line="14"
+            line="21"
             column="9"
-            startOffset="540"
-            endLine="14"
+            startOffset="825"
+            endLine="21"
             endColumn="29"
-            endOffset="560"/>
+            endOffset="845"/>
     </incident>
 
     <incident
@@ -1260,12 +1260,12 @@
         message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
-            line="23"
+            line="30"
             column="9"
-            startOffset="812"
-            endLine="23"
+            startOffset="1097"
+            endLine="30"
             endColumn="29"
-            endOffset="832"/>
+            endOffset="1117"/>
     </incident>
 
     <incident
@@ -1274,12 +1274,12 @@
         message="Invalid layout param in a `LinearLayout`: `layout_alignParentRight`">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
-            line="34"
+            line="41"
             column="9"
-            startOffset="1213"
-            endLine="34"
+            startOffset="1498"
+            endLine="41"
             endColumn="47"
-            endOffset="1251"/>
+            endOffset="1536"/>
     </incident>
 
     <incident
@@ -1731,12 +1731,12 @@
         message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/PlayerProfileActivity.java"
-            line="47"
+            line="39"
             column="12"
-            startOffset="1596"
-            endLine="47"
+            startOffset="1209"
+            endLine="39"
             endColumn="18"
-            endOffset="1602"/>
+            endOffset="1215"/>
     </incident>
 
     <incident
@@ -2212,12 +2212,12 @@
             replacement="1.4.0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="59"
+            line="55"
             column="31"
-            startOffset="2070"
-            endLine="59"
+            startOffset="1875"
+            endLine="55"
             endColumn="59"
-            endOffset="2098"/>
+            endOffset="1903"/>
     </incident>
 
     <incident
@@ -2231,12 +2231,12 @@
             replacement="1.4.0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="60"
+            line="56"
             column="31"
-            startOffset="2129"
-            endLine="60"
+            startOffset="1934"
+            endLine="56"
             endColumn="58"
-            endOffset="2156"/>
+            endOffset="1961"/>
     </incident>
 
     <incident

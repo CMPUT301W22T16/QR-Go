@@ -7,6 +7,13 @@
     android:layout_margin="10dp"
     android:descendantFocusability="blocksDescendants">
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/qr_search_option_icon"
+        android:layout_height="70dp"
+        android:layout_width="70dp"
+        android:paddingRight="15dp"
+        android:src="@drawable/round_qr_code_scanner_24"/>
+
     <TextView
         android:id="@+id/qr_id_view"
         android:layout_width="wrap_content"

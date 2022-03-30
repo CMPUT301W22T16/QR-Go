@@ -12,6 +12,7 @@ import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.qr_go.R;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.imageview.ShapeableImageView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -29,12 +30,17 @@ public final class QrListContentBinding implements ViewBinding {
   @NonNull
   public final TextView qrScoreView;
 
+  @NonNull
+  public final ShapeableImageView qrSearchOptionIcon;
+
   private QrListContentBinding(@NonNull LinearLayout rootView, @NonNull MaterialButton qrDelButton,
-      @NonNull TextView qrIdView, @NonNull TextView qrScoreView) {
+      @NonNull TextView qrIdView, @NonNull TextView qrScoreView,
+      @NonNull ShapeableImageView qrSearchOptionIcon) {
     this.rootView = rootView;
     this.qrDelButton = qrDelButton;
     this.qrIdView = qrIdView;
     this.qrScoreView = qrScoreView;
+    this.qrSearchOptionIcon = qrSearchOptionIcon;
   }
 
   @Override
@@ -82,7 +88,14 @@ public final class QrListContentBinding implements ViewBinding {
         break missingId;
       }
 
-      return new QrListContentBinding((LinearLayout) rootView, qrDelButton, qrIdView, qrScoreView);
+      id = R.id.qr_search_option_icon;
+      ShapeableImageView qrSearchOptionIcon = ViewBindings.findChildViewById(rootView, id);
+      if (qrSearchOptionIcon == null) {
+        break missingId;
+      }
+
+      return new QrListContentBinding((LinearLayout) rootView, qrDelButton, qrIdView, qrScoreView,
+          qrSearchOptionIcon);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
