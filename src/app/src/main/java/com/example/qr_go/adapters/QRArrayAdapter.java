@@ -53,7 +53,7 @@ public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> {
         Button delButton = (Button) view.findViewById(R.id.qr_del_button);
         TextView idView = view.findViewById(R.id.qr_id_view);
         TextView scoreView = view.findViewById(R.id.qr_score_view);
-        idView.setText(qrToDisplay.getId().substring(0, 8));
+        idView.setText(qrToDisplay.getId().substring(0, 8) + "...");
 
         // Show the delete button if the current user is an owner
         if (SearchActivity.getUserOwner()) {
