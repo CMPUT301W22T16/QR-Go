@@ -4,7 +4,7 @@ package com.example.qr_go.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,7 +19,7 @@ import java.lang.String;
 
 public final class QrListContentBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
   public final MaterialButton qrDelButton;
@@ -33,9 +33,9 @@ public final class QrListContentBinding implements ViewBinding {
   @NonNull
   public final TextView qrScoreView;
 
-  private QrListContentBinding(@NonNull LinearLayout rootView, @NonNull MaterialButton qrDelButton,
-      @NonNull TextView qrIdView, @NonNull ShapeableImageView qrPicture,
-      @NonNull TextView qrScoreView) {
+  private QrListContentBinding(@NonNull RelativeLayout rootView,
+      @NonNull MaterialButton qrDelButton, @NonNull TextView qrIdView,
+      @NonNull ShapeableImageView qrPicture, @NonNull TextView qrScoreView) {
     this.rootView = rootView;
     this.qrDelButton = qrDelButton;
     this.qrIdView = qrIdView;
@@ -45,7 +45,7 @@ public final class QrListContentBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -94,7 +94,7 @@ public final class QrListContentBinding implements ViewBinding {
         break missingId;
       }
 
-      return new QrListContentBinding((LinearLayout) rootView, qrDelButton, qrIdView, qrPicture,
+      return new QrListContentBinding((RelativeLayout) rootView, qrDelButton, qrIdView, qrPicture,
           qrScoreView);
     }
     String missingId = rootView.getResources().getResourceName(id);
