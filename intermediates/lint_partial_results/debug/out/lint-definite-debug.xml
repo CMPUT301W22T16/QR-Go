@@ -1050,6 +1050,29 @@
     </incident>
 
     <incident
+        id="TextFields"
+        severity="warning"
+        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="27"
+            column="9"
+            startOffset="1000"
+            endLine="27"
+            endColumn="43"
+            endOffset="1034"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="22"
+            column="9"
+            startOffset="811"
+            endLine="22"
+            endColumn="39"
+            endOffset="841"
+            message="id defined here"/>
+    </incident>
+
+    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -1075,29 +1098,6 @@
             endLine="21"
             endColumn="14"
             endOffset="802"/>
-    </incident>
-
-    <incident
-        id="TextFields"
-        severity="warning"
-        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="27"
-            column="9"
-            startOffset="1000"
-            endLine="27"
-            endColumn="43"
-            endOffset="1034"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="22"
-            column="9"
-            startOffset="811"
-            endLine="22"
-            endColumn="39"
-            endOffset="841"
-            message="id defined here"/>
     </incident>
 
     <incident
@@ -1206,10 +1206,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
             line="34"
             column="13"
-            startOffset="1354"
+            startOffset="1355"
             endLine="34"
             endColumn="33"
-            endOffset="1374"/>
+            endOffset="1375"/>
     </incident>
 
     <incident
@@ -1218,12 +1218,12 @@
         message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
-            line="42"
+            line="41"
             column="13"
-            startOffset="1606"
-            endLine="42"
+            startOffset="1594"
+            endLine="41"
             endColumn="33"
-            endOffset="1626"/>
+            endOffset="1614"/>
     </incident>
 
     <incident
@@ -1311,6 +1311,27 @@
     </incident>
 
     <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-attribute
+            description="Set contentDescription"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="contentDescription"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_qr_list_content.xml"
+            line="26"
+            column="6"
+            startOffset="816"
+            endLine="26"
+            endColumn="15"
+            endOffset="825"/>
+    </incident>
+
+    <incident
         id="HardcodedText"
         severity="warning"
         message="Hardcoded string &quot;Search&quot;, should use `@string` resource">
@@ -1395,12 +1416,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="74"
+            line="90"
             column="54"
-            startOffset="3230"
-            endLine="74"
+            startOffset="4176"
+            endLine="90"
             endColumn="110"
-            endOffset="3286"/>
+            endOffset="4232"/>
     </incident>
 
     <incident
@@ -1409,12 +1430,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="75"
+            line="91"
             column="53"
-            startOffset="3341"
-            endLine="75"
+            startOffset="4287"
+            endLine="91"
             endColumn="108"
-            endOffset="3396"/>
+            endOffset="4342"/>
     </incident>
 
     <incident
@@ -1423,12 +1444,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="76"
+            line="92"
             column="47"
-            startOffset="3445"
-            endLine="76"
+            startOffset="4391"
+            endLine="92"
             endColumn="108"
-            endOffset="3506"/>
+            endOffset="4452"/>
     </incident>
 
     <incident
@@ -1437,12 +1458,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="77"
+            line="93"
             column="52"
-            startOffset="3560"
-            endLine="77"
+            startOffset="4506"
+            endLine="93"
             endColumn="100"
-            endOffset="3608"/>
+            endOffset="4554"/>
     </incident>
 
     <incident
@@ -1451,12 +1472,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="80"
+            line="96"
             column="61"
-            startOffset="3848"
-            endLine="80"
+            startOffset="4794"
+            endLine="96"
             endColumn="108"
-            endOffset="3895"/>
+            endOffset="4841"/>
     </incident>
 
     <incident
@@ -1465,12 +1486,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="80"
+            line="96"
             column="61"
-            startOffset="3848"
-            endLine="80"
+            startOffset="4794"
+            endLine="96"
             endColumn="70"
-            endOffset="3857"/>
+            endOffset="4803"/>
     </incident>
 
     <incident
@@ -1479,12 +1500,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="80"
+            line="96"
             column="73"
-            startOffset="3860"
-            endLine="80"
+            startOffset="4806"
+            endLine="96"
             endColumn="108"
-            endOffset="3895"/>
+            endOffset="4841"/>
     </incident>
 
     <incident
@@ -1493,12 +1514,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="83"
+            line="99"
             column="60"
-            startOffset="4130"
-            endLine="83"
+            startOffset="5076"
+            endLine="99"
             endColumn="106"
-            endOffset="4176"/>
+            endOffset="5122"/>
     </incident>
 
     <incident
@@ -1507,12 +1528,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="83"
+            line="99"
             column="60"
-            startOffset="4130"
-            endLine="83"
+            startOffset="5076"
+            endLine="99"
             endColumn="69"
-            endOffset="4139"/>
+            endOffset="5085"/>
     </incident>
 
     <incident
@@ -1521,12 +1542,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="83"
+            line="99"
             column="72"
-            startOffset="4142"
-            endLine="83"
+            startOffset="5088"
+            endLine="99"
             endColumn="106"
-            endOffset="4176"/>
+            endOffset="5122"/>
     </incident>
 
     <incident
@@ -1535,12 +1556,12 @@
         message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MapsActivity.java"
-            line="51"
+            line="50"
             column="12"
-            startOffset="1788"
-            endLine="51"
+            startOffset="1736"
+            endLine="50"
             endColumn="18"
-            endOffset="1794"/>
+            endOffset="1742"/>
     </incident>
 
     <incident
@@ -1717,12 +1738,12 @@
         message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/PlayerProfileActivity.java"
-            line="48"
+            line="39"
             column="12"
-            startOffset="1691"
-            endLine="48"
+            startOffset="1209"
+            endLine="39"
             endColumn="18"
-            endOffset="1697"/>
+            endOffset="1215"/>
     </incident>
 
     <incident
@@ -2212,12 +2233,12 @@
             replacement="1.4.0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="59"
+            line="55"
             column="31"
-            startOffset="2070"
-            endLine="59"
+            startOffset="1875"
+            endLine="55"
             endColumn="59"
-            endOffset="2098"/>
+            endOffset="1903"/>
     </incident>
 
     <incident
@@ -2231,12 +2252,12 @@
             replacement="1.4.0"/>
         <location
             file="${:app*projectDir}/build.gradle"
-            line="60"
+            line="56"
             column="31"
-            startOffset="2129"
-            endLine="60"
+            startOffset="1934"
+            endLine="56"
             endColumn="58"
-            endOffset="2156"/>
+            endOffset="1961"/>
     </incident>
 
     <incident
