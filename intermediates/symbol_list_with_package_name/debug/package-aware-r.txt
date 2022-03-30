@@ -1369,6 +1369,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color gray
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color m3_appbar_overlay_color
@@ -2640,6 +2641,7 @@ drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable user_searchbar
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -3028,6 +3030,7 @@ id qr_code_image
 id qr_del_button
 id qr_id_view
 id qr_list
+id qr_picture
 id qr_score_view
 id qr_search_option_icon
 id qr_search_option_text
@@ -3167,7 +3170,6 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
-id trash_button
 id triangle
 id unchecked
 id uniform
@@ -3177,7 +3179,9 @@ id useLogo
 id userList
 id user_del_button
 id user_list
+id user_picture
 id user_qr_list
+id user_rank_view
 id user_score_view
 id username_view
 id usersContent

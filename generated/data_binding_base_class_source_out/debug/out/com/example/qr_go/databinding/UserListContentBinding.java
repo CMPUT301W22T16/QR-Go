@@ -4,7 +4,7 @@ package com.example.qr_go.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,16 +12,23 @@ import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.qr_go.R;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.imageview.ShapeableImageView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class UserListContentBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
   public final MaterialButton userDelButton;
+
+  @NonNull
+  public final ShapeableImageView userPicture;
+
+  @NonNull
+  public final TextView userRankView;
 
   @NonNull
   public final TextView userScoreView;
@@ -29,18 +36,21 @@ public final class UserListContentBinding implements ViewBinding {
   @NonNull
   public final TextView usernameView;
 
-  private UserListContentBinding(@NonNull LinearLayout rootView,
-      @NonNull MaterialButton userDelButton, @NonNull TextView userScoreView,
+  private UserListContentBinding(@NonNull RelativeLayout rootView,
+      @NonNull MaterialButton userDelButton, @NonNull ShapeableImageView userPicture,
+      @NonNull TextView userRankView, @NonNull TextView userScoreView,
       @NonNull TextView usernameView) {
     this.rootView = rootView;
     this.userDelButton = userDelButton;
+    this.userPicture = userPicture;
+    this.userRankView = userRankView;
     this.userScoreView = userScoreView;
     this.usernameView = usernameView;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -71,6 +81,18 @@ public final class UserListContentBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.user_picture;
+      ShapeableImageView userPicture = ViewBindings.findChildViewById(rootView, id);
+      if (userPicture == null) {
+        break missingId;
+      }
+
+      id = R.id.user_rank_view;
+      TextView userRankView = ViewBindings.findChildViewById(rootView, id);
+      if (userRankView == null) {
+        break missingId;
+      }
+
       id = R.id.user_score_view;
       TextView userScoreView = ViewBindings.findChildViewById(rootView, id);
       if (userScoreView == null) {
@@ -83,8 +105,8 @@ public final class UserListContentBinding implements ViewBinding {
         break missingId;
       }
 
-      return new UserListContentBinding((LinearLayout) rootView, userDelButton, userScoreView,
-          usernameView);
+      return new UserListContentBinding((RelativeLayout) rootView, userDelButton, userPicture,
+          userRankView, userScoreView, usernameView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

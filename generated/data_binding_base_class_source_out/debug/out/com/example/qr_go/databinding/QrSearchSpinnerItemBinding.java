@@ -4,7 +4,7 @@ package com.example.qr_go.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -18,7 +18,7 @@ import java.lang.String;
 
 public final class QrSearchSpinnerItemBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
   public final ShapeableImageView qrSearchOptionIcon;
@@ -26,7 +26,7 @@ public final class QrSearchSpinnerItemBinding implements ViewBinding {
   @NonNull
   public final MaterialTextView qrSearchOptionText;
 
-  private QrSearchSpinnerItemBinding(@NonNull LinearLayout rootView,
+  private QrSearchSpinnerItemBinding(@NonNull RelativeLayout rootView,
       @NonNull ShapeableImageView qrSearchOptionIcon,
       @NonNull MaterialTextView qrSearchOptionText) {
     this.rootView = rootView;
@@ -36,7 +36,7 @@ public final class QrSearchSpinnerItemBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -73,7 +73,7 @@ public final class QrSearchSpinnerItemBinding implements ViewBinding {
         break missingId;
       }
 
-      return new QrSearchSpinnerItemBinding((LinearLayout) rootView, qrSearchOptionIcon,
+      return new QrSearchSpinnerItemBinding((RelativeLayout) rootView, qrSearchOptionIcon,
           qrSearchOptionText);
     }
     String missingId = rootView.getResources().getResourceName(id);
