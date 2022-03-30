@@ -709,10 +709,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
             line="73"
             column="9"
-            startOffset="2907"
+            startOffset="2905"
             endLine="73"
             endColumn="42"
-            endOffset="2940"/>
+            endOffset="2938"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -726,10 +726,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
             line="111"
             column="9"
-            startOffset="4429"
+            startOffset="4427"
             endLine="111"
             endColumn="43"
-            endOffset="4463"/>
+            endOffset="4461"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -743,10 +743,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
             line="137"
             column="9"
-            startOffset="5473"
+            startOffset="5471"
             endLine="137"
             endColumn="43"
-            endOffset="5507"/>
+            endOffset="5505"/>
         <map>
             <condition minLT="23"/>
         </map>
