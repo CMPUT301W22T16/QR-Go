@@ -19,8 +19,8 @@ public class Player extends User {
     @RequiresApi(api = Build.VERSION_CODES.O)
     public Player()   {
         super();
-        boolean deleted = false;
-        boolean owner = false;
+        deleted = false;
+        owner = false;
     }
 
     /**
@@ -29,8 +29,8 @@ public class Player extends User {
     @RequiresApi(api = Build.VERSION_CODES.O)
     public Player(String uuid, String password, String username, String email) {
         super(uuid, password, username, email);
-        boolean deleted = false;
-        boolean owner = false;
+        deleted = false;
+        owner = false;
     }
 
     /**
