@@ -9,21 +9,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
         android:layout_marginHorizontal="15dp">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/back_button"
-            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_weight="0"
-            android:paddingLeft="0dp"
-            android:text="Back"
-            android:textColor="?colorPrimary"
-            app:icon="@drawable/ic_baseline_chevron_left_24"
-            app:iconSize="30dp"
-            app:iconTint="?colorPrimary" />
 
         <Spinner
             android:id="@+id/sort_spinner"
@@ -35,14 +23,31 @@
             android:background="@null"/>
 
     </RelativeLayout>
-    <EditText
-        android:id="@+id/search_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Search Bar"
-        android:inputType="textPersonName"
 
-        android:layout_marginHorizontal="15dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginHorizontal="15dp">
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Search Bar"
+            android:layout_alignParentBottom="true"
+            android:inputType="textPersonName"
+            android:background="@drawable/user_searchbar"
+            android:drawableLeft="@drawable/round_search_24"
+            android:visibility="gone" />
+
+        <Spinner
+            android:id="@+id/qr_search_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone" />
+    </RelativeLayout>
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"

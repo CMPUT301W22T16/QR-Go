@@ -18,48 +18,48 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QRGo">
         <activity
-            android:name=".NewGameQRActivity"
+            android:name=".activities.NewGameQRActivity"
             android:exported="false"
-            android:parentActivityName=".QRCodeScannerActivity" />
+            android:parentActivityName=".activities.QRCodeScannerActivity" />
         <activity
-            android:name=".SearchActivity"
+            android:name=".activities.SearchActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustPan"
             >
         </activity>
         <activity
-            android:name=".PlayerInfoActivity"
+            android:name=".activities.PlayerInfoActivity"
             android:exported="false"
-            android:parentActivityName=".UserSearchFragment" />
+            android:parentActivityName=".fragments.UserSearchFragment" />
         <activity
-            android:name=".QRCodeScannerActivity"
+            android:name=".activities.QRCodeScannerActivity"
             android:exported="false"
-            android:parentActivityName=".MapsActivity" />
+            android:parentActivityName=".activities.MapsActivity" />
         <activity
-            android:name=".MyQRCodesActivity"
+            android:name=".activities.MyQRCodesActivity"
             android:exported="false"
-            android:parentActivityName=".MapsActivity" />
+            android:parentActivityName=".activities.MapsActivity" />
         <activity
-            android:name=".PlayerProfileActivity"
+            android:name=".activities.PlayerProfileActivity"
             android:exported="false"
-            android:parentActivityName=".MapsActivity" />
+            android:parentActivityName=".activities.MapsActivity" />
         <activity
-            android:name=".QRInfoActivity"
+            android:name=".activities.QRInfoActivity"
             android:exported="false"
-            android:parentActivityName=".MapsActivity"
+            android:parentActivityName=".activities.MapsActivity"
             android:windowSoftInputMode="adjustPan"
-            />
+            android:launchMode="singleTop" />
         <activity
-            android:name=".ScannedUsersActivity"
+            android:name=".activities.ScannedUsersActivity"
             android:exported="false"
-            android:parentActivityName=".QRInfoActivity" />
+            android:parentActivityName=".activities.QRInfoActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="${MAPS_API_KEY}" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name=".activities.MapsActivity"
             android:exported="true"
             android:label="@string/title_activity_maps">
             <intent-filter>

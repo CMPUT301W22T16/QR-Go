@@ -7,14 +7,13 @@ import static org.junit.Assert.assertTrue;
 
 import android.Manifest;
 import android.app.Activity;
-import android.content.Intent;
-import android.provider.MediaStore;
 import android.widget.TextView;
 
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.rule.ActivityTestRule;
 import androidx.test.rule.GrantPermissionRule;
 
+import com.example.qr_go.activities.NewGameQRActivity;
 import com.robotium.solo.Solo;
 
 import org.junit.After;
