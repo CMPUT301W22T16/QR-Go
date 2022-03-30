@@ -15,10 +15,12 @@ public class Player extends User {
      * Constructor for player class
      */
     private boolean deleted;
+    private boolean owner;
     @RequiresApi(api = Build.VERSION_CODES.O)
     public Player()   {
         super();
         boolean deleted = false;
+        boolean owner = false;
     }
 
     /**
@@ -28,13 +30,14 @@ public class Player extends User {
     public Player(String uuid, String password, String username, String email) {
         super(uuid, password, username, email);
         boolean deleted = false;
+        boolean owner = false;
     }
 
     /**
      * @return Returns false as players are not owners
      */
     public Boolean isOwner() {
-        return false;
+        return owner;
     }
 
     /**
