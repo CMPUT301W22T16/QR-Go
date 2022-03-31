@@ -252,12 +252,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="15"
+            line="18"
             column="13"
-            startOffset="507"
-            endLine="15"
+            startOffset="634"
+            endLine="18"
             endColumn="38"
-            endOffset="532"/>
+            endOffset="659"/>
         <map>
             <entry
                 name="applies"
@@ -275,12 +275,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="23"
+            line="24"
             column="13"
-            startOffset="803"
-            endLine="23"
+            startOffset="848"
+            endLine="24"
             endColumn="38"
-            endOffset="828"/>
+            endOffset="873"/>
         <map>
             <entry
                 name="applies"
@@ -298,12 +298,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="44"
+            line="45"
             column="21"
-            startOffset="1714"
-            endLine="44"
+            startOffset="1759"
+            endLine="45"
             endColumn="46"
-            endOffset="1739"/>
+            endOffset="1784"/>
         <map>
             <entry
                 name="applies"
@@ -321,12 +321,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="61"
+            line="62"
             column="21"
-            startOffset="2437"
-            endLine="61"
+            startOffset="2482"
+            endLine="62"
             endColumn="46"
-            endOffset="2462"/>
+            endOffset="2507"/>
         <map>
             <entry
                 name="applies"
@@ -344,12 +344,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="78"
+            line="79"
             column="21"
-            startOffset="3178"
-            endLine="78"
+            startOffset="3223"
+            endLine="79"
             endColumn="46"
-            endOffset="3203"/>
+            endOffset="3248"/>
         <map>
             <entry
                 name="applies"
@@ -367,12 +367,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="97"
+            line="98"
             column="21"
-            startOffset="3919"
-            endLine="97"
+            startOffset="3964"
+            endLine="98"
             endColumn="46"
-            endOffset="3944"/>
+            endOffset="3989"/>
         <map>
             <entry
                 name="applies"
@@ -390,12 +390,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="116"
+            line="117"
             column="21"
-            startOffset="4660"
-            endLine="116"
+            startOffset="4705"
+            endLine="117"
             endColumn="46"
-            endOffset="4685"/>
+            endOffset="4730"/>
         <map>
             <entry
                 name="applies"
