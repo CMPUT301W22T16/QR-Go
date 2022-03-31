@@ -177,7 +177,7 @@ document.getElementById(id).style.display = 'none';
       <span class="mdl-layout-title">Lint Report: 193 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Thu Mar 31 16:17:48 UTC 2022      </nav>
+Check performed at Thu Mar 31 21:05:24 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -483,8 +483,7 @@ Dismiss</button>            </div>
 <span class="caretline"><span class="lineno"> 59 </span>    androidTestImplementation <span class="warning"><span class="string">'androidx.test:runner:1.2.0'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno"> 60 </span>    androidTestImplementation <span class="string">'androidx.test:rules:1.2.0'</span>
 <span class="lineno"> 61 </span>    implementation <span class="string">'nl.dionsegijn:konfetti-xml:2.0.2'</span>
-<span class="lineno"> 62 </span>}
-</pre>
+<span class="lineno"> 62 </span>    implementation <span class="string">'com.google.code.gson:gson:2.9.0'</span></pre>
 
 <span class="location"><a href="../../build.gradle">../../build.gradle</a>:60</span>: <span class="message">A newer version of androidx.test:rules than 1.2.0 is available: 1.4.0</span><br /><pre class="errorlines">
 <span class="lineno"> 57 </span>    implementation <span class="string">'com.github.yuriy-budiyev:code-scanner:2.1.1'</span>
@@ -492,7 +491,8 @@ Dismiss</button>            </div>
 <span class="lineno"> 59 </span>    androidTestImplementation <span class="string">'androidx.test:runner:1.2.0'</span>
 <span class="caretline"><span class="lineno"> 60 </span>    androidTestImplementation <span class="warning"><span class="string">'androidx.test:rules:1.2.0'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno"> 61 </span>    implementation <span class="string">'nl.dionsegijn:konfetti-xml:2.0.2'</span>
-<span class="lineno"> 62 </span>}
+<span class="lineno"> 62 </span>    implementation <span class="string">'com.google.code.gson:gson:2.9.0'</span>
+<span class="lineno"> 63 </span>}
 </pre>
 
 </div>
@@ -1615,23 +1615,23 @@ Dismiss</button>            </div>
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/activities/QRInfoActivity.java">../../src/main/java/com/example/qr_go/activities/QRInfoActivity.java</a>:103</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno"> 100 </span>
-<span class="lineno"> 101 </span>   tvQRName.setText(selectedQR.getId());
-<span class="lineno"> 102 </span>   tvQRLocation.setText(selectedQR.getGeoLocation().getAddress());
-<span class="caretline"><span class="lineno"> 103 </span>   tvScore.setText(<span class="warning"><span class="string">"Score: "</span> + selectedQR.getScore()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 100 </span>       <span class="keyword">if</span> (selectedQR == <span class="keyword">null</span>) <span class="keyword">return</span>; <span class="comment">// ABORT: an error occurred</span>
+<span class="lineno"> 101 </span>
+<span class="lineno"> 102 </span>       tvQRName.setText(selectedQR.getId());
+<span class="caretline"><span class="lineno"> 103 </span>       tvScore.setText(<span class="warning"><span class="string">"Score: "</span> + selectedQR.getScore()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno"> 104 </span>
-<span class="lineno"> 105 </span>   <span class="comment">// set image Darius Fang</span>
-<span class="lineno"> 106 </span>   ImageView profileImage = findViewById(R.id.profile_photo);
+<span class="lineno"> 105 </span>       GeoLocation geoLocation = selectedQR.getGeoLocation();
+<span class="lineno"> 106 </span>       <span class="keyword">if</span> (geoLocation != <span class="keyword">null</span>)
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/activities/QRInfoActivity.java">../../src/main/java/com/example/qr_go/activities/QRInfoActivity.java</a>:103</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
-<span class="lineno"> 100 </span>
-<span class="lineno"> 101 </span>   tvQRName.setText(selectedQR.getId());
-<span class="lineno"> 102 </span>   tvQRLocation.setText(selectedQR.getGeoLocation().getAddress());
-<span class="caretline"><span class="lineno"> 103 </span>   tvScore.setText(<span class="warning"><span class="string">"Score: "</span></span> + selectedQR.getScore());&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 100 </span>       <span class="keyword">if</span> (selectedQR == <span class="keyword">null</span>) <span class="keyword">return</span>; <span class="comment">// ABORT: an error occurred</span>
+<span class="lineno"> 101 </span>
+<span class="lineno"> 102 </span>       tvQRName.setText(selectedQR.getId());
+<span class="caretline"><span class="lineno"> 103 </span>       tvScore.setText(<span class="warning"><span class="string">"Score: "</span></span> + selectedQR.getScore());&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno"> 104 </span>
-<span class="lineno"> 105 </span>   <span class="comment">// set image Darius Fang</span>
-<span class="lineno"> 106 </span>   ImageView profileImage = findViewById(R.id.profile_photo);
+<span class="lineno"> 105 </span>       GeoLocation geoLocation = selectedQR.getGeoLocation();
+<span class="lineno"> 106 </span>       <span class="keyword">if</span> (geoLocation != <span class="keyword">null</span>)
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:101</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">

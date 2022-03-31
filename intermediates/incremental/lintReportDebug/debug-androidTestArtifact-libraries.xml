@@ -876,6 +876,10 @@
       jars="/home/runner/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.3/ba035118bc8bac37d7eff77700720999acd9986d/j2objc-annotations-1.3.jar"
       resolved="com.google.j2objc:j2objc-annotations:1.3"/>
   <library
+      name="com.google.code.gson:gson:2.9.0@jar"
+      jars="/home/runner/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.9.0/8a1167e089096758b49f9b34066ef98b2f4b37aa/gson-2.9.0.jar"
+      resolved="com.google.code.gson:gson:2.9.0"/>
+  <library
       name="nl.dionsegijn:konfetti-xml:2.0.2@aar"
       jars="/home/runner/.gradle/caches/transforms-3/d2bf233877c74112aa20826405df6f93/transformed/konfetti-xml-2.0.2/jars/classes.jar"
       resolved="nl.dionsegijn:konfetti-xml:2.0.2"

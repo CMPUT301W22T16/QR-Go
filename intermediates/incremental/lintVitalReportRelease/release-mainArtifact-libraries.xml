@@ -221,6 +221,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="com.google.code.gson:gson:2.9.0@jar"
+      jars="/home/runner/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.9.0/8a1167e089096758b49f9b34066ef98b2f4b37aa/gson-2.9.0.jar"
+      resolved="com.google.code.gson:gson:2.9.0"/>
+  <library
       name="androidx.viewpager2:viewpager2:1.0.0@aar"
       jars="/home/runner/.gradle/caches/transforms-3/f8a393d364a85180418eea880820f0e1/transformed/viewpager2-1.0.0/jars/classes.jar"
       resolved="androidx.viewpager2:viewpager2:1.0.0"
@@ -1045,10 +1049,6 @@
       name="io.perfmark:perfmark-api:0.23.0@jar"
       jars="/home/runner/.gradle/caches/modules-2/files-2.1/io.perfmark/perfmark-api/0.23.0/b813b7539fae6550541da8caafd6add86d4e22f/perfmark-api-0.23.0.jar"
       resolved="io.perfmark:perfmark-api:0.23.0"/>
-  <library
-      name="com.google.code.gson:gson:2.8.9@jar"
-      jars="/home/runner/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.9/8a432c1d6825781e21a02db2e2c33c5fde2833b9/gson-2.8.9.jar"
-      resolved="com.google.code.gson:gson:2.8.9"/>
   <library
       name="com.google.android:annotations:4.1.1.4@jar"
       jars="/home/runner/.gradle/caches/modules-2/files-2.1/com.google.android/annotations/4.1.1.4/a1678ba907bf92691d879fef34e1a187038f9259/annotations-4.1.1.4.jar"
