@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.qr_go.objects.UserTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-03-31T15:45:50" hostname="fv-az131-565" time="0.057">
+<testsuite name="com.example.qr_go.objects.UserTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-03-31T16:17:42" hostname="fv-az128-665" time="0.082">
   <properties/>
-  <testcase name="testGetHighestScore" classname="com.example.qr_go.objects.UserTest" time="0.008"/>
+  <testcase name="testGetHighestScore" classname="com.example.qr_go.objects.UserTest" time="0.016"/>
   <testcase name="testRemoveQRCode" classname="com.example.qr_go.objects.UserTest" time="0.001"/>
-  <testcase name="testIsEmailValid" classname="com.example.qr_go.objects.UserTest" time="0.035"/>
+  <testcase name="testIsEmailValid" classname="com.example.qr_go.objects.UserTest" time="0.054"/>
   <testcase name="testAddQRCode" classname="com.example.qr_go.objects.UserTest" time="0.002"/>
-  <testcase name="testGetTotalScore" classname="com.example.qr_go.objects.UserTest" time="0.002"/>
+  <testcase name="testGetTotalScore" classname="com.example.qr_go.objects.UserTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

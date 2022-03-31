@@ -58,12 +58,12 @@
             mark="0"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="14"
-            column="10"
-            startOffset="485"
-            endLine="14"
-            endColumn="19"
-            endOffset="494"/>
+            line="22"
+            column="14"
+            startOffset="838"
+            endLine="22"
+            endColumn="23"
+            endOffset="847"/>
     </incident>
 
     <incident
@@ -72,12 +72,12 @@
         message="Hardcoded string &quot;Player 1&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="31"
-            column="17"
-            startOffset="1118"
-            endLine="31"
-            endColumn="40"
-            endOffset="1141"/>
+            line="39"
+            column="21"
+            startOffset="1531"
+            endLine="39"
+            endColumn="44"
+            endOffset="1554"/>
     </incident>
 
     <incident
@@ -86,12 +86,12 @@
         message="Hardcoded string &quot;Email:&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="40"
-            column="21"
-            startOffset="1525"
-            endLine="40"
-            endColumn="42"
-            endOffset="1546"/>
+            line="50"
+            column="25"
+            startOffset="1977"
+            endLine="50"
+            endColumn="46"
+            endOffset="1998"/>
     </incident>
 
     <incident
@@ -100,12 +100,12 @@
         message="Hardcoded string &quot;00000&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="46"
-            column="21"
-            startOffset="1812"
-            endLine="46"
-            endColumn="41"
-            endOffset="1832"/>
+            line="57"
+            column="25"
+            startOffset="2289"
+            endLine="57"
+            endColumn="45"
+            endOffset="2309"/>
     </incident>
 
     <incident
@@ -114,12 +114,12 @@
         message="Hardcoded string &quot;QR Codes&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="56"
-            column="21"
-            startOffset="2245"
-            endLine="56"
-            endColumn="44"
-            endOffset="2268"/>
+            line="69"
+            column="25"
+            startOffset="2764"
+            endLine="69"
+            endColumn="48"
+            endOffset="2787"/>
     </incident>
 
     <incident
@@ -128,12 +128,12 @@
         message="Hardcoded string &quot;00000&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="63"
-            column="21"
-            startOffset="2535"
-            endLine="63"
-            endColumn="41"
-            endOffset="2555"/>
+            line="76"
+            column="25"
+            startOffset="3079"
+            endLine="76"
+            endColumn="45"
+            endOffset="3099"/>
     </incident>
 
     <incident
@@ -142,12 +142,12 @@
         message="Hardcoded string &quot;Highest Score&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="73"
-            column="21"
-            startOffset="2978"
-            endLine="73"
-            endColumn="49"
-            endOffset="3006"/>
+            line="88"
+            column="25"
+            startOffset="3564"
+            endLine="88"
+            endColumn="53"
+            endOffset="3592"/>
     </incident>
 
     <incident
@@ -156,12 +156,12 @@
         message="Hardcoded string &quot;00000&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="80"
-            column="21"
-            startOffset="3276"
-            endLine="80"
-            endColumn="41"
-            endOffset="3296"/>
+            line="95"
+            column="25"
+            startOffset="3887"
+            endLine="95"
+            endColumn="45"
+            endOffset="3907"/>
     </incident>
 
     <incident
@@ -170,12 +170,12 @@
         message="Hardcoded string &quot;Lowest Score&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="92"
-            column="21"
-            startOffset="3720"
-            endLine="92"
-            endColumn="48"
-            endOffset="3747"/>
+            line="107"
+            column="25"
+            startOffset="4371"
+            endLine="107"
+            endColumn="52"
+            endOffset="4398"/>
     </incident>
 
     <incident
@@ -184,12 +184,12 @@
         message="Hardcoded string &quot;00000&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="99"
-            column="21"
-            startOffset="4017"
-            endLine="99"
-            endColumn="41"
-            endOffset="4037"/>
+            line="114"
+            column="25"
+            startOffset="4692"
+            endLine="114"
+            endColumn="45"
+            endOffset="4712"/>
     </incident>
 
     <incident
@@ -198,12 +198,12 @@
         message="Hardcoded string &quot;Total Score&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="111"
-            column="21"
-            startOffset="4460"
-            endLine="111"
-            endColumn="47"
-            endOffset="4486"/>
+            line="126"
+            column="25"
+            startOffset="5175"
+            endLine="126"
+            endColumn="51"
+            endOffset="5201"/>
     </incident>
 
     <incident
@@ -212,12 +212,12 @@
         message="Hardcoded string &quot;00000&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="118"
-            column="21"
-            startOffset="4758"
-            endLine="118"
-            endColumn="41"
-            endOffset="4778"/>
+            line="133"
+            column="25"
+            startOffset="5497"
+            endLine="133"
+            endColumn="45"
+            endOffset="5517"/>
     </incident>
 
     <incident
@@ -226,12 +226,12 @@
         message="Hardcoded string &quot;Highest Scoring QR Code:&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="137"
-            column="13"
-            startOffset="5243"
-            endLine="137"
-            endColumn="52"
-            endOffset="5282"/>
+            line="151"
+            column="17"
+            startOffset="6033"
+            endLine="151"
+            endColumn="56"
+            endOffset="6072"/>
     </incident>
 
     <incident
@@ -240,12 +240,12 @@
         message="Hardcoded string &quot;Lowest Scoring QR Code&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="154"
-            column="13"
-            startOffset="5817"
-            endLine="154"
-            endColumn="50"
-            endOffset="5854"/>
+            line="168"
+            column="17"
+            startOffset="6652"
+            endLine="168"
+            endColumn="54"
+            endOffset="6689"/>
     </incident>
 
     <incident
@@ -254,12 +254,12 @@
         message="Hardcoded string &quot;My scanned QR codes:&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="172"
-            column="13"
-            startOffset="6348"
-            endLine="172"
-            endColumn="48"
-            endOffset="6383"/>
+            line="186"
+            column="17"
+            startOffset="7228"
+            endLine="186"
+            endColumn="52"
+            endOffset="7263"/>
     </incident>
 
     <incident
@@ -272,12 +272,12 @@
             replacement="sp"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="173"
-            column="13"
-            startOffset="6396"
-            endLine="173"
-            endColumn="36"
-            endOffset="6419"/>
+            line="187"
+            column="17"
+            startOffset="7280"
+            endLine="187"
+            endColumn="40"
+            endOffset="7303"/>
     </incident>
 
     <incident
@@ -660,35 +660,42 @@
     </incident>
 
     <incident
-        id="HardcodedText"
+        id="UseCompatTextViewDrawableXml"
         severity="warning"
-        message="Hardcoded string &quot;QR LOCATION&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="41"
-            column="13"
-            startOffset="1676"
-            endLine="41"
-            endColumn="39"
-            endOffset="1702"/>
-    </incident>
-
-    <incident
-        id="SpUsage"
-        severity="warning"
-        message="Should use &quot;`sp`&quot; instead of &quot;`dp`&quot; for text sizes">
-        <fix-replace
-            description="Replace with sp"
-            oldPattern=".*(di?p)"
-            replacement="sp"/>
+        message="Use `app:drawableStartCompat` instead of `android:drawableStart`">
+        <fix-composite>
+            <fix-attribute
+                description="Set drawableStartCompat=&quot;@drawable/baseline_place_24&quot;"
+                namespace="http://schemas.android.com/apk/res-auto"
+                attribute="drawableStartCompat"
+                value="@drawable/baseline_place_24"/>
+            <fix-attribute
+                description="Delete drawableStart"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="drawableStart"/>
+        </fix-composite>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="40"
             column="13"
             startOffset="1640"
             endLine="40"
-            endColumn="36"
-            endOffset="1663"/>
+            endColumn="64"
+            endOffset="1691"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;QR LOCATION&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="42"
+            column="13"
+            startOffset="1746"
+            endLine="42"
+            endColumn="39"
+            endOffset="1772"/>
     </incident>
 
     <incident
@@ -697,12 +704,12 @@
         message="Hardcoded string &quot;Score: N/A&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="54"
+            line="56"
             column="9"
-            startOffset="2152"
-            endLine="54"
+            startOffset="2258"
+            endLine="56"
             endColumn="34"
-            endOffset="2177"/>
+            endOffset="2283"/>
     </incident>
 
     <incident
@@ -715,12 +722,12 @@
             replacement="sp"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="55"
+            line="57"
             column="9"
-            startOffset="2186"
-            endLine="55"
+            startOffset="2292"
+            endLine="57"
             endColumn="32"
-            endOffset="2209"/>
+            endOffset="2315"/>
     </incident>
 
     <incident
@@ -729,12 +736,12 @@
         message="Hardcoded string &quot;See other players >&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="67"
+            line="71"
             column="9"
-            startOffset="2659"
-            endLine="67"
+            startOffset="2856"
+            endLine="71"
             endColumn="43"
-            endOffset="2693"/>
+            endOffset="2890"/>
     </incident>
 
     <incident
@@ -743,12 +750,12 @@
         message="Hardcoded string &quot;Send&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="92"
+            line="96"
             column="9"
-            startOffset="3666"
-            endLine="92"
+            startOffset="3864"
+            endLine="96"
             endColumn="28"
-            endOffset="3685"/>
+            endOffset="3883"/>
     </incident>
 
     <incident
@@ -771,12 +778,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="97"
+            line="101"
             column="6"
-            startOffset="3848"
-            endLine="97"
+            startOffset="4046"
+            endLine="101"
             endColumn="14"
-            endOffset="3856"/>
+            endOffset="4054"/>
     </incident>
 
     <incident
@@ -785,12 +792,12 @@
         message="Hardcoded string &quot;Type your comment here&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="106"
+            line="110"
             column="9"
-            startOffset="4177"
-            endLine="106"
+            startOffset="4375"
+            endLine="110"
             endColumn="46"
-            endOffset="4214"/>
+            endOffset="4412"/>
     </incident>
 
     <incident
@@ -1036,29 +1043,6 @@
     </incident>
 
     <incident
-        id="TextFields"
-        severity="warning"
-        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="38"
-            column="9"
-            startOffset="1464"
-            endLine="38"
-            endColumn="43"
-            endOffset="1498"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="29"
-            column="9"
-            startOffset="1079"
-            endLine="29"
-            endColumn="39"
-            endOffset="1109"
-            message="id defined here"/>
-    </incident>
-
-    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -1084,6 +1068,29 @@
             endLine="28"
             endColumn="14"
             endOffset="1070"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="38"
+            column="9"
+            startOffset="1464"
+            endLine="38"
+            endColumn="43"
+            endOffset="1498"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="29"
+            column="9"
+            startOffset="1079"
+            endLine="29"
+            endColumn="39"
+            endOffset="1109"
+            message="id defined here"/>
     </incident>
 
     <incident
@@ -1620,12 +1627,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/QRInfoActivity.java"
-            line="102"
+            line="103"
             column="49"
-            startOffset="3905"
-            endLine="102"
-            endColumn="80"
-            endOffset="3936"/>
+            startOffset="3971"
+            endLine="103"
+            endColumn="82"
+            endOffset="4004"/>
     </incident>
 
     <incident
@@ -1634,12 +1641,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/QRInfoActivity.java"
-            line="102"
+            line="103"
             column="49"
-            startOffset="3905"
-            endLine="102"
+            startOffset="3971"
+            endLine="103"
             endColumn="58"
-            endOffset="3914"/>
+            endOffset="3980"/>
     </incident>
 
     <incident
