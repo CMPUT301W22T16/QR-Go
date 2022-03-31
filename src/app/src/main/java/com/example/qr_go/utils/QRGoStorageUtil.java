@@ -3,10 +3,12 @@ package com.example.qr_go.utils;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Build;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
+import com.example.qr_go.R;
 import com.example.qr_go.activities.MapsActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -22,19 +24,26 @@ public class QRGoStorageUtil {
     // TODO convert between byte and bitmap
     FirebaseStorage storage = MapsActivity.storage;
     public void getImageFromStorage(String photoRef){
+        //ImageView profileImage = findViewById(R.id.profile_photo);
+        String currentUserId = MapsActivity.getUserId();
+        FirebaseStorage storage = MapsActivity.storage;
+        storage = MapsActivity.storage;
+        StringUtil stringUtil = new StringUtil();
         StorageReference storageRef = storage.getReference();
-        StorageReference islandRef = storageRef.child(photoRef);
-
-        final long ONE_MEGABYTE = 1024 * 1024;
+        String ImageRef = stringUtil.ImagePlayerRef(currentUserId);
+        StorageReference islandRef = storageRef.child(ImageRef);
+        final long ONE_MEGABYTE = 5 * 1024 * 1024;
         islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
             @Override
             public void onSuccess(byte[] bytes) {
                 Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                //profileImage.setImageBitmap(bitmap);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception exception) {
                 // Handle any errors
+                return;
             }
         });
     }

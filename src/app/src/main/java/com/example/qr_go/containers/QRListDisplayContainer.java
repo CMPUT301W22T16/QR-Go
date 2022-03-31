@@ -9,6 +9,7 @@ public class QRListDisplayContainer {
     private Double lat;
     private Double lon;
     private Float distance;
+    private byte[] picture;
 
     public QRListDisplayContainer(Integer score, String id, Double lat, Double lon, Float distance) {
         this.score = score;
@@ -16,6 +17,7 @@ public class QRListDisplayContainer {
         this.lat = lat;
         this.lon = lon;
         this.distance = distance;
+        this.picture = new byte[]{};
     }
 
     public Integer getScore() {
@@ -40,5 +42,13 @@ public class QRListDisplayContainer {
 
     public void setDistance(Float distance) {
         this.distance = distance;
+    }
+
+    public byte[] getPicture() {
+        return picture;
+    }
+
+    public void setPicture(byte[] picture) {
+        this.picture = picture;
     }
 }

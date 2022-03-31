@@ -99,7 +99,7 @@ public class GameQRCode extends QRCode implements Serializable {
      */
     public void addUser(User user) {
         HashMap<String, String> details = new HashMap<>();
-        details.put("PhotoRef", "needtofix");
+        details.put("PhotoRef", null);
         details.put("Username", user.getUsername());
         userIds.put(user.getUserid(), details);
     }

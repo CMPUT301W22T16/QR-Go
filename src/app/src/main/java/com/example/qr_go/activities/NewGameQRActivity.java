@@ -30,6 +30,8 @@ import com.example.qr_go.R;
 import com.example.qr_go.objects.GameQRCode;
 import com.example.qr_go.objects.GeoLocation;
 import com.example.qr_go.objects.Player;
+import com.example.qr_go.utils.QRGoStorageUtil;
+import com.example.qr_go.utils.StringUtil;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -54,6 +56,7 @@ import nl.dionsegijn.konfetti.xml.KonfettiView;
  */
 public class NewGameQRActivity extends BaseActivity {
     private GameQRCode gameQRCode;
+    private Bitmap imageBitmap;
     private final int LOCATION_REQUEST_CODE = 101;
     private CheckBox locationCheckbox;
     private static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -200,7 +203,7 @@ public class NewGameQRActivity extends BaseActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
-            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            imageBitmap = (Bitmap) extras.get("data");
             ImageView imageView = findViewById(R.id.take_qr_photo_imageview);
             imageView.setImageBitmap(imageBitmap);
         }
@@ -231,6 +234,9 @@ public class NewGameQRActivity extends BaseActivity {
                 try {
                     Player player = documentSnapshot.toObject(Player.class);
                     db.updateScannedQRtoDB(gameQRCode, player, null);
+                    QRGoStorageUtil StorageUtil = new QRGoStorageUtil();
+                    StringUtil stringUtil = new StringUtil();
+                    StorageUtil.updateImageFromStorage(imageBitmap, stringUtil.ImageQRRef(gameQRCode.getId(), player.getUserid()));
                 }catch (Exception e){
                     /** sometimes the db picks up that it exists while in fact it does not... strange
                      */

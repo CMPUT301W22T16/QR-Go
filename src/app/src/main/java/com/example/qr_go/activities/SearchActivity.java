@@ -5,6 +5,8 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -16,6 +18,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -30,6 +33,8 @@ import com.example.qr_go.R;
 import com.example.qr_go.adapters.SearchFragmentStateAdapter;
 import com.example.qr_go.containers.UserListDisplayContainer;
 import com.example.qr_go.objects.Player;
+import com.example.qr_go.utils.StringUtil;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
@@ -37,6 +42,8 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -249,7 +256,27 @@ public class SearchActivity extends BaseActivity {
                                     user.getHighestUniqueScore(),
                                     MapsActivity.getUserId().equals(user.getUserid())
                             );
-                    userDisplays.add(userToDisplay);
+                    FirebaseStorage storage = MapsActivity.storage;
+                    StringUtil stringUtil = new StringUtil();
+                    StorageReference storageRef = storage.getReference();
+                    String ImageRef = stringUtil.ImagePlayerRef(user.getUserid());
+                    StorageReference islandRef = storageRef.child(ImageRef);
+                    final long ONE_MEGABYTE = 5 * 1024 * 1024;
+                    islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                        @Override
+                        public void onSuccess(byte[] bytes) {
+                            Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                            userToDisplay.setPicture(bitmap);
+                            userDisplays.add(userToDisplay);
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception exception) {
+                            // Handle any errors
+                            return;
+                        }
+                    });
+
                 }
             }
         });
