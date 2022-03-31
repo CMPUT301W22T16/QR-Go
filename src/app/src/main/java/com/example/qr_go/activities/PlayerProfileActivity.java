@@ -118,7 +118,6 @@ public class PlayerProfileActivity extends BaseActivity {
         boolean isValid = true;
 
         if (!currentUser.isEmailValid()) {
-            System.out.println("EMAIL NOT VALID");
             emailEditText.setError("Invalid email address");
             isValid = false;
         }

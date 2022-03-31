@@ -1,7 +1,5 @@
 package com.example.qr_go.objects;
 
-import android.location.Address;
-
 import java.text.DecimalFormat;
 
 public class GeoLocation {
@@ -16,8 +14,17 @@ public class GeoLocation {
     private double longitude;
     private double latitude;
     private Long score;
-    private String address;
     private String locatedQRId;
+
+    public GeocodedLocation getGeocodedLocation() {
+        return geocodedLocation;
+    }
+
+    public void setGeocodedLocation(GeocodedLocation geocodedLocation) {
+        this.geocodedLocation = geocodedLocation;
+    }
+
+    private GeocodedLocation geocodedLocation;
 
     public GeoLocation(String locatedQRId) {
 
@@ -29,12 +36,13 @@ public class GeoLocation {
     }
 
     public String getAddress() {
-        if (address == null) {
-            // Return lat lon if address is not set
+        if (geocodedLocation == null) {
+            // Return lat lon if geocodedLocation is not set
             DecimalFormat df = new DecimalFormat("#.###"); // 3 decimal places
             return df.format(latitude) + ", " + df.format(longitude);
+        } else {
+            return geocodedLocation.getDisplay_name();
         }
-        return address;
     }
 
     public double getLongitude() {
@@ -55,10 +63,6 @@ public class GeoLocation {
 
     public void setScore(Long score) {
         this.score = score;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 
     public void setCoords(double longitude, double latitude) {

@@ -97,10 +97,14 @@ public class QRInfoActivity extends BaseActivity {
                                     selectedQR = document.toObject(GameQRCode.class);
                                 }
                                 usersActivityIntent.putExtra("selectedQR", selectedQR);
+                                if (selectedQR == null) return; // ABORT: an error occurred
 
                                 tvQRName.setText(selectedQR.getId());
-                                tvQRLocation.setText(selectedQR.getGeoLocation().getAddress());
                                 tvScore.setText("Score: " + selectedQR.getScore());
+
+                                GeoLocation geoLocation = selectedQR.getGeoLocation();
+                                if (geoLocation != null)
+                                    tvQRLocation.setText(geoLocation.getAddress());
 
                                 // set image Darius Fang
                                 ImageView profileImage = findViewById(R.id.profile_photo);
