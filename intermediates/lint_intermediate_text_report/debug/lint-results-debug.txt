@@ -212,6 +212,9 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable/sample_prof_pic.xml:2: Warning: The resource R.drawable.sample_prof_pic appears to be unused [UnusedResources]
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 ^
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/values/strings.xml:3: Warning: The resource R.string.title_activity_maps appears to be unused [UnusedResources]
+    <string name="title_activity_maps">MapsActivity</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:2: Warning: The resource R.layout.user_qr_list_content appears to be unused [UnusedResources]
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 ^
@@ -828,4 +831,4 @@
    Please define an explicit reason why it is ignored, and when it can be
    resolved.
 
-0 errors, 193 warnings
+0 errors, 194 warnings

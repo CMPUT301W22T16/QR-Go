@@ -150,8 +150,8 @@
 83-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:62:13-52
 84            android:exported="true"
 84-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:63:13-36
-85            android:label="@string/title_activity_maps" >
-85-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:64:13-56
+85            android:label="QR GO" >
+85-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:64:13-34
 86            <intent-filter>
 86-->/home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:65:13-69:29
 87                <action android:name="android.intent.action.MAIN" />

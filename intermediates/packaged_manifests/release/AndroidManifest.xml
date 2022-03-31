@@ -82,7 +82,7 @@
         <activity
             android:name="com.example.qr_go.activities.MapsActivity"
             android:exported="true"
-            android:label="@string/title_activity_maps" >
+            android:label="QR GO" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
