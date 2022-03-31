@@ -154,7 +154,6 @@ public class PlayerInfoActivity extends BaseActivity {
 
                             qrAdapter = new QRArrayAdapter(PlayerInfoActivity.this, qrDisplays, 0);
                             userQRList.setAdapter(qrAdapter);
-
                             // Image
 
                             ImageView profileImage = findViewById(R.id.profile_photo);
@@ -177,6 +176,7 @@ public class PlayerInfoActivity extends BaseActivity {
                                     return;
                                 }
                             });
+
 
 
 

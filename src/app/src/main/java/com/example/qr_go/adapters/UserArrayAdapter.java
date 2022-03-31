@@ -63,7 +63,8 @@ public class UserArrayAdapter extends ArrayAdapter<UserListDisplayContainer> imp
         TextView rankView = view.findViewById(R.id.user_rank_view);
         ImageView imageView = view.findViewById(R.id.user_picture);
 
-        if (userToDisplay.getPicture().length != 0) {
+        if (userToDisplay.getPicture() != null) {
+            imageView.setImageBitmap(userToDisplay.getPicture());
             // Set picture here
             // imageView.set... blah blah
         }
