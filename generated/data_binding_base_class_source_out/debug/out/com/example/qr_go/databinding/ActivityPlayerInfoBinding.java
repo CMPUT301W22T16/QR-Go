@@ -4,6 +4,7 @@ package com.example.qr_go.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -64,6 +65,9 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
   public final TextView playerTotalScore;
 
   @NonNull
+  public final ImageView profilePhoto;
+
+  @NonNull
   public final LinearLayout totalScoreData;
 
   @NonNull
@@ -76,8 +80,8 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
       @NonNull LinearLayout lowestScoreLayout, @NonNull TextView numOfQRCodes,
       @NonNull TextView playerEmail, @NonNull TextView playerHighScore,
       @NonNull TextView playerLowScore, @NonNull TextView playerNameText,
-      @NonNull TextView playerTotalScore, @NonNull LinearLayout totalScoreData,
-      @NonNull ListView userQrList) {
+      @NonNull TextView playerTotalScore, @NonNull ImageView profilePhoto,
+      @NonNull LinearLayout totalScoreData, @NonNull ListView userQrList) {
     this.rootView = rootView;
     this.QRData = QRData;
     this.bottomNavView = bottomNavView;
@@ -93,6 +97,7 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
     this.playerLowScore = playerLowScore;
     this.playerNameText = playerNameText;
     this.playerTotalScore = playerTotalScore;
+    this.profilePhoto = profilePhoto;
     this.totalScoreData = totalScoreData;
     this.userQrList = userQrList;
   }
@@ -210,6 +215,12 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.profile_photo;
+      ImageView profilePhoto = ViewBindings.findChildViewById(rootView, id);
+      if (profilePhoto == null) {
+        break missingId;
+      }
+
       id = R.id.totalScoreData;
       LinearLayout totalScoreData = ViewBindings.findChildViewById(rootView, id);
       if (totalScoreData == null) {
@@ -225,7 +236,8 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
       return new ActivityPlayerInfoBinding((LinearLayout) rootView, QRData, bottomNavView,
           binding_highestScore, highestScoreData, highestScoreLayout, binding_lowestScore,
           lowestScoreData, lowestScoreLayout, numOfQRCodes, playerEmail, playerHighScore,
-          playerLowScore, playerNameText, playerTotalScore, totalScoreData, userQrList);
+          playerLowScore, playerNameText, playerTotalScore, profilePhoto, totalScoreData,
+          userQrList);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
