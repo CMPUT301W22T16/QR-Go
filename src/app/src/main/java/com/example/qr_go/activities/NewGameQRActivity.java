@@ -18,6 +18,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.util.Size;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
@@ -35,6 +36,14 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+
+import nl.dionsegijn.konfetti.core.Party;
+import nl.dionsegijn.konfetti.core.PartyFactory;
+import nl.dionsegijn.konfetti.core.emitter.Emitter;
+import nl.dionsegijn.konfetti.core.emitter.EmitterConfig;
+import nl.dionsegijn.konfetti.core.models.Shape;
+import nl.dionsegijn.konfetti.xml.KonfettiView;
 
 /**
  * This activity is shown after user scans a QR code
@@ -54,7 +63,7 @@ public class NewGameQRActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_game_qractivity);
+        setContentView(R.layout.activity_new_game_qr_activity);
         initializeNavbar();
 
         // (0) Get views and instances
@@ -83,6 +92,18 @@ public class NewGameQRActivity extends BaseActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        // Start confetti celebration
+        KonfettiView konfettiView = findViewById(R.id.konfettiView);
+        EmitterConfig emitterConfig = new Emitter(5L, TimeUnit.SECONDS).perSecond(50);
+        Party party = new PartyFactory(emitterConfig)
+                .angle(270)
+                .spread(90)
+                .setSpeedBetween(1f, 5f)
+                .timeToLive(2000L)
+                .position(0.0, 0.0, 1.0, 0.0)
+                .build();
+        konfettiView.start(party);
     }
 
     /**

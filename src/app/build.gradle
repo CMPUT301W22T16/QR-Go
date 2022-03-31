@@ -58,9 +58,9 @@ dependencies {
     androidTestImplementation 'com.jayway.android.robotium:robotium-solo:5.6.2'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test:rules:1.2.0'
-
-
+    implementation 'nl.dionsegijn:konfetti-xml:2.0.2'
 }
+
 
 task javadoc(type: Javadoc) {
 
