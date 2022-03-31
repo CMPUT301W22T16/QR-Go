@@ -15,7 +15,7 @@
         errorLine2="                                                             ~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java"
-            line="121"
+            line="139"
             column="62"/>
     </issue>
 
@@ -33,7 +33,7 @@
         errorLine2="                                           ~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java"
-            line="124"
+            line="142"
             column="44"/>
     </issue>
 
@@ -49,7 +49,7 @@
         errorLine2="     ~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="81"
+            line="75"
             column="6"/>
     </issue>
 
@@ -213,7 +213,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
-            line="173"
+            line="172"
             column="13"/>
     </issue>
 
@@ -587,11 +587,11 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="44"
+            line="27"
             column="9"/>
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="39"
+            line="22"
             column="9"
             message="id defined here"/>
     </issue>
@@ -646,7 +646,7 @@
         errorLine2="     ~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="26"
+            line="21"
             column="6"/>
     </issue>
 
@@ -664,7 +664,7 @@
         errorLine2="     ~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="38"
+            line="33"
             column="6"/>
     </issue>
 
@@ -786,12 +786,12 @@
         explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.&#xA;&#xA;Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.&#xA;&#xA;Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`."
         url="https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases"
         urls="https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases"
-        errorLine1="        &lt;ImageView"
-        errorLine2="         ~~~~~~~~~">
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="19"
-            column="10"/>
+            line="10"
+            column="6"/>
     </issue>
 
     <issue
@@ -826,7 +826,7 @@
         errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="98"
+            line="90"
             column="54"/>
     </issue>
 
@@ -844,7 +844,7 @@
         errorLine2="                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="99"
+            line="91"
             column="53"/>
     </issue>
 
@@ -862,7 +862,7 @@
         errorLine2="                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="100"
+            line="92"
             column="47"/>
     </issue>
 
@@ -880,7 +880,7 @@
         errorLine2="                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="101"
+            line="93"
             column="52"/>
     </issue>
 
@@ -898,7 +898,7 @@
         errorLine2="                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="104"
+            line="96"
             column="61"/>
     </issue>
 
@@ -916,7 +916,7 @@
         errorLine2="                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="104"
+            line="96"
             column="73"/>
     </issue>
 
@@ -934,7 +934,7 @@
         errorLine2="                                                            ~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="104"
+            line="96"
             column="61"/>
     </issue>
 
@@ -952,7 +952,7 @@
         errorLine2="                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="107"
+            line="99"
             column="60"/>
     </issue>
 
@@ -970,7 +970,7 @@
         errorLine2="                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="107"
+            line="99"
             column="72"/>
     </issue>
 
@@ -988,7 +988,7 @@
         errorLine2="                                                           ~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="107"
+            line="99"
             column="60"/>
     </issue>
 
@@ -1006,7 +1006,7 @@
         errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java"
-            line="120"
+            line="112"
             column="54"/>
     </issue>
 
@@ -1024,7 +1024,7 @@
         errorLine2="                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java"
-            line="121"
+            line="113"
             column="53"/>
     </issue>
 
@@ -1042,7 +1042,7 @@
         errorLine2="                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java"
-            line="122"
+            line="114"
             column="47"/>
     </issue>
 
@@ -1060,7 +1060,7 @@
         errorLine2="                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java"
-            line="123"
+            line="115"
             column="52"/>
     </issue>
 
@@ -1078,7 +1078,7 @@
         errorLine2="                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java"
-            line="127"
+            line="119"
             column="61"/>
     </issue>
 
@@ -1096,7 +1096,7 @@
         errorLine2="                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java"
-            line="127"
+            line="119"
             column="73"/>
     </issue>
 
@@ -1114,7 +1114,7 @@
         errorLine2="                                                            ~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java"
-            line="127"
+            line="119"
             column="61"/>
     </issue>
 
@@ -1132,7 +1132,7 @@
         errorLine2="                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java"
-            line="130"
+            line="122"
             column="60"/>
     </issue>
 
@@ -1150,7 +1150,7 @@
         errorLine2="                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java"
-            line="130"
+            line="122"
             column="72"/>
     </issue>
 
@@ -1168,7 +1168,7 @@
         errorLine2="                                                           ~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java"
-            line="130"
+            line="122"
             column="60"/>
     </issue>
 
@@ -1186,7 +1186,7 @@
         errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java"
-            line="56"
+            line="66"
             column="24"/>
     </issue>
 
@@ -1200,11 +1200,11 @@
         explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
         url="https://developer.android.com/guide/topics/resources/localization.html"
         urls="https://developer.android.com/guide/topics/resources/localization.html"
-        errorLine1="                scoreView.setText(&quot;Score: &quot; + qrToDisplay.getScore().toString());"
-        errorLine2="                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="                scoreView.setText(&quot;Score:\n&quot; + qrToDisplay.getScore().toString());"
+        errorLine2="                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java"
-            line="81"
+            line="97"
             column="35"/>
     </issue>
 
@@ -1218,30 +1218,12 @@
         explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
         url="https://developer.android.com/guide/topics/resources/localization.html"
         urls="https://developer.android.com/guide/topics/resources/localization.html"
-        errorLine1="                scoreView.setText(&quot;Score: &quot; + qrToDisplay.getScore().toString());"
-        errorLine2="                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="                scoreView.setText(&quot;Score:\n&quot; + qrToDisplay.getScore().toString());"
+        errorLine2="                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java"
-            line="81"
-            column="47"/>
-    </issue>
-
-    <issue
-        id="SetTextI18n"
-        severity="Warning"
-        message="String literal in `setText` can not be translated. Use Android resources instead."
-        category="Internationalization"
-        priority="6"
-        summary="TextView Internationalization"
-        explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
-        url="https://developer.android.com/guide/topics/resources/localization.html"
-        urls="https://developer.android.com/guide/topics/resources/localization.html"
-        errorLine1="                scoreView.setText(&quot;Score: &quot; + qrToDisplay.getScore().toString());"
-        errorLine2="                                  ~~~~~~~~~">
-        <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java"
-            line="81"
-            column="35"/>
+            line="97"
+            column="48"/>
     </issue>
 
     <issue
@@ -1254,30 +1236,12 @@
         explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
         url="https://developer.android.com/guide/topics/resources/localization.html"
         urls="https://developer.android.com/guide/topics/resources/localization.html"
-        errorLine1="                scoreView.setText(distanceString + &quot; away&quot;);"
-        errorLine2="                                  ~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="                scoreView.setText(distanceString + &quot;\naway&quot;);"
+        errorLine2="                                  ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java"
-            line="94"
+            line="110"
             column="35"/>
-    </issue>
-
-    <issue
-        id="SetTextI18n"
-        severity="Warning"
-        message="String literal in `setText` can not be translated. Use Android resources instead."
-        category="Internationalization"
-        priority="6"
-        summary="TextView Internationalization"
-        explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
-        url="https://developer.android.com/guide/topics/resources/localization.html"
-        urls="https://developer.android.com/guide/topics/resources/localization.html"
-        errorLine1="                scoreView.setText(distanceString + &quot; away&quot;);"
-        errorLine2="                                                   ~~~~~~~">
-        <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java"
-            line="94"
-            column="52"/>
     </issue>
 
     <issue
@@ -1294,7 +1258,7 @@
         errorLine2="                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/QRInfoActivity.java"
-            line="102"
+            line="96"
             column="49"/>
     </issue>
 
@@ -1312,26 +1276,8 @@
         errorLine2="                                                ~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/QRInfoActivity.java"
-            line="102"
+            line="96"
             column="49"/>
-    </issue>
-
-    <issue
-        id="SetTextI18n"
-        severity="Warning"
-        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
-        category="Internationalization"
-        priority="6"
-        summary="TextView Internationalization"
-        explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
-        url="https://developer.android.com/guide/topics/resources/localization.html"
-        urls="https://developer.android.com/guide/topics/resources/localization.html"
-        errorLine1="        rankView.setText(String.valueOf(userRank) + &quot;|&quot;);"
-        errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java"
-            line="84"
-            column="26"/>
     </issue>
 
     <issue
@@ -1348,7 +1294,7 @@
         errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java"
-            line="86"
+            line="100"
             column="34"/>
     </issue>
 
@@ -1366,7 +1312,7 @@
         errorLine2="                                                   ~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java"
-            line="86"
+            line="100"
             column="52"/>
     </issue>
 
@@ -1384,7 +1330,7 @@
         errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java"
-            line="90"
+            line="108"
             column="27"/>
     </issue>
 
@@ -1402,7 +1348,7 @@
         errorLine2="                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java"
-            line="93"
+            line="111"
             column="35"/>
     </issue>
 
@@ -1420,7 +1366,7 @@
         errorLine2="                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java"
-            line="93"
+            line="111"
             column="53"/>
     </issue>
 
@@ -1438,7 +1384,7 @@
         errorLine2="                                  ~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java"
-            line="93"
+            line="111"
             column="35"/>
     </issue>
 
@@ -1456,7 +1402,7 @@
         errorLine2="                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java"
-            line="96"
+            line="114"
             column="35"/>
     </issue>
 
@@ -1474,7 +1420,7 @@
         errorLine2="                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java"
-            line="96"
+            line="114"
             column="35"/>
     </issue>
 
@@ -1492,7 +1438,7 @@
         errorLine2="                                                                         ~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java"
-            line="96"
+            line="114"
             column="74"/>
     </issue>
 
@@ -1510,7 +1456,7 @@
         errorLine2="                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java"
-            line="99"
+            line="117"
             column="35"/>
     </issue>
 
@@ -1528,7 +1474,7 @@
         errorLine2="                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java"
-            line="99"
+            line="117"
             column="58"/>
     </issue>
 
@@ -1546,7 +1492,7 @@
         errorLine2="                                  ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java"
-            line="99"
+            line="117"
             column="35"/>
     </issue>
 
@@ -1562,7 +1508,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
-            line="31"
+            line="30"
             column="17"/>
     </issue>
 
@@ -1578,7 +1524,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
-            line="40"
+            line="39"
             column="21"/>
     </issue>
 
@@ -1594,7 +1540,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
-            line="46"
+            line="45"
             column="21"/>
     </issue>
 
@@ -1610,7 +1556,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
-            line="56"
+            line="55"
             column="21"/>
     </issue>
 
@@ -1626,7 +1572,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
-            line="63"
+            line="62"
             column="21"/>
     </issue>
 
@@ -1642,7 +1588,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
-            line="73"
+            line="72"
             column="21"/>
     </issue>
 
@@ -1658,7 +1604,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
-            line="80"
+            line="79"
             column="21"/>
     </issue>
 
@@ -1674,7 +1620,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
-            line="92"
+            line="91"
             column="21"/>
     </issue>
 
@@ -1690,7 +1636,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
-            line="99"
+            line="98"
             column="21"/>
     </issue>
 
@@ -1706,7 +1652,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
-            line="111"
+            line="110"
             column="21"/>
     </issue>
 
@@ -1722,7 +1668,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
-            line="118"
+            line="117"
             column="21"/>
     </issue>
 
@@ -1738,7 +1684,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
-            line="137"
+            line="136"
             column="13"/>
     </issue>
 
@@ -1754,7 +1700,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
-            line="154"
+            line="153"
             column="13"/>
     </issue>
 
@@ -1770,7 +1716,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
-            line="172"
+            line="171"
             column="13"/>
     </issue>
 
@@ -2353,22 +2299,6 @@
     <issue
         id="HardcodedText"
         severity="Warning"
-        message="Hardcoded string &quot;Username&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="        android:hint=&quot;Username&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="31"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
         message="Hardcoded string &quot;Email&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
@@ -2378,7 +2308,23 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="43"
+            line="26"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Username&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:hint=&quot;Username&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
+            line="38"
             column="9"/>
     </issue>
 
@@ -2394,7 +2340,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="74"
+            line="68"
             column="9"/>
     </issue>
 
@@ -2410,7 +2356,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="112"
+            line="106"
             column="9"/>
     </issue>
 
@@ -2426,7 +2372,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml"
-            line="137"
+            line="130"
             column="9"/>
     </issue>
 
@@ -2454,12 +2400,12 @@
         priority="5"
         summary="Hardcoded text"
         explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="            android:text=&quot;12345&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="        android:text=&quot;12345&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml"
-            line="41"
-            column="13"/>
+            line="45"
+            column="9"/>
     </issue>
 
     <issue
@@ -2566,22 +2512,6 @@
         priority="6"
         summary="Padding and margin symmetry"
         explanation="If you specify padding or margin on the left side of a layout, you should probably also specify padding on the right side (and vice versa) for right-to-left layout symmetry."
-        errorLine1="        android:paddingRight=&quot;0dp&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml"
-            line="53"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="RtlSymmetry"
-        severity="Warning"
-        message="When you define `paddingRight` you should probably also define `paddingLeft` for right-to-left symmetry"
-        category="Internationalization:Bidirectional Text"
-        priority="6"
-        summary="Padding and margin symmetry"
-        explanation="If you specify padding or margin on the left side of a layout, you should probably also specify padding on the right side (and vice versa) for right-to-left layout symmetry."
         errorLine1="        android:paddingRight=&quot;10dp&quot;"
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -2634,7 +2564,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
-            line="18"
+            line="15"
             column="13"/>
     </issue>
 
@@ -2650,7 +2580,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
-            line="24"
+            line="23"
             column="13"/>
     </issue>
 
@@ -2666,7 +2596,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
-            line="45"
+            line="44"
             column="21"/>
     </issue>
 
@@ -2682,7 +2612,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
-            line="62"
+            line="61"
             column="21"/>
     </issue>
 
@@ -2698,7 +2628,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
-            line="79"
+            line="78"
             column="21"/>
     </issue>
 
@@ -2714,7 +2644,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
-            line="98"
+            line="97"
             column="21"/>
     </issue>
 
@@ -2730,7 +2660,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml"
-            line="117"
+            line="116"
             column="21"/>
     </issue>
 
@@ -2961,6 +2891,38 @@
     <issue
         id="RtlHardcoded"
         severity="Warning"
+        message="Consider replacing `android:layout_toLeftOf` with `android:layout_toStartOf=&quot;@+id/qr_del_button&quot;` to better support right-to-left layouts"
+        category="Internationalization:Bidirectional Text"
+        priority="5"
+        summary="Using left/right instead of start/end attributes"
+        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. **NOTE**: If your `minSdkVersion` is less than 17, you should add **both** the older left/right attributes **as well as** the new start/end attributes. On older platforms, where RTL is not supported and the start/end attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
+        errorLine1="        android:layout_toLeftOf=&quot;@+id/qr_del_button&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml"
+            line="43"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        severity="Warning"
+        message="Use &quot;`end`&quot; instead of &quot;`right`&quot; to ensure correct behavior in right-to-left locales"
+        category="Internationalization:Bidirectional Text"
+        priority="5"
+        summary="Using left/right instead of start/end attributes"
+        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. **NOTE**: If your `minSdkVersion` is less than 17, you should add **both** the older left/right attributes **as well as** the new start/end attributes. On older platforms, where RTL is not supported and the start/end attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
+        errorLine1="        android:gravity=&quot;right&quot;"
+        errorLine2="                         ~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml"
+            line="44"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        severity="Warning"
         message="Consider replacing `android:layout_alignParentRight` with `android:layout_alignParentEnd=&quot;true&quot;` to better support right-to-left layouts"
         category="Internationalization:Bidirectional Text"
         priority="5"
@@ -2970,7 +2932,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml"
-            line="51"
+            line="53"
             column="9"/>
     </issue>
 
@@ -2986,7 +2948,23 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml"
-            line="53"
+            line="55"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        severity="Warning"
+        message="Consider replacing `android:paddingLeft` with `android:paddingStart=&quot;15dp&quot;` to better support right-to-left layouts"
+        category="Internationalization:Bidirectional Text"
+        priority="5"
+        summary="Using left/right instead of start/end attributes"
+        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. **NOTE**: If your `minSdkVersion` is less than 17, you should add **both** the older left/right attributes **as well as** the new start/end attributes. On older platforms, where RTL is not supported and the start/end attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
+        errorLine1="        android:paddingLeft=&quot;15dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml"
+            line="56"
             column="9"/>
     </issue>
 
