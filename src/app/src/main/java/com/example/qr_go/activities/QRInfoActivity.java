@@ -20,6 +20,7 @@ import com.example.qr_go.R;
 import com.example.qr_go.objects.Comment;
 import com.example.qr_go.objects.CommentsQR;
 import com.example.qr_go.objects.GameQRCode;
+import com.example.qr_go.objects.GeoLocation;
 import com.example.qr_go.objects.Player;
 import com.example.qr_go.objects.QRPhoto;
 import com.example.qr_go.utils.QRGoDBUtil;
@@ -52,11 +53,11 @@ public class QRInfoActivity extends BaseActivity {
 
     private Intent usersActivityIntent;
 
-    CommentsQR comments;
+    private CommentsQR comments;
 
-    ListView commentList;
-    ArrayAdapter<Comment> commentAdapter;
-    ArrayList<Comment> commentDataList;
+    private ListView commentList;
+    private ArrayAdapter<Comment> commentAdapter;
+    private ArrayList<Comment> commentDataList;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -79,7 +80,7 @@ public class QRInfoActivity extends BaseActivity {
         // Get information from extras
         Bundle bundle = getIntent().getExtras();
 
-        if(bundle != null) {
+        if (bundle != null) {
             selectedQRId = bundle.getString("QRid");
 
             // set info from QRId
@@ -98,8 +99,8 @@ public class QRInfoActivity extends BaseActivity {
                                 usersActivityIntent.putExtra("selectedQR", selectedQR);
 
                                 tvQRName.setText(selectedQR.getId());
-//                                tvQRLocation.setText(selectedQR.getGeoLocation().getAddress().toString());
-                                tvScore.setText("Score: "+selectedQR.getScore());
+                                tvQRLocation.setText(selectedQR.getGeoLocation().getAddress());
+                                tvScore.setText("Score: " + selectedQR.getScore());
 
                                 // set image Darius Fang
                                 ImageView profileImage = findViewById(R.id.profile_photo);
@@ -138,7 +139,7 @@ public class QRInfoActivity extends BaseActivity {
                             if (task.isSuccessful()) {
                                 DocumentSnapshot document = task.getResult();
                                 Map<String, Object> map = document.getData();
-                                if(map != null) {
+                                if (map != null) {
                                     for (Object commentsInfo : map.values()) {
 
                                         Map<String, Object> commentInfo = (Map<String, Object>) commentsInfo;
@@ -224,5 +225,6 @@ public class QRInfoActivity extends BaseActivity {
     public void setSelectedQR(String QRId) {
 
     }
+
 
 }
