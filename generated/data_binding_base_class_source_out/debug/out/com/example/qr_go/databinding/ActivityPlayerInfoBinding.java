@@ -4,12 +4,12 @@ package com.example.qr_go.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.qr_go.R;
@@ -20,13 +20,16 @@ import java.lang.String;
 
 public final class ActivityPlayerInfoBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
   public final LinearLayout QRData;
 
   @NonNull
   public final BottomNavigationView bottomNavView;
+
+  @NonNull
+  public final ConstraintLayout container;
 
   @NonNull
   public final QrListContentBinding highestScore;
@@ -36,6 +39,9 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
 
   @NonNull
   public final LinearLayout highestScoreLayout;
+
+  @NonNull
+  public final LinearLayout linearLayout;
 
   @NonNull
   public final QrListContentBinding lowestScore;
@@ -65,29 +71,29 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
   public final TextView playerTotalScore;
 
   @NonNull
-  public final ImageView profilePhoto;
-
-  @NonNull
   public final LinearLayout totalScoreData;
 
   @NonNull
   public final ListView userQrList;
 
-  private ActivityPlayerInfoBinding(@NonNull LinearLayout rootView, @NonNull LinearLayout QRData,
-      @NonNull BottomNavigationView bottomNavView, @NonNull QrListContentBinding highestScore,
+  private ActivityPlayerInfoBinding(@NonNull ConstraintLayout rootView,
+      @NonNull LinearLayout QRData, @NonNull BottomNavigationView bottomNavView,
+      @NonNull ConstraintLayout container, @NonNull QrListContentBinding highestScore,
       @NonNull LinearLayout highestScoreData, @NonNull LinearLayout highestScoreLayout,
-      @NonNull QrListContentBinding lowestScore, @NonNull LinearLayout lowestScoreData,
-      @NonNull LinearLayout lowestScoreLayout, @NonNull TextView numOfQRCodes,
-      @NonNull TextView playerEmail, @NonNull TextView playerHighScore,
-      @NonNull TextView playerLowScore, @NonNull TextView playerNameText,
-      @NonNull TextView playerTotalScore, @NonNull ImageView profilePhoto,
+      @NonNull LinearLayout linearLayout, @NonNull QrListContentBinding lowestScore,
+      @NonNull LinearLayout lowestScoreData, @NonNull LinearLayout lowestScoreLayout,
+      @NonNull TextView numOfQRCodes, @NonNull TextView playerEmail,
+      @NonNull TextView playerHighScore, @NonNull TextView playerLowScore,
+      @NonNull TextView playerNameText, @NonNull TextView playerTotalScore,
       @NonNull LinearLayout totalScoreData, @NonNull ListView userQrList) {
     this.rootView = rootView;
     this.QRData = QRData;
     this.bottomNavView = bottomNavView;
+    this.container = container;
     this.highestScore = highestScore;
     this.highestScoreData = highestScoreData;
     this.highestScoreLayout = highestScoreLayout;
+    this.linearLayout = linearLayout;
     this.lowestScore = lowestScore;
     this.lowestScoreData = lowestScoreData;
     this.lowestScoreLayout = lowestScoreLayout;
@@ -97,14 +103,13 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
     this.playerLowScore = playerLowScore;
     this.playerNameText = playerNameText;
     this.playerTotalScore = playerTotalScore;
-    this.profilePhoto = profilePhoto;
     this.totalScoreData = totalScoreData;
     this.userQrList = userQrList;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -141,6 +146,8 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
         break missingId;
       }
 
+      ConstraintLayout container = (ConstraintLayout) rootView;
+
       id = R.id.highest_score;
       View highestScore = ViewBindings.findChildViewById(rootView, id);
       if (highestScore == null) {
@@ -157,6 +164,12 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
       id = R.id.highestScoreLayout;
       LinearLayout highestScoreLayout = ViewBindings.findChildViewById(rootView, id);
       if (highestScoreLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.linear_layout;
+      LinearLayout linearLayout = ViewBindings.findChildViewById(rootView, id);
+      if (linearLayout == null) {
         break missingId;
       }
 
@@ -215,12 +228,6 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.profile_photo;
-      ImageView profilePhoto = ViewBindings.findChildViewById(rootView, id);
-      if (profilePhoto == null) {
-        break missingId;
-      }
-
       id = R.id.totalScoreData;
       LinearLayout totalScoreData = ViewBindings.findChildViewById(rootView, id);
       if (totalScoreData == null) {
@@ -233,10 +240,10 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityPlayerInfoBinding((LinearLayout) rootView, QRData, bottomNavView,
-          binding_highestScore, highestScoreData, highestScoreLayout, binding_lowestScore,
-          lowestScoreData, lowestScoreLayout, numOfQRCodes, playerEmail, playerHighScore,
-          playerLowScore, playerNameText, playerTotalScore, profilePhoto, totalScoreData,
+      return new ActivityPlayerInfoBinding((ConstraintLayout) rootView, QRData, bottomNavView,
+          container, binding_highestScore, highestScoreData, highestScoreLayout, linearLayout,
+          binding_lowestScore, lowestScoreData, lowestScoreLayout, numOfQRCodes, playerEmail,
+          playerHighScore, playerLowScore, playerNameText, playerTotalScore, totalScoreData,
           userQrList);
     }
     String missingId = rootView.getResources().getResourceName(id);

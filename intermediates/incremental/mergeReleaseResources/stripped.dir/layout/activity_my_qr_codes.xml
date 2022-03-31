@@ -12,11 +12,10 @@
         android:layout_marginTop="20dp">
 
         <ImageView
-            android:id="@+id/profile_photo"
+            android:layout_marginLeft="50dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginLeft="50dp"
-            android:src="@drawable/round_account_circle_24" />
+            android:src="@drawable/round_account_circle_24"/>
 
         <LinearLayout
             android:layout_width="200dp"

@@ -2811,9 +2811,6 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
-id divider2
-id divider3
-id divider4
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -2901,6 +2898,7 @@ id line1
 id line3
 id linear
 id linearLayout
+id linear_layout
 id listMode
 id list_item
 id locale
@@ -3048,6 +3046,7 @@ id rounded
 id row_index_key
 id rtl
 id satellite
+id save_button
 id save_game_qr
 id save_non_transition_alpha
 id save_overlay_view

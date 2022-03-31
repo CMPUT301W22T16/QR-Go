@@ -28,9 +28,6 @@ id buttonSend
 id commenterName
 id commenterPhoto
 id container
-id divider2
-id divider3
-id divider4
 id edit_profile_photo
 id generate_login_qr
 id generate_status_qr
@@ -39,6 +36,7 @@ id highestScoreLayout
 id highest_score
 id inputComment
 id linearLayout
+id linear_layout
 id location_checkbox
 id lowestScoreData
 id lowestScoreLayout
@@ -73,6 +71,7 @@ id qr_score_view
 id qr_search_option_icon
 id qr_search_option_text
 id qr_search_spinner
+id save_button
 id save_game_qr
 id scanner_view
 id score

@@ -28,15 +28,6 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
   public final BottomNavigationView bottomNavView;
 
   @NonNull
-  public final View divider2;
-
-  @NonNull
-  public final View divider3;
-
-  @NonNull
-  public final View divider4;
-
-  @NonNull
   public final Button editProfilePhoto;
 
   @NonNull
@@ -57,17 +48,17 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
   @NonNull
   public final ImageView profilePhoto;
 
+  @NonNull
+  public final Button saveButton;
+
   private PlayerProfileActivityBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavigationView bottomNavView, @NonNull View divider2, @NonNull View divider3,
-      @NonNull View divider4, @NonNull Button editProfilePhoto, @NonNull TextView generateLoginQr,
-      @NonNull TextView generateStatusQr, @NonNull CardView photoContainer,
-      @NonNull EditText playerEmail, @NonNull EditText playerUsername,
-      @NonNull ImageView profilePhoto) {
+      @NonNull BottomNavigationView bottomNavView, @NonNull Button editProfilePhoto,
+      @NonNull TextView generateLoginQr, @NonNull TextView generateStatusQr,
+      @NonNull CardView photoContainer, @NonNull EditText playerEmail,
+      @NonNull EditText playerUsername, @NonNull ImageView profilePhoto,
+      @NonNull Button saveButton) {
     this.rootView = rootView;
     this.bottomNavView = bottomNavView;
-    this.divider2 = divider2;
-    this.divider3 = divider3;
-    this.divider4 = divider4;
     this.editProfilePhoto = editProfilePhoto;
     this.generateLoginQr = generateLoginQr;
     this.generateStatusQr = generateStatusQr;
@@ -75,6 +66,7 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
     this.playerEmail = playerEmail;
     this.playerUsername = playerUsername;
     this.profilePhoto = profilePhoto;
+    this.saveButton = saveButton;
   }
 
   @Override
@@ -107,24 +99,6 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
       id = R.id.bottom_nav_view;
       BottomNavigationView bottomNavView = ViewBindings.findChildViewById(rootView, id);
       if (bottomNavView == null) {
-        break missingId;
-      }
-
-      id = R.id.divider2;
-      View divider2 = ViewBindings.findChildViewById(rootView, id);
-      if (divider2 == null) {
-        break missingId;
-      }
-
-      id = R.id.divider3;
-      View divider3 = ViewBindings.findChildViewById(rootView, id);
-      if (divider3 == null) {
-        break missingId;
-      }
-
-      id = R.id.divider4;
-      View divider4 = ViewBindings.findChildViewById(rootView, id);
-      if (divider4 == null) {
         break missingId;
       }
 
@@ -170,9 +144,15 @@ public final class PlayerProfileActivityBinding implements ViewBinding {
         break missingId;
       }
 
-      return new PlayerProfileActivityBinding((ConstraintLayout) rootView, bottomNavView, divider2,
-          divider3, divider4, editProfilePhoto, generateLoginQr, generateStatusQr, photoContainer,
-          playerEmail, playerUsername, profilePhoto);
+      id = R.id.save_button;
+      Button saveButton = ViewBindings.findChildViewById(rootView, id);
+      if (saveButton == null) {
+        break missingId;
+      }
+
+      return new PlayerProfileActivityBinding((ConstraintLayout) rootView, bottomNavView,
+          editProfilePhoto, generateLoginQr, generateStatusQr, photoContainer, playerEmail,
+          playerUsername, profilePhoto, saveButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
