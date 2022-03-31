@@ -1310,6 +1310,32 @@ library {
   repo_index {
   }
 }
+library {
+  maven_library {
+    groupId: "nl.dionsegijn"
+    artifactId: "konfetti-xml"
+    version: "2.0.2"
+  }
+  digests {
+    sha256: "f\036\310X\2712\316Ca\024\030N-\006\370w\351\001\201\355\317G\t:\245Y\212\270}\333\274\376"
+  }
+  repo_index {
+    value: 1
+  }
+}
+library {
+  maven_library {
+    groupId: "nl.dionsegijn"
+    artifactId: "konfetti-core"
+    version: "2.0.2"
+  }
+  digests {
+    sha256: "\205Q\355\216\247q\240S\320\202t\304\245\033\216\\\256\236\225\362\230t\242\355R\360\nHfm\316\302"
+  }
+  repo_index {
+    value: 1
+  }
+}
 library_dependencies {
   library_dep_index: 1
 }
@@ -1891,6 +1917,15 @@ library_dependencies {
   library_dep_index: 61
   library_dep_index: 62
 }
+library_dependencies {
+  library_index: 107
+  library_dep_index: 108
+  library_dep_index: 18
+}
+library_dependencies {
+  library_index: 108
+  library_dep_index: 18
+}
 module_dependencies {
   module_name: "base"
   dependency_index: 0
@@ -1906,6 +1941,7 @@ module_dependencies {
   dependency_index: 104
   dependency_index: 105
   dependency_index: 106
+  dependency_index: 107
 }
 repositories {
   maven_repo {

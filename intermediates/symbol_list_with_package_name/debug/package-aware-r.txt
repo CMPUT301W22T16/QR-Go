@@ -2888,6 +2888,7 @@ id item4
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
+id konfettiView
 id labeled
 id layout
 id left
@@ -3294,7 +3295,7 @@ layout abc_tooltip
 layout activity_code_scanner
 layout activity_maps
 layout activity_my_qr_codes
-layout activity_new_game_qractivity
+layout activity_new_game_qr_activity
 layout activity_player_info
 layout activity_qr_info
 layout activity_scanned_users

@@ -285,13 +285,13 @@
         severity="warning"
         message="Hardcoded string &quot;123&quot;, should use `@string` resource">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="15"
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qr_activity.xml"
+            line="19"
             column="9"
-            startOffset="576"
-            endLine="15"
+            startOffset="748"
+            endLine="19"
             endColumn="27"
-            endOffset="594"/>
+            endOffset="766"/>
     </incident>
 
     <incident
@@ -299,13 +299,13 @@
         severity="warning"
         message="Hardcoded string &quot;Score&quot;, should use `@string` resource">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="29"
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qr_activity.xml"
+            line="33"
             column="9"
-            startOffset="1110"
-            endLine="29"
+            startOffset="1282"
+            endLine="33"
             endColumn="29"
-            endOffset="1130"/>
+            endOffset="1302"/>
     </incident>
 
     <incident
@@ -313,13 +313,13 @@
         severity="warning"
         message="Hardcoded string &quot;Save&quot;, should use `@string` resource">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="42"
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qr_activity.xml"
+            line="46"
             column="9"
-            startOffset="1606"
-            endLine="42"
+            startOffset="1769"
+            endLine="46"
             endColumn="28"
-            endOffset="1625"/>
+            endOffset="1788"/>
     </incident>
 
     <incident
@@ -327,13 +327,13 @@
         severity="warning"
         message="Hardcoded string &quot;Save location&quot;, should use `@string` resource">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="53"
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qr_activity.xml"
+            line="59"
             column="9"
-            startOffset="2020"
-            endLine="53"
+            startOffset="2276"
+            endLine="59"
             endColumn="37"
-            endOffset="2048"/>
+            endOffset="2304"/>
     </incident>
 
     <incident
@@ -341,13 +341,13 @@
         severity="warning"
         message="Hardcoded string &quot;Take photo of object&quot;, should use `@string` resource">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="68"
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qr_activity.xml"
+            line="74"
             column="9"
-            startOffset="2642"
-            endLine="68"
+            startOffset="2904"
+            endLine="74"
             endColumn="44"
-            endOffset="2677"/>
+            endOffset="2939"/>
     </incident>
 
     <incident
@@ -362,13 +362,13 @@
             dot="4"
             mark="0"/>
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qractivity.xml"
-            line="76"
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qr_activity.xml"
+            line="81"
             column="6"
-            startOffset="2967"
-            endLine="76"
+            startOffset="3216"
+            endLine="81"
             endColumn="15"
-            endOffset="2976"/>
+            endOffset="3225"/>
     </incident>
 
     <incident

@@ -27,6 +27,7 @@ MERGED from [androidx.activity:activity-ktx:1.2.3] /home/runner/.gradle/caches/t
 MERGED from [androidx.navigation:navigation-common:2.4.0] /home/runner/.gradle/caches/transforms-3/f7d2dad12f7b477d80afffc361cef372/transformed/navigation-common-2.4.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0] /home/runner/.gradle/caches/transforms-3/9bfb93a37f0aeecf4dd64c2a5d240197/transformed/lifecycle-viewmodel-ktx-2.4.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-storage:20.0.1] /home/runner/.gradle/caches/transforms-3/dd2c39b213562d6f8a39f8dd32ac2712/transformed/firebase-storage-20.0.1/AndroidManifest.xml:15:1-39:12
+MERGED from [nl.dionsegijn:konfetti-xml:2.0.2] /home/runner/.gradle/caches/transforms-3/d2bf233877c74112aa20826405df6f93/transformed/konfetti-xml-2.0.2/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta05] /home/runner/.gradle/caches/transforms-3/1033aae28924a08642a3c3d0d2761a3e/transformed/firebase-appcheck-interop-16.0.0-beta05/AndroidManifest.xml:15:1-26:12
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /home/runner/.gradle/caches/transforms-3/ce8be9dc5130ccba256b5544056cccff/transformed/firebase-auth-interop-19.0.2/AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-common:20.1.0] /home/runner/.gradle/caches/transforms-3/b563c2609e9c204001c96805b1b8ddb1/transformed/firebase-common-20.1.0/AndroidManifest.xml:15:1-40:12
@@ -77,6 +78,7 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /home/runner/.gradle/cach
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/runner/.gradle/caches/transforms-3/5c89d2822cae592747747ef86fde123f/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /home/runner/.gradle/caches/transforms-3/d635c57f1b14fe06ab82f82e554a6d52/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/runner/.gradle/caches/transforms-3/de596873ba3baa19aa7df2aeb2456e5e/transformed/annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [nl.dionsegijn:konfetti-core:2.0.2] /home/runner/.gradle/caches/transforms-3/11e5e9307e3057e674d6b547287eea76/transformed/konfetti-core-2.0.2/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /home/runner/.gradle/caches/transforms-3/dfca1493ff96df4bd157456794a6944e/transformed/protolite-well-known-types-18.0.0/AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.44.1] /home/runner/.gradle/caches/transforms-3/f6d775ec42d622f18cc008c16120e8c6/transformed/grpc-android-1.44.1/AndroidManifest.xml:2:1-11:12
 INJECTED from /home/runner/work/QR-Go/QR-Go/src/app/src/main/AndroidManifest.xml:2:1-73:12
@@ -286,6 +288,8 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0] /home/runner/.gra
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0] /home/runner/.gradle/caches/transforms-3/9bfb93a37f0aeecf4dd64c2a5d240197/transformed/lifecycle-viewmodel-ktx-2.4.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-storage:20.0.1] /home/runner/.gradle/caches/transforms-3/dd2c39b213562d6f8a39f8dd32ac2712/transformed/firebase-storage-20.0.1/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-storage:20.0.1] /home/runner/.gradle/caches/transforms-3/dd2c39b213562d6f8a39f8dd32ac2712/transformed/firebase-storage-20.0.1/AndroidManifest.xml:20:5-22:41
+MERGED from [nl.dionsegijn:konfetti-xml:2.0.2] /home/runner/.gradle/caches/transforms-3/d2bf233877c74112aa20826405df6f93/transformed/konfetti-xml-2.0.2/AndroidManifest.xml:5:5-7:41
+MERGED from [nl.dionsegijn:konfetti-xml:2.0.2] /home/runner/.gradle/caches/transforms-3/d2bf233877c74112aa20826405df6f93/transformed/konfetti-xml-2.0.2/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta05] /home/runner/.gradle/caches/transforms-3/1033aae28924a08642a3c3d0d2761a3e/transformed/firebase-appcheck-interop-16.0.0-beta05/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta05] /home/runner/.gradle/caches/transforms-3/1033aae28924a08642a3c3d0d2761a3e/transformed/firebase-appcheck-interop-16.0.0-beta05/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /home/runner/.gradle/caches/transforms-3/ce8be9dc5130ccba256b5544056cccff/transformed/firebase-auth-interop-19.0.2/AndroidManifest.xml:5:5-44
@@ -386,6 +390,8 @@ MERGED from [androidx.print:print:1.0.0] /home/runner/.gradle/caches/transforms-
 MERGED from [androidx.print:print:1.0.0] /home/runner/.gradle/caches/transforms-3/d635c57f1b14fe06ab82f82e554a6d52/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/runner/.gradle/caches/transforms-3/de596873ba3baa19aa7df2aeb2456e5e/transformed/annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /home/runner/.gradle/caches/transforms-3/de596873ba3baa19aa7df2aeb2456e5e/transformed/annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [nl.dionsegijn:konfetti-core:2.0.2] /home/runner/.gradle/caches/transforms-3/11e5e9307e3057e674d6b547287eea76/transformed/konfetti-core-2.0.2/AndroidManifest.xml:5:5-7:41
+MERGED from [nl.dionsegijn:konfetti-core:2.0.2] /home/runner/.gradle/caches/transforms-3/11e5e9307e3057e674d6b547287eea76/transformed/konfetti-core-2.0.2/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /home/runner/.gradle/caches/transforms-3/dfca1493ff96df4bd157456794a6944e/transformed/protolite-well-known-types-18.0.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /home/runner/.gradle/caches/transforms-3/dfca1493ff96df4bd157456794a6944e/transformed/protolite-well-known-types-18.0.0/AndroidManifest.xml:7:5-9:41
 MERGED from [io.grpc:grpc-android:1.44.1] /home/runner/.gradle/caches/transforms-3/f6d775ec42d622f18cc008c16120e8c6/transformed/grpc-android-1.44.1/AndroidManifest.xml:5:5-7:41

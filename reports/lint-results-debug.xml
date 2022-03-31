@@ -715,8 +715,8 @@
         errorLine1="    &lt;ImageView"
         errorLine2="     ~~~~~~~~~">
         <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml"
-            line="76"
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qr_activity.xml"
+            line="81"
             column="6"/>
     </issue>
 
@@ -1801,8 +1801,8 @@
         errorLine1="        android:text=&quot;123&quot;"
         errorLine2="        ~~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml"
-            line="15"
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qr_activity.xml"
+            line="19"
             column="9"/>
     </issue>
 
@@ -1817,8 +1817,8 @@
         errorLine1="        android:text=&quot;Score&quot;"
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml"
-            line="29"
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qr_activity.xml"
+            line="33"
             column="9"/>
     </issue>
 
@@ -1833,8 +1833,8 @@
         errorLine1="        android:text=&quot;Save&quot;"
         errorLine2="        ~~~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml"
-            line="42"
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qr_activity.xml"
+            line="46"
             column="9"/>
     </issue>
 
@@ -1849,8 +1849,8 @@
         errorLine1="        android:text=&quot;Save location&quot;"
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml"
-            line="53"
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qr_activity.xml"
+            line="59"
             column="9"/>
     </issue>
 
@@ -1865,8 +1865,8 @@
         errorLine1="        android:text=&quot;Take photo of object&quot;"
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qractivity.xml"
-            line="68"
+            file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qr_activity.xml"
+            line="74"
             column="9"/>
     </issue>
 
