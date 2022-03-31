@@ -34,16 +34,14 @@
             android:text="12345"
             android:textSize="20sp" />
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/qr_score_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12345"
+            android:textSize="15sp" />
 
-    <TextView
-        android:id="@+id/qr_score_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toLeftOf="@+id/qr_del_button"
-        android:gravity="right"
-        android:text="12345"
-        android:textSize="18sp" />
+    </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/qr_del_button"
@@ -53,7 +51,6 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:paddingRight="0dp"
-        android:paddingLeft="15dp"
         android:visibility="gone"
         app:icon="@drawable/ic_baseline_delete_24"
         app:iconSize="30dp" />
