@@ -47,18 +47,22 @@ public class PlayerProfileActivity extends BaseActivity {
     public StringUtil stringUtil = new StringUtil();
     public static FirebaseFirestore db;
     private Player currentUser = new Player();
+    private String currentUserId;
     public static final int GET_FROM_GALLERY = 3;
     public FirebaseStorage storage;
+    private EditText usernameEditText;
+    private EditText emailEditText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.player_profile_activity);
         initializeNavbar();
-        
-        EditText usernameEditText = findViewById(R.id.player_username);
-        EditText emailEditText = findViewById(R.id.player_email);
+
+        usernameEditText = findViewById(R.id.player_username);
+        emailEditText = findViewById(R.id.player_email);
         ImageView profileImage = findViewById(R.id.profile_photo);
-        String currentUserId = MapsActivity.getUserId();
+        currentUserId = MapsActivity.getUserId();
         db = FirebaseFirestore.getInstance();
         storage = MapsActivity.storage;
         StorageReference storageRef = storage.getReference();
@@ -97,36 +101,41 @@ public class PlayerProfileActivity extends BaseActivity {
                         }
                     }
                 });
+    }
 
-        usernameEditText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            }
+    /**
+     * When save button is clicked,
+     * validate the email and username fields
+     * If not valid, show errors
+     * If valid, save to database
+     */
+    public void saveProfile(View view) {
+        String emailStr = emailEditText.getText().toString();
+        String usernameStr = usernameEditText.getText().toString();
+        currentUser.setEmail(emailStr);
+        currentUser.setUsername(usernameStr);
 
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                db.collection("Players").document(currentUserId).update("username", charSequence.toString());
-            }
+        boolean isValid = true;
 
-            @Override
-            public void afterTextChanged(Editable editable) {
-            }
-        });
+        if (!currentUser.isEmailValid()) {
+            System.out.println("EMAIL NOT VALID");
+            emailEditText.setError("Invalid email address");
+            isValid = false;
+        }
+        if (false) { // TODO: Add if username is not unique here!
+            usernameEditText.setError("This username is already taken");
+            isValid = false;
+        }
 
-        emailEditText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            }
+        if (isValid) {
+            // Save to database
+            // save username
+            db.collection("Players").document(currentUserId).update("username", usernameStr);
+            // save email
+            db.collection("Players").document(currentUserId).update("email", emailStr);
+            Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show();
+        }
 
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                db.collection("Players").document(currentUserId).update("email", charSequence.toString());
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-            }
-        });
     }
 
     /**
@@ -194,7 +203,7 @@ public class PlayerProfileActivity extends BaseActivity {
                 profileImage.setImageBitmap(bitmap);
                 QRGoStorageUtil StorageUtil = new QRGoStorageUtil();
                 StorageUtil.updateImageFromStorage(bitmap, stringUtil.ImagePlayerRef(MapsActivity.getUserId()));
-
+                Toast.makeText(this, "Updated image", Toast.LENGTH_LONG).show();
             } catch (FileNotFoundException e) {
                 Toast.makeText(this, "ERROR: file not found", Toast.LENGTH_LONG).show();
                 e.printStackTrace();
