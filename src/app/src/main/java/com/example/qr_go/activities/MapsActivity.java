@@ -55,6 +55,8 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback, Go
     protected Location userLocation;
     private final int LOCATION_REQUEST_CODE = 101;
     private ArrayList<GeoLocation> geoLocationList;
+    private final float zoom = 16;
+
 
     @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
@@ -119,8 +121,14 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback, Go
 
         // set my location on the map only if permission is allowed
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
-                ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED)
+                ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             mMap.setMyLocationEnabled(true);
+            if (userLocation != null) {
+                // Move camera to current position
+                LatLng latLng = new LatLng(userLocation.getLatitude(), userLocation.getLongitude()); // whatever
+                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom));
+            }
+        }
 
         mMap.setOnInfoWindowClickListener(this);
         //Code from https://javapapers.com/android/get-current-location-in-android/
@@ -192,8 +200,8 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback, Go
                     public void onLocationChanged(Location location) {
                         userLocation = new Location(location);
                         LatLng latLng = new LatLng(userLocation.getLatitude(), userLocation.getLongitude()); // whatever
-                        float zoom = 16;
-                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom));
+                        if (mMap != null)
+                            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom));
                         locationManager.removeUpdates(this);
                     }
                 };

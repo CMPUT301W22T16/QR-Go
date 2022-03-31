@@ -93,4 +93,20 @@ public class UserTest {
         assertTrue(testUser.getHighestUniqueScore() <= currentMax);
     }
 
+    @Test
+    public void testIsEmailValid(){
+        testUser.setEmail(""); // Invalid
+        assertFalse(testUser.isEmailValid());
+        testUser.setEmail("user@email.com"); // Valid
+        assertTrue(testUser.isEmailValid());
+        testUser.setEmail("user@email.ca"); // Valid
+        assertTrue(testUser.isEmailValid());
+        testUser.setEmail("useremail.ca"); // Invalid
+        assertFalse(testUser.isEmailValid());
+        testUser.setEmail("user@emailca"); // Invalid
+        assertFalse(testUser.isEmailValid());
+        testUser.setEmail("useremailca"); // Invalid
+        assertFalse(testUser.isEmailValid());
+    }
+
 }

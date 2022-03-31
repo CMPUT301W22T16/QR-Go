@@ -1,8 +1,10 @@
 package com.example.qr_go.objects;
 
 import android.os.Build;
+import android.util.Patterns;
 
 import androidx.annotation.RequiresApi;
+import androidx.core.util.PatternsCompat;
 
 import com.example.qr_go.utils.UsernameGenerator;
 
@@ -18,8 +20,6 @@ public abstract class User {
     private String userid; // Unique ID to identify users.
     private String password; // Password for verifying a user
     private String username;
-    private LoginQRCode loginQR;
-    private StatusQRCode statusQR;
     private HashMap<String, Integer> scannedQRCodeIds;
     private String email;
 
@@ -40,8 +40,6 @@ public abstract class User {
         username = UsernameGenerator.generateUsername();
         email = "";
         scannedQRCodeIds = new HashMap<>();
-        //loginQR = new LoginQRCode(this);
-        //statusQR = new StatusQRCode(this);
     }
 
     /**
@@ -56,12 +54,11 @@ public abstract class User {
         this.username = username;
         this.email = email;
         scannedQRCodeIds = new HashMap<>();
-        //loginQR = new LoginQRCode(this);
-        //statusQR = new StatusQRCode(this);
     }
 
     /**
      * Function that tells if a user is an owner and should have enhanced privileges
+     *
      * @return Returns true if user is an owner, false otherwise
      */
     public abstract Boolean isOwner();
@@ -69,6 +66,7 @@ public abstract class User {
     /**
      * Adds a QR code to the user's list of scanned QR codes if the user has not already scanned
      * it
+     *
      * @param qr GameQRCode object which is to be added to the player's list of scanned QRs
      * @return true if the qr code was successfully added, false otherwise
      */
@@ -85,6 +83,7 @@ public abstract class User {
     /**
      * Deletes a QR code to the user's list of scanned QR codes and subtracts its score from the
      * user's total
+     *
      * @param qrID the ID of the gameQRcode
      * @return true if the qr code was successfully deleted, false otherwise
      */
@@ -119,6 +118,7 @@ public abstract class User {
 
     /**
      * Returns the sum of all the user's scores
+     *
      * @return user's total score
      */
     public Integer getTotalScore() {
@@ -131,6 +131,7 @@ public abstract class User {
 
     /**
      * Returns the highest unique score that the user has
+     *
      * @return user's highest unique score
      */
     public Integer getHighestUniqueScore() {
@@ -145,6 +146,7 @@ public abstract class User {
 
     /**
      * Returns the lowest unique score that the user has
+     *
      * @return user's lowest unique score
      */
     public Integer getLowestUniqueScore() {
@@ -160,12 +162,13 @@ public abstract class User {
 
     /**
      * Returns the QR Code with the highest unique score that the user has
+     *
      * @return QR code with user's highest unique score, returns null if not found
      */
-    public Map.Entry<String, Integer> getHighestQRCode(){
+    public Map.Entry<String, Integer> getHighestQRCode() {
         Integer highestScore = getHighestUniqueScore();
-        for (Map.Entry<String, Integer> entry : scannedQRCodeIds.entrySet()){
-            if (highestScore.equals(entry.getValue())){
+        for (Map.Entry<String, Integer> entry : scannedQRCodeIds.entrySet()) {
+            if (highestScore.equals(entry.getValue())) {
                 return entry;
             }
         }
@@ -174,12 +177,13 @@ public abstract class User {
 
     /**
      * Returns the QR Code with the lowest unique score that the user has
+     *
      * @return QR code with user's lowest unique score, returns null if not found
      */
-    public Map.Entry<String, Integer> getLowestQRCode(){
+    public Map.Entry<String, Integer> getLowestQRCode() {
         Integer lowestScore = getLowestUniqueScore();
-        for (Map.Entry<String, Integer> entry : scannedQRCodeIds.entrySet()){
-            if (lowestScore.equals(entry.getValue())){
+        for (Map.Entry<String, Integer> entry : scannedQRCodeIds.entrySet()) {
+            if (lowestScore.equals(entry.getValue())) {
                 return entry;
             }
         }
@@ -207,25 +211,25 @@ public abstract class User {
         return email;
     }
 
-//     /**
-//      * @return User's login QR code
-//      */
-//     public LoginQRCode getLoginQR() {
-//         return loginQR;
-//     }
-
-//     /**
-//      * @return User's status QR code
-//      */
-//     public StatusQRCode getStatusQR() {
-//         return statusQR;
-//     }
 
     /**
      * @param email user's new email
      */
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    /**
+     * Whether the user email is valid
+     *
+     * @return True/False if email is a valid email
+     * Source: Stack overflow
+     * URL: https://stackoverflow.com/a/15808057
+     * Author: user1737884 [https://stackoverflow.com/users/1737884/user1737884]
+     */
+    public boolean isEmailValid() {
+        if (email == null) return false;
+        return !email.isEmpty() && PatternsCompat.EMAIL_ADDRESS.matcher(email).matches();
     }
 
 }
