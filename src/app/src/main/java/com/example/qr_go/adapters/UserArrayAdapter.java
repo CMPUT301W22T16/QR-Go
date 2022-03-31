@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Filter;
 import android.widget.Filterable;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -60,6 +61,12 @@ public class UserArrayAdapter extends ArrayAdapter<UserListDisplayContainer> imp
         TextView usernameView = view.findViewById(R.id.username_view);
         TextView scoreView = view.findViewById(R.id.user_score_view);
         TextView rankView = view.findViewById(R.id.user_rank_view);
+        ImageView imageView = view.findViewById(R.id.user_picture);
+
+        if (userToDisplay.getPicture().length != 0) {
+            // Set picture here
+            // imageView.set... blah blah
+        }
 
         // Show the delete button if the current user is an owner and the listed user is not an
         // owner

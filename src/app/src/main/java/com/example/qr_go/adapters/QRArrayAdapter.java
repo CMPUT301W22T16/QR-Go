@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -54,6 +55,14 @@ public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> {
         Button delButton = (Button) view.findViewById(R.id.qr_del_button);
         TextView idView = view.findViewById(R.id.qr_id_view);
         TextView scoreView = view.findViewById(R.id.qr_score_view);
+        ImageView imageView = view.findViewById(R.id.qr_picture);
+
+        if (qrToDisplay.getPicture().length != 0) {
+            // Set picture here
+            // imageView.set... blah blah
+        }
+
+
         idView.setText(qrToDisplay.getId().substring(0, 8) + "...");
 
         // Show the delete button if the current user is an owner
