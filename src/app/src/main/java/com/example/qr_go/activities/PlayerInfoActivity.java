@@ -5,12 +5,15 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,12 +26,17 @@ import com.example.qr_go.adapters.QRArrayAdapter;
 import com.example.qr_go.containers.QRListDisplayContainer;
 import com.example.qr_go.R;
 import com.example.qr_go.objects.Player;
+import com.example.qr_go.utils.StringUtil;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -146,6 +154,29 @@ public class PlayerInfoActivity extends BaseActivity {
 
                             qrAdapter = new QRArrayAdapter(PlayerInfoActivity.this, qrDisplays, 0);
                             userQRList.setAdapter(qrAdapter);
+
+                            // Image
+
+                            ImageView profileImage = findViewById(R.id.profile_photo);
+                            FirebaseStorage storage = MapsActivity.storage;
+                            StringUtil stringUtil = new StringUtil();
+                            StorageReference storageRef = storage.getReference();
+                            String ImageRef = stringUtil.ImagePlayerRef(selectedPlayer.getUserid());
+                            StorageReference islandRef = storageRef.child(ImageRef);
+                            final long ONE_MEGABYTE = 5 * 1024 * 1024;
+                            islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                                @Override
+                                public void onSuccess(byte[] bytes) {
+                                    Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                                    profileImage.setImageBitmap(bitmap);
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception exception) {
+                                    // Handle any errors
+                                    return;
+                                }
+                            });
 
 
 
