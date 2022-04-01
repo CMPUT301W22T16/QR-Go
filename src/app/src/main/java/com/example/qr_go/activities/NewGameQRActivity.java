@@ -11,19 +11,25 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.location.Address;
+import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.JsonReader;
 import android.util.Log;
+import android.util.Size;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.qr_go.objects.GeocodedLocation;
 import com.example.qr_go.utils.QRGoDBUtil;
 import com.example.qr_go.R;
 import com.example.qr_go.objects.GameQRCode;
@@ -35,8 +41,29 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.gson.Gson;
 
+import org.json.JSONObject;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+
+import javax.net.ssl.HttpsURLConnection;
+
+import io.grpc.internal.JsonParser;
+import nl.dionsegijn.konfetti.core.Party;
+import nl.dionsegijn.konfetti.core.PartyFactory;
+import nl.dionsegijn.konfetti.core.emitter.Emitter;
+import nl.dionsegijn.konfetti.core.emitter.EmitterConfig;
+import nl.dionsegijn.konfetti.core.models.Shape;
+import nl.dionsegijn.konfetti.xml.KonfettiView;
 
 /**
  * This activity is shown after user scans a QR code
@@ -51,17 +78,20 @@ public class NewGameQRActivity extends BaseActivity {
     private final int LOCATION_REQUEST_CODE = 101;
     private CheckBox locationCheckbox;
     private static final int REQUEST_IMAGE_CAPTURE = 1;
+    private FirebaseFirestore firestoreDb;
+    private LocationManager locationManager;
 
     @SuppressLint("NewApi")
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_game_qractivity);
+        setContentView(R.layout.activity_new_game_qr_activity);
         initializeNavbar();
 
         // (0) Get views and instances
         locationCheckbox = findViewById(R.id.location_checkbox);
+        firestoreDb = MapsActivity.db;
 
         // (1) Get the Game QR code string and create a new Game QR code
         Intent intent = getIntent();
@@ -80,12 +110,32 @@ public class NewGameQRActivity extends BaseActivity {
                     ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 requestPermissions(new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_REQUEST_CODE);
             } else {
+                // Acquire a reference to the system Location Manager
+                locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+                // Set initial value of location to last known
+                @SuppressLint("MissingPermission") Location location = locationManager.getLastKnownLocation(locationManager.getBestProvider(new Criteria(), false));
+                GeoLocation gpsGeoLocation = new GeoLocation(gameQRCode.getId());
+                gpsGeoLocation.setCoords(location.getLongitude(), location.getLatitude());
+                reverseGeocoding(gpsGeoLocation);
+
                 // If has permissions, set location by default
                 setQRLocation();
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        // Start confetti celebration
+        KonfettiView konfettiView = findViewById(R.id.konfettiView);
+        EmitterConfig emitterConfig = new Emitter(5L, TimeUnit.SECONDS).perSecond(50);
+        Party party = new PartyFactory(emitterConfig)
+                .angle(270)
+                .spread(90)
+                .setSpeedBetween(1f, 5f)
+                .timeToLive(2000L)
+                .position(0.0, 0.0, 1.0, 0.0)
+                .build();
+        konfettiView.start(party);
     }
 
     /**
@@ -132,14 +182,12 @@ public class NewGameQRActivity extends BaseActivity {
         try {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
                     ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-                // Acquire a reference to the system Location Manager
-                LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-                GeoLocation gpsGeoLocation = new GeoLocation(gameQRCode.getId());
                 // Define a listener that responds to location updates
                 LocationListener locationListener = new LocationListener() {
                     public void onLocationChanged(Location location) {
-                        gpsGeoLocation.setCoords(location.getLongitude(), location.getLatitude()); // set the location
-                        gameQRCode.setGeoLocation(gpsGeoLocation);
+                        GeoLocation gpsGeoLocation = new GeoLocation(gameQRCode.getId());
+                        gpsGeoLocation.setCoords(location.getLongitude(), location.getLatitude());
+                        reverseGeocoding(gpsGeoLocation);
                     }
                 };
                 // Register the listener with the Location Manager to receive location updates
@@ -195,17 +243,24 @@ public class NewGameQRActivity extends BaseActivity {
      * @param view
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
+    @SuppressLint("MissingPermission")
     public void saveNewQRCode(View view) {
+        Button saveButton = findViewById(R.id.save_game_qr);
+        saveButton.setEnabled(false); // disable save once clicked
         // If user has unchecked the location, then set location as null
         if (!locationCheckbox.isChecked()) {
             gameQRCode.setGeoLocation(null);
         }
+        saveToDB();
+    }
 
+    /**
+     * Save game QR code to database
+     */
+    private void saveToDB() {
         // Save QR code to database
         QRGoDBUtil db = new QRGoDBUtil(this); // pass in context to do toast
         String currentUserId = MapsActivity.getUserId();
-        ArrayList<GameQRCode> QRCodeList = new ArrayList<GameQRCode>();
-        FirebaseFirestore firestoreDb = MapsActivity.db;
         DocumentReference docRef = firestoreDb.collection("Players").document(currentUserId);
         docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
@@ -215,18 +270,77 @@ public class NewGameQRActivity extends BaseActivity {
                     db.updateScannedQRtoDB(gameQRCode, player, null);
                     QRGoStorageUtil StorageUtil = new QRGoStorageUtil();
                     StringUtil stringUtil = new StringUtil();
-                    StorageUtil.updateImageFromStorage(imageBitmap, stringUtil.ImageQRRef(gameQRCode.getId(), player.getUserid()));
-                }catch (Exception e){
+                    // If user has taken a photo, it could be null!
+                    if (imageBitmap != null)
+                        StorageUtil.updateImageFromStorage(imageBitmap, stringUtil.ImageQRRef(gameQRCode.getId(), player.getUserid()));
+
+                    // Go to view QR code activity if successful
+                    Intent QRInfo = new Intent(getApplicationContext(), QRInfoActivity.class);
+                    QRInfo.putExtra("QRid", gameQRCode.getId());
+                    startActivity(QRInfo);
+                } catch (Exception e) {
                     /** sometimes the db picks up that it exists while in fact it does not... strange
                      */
-                    Log.d("Player Not Found", "Player scanning does not exist");
+                    e.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "Failed to save", Toast.LENGTH_LONG).show();
                 }
-                // Go to view QR code activity
-                Intent QRInfo = new Intent(view.getContext(), QRInfoActivity.class);
-                QRInfo.putExtra("QRid", gameQRCode.getId());
-                startActivity(QRInfo);
             }
         });
     }
 
+    /**
+     * Reverse Geocoding
+     * (Latitude, Longitude) -> Address
+     * Make API call to get the address string name from coordinates
+     * Makes calls to https://nominatim.openstreetmap.org/reverse
+     * HTTP request source: https://developer.android.com/reference/java/net/HttpURLConnection
+     * Author: Android develoeprs
+     * Source: https://stackoverflow.com/a/10501619
+     *
+     * @param location current user location
+     * @return address
+     */
+    private void reverseGeocoding(GeoLocation location) {
+        if (location == null) return;
+        // Must run network call on a new thread, not on the main thread to avoid android.os.NetworkOnMainThreadException
+        new Thread() {
+            @Override
+            public void run() {
+                // New geolocation
+                GeoLocation gpsGeoLocation = new GeoLocation(gameQRCode.getId());
+                gpsGeoLocation.setCoords(location.getLongitude(), location.getLatitude());
+
+                // Fetch address string from nominatim api
+                HttpsURLConnection urlConnection = null;
+                try {
+                    URL url = new URL("https://nominatim.openstreetmap.org/reverse?format=json&lat=" + location.getLatitude() + "&lon=" + location.getLongitude());
+                    urlConnection = (HttpsURLConnection) url.openConnection();
+                    int status = urlConnection.getResponseCode();
+
+                    switch (status) {
+                        case 200:
+                        case 201:
+                            BufferedReader br = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
+                            StringBuilder sb = new StringBuilder();
+                            String line;
+                            while ((line = br.readLine()) != null) {
+                                sb.append(line + "\n");
+                            }
+                            br.close();
+                            String result = sb.toString();
+                            GeocodedLocation geocodedLocation = new Gson().fromJson(result, GeocodedLocation.class);
+                            gpsGeoLocation.setGeocodedLocation(geocodedLocation);
+
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    if (urlConnection != null)
+                        urlConnection.disconnect();
+                    // Set geolocation in the QR code even if HTTP request fails
+                    gameQRCode.setGeoLocation(gpsGeoLocation);
+                }
+            }
+        }.start();
+    }
 }

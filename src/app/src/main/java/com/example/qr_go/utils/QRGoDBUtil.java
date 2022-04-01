@@ -57,10 +57,12 @@ public class QRGoDBUtil {
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 try {
                     GameQRCode qrcode = documentSnapshot.toObject(GameQRCode.class);
-                    QRCodeList.add(qrcode);
-                    updateScannedQRtoDBContinue(null, player, qrphoto);
+                    // NOTE: qrcode will be `null` if it is new
+                    if (qrcode!=null) QRCodeList.add(qrcode);
+                    updateScannedQRtoDBContinue(gameqrcode, player, qrphoto);
                 }catch (Exception e){
-                     //sometimes the db picks up that it exists while in fact it does not... strange
+                    e.printStackTrace();
+                    //sometimes the db picks up that it exists while in fact it does not... strange
                     QRCodeList.clear();
                     updateScannedQRtoDBContinue(gameqrcode, player, qrphoto);
                 }
@@ -141,7 +143,7 @@ public class QRGoDBUtil {
                     deletePlayerFromDBContinue(playerid);
                 }catch (Exception e){
                     //sometimes the db picks up that it exists while in fact it does not... strange
-
+                    e.printStackTrace();
                 }
             }
         });
@@ -164,6 +166,7 @@ public class QRGoDBUtil {
                     }
                     catch (Exception e){
                         // breaks if object is an older version
+                        e.printStackTrace();
                     }
                 }
             }
@@ -206,6 +209,7 @@ public class QRGoDBUtil {
                     deleteGameQRFromDBContinue(qrid);
                 }catch (Exception e){
                     //sometimes the db picks up that it exists while in fact it does not... strange
+                    e.printStackTrace();
                 }
             }
         });
@@ -228,6 +232,7 @@ public class QRGoDBUtil {
                     }
                     catch (Exception e){
                         //breaks if object is an older version
+                        e.printStackTrace();
                     }
                 }
             }
