@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.location.Address;
+import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -77,7 +78,8 @@ public class NewGameQRActivity extends BaseActivity {
     private final int LOCATION_REQUEST_CODE = 101;
     private CheckBox locationCheckbox;
     private static final int REQUEST_IMAGE_CAPTURE = 1;
-    FirebaseFirestore firestoreDb;
+    private FirebaseFirestore firestoreDb;
+    private LocationManager locationManager;
 
     @SuppressLint("NewApi")
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -90,7 +92,6 @@ public class NewGameQRActivity extends BaseActivity {
         // (0) Get views and instances
         locationCheckbox = findViewById(R.id.location_checkbox);
         firestoreDb = MapsActivity.db;
-
 
         // (1) Get the Game QR code string and create a new Game QR code
         Intent intent = getIntent();
@@ -109,6 +110,14 @@ public class NewGameQRActivity extends BaseActivity {
                     ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 requestPermissions(new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_REQUEST_CODE);
             } else {
+                // Acquire a reference to the system Location Manager
+                locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+                // Set initial value of location to last known
+                @SuppressLint("MissingPermission") Location location = locationManager.getLastKnownLocation(locationManager.getBestProvider(new Criteria(), false));
+                GeoLocation gpsGeoLocation = new GeoLocation(gameQRCode.getId());
+                gpsGeoLocation.setCoords(location.getLongitude(), location.getLatitude());
+                reverseGeocoding(gpsGeoLocation);
+
                 // If has permissions, set location by default
                 setQRLocation();
             }
@@ -173,8 +182,6 @@ public class NewGameQRActivity extends BaseActivity {
         try {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
                     ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-                // Acquire a reference to the system Location Manager
-                LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
                 // Define a listener that responds to location updates
                 LocationListener locationListener = new LocationListener() {
                     public void onLocationChanged(Location location) {
@@ -236,6 +243,7 @@ public class NewGameQRActivity extends BaseActivity {
      * @param view
      */
     @RequiresApi(api = Build.VERSION_CODES.O)
+    @SuppressLint("MissingPermission")
     public void saveNewQRCode(View view) {
         Button saveButton = findViewById(R.id.save_game_qr);
         saveButton.setEnabled(false); // disable save once clicked
@@ -263,7 +271,8 @@ public class NewGameQRActivity extends BaseActivity {
                     QRGoStorageUtil StorageUtil = new QRGoStorageUtil();
                     StringUtil stringUtil = new StringUtil();
                     // If user has taken a photo, it could be null!
-                    if (imageBitmap != null) StorageUtil.updateImageFromStorage(imageBitmap, stringUtil.ImageQRRef(gameQRCode.getId(), player.getUserid()));
+                    if (imageBitmap != null)
+                        StorageUtil.updateImageFromStorage(imageBitmap, stringUtil.ImageQRRef(gameQRCode.getId(), player.getUserid()));
 
                     // Go to view QR code activity if successful
                     Intent QRInfo = new Intent(getApplicationContext(), QRInfoActivity.class);
@@ -292,6 +301,7 @@ public class NewGameQRActivity extends BaseActivity {
      * @return address
      */
     private void reverseGeocoding(GeoLocation location) {
+        if (location == null) return;
         // Must run network call on a new thread, not on the main thread to avoid android.os.NetworkOnMainThreadException
         new Thread() {
             @Override
