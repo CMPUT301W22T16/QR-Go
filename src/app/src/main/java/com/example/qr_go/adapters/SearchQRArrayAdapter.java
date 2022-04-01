@@ -13,9 +13,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.qr_go.activities.SearchActivity;
 import com.example.qr_go.utils.QRGoDBUtil;
 import com.example.qr_go.R;
-import com.example.qr_go.activities.MyQRCodesActivity;
+import com.example.qr_go.activities.SearchActivity;
 import com.example.qr_go.containers.QRListDisplayContainer;
 
 import java.math.RoundingMode;
@@ -25,16 +26,16 @@ import java.util.ArrayList;
 /**
  * Custom ArrayAdapter for displaying qr codes in a list
  */
-public class UserQRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> {
+public class SearchQRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> {
     private Context context;
     private Integer sortPos;
     private ArrayList<QRListDisplayContainer> allQrDisplays;
     private ArrayList<QRListDisplayContainer> qrDisplays;
-    private UserQRArrayAdapter adapter = this;
+    private SearchQRArrayAdapter adapter = this;
 
     private final int localDistanceBoundary = 10000;
 
-    public UserQRArrayAdapter(@NonNull Context context, ArrayList<QRListDisplayContainer> qrDisplays, Integer sortPos) {
+    public SearchQRArrayAdapter(@NonNull Context context, ArrayList<QRListDisplayContainer> qrDisplays, Integer sortPos) {
         super(context, 0, qrDisplays);
         this.context = context;
         this.allQrDisplays = new ArrayList<>(qrDisplays);
@@ -67,6 +68,7 @@ public class UserQRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> {
         // Show the delete button if the current user is an owner
         RelativeLayout.LayoutParams scoreParams =
                 new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        if (SearchActivity.getUserOwner()) {
             scoreParams.addRule(RelativeLayout.LEFT_OF, R.id.qr_del_button);
             delButton.setVisibility(View.VISIBLE);
             delButton.setOnClickListener(new View.OnClickListener() {
@@ -77,13 +79,16 @@ public class UserQRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> {
                     QRGoDBUtil db = new QRGoDBUtil();
                     qrDisplays.remove(qrToDisplay);
                     allQrDisplays.remove(qrToDisplay);
-                    MyQRCodesActivity activity = (MyQRCodesActivity) context;
+                    SearchActivity activity = (SearchActivity) context;
                     activity.deleteQR(qrToDisplay);
                     adapter.notifyDataSetChanged();
                     db.deleteGameQRFromDB(qrid);
                 }
             });
-
+        } else {
+            scoreParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+            delButton.setVisibility(View.GONE);
+        }
         scoreParams.addRule(RelativeLayout.CENTER_VERTICAL);
         scoreView.setLayoutParams(scoreParams);
 
