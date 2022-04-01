@@ -4,7 +4,7 @@
     name=":app"
     type="APP"
     maven="QR-Go:app:"
-    gradle="7.1.0"
+    gradle="7.1.2"
     buildFolder="build"
     bootClassPath="/usr/local/lib/android/sdk/platforms/android-31/android.jar:/usr/local/lib/android/sdk/build-tools/30.0.3/core-lambda-stubs.jar"
     javaSourceLevel="1.8"
