@@ -1,11 +1,14 @@
 package com.example.qr_go.activities;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -17,15 +20,21 @@ import com.example.qr_go.R;
 import com.example.qr_go.objects.Comment;
 import com.example.qr_go.objects.CommentsQR;
 import com.example.qr_go.objects.GameQRCode;
+import com.example.qr_go.objects.GeoLocation;
 import com.example.qr_go.objects.Player;
 import com.example.qr_go.objects.QRPhoto;
 import com.example.qr_go.utils.QRGoDBUtil;
+import com.example.qr_go.utils.StringUtil;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -39,17 +48,16 @@ public class QRInfoActivity extends BaseActivity {
     private GameQRCode selectedQR;
     private String selectedQRId;
 
-    private QRPhoto[] QRPhotos;
     private ListCommentsContainer comment;
 //    private GeoLocation location;     // TODO: uncomment after GeoLocation is implemented
 
     private Intent usersActivityIntent;
 
-    CommentsQR comments;
+    private CommentsQR comments;
 
-    ListView commentList;
-    ArrayAdapter<Comment> commentAdapter;
-    ArrayList<Comment> commentDataList;
+    private ListView commentList;
+    private ArrayAdapter<Comment> commentAdapter;
+    private ArrayList<Comment> commentDataList;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -63,7 +71,6 @@ public class QRInfoActivity extends BaseActivity {
         db = FirebaseFirestore.getInstance();
 
 
-
         comments = new CommentsQR();
 
         TextView tvQRName = (TextView) findViewById(R.id.qrName);
@@ -73,7 +80,7 @@ public class QRInfoActivity extends BaseActivity {
         // Get information from extras
         Bundle bundle = getIntent().getExtras();
 
-        if(bundle != null) {
+        if (bundle != null) {
             selectedQRId = bundle.getString("QRid");
 
             // set info from QRId
@@ -89,11 +96,43 @@ public class QRInfoActivity extends BaseActivity {
                                 for (DocumentSnapshot document : task.getResult()) {
                                     selectedQR = document.toObject(GameQRCode.class);
                                 }
+
                                 usersActivityIntent.putExtra("selectedQR", selectedQR);
+                                if (selectedQR == null) {
+                                    finish(); // RESTART this activity
+                                    startActivity(getIntent());
+                                    return;
+                                }; // ABORT: an error occurred
 
                                 tvQRName.setText(selectedQR.getId());
-//                                tvQRLocation.setText(selectedQR.getGeoLocation().getAddress().toString());
-                                tvScore.setText("Score: "+selectedQR.getScore());
+                                tvScore.setText("Score: " + selectedQR.getScore());
+
+                                GeoLocation geoLocation = selectedQR.getGeoLocation();
+                                if (geoLocation != null)
+                                    tvQRLocation.setText(geoLocation.getAddress());
+
+                                // set image Darius Fang
+                                ImageView profileImage = findViewById(R.id.profile_photo);
+                                FirebaseStorage storage = MapsActivity.storage;
+                                StringUtil stringUtil = new StringUtil();
+                                StorageReference storageRef = storage.getReference();
+                                String ImageRef = stringUtil.ImageQRRef(selectedQR.getId(), selectedQR.getUserObjects().get(0));
+                                StorageReference islandRef = storageRef.child(ImageRef);
+                                final long ONE_MEGABYTE = 5 * 1024 * 1024;
+                                islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                                    @Override
+                                    public void onSuccess(byte[] bytes) {
+                                        Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                                        profileImage.setImageBitmap(bitmap);
+                                    }
+                                }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception exception) {
+                                        // Handle any errors
+                                        return;
+                                    }
+                                });
+
 
                             }
                         }
@@ -109,7 +148,7 @@ public class QRInfoActivity extends BaseActivity {
                             if (task.isSuccessful()) {
                                 DocumentSnapshot document = task.getResult();
                                 Map<String, Object> map = document.getData();
-                                if(map != null) {
+                                if (map != null) {
                                     for (Object commentsInfo : map.values()) {
 
                                         Map<String, Object> commentInfo = (Map<String, Object>) commentsInfo;
@@ -195,5 +234,6 @@ public class QRInfoActivity extends BaseActivity {
     public void setSelectedQR(String QRId) {
 
     }
+
 
 }
