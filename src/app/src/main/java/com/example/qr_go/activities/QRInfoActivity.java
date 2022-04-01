@@ -96,8 +96,13 @@ public class QRInfoActivity extends BaseActivity {
                                 for (DocumentSnapshot document : task.getResult()) {
                                     selectedQR = document.toObject(GameQRCode.class);
                                 }
+
                                 usersActivityIntent.putExtra("selectedQR", selectedQR);
-                                if (selectedQR == null) return; // ABORT: an error occurred
+                                if (selectedQR == null) {
+                                    finish(); // RESTART this activity
+                                    startActivity(getIntent());
+                                    return;
+                                }; // ABORT: an error occurred
 
                                 tvQRName.setText(selectedQR.getId());
                                 tvScore.setText("Score: " + selectedQR.getScore());
