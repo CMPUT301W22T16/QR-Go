@@ -32,6 +32,9 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
   public final ConstraintLayout container;
 
   @NonNull
+  public final TextView emptyList;
+
+  @NonNull
   public final QrListContentBinding highestScore;
 
   @NonNull
@@ -78,18 +81,20 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
 
   private ActivityPlayerInfoBinding(@NonNull ConstraintLayout rootView,
       @NonNull LinearLayout QRData, @NonNull BottomNavigationView bottomNavView,
-      @NonNull ConstraintLayout container, @NonNull QrListContentBinding highestScore,
-      @NonNull LinearLayout highestScoreData, @NonNull LinearLayout highestScoreLayout,
-      @NonNull LinearLayout linearLayout, @NonNull QrListContentBinding lowestScore,
-      @NonNull LinearLayout lowestScoreData, @NonNull LinearLayout lowestScoreLayout,
-      @NonNull TextView numOfQRCodes, @NonNull TextView playerEmail,
-      @NonNull TextView playerHighScore, @NonNull TextView playerLowScore,
-      @NonNull TextView playerNameText, @NonNull TextView playerTotalScore,
-      @NonNull LinearLayout totalScoreData, @NonNull ListView userQrList) {
+      @NonNull ConstraintLayout container, @NonNull TextView emptyList,
+      @NonNull QrListContentBinding highestScore, @NonNull LinearLayout highestScoreData,
+      @NonNull LinearLayout highestScoreLayout, @NonNull LinearLayout linearLayout,
+      @NonNull QrListContentBinding lowestScore, @NonNull LinearLayout lowestScoreData,
+      @NonNull LinearLayout lowestScoreLayout, @NonNull TextView numOfQRCodes,
+      @NonNull TextView playerEmail, @NonNull TextView playerHighScore,
+      @NonNull TextView playerLowScore, @NonNull TextView playerNameText,
+      @NonNull TextView playerTotalScore, @NonNull LinearLayout totalScoreData,
+      @NonNull ListView userQrList) {
     this.rootView = rootView;
     this.QRData = QRData;
     this.bottomNavView = bottomNavView;
     this.container = container;
+    this.emptyList = emptyList;
     this.highestScore = highestScore;
     this.highestScoreData = highestScoreData;
     this.highestScoreLayout = highestScoreLayout;
@@ -147,6 +152,12 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
       }
 
       ConstraintLayout container = (ConstraintLayout) rootView;
+
+      id = R.id.empty_list;
+      TextView emptyList = ViewBindings.findChildViewById(rootView, id);
+      if (emptyList == null) {
+        break missingId;
+      }
 
       id = R.id.highest_score;
       View highestScore = ViewBindings.findChildViewById(rootView, id);
@@ -241,10 +252,10 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
       }
 
       return new ActivityPlayerInfoBinding((ConstraintLayout) rootView, QRData, bottomNavView,
-          container, binding_highestScore, highestScoreData, highestScoreLayout, linearLayout,
-          binding_lowestScore, lowestScoreData, lowestScoreLayout, numOfQRCodes, playerEmail,
-          playerHighScore, playerLowScore, playerNameText, playerTotalScore, totalScoreData,
-          userQrList);
+          container, emptyList, binding_highestScore, highestScoreData, highestScoreLayout,
+          linearLayout, binding_lowestScore, lowestScoreData, lowestScoreLayout, numOfQRCodes,
+          playerEmail, playerHighScore, playerLowScore, playerNameText, playerTotalScore,
+          totalScoreData, userQrList);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

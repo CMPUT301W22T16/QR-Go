@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.qr_go.objects.LoginQRCodeTest" tests="2" skipped="1" failures="0" errors="0" timestamp="2022-04-01T05:08:14" hostname="fv-az83-974" time="0.002">
+<testsuite name="com.example.qr_go.objects.LoginQRCodeTest" tests="2" skipped="1" failures="0" errors="0" timestamp="2022-04-01T08:02:50" hostname="fv-az82-861" time="0.001">
   <properties/>
   <testcase name="testParsingContent" classname="com.example.qr_go.objects.LoginQRCodeTest" time="0.001"/>
   <testcase name="testIsLoginValid" classname="com.example.qr_go.objects.LoginQRCodeTest" time="0.0">
