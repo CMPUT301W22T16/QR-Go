@@ -174,10 +174,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 198 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 193 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Fri Apr 01 08:02:53 UTC 2022      </nav>
+Check performed at Fri Apr 01 18:32:54 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -200,8 +200,8 @@ Check performed at Fri Apr 01 08:02:53 UTC 2022      </nav>
       <a class="mdl-navigation__link" href="#TextFields"><i class="material-icons warning-icon">warning</i>Missing <code>inputType</code> (1)</a>
       <a class="mdl-navigation__link" href="#Autofill"><i class="material-icons warning-icon">warning</i>Use Autofill (4)</a>
       <a class="mdl-navigation__link" href="#ContentDescription"><i class="material-icons warning-icon">warning</i>Image without <code>contentDescription</code> (8)</a>
-      <a class="mdl-navigation__link" href="#SetTextI18n"><i class="material-icons warning-icon">warning</i>TextView Internationalization (42)</a>
-      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (64)</a>
+      <a class="mdl-navigation__link" href="#SetTextI18n"><i class="material-icons warning-icon">warning</i>TextView Internationalization (38)</a>
+      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (63)</a>
       <a class="mdl-navigation__link" href="#RtlSymmetry"><i class="material-icons warning-icon">warning</i>Padding and margin symmetry (4)</a>
       <a class="mdl-navigation__link" href="#RtlHardcoded"><i class="material-icons warning-icon">warning</i>Using left/right instead of start/end attributes (37)</a>
       <a class="mdl-navigation__link" href="#IgnoreWithoutReason"><i class="material-icons warning-icon">warning</i>@Ignore without Reason (1)</a>
@@ -276,10 +276,10 @@ Check performed at Fri Apr 01 08:02:53 UTC 2022      </nav>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Internationalization">Internationalization</a>
 </td></tr>
 <tr>
-<td class="countColumn">42</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">38</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#SetTextI18n">SetTextI18n</a>: TextView Internationalization</td></tr>
 <tr>
-<td class="countColumn">64</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">63</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#HardcodedText">HardcodedText</a>: Hardcoded text</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Internationalization:Bidirectional Text">Internationalization:Bidirectional Text</a>
 </td></tr>
@@ -540,14 +540,14 @@ Dismiss</button>            </div>
 <span class="lineno"> 189 </span>            <span class="tag">&lt;ListView</span><span class="attribute">
 </span><span class="lineno"> 190 </span><span class="attribute">                </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/user_qr_list"</span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:189</span>: <span class="message">Should use "<code>sp</code>" instead of "<code>dp</code>" for text sizes</span><br /><pre class="errorlines">
-<span class="lineno"> 186 </span>                <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 187 </span>                <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"top"</span>
-<span class="lineno"> 188 </span>                <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Scanned QR codes:"</span>
-<span class="caretline"><span class="lineno"> 189 </span>                <span class="warning"><span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"20dp"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 190 </span>
-<span class="lineno"> 191 </span>            <span class="tag">&lt;ListView</span><span class="attribute">
-</span><span class="lineno"> 192 </span><span class="attribute">                </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/user_qr_list"</span></pre>
+<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:187</span>: <span class="message">Should use "<code>sp</code>" instead of "<code>dp</code>" for text sizes</span><br /><pre class="errorlines">
+<span class="lineno"> 184 </span><span class="attribute">                </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 185 </span>                <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 186 </span>                <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Scanned QR codes:"</span>
+<span class="caretline"><span class="lineno"> 187 </span>                <span class="warning"><span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"20dp"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 188 </span>
+<span class="lineno"> 189 </span>            <span class="tag">&lt;ListView</span><span class="attribute">
+</span><span class="lineno"> 190 </span><span class="attribute">                </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/user_qr_list"</span></pre>
 
 <span class="location"><a href="../../src/main/res/layout/activity_qr_info.xml">../../src/main/res/layout/activity_qr_info.xml</a>:31</span>: <span class="message">Should use "<code>sp</code>" instead of "<code>dp</code>" for text sizes</span><br /><pre class="errorlines">
 <span class="lineno">  28 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/qrName"</span>
@@ -1426,7 +1426,7 @@ Dismiss</button>            </div>
 <span class="lineno"> 109 </span>  lowestScoreQrScoreText.setText(<span class="string">"Score: "</span> + lowestQRCode.getValue().toString());
 </pre>
 
-<button class="mdl-button mdl-js-button mdl-button--primary" id="SetTextI18nDivLink" onclick="reveal('SetTextI18nDiv');" />+ 37 More Occurrences...</button>
+<button class="mdl-button mdl-js-button mdl-button--primary" id="SetTextI18nDivLink" onclick="reveal('SetTextI18nDiv');" />+ 33 More Occurrences...</button>
 <div id="SetTextI18nDiv" style="display: none">
 <span class="location"><a href="../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java">../../src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java</a>:106</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
 <span class="lineno"> 103 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
@@ -1478,102 +1478,141 @@ Dismiss</button>            </div>
 <span class="lineno"> 112 </span>  <span class="keyword">if</span> (highestQRCode.getValue() != <span class="number">0</span>) {
 </pre>
 
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java</a>:121</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
+<span class="lineno"> 118 </span>      qrDisplays.add(qrToDisplay);
+<span class="lineno"> 119 </span>  }
+<span class="lineno"> 120 </span>  playernameText.setText(selectedPlayer.getUsername());
+<span class="caretline"><span class="lineno"> 121 </span>  highestScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getHighestUniqueScore())</span>);</span>
+<span class="lineno"> 122 </span>  lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
+<span class="lineno"> 123 </span>  qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
+<span class="lineno"> 124 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
+</pre>
+
 <span class="location"><a href="../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java</a>:122</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno"> 119 </span>      qrDisplays.add(qrToDisplay);
-<span class="lineno"> 120 </span>  }
-<span class="lineno"> 121 </span>  playernameText.setText(selectedPlayer.getUsername());
-<span class="caretline"><span class="lineno"> 122 </span>  highestScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getHighestUniqueScore())</span>);</span>
-<span class="lineno"> 123 </span>  lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
-<span class="lineno"> 124 </span>  qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
-<span class="lineno"> 125 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
+<span class="lineno"> 119 </span>  }
+<span class="lineno"> 120 </span>  playernameText.setText(selectedPlayer.getUsername());
+<span class="lineno"> 121 </span>  highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
+<span class="caretline"><span class="lineno"> 122 </span>  lowestScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getLowestUniqueScore())</span>);</span>
+<span class="lineno"> 123 </span>  qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
+<span class="lineno"> 124 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
+<span class="lineno"> 125 </span>  playerEmailText.setText(selectedPlayer.getEmail());
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java</a>:123</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno"> 120 </span>  }
-<span class="lineno"> 121 </span>  playernameText.setText(selectedPlayer.getUsername());
-<span class="lineno"> 122 </span>  highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
-<span class="caretline"><span class="lineno"> 123 </span>  lowestScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getLowestUniqueScore())</span>);</span>
-<span class="lineno"> 124 </span>  qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
-<span class="lineno"> 125 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
-<span class="lineno"> 126 </span>  playerEmailText.setText(selectedPlayer.getEmail());
+<span class="lineno"> 120 </span>  playernameText.setText(selectedPlayer.getUsername());
+<span class="lineno"> 121 </span>  highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
+<span class="lineno"> 122 </span>  lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
+<span class="caretline"><span class="lineno"> 123 </span>  qrNumText.setText(<span class="warning">Integer.toString(selectedPlayer.getScannedQRCodeIds().size())</span>);</span>
+<span class="lineno"> 124 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
+<span class="lineno"> 125 </span>  playerEmailText.setText(selectedPlayer.getEmail());
+<span class="lineno"> 126 </span>  highestQRCode = selectedPlayer.getHighestQRCode();
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java</a>:124</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno"> 121 </span>  playernameText.setText(selectedPlayer.getUsername());
-<span class="lineno"> 122 </span>  highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
-<span class="lineno"> 123 </span>  lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
-<span class="caretline"><span class="lineno"> 124 </span>  qrNumText.setText(<span class="warning">Integer.toString(selectedPlayer.getScannedQRCodeIds().size())</span>);</span>
-<span class="lineno"> 125 </span>  totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
-<span class="lineno"> 126 </span>  playerEmailText.setText(selectedPlayer.getEmail());
-<span class="lineno"> 127 </span>  highestQRCode = selectedPlayer.getHighestQRCode();
+<span class="lineno"> 121 </span>  highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
+<span class="lineno"> 122 </span>  lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
+<span class="lineno"> 123 </span>  qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
+<span class="caretline"><span class="lineno"> 124 </span>  totalScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getTotalScore())</span>);</span>
+<span class="lineno"> 125 </span>  playerEmailText.setText(selectedPlayer.getEmail());
+<span class="lineno"> 126 </span>  highestQRCode = selectedPlayer.getHighestQRCode();
+<span class="lineno"> 127 </span>  highestScoreQrIDText.setText(highestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java</a>:125</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno"> 122 </span>  highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
-<span class="lineno"> 123 </span>  lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
-<span class="lineno"> 124 </span>  qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
-<span class="caretline"><span class="lineno"> 125 </span>  totalScoreText.setText(<span class="warning">Integer.toString(selectedPlayer.getTotalScore())</span>);</span>
-<span class="lineno"> 126 </span>  playerEmailText.setText(selectedPlayer.getEmail());
-<span class="lineno"> 127 </span>  highestQRCode = selectedPlayer.getHighestQRCode();
-<span class="lineno"> 128 </span>  highestScoreQrIDText.setText(highestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java</a>:128</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno"> 125 </span>  playerEmailText.setText(selectedPlayer.getEmail());
+<span class="lineno"> 126 </span>  highestQRCode = selectedPlayer.getHighestQRCode();
+<span class="lineno"> 127 </span>  highestScoreQrIDText.setText(highestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
+<span class="caretline"><span class="lineno"> 128 </span>  highestScoreQrScoreText.setText(<span class="warning"><span class="string">"Score: "</span> + highestQRCode.getValue().toString()</span>);</span>
+<span class="lineno"> 129 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
+<span class="lineno"> 130 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
+<span class="lineno"> 131 </span>  lowestScoreQrScoreText.setText(<span class="string">"Score: "</span> + lowestQRCode.getValue().toString());
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java</a>:129</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno"> 126 </span>  playerEmailText.setText(selectedPlayer.getEmail());
-<span class="lineno"> 127 </span>  highestQRCode = selectedPlayer.getHighestQRCode();
-<span class="lineno"> 128 </span>  highestScoreQrIDText.setText(highestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
-<span class="caretline"><span class="lineno"> 129 </span>  highestScoreQrScoreText.setText(<span class="warning"><span class="string">"Score: "</span> + highestQRCode.getValue().toString()</span>);</span>
-<span class="lineno"> 130 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
-<span class="lineno"> 131 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
-<span class="lineno"> 132 </span>  lowestScoreQrScoreText.setText(<span class="string">"Score: "</span> + lowestQRCode.getValue().toString());
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java</a>:128</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
+<span class="lineno"> 125 </span>  playerEmailText.setText(selectedPlayer.getEmail());
+<span class="lineno"> 126 </span>  highestQRCode = selectedPlayer.getHighestQRCode();
+<span class="lineno"> 127 </span>  highestScoreQrIDText.setText(highestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
+<span class="caretline"><span class="lineno"> 128 </span>  highestScoreQrScoreText.setText(<span class="string">"Score: "</span> + <span class="warning">highestQRCode.getValue().toString()</span>);</span>
+<span class="lineno"> 129 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
+<span class="lineno"> 130 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
+<span class="lineno"> 131 </span>  lowestScoreQrScoreText.setText(<span class="string">"Score: "</span> + lowestQRCode.getValue().toString());
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java</a>:129</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno"> 126 </span>  playerEmailText.setText(selectedPlayer.getEmail());
-<span class="lineno"> 127 </span>  highestQRCode = selectedPlayer.getHighestQRCode();
-<span class="lineno"> 128 </span>  highestScoreQrIDText.setText(highestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
-<span class="caretline"><span class="lineno"> 129 </span>  highestScoreQrScoreText.setText(<span class="string">"Score: "</span> + <span class="warning">highestQRCode.getValue().toString()</span>);</span>
-<span class="lineno"> 130 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
-<span class="lineno"> 131 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
-<span class="lineno"> 132 </span>  lowestScoreQrScoreText.setText(<span class="string">"Score: "</span> + lowestQRCode.getValue().toString());
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java</a>:128</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
+<span class="lineno"> 125 </span>  playerEmailText.setText(selectedPlayer.getEmail());
+<span class="lineno"> 126 </span>  highestQRCode = selectedPlayer.getHighestQRCode();
+<span class="lineno"> 127 </span>  highestScoreQrIDText.setText(highestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
+<span class="caretline"><span class="lineno"> 128 </span>  highestScoreQrScoreText.setText(<span class="warning"><span class="string">"Score: "</span></span> + highestQRCode.getValue().toString());</span>
+<span class="lineno"> 129 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
+<span class="lineno"> 130 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
+<span class="lineno"> 131 </span>  lowestScoreQrScoreText.setText(<span class="string">"Score: "</span> + lowestQRCode.getValue().toString());
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java</a>:129</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
-<span class="lineno"> 126 </span>  playerEmailText.setText(selectedPlayer.getEmail());
-<span class="lineno"> 127 </span>  highestQRCode = selectedPlayer.getHighestQRCode();
-<span class="lineno"> 128 </span>  highestScoreQrIDText.setText(highestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
-<span class="caretline"><span class="lineno"> 129 </span>  highestScoreQrScoreText.setText(<span class="warning"><span class="string">"Score: "</span></span> + highestQRCode.getValue().toString());</span>
-<span class="lineno"> 130 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
-<span class="lineno"> 131 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
-<span class="lineno"> 132 </span>  lowestScoreQrScoreText.setText(<span class="string">"Score: "</span> + lowestQRCode.getValue().toString());
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java</a>:131</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno"> 128 </span>  highestScoreQrScoreText.setText(<span class="string">"Score: "</span> + highestQRCode.getValue().toString());
+<span class="lineno"> 129 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
+<span class="lineno"> 130 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
+<span class="caretline"><span class="lineno"> 131 </span>  lowestScoreQrScoreText.setText(<span class="warning"><span class="string">"Score: "</span> + lowestQRCode.getValue().toString()</span>);</span>
+<span class="lineno"> 132 </span>  <span class="keyword">if</span> (highestQRCode.getValue() != <span class="number">0</span>) {
+<span class="lineno"> 133 </span>      highestScoreLayout.setOnClickListener(<span class="keyword">new</span> View.OnClickListener() {
+<span class="lineno"> 134 </span>          <span class="annotation">@Override</span></pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java</a>:131</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
+<span class="lineno"> 128 </span>  highestScoreQrScoreText.setText(<span class="string">"Score: "</span> + highestQRCode.getValue().toString());
+<span class="lineno"> 129 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
+<span class="lineno"> 130 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
+<span class="caretline"><span class="lineno"> 131 </span>  lowestScoreQrScoreText.setText(<span class="string">"Score: "</span> + <span class="warning">lowestQRCode.getValue().toString()</span>);</span>
+<span class="lineno"> 132 </span>  <span class="keyword">if</span> (highestQRCode.getValue() != <span class="number">0</span>) {
+<span class="lineno"> 133 </span>      highestScoreLayout.setOnClickListener(<span class="keyword">new</span> View.OnClickListener() {
+<span class="lineno"> 134 </span>          <span class="annotation">@Override</span></pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java</a>:131</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
+<span class="lineno"> 128 </span>  highestScoreQrScoreText.setText(<span class="string">"Score: "</span> + highestQRCode.getValue().toString());
+<span class="lineno"> 129 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
+<span class="lineno"> 130 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
+<span class="caretline"><span class="lineno"> 131 </span>  lowestScoreQrScoreText.setText(<span class="warning"><span class="string">"Score: "</span></span> + lowestQRCode.getValue().toString());</span>
+<span class="lineno"> 132 </span>  <span class="keyword">if</span> (highestQRCode.getValue() != <span class="number">0</span>) {
+<span class="lineno"> 133 </span>      highestScoreLayout.setOnClickListener(<span class="keyword">new</span> View.OnClickListener() {
+<span class="lineno"> 134 </span>          <span class="annotation">@Override</span></pre>
+
+<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java</a>:65</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno">  62 </span>        }
+<span class="lineno">  63 </span>
+<span class="lineno">  64 </span>
+<span class="caretline"><span class="lineno">  65 </span>        idView.setText(<span class="warning">qrToDisplay.getId().substring(<span class="number">0</span>, <span class="number">8</span>) + <span class="string">"..."</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  66 </span>
+<span class="lineno">  67 </span>        <span class="comment">// Show the delete button if the current user is an owner</span>
+<span class="lineno">  68 </span>        RelativeLayout.LayoutParams scoreParams =
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java</a>:132</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno"> 129 </span>  highestScoreQrScoreText.setText(<span class="string">"Score: "</span> + highestQRCode.getValue().toString());
-<span class="lineno"> 130 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
-<span class="lineno"> 131 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
-<span class="caretline"><span class="lineno"> 132 </span>  lowestScoreQrScoreText.setText(<span class="warning"><span class="string">"Score: "</span> + lowestQRCode.getValue().toString()</span>);</span>
-<span class="lineno"> 133 </span>  <span class="keyword">if</span> (highestQRCode.getValue() != <span class="number">0</span>) {
-<span class="lineno"> 134 </span>      highestScoreLayout.setOnClickListener(<span class="keyword">new</span> View.OnClickListener() {
-<span class="lineno"> 135 </span>          <span class="annotation">@Override</span></pre>
+<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java</a>:96</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno">  93 </span>
+<span class="lineno">  94 </span>        <span class="keyword">switch</span>(sortPos) {
+<span class="lineno">  95 </span>            <span class="keyword">case</span> <span class="number">0</span>:
+<span class="caretline"><span class="lineno">  96 </span>                scoreView.setText(<span class="warning"><span class="string">"Score:\n"</span> + qrToDisplay.getScore().toString()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  97 </span>                <span class="keyword">break</span>;
+<span class="lineno">  98 </span>            <span class="keyword">default</span>:
+<span class="lineno">  99 </span>                Float distance =  qrToDisplay.getDistance();
+</pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java</a>:132</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno"> 129 </span>  highestScoreQrScoreText.setText(<span class="string">"Score: "</span> + highestQRCode.getValue().toString());
-<span class="lineno"> 130 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
-<span class="lineno"> 131 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
-<span class="caretline"><span class="lineno"> 132 </span>  lowestScoreQrScoreText.setText(<span class="string">"Score: "</span> + <span class="warning">lowestQRCode.getValue().toString()</span>);</span>
-<span class="lineno"> 133 </span>  <span class="keyword">if</span> (highestQRCode.getValue() != <span class="number">0</span>) {
-<span class="lineno"> 134 </span>      highestScoreLayout.setOnClickListener(<span class="keyword">new</span> View.OnClickListener() {
-<span class="lineno"> 135 </span>          <span class="annotation">@Override</span></pre>
+<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java</a>:96</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
+<span class="lineno">  93 </span>
+<span class="lineno">  94 </span>        <span class="keyword">switch</span>(sortPos) {
+<span class="lineno">  95 </span>            <span class="keyword">case</span> <span class="number">0</span>:
+<span class="caretline"><span class="lineno">  96 </span>                scoreView.setText(<span class="string">"Score:\n"</span> + <span class="warning">qrToDisplay.getScore().toString()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  97 </span>                <span class="keyword">break</span>;
+<span class="lineno">  98 </span>            <span class="keyword">default</span>:
+<span class="lineno">  99 </span>                Float distance =  qrToDisplay.getDistance();
+</pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java">../../src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java</a>:132</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
-<span class="lineno"> 129 </span>  highestScoreQrScoreText.setText(<span class="string">"Score: "</span> + highestQRCode.getValue().toString());
-<span class="lineno"> 130 </span>  lowestQRCode = selectedPlayer.getLowestQRCode();
-<span class="lineno"> 131 </span>  lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(<span class="number">0</span>, <span class="number">8</span>));
-<span class="caretline"><span class="lineno"> 132 </span>  lowestScoreQrScoreText.setText(<span class="warning"><span class="string">"Score: "</span></span> + lowestQRCode.getValue().toString());</span>
-<span class="lineno"> 133 </span>  <span class="keyword">if</span> (highestQRCode.getValue() != <span class="number">0</span>) {
-<span class="lineno"> 134 </span>      highestScoreLayout.setOnClickListener(<span class="keyword">new</span> View.OnClickListener() {
-<span class="lineno"> 135 </span>          <span class="annotation">@Override</span></pre>
+<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java</a>:109</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno"> 106 </span>                } <span class="keyword">else</span> {
+<span class="lineno"> 107 </span>                    distanceString = df.format(distance) + <span class="string">"m"</span>;
+<span class="lineno"> 108 </span>                }
+<span class="caretline"><span class="lineno"> 109 </span>                scoreView.setText(<span class="warning">distanceString + <span class="string">"\naway"</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 110 </span>                <span class="keyword">break</span>;
+<span class="lineno"> 111 </span>        }
+</pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/activities/QRInfoActivity.java">../../src/main/java/com/example/qr_go/activities/QRInfoActivity.java</a>:108</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
 <span class="lineno"> 105 </span>            }; <span class="comment">// ABORT: an error occurred</span>
@@ -1593,45 +1632,6 @@ Dismiss</button>            </div>
 <span class="lineno"> 109 </span>
 <span class="lineno"> 110 </span>            GeoLocation geoLocation = selectedQR.getGeoLocation();
 <span class="lineno"> 111 </span>            <span class="keyword">if</span> (geoLocation != <span class="keyword">null</span>)
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/SearchQRArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/SearchQRArrayAdapter.java</a>:66</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno">  63 </span>        }
-<span class="lineno">  64 </span>
-<span class="lineno">  65 </span>
-<span class="caretline"><span class="lineno">  66 </span>        idView.setText(<span class="warning">qrToDisplay.getId().substring(<span class="number">0</span>, <span class="number">8</span>) + <span class="string">"..."</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  67 </span>
-<span class="lineno">  68 </span>        <span class="comment">// Show the delete button if the current user is an owner</span>
-<span class="lineno">  69 </span>        RelativeLayout.LayoutParams scoreParams =
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/SearchQRArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/SearchQRArrayAdapter.java</a>:97</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno">  94 </span>
-<span class="lineno">  95 </span>        <span class="keyword">switch</span>(sortPos) {
-<span class="lineno">  96 </span>            <span class="keyword">case</span> <span class="number">0</span>:
-<span class="caretline"><span class="lineno">  97 </span>                scoreView.setText(<span class="warning"><span class="string">"Score:\n"</span> + qrToDisplay.getScore().toString()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  98 </span>                <span class="keyword">break</span>;
-<span class="lineno">  99 </span>            <span class="keyword">default</span>:
-<span class="lineno"> 100 </span>                Float distance =  qrToDisplay.getDistance();
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/SearchQRArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/SearchQRArrayAdapter.java</a>:97</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno">  94 </span>
-<span class="lineno">  95 </span>        <span class="keyword">switch</span>(sortPos) {
-<span class="lineno">  96 </span>            <span class="keyword">case</span> <span class="number">0</span>:
-<span class="caretline"><span class="lineno">  97 </span>                scoreView.setText(<span class="string">"Score:\n"</span> + <span class="warning">qrToDisplay.getScore().toString()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  98 </span>                <span class="keyword">break</span>;
-<span class="lineno">  99 </span>            <span class="keyword">default</span>:
-<span class="lineno"> 100 </span>                Float distance =  qrToDisplay.getDistance();
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/SearchQRArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/SearchQRArrayAdapter.java</a>:110</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno"> 107 </span>                } <span class="keyword">else</span> {
-<span class="lineno"> 108 </span>                    distanceString = df.format(distance) + <span class="string">"m"</span>;
-<span class="lineno"> 109 </span>                }
-<span class="caretline"><span class="lineno"> 110 </span>                scoreView.setText(<span class="warning">distanceString + <span class="string">"\naway"</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 111 </span>                <span class="keyword">break</span>;
-<span class="lineno"> 112 </span>        }
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:99</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
@@ -1751,45 +1751,6 @@ Dismiss</button>            </div>
 <span class="lineno"> 118 </span>  }
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserQRArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserQRArrayAdapter.java</a>:65</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno">  62 </span>        }
-<span class="lineno">  63 </span>
-<span class="lineno">  64 </span>
-<span class="caretline"><span class="lineno">  65 </span>        idView.setText(<span class="warning">qrToDisplay.getId().substring(<span class="number">0</span>, <span class="number">8</span>) + <span class="string">"..."</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  66 </span>
-<span class="lineno">  67 </span>        <span class="comment">// Show the delete button if the current user is an owner</span>
-<span class="lineno">  68 </span>        RelativeLayout.LayoutParams scoreParams =
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserQRArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserQRArrayAdapter.java</a>:92</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno">  89 </span>
-<span class="lineno">  90 </span>        <span class="keyword">switch</span>(sortPos) {
-<span class="lineno">  91 </span>            <span class="keyword">case</span> <span class="number">0</span>:
-<span class="caretline"><span class="lineno">  92 </span>                scoreView.setText(<span class="warning"><span class="string">"Score:\n"</span> + qrToDisplay.getScore().toString()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  93 </span>                <span class="keyword">break</span>;
-<span class="lineno">  94 </span>            <span class="keyword">default</span>:
-<span class="lineno">  95 </span>                Float distance =  qrToDisplay.getDistance();
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserQRArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserQRArrayAdapter.java</a>:92</span>: <span class="message">Number formatting does not take into account locale settings. Consider using <code>String.format</code> instead.</span><br /><pre class="errorlines">
-<span class="lineno">  89 </span>
-<span class="lineno">  90 </span>        <span class="keyword">switch</span>(sortPos) {
-<span class="lineno">  91 </span>            <span class="keyword">case</span> <span class="number">0</span>:
-<span class="caretline"><span class="lineno">  92 </span>                scoreView.setText(<span class="string">"Score:\n"</span> + <span class="warning">qrToDisplay.getScore().toString()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno">  93 </span>                <span class="keyword">break</span>;
-<span class="lineno">  94 </span>            <span class="keyword">default</span>:
-<span class="lineno">  95 </span>                Float distance =  qrToDisplay.getDistance();
-</pre>
-
-<span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserQRArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserQRArrayAdapter.java</a>:105</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno"> 102 </span>                } <span class="keyword">else</span> {
-<span class="lineno"> 103 </span>                    distanceString = df.format(distance) + <span class="string">"m"</span>;
-<span class="lineno"> 104 </span>                }
-<span class="caretline"><span class="lineno"> 105 </span>                scoreView.setText(<span class="warning">distanceString + <span class="string">"\naway"</span></span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 106 </span>                <span class="keyword">break</span>;
-<span class="lineno"> 107 </span>        }
-</pre>
-
 </div>
 </div>
 <div class="metadata"><div class="explanation" id="explanationSetTextI18n" style="display: none;">
@@ -1875,7 +1836,7 @@ Dismiss</button>            </div>
 <span class="lineno">  78 </span>
 <span class="lineno">  79 </span>                <span class="tag">&lt;LinearLayout</span></pre>
 
-<button class="mdl-button mdl-js-button mdl-button--primary" id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 59 More Occurrences...</button>
+<button class="mdl-button mdl-js-button mdl-button--primary" id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 58 More Occurrences...</button>
 <div id="HardcodedTextDiv" style="display: none">
 <span class="location"><a href="../../src/main/res/layout/activity_my_qr_codes.xml">../../src/main/res/layout/activity_my_qr_codes.xml</a>:88</span>: <span class="message">Hardcoded string "Highest Score", should use <code>@string</code> resource</span><br /><pre class="errorlines">
 <span class="lineno">  85 </span>                    <span class="tag">&lt;TextView</span><span class="attribute">
@@ -2120,23 +2081,14 @@ Dismiss</button>            </div>
 <span class="lineno"> 170 </span>            <span class="tag">&lt;include</span><span class="attribute">
 </span><span class="lineno"> 171 </span><span class="attribute">                </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/lowest_score"</span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:188</span>: <span class="message">Hardcoded string "Scanned QR codes:", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 185 </span><span class="attribute">                </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 186 </span>                <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 187 </span>                <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"top"</span>
-<span class="caretline"><span class="lineno"> 188 </span>                <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Scanned QR codes:"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 189 </span>                <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"20dp"</span> />
-<span class="lineno"> 190 </span>
-<span class="lineno"> 191 </span>            <span class="tag">&lt;ListView</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:200</span>: <span class="message">Hardcoded string "No QR codes to display!", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 197 </span><span class="attribute">                </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/empty_list"</span>
-<span class="lineno"> 198 </span>                <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 199 </span>                <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 200 </span>                <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"No QR codes to display!"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 201 </span>
-<span class="lineno"> 202 </span>        <span class="tag">&lt;/LinearLayout></span>
-</pre>
+<span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:186</span>: <span class="message">Hardcoded string "Scanned QR codes:", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 183 </span>            <span class="tag">&lt;TextView</span><span class="attribute">
+</span><span class="lineno"> 184 </span><span class="attribute">                </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 185 </span>                <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 186 </span>                <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Scanned QR codes:"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 187 </span>                <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"20dp"</span> />
+<span class="lineno"> 188 </span>
+<span class="lineno"> 189 </span>            <span class="tag">&lt;ListView</span></pre>
 
 <span class="location"><a href="../../src/main/res/layout/activity_qr_info.xml">../../src/main/res/layout/activity_qr_info.xml</a>:32</span>: <span class="message">Hardcoded string "QR NAME", should use <code>@string</code> resource</span><br /><pre class="errorlines">
 <span class="lineno">  29 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
@@ -2289,7 +2241,16 @@ Dismiss</button>            </div>
 <span class="lineno"> 42 </span>  <span class="prefix">app:</span><span class="attribute">layout_constraintTop_toBottomOf</span>=<span class="value">"@+id/commenterPhoto"</span> />
 </pre>
 
-<br/><b>NOTE: 14 results omitted.</b><br/><br/></div>
+<span class="location"><a href="../../src/main/res/layout/list_users_content.xml">../../src/main/res/layout/list_users_content.xml</a>:7</span>: <span class="message">Hardcoded string "User Name", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno">  4 </span>    <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno">  5 </span>    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  6 </span>    <span class="prefix">android:</span><span class="attribute">padding</span>=<span class="value">"20dp"</span>
+<span class="caretline"><span class="lineno">  7 </span>    <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"User Name"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  8 </span>    <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"40sp"</span>>
+<span class="lineno">  9 </span>
+<span class="lineno"> 10 </span><span class="tag">&lt;/TextView></span></pre>
+
+<br/><b>NOTE: 13 results omitted.</b><br/><br/></div>
 </div>
 <div class="metadata"><div class="explanation" id="explanationHardcodedText" style="display: none;">
 Hardcoding text attributes directly in layout files is bad for several reasons:<br/>

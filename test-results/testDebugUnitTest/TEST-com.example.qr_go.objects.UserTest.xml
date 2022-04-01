@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.qr_go.objects.UserTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-04-01T08:02:48" hostname="fv-az82-861" time="0.069">
+<testsuite name="com.example.qr_go.objects.UserTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-04-01T18:32:44" hostname="fv-az47-788" time="0.064">
   <properties/>
-  <testcase name="testGetHighestScore" classname="com.example.qr_go.objects.UserTest" time="0.008"/>
-  <testcase name="testRemoveQRCode" classname="com.example.qr_go.objects.UserTest" time="0.001"/>
-  <testcase name="testIsEmailValid" classname="com.example.qr_go.objects.UserTest" time="0.047"/>
+  <testcase name="testGetHighestScore" classname="com.example.qr_go.objects.UserTest" time="0.024"/>
+  <testcase name="testRemoveQRCode" classname="com.example.qr_go.objects.UserTest" time="0.0"/>
+  <testcase name="testIsEmailValid" classname="com.example.qr_go.objects.UserTest" time="0.029"/>
   <testcase name="testAddQRCode" classname="com.example.qr_go.objects.UserTest" time="0.001"/>
   <testcase name="testGetTotalScore" classname="com.example.qr_go.objects.UserTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
