@@ -9,10 +9,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/drawable/ic_baseline_chevron_left_24.xml"
             line="6"
             column="19"
-            startOffset="199"
+            startOffset="204"
             endLine="6"
             endColumn="43"
-            endOffset="223"/>
+            endOffset="228"/>
         <map>
             <entry
                 name="folderVersion"
@@ -37,10 +37,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/drawable/ic_baseline_chevron_left_24.xml"
             line="8"
             column="26"
-            startOffset="259"
+            startOffset="266"
             endLine="8"
             endColumn="46"
-            endOffset="279"/>
+            endOffset="286"/>
         <map>
             <entry
                 name="folderVersion"
@@ -65,10 +65,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/drawable/ic_baseline_delete_24.xml"
             line="6"
             column="19"
-            startOffset="199"
+            startOffset="204"
             endLine="6"
             endColumn="43"
-            endOffset="223"/>
+            endOffset="228"/>
         <map>
             <entry
                 name="folderVersion"
@@ -93,10 +93,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/drawable/ic_baseline_delete_24.xml"
             line="8"
             column="26"
-            startOffset="259"
+            startOffset="266"
             endLine="8"
             endColumn="46"
-            endOffset="279"/>
+            endOffset="286"/>
         <map>
             <entry
                 name="folderVersion"
@@ -121,10 +121,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/drawable/ic_baseline_my_location_24.xml"
             line="6"
             column="19"
-            startOffset="199"
+            startOffset="204"
             endLine="6"
             endColumn="43"
-            endOffset="223"/>
+            endOffset="228"/>
         <map>
             <entry
                 name="folderVersion"
@@ -149,10 +149,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/drawable/ic_baseline_my_location_24.xml"
             line="8"
             column="26"
-            startOffset="259"
+            startOffset="266"
             endLine="8"
             endColumn="46"
-            endOffset="279"/>
+            endOffset="286"/>
         <map>
             <entry
                 name="folderVersion"
@@ -177,10 +177,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/drawable/ic_baseline_public_24.xml"
             line="6"
             column="19"
-            startOffset="199"
+            startOffset="204"
             endLine="6"
             endColumn="43"
-            endOffset="223"/>
+            endOffset="228"/>
         <map>
             <entry
                 name="folderVersion"
@@ -205,10 +205,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/drawable/ic_baseline_public_24.xml"
             line="8"
             column="26"
-            startOffset="259"
+            startOffset="266"
             endLine="8"
             endColumn="46"
-            endOffset="279"/>
+            endOffset="286"/>
         <map>
             <entry
                 name="folderVersion"
@@ -254,10 +254,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
             line="26"
             column="17"
-            startOffset="1003"
+            startOffset="1028"
             endLine="26"
             endColumn="42"
-            endOffset="1028"/>
+            endOffset="1053"/>
         <map>
             <entry
                 name="applies"
@@ -277,10 +277,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
             line="32"
             column="17"
-            startOffset="1237"
+            startOffset="1268"
             endLine="32"
             endColumn="42"
-            endOffset="1262"/>
+            endOffset="1293"/>
         <map>
             <entry
                 name="applies"
@@ -300,10 +300,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
             line="56"
             column="25"
-            startOffset="2232"
+            startOffset="2287"
             endLine="56"
             endColumn="50"
-            endOffset="2257"/>
+            endOffset="2312"/>
         <map>
             <entry
                 name="applies"
@@ -323,10 +323,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
             line="75"
             column="25"
-            startOffset="3022"
+            startOffset="3096"
             endLine="75"
             endColumn="50"
-            endOffset="3047"/>
+            endOffset="3121"/>
         <map>
             <entry
                 name="applies"
@@ -346,10 +346,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
             line="94"
             column="25"
-            startOffset="3830"
+            startOffset="3923"
             endLine="94"
             endColumn="50"
-            endOffset="3855"/>
+            endOffset="3948"/>
         <map>
             <entry
                 name="applies"
@@ -369,10 +369,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
             line="113"
             column="25"
-            startOffset="4635"
+            startOffset="4747"
             endLine="113"
             endColumn="50"
-            endOffset="4660"/>
+            endOffset="4772"/>
         <map>
             <entry
                 name="applies"
@@ -392,10 +392,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
             line="132"
             column="25"
-            startOffset="5440"
+            startOffset="5571"
             endLine="132"
             endColumn="50"
-            endOffset="5465"/>
+            endOffset="5596"/>
         <map>
             <entry
                 name="applies"
@@ -411,10 +411,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qr_activity.xml"
             line="45"
             column="9"
-            startOffset="1729"
+            startOffset="1773"
             endLine="45"
             endColumn="40"
-            endOffset="1760"/>
+            endOffset="1804"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -428,10 +428,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_new_game_qr_activity.xml"
             line="73"
             column="9"
-            startOffset="2862"
+            startOffset="2934"
             endLine="73"
             endColumn="42"
-            endOffset="2895"/>
+            endOffset="2967"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -449,10 +449,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
             line="26"
             column="17"
-            startOffset="964"
+            startOffset="989"
             endLine="26"
             endColumn="42"
-            endOffset="989"/>
+            endOffset="1014"/>
         <map>
             <entry
                 name="applies"
@@ -472,10 +472,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
             line="32"
             column="17"
-            startOffset="1198"
+            startOffset="1229"
             endLine="32"
             endColumn="42"
-            endOffset="1223"/>
+            endOffset="1254"/>
         <map>
             <entry
                 name="applies"
@@ -495,10 +495,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
             line="56"
             column="25"
-            startOffset="2193"
+            startOffset="2248"
             endLine="56"
             endColumn="50"
-            endOffset="2218"/>
+            endOffset="2273"/>
         <map>
             <entry
                 name="applies"
@@ -518,10 +518,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
             line="75"
             column="25"
-            startOffset="2983"
+            startOffset="3057"
             endLine="75"
             endColumn="50"
-            endOffset="3008"/>
+            endOffset="3082"/>
         <map>
             <entry
                 name="applies"
@@ -541,10 +541,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
             line="94"
             column="25"
-            startOffset="3791"
+            startOffset="3884"
             endLine="94"
             endColumn="50"
-            endOffset="3816"/>
+            endOffset="3909"/>
         <map>
             <entry
                 name="applies"
@@ -564,10 +564,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
             line="113"
             column="25"
-            startOffset="4596"
+            startOffset="4708"
             endLine="113"
             endColumn="50"
-            endOffset="4621"/>
+            endOffset="4733"/>
         <map>
             <entry
                 name="applies"
@@ -587,10 +587,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
             line="132"
             column="25"
-            startOffset="5401"
+            startOffset="5532"
             endLine="132"
             endColumn="50"
-            endOffset="5426"/>
+            endOffset="5557"/>
         <map>
             <entry
                 name="applies"
@@ -606,10 +606,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="70"
             column="9"
-            startOffset="2816"
+            startOffset="2885"
             endLine="70"
             endColumn="40"
-            endOffset="2847"/>
+            endOffset="2916"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -623,10 +623,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="97"
             column="9"
-            startOffset="3892"
+            startOffset="3988"
             endLine="97"
             endColumn="37"
-            endOffset="3920"/>
+            endOffset="4016"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -709,10 +709,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
             line="67"
             column="9"
-            startOffset="2707"
+            startOffset="2773"
             endLine="67"
             endColumn="38"
-            endOffset="2736"/>
+            endOffset="2802"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -726,10 +726,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
             line="96"
             column="9"
-            startOffset="3926"
+            startOffset="4021"
             endLine="96"
             endColumn="42"
-            endOffset="3959"/>
+            endOffset="4054"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -743,10 +743,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
             line="115"
             column="9"
-            startOffset="4704"
+            startOffset="4818"
             endLine="115"
             endColumn="43"
-            endOffset="4738"/>
+            endOffset="4852"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -760,10 +760,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
             line="132"
             column="9"
-            startOffset="5441"
+            startOffset="5572"
             endLine="132"
             endColumn="43"
-            endOffset="5475"/>
+            endOffset="5606"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -1282,10 +1282,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_qr_list_content.xml"
             line="24"
             column="26"
-            startOffset="786"
+            startOffset="809"
             endLine="24"
             endColumn="38"
-            endOffset="798"/>
+            endOffset="821"/>
         <map>
             <entry
                 name="applies"
