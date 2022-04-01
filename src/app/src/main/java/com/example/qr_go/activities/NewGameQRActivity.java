@@ -80,7 +80,7 @@ public class NewGameQRActivity extends BaseActivity {
     private static final int REQUEST_IMAGE_CAPTURE = 1;
     private FirebaseFirestore firestoreDb;
     private LocationManager locationManager;
-
+    QRGoStorageUtil StorageUtil = new QRGoStorageUtil();
     @SuppressLint("NewApi")
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -231,6 +231,7 @@ public class NewGameQRActivity extends BaseActivity {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             imageBitmap = (Bitmap) extras.get("data");
+            imageBitmap = StorageUtil.squareCropBitmap(imageBitmap);
             ImageView imageView = findViewById(R.id.take_qr_photo_imageview);
             imageView.setImageBitmap(imageBitmap);
         }
@@ -268,7 +269,6 @@ public class NewGameQRActivity extends BaseActivity {
                 try {
                     Player player = documentSnapshot.toObject(Player.class);
                     db.updateScannedQRtoDB(gameQRCode, player, null);
-                    QRGoStorageUtil StorageUtil = new QRGoStorageUtil();
                     StringUtil stringUtil = new StringUtil();
                     // If user has taken a photo, it could be null!
                     if (imageBitmap != null)

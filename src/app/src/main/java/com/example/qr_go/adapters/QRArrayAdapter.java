@@ -57,9 +57,8 @@ public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> {
         TextView scoreView = view.findViewById(R.id.qr_score_view);
         ImageView imageView = view.findViewById(R.id.qr_picture);
 
-        if (qrToDisplay.getPicture().length != 0) {
-            // Set picture here
-            // imageView.set... blah blah
+        if (qrToDisplay.getPicture() != null) {
+            imageView.setImageBitmap(qrToDisplay.getPicture());
         }
 
 

@@ -47,6 +47,7 @@ import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -256,27 +257,7 @@ public class SearchActivity extends BaseActivity {
                                     user.getHighestUniqueScore(),
                                     MapsActivity.getUserId().equals(user.getUserid())
                             );
-                    FirebaseStorage storage = MapsActivity.storage;
-                    StringUtil stringUtil = new StringUtil();
-                    StorageReference storageRef = storage.getReference();
-                    String ImageRef = stringUtil.ImagePlayerRef(user.getUserid());
-                    StorageReference islandRef = storageRef.child(ImageRef);
-                    final long ONE_MEGABYTE = 5 * 1024 * 1024;
-                    islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
-                        @Override
-                        public void onSuccess(byte[] bytes) {
-                            Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-                            userToDisplay.setPicture(bitmap);
-                            userDisplays.add(userToDisplay);
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception exception) {
-                            // Handle any errors
-                            return;
-                        }
-                    });
-
+                    userDisplays.add(userToDisplay);
                 }
             }
         });
@@ -292,6 +273,7 @@ public class SearchActivity extends BaseActivity {
                     // will be updated later
                     Double qrLat = null;
                     Double qrLon = null;
+                    Map usermap = (Map) snapshot.get("userIds");
                     if (qrLocationMap != null) {
                         qrLat = (Double) qrLocationMap.get("latitude");
                         qrLon = (Double) qrLocationMap.get("longitude");
@@ -302,7 +284,8 @@ public class SearchActivity extends BaseActivity {
                                     snapshot.get("id", String.class),
                                     qrLat,
                                     qrLon,
-                                    null
+                                    null,
+                                    (String) usermap.keySet().toArray()[0]
                             );
                     qrDisplays.add(qrToDisplay);
                 }
@@ -321,9 +304,9 @@ public class SearchActivity extends BaseActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+                addImages();
             }
         });
-
     }
 
     /**
@@ -380,6 +363,53 @@ public class SearchActivity extends BaseActivity {
         } catch (NoSuchMethodError e) {
             e.printStackTrace();
             Toast.makeText(this, "failed to get location", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    /**
+     * Adds images for qrs and users
+     */
+    private void addImages() {
+        FirebaseStorage storage = MapsActivity.storage;
+        StringUtil stringUtil = new StringUtil();
+        StorageReference storageRef = storage.getReference();
+        for (UserListDisplayContainer user : userDisplays) {
+            String ImageRef = stringUtil.ImagePlayerRef(user.getUserid());
+            StorageReference islandRef = storageRef.child(ImageRef);
+            final long ONE_MEGABYTE = 5 * 1024 * 1024;
+            islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                @Override
+                public void onSuccess(byte[] bytes) {
+                    Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                    user.setPicture(bitmap);
+
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception exception) {
+                    // Handle any errors
+                    return;
+                }
+            });
+        }
+        for (QRListDisplayContainer qr : qrDisplays) {
+            String ImageRef = stringUtil.ImageQRRef(qr.getId(), qr.getFirstUserID());
+            StorageReference islandRef = storageRef.child(ImageRef);
+            final long ONE_MEGABYTE = 5 * 1024 * 1024;
+            islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                @Override
+                public void onSuccess(byte[] bytes) {
+                    Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                    qr.setPicture(bitmap);
+                    searchPagerAdapter.updateSort(currentFragment, sortPosition);
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception exception) {
+                    // Handle any errors
+                    return;
+                }
+            });
         }
     }
 

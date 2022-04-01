@@ -112,6 +112,7 @@ public class PlayerInfoActivity extends BaseActivity {
                                                 qrCodeList.get(i),
                                                 null,
                                                 null,
+                                                null,
                                                 null
                                         );
                                 qrDisplays.add(qrToDisplay);

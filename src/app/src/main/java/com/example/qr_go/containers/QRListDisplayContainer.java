@@ -1,5 +1,7 @@
 package com.example.qr_go.containers;
 
+import android.graphics.Bitmap;
+
 /**
  * Class for holding only relevant information from a GameQRCode to display in a list
  */
@@ -9,15 +11,17 @@ public class QRListDisplayContainer {
     private Double lat;
     private Double lon;
     private Float distance;
-    private byte[] picture;
+    private Bitmap picture;
+    private String firstUserID;
 
-    public QRListDisplayContainer(Integer score, String id, Double lat, Double lon, Float distance) {
+    public QRListDisplayContainer(Integer score, String id, Double lat, Double lon, Float distance, String userid) {
         this.score = score;
         this.id = id;
         this.lat = lat;
         this.lon = lon;
         this.distance = distance;
-        this.picture = new byte[]{};
+        this.picture = null;
+        this.firstUserID = userid;
     }
 
     public Integer getScore() {
@@ -40,15 +44,19 @@ public class QRListDisplayContainer {
         return distance;
     }
 
+    public String getFirstUserID() {
+        return firstUserID;
+    }
+
     public void setDistance(Float distance) {
         this.distance = distance;
     }
 
-    public byte[] getPicture() {
+    public Bitmap getPicture() {
         return picture;
     }
 
-    public void setPicture(byte[] picture) {
+    public void setPicture(Bitmap picture) {
         this.picture = picture;
     }
 }

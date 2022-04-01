@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import com.example.qr_go.R;
 import com.example.qr_go.adapters.QRArrayAdapter;
 import com.example.qr_go.containers.QRListDisplayContainer;
+import com.example.qr_go.containers.UserListDisplayContainer;
 import com.example.qr_go.objects.Player;
 import com.example.qr_go.utils.StringUtil;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -90,6 +91,7 @@ public class MyQRCodesActivity extends BaseActivity {
                                                 qrCodeList.get(i),
                                                 null,
                                                 null,
+                                                null,
                                                 null
                                         );
                                 qrDisplays.add(qrToDisplay);
@@ -151,6 +153,7 @@ public class MyQRCodesActivity extends BaseActivity {
                                 return;
                             }
                         });
+                        addImages();
                     }
                 });
                 userQRList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -161,6 +164,30 @@ public class MyQRCodesActivity extends BaseActivity {
                         view.getContext().startActivity(intent);
                     }
                 });
+
+    }
+    private void addImages() {
+        FirebaseStorage storage = MapsActivity.storage;
+        StringUtil stringUtil = new StringUtil();
+        StorageReference storageRef = storage.getReference();
+        for (QRListDisplayContainer qr : qrDisplays) {
+            String ImageRef = stringUtil.ImageQRRef(qr.getId(), selectedPlayer.getUserid());
+            StorageReference islandRef = storageRef.child(ImageRef);
+            final long ONE_MEGABYTE = 5 * 1024 * 1024;
+            islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                @Override
+                public void onSuccess(byte[] bytes) {
+                    Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                    qr.setPicture(bitmap);
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception exception) {
+                    // Handle any errors
+                    return;
+                }
+            });
+        }
 
     }
 }
