@@ -23,4 +23,8 @@ public abstract class SortableFragment extends Fragment {
      * @param sortPos Position in spinner of the sorting option
      */
     public abstract void updateSort(Integer sortPos);
+
+    public void setFocus() {
+        return;
+    }
 }

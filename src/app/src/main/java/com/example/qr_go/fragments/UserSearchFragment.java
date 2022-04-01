@@ -89,6 +89,18 @@ public class UserSearchFragment extends SortableFragment {
         userAdapter = new UserArrayAdapter(view.getContext(), userDisplays, sortPos);
         userListView.setAdapter(userAdapter);
         userAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void setFocus() {
+        int userPos = 0;
+        int i = 0;
+        for (UserListDisplayContainer user : userDisplays) {
+            if (user.getIsCurrentUser()) {
+                userPos = i;
+            }
+            i++;
+        }
         userListView.setSelection(userPos);
     }
 
