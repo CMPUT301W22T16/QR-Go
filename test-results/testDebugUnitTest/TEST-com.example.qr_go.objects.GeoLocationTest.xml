@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.qr_go.objects.GeoLocationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-01T02:27:16" hostname="fv-az127-425" time="0.001">
+<testsuite name="com.example.qr_go.objects.GeoLocationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-04-01T02:32:43" hostname="fv-az135-596" time="0.001">
   <properties/>
   <testcase name="checkConstructor" classname="com.example.qr_go.objects.GeoLocationTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
