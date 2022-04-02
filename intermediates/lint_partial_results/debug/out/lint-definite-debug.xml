@@ -963,12 +963,12 @@
         message="Hardcoded string &quot;User Name&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/list_comments_content.xml"
-            line="26"
-            column="9"
-            startOffset="974"
-            endLine="26"
-            endColumn="33"
-            endOffset="998"/>
+            line="34"
+            column="13"
+            startOffset="1300"
+            endLine="34"
+            endColumn="37"
+            endOffset="1324"/>
     </incident>
 
     <incident
@@ -981,12 +981,12 @@
             replacement="sp"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/list_comments_content.xml"
-            line="25"
-            column="9"
-            startOffset="942"
-            endLine="25"
-            endColumn="32"
-            endOffset="965"/>
+            line="35"
+            column="13"
+            startOffset="1337"
+            endLine="35"
+            endColumn="36"
+            endOffset="1360"/>
     </incident>
 
     <incident
@@ -995,12 +995,12 @@
         message="Hardcoded string &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/list_comments_content.xml"
-            line="39"
-            column="9"
-            startOffset="1499"
-            endLine="39"
-            endColumn="147"
-            endOffset="1637"/>
+            line="41"
+            column="13"
+            startOffset="1530"
+            endLine="41"
+            endColumn="151"
+            endOffset="1668"/>
     </incident>
 
     <incident
@@ -1013,12 +1013,12 @@
             replacement="sp"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/list_comments_content.xml"
-            line="38"
-            column="9"
-            startOffset="1467"
-            endLine="38"
-            endColumn="32"
-            endOffset="1490"/>
+            line="42"
+            column="13"
+            startOffset="1681"
+            endLine="42"
+            endColumn="36"
+            endOffset="1704"/>
     </incident>
 
     <incident
@@ -1057,6 +1057,29 @@
     </incident>
 
     <incident
+        id="TextFields"
+        severity="warning"
+        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="38"
+            column="9"
+            startOffset="1464"
+            endLine="38"
+            endColumn="43"
+            endOffset="1498"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="29"
+            column="9"
+            startOffset="1079"
+            endLine="29"
+            endColumn="39"
+            endOffset="1109"
+            message="id defined here"/>
+    </incident>
+
+    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -1082,29 +1105,6 @@
             endLine="28"
             endColumn="14"
             endOffset="1070"/>
-    </incident>
-
-    <incident
-        id="TextFields"
-        severity="warning"
-        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="38"
-            column="9"
-            startOffset="1464"
-            endLine="38"
-            endColumn="43"
-            endOffset="1498"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="29"
-            column="9"
-            startOffset="1079"
-            endLine="29"
-            endColumn="39"
-            endOffset="1109"
-            message="id defined here"/>
     </incident>
 
     <incident
@@ -1643,10 +1643,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/QRInfoActivity.java"
             line="108"
             column="49"
-            startOffset="4176"
+            startOffset="4191"
             endLine="108"
             endColumn="82"
-            endOffset="4209"/>
+            endOffset="4224"/>
     </incident>
 
     <incident
@@ -1657,10 +1657,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/QRInfoActivity.java"
             line="108"
             column="49"
-            startOffset="4176"
+            startOffset="4191"
             endLine="108"
             endColumn="58"
-            endOffset="4185"/>
+            endOffset="4200"/>
     </incident>
 
     <incident
@@ -2150,10 +2150,10 @@
             file="${:app*projectDir}/build.gradle"
             line="43"
             column="20"
-            startOffset="1064"
+            startOffset="1057"
             endLine="43"
             endColumn="70"
-            endOffset="1114"/>
+            endOffset="1107"/>
     </incident>
 
     <incident
@@ -2169,10 +2169,10 @@
             file="${:app*projectDir}/build.gradle"
             line="45"
             column="20"
-            startOffset="1204"
+            startOffset="1197"
             endLine="45"
             endColumn="67"
-            endOffset="1251"/>
+            endOffset="1244"/>
     </incident>
 
     <incident
@@ -2188,10 +2188,10 @@
             file="${:app*projectDir}/build.gradle"
             line="46"
             column="20"
-            startOffset="1271"
+            startOffset="1264"
             endLine="46"
             endColumn="69"
-            endOffset="1320"/>
+            endOffset="1313"/>
     </incident>
 
     <incident
@@ -2207,10 +2207,10 @@
             file="${:app*projectDir}/build.gradle"
             line="47"
             column="20"
-            startOffset="1340"
+            startOffset="1333"
             endLine="47"
             endColumn="70"
-            endOffset="1390"/>
+            endOffset="1383"/>
     </incident>
 
     <incident
@@ -2226,10 +2226,10 @@
             file="${:app*projectDir}/build.gradle"
             line="48"
             column="20"
-            startOffset="1410"
+            startOffset="1403"
             endLine="48"
             endColumn="67"
-            endOffset="1457"/>
+            endOffset="1450"/>
     </incident>
 
     <incident
@@ -2245,10 +2245,10 @@
             file="${:app*projectDir}/build.gradle"
             line="49"
             column="20"
-            startOffset="1477"
+            startOffset="1470"
             endLine="49"
             endColumn="61"
-            endOffset="1518"/>
+            endOffset="1511"/>
     </incident>
 
     <incident
@@ -2264,10 +2264,10 @@
             file="${:app*projectDir}/build.gradle"
             line="59"
             column="31"
-            startOffset="2070"
+            startOffset="2063"
             endLine="59"
             endColumn="59"
-            endOffset="2098"/>
+            endOffset="2091"/>
     </incident>
 
     <incident
@@ -2283,10 +2283,10 @@
             file="${:app*projectDir}/build.gradle"
             line="60"
             column="31"
-            startOffset="2129"
+            startOffset="2122"
             endLine="60"
             endColumn="58"
-            endOffset="2156"/>
+            endOffset="2149"/>
     </incident>
 
     <incident
