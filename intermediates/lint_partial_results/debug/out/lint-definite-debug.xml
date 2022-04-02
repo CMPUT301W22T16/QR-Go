@@ -1289,26 +1289,12 @@
         message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
-            line="41"
-            column="13"
-            startOffset="1593"
-            endLine="41"
-            endColumn="33"
-            endOffset="1613"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;12345&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/qr_list_content.xml"
-            line="52"
+            line="45"
             column="9"
-            startOffset="1922"
-            endLine="52"
+            startOffset="1684"
+            endLine="45"
             endColumn="29"
-            endOffset="1942"/>
+            endOffset="1704"/>
     </incident>
 
     <incident
@@ -1501,40 +1487,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="101"
-            column="54"
-            startOffset="4710"
-            endLine="101"
-            endColumn="110"
-            endOffset="4766"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="102"
-            column="53"
-            startOffset="4821"
-            endLine="102"
-            endColumn="108"
-            endOffset="4876"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
             line="103"
-            column="47"
-            startOffset="4925"
+            column="54"
+            startOffset="4861"
             endLine="103"
-            endColumn="108"
-            endOffset="4986"/>
+            endColumn="110"
+            endOffset="4917"/>
     </incident>
 
     <incident
@@ -1544,11 +1502,39 @@
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
             line="104"
-            column="52"
-            startOffset="5040"
+            column="53"
+            startOffset="4972"
             endLine="104"
+            endColumn="108"
+            endOffset="5027"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
+            line="105"
+            column="47"
+            startOffset="5076"
+            endLine="105"
+            endColumn="108"
+            endOffset="5137"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
+            line="106"
+            column="52"
+            startOffset="5191"
+            endLine="106"
             endColumn="100"
-            endOffset="5088"/>
+            endOffset="5239"/>
     </incident>
 
     <incident
@@ -1557,12 +1543,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="107"
+            line="109"
             column="61"
-            startOffset="5328"
-            endLine="107"
+            startOffset="5479"
+            endLine="109"
             endColumn="108"
-            endOffset="5375"/>
+            endOffset="5526"/>
     </incident>
 
     <incident
@@ -1571,12 +1557,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="107"
+            line="109"
             column="61"
-            startOffset="5328"
-            endLine="107"
+            startOffset="5479"
+            endLine="109"
             endColumn="70"
-            endOffset="5337"/>
+            endOffset="5488"/>
     </incident>
 
     <incident
@@ -1585,12 +1571,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="107"
+            line="109"
             column="73"
-            startOffset="5340"
-            endLine="107"
+            startOffset="5491"
+            endLine="109"
             endColumn="108"
-            endOffset="5375"/>
+            endOffset="5526"/>
     </incident>
 
     <incident
@@ -1599,12 +1585,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="110"
+            line="112"
             column="60"
-            startOffset="5610"
-            endLine="110"
+            startOffset="5761"
+            endLine="112"
             endColumn="106"
-            endOffset="5656"/>
+            endOffset="5807"/>
     </incident>
 
     <incident
@@ -1613,12 +1599,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="110"
+            line="112"
             column="60"
-            startOffset="5610"
-            endLine="110"
+            startOffset="5761"
+            endLine="112"
             endColumn="69"
-            endOffset="5619"/>
+            endOffset="5770"/>
     </incident>
 
     <incident
@@ -1627,12 +1613,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
-            line="110"
+            line="112"
             column="72"
-            startOffset="5622"
-            endLine="110"
+            startOffset="5773"
+            endLine="112"
             endColumn="106"
-            endOffset="5656"/>
+            endOffset="5807"/>
     </incident>
 
     <incident
@@ -1685,10 +1671,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/PlayerInfoActivity.java"
             line="123"
             column="54"
-            startOffset="5568"
+            startOffset="5717"
             endLine="123"
             endColumn="110"
-            endOffset="5624"/>
+            endOffset="5773"/>
     </incident>
 
     <incident
@@ -1699,10 +1685,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/PlayerInfoActivity.java"
             line="124"
             column="53"
-            startOffset="5679"
+            startOffset="5828"
             endLine="124"
             endColumn="108"
-            endOffset="5734"/>
+            endOffset="5883"/>
     </incident>
 
     <incident
@@ -1713,10 +1699,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/PlayerInfoActivity.java"
             line="125"
             column="47"
-            startOffset="5783"
+            startOffset="5932"
             endLine="125"
             endColumn="108"
-            endOffset="5844"/>
+            endOffset="5993"/>
     </incident>
 
     <incident
@@ -1727,10 +1713,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/PlayerInfoActivity.java"
             line="126"
             column="52"
-            startOffset="5898"
+            startOffset="6047"
             endLine="126"
             endColumn="100"
-            endOffset="5946"/>
+            endOffset="6095"/>
     </incident>
 
     <incident
@@ -1741,10 +1727,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/PlayerInfoActivity.java"
             line="130"
             column="61"
-            startOffset="6266"
+            startOffset="6415"
             endLine="130"
             endColumn="108"
-            endOffset="6313"/>
+            endOffset="6462"/>
     </incident>
 
     <incident
@@ -1755,10 +1741,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/PlayerInfoActivity.java"
             line="130"
             column="61"
-            startOffset="6266"
+            startOffset="6415"
             endLine="130"
             endColumn="70"
-            endOffset="6275"/>
+            endOffset="6424"/>
     </incident>
 
     <incident
@@ -1769,10 +1755,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/PlayerInfoActivity.java"
             line="130"
             column="73"
-            startOffset="6278"
+            startOffset="6427"
             endLine="130"
             endColumn="108"
-            endOffset="6313"/>
+            endOffset="6462"/>
     </incident>
 
     <incident
@@ -1783,10 +1769,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/PlayerInfoActivity.java"
             line="133"
             column="60"
-            startOffset="6548"
+            startOffset="6697"
             endLine="133"
             endColumn="106"
-            endOffset="6594"/>
+            endOffset="6743"/>
     </incident>
 
     <incident
@@ -1797,10 +1783,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/PlayerInfoActivity.java"
             line="133"
             column="60"
-            startOffset="6548"
+            startOffset="6697"
             endLine="133"
             endColumn="69"
-            endOffset="6557"/>
+            endOffset="6706"/>
     </incident>
 
     <incident
@@ -1811,10 +1797,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/PlayerInfoActivity.java"
             line="133"
             column="72"
-            startOffset="6560"
+            startOffset="6709"
             endLine="133"
             endColumn="106"
-            endOffset="6594"/>
+            endOffset="6743"/>
     </incident>
 
     <incident
@@ -1886,12 +1872,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/adapters/QRArrayAdapter.java"
-            line="75"
+            line="68"
             column="24"
-            startOffset="2583"
-            endLine="75"
+            startOffset="2279"
+            endLine="68"
             endColumn="67"
-            endOffset="2626"/>
+            endOffset="2322"/>
     </incident>
 
     <incident
@@ -1900,12 +1886,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/adapters/QRArrayAdapter.java"
-            line="81"
+            line="74"
             column="35"
-            startOffset="2834"
-            endLine="81"
+            startOffset="2530"
+            endLine="74"
             endColumn="81"
-            endOffset="2880"/>
+            endOffset="2576"/>
     </incident>
 
     <incident
@@ -1914,12 +1900,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/adapters/QRArrayAdapter.java"
-            line="81"
+            line="74"
             column="48"
-            startOffset="2847"
-            endLine="81"
+            startOffset="2543"
+            endLine="74"
             endColumn="81"
-            endOffset="2880"/>
+            endOffset="2576"/>
     </incident>
 
     <incident
@@ -1928,12 +1914,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/adapters/QRArrayAdapter.java"
-            line="94"
+            line="87"
             column="35"
-            startOffset="3452"
-            endLine="94"
+            startOffset="3148"
+            endLine="87"
             endColumn="60"
-            endOffset="3477"/>
+            endOffset="3173"/>
     </incident>
 
     <incident
