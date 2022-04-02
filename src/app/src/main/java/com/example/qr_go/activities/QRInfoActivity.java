@@ -104,7 +104,7 @@ public class QRInfoActivity extends BaseActivity {
                                     return;
                                 }; // ABORT: an error occurred
 
-                                tvQRName.setText(selectedQR.getId());
+                                tvQRName.setText(selectedQR.getId().substring(0,8));
                                 tvScore.setText("Score: " + selectedQR.getScore());
 
                                 GeoLocation geoLocation = selectedQR.getGeoLocation();
@@ -200,7 +200,7 @@ public class QRInfoActivity extends BaseActivity {
     /**
      * Adds a new comment to this page
      */
-    public void addComment(View view) { // TODO: add to DB
+    public void addComment(View view) {
         EditText inputComment = (EditText) findViewById(R.id.inputComment);
         String message = inputComment.getText().toString();
 
