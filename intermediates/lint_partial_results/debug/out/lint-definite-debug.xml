@@ -701,15 +701,15 @@
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;QR LOCATION&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;NO LOCATION DATA&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="42"
             column="13"
             startOffset="1746"
             endLine="42"
-            endColumn="39"
-            endOffset="1772"/>
+            endColumn="44"
+            endOffset="1777"/>
     </incident>
 
     <incident
@@ -720,10 +720,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="56"
             column="9"
-            startOffset="2258"
+            startOffset="2263"
             endLine="56"
             endColumn="34"
-            endOffset="2283"/>
+            endOffset="2288"/>
     </incident>
 
     <incident
@@ -738,10 +738,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="57"
             column="9"
-            startOffset="2292"
+            startOffset="2297"
             endLine="57"
             endColumn="32"
-            endOffset="2315"/>
+            endOffset="2320"/>
     </incident>
 
     <incident
@@ -752,10 +752,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="71"
             column="9"
-            startOffset="2856"
+            startOffset="2861"
             endLine="71"
             endColumn="43"
-            endOffset="2890"/>
+            endOffset="2895"/>
     </incident>
 
     <incident
@@ -766,10 +766,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="96"
             column="9"
-            startOffset="3864"
+            startOffset="3869"
             endLine="96"
             endColumn="28"
-            endOffset="3883"/>
+            endOffset="3888"/>
     </incident>
 
     <incident
@@ -794,10 +794,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="101"
             column="6"
-            startOffset="4046"
+            startOffset="4051"
             endLine="101"
             endColumn="14"
-            endOffset="4054"/>
+            endOffset="4059"/>
     </incident>
 
     <incident
@@ -808,10 +808,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="110"
             column="9"
-            startOffset="4375"
+            startOffset="4380"
             endLine="110"
             endColumn="46"
-            endOffset="4412"/>
+            endOffset="4417"/>
     </incident>
 
     <incident

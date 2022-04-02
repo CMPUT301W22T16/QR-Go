@@ -570,9 +570,9 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:32: Warning: Hardcoded string "QR NAME", should use @string resource [HardcodedText]
             android:text="QR NAME"
             ~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:42: Warning: Hardcoded string "QR LOCATION", should use @string resource [HardcodedText]
-            android:text="QR LOCATION"
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:42: Warning: Hardcoded string "NO LOCATION DATA", should use @string resource [HardcodedText]
+            android:text="NO LOCATION DATA"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:56: Warning: Hardcoded string "Score: N/A", should use @string resource [HardcodedText]
         android:text="Score: N/A"
         ~~~~~~~~~~~~~~~~~~~~~~~~~
