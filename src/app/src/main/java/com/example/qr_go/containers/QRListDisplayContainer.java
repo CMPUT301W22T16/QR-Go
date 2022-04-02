@@ -13,8 +13,9 @@ public class QRListDisplayContainer {
     private Float distance;
     private Bitmap picture;
     private String firstUserID;
+    private String neighborhood;
 
-    public QRListDisplayContainer(Integer score, String id, Double lat, Double lon, Float distance, String userid) {
+    public QRListDisplayContainer(Integer score, String id, Double lat, Double lon, Float distance, String userid, String neighborhood) {
         this.score = score;
         this.id = id;
         this.lat = lat;
@@ -22,6 +23,7 @@ public class QRListDisplayContainer {
         this.distance = distance;
         this.picture = null;
         this.firstUserID = userid;
+        this.neighborhood = neighborhood;
     }
 
     public Integer getScore() {
@@ -46,6 +48,10 @@ public class QRListDisplayContainer {
 
     public String getFirstUserID() {
         return firstUserID;
+    }
+
+    public String getNeighborhood() {
+        return neighborhood;
     }
 
     public void setDistance(Float distance) {

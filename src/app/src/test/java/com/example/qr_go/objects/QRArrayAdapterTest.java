@@ -18,14 +18,14 @@ import java.util.ArrayList;
  */
 public class QRArrayAdapterTest{
     private ArrayList<QRListDisplayContainer> qrDisplays = new ArrayList<QRListDisplayContainer>();
-    private QRListDisplayContainer qrDispCont1 = new QRListDisplayContainer(123, "1234", null, null, null, null);
+    private QRListDisplayContainer qrDispCont1 = new QRListDisplayContainer(123, "1234", null, null, null, null, null);
 
     UserQRArrayAdapter userQRAdapter;
     SearchQRArrayAdapter searchQRAdapter;
     @Test
     public void TestUserQRConstructor() {
         for(int i = 0; i < 10; i++) {
-            qrDisplays.add(new QRListDisplayContainer(i+20, Integer.toString(i+10), null, null, null, null));
+            qrDisplays.add(new QRListDisplayContainer(i+20, Integer.toString(i+10), null, null, null, null, null));
         }
         qrDisplays.add(qrDispCont1);
         userQRAdapter = new UserQRArrayAdapter(null, qrDisplays,0);
@@ -38,7 +38,7 @@ public class QRArrayAdapterTest{
     @Test
     public void TestSearchQRConstructor() {
         for(int i = 0; i < 10; i++) {
-            qrDisplays.add(new QRListDisplayContainer(i+20, Integer.toString(i+10), null, null, null, null));
+            qrDisplays.add(new QRListDisplayContainer(i+20, Integer.toString(i+10), null, null, null, null, null));
         }
         qrDisplays.add(qrDispCont1);
         searchQRAdapter = new SearchQRArrayAdapter(null, qrDisplays,0);
