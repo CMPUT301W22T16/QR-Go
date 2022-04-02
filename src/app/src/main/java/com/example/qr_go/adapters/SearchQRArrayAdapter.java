@@ -14,7 +14,7 @@ public class SearchQRArrayAdapter extends QRArrayAdapter {
     private SearchQRArrayAdapter adapter;
     private final int localDistanceBoundary = 10000;
 
-    public SearchQRArrayAdapter(@NonNull Context context, ArrayList<QRListDisplayContainer> qrDisplays, Integer sortPos) {
+    public SearchQRArrayAdapter(Context context, ArrayList<QRListDisplayContainer> qrDisplays, Integer sortPos) {
         super(context,qrDisplays,sortPos);
         this.context = context;
         this.adapter = this;
