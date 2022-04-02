@@ -52,7 +52,7 @@ public class PlayerProfileActivity extends BaseActivity {
     public FirebaseStorage storage;
     private EditText usernameEditText;
     private EditText emailEditText;
-
+    QRGoStorageUtil StorageUtil = new QRGoStorageUtil();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +74,7 @@ public class PlayerProfileActivity extends BaseActivity {
             @Override
             public void onSuccess(byte[] bytes) {
                 Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                bitmap = StorageUtil.squareCropBitmap(bitmap);
                 profileImage.setImageBitmap(bitmap);
             }
         }).addOnFailureListener(new OnFailureListener() {
@@ -145,6 +146,7 @@ public class PlayerProfileActivity extends BaseActivity {
     private void openQrDialog(String title, Bitmap qrBitmap) {
         View view = LayoutInflater.from(this).inflate(R.layout.fragment_show_qr_code, null);
         ImageView imageView = view.findViewById(R.id.qr_code_image);
+        qrBitmap = StorageUtil.squareCropBitmap(qrBitmap);
         imageView.setImageBitmap(qrBitmap);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -198,9 +200,9 @@ public class PlayerProfileActivity extends BaseActivity {
             Uri selectedImage = data.getData();
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImage);
+                bitmap = StorageUtil.squareCropBitmap(bitmap);
                 ImageView profileImage = findViewById(R.id.profile_photo);
                 profileImage.setImageBitmap(bitmap);
-                QRGoStorageUtil StorageUtil = new QRGoStorageUtil();
                 StorageUtil.updateImageFromStorage(bitmap, stringUtil.ImagePlayerRef(MapsActivity.getUserId()));
                 Toast.makeText(this, "Updated image", Toast.LENGTH_LONG).show();
             } catch (FileNotFoundException e) {

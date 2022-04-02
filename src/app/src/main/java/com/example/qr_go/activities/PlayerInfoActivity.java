@@ -22,7 +22,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.core.content.ContextCompat;
 
-import com.example.qr_go.adapters.QRArrayAdapter;
+import com.example.qr_go.adapters.SearchQRArrayAdapter;
 import com.example.qr_go.containers.QRListDisplayContainer;
 import com.example.qr_go.R;
 import com.example.qr_go.objects.Player;
@@ -49,7 +49,7 @@ public class PlayerInfoActivity extends BaseActivity {
     private LocationListener locationListener;
     private Player selectedPlayer;
     private HashMap<String,Integer> playerQRCodes;
-    private QRArrayAdapter qrAdapter;
+    private SearchQRArrayAdapter qrAdapter;
     private ArrayList<QRListDisplayContainer> qrDisplays;
     private ArrayList<String> qrCodeList;
     private ListView userQRList;
@@ -80,6 +80,7 @@ public class PlayerInfoActivity extends BaseActivity {
         TextView highestScoreText = findViewById(R.id.playerHighScore);
         TextView lowestScoreText = findViewById(R.id.playerLowScore);
         TextView playerEmailText = findViewById(R.id.playerEmail);
+        TextView emptyText = (TextView)findViewById(R.id.empty_list);
         View highestScoreLayout = findViewById(R.id.highest_score);
         View lowestScoreLayout = findViewById(R.id.lowest_score);
         TextView highestScoreQrIDText = highestScoreLayout.findViewById(R.id.qr_id_view);
@@ -110,6 +111,7 @@ public class PlayerInfoActivity extends BaseActivity {
                                         new QRListDisplayContainer(
                                                 selectedPlayer.getScannedQRCodeIds().get(qrCodeList.get(i)),
                                                 qrCodeList.get(i),
+                                                null,
                                                 null,
                                                 null,
                                                 null
@@ -151,8 +153,8 @@ public class PlayerInfoActivity extends BaseActivity {
                             }
 
 
-
-                            qrAdapter = new QRArrayAdapter(PlayerInfoActivity.this, qrDisplays, 0);
+                            userQRList.setEmptyView(emptyText);
+                            qrAdapter = new SearchQRArrayAdapter(PlayerInfoActivity.this, qrDisplays, 0);
                             userQRList.setAdapter(qrAdapter);
                             // Image
 

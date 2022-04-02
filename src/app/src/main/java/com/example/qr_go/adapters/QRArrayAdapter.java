@@ -13,34 +13,37 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.qr_go.utils.QRGoDBUtil;
 import com.example.qr_go.R;
+import com.example.qr_go.activities.BaseActivity;
 import com.example.qr_go.activities.SearchActivity;
 import com.example.qr_go.containers.QRListDisplayContainer;
+import com.example.qr_go.adapters.SearchQRArrayAdapter;
+import com.example.qr_go.adapters.UserQRArrayAdapter;
+import com.example.qr_go.utils.QRGoDBUtil;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-/**
- * Custom ArrayAdapter for displaying qr codes in a list
- */
-public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> {
-    private Context context;
+
+public abstract class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer>{
+    protected Context context;
     private Integer sortPos;
     private ArrayList<QRListDisplayContainer> allQrDisplays;
     private ArrayList<QRListDisplayContainer> qrDisplays;
-    private QRArrayAdapter adapter = this;
+    private QRArrayAdapter adapter;
 
-    private final int localDistanceBoundary = 10000;
+
 
     public QRArrayAdapter(@NonNull Context context, ArrayList<QRListDisplayContainer> qrDisplays, Integer sortPos) {
         super(context, 0, qrDisplays);
+        this.adapter = this;
         this.context = context;
         this.allQrDisplays = new ArrayList<>(qrDisplays);
         this.qrDisplays = qrDisplays;
         this.sortPos = sortPos;
     }
+
 
     @NonNull
     @Override
@@ -57,15 +60,38 @@ public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> {
         TextView scoreView = view.findViewById(R.id.qr_score_view);
         ImageView imageView = view.findViewById(R.id.qr_picture);
 
-        if (qrToDisplay.getPicture().length != 0) {
-            // Set picture here
-            // imageView.set... blah blah
+        if (qrToDisplay.getPicture() != null) {
+            imageView.setImageBitmap(qrToDisplay.getPicture());
         }
 
 
         idView.setText(qrToDisplay.getId().substring(0, 8) + "...");
 
         // Show the delete button if the current user is an owner
+        AddDeleteButton(scoreView,delButton,qrToDisplay);
+        switch(sortPos) {
+            case 0:
+                scoreView.setText("Score:\n" + qrToDisplay.getScore().toString());
+                break;
+            default:
+                Float distance =  qrToDisplay.getDistance();
+                String distanceString;
+                DecimalFormat df = new DecimalFormat("#.##");
+                df.setRoundingMode(RoundingMode.CEILING);
+                if (distance > 1000) {
+                    Float distanceInKM = distance/1000;
+                    distanceString = df.format(distanceInKM) + "km";
+                } else {
+                    distanceString = df.format(distance) + "m";
+                }
+                scoreView.setText(distanceString + "\naway");
+                break;
+        }
+
+        return view;
+    }
+
+    protected void AddDeleteButton(TextView scoreView, Button delButton, QRListDisplayContainer qrToDisplay) {
         RelativeLayout.LayoutParams scoreParams =
                 new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
         if (SearchActivity.getUserOwner()) {
@@ -91,40 +117,24 @@ public class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer> {
         }
         scoreParams.addRule(RelativeLayout.CENTER_VERTICAL);
         scoreView.setLayoutParams(scoreParams);
-
-        switch(sortPos) {
-            case 0:
-                scoreView.setText("Score:\n" + qrToDisplay.getScore().toString());
-                break;
-            default:
-                Float distance =  qrToDisplay.getDistance();
-                String distanceString;
-                DecimalFormat df = new DecimalFormat("#.##");
-                df.setRoundingMode(RoundingMode.CEILING);
-                if (distance > 1000) {
-                    Float distanceInKM = distance/1000;
-                    distanceString = df.format(distanceInKM) + "km";
-                } else {
-                    distanceString = df.format(distance) + "m";
-                }
-                scoreView.setText(distanceString + "\naway");
-                break;
-        }
-
-        return view;
     }
 
-    public void filter(int filterOption) {
-        qrDisplays.clear();
-        if (filterOption == 1) {
-            for (QRListDisplayContainer qr : allQrDisplays) {
-                if (qr.getDistance() != null && qr.getDistance() <= localDistanceBoundary) {
-                    qrDisplays.add(qr);
-                }
-            }
-        } else {
-            qrDisplays.addAll(allQrDisplays);
+    public ArrayList<String> getIds() {
+        ArrayList<String> returnList = new ArrayList<String>();
+        for(int i = 0; i < qrDisplays.size(); i++) {
+            returnList.add(qrDisplays.get(i).getId());
         }
-        notifyDataSetChanged();
+        return returnList;
+
     }
+
+    public ArrayList<Integer> getScores() {
+        ArrayList<Integer> returnList = new ArrayList<Integer>();
+        for(int i = 0; i < qrDisplays.size(); i++) {
+            returnList.add(qrDisplays.get(i).getScore());
+        }
+        return returnList;
+
+    }
+
 }

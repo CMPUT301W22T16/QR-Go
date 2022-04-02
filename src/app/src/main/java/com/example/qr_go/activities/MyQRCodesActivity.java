@@ -14,7 +14,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 
 import com.example.qr_go.R;
-import com.example.qr_go.adapters.QRArrayAdapter;
+import com.example.qr_go.adapters.SearchQRArrayAdapter;
+import com.example.qr_go.adapters.UserQRArrayAdapter;
 import com.example.qr_go.containers.QRListDisplayContainer;
 import com.example.qr_go.objects.Player;
 import com.example.qr_go.utils.StringUtil;
@@ -39,7 +40,7 @@ public class MyQRCodesActivity extends BaseActivity {
     private Player selectedPlayer;
     Map.Entry<String, Integer> highestQRCode;
     Map.Entry<String, Integer> lowestQRCode;
-    private QRArrayAdapter qrAdapter;
+    private UserQRArrayAdapter qrAdapter;
     private ArrayList<QRListDisplayContainer> qrDisplays;
     private ArrayList<String> qrCodeList;
     private ListView userQRList;
@@ -90,6 +91,7 @@ public class MyQRCodesActivity extends BaseActivity {
                                                 qrCodeList.get(i),
                                                 null,
                                                 null,
+                                                null,
                                                 null
                                         );
                                 qrDisplays.add(qrToDisplay);
@@ -128,7 +130,7 @@ public class MyQRCodesActivity extends BaseActivity {
                                     }
                                 });
                             }
-                            qrAdapter = new QRArrayAdapter(MyQRCodesActivity.this, qrDisplays, 0);
+                            qrAdapter = new UserQRArrayAdapter(MyQRCodesActivity.this, qrDisplays, 0);
                             userQRList.setAdapter(qrAdapter);
                         }
                         ImageView profileImage = findViewById(R.id.profile_photo);
@@ -151,6 +153,7 @@ public class MyQRCodesActivity extends BaseActivity {
                                 return;
                             }
                         });
+                        addImages();
                     }
                 });
                 userQRList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -162,5 +165,32 @@ public class MyQRCodesActivity extends BaseActivity {
                     }
                 });
 
+    }
+    private void addImages() {
+        FirebaseStorage storage = MapsActivity.storage;
+        StringUtil stringUtil = new StringUtil();
+        StorageReference storageRef = storage.getReference();
+        for (QRListDisplayContainer qr : qrDisplays) {
+            String ImageRef = stringUtil.ImageQRRef(qr.getId(), selectedPlayer.getUserid());
+            StorageReference islandRef = storageRef.child(ImageRef);
+            final long ONE_MEGABYTE = 5 * 1024 * 1024;
+            islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                @Override
+                public void onSuccess(byte[] bytes) {
+                    Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                    qr.setPicture(bitmap);
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception exception) {
+                    // Handle any errors
+                    return;
+                }
+            });
+        }
+
+    }
+    public void deleteQR(QRListDisplayContainer qr) {
+        qrDisplays.remove(qr);
     }
 }

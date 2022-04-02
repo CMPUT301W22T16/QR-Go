@@ -16,7 +16,7 @@ import androidx.annotation.RequiresApi;
 import com.example.qr_go.R;
 import com.example.qr_go.activities.QRInfoActivity;
 import com.example.qr_go.activities.SearchActivity;
-import com.example.qr_go.adapters.QRArrayAdapter;
+import com.example.qr_go.adapters.SearchQRArrayAdapter;
 import com.example.qr_go.comparators.QRListDistanceComparator;
 import com.example.qr_go.comparators.QRListScoreComparator;
 import com.example.qr_go.containers.QRListDisplayContainer;
@@ -29,7 +29,7 @@ import java.util.ArrayList;
 
 public class QRSearchFragment extends SortableFragment {
     private ListView qrListView;
-    private QRArrayAdapter qrAdapter;
+    private SearchQRArrayAdapter qrAdapter;
     private ArrayList<QRListDisplayContainer> qrDisplays;
     private View view;
 
@@ -71,7 +71,7 @@ public class QRSearchFragment extends SortableFragment {
             qrDisplays.removeIf(q -> (q.getDistance() == null));
             qrDisplays.sort(new QRListDistanceComparator());
         }
-        qrAdapter = new QRArrayAdapter(view.getContext(), qrDisplays, sortPos);
+        qrAdapter = new SearchQRArrayAdapter(view.getContext(), qrDisplays, sortPos);
         qrListView.setAdapter(qrAdapter);
         qrAdapter.notifyDataSetChanged();
     }

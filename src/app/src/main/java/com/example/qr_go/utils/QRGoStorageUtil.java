@@ -18,6 +18,8 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
+import java.util.Collections;
 
 @RequiresApi(api = Build.VERSION_CODES.O)
 public class QRGoStorageUtil {
@@ -82,7 +84,7 @@ public class QRGoStorageUtil {
      * @return
      */
     private Bitmap scaledDownBitmap(Bitmap bitmap) {
-        final int maxSize = 960;
+        final int maxSize = 1024;
         int outWidth, outHeight;
         int inWidth = bitmap.getWidth();
         int inHeight = bitmap.getHeight();
@@ -94,5 +96,22 @@ public class QRGoStorageUtil {
             outWidth = (inWidth * maxSize) / inHeight;
         }
         return Bitmap.createScaledBitmap(bitmap, outWidth, outHeight, false);
+    }
+    //https://stackoverflow.com/questions/15789049/crop-a-bitmap-image
+    public Bitmap squareCropBitmap(Bitmap bitmap){
+        int offset = 0;
+        int imageWidth = bitmap.getWidth();
+        int imageHeight = bitmap.getHeight();
+        int shorterSide = imageWidth < imageHeight ? imageWidth : imageHeight;
+        int longerSide = imageWidth < imageHeight ? imageHeight : imageWidth;
+        boolean portrait = imageWidth < imageHeight ? true : false;
+        int stride = shorterSide * 1;
+        int lengthToCrop = (longerSide - shorterSide) / 2;
+        int[] pixels = new int[(shorterSide * shorterSide) + stride];
+        bitmap.getPixels(pixels, 0, stride, portrait ? 0 : lengthToCrop, portrait ? lengthToCrop : 0, shorterSide, shorterSide);
+        bitmap.recycle();
+        Bitmap croppedBitmap = Bitmap.createBitmap(shorterSide, shorterSide, Bitmap.Config.ARGB_4444);
+        croppedBitmap.setPixels(pixels, 0,stride, 0, 0, shorterSide, shorterSide);
+        return croppedBitmap;
     }
 }
