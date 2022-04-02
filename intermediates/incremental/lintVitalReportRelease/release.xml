@@ -5,7 +5,7 @@
     targetSdkVersion="31"
     mergedManifest="build/intermediates/merged_manifest/release/AndroidManifest.xml"
     manifestMergeReport="build/outputs/logs/manifest-merger-release-report.txt"
-    proguardFiles="build/intermediates/default_proguard_files/global/proguard-android-optimize.txt-7.1.2:proguard-rules.pro"
+    proguardFiles="build/intermediates/default_proguard_files/global/proguard-android-optimize.txt-7.1.0:proguard-rules.pro"
     partialResultsDir="build/intermediates/lint_vital_partial_results/release/out">
   <buildFeatures
       viewBinding="true"

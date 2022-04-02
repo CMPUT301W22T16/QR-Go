@@ -73,7 +73,7 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml:187: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
                 android:textSize="20dp" />
                 ~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:189: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:187: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
                 android:textSize="20dp" />
                 ~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:31: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
@@ -367,46 +367,46 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java:109: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
                             lowestScoreQrScoreText.setText("Score: " + lowestQRCode.getValue().toString());
                                                            ~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:122: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:121: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
                             highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:123: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:122: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
                             lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:124: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:123: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
                             qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:125: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:124: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
                             totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:129: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:128: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
                             highestScoreQrScoreText.setText("Score: " + highestQRCode.getValue().toString());
                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:129: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:128: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
                             highestScoreQrScoreText.setText("Score: " + highestQRCode.getValue().toString());
                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:129: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:128: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
                             highestScoreQrScoreText.setText("Score: " + highestQRCode.getValue().toString());
                                                             ~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:132: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:131: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
                             lowestScoreQrScoreText.setText("Score: " + lowestQRCode.getValue().toString());
                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:132: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:131: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
                             lowestScoreQrScoreText.setText("Score: " + lowestQRCode.getValue().toString());
                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:132: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:131: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
                             lowestScoreQrScoreText.setText("Score: " + lowestQRCode.getValue().toString());
                                                            ~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java:68: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java:65: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
         idView.setText(qrToDisplay.getId().substring(0, 8) + "...");
                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java:74: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java:96: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
                 scoreView.setText("Score:\n" + qrToDisplay.getScore().toString());
                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java:74: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java:96: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
                 scoreView.setText("Score:\n" + qrToDisplay.getScore().toString());
                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java:87: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java:109: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
                 scoreView.setText(distanceString + "\naway");
                                   ~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/QRInfoActivity.java:108: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
@@ -561,12 +561,9 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:168: Warning: Hardcoded string "Lowest Scoring QR Code", should use @string resource [HardcodedText]
                 android:text="Lowest Scoring QR Code" />
                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:188: Warning: Hardcoded string "Scanned QR codes:", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:186: Warning: Hardcoded string "Scanned QR codes:", should use @string resource [HardcodedText]
                 android:text="Scanned QR codes:"
                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:200: Warning: Hardcoded string "No QR codes to display!", should use @string resource [HardcodedText]
-                android:text="No QR codes to display!" />
-                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:32: Warning: Hardcoded string "QR NAME", should use @string resource [HardcodedText]
             android:text="QR NAME"
             ~~~~~~~~~~~~~~~~~~~~~~
@@ -831,4 +828,4 @@
    Please define an explicit reason why it is ignored, and when it can be
    resolved.
 
-0 errors, 194 warnings
+0 errors, 193 warnings

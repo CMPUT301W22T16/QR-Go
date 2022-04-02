@@ -176,15 +176,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
+            android:layout_marginTop="20dp"
             android:gravity="center"
-            android:baselineAligned="false"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="top"
                 android:text="Scanned QR codes:"
                 android:textSize="20dp" />
 
@@ -192,12 +190,6 @@
                 android:id="@+id/user_qr_list"
                 android:layout_width="350dp"
                 android:layout_height="match_parent" />
-
-            <TextView
-                android:id="@+id/empty_list"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="No QR codes to display!" />
 
         </LinearLayout>
 
