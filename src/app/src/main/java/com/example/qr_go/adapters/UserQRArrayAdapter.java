@@ -1,39 +1,59 @@
 package com.example.qr_go.adapters;
-
+import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
-import java.util.HashMap;
+import androidx.annotation.NonNull;
 
-public class UserQRArrayAdapter extends BaseAdapter {
-    private HashMap<String, Integer> qrMap = new HashMap<String,Integer>();
-    private String[] qrIds;
-    public UserQRArrayAdapter(HashMap<String,Integer> qrMap){
-        this.qrMap = qrMap;
-        this.qrIds = this.qrMap.keySet().toArray(new String[qrMap.size()]);
+import com.example.qr_go.R;
+import com.example.qr_go.activities.MyQRCodesActivity;
+import com.example.qr_go.containers.QRListDisplayContainer;
+import com.example.qr_go.utils.QRGoDBUtil;
+
+import java.util.ArrayList;
+
+/**
+ * Custom ArrayAdapter for displaying qr codes in a list
+ */
+public class UserQRArrayAdapter extends QRArrayAdapter {
+    private ArrayList<QRListDisplayContainer> allQrDisplays;
+    private ArrayList<QRListDisplayContainer> qrDisplays;
+    private UserQRArrayAdapter adapter;
+
+    public UserQRArrayAdapter(Context context, ArrayList<QRListDisplayContainer> qrDisplays, Integer sortPos) {
+        super(context,qrDisplays,sortPos);
+        this.qrDisplays = qrDisplays;
+        this.adapter = this;
+        this.allQrDisplays = new ArrayList<>(qrDisplays);
     }
 
+
+    
     @Override
-    public int getCount() {
-        return this.qrMap.size();
+    protected void AddDeleteButton(TextView scoreView, Button delButton, QRListDisplayContainer qrToDisplay) {
+        RelativeLayout.LayoutParams scoreParams =
+                new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+            scoreParams.addRule(RelativeLayout.LEFT_OF, R.id.qr_del_button);
+            delButton.setVisibility(View.VISIBLE);
+            delButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // This is the id of the qr being deleted
+                    String qrid = qrToDisplay.getId();
+                    QRGoDBUtil db = new QRGoDBUtil();
+                    qrDisplays.remove(qrToDisplay);
+                    allQrDisplays.remove(qrToDisplay);
+                    MyQRCodesActivity activity = (MyQRCodesActivity) context;
+                    activity.deleteQR(qrToDisplay);
+                    adapter.notifyDataSetChanged();
+                    db.deleteGameQRFromDB(qrid);
+                }
+            });
+        scoreParams.addRule(RelativeLayout.CENTER_VERTICAL);
+        scoreView.setLayoutParams(scoreParams);
     }
-
-    @Override
-    public Object getItem(int position) {
-        return qrMap.get(qrIds[position]);
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
-
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        String key = qrIds[position];
-        String value = getItem(position).toString();
-
-        return convertView;
-    }
+    
 }

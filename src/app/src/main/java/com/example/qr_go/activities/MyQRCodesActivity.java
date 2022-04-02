@@ -14,9 +14,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 
 import com.example.qr_go.R;
-import com.example.qr_go.adapters.QRArrayAdapter;
+import com.example.qr_go.adapters.SearchQRArrayAdapter;
+import com.example.qr_go.adapters.UserQRArrayAdapter;
 import com.example.qr_go.containers.QRListDisplayContainer;
-import com.example.qr_go.containers.UserListDisplayContainer;
 import com.example.qr_go.objects.Player;
 import com.example.qr_go.utils.StringUtil;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -40,7 +40,7 @@ public class MyQRCodesActivity extends BaseActivity {
     private Player selectedPlayer;
     Map.Entry<String, Integer> highestQRCode;
     Map.Entry<String, Integer> lowestQRCode;
-    private QRArrayAdapter qrAdapter;
+    private UserQRArrayAdapter qrAdapter;
     private ArrayList<QRListDisplayContainer> qrDisplays;
     private ArrayList<String> qrCodeList;
     private ListView userQRList;
@@ -130,7 +130,7 @@ public class MyQRCodesActivity extends BaseActivity {
                                     }
                                 });
                             }
-                            qrAdapter = new QRArrayAdapter(MyQRCodesActivity.this, qrDisplays, 0);
+                            qrAdapter = new UserQRArrayAdapter(MyQRCodesActivity.this, qrDisplays, 0);
                             userQRList.setAdapter(qrAdapter);
                         }
                         ImageView profileImage = findViewById(R.id.profile_photo);
@@ -189,5 +189,8 @@ public class MyQRCodesActivity extends BaseActivity {
             });
         }
 
+    }
+    public void deleteQR(QRListDisplayContainer qr) {
+        qrDisplays.remove(qr);
     }
 }
