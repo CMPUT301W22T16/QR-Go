@@ -43,6 +43,8 @@ public abstract class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer
         this.qrDisplays = qrDisplays;
         this.sortPos = sortPos;
     }
+
+
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -115,6 +117,24 @@ public abstract class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer
         }
         scoreParams.addRule(RelativeLayout.CENTER_VERTICAL);
         scoreView.setLayoutParams(scoreParams);
+    }
+
+    public ArrayList<String> getIds() {
+        ArrayList<String> returnList = new ArrayList<String>();
+        for(int i = 0; i < qrDisplays.size(); i++) {
+            returnList.add(qrDisplays.get(i).getId());
+        }
+        return returnList;
+
+    }
+
+    public ArrayList<Integer> getScores() {
+        ArrayList<Integer> returnList = new ArrayList<Integer>();
+        for(int i = 0; i < qrDisplays.size(); i++) {
+            returnList.add(qrDisplays.get(i).getScore());
+        }
+        return returnList;
+
     }
 
 }

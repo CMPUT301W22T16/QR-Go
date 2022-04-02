@@ -278,6 +278,12 @@ public class SearchActivity extends BaseActivity {
                         qrLat = (Double) qrLocationMap.get("latitude");
                         qrLon = (Double) qrLocationMap.get("longitude");
                     }
+                    String strUserMap;
+                    if(usermap.size() <= 0) {
+                        strUserMap = null;
+                    } else {
+                        strUserMap = (String) usermap.keySet().toArray()[0];
+                    }
                     QRListDisplayContainer qrToDisplay =
                             new QRListDisplayContainer(
                                     snapshot.get("score", Integer.class),
@@ -285,7 +291,7 @@ public class SearchActivity extends BaseActivity {
                                     qrLat,
                                     qrLon,
                                     null,
-                                    (String) usermap.keySet().toArray()[0]
+                                    strUserMap
                             );
                     qrDisplays.add(qrToDisplay);
                 }

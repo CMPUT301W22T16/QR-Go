@@ -23,12 +23,14 @@ public class UserQRArrayAdapter extends QRArrayAdapter {
     private ArrayList<QRListDisplayContainer> qrDisplays;
     private UserQRArrayAdapter adapter;
 
-    public UserQRArrayAdapter(@NonNull Context context, ArrayList<QRListDisplayContainer> qrDisplays, Integer sortPos) {
+    public UserQRArrayAdapter(Context context, ArrayList<QRListDisplayContainer> qrDisplays, Integer sortPos) {
         super(context,qrDisplays,sortPos);
         this.qrDisplays = qrDisplays;
         this.adapter = this;
         this.allQrDisplays = new ArrayList<>(qrDisplays);
     }
+
+
     
     @Override
     protected void AddDeleteButton(TextView scoreView, Button delButton, QRListDisplayContainer qrToDisplay) {
