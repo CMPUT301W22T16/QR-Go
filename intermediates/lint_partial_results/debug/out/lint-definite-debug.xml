@@ -1872,12 +1872,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/adapters/QRArrayAdapter.java"
-            line="66"
+            line="68"
             column="24"
-            startOffset="2277"
-            endLine="66"
+            startOffset="2279"
+            endLine="68"
             endColumn="67"
-            endOffset="2320"/>
+            endOffset="2322"/>
     </incident>
 
     <incident
@@ -1886,12 +1886,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/adapters/QRArrayAdapter.java"
-            line="72"
+            line="74"
             column="35"
-            startOffset="2528"
-            endLine="72"
+            startOffset="2530"
+            endLine="74"
             endColumn="81"
-            endOffset="2574"/>
+            endOffset="2576"/>
     </incident>
 
     <incident
@@ -1900,12 +1900,12 @@
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/adapters/QRArrayAdapter.java"
-            line="72"
+            line="74"
             column="48"
-            startOffset="2541"
-            endLine="72"
+            startOffset="2543"
+            endLine="74"
             endColumn="81"
-            endOffset="2574"/>
+            endOffset="2576"/>
     </incident>
 
     <incident
@@ -1914,12 +1914,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/adapters/QRArrayAdapter.java"
-            line="85"
+            line="87"
             column="35"
-            startOffset="3146"
-            endLine="85"
+            startOffset="3148"
+            endLine="87"
             endColumn="60"
-            endOffset="3171"/>
+            endOffset="3173"/>
     </incident>
 
     <incident
