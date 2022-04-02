@@ -273,10 +273,16 @@ public class SearchActivity extends BaseActivity {
                     // will be updated later
                     Double qrLat = null;
                     Double qrLon = null;
+                    String neighborhood = null;
                     Map usermap = (Map) snapshot.get("userIds");
                     if (qrLocationMap != null) {
                         qrLat = (Double) qrLocationMap.get("latitude");
                         qrLon = (Double) qrLocationMap.get("longitude");
+                        Map geocodedLocation = (Map) qrLocationMap.get("geocodedLocation");
+                        if (geocodedLocation != null) {
+                            Map address = (Map) geocodedLocation.get("address");
+                            neighborhood = (String) address.get("neighbourhood");
+                        }
                     }
                     String strUserMap;
                     if(usermap.size() <= 0) {
@@ -291,7 +297,8 @@ public class SearchActivity extends BaseActivity {
                                     qrLat,
                                     qrLon,
                                     null,
-                                    strUserMap
+                                    strUserMap,
+                                    neighborhood
                             );
                     qrDisplays.add(qrToDisplay);
                 }

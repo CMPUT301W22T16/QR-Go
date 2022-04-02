@@ -58,10 +58,17 @@ public abstract class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer
         Button delButton = (Button) view.findViewById(R.id.qr_del_button);
         TextView idView = view.findViewById(R.id.qr_id_view);
         TextView scoreView = view.findViewById(R.id.qr_score_view);
+        TextView hoodView = view.findViewById(R.id.qr_hood_view);
         ImageView imageView = view.findViewById(R.id.qr_picture);
 
         if (qrToDisplay.getPicture() != null) {
             imageView.setImageBitmap(qrToDisplay.getPicture());
+        }
+        if (qrToDisplay.getNeighborhood() != null) {
+            hoodView.setText(qrToDisplay.getNeighborhood());
+            hoodView.setVisibility(View.VISIBLE);
+        } else {
+            hoodView.setVisibility(View.GONE);
         }
 
 

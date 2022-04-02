@@ -115,6 +115,7 @@ public class PlayerInfoActivity extends BaseActivity {
                                                 null,
                                                 null,
                                                 null,
+                                                null,
                                                 null
                                         );
                                 qrDisplays.add(qrToDisplay);
