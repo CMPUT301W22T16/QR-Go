@@ -82,12 +82,12 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:57: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
         android:textSize="32dp"
         ~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:25: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
-        android:textSize="24dp"
-        ~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:38: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
-        android:textSize="32dp"
-        ~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:35: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+            android:textSize="16dp" />
+            ~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:42: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+            android:textSize="16dp"
+            ~~~~~~~~~~~~~~~~~~~~~~~
 
    Explanation for issues of type "SpUsage":
    When setting text sizes, you should normally use sp, or "scale-independent
@@ -609,12 +609,12 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/menu/bottom_nav_menu.xml:27: Warning: Hardcoded string "My Account", should use @string resource [HardcodedText]
         android:title="My Account" />
         ~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:26: Warning: Hardcoded string "User Name", should use @string resource [HardcodedText]
-        android:text="User Name"
-        ~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:39: Warning: Hardcoded string "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", should use @string resource [HardcodedText]
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:34: Warning: Hardcoded string "User Name", should use @string resource [HardcodedText]
+            android:text="User Name"
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:41: Warning: Hardcoded string "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", should use @string resource [HardcodedText]
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_users_content.xml:7: Warning: Hardcoded string "User Name", should use @string resource [HardcodedText]
     android:text="User Name"
     ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -741,6 +741,9 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:47: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
             android:layout_alignParentLeft="true"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:23: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="16dp" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_marginLeft="16dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:14: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
         android:layout_alignParentLeft="true"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -831,4 +834,4 @@
    Please define an explicit reason why it is ignored, and when it can be
    resolved.
 
-0 errors, 194 warnings
+0 errors, 195 warnings
