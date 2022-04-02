@@ -73,7 +73,7 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml:187: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
                 android:textSize="20dp" />
                 ~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:189: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:190: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
                 android:textSize="20dp" />
                 ~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:31: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
@@ -82,12 +82,12 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:57: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
         android:textSize="32dp"
         ~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:35: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
-            android:textSize="16dp" />
-            ~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:42: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
-            android:textSize="16dp"
-            ~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:25: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="24dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:38: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="32dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~
 
    Explanation for issues of type "SpUsage":
    When setting text sizes, you should normally use sp, or "scale-independent
@@ -522,49 +522,49 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qr_activity.xml:74: Warning: Hardcoded string "Take photo of object", should use @string resource [HardcodedText]
         android:text="Take photo of object"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:39: Warning: Hardcoded string "Player 1", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:40: Warning: Hardcoded string "Player 1", should use @string resource [HardcodedText]
                     android:text="Player 1"
                     ~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:50: Warning: Hardcoded string "Email:", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:51: Warning: Hardcoded string "Email:", should use @string resource [HardcodedText]
                         android:text="Email:" />
                         ~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:57: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:58: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
                         android:text="00000" />
                         ~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:69: Warning: Hardcoded string "QR Codes", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:70: Warning: Hardcoded string "QR Codes", should use @string resource [HardcodedText]
                         android:text="QR Codes" />
                         ~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:76: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:77: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
                         android:text="00000" />
                         ~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:88: Warning: Hardcoded string "Highest Score", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:89: Warning: Hardcoded string "Highest Score", should use @string resource [HardcodedText]
                         android:text="Highest Score" />
                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:95: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:96: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
                         android:text="00000" />
                         ~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:107: Warning: Hardcoded string "Lowest Score", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:108: Warning: Hardcoded string "Lowest Score", should use @string resource [HardcodedText]
                         android:text="Lowest Score" />
                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:114: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:115: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
                         android:text="00000" />
                         ~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:126: Warning: Hardcoded string "Total Score", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:127: Warning: Hardcoded string "Total Score", should use @string resource [HardcodedText]
                         android:text="Total Score" />
                         ~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:133: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:134: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
                         android:text="00000" />
                         ~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:151: Warning: Hardcoded string "Highest Scoring QR Code:", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:152: Warning: Hardcoded string "Highest Scoring QR Code:", should use @string resource [HardcodedText]
                 android:text="Highest Scoring QR Code:" />
                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:168: Warning: Hardcoded string "Lowest Scoring QR Code", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:169: Warning: Hardcoded string "Lowest Scoring QR Code", should use @string resource [HardcodedText]
                 android:text="Lowest Scoring QR Code" />
                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:188: Warning: Hardcoded string "Scanned QR codes:", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:189: Warning: Hardcoded string "Scanned QR codes:", should use @string resource [HardcodedText]
                 android:text="Scanned QR codes:"
                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:200: Warning: Hardcoded string "No QR codes to display!", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:201: Warning: Hardcoded string "No QR codes to display!", should use @string resource [HardcodedText]
                 android:text="No QR codes to display!" />
                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:32: Warning: Hardcoded string "QR NAME", should use @string resource [HardcodedText]
@@ -609,12 +609,12 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/menu/bottom_nav_menu.xml:27: Warning: Hardcoded string "My Account", should use @string resource [HardcodedText]
         android:title="My Account" />
         ~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:34: Warning: Hardcoded string "User Name", should use @string resource [HardcodedText]
-            android:text="User Name"
-            ~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:41: Warning: Hardcoded string "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", should use @string resource [HardcodedText]
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:26: Warning: Hardcoded string "User Name", should use @string resource [HardcodedText]
+        android:text="User Name"
+        ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:39: Warning: Hardcoded string "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", should use @string resource [HardcodedText]
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_users_content.xml:7: Warning: Hardcoded string "User Name", should use @string resource [HardcodedText]
     android:text="User Name"
     ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -711,25 +711,25 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml:132: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="36dp" to better support right-to-left layouts [RtlHardcoded]
                         android:layout_marginLeft="36dp"
                         ~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:26: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="50dp" to better support right-to-left layouts [RtlHardcoded]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:27: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="50dp" to better support right-to-left layouts [RtlHardcoded]
                 android:layout_marginLeft="50dp"
                 ~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:32: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="50dp" to better support right-to-left layouts [RtlHardcoded]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:33: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="50dp" to better support right-to-left layouts [RtlHardcoded]
                 android:layout_marginLeft="50dp"
                 ~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:56: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="45dp" to better support right-to-left layouts [RtlHardcoded]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:57: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="45dp" to better support right-to-left layouts [RtlHardcoded]
                         android:layout_marginLeft="45dp"
                         ~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:75: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="45dp" to better support right-to-left layouts [RtlHardcoded]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:76: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="45dp" to better support right-to-left layouts [RtlHardcoded]
                         android:layout_marginLeft="45dp"
                         ~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:94: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="19dp" to better support right-to-left layouts [RtlHardcoded]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:95: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="19dp" to better support right-to-left layouts [RtlHardcoded]
                         android:layout_marginLeft="19dp"
                         ~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:113: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="22dp" to better support right-to-left layouts [RtlHardcoded]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:114: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="22dp" to better support right-to-left layouts [RtlHardcoded]
                         android:layout_marginLeft="22dp"
                         ~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:132: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="36dp" to better support right-to-left layouts [RtlHardcoded]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:133: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="36dp" to better support right-to-left layouts [RtlHardcoded]
                         android:layout_marginLeft="36dp"
                         ~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:21: Warning: Consider replacing android:layout_alignParentRight with android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
@@ -741,9 +741,6 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:47: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
             android:layout_alignParentLeft="true"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:23: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="16dp" to better support right-to-left layouts [RtlHardcoded]
-        android:layout_marginLeft="16dp"
-        ~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:14: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
         android:layout_alignParentLeft="true"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -834,4 +831,4 @@
    Please define an explicit reason why it is ignored, and when it can be
    resolved.
 
-0 errors, 195 warnings
+0 errors, 194 warnings
