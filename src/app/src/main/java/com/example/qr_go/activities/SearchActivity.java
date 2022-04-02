@@ -278,6 +278,12 @@ public class SearchActivity extends BaseActivity {
                         qrLat = (Double) qrLocationMap.get("latitude");
                         qrLon = (Double) qrLocationMap.get("longitude");
                     }
+                    String strUserMap;
+                    if(usermap.size() <= 0) {
+                        strUserMap = null;
+                    } else {
+                        strUserMap = (String) usermap.keySet().toArray()[0];
+                    }
                     QRListDisplayContainer qrToDisplay =
                             new QRListDisplayContainer(
                                     snapshot.get("score", Integer.class),
@@ -285,7 +291,7 @@ public class SearchActivity extends BaseActivity {
                                     qrLat,
                                     qrLon,
                                     null,
-                                    (String) usermap.keySet().toArray()[0]
+                                    strUserMap
                             );
                     qrDisplays.add(qrToDisplay);
                 }
@@ -373,6 +379,8 @@ public class SearchActivity extends BaseActivity {
         FirebaseStorage storage = MapsActivity.storage;
         StringUtil stringUtil = new StringUtil();
         StorageReference storageRef = storage.getReference();
+        UserListDisplayContainer lastUser = userDisplays.get(userDisplays.size()-1);
+        QRListDisplayContainer lastQR = qrDisplays.get(qrDisplays.size()-1);
         for (UserListDisplayContainer user : userDisplays) {
             String ImageRef = stringUtil.ImagePlayerRef(user.getUserid());
             StorageReference islandRef = storageRef.child(ImageRef);
@@ -382,12 +390,16 @@ public class SearchActivity extends BaseActivity {
                 public void onSuccess(byte[] bytes) {
                     Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
                     user.setPicture(bitmap);
-
+                    if (user.getUserid().equals(lastUser.getUserid())) {
+                        searchPagerAdapter.updateView(currentFragment, sortPosition);
+                    }
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception exception) {
-                    // Handle any errors
+                    if (user.getUserid().equals(lastUser.getUserid())) {
+                        searchPagerAdapter.updateView(currentFragment, sortPosition);
+                    }
                     return;
                 }
             });
@@ -401,12 +413,16 @@ public class SearchActivity extends BaseActivity {
                 public void onSuccess(byte[] bytes) {
                     Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
                     qr.setPicture(bitmap);
-                    searchPagerAdapter.updateSort(currentFragment, sortPosition);
+                    if (qr.getId().equals(lastQR.getId())) {
+                        searchPagerAdapter.updateView(currentFragment, sortPosition);
+                    }
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception exception) {
-                    // Handle any errors
+                    if (qr.getId().equals(lastQR.getId())) {
+                        searchPagerAdapter.updateView(currentFragment, sortPosition);
+                    }
                     return;
                 }
             });
