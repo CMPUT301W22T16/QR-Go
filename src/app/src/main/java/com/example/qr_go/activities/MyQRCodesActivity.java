@@ -45,6 +45,8 @@ public class MyQRCodesActivity extends BaseActivity {
     private ArrayList<String> qrCodeList;
     private ListView userQRList;
 
+
+    ImageView highestScoreImage, lowestScoreImage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,13 +62,14 @@ public class MyQRCodesActivity extends BaseActivity {
         TextView totalScoreText = findViewById(R.id.playerTotalScore);
         TextView highestScoreText = findViewById(R.id.playerHighScore);
         TextView lowestScoreText = findViewById(R.id.playerLowScore);
-
         View highestScoreLayout = findViewById(R.id.highest_score);
         View lowestScoreLayout = findViewById(R.id.lowest_score);
         TextView highestScoreQrIDText = highestScoreLayout.findViewById(R.id.qr_id_view);
         TextView highestScoreQrScoreText = highestScoreLayout.findViewById(R.id.qr_score_view);
         TextView lowestScoreQrIDText = lowestScoreLayout.findViewById(R.id.qr_id_view);
         TextView lowestScoreQrScoreText = lowestScoreLayout.findViewById(R.id.qr_score_view);
+        highestScoreImage = highestScoreLayout.findViewById(R.id.qr_picture);
+        lowestScoreImage = lowestScoreLayout.findViewById(R.id.qr_picture);
 
         playerDBInst = FirebaseFirestore.getInstance();
 
@@ -179,6 +182,13 @@ public class MyQRCodesActivity extends BaseActivity {
                 public void onSuccess(byte[] bytes) {
                     Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
                     qr.setPicture(bitmap);
+                    qrAdapter.notifyDataSetChanged();
+                    if(highestQRCode.getKey().equals(qr.getId())){
+                        highestScoreImage.setImageBitmap(bitmap);
+                    }
+                    else if (lowestQRCode.getKey().equals(qr.getId())){
+                        lowestScoreImage.setImageBitmap(bitmap);
+                    }
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override

@@ -57,7 +57,7 @@ public class PlayerInfoActivity extends BaseActivity {
     Map.Entry<String, Integer> highestQRCode;
     Map.Entry<String, Integer> lowestQRCode;
     CollectionReference playerDBInst;
-
+    ImageView highestScoreImage, lowestScoreImage;
 
 
 
@@ -87,7 +87,8 @@ public class PlayerInfoActivity extends BaseActivity {
         TextView highestScoreQrScoreText = highestScoreLayout.findViewById(R.id.qr_score_view);
         TextView lowestScoreQrIDText = lowestScoreLayout.findViewById(R.id.qr_id_view);
         TextView lowestScoreQrScoreText = lowestScoreLayout.findViewById(R.id.qr_score_view);
-
+        highestScoreImage = highestScoreLayout.findViewById(R.id.qr_picture);
+        lowestScoreImage = lowestScoreLayout.findViewById(R.id.qr_picture);
         playerDBInst = FirebaseFirestore.getInstance().collection("Players");
 
 
@@ -178,10 +179,7 @@ public class PlayerInfoActivity extends BaseActivity {
                                     return;
                                 }
                             });
-
-
-
-
+                            addImages();
                         }
                     }
                 });
@@ -219,7 +217,37 @@ public class PlayerInfoActivity extends BaseActivity {
         }
     }
 
+    private void addImages() {
+        FirebaseStorage storage = MapsActivity.storage;
+        StringUtil stringUtil = new StringUtil();
+        StorageReference storageRef = storage.getReference();
+        for (QRListDisplayContainer qr : qrDisplays) {
+            String ImageRef = stringUtil.ImageQRRef(qr.getId(), selectedPlayer.getUserid());
+            StorageReference islandRef = storageRef.child(ImageRef);
+            final long ONE_MEGABYTE = 5 * 1024 * 1024;
+            islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                @Override
+                public void onSuccess(byte[] bytes) {
+                    Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                    qr.setPicture(bitmap);
+                    qrAdapter.notifyDataSetChanged();
+                    if(highestQRCode.getKey().equals(qr.getId())){
+                        highestScoreImage.setImageBitmap(bitmap);
+                    }
+                    else if (lowestQRCode.getKey().equals(qr.getId())){
+                        lowestScoreImage.setImageBitmap(bitmap);
+                    }
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception exception) {
+                    // Handle any errors
+                    return;
+                }
+            });
+        }
 
+    }
 
     public Integer getQRCount() {
         return playerQRCodes.size();
