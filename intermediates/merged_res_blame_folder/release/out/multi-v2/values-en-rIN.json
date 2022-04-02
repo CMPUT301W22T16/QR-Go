@@ -4,7 +4,7 @@
             "outputFile": "/home/runner/work/QR-Go/QR-Go/src/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
-                    "source": "/home/runner/.gradle/caches/transforms-3/9ccb422317a6b8f2afb79e08fc72c10b/transformed/appcompat-1.4.1/res/values-en-rIN/values-en-rIN.xml",
+                    "source": "/home/runner/.gradle/caches/transforms-3/5ff4f31776561725ff411ca2df2a6aef/transformed/appcompat-1.4.1/res/values-en-rIN/values-en-rIN.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/runner/.gradle/caches/transforms-3/bd42aab81af59b59bdae64fd2c3473b1/transformed/navigation-ui-2.4.0/res/values-en-rIN/values-en-rIN.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,161",
-                        "endColumns": "105,116",
-                        "endOffsets": "156,273"
-                    },
-                    "to": {
-                        "startLines": "29,30",
-                        "startColumns": "4,4",
-                        "startOffsets": "2762,2868",
-                        "endColumns": "105,116",
-                        "endOffsets": "2863,2980"
-                    }
-                },
-                {
-                    "source": "/home/runner/.gradle/caches/transforms-3/c356baf59343ea26fc21dbab6859661a/transformed/core-1.7.0/res/values-en-rIN/values-en-rIN.xml",
+                    "source": "/home/runner/.gradle/caches/transforms-3/cfadd8248f79a20c0d4d8c9183e76111/transformed/core-1.7.0/res/values-en-rIN/values-en-rIN.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -52,6 +35,23 @@
                         "startOffsets": "3068",
                         "endColumns": "100",
                         "endOffsets": "3164"
+                    }
+                },
+                {
+                    "source": "/home/runner/.gradle/caches/transforms-3/091a62e5950e2d51e97cc83798c55b32/transformed/navigation-ui-2.4.0/res/values-en-rIN/values-en-rIN.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,161",
+                        "endColumns": "105,116",
+                        "endOffsets": "156,273"
+                    },
+                    "to": {
+                        "startLines": "29,30",
+                        "startColumns": "4,4",
+                        "startOffsets": "2762,2868",
+                        "endColumns": "105,116",
+                        "endOffsets": "2863,2980"
                     }
                 }
             ]

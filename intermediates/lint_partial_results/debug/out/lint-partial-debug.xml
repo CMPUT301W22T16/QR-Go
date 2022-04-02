@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<incidents format="6" by="lint 7.1.0" type="partial_results">
+<incidents format="6" by="lint 7.1.2" type="partial_results">
     <map id="UnusedResources">
         <location id="R.layout.user_qr_list_content"
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_qr_list_content.xml"
