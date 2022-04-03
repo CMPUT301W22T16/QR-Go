@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.qr_go.objects.QRArrayAdapterTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-04-03T20:51:05" hostname="fv-az47-788" time="0.013">
+<testsuite name="com.example.qr_go.objects.QRArrayAdapterTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-04-03T21:09:52" hostname="fv-az121-109" time="0.003">
   <properties/>
   <testcase name="TestSearchQRConstructor" classname="com.example.qr_go.objects.QRArrayAdapterTest" time="0.002"/>
   <testcase name="TestUserQRConstructor" classname="com.example.qr_go.objects.QRArrayAdapterTest" time="0.0"/>
