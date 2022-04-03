@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="deploymentTargetDropDown">
-    <targetSelectedWithDropDown>
+    <runningDeviceTargetSelectedWithDropDown>
       <Target>
-        <type value="QUICK_BOOT_TARGET" />
+        <type value="RUNNING_DEVICE_TARGET" />
         <deviceKey>
           <Key>
+<<<<<<< HEAD
             <type value="VIRTUAL_DEVICE_PATH" />
             <value value="C:\Users\Landyn\.android\avd\Pixel_4a_API_32.avd" />
           </Key>
@@ -13,5 +14,14 @@
       </Target>
     </targetSelectedWithDropDown>
     <timeTargetWasSelectedWithDropDown value="2022-04-03T04:23:52.634434300Z" />
+=======
+            <type value="SERIAL_NUMBER" />
+            <value value="adb-RFCNB0BGQHH-5UwoMq._adb-tls-connect._tcp" />
+          </Key>
+        </deviceKey>
+      </Target>
+    </runningDeviceTargetSelectedWithDropDown>
+    <timeTargetWasSelectedWithDropDown value="2022-04-03T06:28:14.070270900Z" />
+>>>>>>> b49d5e45ecb77f17a0cf1304f04b6a561e141961
   </component>
 </project>

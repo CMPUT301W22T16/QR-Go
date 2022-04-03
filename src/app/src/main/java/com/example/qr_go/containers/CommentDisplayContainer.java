@@ -1,4 +1,6 @@
-package com.example.qr_go.objects;
+package com.example.qr_go.containers;
+
+import android.graphics.Bitmap;
 
 import java.io.Serializable;
 import java.util.UUID;
@@ -6,14 +8,16 @@ import java.util.UUID;
 /**
  * This is a class that represents a comment made by a user to a QRCode
  */
-public class Comment implements Serializable {
+public class CommentDisplayContainer implements Serializable {
     private String message;
     private String username;
-
-    public Comment(String username, String message) {
+    private String userid;
+    private Bitmap image;
+    public CommentDisplayContainer(String username, String message, String userid) {
         this.username = username;
         this.message = message;
-
+        this.userid = userid;
+        this.image = null;
     }
 
     /**
@@ -32,7 +36,9 @@ public class Comment implements Serializable {
     public String getUsername() {
         return username;
     }
-
+    public String getUserid() {
+        return userid;
+    }
     /**
      * Setter for message. Used for editing the message of this comment.
      * @param message
@@ -41,6 +47,7 @@ public class Comment implements Serializable {
     public void setMessage(String message) {
         this.message = message;
     }
-
+    public void setPicture(Bitmap image){this.image = image;};
+    public Bitmap getPicture(){return image;}
 
 }
