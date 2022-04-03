@@ -46,6 +46,8 @@ public class ListCommentsAdapter extends ArrayAdapter {
         TextView message = (TextView) view.findViewById(R.id.message);
         if (comment.getPicture() != null) {
             commenterPicture.setImageBitmap(comment.getPicture());
+        } else {
+            commenterPicture.setImageResource(R.drawable.round_account_circle_24);
         }
         // show comment's message
         commenterName.setText(comment.getUsername());
