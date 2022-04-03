@@ -68,7 +68,7 @@ public abstract class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer
             hoodView.setText(qrToDisplay.getNeighborhood());
             hoodView.setVisibility(View.VISIBLE);
         } else {
-            hoodView.setVisibility(View.GONE);
+            hoodView.setVisibility(View.INVISIBLE);
         }
 
 
