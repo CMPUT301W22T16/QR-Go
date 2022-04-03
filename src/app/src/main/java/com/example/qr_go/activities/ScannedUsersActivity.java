@@ -21,7 +21,7 @@ public class ScannedUsersActivity extends AppCompatActivity {
     ListView userList;
     ArrayAdapter<String> userAdapter;
     ArrayList<String> userDataList;
-
+    final long ONE_MEGABYTE = 4 * 1024 * 1024;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -31,6 +31,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -41,6 +43,7 @@ import com.google.firebase.storage.UploadTask;
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 
 @RequiresApi(api = Build.VERSION_CODES.O)
 public class PlayerProfileActivity extends BaseActivity {
@@ -52,7 +55,35 @@ public class PlayerProfileActivity extends BaseActivity {
     public FirebaseStorage storage;
     private EditText usernameEditText;
     private EditText emailEditText;
+    private ArrayList<String> usernames;
+    final long ONE_MEGABYTE = 4 * 1024 * 1024;
     QRGoStorageUtil StorageUtil = new QRGoStorageUtil();
+    public void  getAllUsernames(){
+        CollectionReference QRRef = db.collection("Players");
+        usernames = new ArrayList<>();
+        QRRef.get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        for(DocumentSnapshot snapshot : queryDocumentSnapshots) {
+                            try {
+                                Player player = snapshot.toObject(Player.class);
+                                usernames.add(player.getUsername());
+                            }
+                            catch (Exception e){
+                                //breaks if object is an older version
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+
+                    }
+                });
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,7 +100,7 @@ public class PlayerProfileActivity extends BaseActivity {
         String ImageRef = stringUtil.ImagePlayerRef(currentUserId);
         StorageReference islandRef = storageRef.child(ImageRef);
 
-        final long ONE_MEGABYTE = 5 * 1024 * 1024;
+        getAllUsernames();
         islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
             @Override
             public void onSuccess(byte[] bytes) {

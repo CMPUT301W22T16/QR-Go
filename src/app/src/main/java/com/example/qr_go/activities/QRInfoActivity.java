@@ -48,6 +48,7 @@ public class QRInfoActivity extends BaseActivity {
     private String selectedQRId;
     String currentUserId = MapsActivity.getUserId();
     private ListCommentsAdapter comment;
+    final long ONE_MEGABYTE = 4 * 1024 * 1024;
 //    private GeoLocation location;     // TODO: uncomment after GeoLocation is implemented
 
     private Intent usersActivityIntent;
@@ -116,7 +117,6 @@ public class QRInfoActivity extends BaseActivity {
                                 StorageReference storageRef = storage.getReference();
                                 String ImageRef = stringUtil.ImageQRRef(selectedQR.getId(), selectedQR.getUserObjects().get(0));
                                 StorageReference islandRef = storageRef.child(ImageRef);
-                                final long ONE_MEGABYTE = 5 * 1024 * 1024;
                                 islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
                                     @Override
                                     public void onSuccess(byte[] bytes) {
@@ -180,7 +180,6 @@ public class QRInfoActivity extends BaseActivity {
         thisTempPlayer.setUsername("QRInfo Temp Player");
     }
     private void addImages() {
-        final long ONE_MEGABYTE = 5 * 1024 * 1024;
         FirebaseStorage storage = MapsActivity.storage;
         StringUtil stringUtil = new StringUtil();
         StorageReference storageRef = storage.getReference();
