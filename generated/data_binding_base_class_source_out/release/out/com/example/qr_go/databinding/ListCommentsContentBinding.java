@@ -8,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -30,17 +29,13 @@ public final class ListCommentsContentBinding implements ViewBinding {
   @NonNull
   public final TextView message;
 
-  @NonNull
-  public final CardView photoContainer;
-
   private ListCommentsContentBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView commenterName, @NonNull ImageView commenterPhoto, @NonNull TextView message,
-      @NonNull CardView photoContainer) {
+      @NonNull TextView commenterName, @NonNull ImageView commenterPhoto,
+      @NonNull TextView message) {
     this.rootView = rootView;
     this.commenterName = commenterName;
     this.commenterPhoto = commenterPhoto;
     this.message = message;
-    this.photoContainer = photoContainer;
   }
 
   @Override
@@ -88,14 +83,8 @@ public final class ListCommentsContentBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.photo_container;
-      CardView photoContainer = ViewBindings.findChildViewById(rootView, id);
-      if (photoContainer == null) {
-        break missingId;
-      }
-
       return new ListCommentsContentBinding((ConstraintLayout) rootView, commenterName,
-          commenterPhoto, message, photoContainer);
+          commenterPhoto, message);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

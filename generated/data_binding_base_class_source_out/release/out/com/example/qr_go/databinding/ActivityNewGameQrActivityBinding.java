@@ -11,7 +11,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.constraintlayout.widget.Guideline;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.qr_go.R;
@@ -27,9 +26,6 @@ public final class ActivityNewGameQrActivityBinding implements ViewBinding {
 
   @NonNull
   public final BottomNavigationView bottomNavView;
-
-  @NonNull
-  public final Guideline guideline2;
 
   @NonNull
   public final KonfettiView konfettiView;
@@ -53,13 +49,12 @@ public final class ActivityNewGameQrActivityBinding implements ViewBinding {
   public final ImageView takeQrPhotoImageview;
 
   private ActivityNewGameQrActivityBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavigationView bottomNavView, @NonNull Guideline guideline2,
-      @NonNull KonfettiView konfettiView, @NonNull CheckBox locationCheckbox,
-      @NonNull Button saveGameQr, @NonNull TextView score, @NonNull TextView scoreText,
-      @NonNull Button takeQrPhotoButton, @NonNull ImageView takeQrPhotoImageview) {
+      @NonNull BottomNavigationView bottomNavView, @NonNull KonfettiView konfettiView,
+      @NonNull CheckBox locationCheckbox, @NonNull Button saveGameQr, @NonNull TextView score,
+      @NonNull TextView scoreText, @NonNull Button takeQrPhotoButton,
+      @NonNull ImageView takeQrPhotoImageview) {
     this.rootView = rootView;
     this.bottomNavView = bottomNavView;
-    this.guideline2 = guideline2;
     this.konfettiView = konfettiView;
     this.locationCheckbox = locationCheckbox;
     this.saveGameQr = saveGameQr;
@@ -99,12 +94,6 @@ public final class ActivityNewGameQrActivityBinding implements ViewBinding {
       id = R.id.bottom_nav_view;
       BottomNavigationView bottomNavView = ViewBindings.findChildViewById(rootView, id);
       if (bottomNavView == null) {
-        break missingId;
-      }
-
-      id = R.id.guideline2;
-      Guideline guideline2 = ViewBindings.findChildViewById(rootView, id);
-      if (guideline2 == null) {
         break missingId;
       }
 
@@ -151,8 +140,8 @@ public final class ActivityNewGameQrActivityBinding implements ViewBinding {
       }
 
       return new ActivityNewGameQrActivityBinding((ConstraintLayout) rootView, bottomNavView,
-          guideline2, konfettiView, locationCheckbox, saveGameQr, score, scoreText,
-          takeQrPhotoButton, takeQrPhotoImageview);
+          konfettiView, locationCheckbox, saveGameQr, score, scoreText, takeQrPhotoButton,
+          takeQrPhotoImageview);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
