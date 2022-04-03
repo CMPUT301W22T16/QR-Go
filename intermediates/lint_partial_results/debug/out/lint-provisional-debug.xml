@@ -606,10 +606,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="70"
             column="9"
-            startOffset="2821"
+            startOffset="2816"
             endLine="70"
             endColumn="40"
-            endOffset="2852"/>
+            endOffset="2847"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -623,10 +623,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
             line="97"
             column="9"
-            startOffset="3897"
+            startOffset="3892"
             endLine="97"
             endColumn="37"
-            endOffset="3925"/>
+            endOffset="3920"/>
         <map>
             <condition minLT="23"/>
         </map>
