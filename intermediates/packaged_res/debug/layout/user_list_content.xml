@@ -7,27 +7,39 @@
     android:layout_margin="10dp"
     android:descendantFocusability="blocksDescendants">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/user_picture"
-        android:layout_height="60dp"
-        android:layout_width="60dp"
-        android:layout_marginVertical="15dp"
-        android:layout_alignParentLeft="true"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/photo_container"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="false"
         android:layout_centerVertical="true"
         android:paddingRight="10dp"
-        android:src="@drawable/round_account_circle_24"/>
+        app:cardCornerRadius="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        android:layout_alignParentLeft="true"
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/user_picture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:src="@drawable/round_account_circle_24" />
+    </androidx.cardview.widget.CardView>
+
 
     <TextView
         android:id="@+id/user_rank_view"
-        android:layout_width="50dp"
+        android:layout_width="40dp"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_alignParentTop="false"
         android:layout_centerVertical="true"
-        android:layout_toRightOf="@id/user_picture"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/photo_container"
         android:text="1"
         android:textSize="28sp"
-        android:layout_marginVertical="10dp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="wrap_content"

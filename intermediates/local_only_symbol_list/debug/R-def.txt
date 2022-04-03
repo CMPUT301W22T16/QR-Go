@@ -33,6 +33,7 @@ id edit_profile_photo
 id empty_list
 id generate_login_qr
 id generate_status_qr
+id guideline2
 id highestScoreData
 id highestScoreLayout
 id highest_score
@@ -66,6 +67,7 @@ id qrName
 id qrScore
 id qr_code_image
 id qr_del_button
+id qr_hood_view
 id qr_id_view
 id qr_list
 id qr_picture

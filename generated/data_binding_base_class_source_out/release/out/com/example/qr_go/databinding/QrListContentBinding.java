@@ -25,6 +25,9 @@ public final class QrListContentBinding implements ViewBinding {
   public final MaterialButton qrDelButton;
 
   @NonNull
+  public final TextView qrHoodView;
+
+  @NonNull
   public final TextView qrIdView;
 
   @NonNull
@@ -34,10 +37,11 @@ public final class QrListContentBinding implements ViewBinding {
   public final TextView qrScoreView;
 
   private QrListContentBinding(@NonNull RelativeLayout rootView,
-      @NonNull MaterialButton qrDelButton, @NonNull TextView qrIdView,
+      @NonNull MaterialButton qrDelButton, @NonNull TextView qrHoodView, @NonNull TextView qrIdView,
       @NonNull ShapeableImageView qrPicture, @NonNull TextView qrScoreView) {
     this.rootView = rootView;
     this.qrDelButton = qrDelButton;
+    this.qrHoodView = qrHoodView;
     this.qrIdView = qrIdView;
     this.qrPicture = qrPicture;
     this.qrScoreView = qrScoreView;
@@ -76,6 +80,12 @@ public final class QrListContentBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.qr_hood_view;
+      TextView qrHoodView = ViewBindings.findChildViewById(rootView, id);
+      if (qrHoodView == null) {
+        break missingId;
+      }
+
       id = R.id.qr_id_view;
       TextView qrIdView = ViewBindings.findChildViewById(rootView, id);
       if (qrIdView == null) {
@@ -94,8 +104,8 @@ public final class QrListContentBinding implements ViewBinding {
         break missingId;
       }
 
-      return new QrListContentBinding((RelativeLayout) rootView, qrDelButton, qrIdView, qrPicture,
-          qrScoreView);
+      return new QrListContentBinding((RelativeLayout) rootView, qrDelButton, qrHoodView, qrIdView,
+          qrPicture, qrScoreView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

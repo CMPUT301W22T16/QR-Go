@@ -8,6 +8,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.qr_go.R;
@@ -20,6 +21,9 @@ import java.lang.String;
 public final class UserListContentBinding implements ViewBinding {
   @NonNull
   private final RelativeLayout rootView;
+
+  @NonNull
+  public final CardView photoContainer;
 
   @NonNull
   public final MaterialButton userDelButton;
@@ -36,11 +40,12 @@ public final class UserListContentBinding implements ViewBinding {
   @NonNull
   public final TextView usernameView;
 
-  private UserListContentBinding(@NonNull RelativeLayout rootView,
+  private UserListContentBinding(@NonNull RelativeLayout rootView, @NonNull CardView photoContainer,
       @NonNull MaterialButton userDelButton, @NonNull ShapeableImageView userPicture,
       @NonNull TextView userRankView, @NonNull TextView userScoreView,
       @NonNull TextView usernameView) {
     this.rootView = rootView;
+    this.photoContainer = photoContainer;
     this.userDelButton = userDelButton;
     this.userPicture = userPicture;
     this.userRankView = userRankView;
@@ -75,6 +80,12 @@ public final class UserListContentBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.photo_container;
+      CardView photoContainer = ViewBindings.findChildViewById(rootView, id);
+      if (photoContainer == null) {
+        break missingId;
+      }
+
       id = R.id.user_del_button;
       MaterialButton userDelButton = ViewBindings.findChildViewById(rootView, id);
       if (userDelButton == null) {
@@ -105,8 +116,8 @@ public final class UserListContentBinding implements ViewBinding {
         break missingId;
       }
 
-      return new UserListContentBinding((RelativeLayout) rootView, userDelButton, userPicture,
-          userRankView, userScoreView, usernameView);
+      return new UserListContentBinding((RelativeLayout) rootView, photoContainer, userDelButton,
+          userPicture, userRankView, userScoreView, usernameView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
