@@ -53,19 +53,4 @@ public class ListCommentsContainer extends ArrayAdapter {
 
     }
 
-    /**
-     * add comment to the list
-     * @param comment comment to be added
-     */
-    public void addComment(Comment comment){
-        comments.add(comment);
-    }
-
-    /**
-     * get size of the array
-     * @return size of the array
-     */
-    public int size() {
-        return comments.size();
-    }
 }

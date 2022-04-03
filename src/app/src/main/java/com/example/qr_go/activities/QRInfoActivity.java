@@ -42,14 +42,12 @@ import java.util.Map;
 public class QRInfoActivity extends BaseActivity {
 
     FirebaseFirestore db;
-    private Player thisTempPlayer; // TODO: temporary, replace with currently logged in user
     private Player currentUser = new Player();
 
     private GameQRCode selectedQR;
     private String selectedQRId;
 
     private ListCommentsContainer comment;
-//    private GeoLocation location;     // TODO: uncomment after GeoLocation is implemented
 
     private Intent usersActivityIntent;
 
@@ -171,30 +169,11 @@ public class QRInfoActivity extends BaseActivity {
         }
 
         commentList = findViewById(R.id.myQRList);
-
-        // TODO: temporary, set to currently logged in user
-        thisTempPlayer = new Player();
-        thisTempPlayer.setUsername("QRInfo Temp Player");
     }
 
 
     public void showUsersList(View view) {
         startActivity(usersActivityIntent);
-    }
-
-    /**
-     * Display all comments added to this page
-     */
-    public void showComments() {
-
-    }
-
-    public void showLocation() {
-
-    }
-
-    public void showIcon() {
-
     }
 
     /**
@@ -230,10 +209,5 @@ public class QRInfoActivity extends BaseActivity {
 
         inputComment.setText(""); // clear input after send
     }
-
-    public void setSelectedQR(String QRId) {
-
-    }
-
 
 }
