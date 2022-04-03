@@ -1,17 +1,18 @@
-package com.example.qr_go.containers;
+package com.example.qr_go.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.qr_go.R;
-import com.example.qr_go.objects.Comment;
+import com.example.qr_go.containers.CommentDisplayContainer;
 
 import java.util.ArrayList;
 
@@ -19,12 +20,12 @@ import java.util.ArrayList;
 /** list of comments to be stored into database
  *
  */
-public class ListCommentsContainer extends ArrayAdapter {
+public class ListCommentsAdapter extends ArrayAdapter {
 
-    private ArrayList<Comment> comments;
+    private ArrayList<CommentDisplayContainer> comments;
     private Context context;
 
-    public ListCommentsContainer(Context context, ArrayList<Comment> comments) {
+    public ListCommentsAdapter(Context context, ArrayList<CommentDisplayContainer> comments) {
         super(context, 0, comments);
         this.comments = comments;
         this.context = context;
@@ -39,12 +40,13 @@ public class ListCommentsContainer extends ArrayAdapter {
             view = LayoutInflater.from(context).inflate(R.layout.list_comments_content, parent, false);
         }
 
-        Comment comment = comments.get(position);
-
-//        ImageView commenterPicture = (ImageView) view.findViewById(R.id.commenterPhoto);
+        CommentDisplayContainer comment = comments.get(position);
+        ImageView commenterPicture = (ImageView) view.findViewById(R.id.commenterPhoto);
         TextView commenterName = (TextView) view.findViewById(R.id.commenterName);
         TextView message = (TextView) view.findViewById(R.id.message);
-
+        if (comment.getPicture() != null) {
+            commenterPicture.setImageBitmap(comment.getPicture());
+        }
         // show comment's message
         commenterName.setText(comment.getUsername());
         message.setText(comment.getMessage());
@@ -57,7 +59,7 @@ public class ListCommentsContainer extends ArrayAdapter {
      * add comment to the list
      * @param comment comment to be added
      */
-    public void addComment(Comment comment){
+    public void addComment(CommentDisplayContainer comment){
         comments.add(comment);
     }
 

@@ -1,8 +1,11 @@
 package com.example.qr_go.objects;
 
+import com.example.qr_go.containers.CommentDisplayContainer;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Custom conatiner for comments, used for database interface, and can be translated to an arraylist for the android adapter
@@ -23,7 +26,9 @@ public class CommentsQR {
     public CommentsQR() {
         this.comments = new HashMap<>();
     }
-
+    public Set<String> getUserIds(){
+        return comments.keySet();
+    }
     /**
      * adds the comment onto the hashmap stack
      * @param user user to be added
@@ -69,16 +74,18 @@ public class CommentsQR {
         comments.put(userId, details);
 
     }
-
+    public void deleteComment(String userid){
+        comments.remove(userid);
+    }
     /**
      * Custom converstion for formating of android adapter
      * @return ArrayList<Comment>
      */
-    public ArrayList<Comment> getCommentObjects(){
-        ArrayList<Comment> out= new ArrayList<>();
+    public ArrayList<CommentDisplayContainer> getCommentObjects(){
+        ArrayList<CommentDisplayContainer> out= new ArrayList<>();
         for (Map.Entry<String, HashMap<String, String>> details:comments.entrySet() ){
             HashMap<String, String> temp = details.getValue();
-            Comment comment = new Comment(temp.get("Username"), temp.get("Message"));
+            CommentDisplayContainer comment = new CommentDisplayContainer(temp.get("Username"), temp.get("Message"), details.getKey());
             out.add(comment);
         }
         return out;

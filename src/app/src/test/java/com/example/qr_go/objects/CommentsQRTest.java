@@ -2,9 +2,7 @@ package com.example.qr_go.objects;
 
 import static org.junit.Assert.assertEquals;
 
-import com.example.qr_go.objects.Comment;
-import com.example.qr_go.objects.CommentsQR;
-import com.example.qr_go.objects.Player;
+import com.example.qr_go.containers.CommentDisplayContainer;
 
 import org.junit.Test;
 
@@ -52,7 +50,7 @@ public class CommentsQRTest {
         comments.addComment(player1, msg, null);
         assertEquals(msg, comments.getMessage(player1.getUserid()));
         assertEquals(2, comments.getComments().size());
-        ArrayList<Comment> commentArrayList = comments.getCommentObjects();
+        ArrayList<CommentDisplayContainer> commentArrayList = comments.getCommentObjects();
         if (commentArrayList.get(0).getUsername() == MOCK_USER){
             assertEquals("this is new message", commentArrayList.get(0).getMessage());
             assertEquals("New Message", commentArrayList.get(1).getMessage());
