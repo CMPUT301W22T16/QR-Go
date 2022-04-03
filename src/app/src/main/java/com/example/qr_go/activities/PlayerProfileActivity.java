@@ -144,21 +144,16 @@ public class PlayerProfileActivity extends BaseActivity {
     public void saveProfile(View view) {
         String emailStr = emailEditText.getText().toString();
         String usernameStr = usernameEditText.getText().toString();
-        boolean isUsernameDirty = !usernameStr.equals(currentUser.getUsername());
-
-        Player changedUser = new Player();
-
-        changedUser.setEmail(emailStr);
-        changedUser.setUsername(usernameStr);
+        currentUser.setEmail(emailStr);
+        currentUser.setUsername(usernameStr);
 
         boolean isValid = true;
 
-        if (!changedUser.isEmailValid()) {
+        if (!currentUser.isEmailValid()) {
             emailEditText.setError("Invalid email address");
             isValid = false;
         }
-        // If username has been changed and username is not unique, then show warning message
-        if (isUsernameDirty && usernames.contains(usernameStr)) {
+        if (false) { // TODO: Add if username is not unique here!
             usernameEditText.setError("This username is already taken");
             isValid = false;
         }
@@ -170,9 +165,6 @@ public class PlayerProfileActivity extends BaseActivity {
             // save email
             db.collection("Players").document(currentUserId).update("email", emailStr);
             Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show();
-
-            // Set local Player to the changed player
-            currentUser = changedUser;
         }
 
     }
