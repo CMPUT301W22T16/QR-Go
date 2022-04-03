@@ -209,6 +209,9 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable/ic_baseline_chevron_left_24.xml:1: Warning: The resource R.drawable.ic_baseline_chevron_left_24 appears to be unused [UnusedResources]
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
 ^
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_users_content.xml:2: Warning: The resource R.layout.list_users_content appears to be unused [UnusedResources]
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+^
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable/sample_prof_pic.xml:2: Warning: The resource R.drawable.sample_prof_pic appears to be unused [UnusedResources]
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 ^
@@ -409,10 +412,10 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java:94: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
                 scoreView.setText(distanceString + "\naway");
                                   ~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/QRInfoActivity.java:107: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/QRInfoActivity.java:106: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
                                 tvScore.setText("Score: " + selectedQR.getScore());
                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/QRInfoActivity.java:107: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/QRInfoActivity.java:106: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
                                 tvScore.setText("Score: " + selectedQR.getScore());
                                                 ~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java:99: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
@@ -570,9 +573,9 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:32: Warning: Hardcoded string "QR NAME", should use @string resource [HardcodedText]
             android:text="QR NAME"
             ~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:42: Warning: Hardcoded string "QR LOCATION", should use @string resource [HardcodedText]
-            android:text="QR LOCATION"
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:42: Warning: Hardcoded string "NO LOCATION DATA", should use @string resource [HardcodedText]
+            android:text="NO LOCATION DATA"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:56: Warning: Hardcoded string "Score: N/A", should use @string resource [HardcodedText]
         android:text="Score: N/A"
         ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -615,6 +618,9 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:41: Warning: Hardcoded string "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", should use @string resource [HardcodedText]
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_scanned_users_content.xml:26: Warning: Hardcoded string "User Name", should use @string resource [HardcodedText]
+        android:text="User Name"
+        ~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_users_content.xml:7: Warning: Hardcoded string "User Name", should use @string resource [HardcodedText]
     android:text="User Name"
     ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -675,6 +681,9 @@
    There are quickfixes to automatically extract this hardcoded string into a
    resource lookup.
 
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_scanned_users_content.xml:16: Warning: When you define paddingRight you should probably also define paddingLeft for right-to-left symmetry [RtlSymmetry]
+        android:paddingRight="10dp"
+        ~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:17: Warning: When you define paddingRight you should probably also define paddingLeft for right-to-left symmetry [RtlSymmetry]
         android:paddingRight="10dp"
         ~~~~~~~~~~~~~~~~~~~~
@@ -747,6 +756,15 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:23: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="16dp" to better support right-to-left layouts [RtlHardcoded]
         android:layout_marginLeft="16dp"
         ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_scanned_users_content.xml:12: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_alignParentLeft="true"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_scanned_users_content.xml:15: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="5dp" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_marginLeft="5dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_scanned_users_content.xml:16: Warning: Consider replacing android:paddingRight with android:paddingEnd="10dp" to better support right-to-left layouts [RtlHardcoded]
+        android:paddingRight="10dp"
+        ~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:14: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
         android:layout_alignParentLeft="true"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -837,4 +855,4 @@
    Please define an explicit reason why it is ignored, and when it can be
    resolved.
 
-0 errors, 196 warnings
+0 errors, 202 warnings
