@@ -53,7 +53,7 @@ public class QRInfoActivity extends BaseActivity {
     private Intent usersActivityIntent;
 
     private CommentsQR comments;
-
+    QRGoDBUtil dbUtil = new QRGoDBUtil(this);
     private ListView commentList;
     private ArrayAdapter<CommentDisplayContainer> commentAdapter;
     private ArrayList<CommentDisplayContainer> commentDataList;
@@ -70,7 +70,6 @@ public class QRInfoActivity extends BaseActivity {
         db = FirebaseFirestore.getInstance();
 
 
-        comments = new CommentsQR();
 
         TextView tvQRName = (TextView) findViewById(R.id.qrName);
         TextView tvQRLocation = (TextView) findViewById(R.id.qrLocation);
@@ -141,31 +140,36 @@ public class QRInfoActivity extends BaseActivity {
             db.collection("Comments")
                     .document(selectedQRId)
                     .get()
-                    .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                         @Override
-                        public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                            if (task.isSuccessful()) {
-                                DocumentSnapshot document = task.getResult();
-                                Map<String, Object> map = document.getData();
-                                if (map != null) {
-                                    for (Map.Entry<String, Object> details:map.entrySet() ){
-
-                                        Map<String, Object> commentInfo = (Map<String, Object>) details.getValue();
-
-                                        Player player = new Player(details.getKey(), "", (String)commentInfo.get("Username"), "");
-                                        // TODO: add photolink when it is ready
-                                        comments.addComment(player, (String) commentInfo.get("Message"), null);
-                                    }
-                                }
-
+                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+                            try {
+                                comments = documentSnapshot.toObject(CommentsQR.class);
                                 commentDataList = comments.getCommentObjects();
-
                                 commentAdapter = new ListCommentsAdapter(QRInfoActivity.this, commentDataList);
                                 commentList.setAdapter(commentAdapter);
                                 addImages();
+                            }catch (Exception e){
+                                //sometimes the db picks up that it exists while in fact it does not... strange
+                                comments = new CommentsQR();
+                                commentDataList = comments.getCommentObjects();
+                                commentAdapter = new ListCommentsAdapter(QRInfoActivity.this, commentDataList);
+                                commentList.setAdapter(commentAdapter);
+                                addImages();
+                                e.printStackTrace();
                             }
                         }
-                    });
+
+                    }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    comments = new CommentsQR();
+                    commentDataList = comments.getCommentObjects();
+                    commentAdapter = new ListCommentsAdapter(QRInfoActivity.this, commentDataList);
+                    commentList.setAdapter(commentAdapter);
+                    addImages();
+                }
+            });
 
         }
 
@@ -255,19 +259,11 @@ public class QRInfoActivity extends BaseActivity {
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 currentUser = document.toObject(Player.class);
 
-                                if (comments.getUserIds().contains(currentUserId)) {
-                                    comments.deleteComment(currentUserId);
-                                    commentDataList = comments.getCommentObjects();
-                                    commentAdapter = new ListCommentsAdapter(QRInfoActivity.this, commentDataList);
-                                    commentList.setAdapter(commentAdapter);
-                                }
                                 CommentDisplayContainer comment = new CommentDisplayContainer(currentUser.getUsername(), message, currentUser.getUserid());
                                 comment.setPicture(UserImage);
-                                comments.addComment(currentUser, message, null);
                                 commentAdapter.add(comment);
 
-                                QRGoDBUtil dbUtil = new QRGoDBUtil();
-                                dbUtil.addCommenttoDB(comments, selectedQR);
+                                dbUtil.addCommenttoDB(currentUser, comment, selectedQR);
                             }
                         }
                     }

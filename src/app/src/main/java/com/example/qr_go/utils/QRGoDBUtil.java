@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
 import com.example.qr_go.activities.MapsActivity;
+import com.example.qr_go.containers.CommentDisplayContainer;
 import com.example.qr_go.objects.CommentsQR;
 import com.example.qr_go.objects.GameQRCode;
 import com.example.qr_go.objects.Player;
@@ -117,12 +118,37 @@ public class QRGoDBUtil {
     }
     /**
      * starts by getting the comment from the db, if it cannot find one it will make one, method continues to addCommenttoDBContinue
-     * @param comments the comment structure being updated
+     * @param comment the comment structure being updated
      * @param gameqrcode qrcode of the comments
      * @author Darius Fang
      */
-    public void addCommenttoDB(@NonNull CommentsQR comments, @NonNull GameQRCode gameqrcode){
-        db.collection("Comments").document(gameqrcode.getHash()).set(comments.getComments());
+    public void addCommenttoDB(Player user, CommentDisplayContainer comment, @NonNull GameQRCode gameqrcode){
+        DocumentReference docRef = db.collection("Comments").document(gameqrcode.getHash());
+        docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            @RequiresApi(api = Build.VERSION_CODES.O)
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                try {
+                    CommentsQR comments = documentSnapshot.toObject(CommentsQR.class);
+                    comments.addComment(user, comment.getMessage(), "");
+                    db.collection("Comments").document(gameqrcode.getHash()).set(comments);
+
+                }catch (Exception e){
+                    e.printStackTrace();
+                    //sometimes the db picks up that it exists while in fact it does not... strange
+                    CommentsQR comments = new CommentsQR();
+                    comments.addComment(user, comment.getMessage(), "");
+                    db.collection("Comments").document(gameqrcode.getHash()).set(comments);
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                CommentsQR comments = new CommentsQR();
+                comments.addComment(user, comment.getMessage(), "");
+                db.collection("Comments").document(gameqrcode.getHash()).set(comments);
+            }
+        });
     }
 
     /**
@@ -251,7 +277,7 @@ public class QRGoDBUtil {
         GameQRCode qrcode = new GameQRCode("BFG5DGW54\n");
         deleteGameQRFromDB(qrcode.getId());
     }
-    void test3() {
+    public void test3() {
         GameQRCode qrcode = new GameQRCode("BFG5DGW54\n");
         Player player = new Player();
         Player player1 = new Player();
@@ -278,7 +304,7 @@ public class QRGoDBUtil {
         //profilepic
 //        string ref
 //        String qrid
-        addCommenttoDB(comments, qrcode);
+        //addCommenttoDB(comments, qrcode);
     }
     void test4(){
         Player player = new Player("ea7f3186-c04a-4e41-8a77-e975065071f9", "fd7467b8-71fa-424f-b434-e1e9437eb1c6", "FunkyCoder8063", "");
