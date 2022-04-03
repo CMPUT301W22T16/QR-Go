@@ -21,6 +21,7 @@ import com.example.qr_go.R;
 import com.example.qr_go.objects.GeoLocation;
 import com.example.qr_go.objects.Player;
 import com.example.qr_go.objects.User;
+import com.example.qr_go.utils.QRGoDBUtil;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -66,7 +67,6 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback, Go
         findUserLocation();
         initializeData(); // initialize app on launch
         initializeNavbar();
-
         geoLocationList = new ArrayList<GeoLocation>();
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
