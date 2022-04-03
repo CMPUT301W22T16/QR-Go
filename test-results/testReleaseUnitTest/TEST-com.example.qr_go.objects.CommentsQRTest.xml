@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.qr_go.objects.CommentsQRTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-04-03T22:40:13" hostname="fv-az83-974" time="2.003">
+<testsuite name="com.example.qr_go.objects.CommentsQRTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-04-03T22:42:23" hostname="fv-az72-295" time="2.007">
   <properties/>
-  <testcase name="testCommentListSize" classname="com.example.qr_go.objects.CommentsQRTest" time="2.003"/>
+  <testcase name="testCommentListSize" classname="com.example.qr_go.objects.CommentsQRTest" time="2.007"/>
   <testcase name="testGetMessage" classname="com.example.qr_go.objects.CommentsQRTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
