@@ -65,6 +65,8 @@ public class UserArrayAdapter extends ArrayAdapter<UserListDisplayContainer> imp
 
         if (userToDisplay.getPicture() != null) {
             imageView.setImageBitmap(userToDisplay.getPicture());
+        } else {
+            imageView.setImageResource(R.drawable.round_account_circle_24);
         }
 
         // Show the delete button if the current user is an owner and the listed user is not an
