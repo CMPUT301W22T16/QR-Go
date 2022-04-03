@@ -252,12 +252,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="26"
+            line="28"
             column="17"
-            startOffset="1003"
-            endLine="26"
+            startOffset="1074"
+            endLine="28"
             endColumn="42"
-            endOffset="1028"/>
+            endOffset="1099"/>
         <map>
             <entry
                 name="applies"
@@ -275,12 +275,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="32"
+            line="44"
             column="17"
-            startOffset="1237"
-            endLine="32"
+            startOffset="1734"
+            endLine="44"
             endColumn="42"
-            endOffset="1262"/>
+            endOffset="1759"/>
         <map>
             <entry
                 name="applies"
@@ -298,12 +298,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="56"
+            line="68"
             column="25"
-            startOffset="2232"
-            endLine="56"
+            startOffset="2729"
+            endLine="68"
             endColumn="50"
-            endOffset="2257"/>
+            endOffset="2754"/>
         <map>
             <entry
                 name="applies"
@@ -321,12 +321,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="75"
+            line="87"
             column="25"
-            startOffset="3022"
-            endLine="75"
+            startOffset="3519"
+            endLine="87"
             endColumn="50"
-            endOffset="3047"/>
+            endOffset="3544"/>
         <map>
             <entry
                 name="applies"
@@ -344,12 +344,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="94"
+            line="106"
             column="25"
-            startOffset="3830"
-            endLine="94"
+            startOffset="4327"
+            endLine="106"
             endColumn="50"
-            endOffset="3855"/>
+            endOffset="4352"/>
         <map>
             <entry
                 name="applies"
@@ -367,12 +367,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="113"
+            line="125"
             column="25"
-            startOffset="4635"
-            endLine="113"
+            startOffset="5132"
+            endLine="125"
             endColumn="50"
-            endOffset="4660"/>
+            endOffset="5157"/>
         <map>
             <entry
                 name="applies"
@@ -390,12 +390,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_my_qr_codes.xml"
-            line="132"
+            line="144"
             column="25"
-            startOffset="5440"
-            endLine="132"
+            startOffset="5937"
+            endLine="144"
             endColumn="50"
-            endOffset="5465"/>
+            endOffset="5962"/>
         <map>
             <entry
                 name="applies"
@@ -447,12 +447,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="27"
+            line="29"
             column="17"
-            startOffset="1012"
-            endLine="27"
+            startOffset="1083"
+            endLine="29"
             endColumn="42"
-            endOffset="1037"/>
+            endOffset="1108"/>
         <map>
             <entry
                 name="applies"
@@ -470,12 +470,35 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="33"
+            line="46"
             column="17"
-            startOffset="1246"
-            endLine="33"
+            startOffset="1744"
+            endLine="46"
             endColumn="42"
-            endOffset="1271"/>
+            endOffset="1769"/>
+        <map>
+            <entry
+                name="applies"
+                int="10"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;10dp&quot;` to better support right-to-left layouts">
+        <fix-replace
+            description="Replace with android:layout_marginStart=&quot;10dp&quot;"
+            oldString="layout_marginLeft"
+            replacement="layout_marginStart"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
+            line="70"
+            column="25"
+            startOffset="2739"
+            endLine="70"
+            endColumn="50"
+            endOffset="2764"/>
         <map>
             <entry
                 name="applies"
@@ -493,35 +516,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="57"
+            line="89"
             column="25"
-            startOffset="2241"
-            endLine="57"
+            startOffset="3529"
+            endLine="89"
             endColumn="50"
-            endOffset="2266"/>
-        <map>
-            <entry
-                name="applies"
-                int="10"/>
-        </map>
-    </incident>
-
-    <incident
-        id="RtlHardcoded"
-        severity="warning"
-        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;45dp&quot;` to better support right-to-left layouts">
-        <fix-replace
-            description="Replace with android:layout_marginStart=&quot;45dp&quot;"
-            oldString="layout_marginLeft"
-            replacement="layout_marginStart"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="76"
-            column="25"
-            startOffset="3031"
-            endLine="76"
-            endColumn="50"
-            endOffset="3056"/>
+            endOffset="3554"/>
         <map>
             <entry
                 name="applies"
@@ -539,12 +539,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="95"
+            line="108"
             column="25"
-            startOffset="3839"
-            endLine="95"
+            startOffset="4337"
+            endLine="108"
             endColumn="50"
-            endOffset="3864"/>
+            endOffset="4362"/>
         <map>
             <entry
                 name="applies"
@@ -562,12 +562,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="114"
+            line="127"
             column="25"
-            startOffset="4644"
-            endLine="114"
+            startOffset="5142"
+            endLine="127"
             endColumn="50"
-            endOffset="4669"/>
+            endOffset="5167"/>
         <map>
             <entry
                 name="applies"
@@ -585,12 +585,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_player_info.xml"
-            line="133"
+            line="146"
             column="25"
-            startOffset="5449"
-            endLine="133"
+            startOffset="5947"
+            endLine="146"
             endColumn="50"
-            endOffset="5474"/>
+            endOffset="5972"/>
         <map>
             <entry
                 name="applies"
@@ -711,12 +711,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/list_comments_content.xml"
-            line="23"
+            line="28"
             column="9"
-            startOffset="853"
-            endLine="23"
+            startOffset="1047"
+            endLine="28"
             endColumn="34"
-            endOffset="878"/>
+            endOffset="1072"/>
         <map>
             <entry
                 name="applies"
@@ -1099,40 +1099,17 @@
     </incident>
 
     <incident
-        id="RtlHardcoded"
-        severity="warning"
-        message="Consider replacing `android:layout_alignParentLeft` with `android:layout_alignParentStart=&quot;true&quot;` to better support right-to-left layouts">
-        <fix-replace
-            description="Replace with android:layout_alignParentStart=&quot;true&quot;"
-            oldString="layout_alignParentLeft"
-            replacement="layout_alignParentStart"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
-            line="15"
-            column="9"
-            startOffset="619"
-            endLine="15"
-            endColumn="39"
-            endOffset="649"/>
-        <map>
-            <entry
-                name="applies"
-                int="10"/>
-        </map>
-    </incident>
-
-    <incident
         id="RtlSymmetry"
         severity="warning"
         message="When you define `paddingRight` you should probably also define `paddingLeft` for right-to-left symmetry">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
-            line="17"
+            line="16"
             column="9"
-            startOffset="712"
-            endLine="17"
+            startOffset="646"
+            endLine="16"
             endColumn="29"
-            endOffset="732"/>
+            endOffset="666"/>
         <map>
             <entry
                 name="applies"
@@ -1150,12 +1127,12 @@
             replacement="paddingEnd"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
-            line="17"
+            line="16"
             column="9"
-            startOffset="712"
-            endLine="17"
+            startOffset="646"
+            endLine="16"
             endColumn="29"
-            endOffset="732"/>
+            endOffset="666"/>
         <map>
             <entry
                 name="applies"
@@ -1166,19 +1143,42 @@
     <incident
         id="RtlHardcoded"
         severity="warning"
-        message="Consider replacing `android:layout_toRightOf` with `android:layout_toEndOf=&quot;@id/user_picture&quot;` to better support right-to-left layouts">
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;8dp&quot;` to better support right-to-left layouts">
         <fix-replace
-            description="Replace with android:layout_toEndOf=&quot;@id/user_picture&quot;"
+            description="Replace with android:layout_marginStart=&quot;8dp&quot;"
+            oldString="layout_marginLeft"
+            replacement="layout_marginStart"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
+            line="38"
+            column="9"
+            startOffset="1525"
+            endLine="38"
+            endColumn="34"
+            endOffset="1550"/>
+        <map>
+            <entry
+                name="applies"
+                int="10"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Consider replacing `android:layout_toRightOf` with `android:layout_toEndOf=&quot;@id/photo_container&quot;` to better support right-to-left layouts">
+        <fix-replace
+            description="Replace with android:layout_toEndOf=&quot;@id/photo_container&quot;"
             oldString="layout_toRightOf"
             replacement="layout_toEndOf"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
-            line="25"
+            line="39"
             column="9"
-            startOffset="996"
-            endLine="25"
+            startOffset="1566"
+            endLine="39"
             endColumn="33"
-            endOffset="1020"/>
+            endOffset="1590"/>
         <map>
             <entry
                 name="applies"
@@ -1196,12 +1196,12 @@
             replacement="layout_marginStart"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
-            line="40"
+            line="52"
             column="9"
-            startOffset="1542"
-            endLine="40"
+            startOffset="2060"
+            endLine="52"
             endColumn="34"
-            endOffset="1567"/>
+            endOffset="2085"/>
         <map>
             <entry
                 name="applies"
@@ -1219,12 +1219,12 @@
             replacement="layout_toEndOf"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
-            line="36"
+            line="48"
             column="9"
-            startOffset="1352"
-            endLine="36"
+            startOffset="1870"
+            endLine="48"
             endColumn="33"
-            endOffset="1376"/>
+            endOffset="1894"/>
         <map>
             <entry
                 name="applies"
@@ -1242,12 +1242,12 @@
             replacement="layout_alignParentEnd"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
-            line="65"
+            line="77"
             column="9"
-            startOffset="2365"
-            endLine="65"
+            startOffset="2883"
+            endLine="77"
             endColumn="40"
-            endOffset="2396"/>
+            endOffset="2914"/>
         <map>
             <entry
                 name="applies"
@@ -1261,12 +1261,12 @@
         message="When you define `paddingRight` you should probably also define `paddingLeft` for right-to-left symmetry">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
-            line="67"
+            line="79"
             column="9"
-            startOffset="2459"
-            endLine="67"
+            startOffset="2977"
+            endLine="79"
             endColumn="29"
-            endOffset="2479"/>
+            endOffset="2997"/>
         <map>
             <entry
                 name="applies"
@@ -1284,12 +1284,12 @@
             replacement="paddingEnd"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/user_list_content.xml"
-            line="67"
+            line="79"
             column="9"
-            startOffset="2459"
-            endLine="67"
+            startOffset="2977"
+            endLine="79"
             endColumn="29"
-            endOffset="2479"/>
+            endOffset="2997"/>
         <map>
             <entry
                 name="applies"
