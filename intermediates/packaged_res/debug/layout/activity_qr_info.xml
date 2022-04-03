@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/baseline_place_24"
             android:drawablePadding="8dp"
-            android:text="NO LOCATION DATA"
+            android:text="QR LOCATION"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/qrName" />
