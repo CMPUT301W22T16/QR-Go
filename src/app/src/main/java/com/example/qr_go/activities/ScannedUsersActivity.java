@@ -1,26 +1,36 @@
 package com.example.qr_go.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Pair;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.qr_go.R;
+import com.example.qr_go.containers.ListScannedUsersContainer;
 import com.example.qr_go.objects.GameQRCode;
 import com.example.qr_go.objects.Player;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 public class ScannedUsersActivity extends AppCompatActivity {
 
     private GameQRCode selectedQR;
 
-    private ArrayList<Player> players;
+    HashMap<String, HashMap<String, String>> playersInfo;
 
     ListView userList;
-    ArrayAdapter<String> userAdapter;
-    ArrayList<String> userDataList;
+    ListScannedUsersContainer userAdapter;
+    ArrayList<Pair> userDataList;
+//    ArrayList<String> userIds;
+
     final long ONE_MEGABYTE = 4 * 1024 * 1024;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +38,8 @@ public class ScannedUsersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_scanned_users);
 
         userList = findViewById(R.id.userList);
-        userDataList = new ArrayList<String>();
+        userDataList = new ArrayList<Pair>();
+//        userIds = new ArrayList<String>();
 
         // Get information from extras
         Bundle extras = getIntent().getExtras();
@@ -36,13 +47,27 @@ public class ScannedUsersActivity extends AppCompatActivity {
             selectedQR = null;
         } else {
             selectedQR = (GameQRCode) getIntent().getSerializableExtra("selectedQR");
-
-            userDataList = selectedQR.getUserObjects();
-
+            playersInfo = selectedQR.getUserIds();
         }
 
-        userAdapter = new ArrayAdapter<>(this, R.layout.list_users_content, userDataList);
+        for (Map.Entry<String, HashMap<String, String>> details:playersInfo.entrySet() ){
+//            userIds.add(details.getKey());
+            HashMap<String, String> temp = details.getValue();
+            userDataList.add(new Pair(temp.get("PhotoRef"), temp.get("Username")));
+        }
+
+        userAdapter = new ListScannedUsersContainer(this, userDataList);
         userList.setAdapter(userAdapter);
+
+        // When item on the list is pressed
+//        userList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Intent intent = new Intent(view.getContext(), PlayerInfoActivity.class);
+//                intent.putExtra("SELECTED_USER", userIds.get(position));
+//                view.getContext().startActivity(intent);
+//            }
+//        });
     }
 
 }
