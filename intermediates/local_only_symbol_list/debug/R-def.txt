@@ -37,6 +37,7 @@ id guideline2
 id highestScoreData
 id highestScoreLayout
 id highest_score
+id infoWindowTitle
 id inputComment
 id konfettiView
 id linear_layout
@@ -69,6 +70,7 @@ id qr_code_image
 id qr_del_button
 id qr_hood_view
 id qr_id_view
+id qr_info
 id qr_list
 id qr_picture
 id qr_score_view
@@ -95,7 +97,6 @@ id user_picture
 id user_qr_list
 id user_rank_view
 id user_score_view
-id username
 id username_view
 id usersContent
 layout activity_code_scanner
@@ -106,11 +107,11 @@ layout activity_player_info
 layout activity_qr_info
 layout activity_scanned_users
 layout activity_search
+layout custom_info_window
 layout fragment_qr_search
 layout fragment_show_qr_code
 layout fragment_user_search
 layout list_comments_content
-layout list_scanned_users_content
 layout list_users_content
 layout player_profile_activity
 layout qr_list_content
