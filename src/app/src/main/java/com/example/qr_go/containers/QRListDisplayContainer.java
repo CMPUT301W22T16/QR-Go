@@ -14,8 +14,9 @@ public class QRListDisplayContainer {
     private Bitmap picture;
     private String firstUserID;
     private String neighborhood;
+    private String city;
 
-    public QRListDisplayContainer(Integer score, String id, Double lat, Double lon, Float distance, String userid, String neighborhood) {
+    public QRListDisplayContainer(Integer score, String id, Double lat, Double lon, Float distance, String userid, String neighborhood, String city) {
         this.score = score;
         this.id = id;
         this.lat = lat;
@@ -24,6 +25,7 @@ public class QRListDisplayContainer {
         this.picture = null;
         this.firstUserID = userid;
         this.neighborhood = neighborhood;
+        this.city = city;
     }
 
     public Integer getScore() {
@@ -64,5 +66,9 @@ public class QRListDisplayContainer {
 
     public void setPicture(Bitmap picture) {
         this.picture = picture;
+    }
+
+    public String getCity() {
+        return city;
     }
 }

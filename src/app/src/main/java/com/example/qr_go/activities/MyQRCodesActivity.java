@@ -97,6 +97,7 @@ public class MyQRCodesActivity extends BaseActivity {
                                                 null,
                                                 null,
                                                 null,
+                                                null,
                                                 null
                                         );
                                 qrDisplays.add(qrToDisplay);
