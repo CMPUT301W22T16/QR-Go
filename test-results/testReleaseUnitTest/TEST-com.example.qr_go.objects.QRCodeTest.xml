@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.qr_go.objects.QRCodeTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-04-04T21:28:43" hostname="fv-az39-389" time="0.002">
+<testsuite name="com.example.qr_go.objects.QRCodeTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-04-04T21:29:56" hostname="fv-az47-813" time="0.003">
   <properties/>
   <testcase name="convertsStringToHash" classname="com.example.qr_go.objects.QRCodeTest" time="0.001"/>
   <testcase name="hashIsId" classname="com.example.qr_go.objects.QRCodeTest" time="0.001"/>
