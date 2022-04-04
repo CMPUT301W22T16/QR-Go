@@ -19,6 +19,7 @@ import com.example.qr_go.activities.PlayerProfileActivity;
 import com.example.qr_go.objects.LoginQRCode;
 import com.example.qr_go.objects.StatusQRCode;
 import com.example.qr_go.objects.User;
+import com.example.qr_go.utils.UsernameGenerator;
 import com.robotium.solo.Solo;
 
 import org.junit.After;
@@ -33,7 +34,7 @@ public class UserAccountActivityTest {
     private SharedPreferences.Editor editor;
 
     @Rule
-    public ActivityTestRule<PlayerProfileActivity> rule = new ActivityTestRule<>(PlayerProfileActivity.class, true, true);
+    public ActivityTestRule<MapsActivity> rule = new ActivityTestRule<>(MapsActivity.class, true, true);
 
     @Before
     public void setUp() throws Exception {
@@ -43,6 +44,8 @@ public class UserAccountActivityTest {
         editor.putString(User.USER_ID, mockUserId);
         editor.putString(User.USER_PWD, mockPassword);
         editor.apply(); // apply changes
+        solo.clickOnMenuItem("My Account");
+        solo.assertCurrentActivity("Not in My Account Activity", PlayerProfileActivity.class);
     }
 
     @Test
@@ -60,6 +63,21 @@ public class UserAccountActivityTest {
     public void testGetStatusQRCode() {
         StatusQRCode statusQRCode = new StatusQRCode(mockUserId + "\n" + mockPassword);
         assertTrue(encodeToQrCode(StatusQRCode.QR_IDENTIFIER + mockUserId + "\n" + mockPassword, 800, 800).sameAs(statusQRCode.getQRCode()));
+    }
+
+    @Test
+    public void testUserNameEmailChange() {
+        String username = UsernameGenerator.generateUsername();
+        String email = "test@test.test";
+        solo.clearEditText(1);
+        solo.clearEditText(0);
+        solo.typeText(1, username);
+        solo.typeText(0, email);
+        solo.clickOnButton("Save");
+        solo.clickOnMenuItem("Home");
+        solo.clickOnMenuItem("My Account");
+        assertTrue(solo.searchText(username));
+        assertTrue(solo.searchText(email));
     }
 
     @After

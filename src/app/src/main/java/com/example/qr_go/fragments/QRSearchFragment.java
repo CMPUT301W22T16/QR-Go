@@ -77,6 +77,11 @@ public class QRSearchFragment extends SortableFragment {
     }
 
     @Override
+    public void updateView() {
+        qrAdapter.notifyDataSetChanged();
+    }
+
+    @Override
     public void setSearchFiltering() {
         SearchActivity.getQrSearchSpinner().setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
