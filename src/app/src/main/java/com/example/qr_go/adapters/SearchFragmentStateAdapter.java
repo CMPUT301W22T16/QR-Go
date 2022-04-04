@@ -48,7 +48,7 @@ public class SearchFragmentStateAdapter extends FragmentStateAdapter {
             return;
         }
         retrieveData(fragmentPos);
-        fragments.get(fragmentPos).updateSort(newSortPos);
+        fragments.get(fragmentPos).updateView();
     }
 
     /**

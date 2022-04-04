@@ -19,11 +19,19 @@ public abstract class SortableFragment extends Fragment {
     public abstract void retrieveData();
 
     /**
-     * Method for re-sorting and updatingviews of a sortable fragment
+     * Method for re-sorting a sortable fragment
      * @param sortPos Position in spinner of the sorting option
      */
     public abstract void updateSort(Integer sortPos);
 
+    /**
+     * Method for updating views of a sortable fragment
+     */
+    public abstract void updateView();
+
+    /**
+     * Optionally sets the focus to a specific place in the list
+     */
     public void setFocus() {
         return;
     }
