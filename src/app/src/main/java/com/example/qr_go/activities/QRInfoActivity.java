@@ -15,14 +15,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
-import com.example.qr_go.containers.ListCommentsContainer;
+import com.example.qr_go.adapters.ListCommentsAdapter;
 import com.example.qr_go.R;
-import com.example.qr_go.objects.Comment;
+import com.example.qr_go.containers.CommentDisplayContainer;
 import com.example.qr_go.objects.CommentsQR;
 import com.example.qr_go.objects.GameQRCode;
 import com.example.qr_go.objects.GeoLocation;
 import com.example.qr_go.objects.Player;
-import com.example.qr_go.objects.QRPhoto;
 import com.example.qr_go.utils.QRGoDBUtil;
 import com.example.qr_go.utils.StringUtil;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -43,19 +42,21 @@ public class QRInfoActivity extends BaseActivity {
 
     FirebaseFirestore db;
     private Player currentUser = new Player();
-
+    private Bitmap UserImage = null;
     private GameQRCode selectedQR;
     private String selectedQRId;
 
-    private ListCommentsContainer comment;
+    String currentUserId = MapsActivity.getUserId();
+    private ListCommentsAdapter comment;
+    final long ONE_MEGABYTE = 4 * 1024 * 1024;
 
     private Intent usersActivityIntent;
 
     private CommentsQR comments;
-
+    QRGoDBUtil dbUtil = new QRGoDBUtil(this);
     private ListView commentList;
-    private ArrayAdapter<Comment> commentAdapter;
-    private ArrayList<Comment> commentDataList;
+    private ArrayAdapter<CommentDisplayContainer> commentAdapter;
+    private ArrayList<CommentDisplayContainer> commentDataList;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -69,7 +70,6 @@ public class QRInfoActivity extends BaseActivity {
         db = FirebaseFirestore.getInstance();
 
 
-        comments = new CommentsQR();
 
         TextView tvQRName = (TextView) findViewById(R.id.qrName);
         TextView tvQRLocation = (TextView) findViewById(R.id.qrLocation);
@@ -116,7 +116,6 @@ public class QRInfoActivity extends BaseActivity {
                                 StorageReference storageRef = storage.getReference();
                                 String ImageRef = stringUtil.ImageQRRef(selectedQR.getId(), selectedQR.getUserObjects().get(0));
                                 StorageReference islandRef = storageRef.child(ImageRef);
-                                final long ONE_MEGABYTE = 5 * 1024 * 1024;
                                 islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
                                     @Override
                                     public void onSuccess(byte[] bytes) {
@@ -140,35 +139,78 @@ public class QRInfoActivity extends BaseActivity {
             db.collection("Comments")
                     .document(selectedQRId)
                     .get()
-                    .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                         @Override
-                        public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                            if (task.isSuccessful()) {
-                                DocumentSnapshot document = task.getResult();
-                                Map<String, Object> map = document.getData();
-                                if (map != null) {
-                                    for (Object commentsInfo : map.values()) {
-
-                                        Map<String, Object> commentInfo = (Map<String, Object>) commentsInfo;
-
-                                        Player player = new Player();
-                                        player.setUsername((String) commentInfo.get("Username"));
-                                        // TODO: add photolink when it is ready
-                                        comments.addComment(player, (String) commentInfo.get("Message"), null);
-                                    }
-                                }
-
+                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+                            try {
+                                comments = documentSnapshot.toObject(CommentsQR.class);
                                 commentDataList = comments.getCommentObjects();
-
-                                commentAdapter = new ListCommentsContainer(QRInfoActivity.this, commentDataList);
+                                commentAdapter = new ListCommentsAdapter(QRInfoActivity.this, commentDataList);
                                 commentList.setAdapter(commentAdapter);
+                                addImages();
+                            }catch (Exception e){
+                                //sometimes the db picks up that it exists while in fact it does not... strange
+                                comments = new CommentsQR();
+                                commentDataList = comments.getCommentObjects();
+                                commentAdapter = new ListCommentsAdapter(QRInfoActivity.this, commentDataList);
+                                commentList.setAdapter(commentAdapter);
+                                addImages();
+                                e.printStackTrace();
                             }
                         }
-                    });
+
+                    }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    comments = new CommentsQR();
+                    commentDataList = comments.getCommentObjects();
+                    commentAdapter = new ListCommentsAdapter(QRInfoActivity.this, commentDataList);
+                    commentList.setAdapter(commentAdapter);
+                    addImages();
+                }
+            });
 
         }
 
         commentList = findViewById(R.id.myQRList);
+    }
+    private void addImages() {
+        FirebaseStorage storage = MapsActivity.storage;
+        StringUtil stringUtil = new StringUtil();
+        StorageReference storageRef = storage.getReference();
+        for (CommentDisplayContainer comment : commentDataList) {
+            String ImageRef = stringUtil.ImagePlayerRef(comment.getUserid());
+            StorageReference islandRef = storageRef.child(ImageRef);
+            islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                @Override
+                public void onSuccess(byte[] bytes) {
+                    Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                    comment.setPicture(bitmap);
+                    commentAdapter.notifyDataSetChanged();
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception exception) {
+                    // Handle any errors
+                    return;
+                }
+            });
+        }
+        String ImageRef = stringUtil.ImagePlayerRef(currentUserId);
+        StorageReference islandRef = storageRef.child(ImageRef);
+        islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+            @Override
+            public void onSuccess(byte[] bytes) {
+                UserImage = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception exception) {
+                // Handle any errors
+                return;
+            }
+        });
+
     }
 
 
@@ -183,7 +225,7 @@ public class QRInfoActivity extends BaseActivity {
         EditText inputComment = (EditText) findViewById(R.id.inputComment);
         String message = inputComment.getText().toString();
 
-        String currentUserId = MapsActivity.getUserId();
+
 
         db.collection("Players")
                 .whereEqualTo("userid", currentUserId)
@@ -196,12 +238,11 @@ public class QRInfoActivity extends BaseActivity {
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 currentUser = document.toObject(Player.class);
 
-                                Comment comment = new Comment(currentUser.getUsername(), message);
-                                comments.addComment(currentUser, message, null);
+                                CommentDisplayContainer comment = new CommentDisplayContainer(currentUser.getUsername(), message, currentUser.getUserid());
+                                comment.setPicture(UserImage);
                                 commentAdapter.add(comment);
 
-                                QRGoDBUtil dbUtil = new QRGoDBUtil();
-                                dbUtil.addCommenttoDB(comments, selectedQR);
+                                dbUtil.addCommenttoDB(currentUser, comment, selectedQR);
                             }
                         }
                     }

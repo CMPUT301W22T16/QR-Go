@@ -95,7 +95,7 @@ public class SearchActivity extends BaseActivity {
     private static Boolean isUserOwner;
     // Variable which holds the userid of all owner users
     private static ArrayList<String> ownerIds;
-
+    final long ONE_MEGABYTE = 4 * 1024 * 1024;
     @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -391,7 +391,6 @@ public class SearchActivity extends BaseActivity {
         for (UserListDisplayContainer user : userDisplays) {
             String ImageRef = stringUtil.ImagePlayerRef(user.getUserid());
             StorageReference islandRef = storageRef.child(ImageRef);
-            final long ONE_MEGABYTE = 5 * 1024 * 1024;
             islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
                 @Override
                 public void onSuccess(byte[] bytes) {
@@ -414,7 +413,6 @@ public class SearchActivity extends BaseActivity {
         for (QRListDisplayContainer qr : qrDisplays) {
             String ImageRef = stringUtil.ImageQRRef(qr.getId(), qr.getFirstUserID());
             StorageReference islandRef = storageRef.child(ImageRef);
-            final long ONE_MEGABYTE = 5 * 1024 * 1024;
             islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
                 @Override
                 public void onSuccess(byte[] bytes) {

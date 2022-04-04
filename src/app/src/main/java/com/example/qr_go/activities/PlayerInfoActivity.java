@@ -58,8 +58,7 @@ public class PlayerInfoActivity extends BaseActivity {
     Map.Entry<String, Integer> lowestQRCode;
     CollectionReference playerDBInst;
     ImageView highestScoreImage, lowestScoreImage;
-
-
+    final long ONE_MEGABYTE = 4 * 1024 * 1024;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -166,7 +165,6 @@ public class PlayerInfoActivity extends BaseActivity {
                             StorageReference storageRef = storage.getReference();
                             String ImageRef = stringUtil.ImagePlayerRef(selectedPlayer.getUserid());
                             StorageReference islandRef = storageRef.child(ImageRef);
-                            final long ONE_MEGABYTE = 5 * 1024 * 1024;
                             islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
                                 @Override
                                 public void onSuccess(byte[] bytes) {
@@ -225,7 +223,6 @@ public class PlayerInfoActivity extends BaseActivity {
         for (QRListDisplayContainer qr : qrDisplays) {
             String ImageRef = stringUtil.ImageQRRef(qr.getId(), selectedPlayer.getUserid());
             StorageReference islandRef = storageRef.child(ImageRef);
-            final long ONE_MEGABYTE = 5 * 1024 * 1024;
             islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
                 @Override
                 public void onSuccess(byte[] bytes) {

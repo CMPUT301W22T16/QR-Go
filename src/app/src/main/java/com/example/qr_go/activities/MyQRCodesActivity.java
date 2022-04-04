@@ -50,7 +50,7 @@ public class MyQRCodesActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_qr_codes);
+        setContentView(R.layout.activity_player_info);
         initializeNavbar();
         userQRList = findViewById(R.id.user_qr_list);
         qrDisplays = new ArrayList<QRListDisplayContainer>();
@@ -64,6 +64,7 @@ public class MyQRCodesActivity extends BaseActivity {
         TextView lowestScoreText = findViewById(R.id.playerLowScore);
         View highestScoreLayout = findViewById(R.id.highest_score);
         View lowestScoreLayout = findViewById(R.id.lowest_score);
+        TextView emptyText = (TextView)findViewById(R.id.empty_list);
         TextView highestScoreQrIDText = highestScoreLayout.findViewById(R.id.qr_id_view);
         TextView highestScoreQrScoreText = highestScoreLayout.findViewById(R.id.qr_score_view);
         TextView lowestScoreQrIDText = lowestScoreLayout.findViewById(R.id.qr_id_view);
@@ -106,10 +107,10 @@ public class MyQRCodesActivity extends BaseActivity {
                             qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
                             totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
                             highestQRCode = selectedPlayer.getHighestQRCode();
-                            highestScoreQrIDText.setText(highestQRCode.getKey().substring(0, 8));
+                            highestScoreQrIDText.setText(highestQRCode.getKey().substring(0, 6));
                             highestScoreQrScoreText.setText("Score: " + highestQRCode.getValue().toString());
                             lowestQRCode = selectedPlayer.getLowestQRCode();
-                            lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(0, 8));
+                            lowestScoreQrIDText.setText(lowestQRCode.getKey().substring(0, 6));
                             lowestScoreQrScoreText.setText("Score: " + lowestQRCode.getValue().toString());
 
                             // dont have a listener if no QR codes are available
@@ -134,8 +135,12 @@ public class MyQRCodesActivity extends BaseActivity {
                                     }
                                 });
                             }
+
+                            userQRList.setEmptyView(emptyText);
                             qrAdapter = new UserQRArrayAdapter(MyQRCodesActivity.this, qrDisplays, 0);
                             userQRList.setAdapter(qrAdapter);
+
+
                         }
                         ImageView profileImage = findViewById(R.id.profile_photo);
                         FirebaseStorage storage = MapsActivity.storage;
@@ -144,20 +149,23 @@ public class MyQRCodesActivity extends BaseActivity {
                         String ImageRef = stringUtil.ImagePlayerRef(selectedPlayer.getUserid());
                         StorageReference islandRef = storageRef.child(ImageRef);
                         final long ONE_MEGABYTE = 5 * 1024 * 1024;
-                        islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
-                            @Override
-                            public void onSuccess(byte[] bytes) {
-                                Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-                                profileImage.setImageBitmap(bitmap);
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception exception) {
-                                // Handle any errors
-                                return;
-                            }
-                        });
-                        addImages();
+                        if(profileImage != null) {
+                            islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                                @Override
+                                public void onSuccess(byte[] bytes) {
+                                    Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                                    profileImage.setImageBitmap(bitmap);
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception exception) {
+                                    // Handle any errors
+                                    return;
+                                }
+                            });
+                            addImages();
+                        }
+
                     }
                 });
                 userQRList.setOnItemClickListener(new AdapterView.OnItemClickListener() {

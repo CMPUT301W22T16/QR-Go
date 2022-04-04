@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.qr_go.R;
 import com.example.qr_go.containers.ListScannedUsersContainer;
-import com.example.qr_go.objects.Comment;
 import com.example.qr_go.objects.GameQRCode;
 import com.example.qr_go.objects.Player;
 
@@ -32,6 +31,7 @@ public class ScannedUsersActivity extends AppCompatActivity {
     ArrayList<Pair> userDataList;
 //    ArrayList<String> userIds;
 
+    final long ONE_MEGABYTE = 4 * 1024 * 1024;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
