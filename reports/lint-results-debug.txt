@@ -303,7 +303,7 @@
    If you really want to keep the text field generic, you can suppress this
    warning by setting inputType="text".
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:102: Warning: Missing autofillHints attribute [Autofill]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:103: Warning: Missing autofillHints attribute [Autofill]
     <EditText
      ~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:32: Warning: Missing autofillHints attribute [Autofill]
@@ -569,10 +569,10 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:72: Warning: Hardcoded string "See other players >", should use @string resource [HardcodedText]
         android:text="See other players >"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:97: Warning: Hardcoded string "Send", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:98: Warning: Hardcoded string "Send", should use @string resource [HardcodedText]
         android:text="Send"
         ~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:111: Warning: Hardcoded string "Type your comment here", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:112: Warning: Hardcoded string "Type your comment here", should use @string resource [HardcodedText]
         android:hint="Type your comment here"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:36: Warning: Hardcoded string "Search Bar", should use @string resource [HardcodedText]

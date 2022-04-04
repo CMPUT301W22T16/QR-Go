@@ -522,12 +522,12 @@
         message="Hardcoded string &quot;Send&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="97"
+            line="98"
             column="9"
-            startOffset="4005"
-            endLine="97"
+            startOffset="4038"
+            endLine="98"
             endColumn="28"
-            endOffset="4024"/>
+            endOffset="4057"/>
     </incident>
 
     <incident
@@ -550,12 +550,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="102"
+            line="103"
             column="6"
-            startOffset="4192"
-            endLine="102"
+            startOffset="4225"
+            endLine="103"
             endColumn="14"
-            endOffset="4200"/>
+            endOffset="4233"/>
     </incident>
 
     <incident
@@ -564,12 +564,12 @@
         message="Hardcoded string &quot;Type your comment here&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="111"
+            line="112"
             column="9"
-            startOffset="4530"
-            endLine="111"
+            startOffset="4563"
+            endLine="112"
             endColumn="46"
-            endOffset="4567"/>
+            endOffset="4600"/>
     </incident>
 
     <incident
@@ -829,29 +829,6 @@
     </incident>
 
     <incident
-        id="TextFields"
-        severity="warning"
-        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="38"
-            column="9"
-            startOffset="1501"
-            endLine="38"
-            endColumn="43"
-            endOffset="1535"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="29"
-            column="9"
-            startOffset="1107"
-            endLine="29"
-            endColumn="39"
-            endOffset="1137"
-            message="id defined here"/>
-    </incident>
-
-    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -877,6 +854,29 @@
             endLine="28"
             endColumn="14"
             endOffset="1097"/>
+    </incident>
+
+    <incident
+        id="TextFields"
+        severity="warning"
+        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="38"
+            column="9"
+            startOffset="1501"
+            endLine="38"
+            endColumn="43"
+            endOffset="1535"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="29"
+            column="9"
+            startOffset="1107"
+            endLine="29"
+            endColumn="39"
+            endOffset="1137"
+            message="id defined here"/>
     </incident>
 
     <incident
