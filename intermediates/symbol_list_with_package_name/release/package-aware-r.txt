@@ -3188,6 +3188,7 @@ id user_picture
 id user_qr_list
 id user_rank_view
 id user_score_view
+id username
 id username_view
 id usersContent
 id vertical_only
@@ -3323,6 +3324,7 @@ layout fragment_qr_search
 layout fragment_show_qr_code
 layout fragment_user_search
 layout list_comments_content
+layout list_scanned_users_content
 layout list_users_content
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
