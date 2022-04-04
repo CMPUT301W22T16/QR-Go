@@ -66,84 +66,64 @@
                         android:layout_height="wrap_content"
                         android:text="" />
                 </LinearLayout>
-
                 <LinearLayout
-                    android:id="@+id/QRData"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:paddingRight="16dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="QR Codes" />
-
-                    <TextView
-                        android:id="@+id/numOfQRCodes"
-                        android:layout_width="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="QR Codes" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Highest Score" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lowest Score" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Score" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="45dp"
-                        android:text="00000" />
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/numOfQRCodes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00000" />
+                        <TextView
+                            android:id="@+id/playerHighScore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00000" />
+                        <TextView
+                            android:id="@+id/playerLowScore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00000" />
+                        <TextView
+                            android:id="@+id/playerTotalScore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00000" />
+
+                    </LinearLayout>
+
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/highestScoreData"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Highest Score" />
-
-                    <TextView
-                        android:id="@+id/playerHighScore"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="19dp"
-                        android:text="00000" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/lowestScoreData"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Lowest Score" />
-
-                    <TextView
-                        android:id="@+id/playerLowScore"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="22dp"
-                        android:text="00000" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/totalScoreData"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Total Score" />
-
-                    <TextView
-                        android:id="@+id/playerTotalScore"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="36dp"
-                        android:text="00000" />
-                </LinearLayout>
-
-            </LinearLayout>
 
 
         </LinearLayout>

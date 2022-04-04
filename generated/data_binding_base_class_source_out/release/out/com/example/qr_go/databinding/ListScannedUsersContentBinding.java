@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -21,14 +22,19 @@ public final class ListScannedUsersContentBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final CardView photoContainer;
+
+  @NonNull
   public final ShapeableImageView userPicture;
 
   @NonNull
   public final TextView username;
 
   private ListScannedUsersContentBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ShapeableImageView userPicture, @NonNull TextView username) {
+      @NonNull CardView photoContainer, @NonNull ShapeableImageView userPicture,
+      @NonNull TextView username) {
     this.rootView = rootView;
+    this.photoContainer = photoContainer;
     this.userPicture = userPicture;
     this.username = username;
   }
@@ -60,6 +66,12 @@ public final class ListScannedUsersContentBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.photo_container;
+      CardView photoContainer = ViewBindings.findChildViewById(rootView, id);
+      if (photoContainer == null) {
+        break missingId;
+      }
+
       id = R.id.user_picture;
       ShapeableImageView userPicture = ViewBindings.findChildViewById(rootView, id);
       if (userPicture == null) {
@@ -72,7 +84,8 @@ public final class ListScannedUsersContentBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ListScannedUsersContentBinding((ConstraintLayout) rootView, userPicture, username);
+      return new ListScannedUsersContentBinding((ConstraintLayout) rootView, photoContainer,
+          userPicture, username);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -20,11 +21,15 @@ public final class ActivityScannedUsersBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final TextView title;
+
+  @NonNull
   public final ListView userList;
 
-  private ActivityScannedUsersBinding(@NonNull ConstraintLayout rootView,
+  private ActivityScannedUsersBinding(@NonNull ConstraintLayout rootView, @NonNull TextView title,
       @NonNull ListView userList) {
     this.rootView = rootView;
+    this.title = title;
     this.userList = userList;
   }
 
@@ -55,13 +60,19 @@ public final class ActivityScannedUsersBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.title;
+      TextView title = ViewBindings.findChildViewById(rootView, id);
+      if (title == null) {
+        break missingId;
+      }
+
       id = R.id.userList;
       ListView userList = ViewBindings.findChildViewById(rootView, id);
       if (userList == null) {
         break missingId;
       }
 
-      return new ActivityScannedUsersBinding((ConstraintLayout) rootView, userList);
+      return new ActivityScannedUsersBinding((ConstraintLayout) rootView, title, userList);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
