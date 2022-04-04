@@ -105,6 +105,11 @@ public class UserSearchFragment extends SortableFragment {
     }
 
     @Override
+    public void updateView() {
+        userAdapter.notifyDataSetChanged();
+    }
+
+    @Override
     public void setSearchFiltering() {
         SearchActivity.getSearchBar().addTextChangedListener(new TextWatcher() {
             @Override
