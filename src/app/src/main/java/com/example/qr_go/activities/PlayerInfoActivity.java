@@ -83,9 +83,9 @@ public class PlayerInfoActivity extends BaseActivity {
         View highestScoreLayout = findViewById(R.id.highest_score);
         View lowestScoreLayout = findViewById(R.id.lowest_score);
         TextView highestScoreQrIDText = highestScoreLayout.findViewById(R.id.qr_id_view);
-        TextView highestScoreQrScoreText = highestScoreLayout.findViewById(R.id.qr_score_view);
+        TextView highestScoreQrScoreText = highestScoreLayout.findViewById(R.id.qr_hood_view);
         TextView lowestScoreQrIDText = lowestScoreLayout.findViewById(R.id.qr_id_view);
-        TextView lowestScoreQrScoreText = lowestScoreLayout.findViewById(R.id.qr_score_view);
+        TextView lowestScoreQrScoreText = lowestScoreLayout.findViewById(R.id.qr_hood_view);
         highestScoreImage = highestScoreLayout.findViewById(R.id.qr_picture);
         lowestScoreImage = lowestScoreLayout.findViewById(R.id.qr_picture);
         playerDBInst = FirebaseFirestore.getInstance().collection("Players");

@@ -66,9 +66,9 @@ public class MyQRCodesActivity extends BaseActivity {
         View lowestScoreLayout = findViewById(R.id.lowest_score);
         TextView emptyText = (TextView)findViewById(R.id.empty_list);
         TextView highestScoreQrIDText = highestScoreLayout.findViewById(R.id.qr_id_view);
-        TextView highestScoreQrScoreText = highestScoreLayout.findViewById(R.id.qr_score_view);
+        TextView highestScoreQrScoreText = highestScoreLayout.findViewById(R.id.qr_hood_view);
         TextView lowestScoreQrIDText = lowestScoreLayout.findViewById(R.id.qr_id_view);
-        TextView lowestScoreQrScoreText = lowestScoreLayout.findViewById(R.id.qr_score_view);
+        TextView lowestScoreQrScoreText = lowestScoreLayout.findViewById(R.id.qr_hood_view);
         highestScoreImage = highestScoreLayout.findViewById(R.id.qr_picture);
         lowestScoreImage = lowestScoreLayout.findViewById(R.id.qr_picture);
 
