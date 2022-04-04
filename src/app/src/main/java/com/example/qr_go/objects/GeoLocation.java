@@ -1,8 +1,9 @@
 package com.example.qr_go.objects;
 
+import java.io.Serializable;
 import java.text.DecimalFormat;
 
-public class GeoLocation {
+public class GeoLocation implements Serializable {
     /**
      * Class for GeoLocation, contains location data such as address, latitude, longitude, and the
      * QR ID associated with the specified location.
