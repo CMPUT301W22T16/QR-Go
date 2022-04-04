@@ -1,0 +1,824 @@
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java:140: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+                String filterPattern = constraint.toString().toLowerCase().trim();
+                                                             ~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java:143: Warning: Implicitly using the default locale is a common source of bugs: Use toLowerCase(Locale) instead. For strings meant to be internal use Locale.ROOT, otherwise Locale.getDefault(). [DefaultLocale]
+                    if (item.getUsername().toLowerCase().contains(filterPattern)) {
+                                           ~~~~~~~~~~~
+
+   Explanation for issues of type "DefaultLocale":
+   Calling String#toLowerCase() or #toUpperCase() without specifying an
+   explicit locale is a common source of bugs. The reason for that is that
+   those methods will use the current locale on the user's device, and even
+   though the code appears to work correctly when you are developing the app,
+   it will fail in some locales. For example, in the Turkish locale, the
+   uppercase replacement for i is not I.
+
+   If you want the methods to just perform ASCII replacement, for example to
+   convert an enum name, call String#toUpperCase(Locale.US) instead. If you
+   really want to use the current locale, call
+   String#toUpperCase(Locale.getDefault()) instead.
+
+   https://developer.android.com/reference/java/util/Locale.html#default_locale
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/objects/CommentsQR.java:56: Warning: To get local formatting use getDateInstance(), getDateTimeInstance(), or getTimeInstance(), or use new SimpleDateFormat(String template, Locale locale) with for example Locale.US for ASCII dates. [SimpleDateFormat]
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd '@'hh:mm:ss a");
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SimpleDateFormat":
+   Almost all callers should use getDateInstance(), getDateTimeInstance(), or
+   getTimeInstance() to get a ready-made instance of SimpleDateFormat suitable
+   for the user's locale. The main reason you'd create an instance this class
+   directly is because you need to format/parse a specific machine-readable
+   format, in which case you almost certainly want to explicitly ask for US to
+   ensure that you get ASCII digits (rather than, say, Arabic digits).
+
+   Therefore, you should either use the form of the SimpleDateFormat
+   constructor where you pass in an explicit locale, such as Locale.US, or use
+   one of the get instance methods, or suppress this error if really know what
+   you are doing.
+
+   https://developer.android.com/reference/java/text/SimpleDateFormat.html
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_maps.xml:20: Warning: Replace the <fragment> tag with FragmentContainerView. [FragmentTagUsage from fragment-1.4.0]
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+     ~~~~~~~~
+
+   Explanation for issues of type "FragmentTagUsage":
+   FragmentContainerView replaces the <fragment> tag as the preferred         
+          way of adding fragments via XML. Unlike the <fragment> tag,
+   FragmentContainerView                 uses a normal FragmentTransaction
+   under the hood to add the initial fragment,                 allowing
+   further FragmentTransaction operations on the FragmentContainerView        
+           and providing a consistent timing for lifecycle events.
+
+   https://developer.android.com/reference/androidx/fragment/app/FragmentContainerView.html
+
+   Vendor: Android Open Source Project (fragment-1.4.0)
+   Identifier: fragment-1.4.0
+   Feedback: https://issuetracker.google.com/issues/new?component=192731
+
+/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:43: Warning: A newer version of com.google.android.gms:play-services-maps than 17.0.1 is available: 18.0.2 [GradleDependency]
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:45: Warning: A newer version of com.google.firebase:firebase-firestore than 24.0.1 is available: 24.1.0 [GradleDependency]
+    implementation 'com.google.firebase:firebase-firestore:24.0.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:46: Warning: A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.4.0 is available: 2.4.1 [GradleDependency]
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:47: Warning: A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.4.0 is available: 2.4.1 [GradleDependency]
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:48: Warning: A newer version of androidx.navigation:navigation-fragment than 2.4.0 is available: 2.4.1 [GradleDependency]
+    implementation 'androidx.navigation:navigation-fragment:2.4.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:49: Warning: A newer version of androidx.navigation:navigation-ui than 2.4.0 is available: 2.4.1 [GradleDependency]
+    implementation 'androidx.navigation:navigation-ui:2.4.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:59: Warning: A newer version of androidx.test:runner than 1.2.0 is available: 1.4.0 [GradleDependency]
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:60: Warning: A newer version of androidx.test:rules than 1.2.0 is available: 1.4.0 [GradleDependency]
+    androidTestImplementation 'androidx.test:rules:1.2.0'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_list_content.xml:21: Warning: Unexpected text found in layout file: "android:layout_alignParentLeft="true"" [ExtraText]
+
+        ^
+
+   Explanation for issues of type "ExtraText":
+   Layout resource files should only contain elements and attributes. Any XML
+   text content found in the file is likely accidental (and potentially
+   dangerous if the text resembles XML and the developer believes the text to
+   be functional)
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:203: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+                android:textSize="20dp" />
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:33: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+            android:textSize="32dp"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:58: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="32dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:40: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+            android:textSize="16dp"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:48: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+            android:textSize="16dp"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SpUsage":
+   When setting text sizes, you should normally use sp, or "scale-independent
+   pixels". This is like the dp unit, but it is also scaled by the user's font
+   size preference. It is recommend you use this unit when specifying font
+   sizes, so they will be adjusted for both the screen density and the user's
+   preference.
+
+   There are cases where you might need to use dp; typically this happens when
+   the text is in a container with a specific dp-size. This will prevent the
+   text from spilling outside the container. Note however that this means that
+   the user's font size settings are not respected, so consider adjusting the
+   layout itself to be more flexible.
+
+   https://developer.android.com/training/multiscreen/screendensities.html
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:41: Warning: Use app:drawableStartCompat instead of android:drawableStart [UseCompatTextViewDrawableXml from appcompat-1.4.1]
+            android:drawableStart="@drawable/baseline_place_24"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:93: Warning: Use app:drawableStartCompat instead of android:drawableStart [UseCompatTextViewDrawableXml from appcompat-1.4.1]
+        android:drawableStart="@drawable/round_qr_code_scanner_24"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:112: Warning: Use app:drawableStartCompat instead of android:drawableStart [UseCompatTextViewDrawableXml from appcompat-1.4.1]
+        android:drawableStart="@drawable/round_qr_code_scanner_24"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UseCompatTextViewDrawableXml":
+   TextView uses android: compound drawable attributes instead of app: ones
+
+   Vendor: Android Open Source Project (appcompat-1.4.1)
+   Identifier: appcompat-1.4.1
+   Feedback: https://issuetracker.google.com/issues/new?component=192731
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:20: Warning: Invalid layout param in a RelativeLayout: layout_weight [ObsoleteLayoutParam]
+            android:layout_weight="1"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ObsoleteLayoutParam":
+   The given layout_param is not defined for the given layout, meaning it has
+   no effect. This usually happens when you change the parent layout or move
+   view code around without updating the layout params. This will cause
+   useless attribute processing at runtime, and is misleading for others
+   reading the layout so the parameter should be removed.
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable-v24: Warning: This folder configuration (v24) is unnecessary; minSdkVersion is 26. Merge all the resources in this folder into drawable. [ObsoleteSdkInt]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/mipmap-anydpi-v26: Warning: This folder configuration (v26) is unnecessary; minSdkVersion is 26. Merge all the resources in this folder into mipmap-anydpi. [ObsoleteSdkInt]
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MapsActivity.java:52: Warning: Do not place Android context classes in static fields (static reference to FirebaseFirestore which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
+    public static FirebaseFirestore db; // database singleton
+           ~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerProfileActivity.java:51: Warning: Do not place Android context classes in static fields (static reference to FirebaseFirestore which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
+    public static FirebaseFirestore db;
+           ~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/SearchActivity.java:77: Warning: Do not place Android context classes in static fields; this is a memory leak [StaticFieldLeak]
+    private static EditText searchBar;
+            ~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/SearchActivity.java:80: Warning: Do not place Android context classes in static fields; this is a memory leak [StaticFieldLeak]
+    private static Spinner qrSearchSpinner;
+            ~~~~~~
+
+   Explanation for issues of type "StaticFieldLeak":
+   A static field will leak contexts.
+
+   Non-static inner classes have an implicit reference to their outer class.
+   If that outer class is for example a Fragment or Activity, then this
+   reference means that the long-running handler/loader/task will hold a
+   reference to the activity which prevents it from getting garbage
+   collected.
+
+   Similarly, direct field references to activities and fragments from these
+   longer running instances can cause leaks.
+
+   ViewModel classes should never point to Views or non-application Contexts.
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_code_scanner.xml:2: Warning: This <FrameLayout> can be replaced with a <merge> tag [MergeRootFrame]
+<FrameLayout
+^
+
+   Explanation for issues of type "MergeRootFrame":
+   If a <FrameLayout> is the root of a layout and does not provide background
+   or padding etc, it can often be replaced with a <merge> tag which is
+   slightly more efficient. Note that this depends on context, so make sure
+   you understand how the <merge> tag works before proceeding.
+
+   https://android-developers.googleblog.com/2009/03/android-layout-tricks-3-optimize-by.html
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/fragments/UserSearchFragment.java:83: Warning: Use Integer.valueOf(rank) instead [UseValueOf]
+            user.setRankPosition(new Integer(rank));
+                                 ~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UseValueOf":
+   You should not call the constructor for wrapper classes directly, such
+   as`new Integer(42)`. Instead, call the valueOf factory method, such as
+   Integer.valueOf(42). This will typically use less memory because common
+   integers such as 0 and 1 will share a single instance.
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:151: Warning: Set android:baselineAligned="false" on this element for better performance [DisableBaselineAlignment]
+        <LinearLayout
+         ~~~~~~~~~~~~
+
+   Explanation for issues of type "DisableBaselineAlignment":
+   When a LinearLayout is used to distribute the space proportionally between
+   nested layouts, the baseline alignment property should be turned off to
+   make the layout computation faster.
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:19: Warning: Use a layout_width of 0dp instead of wrap_content for better performance [InefficientWeight]
+        android:layout_width="wrap_content"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "InefficientWeight":
+   When only a single widget in a LinearLayout defines a weight, it is more
+   efficient to assign a width/height of 0dp to it since it will absorb all
+   the remaining space anyway. With a declared width/height of 0dp it does not
+   have to measure its own size first.
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml:3: Warning: The resource R.layout.activity_my_qr_codes appears to be unused [UnusedResources]
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+^
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/values/colors.xml:10: Warning: The resource R.color.gray appears to be unused [UnusedResources]
+    <color name="gray">#F0F0F0</color>
+           ~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable/ic_baseline_chevron_left_24.xml:1: Warning: The resource R.drawable.ic_baseline_chevron_left_24 appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_users_content.xml:2: Warning: The resource R.layout.list_users_content appears to be unused [UnusedResources]
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+^
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/drawable/sample_prof_pic.xml:2: Warning: The resource R.drawable.sample_prof_pic appears to be unused [UnusedResources]
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+^
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/values/strings.xml:3: Warning: The resource R.string.title_activity_maps appears to be unused [UnusedResources]
+    <string name="title_activity_maps">MapsActivity</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:2: Warning: The resource R.layout.user_qr_list_content appears to be unused [UnusedResources]
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+^
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests=true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests=true.
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_maps.xml:20: Warning: This namespace declaration is redundant [RedundantNamespace]
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:89: Warning: This namespace declaration is redundant [RedundantNamespace]
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "RedundantNamespace":
+   In Android XML documents, only specify the namespace on the root/document
+   element. Namespace declarations elsewhere in the document are typically
+   accidental leftovers from copy/pasting XML from other files or
+   documentation.
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:38: Warning: The view name (@+id/player_email) suggests this is an e-mail address, but it does not include 'textEmail' in the inputType [TextFields]
+        android:inputType="textPersonName"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:29: id defined here
+
+   Explanation for issues of type "TextFields":
+   Providing an inputType attribute on a text field improves usability because
+   depending on the data to be input, optimized keyboards can be shown to the
+   user (such as just digits and parentheses for a phone number). 
+
+   The lint detector also looks at the id of the view, and if the id offers a
+   hint of the purpose of the field (for example, the id contains the phrase
+   phone or email), then lint will also ensure that the inputType contains the
+   corresponding type attributes.
+
+   If you really want to keep the text field generic, you can suppress this
+   warning by setting inputType="text".
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:103: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:32: Warning: Missing autofillHints attribute [Autofill]
+        <EditText
+         ~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:28: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:44: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+
+   Explanation for issues of type "Autofill":
+   Specify an autofillHints attribute when targeting SDK version 26 or higher
+   or explicitly specify that the view is not important for autofill. Your app
+   can help an autofill service classify the data correctly by providing the
+   meaning of each view that could be autofillable, such as views representing
+   usernames, passwords, credit card fields, email addresses, etc.
+
+   The hints can have any value, but it is recommended to use predefined
+   values like 'username' for a username or 'creditCardNumber' for a credit
+   card number. For a list of all predefined autofill hint constants, see the
+   AUTOFILL_HINT_ constants in the View reference at
+   https://developer.android.com/reference/android/view/View.html.
+
+   You can mark a view unimportant for autofill by specifying an
+   importantForAutofill attribute on that view or a parent view. See
+   https://developer.android.com/reference/android/view/View.html#setImportant
+   ForAutofill(int).
+
+   https://developer.android.com/guide/topics/text/autofill.html
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qr_activity.xml:81: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:35: Warning: Missing contentDescription attribute on image [ContentDescription]
+                <ImageView
+                 ~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:8: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/fragment_show_qr_code.xml:8: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:18: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:20: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:26: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+
+   Explanation for issues of type "ContentDescription":
+   Non-textual widgets like ImageViews and ImageButtons should use the
+   contentDescription attribute to specify a textual description of the widget
+   such that screen readers and other accessibility tools can adequately
+   describe the user interface.
+
+   Note that elements in application screens that are purely decorative and do
+   not provide any content or enable a user action should not have
+   accessibility content descriptions. In this case, just suppress the lint
+   warning with a tools:ignore="ContentDescription" attribute.
+
+   Note that for text fields, you should not set both the hint and the
+   contentDescription attributes since the hint will never be shown. Just set
+   the hint.
+
+   https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java:106: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+                            highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
+                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java:107: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+                            lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
+                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java:108: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+                            qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java:109: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+                            totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
+                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java:112: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                            highestScoreQrScoreText.setText("Score: " + highestQRCode.getValue().toString());
+                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java:112: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+                            highestScoreQrScoreText.setText("Score: " + highestQRCode.getValue().toString());
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java:112: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                            highestScoreQrScoreText.setText("Score: " + highestQRCode.getValue().toString());
+                                                            ~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java:115: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                            lowestScoreQrScoreText.setText("Score: " + lowestQRCode.getValue().toString());
+                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java:115: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+                            lowestScoreQrScoreText.setText("Score: " + lowestQRCode.getValue().toString());
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/MyQRCodesActivity.java:115: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                            lowestScoreQrScoreText.setText("Score: " + lowestQRCode.getValue().toString());
+                                                           ~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:124: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+                            highestScoreText.setText(Integer.toString(selectedPlayer.getHighestUniqueScore()));
+                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:125: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+                            lowestScoreText.setText(Integer.toString(selectedPlayer.getLowestUniqueScore()));
+                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:126: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+                            qrNumText.setText(Integer.toString(selectedPlayer.getScannedQRCodeIds().size()));
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:127: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+                            totalScoreText.setText(Integer.toString(selectedPlayer.getTotalScore()));
+                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:131: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                            highestScoreQrScoreText.setText("Score: " + highestQRCode.getValue().toString());
+                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:131: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+                            highestScoreQrScoreText.setText("Score: " + highestQRCode.getValue().toString());
+                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:131: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                            highestScoreQrScoreText.setText("Score: " + highestQRCode.getValue().toString());
+                                                            ~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:134: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                            lowestScoreQrScoreText.setText("Score: " + lowestQRCode.getValue().toString());
+                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:134: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+                            lowestScoreQrScoreText.setText("Score: " + lowestQRCode.getValue().toString());
+                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/PlayerInfoActivity.java:134: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                            lowestScoreQrScoreText.setText("Score: " + lowestQRCode.getValue().toString());
+                                                           ~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java:70: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            hoodView.setText(qrToDisplay.getNeighborhood() + ", " + qrToDisplay.getCity());
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java:77: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        idView.setText(qrToDisplay.getId().substring(0, 8) + "...");
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java:83: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                scoreView.setText("Score:\n" + qrToDisplay.getScore().toString());
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java:83: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+                scoreView.setText("Score:\n" + qrToDisplay.getScore().toString());
+                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/QRArrayAdapter.java:96: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                scoreView.setText(distanceString + "\naway");
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/QRInfoActivity.java:106: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                                tvScore.setText("Score: " + selectedQR.getScore());
+                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/activities/QRInfoActivity.java:106: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                                tvScore.setText("Score: " + selectedQR.getScore());
+                                                ~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java:101: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            usernameView.setText(usernameDisplay + " (you)");
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java:101: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            usernameView.setText(usernameDisplay + " (you)");
+                                                   ~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java:109: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+        scoreView.setText(userToDisplay.getTotalScore().toString());
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java:112: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                scoreView.setText("Total Score: " + userToDisplay.getTotalScore().toString());
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java:112: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+                scoreView.setText("Total Score: " + userToDisplay.getTotalScore().toString());
+                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java:112: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                scoreView.setText("Total Score: " + userToDisplay.getTotalScore().toString());
+                                  ~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java:115: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                scoreView.setText(userToDisplay.getNumQRs().toString() + " scanned");
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java:115: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+                scoreView.setText(userToDisplay.getNumQRs().toString() + " scanned");
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java:115: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                scoreView.setText(userToDisplay.getNumQRs().toString() + " scanned");
+                                                                         ~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java:118: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+                scoreView.setText("Highest QR Score: " + userToDisplay.getHighestScore().toString());
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java:118: Warning: Number formatting does not take into account locale settings. Consider using String.format instead. [SetTextI18n]
+                scoreView.setText("Highest QR Score: " + userToDisplay.getHighestScore().toString());
+                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java:118: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                scoreView.setText("Highest QR Score: " + userToDisplay.getHighestScore().toString());
+                                  ~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qr_activity.xml:19: Warning: Hardcoded string "123", should use @string resource [HardcodedText]
+        android:text="123"
+        ~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qr_activity.xml:33: Warning: Hardcoded string "Score", should use @string resource [HardcodedText]
+        android:text="Score"
+        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qr_activity.xml:46: Warning: Hardcoded string "Save", should use @string resource [HardcodedText]
+        android:text="Save"
+        ~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qr_activity.xml:59: Warning: Hardcoded string "Save location", should use @string resource [HardcodedText]
+        android:text="Save location"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_new_game_qr_activity.xml:74: Warning: Hardcoded string "Take photo of object", should use @string resource [HardcodedText]
+        android:text="Take photo of object"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:54: Warning: Hardcoded string "Player 1", should use @string resource [HardcodedText]
+                    android:text="Player 1"
+                    ~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:79: Warning: Hardcoded string "QR Codes", should use @string resource [HardcodedText]
+                        android:text="QR Codes" />
+                        ~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:86: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
+                        android:text="00000" />
+                        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:98: Warning: Hardcoded string "Highest Score", should use @string resource [HardcodedText]
+                        android:text="Highest Score" />
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:105: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
+                        android:text="00000" />
+                        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:117: Warning: Hardcoded string "Lowest Score", should use @string resource [HardcodedText]
+                        android:text="Lowest Score" />
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:124: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
+                        android:text="00000" />
+                        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:136: Warning: Hardcoded string "Total Score", should use @string resource [HardcodedText]
+                        android:text="Total Score" />
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:143: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
+                        android:text="00000" />
+                        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:167: Warning: Hardcoded string "Highest Score:", should use @string resource [HardcodedText]
+                    android:text="Highest Score:"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:185: Warning: Hardcoded string "Lowest Score", should use @string resource [HardcodedText]
+                    android:text="Lowest Score"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:202: Warning: Hardcoded string "Scanned QR codes:", should use @string resource [HardcodedText]
+                android:text="Scanned QR codes:"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:228: Warning: Hardcoded string "No QR codes to display!", should use @string resource [HardcodedText]
+                android:text="No QR codes to display!" />
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:32: Warning: Hardcoded string "QR NAME", should use @string resource [HardcodedText]
+            android:text="QR NAME"
+            ~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:43: Warning: Hardcoded string "NO LOCATION DATA", should use @string resource [HardcodedText]
+            android:text="NO LOCATION DATA"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:57: Warning: Hardcoded string "Score: N/A", should use @string resource [HardcodedText]
+        android:text="Score: N/A"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:72: Warning: Hardcoded string "See other players >", should use @string resource [HardcodedText]
+        android:text="See other players >"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:98: Warning: Hardcoded string "Send", should use @string resource [HardcodedText]
+        android:text="Send"
+        ~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:112: Warning: Hardcoded string "Type your comment here", should use @string resource [HardcodedText]
+        android:hint="Type your comment here"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:36: Warning: Hardcoded string "Search Bar", should use @string resource [HardcodedText]
+            android:hint="Search Bar"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:75: Warning: Hardcoded string "QR Codes", should use @string resource [HardcodedText]
+                android:text="QR Codes" />
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:79: Warning: Hardcoded string "Players", should use @string resource [HardcodedText]
+                android:text="Players" />
+                ~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/menu/bottom_nav_menu.xml:7: Warning: Hardcoded string "Search", should use @string resource [HardcodedText]
+        android:title="Search" />
+        ~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/menu/bottom_nav_menu.xml:12: Warning: Hardcoded string "My Codes", should use @string resource [HardcodedText]
+        android:title="My Codes" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/menu/bottom_nav_menu.xml:17: Warning: Hardcoded string "Home", should use @string resource [HardcodedText]
+        android:title="Home" />
+        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/menu/bottom_nav_menu.xml:22: Warning: Hardcoded string "Scan Code", should use @string resource [HardcodedText]
+        android:title="Scan Code" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/menu/bottom_nav_menu.xml:27: Warning: Hardcoded string "My Account", should use @string resource [HardcodedText]
+        android:title="My Account" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:39: Warning: Hardcoded string "User Name", should use @string resource [HardcodedText]
+            android:text="User Name"
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:47: Warning: Hardcoded string "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", should use @string resource [HardcodedText]
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_scanned_users_content.xml:26: Warning: Hardcoded string "User Name", should use @string resource [HardcodedText]
+        android:text="User Name"
+        ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_users_content.xml:7: Warning: Hardcoded string "User Name", should use @string resource [HardcodedText]
+    android:text="User Name"
+    ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:37: Warning: Hardcoded string "Email", should use @string resource [HardcodedText]
+        android:hint="Email"
+        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:53: Warning: Hardcoded string "Username", should use @string resource [HardcodedText]
+        android:hint="Username"
+        ~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:68: Warning: Hardcoded string "Save", should use @string resource [HardcodedText]
+        android:text="Save"
+        ~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:97: Warning: Hardcoded string "Generate my login qr code", should use @string resource [HardcodedText]
+        android:text="Generate my login qr code"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:116: Warning: Hardcoded string "Generate my game status qr code", should use @string resource [HardcodedText]
+        android:text="Generate my game status qr code"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:129: Warning: Hardcoded string "Edit Photo", should use @string resource [HardcodedText]
+        android:text="Edit Photo"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:33: Warning: Hardcoded string "12345", should use @string resource [HardcodedText]
+            android:text="12345"
+            ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:40: Warning: Hardcoded string "12345", should use @string resource [HardcodedText]
+            android:text="12345"
+            ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:51: Warning: Hardcoded string "12345", should use @string resource [HardcodedText]
+        android:text="12345"
+        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_list_content.xml:40: Warning: Hardcoded string "1", should use @string resource [HardcodedText]
+        android:text="1"
+        ~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_list_content.xml:58: Warning: Hardcoded string "12345", should use @string resource [HardcodedText]
+            android:text="12345"
+            ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_list_content.xml:66: Warning: Hardcoded string "12345", should use @string resource [HardcodedText]
+            android:text="12345"
+            ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:12: Warning: Hardcoded string "12345", should use @string resource [HardcodedText]
+        android:text="12345"
+        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:21: Warning: Hardcoded string "12345", should use @string resource [HardcodedText]
+        android:text="12345"
+        ~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_scanned_users_content.xml:16: Warning: When you define paddingRight you should probably also define paddingLeft for right-to-left symmetry [RtlSymmetry]
+        android:paddingRight="10dp"
+        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:16: Warning: When you define paddingRight you should probably also define paddingLeft for right-to-left symmetry [RtlSymmetry]
+        android:paddingRight="10dp"
+        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_search_spinner_item.xml:14: Warning: When you define paddingRight you should probably also define paddingLeft for right-to-left symmetry [RtlSymmetry]
+        android:paddingRight="10dp"
+        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_list_content.xml:16: Warning: When you define paddingRight you should probably also define paddingLeft for right-to-left symmetry [RtlSymmetry]
+        android:paddingRight="10dp"
+        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_list_content.xml:79: Warning: When you define paddingRight you should probably also define paddingLeft for right-to-left symmetry [RtlSymmetry]
+        android:paddingRight="0dp"
+        ~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "RtlSymmetry":
+   If you specify padding or margin on the left side of a layout, you should
+   probably also specify padding on the right side (and vice versa) for
+   right-to-left layout symmetry.
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:30: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="50dp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginLeft="50dp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:47: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="50dp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginLeft="50dp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:85: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="45dp" to better support right-to-left layouts [RtlHardcoded]
+                        android:layout_marginLeft="45dp"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:104: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="19dp" to better support right-to-left layouts [RtlHardcoded]
+                        android:layout_marginLeft="19dp"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:123: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="22dp" to better support right-to-left layouts [RtlHardcoded]
+                        android:layout_marginLeft="22dp"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:142: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="36dp" to better support right-to-left layouts [RtlHardcoded]
+                        android:layout_marginLeft="36dp"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:21: Warning: Consider replacing android:layout_alignParentRight with android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_alignParentRight="true"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:40: Warning: Consider replacing android:drawableLeft with android:drawableStart="@drawable/round_search_24" to better support right-to-left layouts [RtlHardcoded]
+            android:drawableLeft="@drawable/round_search_24"
+            ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:47: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_alignParentLeft="true"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:28: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="16dp" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_marginLeft="16dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_scanned_users_content.xml:12: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_alignParentLeft="true"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_scanned_users_content.xml:15: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="5dp" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_marginLeft="5dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_scanned_users_content.xml:16: Warning: Consider replacing android:paddingRight with android:paddingEnd="10dp" to better support right-to-left layouts [RtlHardcoded]
+        android:paddingRight="10dp"
+        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:14: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_alignParentLeft="true"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:16: Warning: Consider replacing android:paddingRight with android:paddingEnd="10dp" to better support right-to-left layouts [RtlHardcoded]
+        android:paddingRight="10dp"
+        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:24: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_marginLeft="10dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:25: Warning: Consider replacing android:layout_toRightOf with android:layout_toEndOf="@id/qr_picture" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_toRightOf="@id/qr_picture"
+        ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:49: Warning: Consider replacing android:layout_toLeftOf with android:layout_toStartOf="@+id/qr_del_button" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_toLeftOf="@+id/qr_del_button"
+        ~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:50: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+        android:gravity="right"
+                         ~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:59: Warning: Consider replacing android:layout_alignParentRight with android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_alignParentRight="true"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:61: Warning: Consider replacing android:paddingRight with android:paddingEnd="0dp" to better support right-to-left layouts [RtlHardcoded]
+        android:paddingRight="0dp"
+        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_list_content.xml:62: Warning: Consider replacing android:paddingLeft with android:paddingStart="15dp" to better support right-to-left layouts [RtlHardcoded]
+        android:paddingLeft="15dp"
+        ~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_search_spinner_item.xml:14: Warning: Consider replacing android:paddingRight with android:paddingEnd="10dp" to better support right-to-left layouts [RtlHardcoded]
+        android:paddingRight="10dp"
+        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/qr_search_spinner_item.xml:26: Warning: Consider replacing android:layout_toRightOf with android:layout_toEndOf="@id/qr_search_option_icon" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_toRightOf="@id/qr_search_option_icon"
+        ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/spinner_item.xml:10: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+    android:gravity="right"
+                     ~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_list_content.xml:16: Warning: Consider replacing android:paddingRight with android:paddingEnd="10dp" to better support right-to-left layouts [RtlHardcoded]
+        android:paddingRight="10dp"
+        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_list_content.xml:38: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="8dp" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_marginLeft="8dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_list_content.xml:39: Warning: Consider replacing android:layout_toRightOf with android:layout_toEndOf="@id/photo_container" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_toRightOf="@id/photo_container"
+        ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_list_content.xml:48: Warning: Consider replacing android:layout_toRightOf with android:layout_toEndOf="@id/user_rank_view" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_toRightOf="@id/user_rank_view"
+        ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_list_content.xml:52: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_marginLeft="10dp">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_list_content.xml:77: Warning: Consider replacing android:layout_alignParentRight with android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_alignParentRight="true"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_list_content.xml:79: Warning: Consider replacing android:paddingRight with android:paddingEnd="0dp" to better support right-to-left layouts [RtlHardcoded]
+        android:paddingRight="0dp"
+        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:24: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+        android:gravity="center|right"
+                         ~~~~~~~~~~~~
+
+   Explanation for issues of type "RtlHardcoded":
+   Using Gravity#LEFT and Gravity#RIGHT can lead to problems when a layout is
+   rendered in locales where text flows from right to left. Use Gravity#START
+   and Gravity#END instead. Similarly, in XML gravity and layout_gravity
+   attributes, use start rather than left.
+
+   For XML attributes such as paddingLeft and layout_marginLeft, use
+   paddingStart and layout_marginStart. NOTE: If your minSdkVersion is less
+   than 17, you should add both the older left/right attributes as well as the
+   new start/end attributes. On older platforms, where RTL is not supported
+   and the start/end attributes are unknown and therefore ignored, you need
+   the older left/right attributes. There is a separate lint check which
+   catches that type of error.
+
+   (Note: For Gravity#LEFT and Gravity#START, you can use these constants even
+   when targeting older platforms, because the start bitmask is a superset of
+   the left bitmask. Therefore, you can use gravity="start" rather than
+   gravity="left|start".)
+
+/home/runner/work/QR-Go/QR-Go/src/app/src/test/java/com/example/qr_go/objects/LoginQRCodeTest.java:18: Warning: Test is ignored without giving any explanation [IgnoreWithoutReason]
+    @Ignore // need to mock firestore
+    ~~~~~~~
+
+   Explanation for issues of type "IgnoreWithoutReason":
+   Ignoring a test without a reason makes it difficult to figure out the
+   problem later.
+   Please define an explicit reason why it is ignored, and when it can be
+   resolved.
+
+0 errors, 181 warnings
