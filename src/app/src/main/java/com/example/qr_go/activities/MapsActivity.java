@@ -10,18 +10,23 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.qr_go.R;
+import com.example.qr_go.adapters.CustomInfoWindowAdapter;
 import com.example.qr_go.objects.GeoLocation;
 import com.example.qr_go.objects.Player;
 import com.example.qr_go.objects.User;
 import com.example.qr_go.utils.QRGoDBUtil;
+import com.example.qr_go.utils.StringUtil;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -30,11 +35,14 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 
@@ -118,7 +126,6 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback, Go
     @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        String qrId;
         mMap = googleMap;
 
         // set my location on the map only if permission is allowed
@@ -143,36 +150,62 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback, Go
                     // code from https://stackoverflow.com/questions/65465335/get-specific-field-from-firestore-with-whereequalto
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         Map tempMap = new HashMap<>();
+                        Map userMap = new HashMap<Integer,String>();
                         if (task.isSuccessful()) {
 
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 GeoLocation tempGeoLocation = new GeoLocation((String) document.get("id"));
+                                String qrId = (String)document.get("id");
                                 tempMap = (Map) document.get("geoLocation");
                                 if (tempMap.containsKey("latitude")) {
                                     tempGeoLocation.setCoords((Double) tempMap.get("longitude"), (Double) tempMap.get("latitude"));
                                     tempGeoLocation.setScore((Long) document.get("score"));
                                     geoLocationList.add(tempGeoLocation);
                                 }
+                                userMap = (HashMap<Integer, String>)document.get("userIds");
+                                ImageView profileImage = findViewById(R.id.profile_photo);
+                                FirebaseStorage storage = MapsActivity.storage;
+                                StringUtil stringUtil = new StringUtil();
+                                StorageReference storageRef = storage.getReference();
+                                String ImageRef = stringUtil.ImageQRRef(qrId, (String)userMap.get(0));
+                                StorageReference islandRef = storageRef.child(ImageRef);
+                                final long ONE_MEGABYTE = 5 * 1024 * 1024;
+                                islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                                    @Override
+                                    public void onSuccess(byte[] bytes) {
+                                        String snippetText;
+                                        Bitmap bitmap;
+                                        Marker selectedMarker;
+                                        bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                                        if (tempGeoLocation.getScore() != null) {
+                                            snippetText = "Score: " + tempGeoLocation.getScore();
+                                        } else {
+                                            snippetText = "Score: null";
+                                        }
+                                        mMap.setInfoWindowAdapter(new CustomInfoWindowAdapter(MapsActivity.this,bitmap));
+                                        LatLng newLoc = new LatLng(tempGeoLocation.getLatitude(), tempGeoLocation.getLongitude());
+                                        selectedMarker = mMap.addMarker(new MarkerOptions().position(newLoc)
+                                                .title(qrId.substring(0, 8))
+                                                .snippet(snippetText));
+                                        selectedMarker.setTag(qrId);
+                                    }
+                                }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception exception) {
+                                        // Handle any errors
+                                        return;
+                                    }
+                                });
+
                             }
                         }
-                        Marker selectedMarker;
-                        String tempId;
+
+
+
                         for (int i = 0; i < geoLocationList.size(); i++) {
-                            tempId = geoLocationList
-                                    .get(i)
-                                    .getQRId();
-                            if (geoLocationList.get(i).getScore() != null) {
-                                LatLng newLoc = new LatLng(geoLocationList.get(i).getLatitude(), geoLocationList.get(i).getLongitude());
-                                selectedMarker = mMap.addMarker(new MarkerOptions().position(newLoc)
-                                        .title(tempId.substring(0, 8))
-                                        .snippet("Score: " + geoLocationList.get(i).getScore()));
-                            } else {
-                                LatLng newLoc = new LatLng(geoLocationList.get(i).getLatitude(), geoLocationList.get(i).getLongitude());
-                                selectedMarker = mMap.addMarker(new MarkerOptions().position(newLoc)
-                                        .title(tempId.substring(0, 8))
-                                        .snippet("Score: null"));
-                            }
-                            selectedMarker.setTag(tempId);
+
+
+
                         }
                     }
                 });
