@@ -102,10 +102,10 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:203: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
                 android:textSize="20dp" />
                 ~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:31: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:33: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
             android:textSize="32dp"
             ~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:57: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:58: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
         android:textSize="32dp"
         ~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/list_comments_content.xml:40: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
@@ -130,7 +130,7 @@
 
    https://developer.android.com/training/multiscreen/screendensities.html
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:40: Warning: Use app:drawableStartCompat instead of android:drawableStart [UseCompatTextViewDrawableXml from appcompat-1.4.1]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:41: Warning: Use app:drawableStartCompat instead of android:drawableStart [UseCompatTextViewDrawableXml from appcompat-1.4.1]
             android:drawableStart="@drawable/baseline_place_24"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:93: Warning: Use app:drawableStartCompat instead of android:drawableStart [UseCompatTextViewDrawableXml from appcompat-1.4.1]
@@ -303,7 +303,7 @@
    If you really want to keep the text field generic, you can suppress this
    warning by setting inputType="text".
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:101: Warning: Missing autofillHints attribute [Autofill]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:102: Warning: Missing autofillHints attribute [Autofill]
     <EditText
      ~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:32: Warning: Missing autofillHints attribute [Autofill]
@@ -560,19 +560,19 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:32: Warning: Hardcoded string "QR NAME", should use @string resource [HardcodedText]
             android:text="QR NAME"
             ~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:42: Warning: Hardcoded string "NO LOCATION DATA", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:43: Warning: Hardcoded string "NO LOCATION DATA", should use @string resource [HardcodedText]
             android:text="NO LOCATION DATA"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:56: Warning: Hardcoded string "Score: N/A", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:57: Warning: Hardcoded string "Score: N/A", should use @string resource [HardcodedText]
         android:text="Score: N/A"
         ~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:71: Warning: Hardcoded string "See other players >", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:72: Warning: Hardcoded string "See other players >", should use @string resource [HardcodedText]
         android:text="See other players >"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:96: Warning: Hardcoded string "Send", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:97: Warning: Hardcoded string "Send", should use @string resource [HardcodedText]
         android:text="Send"
         ~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:110: Warning: Hardcoded string "Type your comment here", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:111: Warning: Hardcoded string "Type your comment here", should use @string resource [HardcodedText]
         android:hint="Type your comment here"
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_search.xml:36: Warning: Hardcoded string "Search Bar", should use @string resource [HardcodedText]
