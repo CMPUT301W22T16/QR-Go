@@ -99,7 +99,7 @@
    dangerous if the text resembles XML and the developer believes the text to
    be functional)
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:203: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:209: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
                 android:textSize="20dp" />
                 ~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:33: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
@@ -228,16 +228,6 @@
    nested layouts, the baseline alignment property should be turned off to
    make the layout computation faster.
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:19: Warning: Use a layout_width of 0dp instead of wrap_content for better performance [InefficientWeight]
-        android:layout_width="wrap_content"
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-   Explanation for issues of type "InefficientWeight":
-   When only a single widget in a LinearLayout defines a weight, it is more
-   efficient to assign a width/height of 0dp to it since it will absorb all
-   the remaining space anyway. With a declared width/height of 0dp it does not
-   have to measure its own size first.
-
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_my_qr_codes.xml:3: Warning: The resource R.layout.activity_my_qr_codes appears to be unused [UnusedResources]
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 ^
@@ -256,9 +246,6 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/values/strings.xml:3: Warning: The resource R.string.title_activity_maps appears to be unused [UnusedResources]
     <string name="title_activity_maps">MapsActivity</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:2: Warning: The resource R.layout.user_qr_list_content appears to be unused [UnusedResources]
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-^
 
    Explanation for issues of type "UnusedResources":
    Unused resources make applications larger and slow down builds.
@@ -354,9 +341,6 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml:20: Warning: Missing contentDescription attribute on image [ContentDescription]
         <ImageView
          ~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:26: Warning: Missing contentDescription attribute on image [ContentDescription]
-    <ImageView
-     ~~~~~~~~~
 
    Explanation for issues of type "ContentDescription":
    Non-textual widgets like ImageViews and ImageButtons should use the
@@ -548,16 +532,16 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:143: Warning: Hardcoded string "00000", should use @string resource [HardcodedText]
                         android:text="00000" />
                         ~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:167: Warning: Hardcoded string "Highest Score:", should use @string resource [HardcodedText]
-                    android:text="Highest Score:"
-                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:185: Warning: Hardcoded string "Lowest Score", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:167: Warning: Hardcoded string "Highest Score", should use @string resource [HardcodedText]
+                    android:text="Highest Score"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:187: Warning: Hardcoded string "Lowest Score", should use @string resource [HardcodedText]
                     android:text="Lowest Score"
                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:202: Warning: Hardcoded string "Scanned QR codes:", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:208: Warning: Hardcoded string "Scanned QR codes:", should use @string resource [HardcodedText]
                 android:text="Scanned QR codes:"
                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:228: Warning: Hardcoded string "No QR codes to display!", should use @string resource [HardcodedText]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_player_info.xml:236: Warning: Hardcoded string "No QR codes to display!", should use @string resource [HardcodedText]
                 android:text="No QR codes to display!" />
                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml:32: Warning: Hardcoded string "QR NAME", should use @string resource [HardcodedText]
@@ -650,12 +634,12 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_list_content.xml:66: Warning: Hardcoded string "12345", should use @string resource [HardcodedText]
             android:text="12345"
             ~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:12: Warning: Hardcoded string "12345", should use @string resource [HardcodedText]
-        android:text="12345"
-        ~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:21: Warning: Hardcoded string "12345", should use @string resource [HardcodedText]
-        android:text="12345"
-        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:32: Warning: Hardcoded string "12345", should use @string resource [HardcodedText]
+            android:text="12345"
+            ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:39: Warning: Hardcoded string "12345", should use @string resource [HardcodedText]
+            android:text="12345"
+            ~~~~~~~~~~~~~~~~~~~~
 
    Explanation for issues of type "HardcodedText":
    Hardcoding text attributes directly in layout files is bad for several
@@ -685,6 +669,9 @@
         ~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_list_content.xml:79: Warning: When you define paddingRight you should probably also define paddingLeft for right-to-left symmetry [RtlSymmetry]
         android:paddingRight="0dp"
+        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:16: Warning: When you define paddingRight you should probably also define paddingLeft for right-to-left symmetry [RtlSymmetry]
+        android:paddingRight="10dp"
         ~~~~~~~~~~~~~~~~~~~~
 
    Explanation for issues of type "RtlSymmetry":
@@ -788,9 +775,27 @@
 /home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_list_content.xml:79: Warning: Consider replacing android:paddingRight with android:paddingEnd="0dp" to better support right-to-left layouts [RtlHardcoded]
         android:paddingRight="0dp"
         ~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:24: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
-        android:gravity="center|right"
-                         ~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:14: Warning: Consider replacing android:layout_alignParentLeft with android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_alignParentLeft="true"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:16: Warning: Consider replacing android:paddingRight with android:paddingEnd="10dp" to better support right-to-left layouts [RtlHardcoded]
+        android:paddingRight="10dp"
+        ~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:23: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_marginLeft="10dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:24: Warning: Consider replacing android:layout_toRightOf with android:layout_toEndOf="@id/qr_picture" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_toRightOf="@id/qr_picture"
+        ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:49: Warning: Consider replacing android:layout_alignParentRight with android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+        android:layout_alignParentRight="true"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:51: Warning: Consider replacing android:paddingLeft with android:paddingStart="15dp" to better support right-to-left layouts [RtlHardcoded]
+        android:paddingLeft="15dp"
+        ~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml:52: Warning: Consider replacing android:paddingRight with android:paddingEnd="0dp" to better support right-to-left layouts [RtlHardcoded]
+        android:paddingRight="0dp"
+        ~~~~~~~~~~~~~~~~~~~~
 
    Explanation for issues of type "RtlHardcoded":
    Using Gravity#LEFT and Gravity#RIGHT can lead to problems when a layout is
@@ -821,4 +826,4 @@
    Please define an explicit reason why it is ignored, and when it can be
    resolved.
 
-0 errors, 181 warnings
+0 errors, 185 warnings

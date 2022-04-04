@@ -164,12 +164,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Highest Score:"
+                    android:text="Highest Score"
                     android:textStyle="bold" />
 
                 <include
                     android:id="@+id/highest_score"
-                    layout="@layout/qr_list_content" />
+                    layout="@layout/user_qr_list_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
             </LinearLayout>
 
             <LinearLayout
@@ -187,7 +189,9 @@
 
                 <include
                     android:id="@+id/lowest_score"
-                    layout="@layout/qr_list_content" />
+                    layout="@layout/user_qr_list_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
             </LinearLayout>
         </LinearLayout>
 
@@ -195,10 +199,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:text="Scanned QR codes:"
                 android:textSize="20dp" />
         </LinearLayout>
@@ -213,13 +219,15 @@
             android:orientation="vertical">
 
 
-
             <ListView
                 android:id="@+id/user_qr_list"
                 android:layout_width="match_parent"
-                android:layout_marginHorizontal="20dp"
+                android:layout_height="match_parent"
 
-                android:layout_height="match_parent" />
+                android:layout_marginHorizontal="20dp"
+                android:divider="@null"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false" />
 
             <TextView
                 android:id="@+id/empty_list"

@@ -37,7 +37,7 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
   public final TextView emptyList;
 
   @NonNull
-  public final QrListContentBinding highestScore;
+  public final UserQrListContentBinding highestScore;
 
   @NonNull
   public final LinearLayout highestScoreData;
@@ -49,7 +49,7 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
   public final LinearLayout linearLayout;
 
   @NonNull
-  public final QrListContentBinding lowestScore;
+  public final UserQrListContentBinding lowestScore;
 
   @NonNull
   public final LinearLayout lowestScoreData;
@@ -90,9 +90,9 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
   private ActivityPlayerInfoBinding(@NonNull ConstraintLayout rootView,
       @NonNull LinearLayout QRData, @NonNull BottomNavigationView bottomNavView,
       @NonNull ConstraintLayout container, @NonNull TextView emptyList,
-      @NonNull QrListContentBinding highestScore, @NonNull LinearLayout highestScoreData,
+      @NonNull UserQrListContentBinding highestScore, @NonNull LinearLayout highestScoreData,
       @NonNull LinearLayout highestScoreLayout, @NonNull LinearLayout linearLayout,
-      @NonNull QrListContentBinding lowestScore, @NonNull LinearLayout lowestScoreData,
+      @NonNull UserQrListContentBinding lowestScore, @NonNull LinearLayout lowestScoreData,
       @NonNull LinearLayout lowestScoreLayout, @NonNull TextView numOfQRCodes,
       @NonNull CardView photoContainer, @NonNull TextView playerEmail,
       @NonNull TextView playerHighScore, @NonNull TextView playerLowScore,
@@ -175,7 +175,7 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
       if (highestScore == null) {
         break missingId;
       }
-      QrListContentBinding binding_highestScore = QrListContentBinding.bind(highestScore);
+      UserQrListContentBinding binding_highestScore = UserQrListContentBinding.bind(highestScore);
 
       id = R.id.highestScoreData;
       LinearLayout highestScoreData = ViewBindings.findChildViewById(rootView, id);
@@ -200,7 +200,7 @@ public final class ActivityPlayerInfoBinding implements ViewBinding {
       if (lowestScore == null) {
         break missingId;
       }
-      QrListContentBinding binding_lowestScore = QrListContentBinding.bind(lowestScore);
+      UserQrListContentBinding binding_lowestScore = UserQrListContentBinding.bind(lowestScore);
 
       id = R.id.lowestScoreData;
       LinearLayout lowestScoreData = ViewBindings.findChildViewById(rootView, id);
