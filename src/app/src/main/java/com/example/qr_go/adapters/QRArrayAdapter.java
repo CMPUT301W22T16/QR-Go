@@ -67,7 +67,7 @@ public abstract class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer
             imageView.setImageResource(R.drawable.round_qr_code_scanner_24);
         }
         if (qrToDisplay.getNeighborhood() != null) {
-            hoodView.setText(qrToDisplay.getNeighborhood());
+            hoodView.setText(qrToDisplay.getNeighborhood() + ", " + qrToDisplay.getCity());
             hoodView.setVisibility(View.VISIBLE);
         } else {
             hoodView.setVisibility(View.INVISIBLE);
