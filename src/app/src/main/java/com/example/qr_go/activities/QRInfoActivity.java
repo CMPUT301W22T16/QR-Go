@@ -41,15 +41,14 @@ import java.util.Map;
 public class QRInfoActivity extends BaseActivity {
 
     FirebaseFirestore db;
-    private Player thisTempPlayer; // TODO: temporary, replace with currently logged in user
     private Player currentUser = new Player();
     private Bitmap UserImage = null;
     private GameQRCode selectedQR;
     private String selectedQRId;
+
     String currentUserId = MapsActivity.getUserId();
     private ListCommentsAdapter comment;
     final long ONE_MEGABYTE = 4 * 1024 * 1024;
-//    private GeoLocation location;     // TODO: uncomment after GeoLocation is implemented
 
     private Intent usersActivityIntent;
 
@@ -174,10 +173,6 @@ public class QRInfoActivity extends BaseActivity {
         }
 
         commentList = findViewById(R.id.myQRList);
-
-        // TODO: temporary, set to currently logged in user
-        thisTempPlayer = new Player();
-        thisTempPlayer.setUsername("QRInfo Temp Player");
     }
     private void addImages() {
         FirebaseStorage storage = MapsActivity.storage;
@@ -224,21 +219,6 @@ public class QRInfoActivity extends BaseActivity {
     }
 
     /**
-     * Display all comments added to this page
-     */
-    public void showComments() {
-
-    }
-
-    public void showLocation() {
-
-    }
-
-    public void showIcon() {
-
-    }
-
-    /**
      * Adds a new comment to this page
      */
     public void addComment(View view) {
@@ -270,10 +250,5 @@ public class QRInfoActivity extends BaseActivity {
 
         inputComment.setText(""); // clear input after send
     }
-
-    public void setSelectedQR(String QRId) {
-
-    }
-
 
 }
