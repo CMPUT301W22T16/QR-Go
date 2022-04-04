@@ -1,5 +1,6 @@
 package com.example.qr_go.objects;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -34,7 +35,7 @@ import java.util.ArrayList;
  * ]
  * }
  */
-public class GeocodedLocation {
+public class GeocodedLocation implements Serializable {
     private int place_id;
     private String lat;
     private String lon;
