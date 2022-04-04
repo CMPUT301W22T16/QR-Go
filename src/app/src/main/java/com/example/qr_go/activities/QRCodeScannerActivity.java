@@ -20,6 +20,7 @@ import com.example.qr_go.R;
 import com.example.qr_go.objects.LoginQRCode;
 import com.example.qr_go.objects.StatusQRCode;
 import com.example.qr_go.objects.User;
+import com.google.common.collect.Maps;
 import com.google.zxing.Result;
 
 import java.util.function.Consumer;
@@ -72,6 +73,9 @@ public class QRCodeScannerActivity extends AppCompatActivity {
                                 Toast.makeText(QRCodeScannerActivity.this, "Validating login QR\nPlease wait", Toast.LENGTH_LONG).show(); // show loading
                                 LoginQRCode loginQRCode = new LoginQRCode(text);
                                 Consumer<String> successCb = (String msg) -> {
+                                    // Set the new username and password in MapsActivity
+                                    MapsActivity.setUserId(loginQRCode.getUserId());
+                                    MapsActivity.setPassword(loginQRCode.getPassword());
                                     // Change user to the new user in shared preferences
                                     SharedPreferences prefs = getApplication().getSharedPreferences(User.CURRENT_USER, MODE_PRIVATE);
                                     SharedPreferences.Editor ed = prefs.edit();

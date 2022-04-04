@@ -255,4 +255,18 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback, Go
     public static String getPassword() {
         return userPassword;
     }
+
+    /**
+     * Set user id of currently logged in user
+     */
+    public static void setUserId(String userId) {
+        currentUUID = userId;
+    }
+
+    /**
+     * Set password of currently logged in user
+     */
+    public static void setPassword(String password) {
+        userPassword = password;
+    }
 }
