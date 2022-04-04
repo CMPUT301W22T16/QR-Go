@@ -7,8 +7,8 @@
 
     <ImageView
         android:id="@+id/profile_photo"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:scaleType="fitXY"
@@ -17,25 +17,26 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/profile_photo"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/profile_photo"
-        app:layout_constraintTop_toTopOf="@+id/profile_photo" >
+        app:layout_constraintTop_toTopOf="@+id/profile_photo">
 
         <TextView
             android:id="@+id/qrName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="32dp"
             android:text="QR NAME"
+            android:textSize="32dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/qrLocation"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/baseline_place_24"
             android:drawablePadding="8dp"
@@ -82,6 +83,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:divider="@null"
         app:layout_constraintBottom_toTopOf="@+id/inputComment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
