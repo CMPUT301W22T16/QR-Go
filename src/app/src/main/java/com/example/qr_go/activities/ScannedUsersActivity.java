@@ -1,24 +1,29 @@
 package com.example.qr_go.activities;
 
-import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Pair;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.qr_go.R;
-import com.example.qr_go.containers.ListScannedUsersContainer;
+import com.example.qr_go.adapters.ListScannedUsersAdapter;
+import com.example.qr_go.containers.CommentDisplayContainer;
+import com.example.qr_go.containers.ScannedUserListDisplayContainer;
 import com.example.qr_go.objects.GameQRCode;
-import com.example.qr_go.objects.Player;
+import com.example.qr_go.utils.StringUtil;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 public class ScannedUsersActivity extends AppCompatActivity {
 
@@ -27,8 +32,8 @@ public class ScannedUsersActivity extends AppCompatActivity {
     HashMap<String, HashMap<String, String>> playersInfo;
 
     ListView userList;
-    ListScannedUsersContainer userAdapter;
-    ArrayList<Pair> userDataList;
+    private ArrayAdapter<ScannedUserListDisplayContainer> userAdapter;
+    private ArrayList<ScannedUserListDisplayContainer> userDataList;
 //    ArrayList<String> userIds;
 
     final long ONE_MEGABYTE = 4 * 1024 * 1024;
@@ -38,7 +43,7 @@ public class ScannedUsersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_scanned_users);
 
         userList = findViewById(R.id.userList);
-        userDataList = new ArrayList<Pair>();
+        userDataList = new ArrayList<>();
 //        userIds = new ArrayList<String>();
 
         // Get information from extras
@@ -51,13 +56,14 @@ public class ScannedUsersActivity extends AppCompatActivity {
         }
 
         for (Map.Entry<String, HashMap<String, String>> details:playersInfo.entrySet() ){
-//            userIds.add(details.getKey());
             HashMap<String, String> temp = details.getValue();
-            userDataList.add(new Pair(temp.get("PhotoRef"), temp.get("Username")));
+            userDataList.add(new ScannedUserListDisplayContainer(details.getKey(), temp.get("Username")));
         }
 
-        userAdapter = new ListScannedUsersContainer(this, userDataList);
+        userAdapter = new ListScannedUsersAdapter(this, userDataList);
         userList.setAdapter(userAdapter);
+        addImages();
+
 
         // When item on the list is pressed
 //        userList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -68,6 +74,31 @@ public class ScannedUsersActivity extends AppCompatActivity {
 //                view.getContext().startActivity(intent);
 //            }
 //        });
+    }
+    private void addImages() {
+        FirebaseStorage storage = MapsActivity.storage;
+        StringUtil stringUtil = new StringUtil();
+        StorageReference storageRef = storage.getReference();
+        for (ScannedUserListDisplayContainer player : userDataList) {
+            String ImageRef = stringUtil.ImagePlayerRef(player.getUserid());
+            StorageReference islandRef = storageRef.child(ImageRef);
+            islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                @Override
+                public void onSuccess(byte[] bytes) {
+                    Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                    player.setPicture(bitmap);
+                    userAdapter.notifyDataSetChanged();
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception exception) {
+                    // Handle any errors
+                    return;
+                }
+            });
+        }
+
+
     }
 
 }
