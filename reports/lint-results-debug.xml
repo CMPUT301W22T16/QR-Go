@@ -245,7 +245,7 @@
         explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.&#xA;&#xA;There **are** cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
         url="https://developer.android.com/training/multiscreen/screendensities.html"
         urls="https://developer.android.com/training/multiscreen/screendensities.html"
-        errorLine1="            android:textSize=&quot;32dp&quot;"
+        errorLine1="            android:textSize=&quot;20dp&quot;"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
@@ -263,11 +263,11 @@
         explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.&#xA;&#xA;There **are** cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
         url="https://developer.android.com/training/multiscreen/screendensities.html"
         urls="https://developer.android.com/training/multiscreen/screendensities.html"
-        errorLine1="        android:textSize=&quot;32dp&quot;"
+        errorLine1="        android:textSize=&quot;20dp&quot;"
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
-            line="58"
+            line="59"
             column="9"/>
     </issue>
 
@@ -319,7 +319,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
-            line="41"
+            line="42"
             column="13"/>
     </issue>
 
@@ -672,7 +672,7 @@
         errorLine2="     ~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
-            line="103"
+            line="105"
             column="6"/>
     </issue>
 
@@ -1856,7 +1856,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
-            line="43"
+            line="44"
             column="13"/>
     </issue>
 
@@ -1872,7 +1872,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
-            line="57"
+            line="58"
             column="9"/>
     </issue>
 
@@ -1888,7 +1888,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
-            line="72"
+            line="74"
             column="9"/>
     </issue>
 
@@ -1904,7 +1904,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
-            line="98"
+            line="100"
             column="9"/>
     </issue>
 
@@ -1920,7 +1920,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/runner/work/QR-Go/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml"
-            line="112"
+            line="114"
             column="9"/>
     </issue>
 

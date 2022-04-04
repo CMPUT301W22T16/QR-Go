@@ -448,12 +448,12 @@
         </fix-composite>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="41"
+            line="42"
             column="13"
-            startOffset="1720"
-            endLine="41"
+            startOffset="1758"
+            endLine="42"
             endColumn="64"
-            endOffset="1771"/>
+            endOffset="1809"/>
     </incident>
 
     <incident
@@ -462,12 +462,12 @@
         message="Hardcoded string &quot;NO LOCATION DATA&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="43"
+            line="44"
             column="13"
-            startOffset="1828"
-            endLine="43"
+            startOffset="1866"
+            endLine="44"
             endColumn="44"
-            endOffset="1859"/>
+            endOffset="1897"/>
     </incident>
 
     <incident
@@ -476,12 +476,12 @@
         message="Hardcoded string &quot;Score: N/A&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="57"
+            line="58"
             column="9"
-            startOffset="2359"
-            endLine="57"
+            startOffset="2397"
+            endLine="58"
             endColumn="34"
-            endOffset="2384"/>
+            endOffset="2422"/>
     </incident>
 
     <incident
@@ -494,12 +494,12 @@
             replacement="sp"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="58"
+            line="59"
             column="9"
-            startOffset="2394"
-            endLine="58"
+            startOffset="2432"
+            endLine="59"
             endColumn="32"
-            endOffset="2417"/>
+            endOffset="2455"/>
     </incident>
 
     <incident
@@ -508,12 +508,12 @@
         message="Hardcoded string &quot;See other players >&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="72"
+            line="74"
             column="9"
-            startOffset="2972"
-            endLine="72"
+            startOffset="3044"
+            endLine="74"
             endColumn="43"
-            endOffset="3006"/>
+            endOffset="3078"/>
     </incident>
 
     <incident
@@ -522,12 +522,12 @@
         message="Hardcoded string &quot;Send&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="98"
+            line="100"
             column="9"
-            startOffset="4038"
-            endLine="98"
+            startOffset="4110"
+            endLine="100"
             endColumn="28"
-            endOffset="4057"/>
+            endOffset="4129"/>
     </incident>
 
     <incident
@@ -550,12 +550,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="103"
+            line="105"
             column="6"
-            startOffset="4225"
-            endLine="103"
+            startOffset="4297"
+            endLine="105"
             endColumn="14"
-            endOffset="4233"/>
+            endOffset="4305"/>
     </incident>
 
     <incident
@@ -564,12 +564,12 @@
         message="Hardcoded string &quot;Type your comment here&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="112"
+            line="114"
             column="9"
-            startOffset="4563"
-            endLine="112"
+            startOffset="4635"
+            endLine="114"
             endColumn="46"
-            endOffset="4600"/>
+            endOffset="4672"/>
     </incident>
 
     <incident
@@ -829,6 +829,29 @@
     </incident>
 
     <incident
+        id="TextFields"
+        severity="warning"
+        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="38"
+            column="9"
+            startOffset="1501"
+            endLine="38"
+            endColumn="43"
+            endOffset="1535"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="29"
+            column="9"
+            startOffset="1107"
+            endLine="29"
+            endColumn="39"
+            endOffset="1137"
+            message="id defined here"/>
+    </incident>
+
+    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -854,29 +877,6 @@
             endLine="28"
             endColumn="14"
             endOffset="1097"/>
-    </incident>
-
-    <incident
-        id="TextFields"
-        severity="warning"
-        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="38"
-            column="9"
-            startOffset="1501"
-            endLine="38"
-            endColumn="43"
-            endOffset="1535"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="29"
-            column="9"
-            startOffset="1107"
-            endLine="29"
-            endColumn="39"
-            endOffset="1137"
-            message="id defined here"/>
     </incident>
 
     <incident

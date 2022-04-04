@@ -420,12 +420,12 @@
         message="Use databinding or explicit wiring of click listener in code">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="71"
+            line="73"
             column="9"
-            startOffset="2931"
-            endLine="71"
+            startOffset="3003"
+            endLine="73"
             endColumn="40"
-            endOffset="2962"/>
+            endOffset="3034"/>
         <map>
             <condition minLT="23"/>
         </map>
@@ -437,12 +437,12 @@
         message="Use databinding or explicit wiring of click listener in code">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="99"
+            line="101"
             column="9"
-            startOffset="4067"
-            endLine="99"
+            startOffset="4139"
+            endLine="101"
             endColumn="37"
-            endOffset="4095"/>
+            endOffset="4167"/>
         <map>
             <condition minLT="23"/>
         </map>
