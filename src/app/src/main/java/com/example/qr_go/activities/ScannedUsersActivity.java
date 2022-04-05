@@ -75,6 +75,9 @@ public class ScannedUsersActivity extends AppCompatActivity {
 //            }
 //        });
     }
+    /**
+     * Adds images for qrs and users
+     */
     private void addImages() {
         FirebaseStorage storage = MapsActivity.storage;
         StringUtil stringUtil = new StringUtil();

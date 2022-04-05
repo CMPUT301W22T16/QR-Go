@@ -18,8 +18,7 @@ import java.util.Set;
 import java.util.UUID;
 
 /**
- * Custom conatiner for comments, used for database interface, and can be translated to an arraylist for the android adapter
- * this is the revised version of comments container, originally Matthew's work
+ * Custom list and hashmap for comments, used for database storage, and can be translated to an arraylist for the android adapter
  * @author Darius Fang
  */
 public class CommentsQR {

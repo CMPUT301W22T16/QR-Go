@@ -23,35 +23,14 @@ import java.util.Collections;
 
 @RequiresApi(api = Build.VERSION_CODES.O)
 public class QRGoStorageUtil {
-    //TODO send image to DB, resize image before sending to DB, adding a way to reference inside the classes
-    // TODO convert between byte and bitmap
     FirebaseStorage storage = MapsActivity.storage;
 
-    public void getImageFromStorage(String photoRef) {
-        //ImageView profileImage = findViewById(R.id.profile_photo);
-        String currentUserId = MapsActivity.getUserId();
-        FirebaseStorage storage = MapsActivity.storage;
-        storage = MapsActivity.storage;
-        StringUtil stringUtil = new StringUtil();
-        StorageReference storageRef = storage.getReference();
-        String ImageRef = stringUtil.ImagePlayerRef(currentUserId);
-        StorageReference islandRef = storageRef.child(ImageRef);
-        final long ONE_MEGABYTE = 5 * 1024 * 1024;
-        islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
-            @Override
-            public void onSuccess(byte[] bytes) {
-                Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-                //profileImage.setImageBitmap(bitmap);
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception exception) {
-                // Handle any errors
-                return;
-            }
-        });
-    }
-
+    /**
+     * updates the image to storage
+     * @param bitmap the image to be stored
+     * @param ref the reference string
+     * @athur Darius Fang
+     */
     public void updateImageFromStorage(Bitmap bitmap, String ref) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         Bitmap scaledBitmap = scaledDownBitmap(bitmap);
@@ -97,7 +76,14 @@ public class QRGoStorageUtil {
         }
         return Bitmap.createScaledBitmap(bitmap, outWidth, outHeight, false);
     }
-    //https://stackoverflow.com/questions/15789049/crop-a-bitmap-image
+    /**
+     *
+     * Crops image to square
+     * Author:  //https://stackoverflow.com/questions/15789049/crop-a-bitmap-image
+     *
+     * @param bitmap
+     * @return
+     */
     public Bitmap squareCropBitmap(Bitmap bitmap){
         int offset = 0;
         int imageWidth = bitmap.getWidth();

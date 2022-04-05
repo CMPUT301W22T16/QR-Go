@@ -47,7 +47,15 @@ public class CommentDisplayContainer implements Serializable {
     public void setMessage(String message) {
         this.message = message;
     }
+    /**
+     * sets the picture
+     * @param image the picture to be set
+     */
     public void setPicture(Bitmap image){this.image = image;};
+    /**
+     * returns the picture
+     * @return the image
+     */
     public Bitmap getPicture(){return image;}
 
 }

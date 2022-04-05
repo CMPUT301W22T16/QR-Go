@@ -179,6 +179,9 @@ public class MyQRCodesActivity extends BaseActivity {
                 });
 
     }
+    /**
+     * Adds images for qrs
+     */
     private void addImages() {
         FirebaseStorage storage = MapsActivity.storage;
         StringUtil stringUtil = new StringUtil();

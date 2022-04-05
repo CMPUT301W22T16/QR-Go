@@ -20,9 +20,24 @@ public class ScannedUserListDisplayContainer {
     public String getUsername() {
         return username;
     }
+
+    /**
+     * gets the userid
+     * @return userid
+     */
     public String getUserid() {
         return userid;
     }
+
+    /**
+     * sets the picture
+     * @param image the picture
+     */
     public void setPicture(Bitmap image){this.image = image;};
+
+    /**
+     * gets the picture
+     * @return image
+     */
     public Bitmap getPicture(){return image;}
 }

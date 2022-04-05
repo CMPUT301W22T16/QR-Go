@@ -174,6 +174,9 @@ public class QRInfoActivity extends BaseActivity {
 
         commentList = findViewById(R.id.myQRList);
     }
+    /**
+     * Adds images for users
+     */
     private void addImages() {
         FirebaseStorage storage = MapsActivity.storage;
         StringUtil stringUtil = new StringUtil();

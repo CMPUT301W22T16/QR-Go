@@ -58,6 +58,10 @@ public class PlayerProfileActivity extends BaseActivity {
     private ArrayList<String> usernames;
     final long ONE_MEGABYTE = 4 * 1024 * 1024;
     QRGoStorageUtil StorageUtil = new QRGoStorageUtil();
+    /**
+     * gets all usernames from DB
+     * @Athur Darius
+     */
     public void  getAllUsernames(){
         CollectionReference QRRef = db.collection("Players");
         usernames = new ArrayList<>();
@@ -101,6 +105,7 @@ public class PlayerProfileActivity extends BaseActivity {
         StorageReference islandRef = storageRef.child(ImageRef);
 
         getAllUsernames();
+        //Add image
         islandRef.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
             @Override
             public void onSuccess(byte[] bytes) {
