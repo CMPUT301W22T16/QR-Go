@@ -50,7 +50,8 @@ public class UserSearchFragment extends SortableFragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(view.getContext(), PlayerInfoActivity.class);
-                intent.putExtra("SELECTED_USER", userDisplays.get(position).getUserid());
+//                intent.putExtra("SELECTED_USER", userDisplays.get(position).getUserid());
+                intent.putExtra("SELECTED_USER", userAdapter.getIds().get(position));
                 view.getContext().startActivity(intent);
 
             }

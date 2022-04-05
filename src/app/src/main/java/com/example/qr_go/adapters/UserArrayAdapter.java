@@ -160,4 +160,12 @@ public class UserArrayAdapter extends ArrayAdapter<UserListDisplayContainer> imp
         }
     };
 
+    public ArrayList<String> getIds() {
+        ArrayList<String> returnList = new ArrayList<String>();
+        for(int i = 0; i < userDisplays.size(); i++) {
+            returnList.add(userDisplays.get(i).getUserid());
+        }
+        return returnList;
+    }
+
 }
