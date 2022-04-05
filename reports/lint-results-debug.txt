@@ -20,7 +20,7 @@
 
    https://developer.android.com/reference/java/util/Locale.html#default_locale
 
-/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/objects/CommentsQR.java:54: Warning: To get local formatting use getDateInstance(), getDateTimeInstance(), or getTimeInstance(), or use new SimpleDateFormat(String template, Locale locale) with for example Locale.US for ASCII dates. [SimpleDateFormat]
+/home/runner/work/QR-Go/QR-Go/src/app/src/main/java/com/example/qr_go/objects/CommentsQR.java:53: Warning: To get local formatting use getDateInstance(), getDateTimeInstance(), or getTimeInstance(), or use new SimpleDateFormat(String template, Locale locale) with for example Locale.US for ASCII dates. [SimpleDateFormat]
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd '@'hh:mm:ss a");
                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
