@@ -54,6 +54,12 @@ public class CommentsQR {
         String strDate = dateFormat.format(date);
         comments.put(strDate, details);
     }
+
+    /**
+     * Gets comments containing its user id, username, and message
+     * @return
+     *      returns a Hashmap storing comments information
+     */
     public HashMap<String, HashMap<String, String>> getcomments() {
         return comments;
     }

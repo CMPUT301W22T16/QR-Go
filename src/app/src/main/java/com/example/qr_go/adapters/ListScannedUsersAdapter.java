@@ -18,6 +18,9 @@ import com.example.qr_go.containers.ScannedUserListDisplayContainer;
 
 import java.util.ArrayList;
 
+/**
+ * ArrayAdapter for displaying users that scanned a QR code
+ */
 public class ListScannedUsersAdapter extends ArrayAdapter {
 
     private ArrayList<ScannedUserListDisplayContainer> playersInfoArray;
