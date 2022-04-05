@@ -49,7 +49,7 @@ public class QRSearchFragment extends SortableFragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(view.getContext(), QRInfoActivity.class);
-                intent.putExtra("QRid", qrDisplays.get(position).getId());
+                intent.putExtra("QRid", qrAdapter.getIds().get(position));
                 view.getContext().startActivity(intent);
             }
         });

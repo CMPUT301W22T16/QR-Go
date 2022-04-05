@@ -400,14 +400,14 @@ public class SearchActivity extends BaseActivity {
                     Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
                     user.setPicture(bitmap);
                     if (user.getUserid().equals(lastUser.getUserid())) {
-                        searchPagerAdapter.updateView(currentFragment, sortPosition);
+                        searchPagerAdapter.updateView(currentFragment);
                     }
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception exception) {
                     if (user.getUserid().equals(lastUser.getUserid())) {
-                        searchPagerAdapter.updateView(currentFragment, sortPosition);
+                        searchPagerAdapter.updateView(currentFragment);
                     }
                     return;
                 }
@@ -422,14 +422,14 @@ public class SearchActivity extends BaseActivity {
                     Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
                     qr.setPicture(bitmap);
                     if (qr.getId().equals(lastQR.getId())) {
-                        searchPagerAdapter.updateView(currentFragment, sortPosition);
+                        searchPagerAdapter.updateView(currentFragment);
                     }
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception exception) {
                     if (qr.getId().equals(lastQR.getId())) {
-                        searchPagerAdapter.updateView(currentFragment, sortPosition);
+                        searchPagerAdapter.updateView(currentFragment);
                     }
                     return;
                 }

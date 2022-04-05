@@ -41,9 +41,8 @@ public class SearchFragmentStateAdapter extends FragmentStateAdapter {
      * Updates the view of a given fragment based on the selected position of the sort spinner
      * @param fragmentPos The index of the search fragment being updated. 0 for qr code search
      *                    1 for user search
-     * @param newSortPos Position in spinner of the sorting option
      */
-    public void updateView(Integer fragmentPos, Integer newSortPos) {
+    public void updateView(Integer fragmentPos) {
         if (fragments.size()-1 < fragmentPos) {
             return;
         }

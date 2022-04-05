@@ -35,13 +35,17 @@
         <entry key="..\:/Users/Darius Fang/AndroidStudioProjects/QR-Go/src/app/src/main/res/layout/activity_new_game_qr_activity.xml" value="0.5" />
         <entry key="..\:/Users/Darius Fang/AndroidStudioProjects/QR-Go/src/app/src/main/res/layout/activity_player_info.xml" value="0.5" />
         <entry key="..\:/Users/Darius Fang/AndroidStudioProjects/QR-Go/src/app/src/main/res/layout/activity_qr_info.xml" value="0.33" />
+        <entry key="..\:/Users/Darius Fang/AndroidStudioProjects/QR-Go/src/app/src/main/res/layout/activity_scanned_users.xml" value="0.35987261146496813" />
         <entry key="..\:/Users/Darius Fang/AndroidStudioProjects/QR-Go/src/app/src/main/res/layout/activity_search.xml" value="0.5" />
         <entry key="..\:/Users/Darius Fang/AndroidStudioProjects/QR-Go/src/app/src/main/res/layout/fragment_qr_search.xml" value="0.5" />
         <entry key="..\:/Users/Darius Fang/AndroidStudioProjects/QR-Go/src/app/src/main/res/layout/fragment_show_qr_code.xml" value="0.33" />
         <entry key="..\:/Users/Darius Fang/AndroidStudioProjects/QR-Go/src/app/src/main/res/layout/list_comments_content.xml" value="0.5" />
+        <entry key="..\:/Users/Darius Fang/AndroidStudioProjects/QR-Go/src/app/src/main/res/layout/list_scanned_users_content.xml" value="0.5" />
+        <entry key="..\:/Users/Darius Fang/AndroidStudioProjects/QR-Go/src/app/src/main/res/layout/list_users_content.xml" value="0.33" />
         <entry key="..\:/Users/Darius Fang/AndroidStudioProjects/QR-Go/src/app/src/main/res/layout/player_profile_activity.xml" value="0.5" />
         <entry key="..\:/Users/Darius Fang/AndroidStudioProjects/QR-Go/src/app/src/main/res/layout/qr_list_content.xml" value="0.5" />
         <entry key="..\:/Users/Darius Fang/AndroidStudioProjects/QR-Go/src/app/src/main/res/layout/user_list_content.xml" value="0.5" />
+        <entry key="..\:/Users/Darius Fang/AndroidStudioProjects/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml" value="0.5" />
         <entry key="..\:/Users/Landyn/AndroidStudioProjects/QR-Go/src/app/src/main/res/drawable-v24/baseline_dashboard_24.xml" value="0.1" />
         <entry key="..\:/Users/Landyn/AndroidStudioProjects/QR-Go/src/app/src/main/res/drawable-v24/baseline_home_24.xml" value="0.3935" />
         <entry key="..\:/Users/Landyn/AndroidStudioProjects/QR-Go/src/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
@@ -61,9 +65,6 @@
         <entry key="..\:/Users/Landyn/AndroidStudioProjects/QR-Go/src/app/src/main/res/layout/qr_list_content.xml" value="0.4938030006523157" />
         <entry key="..\:/Users/Landyn/AndroidStudioProjects/QR-Go/src/app/src/main/res/layout/user_list_content.xml" value="0.5" />
         <entry key="..\:/Users/Landyn/AndroidStudioProjects/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml" value="0.3329532497149373" />
-        <entry key="..\:/Users/faris/OneDrive - ualberta.ca/Documents/University Year 4/CMPUT 301/Project 2/QR-Go/src/app/src/main/res/layout/activity_player_info.xml" value="0.3625" />
-        <entry key="..\:/Users/faris/OneDrive - ualberta.ca/Documents/University Year 4/CMPUT 301/Project 2/QR-Go/src/app/src/main/res/layout/qr_list_content.xml" value="0.3625" />
-        <entry key="..\:/Users/faris/OneDrive - ualberta.ca/Documents/University Year 4/CMPUT 301/Project 2/QR-Go/src/app/src/main/res/layout/user_qr_list_content.xml" value="0.3625" />
         <entry key="app/src/main/res/drawable-v24/round_account_circle_24.xml" value="0.177" />
         <entry key="app/src/main/res/drawable-v24/round_qr_code_scanner_24.xml" value="0.177" />
         <entry key="app/src/main/res/drawable-v24/round_search_24.xml" value="0.177" />

@@ -268,7 +268,7 @@ public class NewGameQRActivity extends BaseActivity {
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 try {
                     Player player = documentSnapshot.toObject(Player.class);
-                    db.updateScannedQRtoDB(gameQRCode, player, null);
+                    db.updateScannedQRtoDB(gameQRCode, player);
                     StringUtil stringUtil = new StringUtil();
                     // If user has taken a photo, it could be null!
                     if (imageBitmap != null)
