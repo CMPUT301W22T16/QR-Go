@@ -174,10 +174,10 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 184 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 185 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Tue Apr 05 04:13:14 UTC 2022      </nav>
+Check performed at Tue Apr 05 04:28:43 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -203,7 +203,7 @@ Check performed at Tue Apr 05 04:13:14 UTC 2022      </nav>
       <a class="mdl-navigation__link" href="#Autofill"><i class="material-icons warning-icon">warning</i>Use Autofill (4)</a>
       <a class="mdl-navigation__link" href="#ContentDescription"><i class="material-icons warning-icon">warning</i>Image without <code>contentDescription</code> (6)</a>
       <a class="mdl-navigation__link" href="#SetTextI18n"><i class="material-icons warning-icon">warning</i>TextView Internationalization (39)</a>
-      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (50)</a>
+      <a class="mdl-navigation__link" href="#HardcodedText"><i class="material-icons warning-icon">warning</i>Hardcoded text (51)</a>
       <a class="mdl-navigation__link" href="#RtlSymmetry"><i class="material-icons warning-icon">warning</i>Padding and margin symmetry (7)</a>
       <a class="mdl-navigation__link" href="#RtlHardcoded"><i class="material-icons warning-icon">warning</i>Using left/right instead of start/end attributes (36)</a>
       <a class="mdl-navigation__link" href="#IgnoreWithoutReason"><i class="material-icons warning-icon">warning</i>@Ignore without Reason (1)</a>
@@ -287,7 +287,7 @@ Check performed at Tue Apr 05 04:13:14 UTC 2022      </nav>
 <td class="countColumn">39</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#SetTextI18n">SetTextI18n</a>: TextView Internationalization</td></tr>
 <tr>
-<td class="countColumn">50</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">51</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#HardcodedText">HardcodedText</a>: Hardcoded text</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Internationalization:Bidirectional Text">Internationalization:Bidirectional Text</a>
 </td></tr>
@@ -1314,14 +1314,14 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/res/layout/activity_qr_info.xml">../../src/main/res/layout/activity_qr_info.xml</a>:106</span>: <span class="message">Missing <code>autofillHints</code> attribute</span><br /><pre class="errorlines">
-<span class="lineno"> 103 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintBottom_toTopOf</span>=<span class="value">"@id/bottom_nav_view"</span>
-<span class="lineno"> 104 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span> />
-<span class="lineno"> 105 </span>
-<span class="caretline"><span class="lineno"> 106 </span>    <span class="tag">&lt;</span><span class="warning"><span class="tag">EditText</span></span><span class="attribute"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
-</span><span class="lineno"> 107 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/inputComment"</span>
-<span class="lineno"> 108 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"0dp"</span>
-<span class="lineno"> 109 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="location"><a href="../../src/main/res/layout/activity_qr_info.xml">../../src/main/res/layout/activity_qr_info.xml</a>:121</span>: <span class="message">Missing <code>autofillHints</code> attribute</span><br /><pre class="errorlines">
+<span class="lineno"> 118 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintBottom_toTopOf</span>=<span class="value">"@id/bottom_nav_view"</span>
+<span class="lineno"> 119 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span> />
+<span class="lineno"> 120 </span>
+<span class="caretline"><span class="lineno"> 121 </span>    <span class="tag">&lt;</span><span class="warning"><span class="tag">EditText</span></span><span class="attribute"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
+</span><span class="lineno"> 122 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/inputComment"</span>
+<span class="lineno"> 123 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"0dp"</span>
+<span class="lineno"> 124 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
 </pre>
 
 <span class="location"><a href="../../src/main/res/layout/activity_search.xml">../../src/main/res/layout/activity_search.xml</a>:32</span>: <span class="message">Missing <code>autofillHints</code> attribute</span><br /><pre class="errorlines">
@@ -1748,24 +1748,24 @@ Dismiss</button>            </div>
 <span class="lineno">  98 </span>        }
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/QRInfoActivity.java">../../src/main/java/com/example/qr_go/activities/QRInfoActivity.java</a>:106</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno"> 103 </span>            }; <span class="comment">// ABORT: an error occurred</span>
-<span class="lineno"> 104 </span>
-<span class="lineno"> 105 </span>            tvQRName.setText(selectedQR.getId().substring(<span class="number">0</span>,<span class="number">8</span>));
-<span class="caretline"><span class="lineno"> 106 </span>            tvScore.setText(<span class="warning"><span class="string">"Score: "</span> + selectedQR.getScore()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 107 </span>
-<span class="lineno"> 108 </span>            GeoLocation geoLocation = selectedQR.getGeoLocation();
-<span class="lineno"> 109 </span>            <span class="keyword">if</span> (geoLocation != <span class="keyword">null</span>)
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/QRInfoActivity.java">../../src/main/java/com/example/qr_go/activities/QRInfoActivity.java</a>:108</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno"> 105 </span>            }; <span class="comment">// ABORT: an error occurred</span>
+<span class="lineno"> 106 </span>
+<span class="lineno"> 107 </span>            tvQRName.setText(selectedQR.getId().substring(<span class="number">0</span>,<span class="number">8</span>));
+<span class="caretline"><span class="lineno"> 108 </span>            tvScore.setText(<span class="warning"><span class="string">"Score: "</span> + selectedQR.getScore()</span>);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 109 </span>
+<span class="lineno"> 110 </span>            GeoLocation geoLocation = selectedQR.getGeoLocation();
+<span class="lineno"> 111 </span>            <span class="keyword">if</span> (geoLocation != <span class="keyword">null</span>)
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/QRInfoActivity.java">../../src/main/java/com/example/qr_go/activities/QRInfoActivity.java</a>:106</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
-<span class="lineno"> 103 </span>            }; <span class="comment">// ABORT: an error occurred</span>
-<span class="lineno"> 104 </span>
-<span class="lineno"> 105 </span>            tvQRName.setText(selectedQR.getId().substring(<span class="number">0</span>,<span class="number">8</span>));
-<span class="caretline"><span class="lineno"> 106 </span>            tvScore.setText(<span class="warning"><span class="string">"Score: "</span></span> + selectedQR.getScore());&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 107 </span>
-<span class="lineno"> 108 </span>            GeoLocation geoLocation = selectedQR.getGeoLocation();
-<span class="lineno"> 109 </span>            <span class="keyword">if</span> (geoLocation != <span class="keyword">null</span>)
+<span class="location"><a href="../../src/main/java/com/example/qr_go/activities/QRInfoActivity.java">../../src/main/java/com/example/qr_go/activities/QRInfoActivity.java</a>:108</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
+<span class="lineno"> 105 </span>            }; <span class="comment">// ABORT: an error occurred</span>
+<span class="lineno"> 106 </span>
+<span class="lineno"> 107 </span>            tvQRName.setText(selectedQR.getId().substring(<span class="number">0</span>,<span class="number">8</span>));
+<span class="caretline"><span class="lineno"> 108 </span>            tvScore.setText(<span class="warning"><span class="string">"Score: "</span></span> + selectedQR.getScore());&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 109 </span>
+<span class="lineno"> 110 </span>            GeoLocation geoLocation = selectedQR.getGeoLocation();
+<span class="lineno"> 111 </span>            <span class="keyword">if</span> (geoLocation != <span class="keyword">null</span>)
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java">../../src/main/java/com/example/qr_go/adapters/UserArrayAdapter.java</a>:101</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
@@ -1975,7 +1975,7 @@ Dismiss</button>            </div>
 <span class="lineno">  77 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span>
 </pre>
 
-<button class="mdl-button mdl-js-button mdl-button--primary" id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 45 More Occurrences...</button>
+<button class="mdl-button mdl-js-button mdl-button--primary" id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 46 More Occurrences...</button>
 <div id="HardcodedTextDiv" style="display: none">
 <span class="location"><a href="../../src/main/res/layout/activity_player_info.xml">../../src/main/res/layout/activity_player_info.xml</a>:54</span>: <span class="message">Hardcoded string "Player 1", should use <code>@string</code> resource</span><br /><pre class="errorlines">
 <span class="lineno">  51 </span><span class="attribute">                    </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/playerNameText"</span>
@@ -2147,24 +2147,34 @@ Dismiss</button>            </div>
 <span class="lineno">  78 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span>
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_qr_info.xml">../../src/main/res/layout/activity_qr_info.xml</a>:101</span>: <span class="message">Hardcoded string "Send", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno">  98 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  99 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginEnd</span>=<span class="value">"16dp"</span>
-<span class="lineno"> 100 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"16dp"</span>
-<span class="caretline"><span class="lineno"> 101 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Send"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 102 </span>        <span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"addComment"</span>
-<span class="lineno"> 103 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintBottom_toTopOf</span>=<span class="value">"@id/bottom_nav_view"</span>
-<span class="lineno"> 104 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span> />
+<span class="location"><a href="../../src/main/res/layout/activity_qr_info.xml">../../src/main/res/layout/activity_qr_info.xml</a>:104</span>: <span class="message">Hardcoded string "No comments to display!", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 101 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"300dp"</span>
+<span class="lineno"> 102 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"20sp"</span>
+<span class="lineno"> 103 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"center_horizontal"</span>
+<span class="caretline"><span class="lineno"> 104 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"No comments to display!"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 105 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span>
+<span class="lineno"> 106 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span>
+<span class="lineno"> 107 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintTop_toTopOf</span>=<span class="value">"parent"</span>
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_qr_info.xml">../../src/main/res/layout/activity_qr_info.xml</a>:115</span>: <span class="message">Hardcoded string "Type your comment here", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 112 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"16dp"</span>
-<span class="lineno"> 113 </span>        <span class="prefix">android:</span><span class="attribute">ems</span>=<span class="value">"10"</span>
-<span class="lineno"> 114 </span>        <span class="prefix">android:</span><span class="attribute">inputType</span>=<span class="value">"textPersonName"</span>
-<span class="caretline"><span class="lineno"> 115 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">hint</span>=<span class="value">"Type your comment here"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 116 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintBottom_toTopOf</span>=<span class="value">"@id/bottom_nav_view"</span>
-<span class="lineno"> 117 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toStartOf</span>=<span class="value">"@+id/buttonSend"</span>
-<span class="lineno"> 118 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span> />
+<span class="location"><a href="../../src/main/res/layout/activity_qr_info.xml">../../src/main/res/layout/activity_qr_info.xml</a>:116</span>: <span class="message">Hardcoded string "Send", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 113 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno"> 114 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginEnd</span>=<span class="value">"16dp"</span>
+<span class="lineno"> 115 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"16dp"</span>
+<span class="caretline"><span class="lineno"> 116 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Send"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 117 </span>        <span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"addComment"</span>
+<span class="lineno"> 118 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintBottom_toTopOf</span>=<span class="value">"@id/bottom_nav_view"</span>
+<span class="lineno"> 119 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toEndOf</span>=<span class="value">"parent"</span> />
+</pre>
+
+<span class="location"><a href="../../src/main/res/layout/activity_qr_info.xml">../../src/main/res/layout/activity_qr_info.xml</a>:130</span>: <span class="message">Hardcoded string "Type your comment here", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="lineno"> 127 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"16dp"</span>
+<span class="lineno"> 128 </span>        <span class="prefix">android:</span><span class="attribute">ems</span>=<span class="value">"10"</span>
+<span class="lineno"> 129 </span>        <span class="prefix">android:</span><span class="attribute">inputType</span>=<span class="value">"textPersonName"</span>
+<span class="caretline"><span class="lineno"> 130 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">hint</span>=<span class="value">"Type your comment here"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 131 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintBottom_toTopOf</span>=<span class="value">"@id/bottom_nav_view"</span>
+<span class="lineno"> 132 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintEnd_toStartOf</span>=<span class="value">"@+id/buttonSend"</span>
+<span class="lineno"> 133 </span>        <span class="prefix">app:</span><span class="attribute">layout_constraintStart_toStartOf</span>=<span class="value">"parent"</span> />
 </pre>
 
 <span class="location"><a href="../../src/main/res/layout/activity_scanned_users.xml">../../src/main/res/layout/activity_scanned_users.xml</a>:17</span>: <span class="message">Hardcoded string "Scanned User List", should use <code>@string</code> resource</span><br /><pre class="errorlines">
@@ -2415,17 +2425,7 @@ Dismiss</button>            </div>
 <span class="lineno"> 35 </span>        <span class="tag">&lt;TextView</span><span class="attribute">
 </span></pre>
 
-<span class="location"><a href="../../src/main/res/layout/user_qr_list_content.xml">../../src/main/res/layout/user_qr_list_content.xml</a>:39</span>: <span class="message">Hardcoded string "12345", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 36 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/qr_hood_view"</span>
-<span class="lineno"> 37 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 38 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 39 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"12345"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 40 </span>            <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"15sp"</span> />
-<span class="lineno"> 41 </span>
-<span class="lineno"> 42 </span>    <span class="tag">&lt;/LinearLayout></span>
-</pre>
-
-</div>
+<br/><b>NOTE: 1 results omitted.</b><br/><br/></div>
 </div>
 <div class="metadata"><div class="explanation" id="explanationHardcodedText" style="display: none;">
 Hardcoding text attributes directly in layout files is bad for several reasons:<br/>
