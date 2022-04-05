@@ -177,7 +177,7 @@ document.getElementById(id).style.display = 'none';
       <span class="mdl-layout-title">Lint Report: 184 warnings</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Tue Apr 05 03:17:24 UTC 2022      </nav>
+Check performed at Tue Apr 05 03:23:57 UTC 2022      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -379,14 +379,14 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/example/qr_go/objects/CommentsQR.java">../../src/main/java/com/example/qr_go/objects/CommentsQR.java</a>:56</span>: <span class="message">To get local formatting use <code>getDateInstance()</code>, <code>getDateTimeInstance()</code>, or <code>getTimeInstance()</code>, or use <code>new SimpleDateFormat(String template, Locale locale)</code> with for example <code>Locale.US</code> for ASCII dates.</span><br /><pre class="errorlines">
-<span class="lineno"> 53 </span>        details.put(<span class="string">"Username"</span>, user.getUsername());
-<span class="lineno"> 54 </span>        details.put(<span class="string">"Message"</span>, message);
-<span class="lineno"> 55 </span>        Date date = Calendar.getInstance().getTime();
-<span class="caretline"><span class="lineno"> 56 </span>        DateFormat dateFormat = <span class="warning"><span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy/MM/dd '@'hh:mm:ss a"</span>)</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 57 </span>        String strDate = dateFormat.format(date);
-<span class="lineno"> 58 </span>        comments.put(strDate, details);
-<span class="lineno"> 59 </span>    }
+<span class="location"><a href="../../src/main/java/com/example/qr_go/objects/CommentsQR.java">../../src/main/java/com/example/qr_go/objects/CommentsQR.java</a>:54</span>: <span class="message">To get local formatting use <code>getDateInstance()</code>, <code>getDateTimeInstance()</code>, or <code>getTimeInstance()</code>, or use <code>new SimpleDateFormat(String template, Locale locale)</code> with for example <code>Locale.US</code> for ASCII dates.</span><br /><pre class="errorlines">
+<span class="lineno"> 51 </span>        details.put(<span class="string">"Username"</span>, user.getUsername());
+<span class="lineno"> 52 </span>        details.put(<span class="string">"Message"</span>, message);
+<span class="lineno"> 53 </span>        Date date = Calendar.getInstance().getTime();
+<span class="caretline"><span class="lineno"> 54 </span>        DateFormat dateFormat = <span class="warning"><span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy/MM/dd '@'hh:mm:ss a"</span>)</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 55 </span>        String strDate = dateFormat.format(date);
+<span class="lineno"> 56 </span>        comments.put(strDate, details);
+<span class="lineno"> 57 </span>    }
 </pre>
 
 </div>
