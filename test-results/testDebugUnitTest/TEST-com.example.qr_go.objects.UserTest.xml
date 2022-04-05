@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.qr_go.objects.UserTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-04-05T00:04:52" hostname="fv-az128-781" time="0.05">
+<testsuite name="com.example.qr_go.objects.UserTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-04-05T00:14:39" hostname="fv-az72-746" time="0.06">
   <properties/>
-  <testcase name="testGetHighestScore" classname="com.example.qr_go.objects.UserTest" time="0.006"/>
+  <testcase name="testGetHighestScore" classname="com.example.qr_go.objects.UserTest" time="0.019"/>
   <testcase name="testRemoveQRCode" classname="com.example.qr_go.objects.UserTest" time="0.001"/>
-  <testcase name="testIsEmailValid" classname="com.example.qr_go.objects.UserTest" time="0.026"/>
-  <testcase name="testAddQRCode" classname="com.example.qr_go.objects.UserTest" time="0.002"/>
-  <testcase name="testGetTotalScore" classname="com.example.qr_go.objects.UserTest" time="0.002"/>
+  <testcase name="testIsEmailValid" classname="com.example.qr_go.objects.UserTest" time="0.023"/>
+  <testcase name="testAddQRCode" classname="com.example.qr_go.objects.UserTest" time="0.001"/>
+  <testcase name="testGetTotalScore" classname="com.example.qr_go.objects.UserTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
