@@ -43,7 +43,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-
+/**
+ * Shows information related to a selected player including score statistics and other scanned QR
+ * codes.
+ */
 public class PlayerInfoActivity extends BaseActivity {
     private LocationManager locationManager;
     private LocationListener locationListener;

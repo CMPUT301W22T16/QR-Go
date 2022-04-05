@@ -34,7 +34,10 @@ import com.google.firebase.storage.StorageReference;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Set;
-
+/**
+ * Shows information related to logged in player including score statistics and other scanned QR
+ * codes.
+ */
 public class MyQRCodesActivity extends BaseActivity {
 
     private Button tempButton;

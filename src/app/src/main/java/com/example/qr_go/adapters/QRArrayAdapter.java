@@ -25,7 +25,9 @@ import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-
+/**
+ * Abstract class that holds properties and behaviours of QR array adapters.
+ */
 public abstract class QRArrayAdapter extends ArrayAdapter<QRListDisplayContainer>{
     protected Context context;
     private Integer sortPos;
