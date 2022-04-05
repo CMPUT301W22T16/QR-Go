@@ -1,6 +1,7 @@
 package com.example.qr_go.objects;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import com.example.qr_go.objects.QRCode;
 

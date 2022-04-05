@@ -40,4 +40,15 @@ public class GameQRCodeTest {
         assertEquals(14, (int) code.calculateScore("ee"));
         assertEquals(5, (int) code.calculateScore("55"));
     }
+
+    @Test
+    public void testAddDeleteUser() {
+        GameQRCode code = new GameQRCode("");
+        Player player = new Player();
+        assertEquals(0, code.getUserIds().size());
+        code.addUser(player);
+        assertEquals(1, code.getUserIds().size());
+        code.deleteUser(player.getUserid());
+        assertEquals(0, code.getUserIds().size());
+    }
 }

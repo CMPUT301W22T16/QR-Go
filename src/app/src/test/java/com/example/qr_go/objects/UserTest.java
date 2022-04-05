@@ -94,6 +94,37 @@ public class UserTest {
     }
 
     @Test
+    public void testGetLowestQRCode() {
+        Integer currentMin = Integer.MAX_VALUE;
+        Integer maxIndex = 0;
+        // Test that highest score is 0 when no qr codes have been added yet
+        assertTrue(testUser.getLowestQRCode().getValue().equals(0));
+        GameQRCode qr1 = new GameQRCode("test");
+        GameQRCode qr2 = new GameQRCode("test12345");
+        GameQRCode qr3 = new GameQRCode("12345test");
+        GameQRCode lowestQR = new GameQRCode();
+        GameQRCode[] qrlist = {qr1, qr2, qr3};
+        int i = 0;
+        for (GameQRCode qr : qrlist) {
+            if (qr.getScore() < currentMin) {
+                currentMin = qr.getScore();
+                maxIndex = i;
+                lowestQR = qr;
+            }
+            i++;
+        }
+        testUser.addQRCode(qr1);
+        testUser.addQRCode(qr2);
+        testUser.addQRCode(qr3);
+        // Test that it gets total score of added values
+        assertEquals(currentMin, testUser.getLowestQRCode().getValue());
+        assertEquals(lowestQR.getHash(), testUser.getLowestQRCode().getKey());
+        testUser.deleteQRCode(qrlist[maxIndex].getId());
+        // Test that it gets total score after deleted values
+        assertNotEquals(currentMin, testUser.getLowestQRCode().getValue());
+    }
+
+    @Test
     public void testIsEmailValid(){
         testUser.setEmail(""); // Invalid
         assertFalse(testUser.isEmailValid());
