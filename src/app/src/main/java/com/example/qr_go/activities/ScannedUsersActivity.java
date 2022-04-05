@@ -29,7 +29,7 @@ public class ScannedUsersActivity extends AppCompatActivity {
 
     private GameQRCode selectedQR;
 
-    HashMap<String, HashMap<String, String>> playersInfo;
+    private HashMap<String, HashMap<String, String>> playersInfo;
 
     ListView userList;
     private ArrayAdapter<ScannedUserListDisplayContainer> userAdapter;

@@ -20,14 +20,14 @@ public class CommentsQRTest {
     public void testGetMessage() {
         Player player = new Player();
         player.setUsername(MOCK_USER);
-        CommentsQR comments = new CommentsQR(player, MOCK_MSG, null);
+        CommentsQR comments = new CommentsQR(player, MOCK_MSG);
         assertEquals(MOCK_MSG, comments.getMessage(player.getUserid()));
     }
     @Test
     public void testCommentListSize() {
         Player player = new Player();
         player.setUsername(MOCK_USER);
-        CommentsQR comments = new CommentsQR(player, MOCK_MSG, null);
+        CommentsQR comments = new CommentsQR(player, MOCK_MSG);
         assertEquals(MOCK_MSG, comments.getMessage(player.getUserid()));
         assertEquals(1, comments.getCommentObjects().size());
         // add new comment, this time delay is so that the index can be changed
@@ -37,7 +37,7 @@ public class CommentsQRTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        comments.addComment(player, "this is new message", null);
+        comments.addComment(player, "this is new message");
         assertEquals(2, comments.getCommentObjects().size());
         // new message from a different user
         String msg = "New Message";
@@ -48,7 +48,7 @@ public class CommentsQRTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        comments.addComment(player1, msg, null);
+        comments.addComment(player1, msg);
         assertEquals(3, comments.getCommentObjects().size());
         ArrayList<CommentDisplayContainer> commentArrayList = comments.getCommentObjects();
     }

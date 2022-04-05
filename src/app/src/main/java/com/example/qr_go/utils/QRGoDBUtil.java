@@ -129,14 +129,14 @@ public class QRGoDBUtil {
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                         try {
                             CommentsQR comments = documentSnapshot.toObject(CommentsQR.class);
-                            comments.addComment(user, comment.getMessage(), "");
+                            comments.addComment(user, comment.getMessage());
                             db.collection("Comments").document(gameqrcode.getHash()).set(comments);
 
                         } catch (Exception e) {
                             e.printStackTrace();
                             //sometimes the db picks up that it exists while in fact it does not... strange
                             CommentsQR comments = new CommentsQR();
-                            comments.addComment(user, comment.getMessage(), "");
+                            comments.addComment(user, comment.getMessage());
                             db.collection("Comments").document(gameqrcode.getHash()).set(comments);
                         }
                     }
@@ -145,7 +145,7 @@ public class QRGoDBUtil {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         CommentsQR comments = new CommentsQR();
-                        comments.addComment(user, comment.getMessage(), "");
+                        comments.addComment(user, comment.getMessage());
                         db.collection("Comments").document(gameqrcode.getHash()).set(comments);
                     }
                 });
