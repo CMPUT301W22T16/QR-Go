@@ -158,7 +158,7 @@ public class PlayerInfoActivity extends BaseActivity {
                             userQRList.setEmptyView(emptyText);
                             qrAdapter = new SearchQRArrayAdapter(PlayerInfoActivity.this, qrDisplays, 0);
                             userQRList.setAdapter(qrAdapter);
-                            // Image
+                            // Add Image
 
                             ImageView profileImage = findViewById(R.id.profile_photo);
                             FirebaseStorage storage = MapsActivity.storage;
@@ -216,7 +216,9 @@ public class PlayerInfoActivity extends BaseActivity {
             // disable location
         }
     }
-
+    /**
+     * Adds images for qrs
+     */
     private void addImages() {
         FirebaseStorage storage = MapsActivity.storage;
         StringUtil stringUtil = new StringUtil();

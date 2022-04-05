@@ -30,7 +30,7 @@ public class ScannedUsersActivity extends AppCompatActivity {
 
     private GameQRCode selectedQR;
 
-    HashMap<String, HashMap<String, String>> playersInfo;
+    private HashMap<String, HashMap<String, String>> playersInfo;
 
     ListView userList;
     TextView emptyText;
@@ -80,6 +80,9 @@ public class ScannedUsersActivity extends AppCompatActivity {
 //            }
 //        });
     }
+    /**
+     * Adds images for qrs and users
+     */
     private void addImages() {
         FirebaseStorage storage = MapsActivity.storage;
         StringUtil stringUtil = new StringUtil();

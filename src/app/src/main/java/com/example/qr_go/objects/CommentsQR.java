@@ -18,18 +18,16 @@ import java.util.Set;
 import java.util.UUID;
 
 /**
- * Custom conatiner for comments, used for database interface, and can be translated to an arraylist for the android adapter
- * this is the revised version of comments container, originally Matthew's work
+ * Custom list and hashmap for comments, used for database storage, and can be translated to an arraylist for the android adapter
  * @author Darius Fang
  */
 public class CommentsQR {
     private HashMap<String, HashMap<String, String>> comments;
-    // TODO: add qrid to constructor
     public CommentsQR(HashMap<String, HashMap<String, String>> comments) {
         this.comments = comments;
 
     }
-    public CommentsQR(User user, String message, String photolink) {
+    public CommentsQR(User user, String message){
         this.comments = new HashMap<>();
         HashMap<String, String> details = new HashMap<>();
         details.put("userId", user.getUserid());
@@ -44,9 +42,8 @@ public class CommentsQR {
      * adds the comment onto the hashmap stack
      * @param user user to be added
      * @param message message of the user
-     * @param photolink profile of user
      */
-    public void addComment(@NonNull User user, String message, String photolink){
+    public void addComment(@NonNull User user, String message){
 
         HashMap<String, String> details = new HashMap<>();
         details.put("userId", user.getUserid());
