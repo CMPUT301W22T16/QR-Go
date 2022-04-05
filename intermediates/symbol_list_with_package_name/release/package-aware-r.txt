@@ -2650,6 +2650,7 @@ id CTRL
 id FUNCTION
 id META
 id NO_DEBUG
+id QRData
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -2861,6 +2862,7 @@ id guideline
 id guideline2
 id header_title
 id hideable
+id highestScoreData
 id highestScoreLayout
 id highest_score
 id home
@@ -2904,6 +2906,7 @@ id listMode
 id list_item
 id locale
 id location_checkbox
+id lowestScoreData
 id lowestScoreLayout
 id lowest_score
 id ltr
@@ -3162,6 +3165,7 @@ id title_template
 id toggle
 id top
 id topPanel
+id totalScoreData
 id touch_outside
 id transitionToEnd
 id transitionToStart
@@ -3185,6 +3189,7 @@ id user_rank_view
 id user_score_view
 id username
 id username_view
+id usersContent
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3319,6 +3324,7 @@ layout fragment_show_qr_code
 layout fragment_user_search
 layout list_comments_content
 layout list_scanned_users_content
+layout list_users_content
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3457,16 +3463,10 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
-string default_web_client_id
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
-string gcm_defaultSenderId
-string google_api_key
-string google_app_id
-string google_crash_reporting_api_key
-string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
@@ -3558,7 +3558,6 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
-string project_id
 string search_menu_title
 string status_bar_notification_info_overflow
 string title_activity_maps
