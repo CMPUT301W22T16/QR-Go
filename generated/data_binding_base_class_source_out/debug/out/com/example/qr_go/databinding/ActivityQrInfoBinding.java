@@ -34,9 +34,6 @@ public final class ActivityQrInfoBinding implements ViewBinding {
   public final Button buttonSend;
 
   @NonNull
-  public final TextView emptyList;
-
-  @NonNull
   public final EditText inputComment;
 
   @NonNull
@@ -56,14 +53,13 @@ public final class ActivityQrInfoBinding implements ViewBinding {
 
   private ActivityQrInfoBinding(@NonNull ConstraintLayout rootView,
       @NonNull BottomNavigationView bottomNavView, @NonNull Button buttonOtherPlayers,
-      @NonNull Button buttonSend, @NonNull TextView emptyList, @NonNull EditText inputComment,
-      @NonNull ListView myQRList, @NonNull ImageView profilePhoto, @NonNull TextView qrLocation,
-      @NonNull TextView qrName, @NonNull TextView qrScore) {
+      @NonNull Button buttonSend, @NonNull EditText inputComment, @NonNull ListView myQRList,
+      @NonNull ImageView profilePhoto, @NonNull TextView qrLocation, @NonNull TextView qrName,
+      @NonNull TextView qrScore) {
     this.rootView = rootView;
     this.bottomNavView = bottomNavView;
     this.buttonOtherPlayers = buttonOtherPlayers;
     this.buttonSend = buttonSend;
-    this.emptyList = emptyList;
     this.inputComment = inputComment;
     this.myQRList = myQRList;
     this.profilePhoto = profilePhoto;
@@ -117,12 +113,6 @@ public final class ActivityQrInfoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.empty_list;
-      TextView emptyList = ViewBindings.findChildViewById(rootView, id);
-      if (emptyList == null) {
-        break missingId;
-      }
-
       id = R.id.inputComment;
       EditText inputComment = ViewBindings.findChildViewById(rootView, id);
       if (inputComment == null) {
@@ -160,8 +150,8 @@ public final class ActivityQrInfoBinding implements ViewBinding {
       }
 
       return new ActivityQrInfoBinding((ConstraintLayout) rootView, bottomNavView,
-          buttonOtherPlayers, buttonSend, emptyList, inputComment, myQRList, profilePhoto,
-          qrLocation, qrName, qrScore);
+          buttonOtherPlayers, buttonSend, inputComment, myQRList, profilePhoto, qrLocation, qrName,
+          qrScore);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
