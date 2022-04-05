@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -29,6 +30,7 @@ public class ScannedUsersActivity extends AppCompatActivity {
     ListView userList;
     ListScannedUsersContainer userAdapter;
     ArrayList<Pair> userDataList;
+    TextView emptyText;
 //    ArrayList<String> userIds;
 
     final long ONE_MEGABYTE = 4 * 1024 * 1024;
@@ -36,8 +38,9 @@ public class ScannedUsersActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scanned_users);
-
+        emptyText = (TextView)findViewById(R.id.empty_list);
         userList = findViewById(R.id.userList);
+        //userList.setEmptyView(emptyText);
         userDataList = new ArrayList<Pair>();
 //        userIds = new ArrayList<String>();
 

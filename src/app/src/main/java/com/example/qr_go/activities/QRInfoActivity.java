@@ -17,6 +17,7 @@ import androidx.annotation.RequiresApi;
 
 import com.example.qr_go.adapters.ListCommentsAdapter;
 import com.example.qr_go.R;
+import com.example.qr_go.adapters.UserQRArrayAdapter;
 import com.example.qr_go.containers.CommentDisplayContainer;
 import com.example.qr_go.objects.CommentsQR;
 import com.example.qr_go.objects.GameQRCode;
@@ -74,6 +75,7 @@ public class QRInfoActivity extends BaseActivity {
         TextView tvQRName = (TextView) findViewById(R.id.qrName);
         TextView tvQRLocation = (TextView) findViewById(R.id.qrLocation);
         TextView tvScore = (TextView) findViewById(R.id.qrScore);
+        TextView emptyText = (TextView)findViewById(R.id.empty_list);
 
         // Get information from extras
         Bundle bundle = getIntent().getExtras();
@@ -136,6 +138,7 @@ public class QRInfoActivity extends BaseActivity {
                     });
 
             // get comments
+
             db.collection("Comments")
                     .document(selectedQRId)
                     .get()
@@ -146,6 +149,7 @@ public class QRInfoActivity extends BaseActivity {
                                 comments = documentSnapshot.toObject(CommentsQR.class);
                                 commentDataList = comments.getCommentObjects();
                                 commentAdapter = new ListCommentsAdapter(QRInfoActivity.this, commentDataList);
+
                                 commentList.setAdapter(commentAdapter);
                                 addImages();
                             }catch (Exception e){
@@ -153,6 +157,7 @@ public class QRInfoActivity extends BaseActivity {
                                 comments = new CommentsQR();
                                 commentDataList = comments.getCommentObjects();
                                 commentAdapter = new ListCommentsAdapter(QRInfoActivity.this, commentDataList);
+
                                 commentList.setAdapter(commentAdapter);
                                 addImages();
                                 e.printStackTrace();
@@ -165,6 +170,7 @@ public class QRInfoActivity extends BaseActivity {
                     comments = new CommentsQR();
                     commentDataList = comments.getCommentObjects();
                     commentAdapter = new ListCommentsAdapter(QRInfoActivity.this, commentDataList);
+
                     commentList.setAdapter(commentAdapter);
                     addImages();
                 }
@@ -173,6 +179,7 @@ public class QRInfoActivity extends BaseActivity {
         }
 
         commentList = findViewById(R.id.myQRList);
+        commentList.setEmptyView(emptyText);
     }
     private void addImages() {
         FirebaseStorage storage = MapsActivity.storage;
