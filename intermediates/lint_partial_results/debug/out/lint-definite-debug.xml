@@ -1949,12 +1949,12 @@
             replacement="Integer.valueOf"/>
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/fragments/UserSearchFragment.java"
-            line="83"
+            line="84"
             column="34"
-            startOffset="2952"
-            endLine="83"
+            startOffset="3040"
+            endLine="84"
             endColumn="51"
-            endOffset="2969"/>
+            endOffset="3057"/>
     </incident>
 
     <incident
