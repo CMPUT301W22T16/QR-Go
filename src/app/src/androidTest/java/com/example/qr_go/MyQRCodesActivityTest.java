@@ -57,9 +57,6 @@ public class MyQRCodesActivityTest {
         assertTrue(solo.searchText("QR Codes"));
         solo.clickInList(0);  //only works if something in list
         solo.assertCurrentActivity("Not in QR Info Activity", QRInfoActivity.class);
-        solo.goBack();
-        solo.clickOnText("ebffaaaa"); // hardcoded for highest QR
-        solo.assertCurrentActivity("Not in QR Info Activity", QRInfoActivity.class);
 
     }
 
