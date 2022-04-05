@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.qr_go.objects.UserTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-04-05T21:45:25" hostname="fv-az135-448" time="0.081">
+<testsuite name="com.example.qr_go.objects.UserTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-04-05T21:51:32" hostname="fv-az82-819" time="0.066">
   <properties/>
-  <testcase name="testGetHighestScore" classname="com.example.qr_go.objects.UserTest" time="0.025"/>
-  <testcase name="testRemoveQRCode" classname="com.example.qr_go.objects.UserTest" time="0.002"/>
-  <testcase name="testIsEmailValid" classname="com.example.qr_go.objects.UserTest" time="0.044"/>
+  <testcase name="testGetHighestScore" classname="com.example.qr_go.objects.UserTest" time="0.017"/>
+  <testcase name="testRemoveQRCode" classname="com.example.qr_go.objects.UserTest" time="0.001"/>
+  <testcase name="testIsEmailValid" classname="com.example.qr_go.objects.UserTest" time="0.034"/>
   <testcase name="testAddQRCode" classname="com.example.qr_go.objects.UserTest" time="0.001"/>
   <testcase name="testGetTotalScore" classname="com.example.qr_go.objects.UserTest" time="0.001"/>
   <testcase name="testGetLowestQRCode" classname="com.example.qr_go.objects.UserTest" time="0.001"/>
