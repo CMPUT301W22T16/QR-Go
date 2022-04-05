@@ -18,9 +18,11 @@ public class UsernameGenerator {
     // TODO add more adjectives and nouns
     // Possible adjectives and nouns which are used for random username generation
     private static String[] adjectives = {"Funky", "Stinky", "Sluggish", "Adorable", "Fuzzy",
-                                            "Jolly"};
+                                            "Jolly", "Bold", "Gentle", "Calm", "Timid", "Hasty",
+                                            "Bashful", "Quirky", "Sassy", "Naughty", "Brave",
+                                            "Adamant", "Hardy", "Relaxed", "Naive", "Serious", "Docile", "Modest"};
     private static String[] nouns = {"Worm", "Koala", "Scooter", "Skateboard", "Teacher", "Coder",
-                                    "Pirate", "Photographer", };
+                                    "Pirate", "Photographer", "Kid", "Engineer", "Collector", "Camper", "Maniac" };
     // Number of numbers to append to the end of a username to further make it unique. Can be made
     // larger for more uniqueness
     private static int numNumbers = 4;
