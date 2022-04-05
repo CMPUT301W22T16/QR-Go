@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Pair;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,8 +33,10 @@ public class ScannedUsersActivity extends AppCompatActivity {
     private HashMap<String, HashMap<String, String>> playersInfo;
 
     ListView userList;
+    TextView emptyText;
     private ArrayAdapter<ScannedUserListDisplayContainer> userAdapter;
     private ArrayList<ScannedUserListDisplayContainer> userDataList;
+
 //    ArrayList<String> userIds;
 
     final long ONE_MEGABYTE = 4 * 1024 * 1024;
@@ -41,9 +44,11 @@ public class ScannedUsersActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scanned_users);
-
+        emptyText = (TextView)findViewById(R.id.empty_list);
         userList = findViewById(R.id.userList);
+
         userDataList = new ArrayList<>();
+
 //        userIds = new ArrayList<String>();
 
         // Get information from extras

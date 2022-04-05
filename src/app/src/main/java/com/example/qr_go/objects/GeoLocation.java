@@ -14,6 +14,7 @@ public class GeoLocation implements Serializable {
 
     private double longitude;
     private double latitude;
+    private String address;
     private Long score;
     private String locatedQRId;
 
@@ -31,19 +32,23 @@ public class GeoLocation implements Serializable {
 
         this.locatedQRId = locatedQRId;
     }
+    private void calculateAddress() {
+        if (geocodedLocation == null) {
+            // Return lat lon if geocodedLocation is not set
+            DecimalFormat df = new DecimalFormat("#.###"); // 3 decimal places
+            this.address = df.format(latitude) + ", " + df.format(longitude);
+        } else {
+            this.address = geocodedLocation.getDisplay_name();
+        }
+    }
 
     public GeoLocation() {
 
     }
 
     public String getAddress() {
-        if (geocodedLocation == null) {
-            // Return lat lon if geocodedLocation is not set
-            DecimalFormat df = new DecimalFormat("#.###"); // 3 decimal places
-            return df.format(latitude) + ", " + df.format(longitude);
-        } else {
-            return geocodedLocation.getDisplay_name();
-        }
+        calculateAddress();
+        return this.address;
     }
 
     public double getLongitude() {
