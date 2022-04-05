@@ -519,15 +519,29 @@
     <incident
         id="HardcodedText"
         severity="warning"
+        message="Hardcoded string &quot;No comments to display!&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
+            line="104"
+            column="9"
+            startOffset="4211"
+            endLine="104"
+            endColumn="47"
+            endOffset="4249"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
         message="Hardcoded string &quot;Send&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="101"
+            line="116"
             column="9"
-            startOffset="4156"
-            endLine="101"
+            startOffset="4691"
+            endLine="116"
             endColumn="28"
-            endOffset="4175"/>
+            endOffset="4710"/>
     </incident>
 
     <incident
@@ -550,12 +564,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="106"
+            line="121"
             column="6"
-            startOffset="4343"
-            endLine="106"
+            startOffset="4878"
+            endLine="121"
             endColumn="14"
-            endOffset="4351"/>
+            endOffset="4886"/>
     </incident>
 
     <incident
@@ -564,12 +578,12 @@
         message="Hardcoded string &quot;Type your comment here&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_qr_info.xml"
-            line="115"
+            line="130"
             column="9"
-            startOffset="4681"
-            endLine="115"
+            startOffset="5216"
+            endLine="130"
             endColumn="46"
-            endOffset="4718"/>
+            endOffset="5253"/>
     </incident>
 
     <incident
@@ -1284,12 +1298,12 @@
         message="To get local formatting use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()`, or use `new SimpleDateFormat(String template, Locale locale)` with for example `Locale.US` for ASCII dates.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/objects/CommentsQR.java"
-            line="53"
+            line="56"
             column="33"
-            startOffset="1715"
-            endLine="53"
+            startOffset="1904"
+            endLine="56"
             endColumn="81"
-            endOffset="1763"/>
+            endOffset="1952"/>
     </incident>
 
     <incident
@@ -1298,12 +1312,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/QRInfoActivity.java"
-            line="106"
+            line="108"
             column="49"
-            startOffset="4153"
-            endLine="106"
+            startOffset="4277"
+            endLine="108"
             endColumn="82"
-            endOffset="4186"/>
+            endOffset="4310"/>
     </incident>
 
     <incident
@@ -1312,12 +1326,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/QRInfoActivity.java"
-            line="106"
+            line="108"
             column="49"
-            startOffset="4153"
-            endLine="106"
+            startOffset="4277"
+            endLine="108"
             endColumn="58"
-            endOffset="4162"/>
+            endOffset="4286"/>
     </incident>
 
     <incident
