@@ -4,6 +4,7 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -16,9 +17,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -33,6 +32,7 @@ import com.example.qr_go.R;
 import com.example.qr_go.adapters.SearchFragmentStateAdapter;
 import com.example.qr_go.containers.UserListDisplayContainer;
 import com.example.qr_go.objects.Player;
+import com.example.qr_go.objects.User;
 import com.example.qr_go.utils.StringUtil;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -93,6 +93,7 @@ public class SearchActivity extends BaseActivity {
 
     // Variable which determines if the current user is an owner
     private static Boolean isUserOwner;
+    private String currentUserID;
     // Variable which holds the userid of all owner users
     private static ArrayList<String> ownerIds;
     final long ONE_MEGABYTE = 4 * 1024 * 1024;
@@ -102,6 +103,12 @@ public class SearchActivity extends BaseActivity {
         context = this;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+        currentUserID = MapsActivity.getUserId();
+        if (currentUserID == null) {
+            SharedPreferences sharedPrefs = this.getSharedPreferences(User.CURRENT_USER, MODE_PRIVATE);
+            currentUserID = sharedPrefs.getString(User.USER_ID, null);
+        }
+
         initializeNavbar();
 
         // Initialize database references

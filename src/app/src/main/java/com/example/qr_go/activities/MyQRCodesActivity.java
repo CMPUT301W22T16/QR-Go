@@ -1,6 +1,7 @@
 package com.example.qr_go.activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import com.example.qr_go.adapters.SearchQRArrayAdapter;
 import com.example.qr_go.adapters.UserQRArrayAdapter;
 import com.example.qr_go.containers.QRListDisplayContainer;
 import com.example.qr_go.objects.Player;
+import com.example.qr_go.objects.User;
 import com.example.qr_go.utils.StringUtil;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -55,6 +57,10 @@ public class MyQRCodesActivity extends BaseActivity {
         userQRList = findViewById(R.id.user_qr_list);
         qrDisplays = new ArrayList<QRListDisplayContainer>();
         String selectedPlayerID = MapsActivity.getUserId();
+        if (selectedPlayerID == null) {
+            SharedPreferences sharedPrefs = this.getSharedPreferences(User.CURRENT_USER, MODE_PRIVATE);
+            selectedPlayerID = sharedPrefs.getString(User.USER_ID, null);
+        }
 
 
         TextView playernameText = findViewById(R.id.playerNameText);
