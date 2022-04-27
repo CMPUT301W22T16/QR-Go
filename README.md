@@ -30,5 +30,46 @@
 
 ## Android App Screenshots
 [View screenshot files](https://github.com/CMPUT301W22T16/QR-Go/tree/main/doc/screenshots)
-### Map home page
-<img src="https://github.com/CMPUT301W22T16/QR-Go/blob/main/doc/screenshots/map.png" width="150">
+### Map of QR codes
+<img src="https://github.com/CMPUT301W22T16/QR-Go/blob/main/doc/screenshots/map.png" width="300">
+
+### Scanning a new QR code
+<div>
+<img src="https://github.com/CMPUT301W22T16/QR-Go/blob/main/doc/screenshots/scan_qr_code.png" width="300">
+<img src="https://github.com/CMPUT301W22T16/QR-Go/blob/main/doc/screenshots/confirm_qr_code.png" width="300">
+</div>
+
+## Viewing my QR Codes
+<img src="https://github.com/CMPUT301W22T16/QR-Go/blob/main/doc/screenshots/my_qr_codes.png" width="300">
+
+## Searching for QR codes
+<div>
+<img src="https://github.com/CMPUT301W22T16/QR-Go/blob/main/doc/screenshots/search_qr_code_by_proximity.png" width="300">
+<img src="https://github.com/CMPUT301W22T16/QR-Go/blob/main/doc/screenshots/search_qr_code_by_score.png" width="300">
+<img src="https://github.com/CMPUT301W22T16/QR-Go/blob/main/doc/screenshots/search_regional_qr_codes.png" width="300">
+</div>
+
+## Searching for players
+<div>
+<img src="https://github.com/CMPUT301W22T16/QR-Go/blob/main/doc/screenshots/search_player_by_num_codes.png" width="300">
+<img src="https://github.com/CMPUT301W22T16/QR-Go/blob/main/doc/screenshots/search_player_by_total_score.png" width="300">
+<img src="https://github.com/CMPUT301W22T16/QR-Go/blob/main/doc/screenshots/search_player_by_unique_score.png" width="300">
+<img src="https://github.com/CMPUT301W22T16/QR-Go/blob/main/doc/screenshots/search_player_by_username.png" width="300">
+</div>
+
+## QR code info
+<div>
+<img src="https://github.com/CMPUT301W22T16/QR-Go/blob/main/doc/screenshots/qr_info.png" width="300">
+<img src="https://github.com/CMPUT301W22T16/QR-Go/blob/main/doc/screenshots/scanner_users_list.png" width="300">
+</div>
+
+## Player profile
+<img src="https://github.com/CMPUT301W22T16/QR-Go/blob/main/doc/screenshots/player_profile.png" width="300">
+
+## My Account
+<div>
+<img src="https://github.com/CMPUT301W22T16/QR-Go/blob/main/doc/screenshots/edit_my_profile.png" width="300">
+<img src="https://github.com/CMPUT301W22T16/QR-Go/blob/main/doc/screenshots/edit_profile_validation.png" width="300">
+<img src="https://github.com/CMPUT301W22T16/QR-Go/blob/main/doc/screenshots/generate_game_qr.png" width="300">
+<img src="https://github.com/CMPUT301W22T16/QR-Go/blob/main/doc/screenshots/generate_login_qr.png" width="300">
+</div>
