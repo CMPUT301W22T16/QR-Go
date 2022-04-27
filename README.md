@@ -6,9 +6,15 @@
 
 > I open my QRHunter app. I see a QR code in my wallet. I indicate I want to add a new QR code and I use the phone camera to add the QR code. The QR code is scored and I’m told that my QR score is 30. The system prompts me for a photo of the object I scanned. I decline since this was an ID card. I also decline geolocation because it is in my wallet. The system adds the 30 points to my total score and records a hash of the QR code. I then see some sticker on a pole. I scan it and am told it is worth 1000 points! I record the geolocation and take a photo of the pole and save it to my account. 1000 points wow. Then I see that other users have found this pole as well. So I open the map for nearby QR codes and I see something worth 10000 is 100 meters away so I’m going to head on over there!
 
+## Project mark
+**Excellent (A+)**
+_A excellent submission that meets the all the requirements without problem._
+
+
 ### Links
 - https://cmput301w22t16.github.io/QR-Go displays everything in the [gh-pages](https://github.com/CMPUT301W22T16/QR-Go/tree/gh-pages) branch (aka the `build` folder)
 - [Javadocs](https://cmput301w22t16.github.io/QR-Go/outputs/javadoc/index.html)
 - [Debug Unit Tests Report](https://cmput301w22t16.github.io/QR-Go/reports/tests/testDebugUnitTest/index.html)
 - [Release Unit Tests Report](https://cmput301w22t16.github.io/QR-Go/reports/tests/testReleaseUnitTest/index.html)
 - [Lint Report](https://cmput301w22t16.github.io/QR-Go/reports/lint-results-debug.html)
+
