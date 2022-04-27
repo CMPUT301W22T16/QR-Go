@@ -29,3 +29,6 @@
 - [Lint Report](https://cmput301w22t16.github.io/QR-Go/reports/lint-results-debug.html)
 
 ## Android App Screenshots
+[View screenshot files](https://github.com/CMPUT301W22T16/QR-Go/tree/main/doc/screenshots)
+### Map home page
+<img src="https://github.com/CMPUT301W22T16/QR-Go/blob/main/doc/screenshots/map.png" width="150">
