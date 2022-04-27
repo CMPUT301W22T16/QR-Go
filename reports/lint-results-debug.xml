@@ -92,7 +92,7 @@
     <issue
         id="GradleDependency"
         severity="Warning"
-        message="A newer version of com.google.firebase:firebase-firestore than 24.0.1 is available: 24.1.0"
+        message="A newer version of com.google.firebase:firebase-firestore than 24.0.1 is available: 24.1.1"
         category="Correctness"
         priority="4"
         summary="Obsolete Gradle Dependency"
@@ -140,7 +140,7 @@
     <issue
         id="GradleDependency"
         severity="Warning"
-        message="A newer version of androidx.navigation:navigation-fragment than 2.4.0 is available: 2.4.1"
+        message="A newer version of androidx.navigation:navigation-fragment than 2.4.0 is available: 2.4.2"
         category="Correctness"
         priority="4"
         summary="Obsolete Gradle Dependency"
@@ -156,7 +156,7 @@
     <issue
         id="GradleDependency"
         severity="Warning"
-        message="A newer version of androidx.navigation:navigation-ui than 2.4.0 is available: 2.4.1"
+        message="A newer version of androidx.navigation:navigation-ui than 2.4.0 is available: 2.4.2"
         category="Correctness"
         priority="4"
         summary="Obsolete Gradle Dependency"
@@ -167,6 +167,22 @@
             file="/home/runner/work/QR-Go/QR-Go/src/app/build.gradle"
             line="49"
             column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.google.firebase:firebase-bom than 29.3.0 is available: 29.3.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation platform(&apos;com.google.firebase:firebase-bom:29.3.0&apos;)"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/runner/work/QR-Go/QR-Go/src/app/build.gradle"
+            line="50"
+            column="29"/>
     </issue>
 
     <issue

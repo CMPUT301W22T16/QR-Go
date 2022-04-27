@@ -60,7 +60,7 @@
 /home/runner/work/QR-Go/QR-Go/src/app/build.gradle:43: Warning: A newer version of com.google.android.gms:play-services-maps than 17.0.1 is available: 18.0.2 [GradleDependency]
     implementation 'com.google.android.gms:play-services-maps:17.0.1'
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:45: Warning: A newer version of com.google.firebase:firebase-firestore than 24.0.1 is available: 24.1.0 [GradleDependency]
+/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:45: Warning: A newer version of com.google.firebase:firebase-firestore than 24.0.1 is available: 24.1.1 [GradleDependency]
     implementation 'com.google.firebase:firebase-firestore:24.0.1'
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/build.gradle:46: Warning: A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.4.0 is available: 2.4.1 [GradleDependency]
@@ -69,12 +69,15 @@
 /home/runner/work/QR-Go/QR-Go/src/app/build.gradle:47: Warning: A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.4.0 is available: 2.4.1 [GradleDependency]
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:48: Warning: A newer version of androidx.navigation:navigation-fragment than 2.4.0 is available: 2.4.1 [GradleDependency]
+/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:48: Warning: A newer version of androidx.navigation:navigation-fragment than 2.4.0 is available: 2.4.2 [GradleDependency]
     implementation 'androidx.navigation:navigation-fragment:2.4.0'
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:49: Warning: A newer version of androidx.navigation:navigation-ui than 2.4.0 is available: 2.4.1 [GradleDependency]
+/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:49: Warning: A newer version of androidx.navigation:navigation-ui than 2.4.0 is available: 2.4.2 [GradleDependency]
     implementation 'androidx.navigation:navigation-ui:2.4.0'
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/QR-Go/QR-Go/src/app/build.gradle:50: Warning: A newer version of com.google.firebase:firebase-bom than 29.3.0 is available: 29.3.1 [GradleDependency]
+    implementation platform('com.google.firebase:firebase-bom:29.3.0')
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/runner/work/QR-Go/QR-Go/src/app/build.gradle:59: Warning: A newer version of androidx.test:runner than 1.2.0 is available: 1.4.0 [GradleDependency]
     androidTestImplementation 'androidx.test:runner:1.2.0'
                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -826,4 +829,4 @@
    Please define an explicit reason why it is ignored, and when it can be
    resolved.
 
-0 errors, 185 warnings
+0 errors, 186 warnings

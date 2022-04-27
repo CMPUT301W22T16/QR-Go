@@ -875,6 +875,29 @@
     </incident>
 
     <incident
+        id="TextFields"
+        severity="warning"
+        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="38"
+            column="9"
+            startOffset="1501"
+            endLine="38"
+            endColumn="43"
+            endOffset="1535"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
+            line="29"
+            column="9"
+            startOffset="1107"
+            endLine="29"
+            endColumn="39"
+            endOffset="1137"
+            message="id defined here"/>
+    </incident>
+
+    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -900,29 +923,6 @@
             endLine="28"
             endColumn="14"
             endOffset="1097"/>
-    </incident>
-
-    <incident
-        id="TextFields"
-        severity="warning"
-        message="The view name (`@+id/player_email`) suggests this is an e-mail address, but it does not include &apos;`textEmail`&apos; in the `inputType`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="38"
-            column="9"
-            startOffset="1501"
-            endLine="38"
-            endColumn="43"
-            endOffset="1535"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/player_profile_activity.xml"
-            line="29"
-            column="9"
-            startOffset="1107"
-            endLine="29"
-            endColumn="39"
-            endOffset="1137"
-            message="id defined here"/>
     </incident>
 
     <incident
@@ -1309,48 +1309,6 @@
     <incident
         id="SetTextI18n"
         severity="warning"
-        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/QRInfoActivity.java"
-            line="108"
-            column="49"
-            startOffset="4277"
-            endLine="108"
-            endColumn="82"
-            endOffset="4310"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
-        message="String literal in `setText` can not be translated. Use Android resources instead.">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/QRInfoActivity.java"
-            line="108"
-            column="49"
-            startOffset="4277"
-            endLine="108"
-            endColumn="58"
-            endOffset="4286"/>
-    </incident>
-
-    <incident
-        id="StaticFieldLeak"
-        severity="warning"
-        message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/PlayerProfileActivity.java"
-            line="51"
-            column="12"
-            startOffset="1832"
-            endLine="51"
-            endColumn="18"
-            endOffset="1838"/>
-    </incident>
-
-    <incident
-        id="SetTextI18n"
-        severity="warning"
         message="Number formatting does not take into account locale settings. Consider using `String.format` instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MyQRCodesActivity.java"
@@ -1486,6 +1444,48 @@
             endLine="124"
             endColumn="106"
             endOffset="6406"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/QRInfoActivity.java"
+            line="108"
+            column="49"
+            startOffset="4277"
+            endLine="108"
+            endColumn="82"
+            endOffset="4310"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/QRInfoActivity.java"
+            line="108"
+            column="49"
+            startOffset="4277"
+            endLine="108"
+            endColumn="58"
+            endOffset="4286"/>
+    </incident>
+
+    <incident
+        id="StaticFieldLeak"
+        severity="warning"
+        message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MapsActivity.java"
+            line="52"
+            column="12"
+            startOffset="1831"
+            endLine="52"
+            endColumn="18"
+            endOffset="1837"/>
     </incident>
 
     <incident
@@ -1661,13 +1661,13 @@
         severity="warning"
         message="Do not place Android context classes in static fields (static reference to `FirebaseFirestore` which has field `context` pointing to `Context`); this is a memory leak">
         <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/MapsActivity.java"
-            line="52"
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/example/qr_go/activities/PlayerProfileActivity.java"
+            line="51"
             column="12"
-            startOffset="1831"
-            endLine="52"
+            startOffset="1832"
+            endLine="51"
             endColumn="18"
-            endOffset="1837"/>
+            endOffset="1838"/>
     </incident>
 
     <incident
@@ -1998,12 +1998,12 @@
     <incident
         id="GradleDependency"
         severity="warning"
-        message="A newer version of com.google.firebase:firebase-firestore than 24.0.1 is available: 24.1.0">
+        message="A newer version of com.google.firebase:firebase-firestore than 24.0.1 is available: 24.1.1">
         <fix-replace
-            description="Change to 24.1.0"
+            description="Change to 24.1.1"
             family="Update versions"
             oldString="24.0.1"
-            replacement="24.1.0"/>
+            replacement="24.1.1"/>
         <location
             file="${:app*projectDir}/build.gradle"
             line="45"
@@ -2055,12 +2055,12 @@
     <incident
         id="GradleDependency"
         severity="warning"
-        message="A newer version of androidx.navigation:navigation-fragment than 2.4.0 is available: 2.4.1">
+        message="A newer version of androidx.navigation:navigation-fragment than 2.4.0 is available: 2.4.2">
         <fix-replace
-            description="Change to 2.4.1"
+            description="Change to 2.4.2"
             family="Update versions"
             oldString="2.4.0"
-            replacement="2.4.1"/>
+            replacement="2.4.2"/>
         <location
             file="${:app*projectDir}/build.gradle"
             line="48"
@@ -2074,12 +2074,12 @@
     <incident
         id="GradleDependency"
         severity="warning"
-        message="A newer version of androidx.navigation:navigation-ui than 2.4.0 is available: 2.4.1">
+        message="A newer version of androidx.navigation:navigation-ui than 2.4.0 is available: 2.4.2">
         <fix-replace
-            description="Change to 2.4.1"
+            description="Change to 2.4.2"
             family="Update versions"
             oldString="2.4.0"
-            replacement="2.4.1"/>
+            replacement="2.4.2"/>
         <location
             file="${:app*projectDir}/build.gradle"
             line="49"
@@ -2088,6 +2088,25 @@
             endLine="49"
             endColumn="61"
             endOffset="1559"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.firebase:firebase-bom than 29.3.0 is available: 29.3.1">
+        <fix-replace
+            description="Change to 29.3.1"
+            family="Update versions"
+            oldString="29.3.0"
+            replacement="29.3.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="50"
+            column="29"
+            startOffset="1589"
+            endLine="50"
+            endColumn="70"
+            endOffset="1630"/>
     </incident>
 
     <incident
