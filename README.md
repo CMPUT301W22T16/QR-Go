@@ -76,6 +76,7 @@
 
 
 Demo video
-https://user-images.githubusercontent.com/56571687/166137020-21d48d97-a3d1-4ce4-bd9d-6764c6f9c6e9.mp4
+[![Alternate Text]({image-url})]({https://user-images.githubusercontent.com/56571687/166137119-40f479ec-f6d9-4a3c-9d2d-e338c67a140e.mp4} "Link Title")
+
 
 
