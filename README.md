@@ -75,7 +75,7 @@
 </div>
 
 
-Demo video
+## Demo video
 This video is to show that the app was working
 
 https://user-images.githubusercontent.com/56571687/166137119-40f479ec-f6d9-4a3c-9d2d-e338c67a140e.mp4
