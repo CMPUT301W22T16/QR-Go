@@ -73,3 +73,9 @@
 <img src="https://github.com/CMPUT301W22T16/QR-Go/blob/main/doc/screenshots/generate_game_qr.png" width="300">
 <img src="https://github.com/CMPUT301W22T16/QR-Go/blob/main/doc/screenshots/generate_login_qr.png" width="300">
 </div>
+
+
+Demo video
+https://user-images.githubusercontent.com/56571687/166137020-21d48d97-a3d1-4ce4-bd9d-6764c6f9c6e9.mp4
+
+
